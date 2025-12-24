@@ -1,6 +1,9 @@
 package net.gourmand.GoldenHorizonsCore;
 
+import net.gourmand.GoldenHorizonsCore.client.ClientEventHandler;
 import net.gourmand.GoldenHorizonsCore.registry.*;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -42,7 +45,12 @@ public class GoldenHorizonsCore {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         //modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        if (FMLEnvironment.dist == Dist.CLIENT){
+            ClientEventHandler.init(modEventBus, modContainer);
+        }
     }
+
 
     private void commonSetup(FMLCommonSetupEvent event) {
         // Some common setup code
