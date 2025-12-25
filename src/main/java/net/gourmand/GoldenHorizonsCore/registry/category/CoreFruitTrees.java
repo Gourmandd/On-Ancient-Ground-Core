@@ -30,7 +30,9 @@ import java.util.Locale;
 
 public enum CoreFruitTrees implements StringRepresentable {
 
-    WOLFBERRY(ResourceLocation.fromNamespaceAndPath("caupona", "wolfberries"), 8, new Lifecycle[] {HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY}, new Color(251, 135, 255).getRGB());
+    WOLFBERRY(ResourceLocation.fromNamespaceAndPath("caupona", "wolfberries"), 8, new Lifecycle[] {HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY}, new Color(251, 135, 255).getRGB()),
+    FIG(ResourceLocation.fromNamespaceAndPath("caupona", "fig"), 8, new Lifecycle[] {HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY}, new Color(251, 135, 255).getRGB()),
+    WALNUT(ResourceLocation.fromNamespaceAndPath("caupona", "walnut"), 8, new Lifecycle[] {HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY}, new Color(251, 135, 255).getRGB());
 
     private final ResourceLocation product_location;
     private final Item product;
