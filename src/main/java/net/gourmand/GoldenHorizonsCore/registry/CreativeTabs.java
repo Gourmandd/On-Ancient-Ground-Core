@@ -1,5 +1,6 @@
 package net.gourmand.GoldenHorizonsCore.registry;
 
+import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
 import net.gourmand.GoldenHorizonsCore.registry.category.*;
@@ -29,8 +30,16 @@ public class CreativeTabs {
             .icon(() -> CoreItems.CROP_SEEDS.get(CoreCrops.AMARANTH).get().getDefaultInstance())
             .displayItems(CreativeTabs::fillNature).build());
 
-    private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out){
-        for (CoreCrops crop : CoreCrops.values()) {
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ORES = CREATIVE_TABS.register("ores", () -> CreativeModeTab.builder()
+            .title(Component.translatable("item_group.ores." + GoldenHorizonsCore.MODID)) //The language key for the title of your CreativeModeTab
+            .withTabsBefore(CreativeModeTabs.COMBAT)
+            .icon(() -> CoreBlocks.ORES.get(Rock.ANDESITE).get(CoreOres.AZURITE).get().asItem().getDefaultInstance())
+            .displayItems(CreativeTabs::fillOres).build());
+
+    private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        for (CoreCrops crop : CoreCrops.values())
+        {
             accept(out, CoreBlocks.WILD_CROPS, crop);
             accept(out, CoreItems.CROP_SEEDS, crop);
         }
@@ -68,6 +77,43 @@ public class CreativeTabs {
         }
     }
 
+    private static void fillOres(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        for (CoreOres ore : CoreOres.values())
+        {
+            if (ore.isGraded())
+            {
+                accept(out, CoreBlocks.SMALL_ORES, ore);
+                accept(out, CoreItems.GRADED_ORES, ore, CoreOres.Grade.POOR);
+                accept(out, CoreItems.GRADED_ORES, ore, CoreOres.Grade.NORMAL);
+                accept(out, CoreItems.GRADED_ORES, ore, CoreOres.Grade.RICH);
+            }
+        }
+
+        for (CoreOres ore : CoreOres.values())
+        {
+            if (!ore.isGraded() && !ore.hasPastelOreType()) accept(out, CoreItems.ORES, ore);
+        }
+
+        for (CoreOres ore : CoreOres.values())
+        {
+            if (ore.isGraded())
+            {
+                CoreBlocks.GRADED_ORES.values().forEach(map -> {
+                        accept(out, map, ore, CoreOres.Grade.POOR);
+                        accept(out, map, ore, CoreOres.Grade.NORMAL);
+                        accept(out, map, ore, CoreOres.Grade.RICH);
+                    }
+                );
+
+            }
+            else
+            {
+                CoreBlocks.ORES.values().forEach(map -> accept(out, map, ore));
+            }
+        }
+    }
+
 
 
     private static <R extends DeferredHolder<?, ?>, K1, K2> void accept(CreativeModeTab.Output out, Map<K1, Map<K2, R>> map, K1 key1, K2 key2)
@@ -80,8 +126,7 @@ public class CreativeTabs {
 
     private static <R extends DeferredHolder<?, ?>, K> void accept(CreativeModeTab.Output out, Map<K, R> map, K key)
     {
-        if (map.containsKey(key))
-        {
+        if (map.containsKey(key)) {
             out.accept((ItemLike) map.get(key));
         }
     }

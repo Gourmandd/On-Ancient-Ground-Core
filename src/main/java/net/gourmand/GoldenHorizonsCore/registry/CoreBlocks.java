@@ -1,5 +1,7 @@
 package net.gourmand.GoldenHorizonsCore.registry;
 
+import net.dries007.tfc.common.blocks.GroundcoverBlock;
+import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
@@ -8,6 +10,10 @@ import net.gourmand.GoldenHorizonsCore.registry.category.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
@@ -68,6 +74,25 @@ public class CoreBlocks {
 
     public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_POTTED_SAPLINGS = Helpers.mapOf(CoreFruitTrees.class, tree ->
             registerNoItem("plant/potted/" + tree.name() + "_sapling", tree::createPottedSapling)
+    );
+
+    public static final Map<Rock, Map<CoreOres, DeferredHolder<Block, Block>>> ORES = Helpers.mapOf(Rock.class, rock ->
+            Helpers.mapOf(CoreOres.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
+                    register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+            )
+    );
+
+    // Even if no ores are registered as of now, it adds the opportunity to easily add them.
+    public static final Map<Rock, Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> GRADED_ORES = Helpers.mapOf(Rock.class, rock ->
+            Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore ->
+                    Helpers.mapOf(CoreOres.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+                    )
+            )
+    );
+
+    public static final Map<CoreOres, DeferredHolder<Block, Block>> SMALL_ORES = Helpers.mapOf(CoreOres.class, CoreOres::isGraded, type ->
+            register(("ore/small_" + type.name()), () -> GroundcoverBlock.looseOre(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.05F, 0.0F).sound(SoundType.NETHER_ORE).noCollission().pushReaction(PushReaction.DESTROY)))
     );
 
     /* Much easier with kjs for now.
