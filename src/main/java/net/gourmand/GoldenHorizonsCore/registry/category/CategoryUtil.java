@@ -58,6 +58,22 @@ public class CategoryUtil {
         ArrayList<String> list = new ArrayList<String>();
 
         for (CoreOres ore : CoreOres.values()){
+            if (!ore.isGraded()){
+                list.add(ore.name());
+            }
+            list.add(ore.name());
+        }
+
+        return list;
+    }
+
+    public static ArrayList<String> getGradedOreNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreOres ore : CoreOres.values()){
+            if (ore.isGraded()){
+                list.add(ore.name());
+            }
             list.add(ore.name());
         }
 
