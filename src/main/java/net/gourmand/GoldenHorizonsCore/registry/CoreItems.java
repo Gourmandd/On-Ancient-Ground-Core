@@ -6,6 +6,7 @@ import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
 import net.gourmand.GoldenHorizonsCore.registry.category.CoreCrops;
 import net.gourmand.GoldenHorizonsCore.registry.category.CoreMetals;
 import net.gourmand.GoldenHorizonsCore.registry.category.CoreOres;
+import net.gourmand.GoldenHorizonsCore.registry.category.CoreRocks;
 import net.gourmand.GoldenHorizonsCore.registry.items.CoreSeedItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -42,6 +43,10 @@ public class CoreItems {
             register("gem/" + ore.name())
     );
 
+    public static final Map<CoreRocks,  DeferredHolder<Item, Item>> BRICKS = Helpers.mapOf(CoreRocks.class,type ->
+            register("brick/" + type.name(), type.createItemProperties())
+    );
+
     /* Much easier with kjs for now.
     public static final Map<Metals.Metal,DeferredHolder<Item, Item>> METAL_FLUID_BUCKETS = Helpers.mapOf(Metals.Metal.class, metal ->
             register("bucket/metal/" + metal.name(), () -> new BucketItem(CoreFluids.METALS.get(metal).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
@@ -51,6 +56,11 @@ public class CoreItems {
     private static DeferredHolder<Item, Item> register(String name)
     {
         return register(name, () -> new Item(new Item.Properties()));
+    }
+
+    private static DeferredHolder<Item, Item> register(String name, Item.Properties properties)
+    {
+        return ITEMS.register(name.toLowerCase(Locale.ROOT), () -> new Item(properties));
     }
 
     private static DeferredHolder<Item, Item> register(String name, Supplier<Item> item)

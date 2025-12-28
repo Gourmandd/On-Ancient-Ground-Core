@@ -1,6 +1,7 @@
 package net.gourmand.GoldenHorizonsCore.registry.category;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class CategoryUtil {
 
@@ -54,14 +55,13 @@ public class CategoryUtil {
         return list;
     }
 
-    public static ArrayList<String> getOreNames(){
+    public static ArrayList<String> getAllOreNames(){
         ArrayList<String> list = new ArrayList<String>();
 
         for (CoreOres ore : CoreOres.values()){
             if (!ore.isGraded()){
-                list.add(ore.name());
+                list.add(ore.name().toLowerCase(Locale.ROOT));
             }
-            list.add(ore.name());
         }
 
         return list;
@@ -72,9 +72,20 @@ public class CategoryUtil {
 
         for (CoreOres ore : CoreOres.values()){
             if (ore.isGraded()){
-                list.add(ore.name());
+                list.add(ore.name().toLowerCase(Locale.ROOT));
             }
-            list.add(ore.name());
+        }
+
+        return list;
+    }
+
+    public static ArrayList<String> GetGemOreNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreOres ore : CoreOres.values()){
+            if (ore.isGem()){
+                list.add(ore.name().toLowerCase(Locale.ROOT));
+            }
         }
 
         return list;
@@ -85,7 +96,29 @@ public class CategoryUtil {
 
         for (CoreOres ore : CoreOres.values()){
             if (ore.hasPastelOreType()){
-                list.add(ore.name());
+                list.add(ore.name().toLowerCase(Locale.ROOT));
+            }
+        }
+
+        return list;
+    }
+
+    public static ArrayList<String> getAllRockNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreRocks rock : CoreRocks.values()){
+            list.add(rock.name().toLowerCase(Locale.ROOT));
+        }
+
+        return list;
+    }
+
+    public static ArrayList<String> getNoVariantRockNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreRocks rock : CoreRocks.values()){
+            if (rock.hasVariants()){
+                list.add(rock.name().toLowerCase(Locale.ROOT));
             }
         }
 

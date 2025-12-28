@@ -1,8 +1,10 @@
 package net.gourmand.GoldenHorizonsCore.registry;
 
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
+import net.gourmand.GoldenHorizonsCore.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.GoldenHorizonsCore.registry.category.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -35,6 +37,12 @@ public class CreativeTabs {
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> CoreBlocks.ORES.get(Rock.ANDESITE).get(CoreOres.AZURITE).get().asItem().getDefaultInstance())
             .displayItems(CreativeTabs::fillOres).build());
+
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ROCKS = CREATIVE_TABS.register("rocks", () -> CreativeModeTab.builder()
+            .title(Component.translatable("item_group.rocks." + GoldenHorizonsCore.MODID)) //The language key for the title of your CreativeModeTab
+            .withTabsBefore(CreativeModeTabs.COMBAT)
+            .icon(() -> CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get().asItem().getDefaultInstance())
+            .displayItems(CreativeTabs::fillRocks).build());
 
     private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
@@ -106,11 +114,72 @@ public class CreativeTabs {
                     }
                 );
 
+                CoreBlocks.CUSTOM_ROCK_GRADED_ORES.values().forEach(map -> {
+                            accept(out, map, ore, CoreOres.Grade.POOR);
+                            accept(out, map, ore, CoreOres.Grade.NORMAL);
+                            accept(out, map, ore, CoreOres.Grade.RICH);
+                        }
+                );
             }
             else
             {
                 CoreBlocks.ORES.values().forEach(map -> accept(out, map, ore));
+                CoreBlocks.CUSTOM_ROCK_ORES.values().forEach(map -> accept(out, map, ore));
             }
+        }
+
+        for (Ore ore : Ore.values())
+        {
+            if (ore.isGraded())
+            {
+                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map -> {
+                            accept(out, map, ore, Ore.Grade.POOR);
+                            accept(out, map, ore, Ore.Grade.NORMAL);
+                            accept(out, map, ore, Ore.Grade.RICH);
+                        }
+                );
+            }
+            else
+            {
+                CoreBlocks.CUSTOM_ROCK_TFC_ORES.values().forEach(map -> accept(out, map, ore));
+            }
+        }
+    }
+
+    private static void fillRocks(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        for (CoreRocks rock : CoreRocks.VALUES)
+        {
+            for (Rock.BlockType type : new Rock.BlockType[] {
+                    Rock.BlockType.HARDENED,
+                    Rock.BlockType.RAW,
+                    Rock.BlockType.PRESSURE_PLATE,
+                    Rock.BlockType.BUTTON,
+                    Rock.BlockType.SPIKE,
+                    Rock.BlockType.COBBLE,
+                    Rock.BlockType.MOSSY_COBBLE,
+                    Rock.BlockType.BRICKS,
+                    Rock.BlockType.CRACKED_BRICKS,
+                    Rock.BlockType.MOSSY_BRICKS,
+                    Rock.BlockType.SMOOTH,
+                    Rock.BlockType.CHISELED,
+                    Rock.BlockType.AQUEDUCT,
+                    Rock.BlockType.GRAVEL,
+                    Rock.BlockType.LOOSE,
+                    Rock.BlockType.MOSSY_LOOSE,
+            })
+            {
+                if (rock.hasVariant(type))
+                {
+                    accept(out, CoreBlocks.ROCK_BLOCKS, rock, type);
+                }
+
+                if (type.hasVariants() && rock.hasVariants())
+                {
+                    accept(out, CoreBlocks.ROCK_DECORATIONS.get(rock).get(type));
+                }
+            }
+            accept(out, CoreItems.BRICKS, rock);
         }
     }
 
@@ -122,6 +191,13 @@ public class CreativeTabs {
         {
             accept(out, map.get(key1), key2);
         }
+    }
+
+    private static void accept(CreativeModeTab.Output out, CoreDecorationBlockHolder decoration)
+    {
+        out.accept(decoration.stair().get());
+        out.accept(decoration.slab().get());
+        out.accept(decoration.wall().get());
     }
 
     private static <R extends DeferredHolder<?, ?>, K> void accept(CreativeModeTab.Output out, Map<K, R> map, K key)

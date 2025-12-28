@@ -16,7 +16,7 @@ public enum CoreOres {
     AZURITE(Type.NORMAL, PastelOreType.AZURITE),
     STRATINE(Type.NORMAL, PastelOreType.STRATINE),
     PALTAERIA(Type.NORMAL, PastelOreType.PALTAERIA),
-    MULLITE(Type.NORMAL_WITH_POWDER);
+    KAOLINITE(Type.NORMAL_WITH_POWDER);
 
     private final Type type;
     private final PastelOreType pastelOreType;
@@ -61,33 +61,38 @@ public enum CoreOres {
     public Block create(RegistryRock rock)
     {
         final BlockBehaviour.Properties properties = Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops();
+        final Block block;
 
         switch (pastelOreType){
             case PastelOreType.SHIMMERSTONE ->
             {
-                return new ShimmerstoneOreBlock( UniformInt.of(2, 4), properties);
+                block = new ShimmerstoneOreBlock( UniformInt.of(2, 4), properties);
             }
             case PastelOreType.AZURITE ->
             {
-                return new AzuriteOreBlock(UniformInt.of(4, 7), properties);
+                block = new AzuriteOreBlock(UniformInt.of(4, 7), properties);
             }
             case PastelOreType.STRATINE ->
             {
-                return new CloakedOreBlock(UniformInt.of(3, 5), properties);
+                block = new CloakedOreBlock(UniformInt.of(3, 5), properties);
             }
             case PastelOreType.PALTAERIA ->
             {
-                return new CloakedOreBlock(UniformInt.of(2, 4), properties);
+                block = new CloakedOreBlock(UniformInt.of(2, 4), properties);
             }
             case PastelOreType.MALACHITE ->
             {
-                return new CloakedOreBlock(UniformInt.of(7, 11), properties);
+                block = new CloakedOreBlock(UniformInt.of(7, 11), properties);
             }
-            default ->
+            case PastelOreType.NONE ->
             {
-                return new Block(properties);
+                block = new Block(properties);
+            }
+            default -> {
+                throw new AssertionError("pastelOreType of CoreOre did not match any PastelOreType enum entry");
             }
         }
+        return block;
     }
 
     public enum Grade
