@@ -1,12 +1,11 @@
 package net.gourmand.GoldenHorizonsCore.registry;
 
+import net.dries007.tfc.common.TFCTiers;
+import net.dries007.tfc.common.items.ToolItem;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
-import net.gourmand.GoldenHorizonsCore.registry.category.CoreCrops;
-import net.gourmand.GoldenHorizonsCore.registry.category.CoreMetals;
-import net.gourmand.GoldenHorizonsCore.registry.category.CoreOres;
-import net.gourmand.GoldenHorizonsCore.registry.category.CoreRocks;
+import net.gourmand.GoldenHorizonsCore.registry.category.*;
 import net.gourmand.GoldenHorizonsCore.registry.items.CoreSeedItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -52,6 +51,14 @@ public class CoreItems {
             register("bucket/metal/" + metal.name(), () -> new BucketItem(CoreFluids.METALS.get(metal).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
     );
     */
+
+    public static final DeferredHolder<Item, ToolItem> SNOW_SHOVEL = ITEMS.register("tool/snow_shovel", () -> new ToolItem(TFCTiers.STEEL, CoreTags.SNOW_SHOVEL_MINEABLE, new Item.Properties().durability(3200).stacksTo(0).setNoRepair()));
+    public static final DeferredHolder<Item, Item> SNOW_SHOVEL_HEAD = ITEMS.register("tool/snow_shovel_head", CoreItems::basicItem);
+
+    private static Item basicItem(){
+        return new Item(new Item.Properties());
+    }
+
 
     private static DeferredHolder<Item, Item> register(String name)
     {

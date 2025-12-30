@@ -44,6 +44,12 @@ public class CreativeTabs {
             .icon(() -> CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get().asItem().getDefaultInstance())
             .displayItems(CreativeTabs::fillRocks).build());
 
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS = CREATIVE_TABS.register("tools", () -> CreativeModeTab.builder()
+            .title(Component.translatable("item_group.tools." + GoldenHorizonsCore.MODID)) //The language key for the title of your CreativeModeTab
+            .withTabsBefore(CreativeModeTabs.COMBAT)
+            .icon(() -> CoreItems.SNOW_SHOVEL.get().getDefaultInstance())
+            .displayItems(CreativeTabs::fillTools).build());
+
     private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
         for (CoreCrops crop : CoreCrops.values())
@@ -183,6 +189,11 @@ public class CreativeTabs {
         }
     }
 
+    private static void fillTools(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        out.accept(CoreItems.SNOW_SHOVEL.get());
+        out.accept(CoreItems.SNOW_SHOVEL_HEAD.get());
+    }
 
 
     private static <R extends DeferredHolder<?, ?>, K1, K2> void accept(CreativeModeTab.Output out, Map<K1, Map<K2, R>> map, K1 key1, K2 key2)

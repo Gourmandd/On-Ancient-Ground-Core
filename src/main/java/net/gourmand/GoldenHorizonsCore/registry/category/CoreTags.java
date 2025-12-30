@@ -1,0 +1,19 @@
+package net.gourmand.GoldenHorizonsCore.registry.category;
+
+import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
+
+public class CoreTags {
+
+    private static TagKey<Block> createBlockTag(String name){
+        return TagKey.create(
+                Registries.BLOCK,
+                ResourceLocation.fromNamespaceAndPath(GoldenHorizonsCore.MODID, name)
+        );
+    };
+
+    public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = createBlockTag( "snow_shovel_mineable");
+}
