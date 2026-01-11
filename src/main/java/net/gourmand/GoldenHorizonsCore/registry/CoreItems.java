@@ -1,6 +1,5 @@
 package net.gourmand.GoldenHorizonsCore.registry;
 
-import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.TFCTiers;
 import net.dries007.tfc.common.items.MoldItem;
 import net.dries007.tfc.common.items.ToolItem;

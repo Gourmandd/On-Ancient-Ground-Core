@@ -14,14 +14,14 @@ public class CoreTags {
                 Registries.BLOCK,
                 ResourceLocation.fromNamespaceAndPath(GoldenHorizonsCore.MODID, name)
         );
-    };
+    }
 
     private static TagKey<Fluid> createFluidTag(String name){
         return TagKey.create(
                 Registries.FLUID,
                 ResourceLocation.fromNamespaceAndPath(GoldenHorizonsCore.MODID, name)
         );
-    };
+    }
 
     public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = createBlockTag( "snow_shovel_mineable");
     public static final TagKey<Fluid> GLASS_MOLD_ACCEPTABLE = createFluidTag( "molten_glass");
