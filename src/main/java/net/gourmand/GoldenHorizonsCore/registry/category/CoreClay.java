@@ -76,15 +76,16 @@ public enum CoreClay implements RegistryClay {
         MACE_HEAD(ItemPartType.UNFIRED_MOLD),
         KNIFE_BLADE(ItemPartType.UNFIRED_MOLD),
         SCYTHE_BLADE(ItemPartType.UNFIRED_MOLD),
-        UNFIRED_BELL(ItemPartType.UNFIRED_MOLD),
+        BELL(ItemPartType.UNFIRED_MOLD),
+        INGOT(ItemPartType.UNFIRED_MOLD),
 
         CLAY_BALL(ItemPartType.REDUCED_ITEM),
 
         UNFIRED_VESSEL(),
         UNFIRED_JUG(),
-        UNFIRED_SPINDLE(),
+        UNFIRED_SPINDLE_HEAD(),
         UNFIRED_BRICK(),
-        FIRED_BRICK(),
+        BRICK(),
         UNFIRED_BLOWPIPE(),
         UNFIRED_BOWL(),
         UNFIRED_FLOWER_POT(),
@@ -122,7 +123,7 @@ public enum CoreClay implements RegistryClay {
         public String getName(RegistryClay clay)
         {
             if (type == ItemPartType.UNFIRED_MOLD){
-                return clay.getSerializedName() + "/unfired" + getSerializedName();
+                return clay.getSerializedName() + "/unfired_" + getSerializedName() + "_mold";
             } else {
                 return clay.getSerializedName() + "/" + getSerializedName();
             }
