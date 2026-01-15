@@ -10,12 +10,9 @@ import net.gourmand.GoldenHorizonsCore.registry.CoreItems;
 import net.gourmand.GoldenHorizonsCore.registry.category.CoreClay;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.stream.Stream;
 
 public class CoreItemCapabilities {
 
