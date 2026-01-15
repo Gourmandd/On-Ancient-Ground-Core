@@ -13,10 +13,10 @@ import java.util.Locale;
 import java.util.function.Supplier;
 
 public enum CorePastelWood implements RegistryWood {
-    CHESTNUT(true, MapColor.CRIMSON_NYLIUM, MapColor.CRIMSON_NYLIUM),
-    SLATE(true, MapColor.COLOR_GRAY, MapColor.COLOR_GRAY),
-    EBONY(true, MapColor.TERRACOTTA_BLACK, MapColor.TERRACOTTA_BLACK),
-    IVORY(true, MapColor.QUARTZ, MapColor.QUARTZ),
+    CHESTNUT_NOXWOOD(true, MapColor.CRIMSON_NYLIUM, MapColor.CRIMSON_NYLIUM),
+    SLATE_NOXWOOD(true, MapColor.COLOR_GRAY, MapColor.COLOR_GRAY),
+    EBONY_NOXWOOD(true, MapColor.TERRACOTTA_BLACK, MapColor.TERRACOTTA_BLACK),
+    IVORY_NOXWOOD(true, MapColor.QUARTZ, MapColor.QUARTZ),
     WEEPING_GALA(false, MapColor.COLOR_BROWN, MapColor.COLOR_BROWN),
     WHITE(false, MapColor.SNOW, MapColor.SNOW),
     ORANGE(false, MapColor.COLOR_ORANGE, MapColor.COLOR_ORANGE),
