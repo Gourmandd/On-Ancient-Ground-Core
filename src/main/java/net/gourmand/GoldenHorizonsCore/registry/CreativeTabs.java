@@ -57,6 +57,12 @@ public class CreativeTabs {
             .icon(() -> CoreItems.SNOW_SHOVEL.get().getDefaultInstance())
             .displayItems(CreativeTabs::fillTools).build());
 
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CERAMICS = CREATIVE_TABS.register("ceramics", () -> CreativeModeTab.builder()
+            .title(Component.translatable("item_group.ceramics." + GoldenHorizonsCore.MODID)) //The language key for the title of your CreativeModeTab
+            .withTabsBefore(CreativeModeTabs.COMBAT)
+            .icon(() -> CoreItems.CERAMICS.get(CoreClay.YIXING).get(CoreClay.ItemType.VESSEL).get().getDefaultInstance())
+            .displayItems(CreativeTabs::fillCeramics).build());
+
     private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
         for (CoreCrops crop : CoreCrops.values())
@@ -205,6 +211,17 @@ public class CreativeTabs {
         out.accept(CoreItems.GLASS_PANE_MOLD.get());
 
         out.accept(CoreItems.WROUGHT_IRON_BUCKET.get());
+    }
+
+    private static void fillCeramics(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        for (CoreClay clay : CoreClay.values())
+        {
+            for (CoreClay.ItemType type : CoreClay.ItemType.values())
+            {
+                out.accept(CoreItems.CERAMICS.get(clay).get(type).get());
+            }
+        }
     }
 
     private static void fillWood(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)

@@ -1,8 +1,11 @@
 package net.gourmand.GoldenHorizonsCore.registry;
 
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.TFCTiers;
 import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.common.items.JugItem;
 import net.dries007.tfc.common.items.MoldItem;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.common.items.ToolItem;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
@@ -58,6 +61,12 @@ public class CoreItems {
 
     public static final Map<CorePastelWood, DeferredHolder<Item, Item>> SUPPORTS = Helpers.mapOf(CorePastelWood.class, wood ->
             register("wood/support/" + wood.name(), () -> new StandingAndWallBlockItem(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).get(), CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get(), new Item.Properties(), Direction.DOWN))
+    );
+
+    public static final Map<CoreClay, Map<CoreClay.ItemType, DeferredHolder<Item, Item>>> CERAMICS = Helpers.mapOf(CoreClay.class, clay ->
+            Helpers.mapOf(CoreClay.ItemType.class, type ->
+                    register("ceramic/" + type.getName(clay), type.create(clay))
+            )
     );
 
     /* Much easier with kjs for now.

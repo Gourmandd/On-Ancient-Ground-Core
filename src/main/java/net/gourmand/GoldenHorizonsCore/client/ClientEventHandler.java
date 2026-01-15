@@ -5,6 +5,7 @@ import net.dries007.tfc.client.TFCColors;
 import net.dries007.tfc.client.model.ContainedFluidModel;
 import net.gourmand.GoldenHorizonsCore.registry.CoreBlocks;
 import net.gourmand.GoldenHorizonsCore.registry.CoreItems;
+import net.gourmand.GoldenHorizonsCore.registry.category.CoreClay;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -75,6 +76,11 @@ public class ClientEventHandler {
     }
 
     private static void registerColorHandlerItems(RegisterColorHandlersEvent.Item event) {
+
+        for (CoreClay clay : CoreClay.values()){;
+            event.register(ContainedFluidModel.COLOR, CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).get());
+        }
+
         event.register(ContainedFluidModel.COLOR,
                 CoreItems.GLASS_MOLD.get(),
                 CoreItems.GLASS_PANE_MOLD.get(),

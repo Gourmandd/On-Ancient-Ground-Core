@@ -7,14 +7,33 @@ import net.dries007.tfc.common.component.mold.Mold;
 import net.dries007.tfc.common.items.FluidContainerItem;
 import net.dries007.tfc.common.items.MoldItem;
 import net.gourmand.GoldenHorizonsCore.registry.CoreItems;
+import net.gourmand.GoldenHorizonsCore.registry.category.CoreClay;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.stream.Stream;
+
 public class CoreItemCapabilities {
 
     public static void register(RegisterCapabilitiesEvent event){
+
+
+        for (CoreClay clay : CoreClay.values())
+        {
+            final Item vessel = CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.VESSEL).get();
+            final Item jug = CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).get();
+
+            event.registerItem(Capabilities.FluidHandler.ITEM, ItemCapabilities::forBucket, jug);
+
+            event.registerItem(ItemCapabilities.MOLD, ItemCapabilities::forVessel, vessel);
+            event.registerItem(ItemCapabilities.HEAT, ItemCapabilities::forVessel, vessel);
+            event.registerItem(ItemCapabilities.FLUID, ItemCapabilities::forVessel, vessel);
+            event.registerItem(ItemCapabilities.ITEM, ItemCapabilities::forVessel, vessel);
+        }
 
 
         event.registerItem(ItemCapabilities.MOLD, CoreItemCapabilities::getMold,
