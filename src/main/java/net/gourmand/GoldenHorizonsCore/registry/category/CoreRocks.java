@@ -15,19 +15,18 @@ import net.dries007.tfc.util.registry.RegistryRock;
 
 public enum CoreRocks implements RegistryRock
 {
-    ARGILLITE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE, false, false), //vanilla cobble
-    NEPHELINITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.DEEPSLATE, false, false), //deepslate
-    BLACKSLAG(RockDisplayCategory.FELSIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BLACK, false, false),
-    PICRITE_BASALT(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY, false, true), // Pastel's basal marble
-    TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN, false, true); // dripstone
+    ARGILLITE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE, false), //vanilla cobble
+    NEPHELINITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.DEEPSLATE, false), //deepslate
+    BLACKSLAG(RockDisplayCategory.FELSIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BLACK, false),
+    PICRITE_BASALT(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY, false), // Pastel's basal marble
+    TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN, false); // dripstone
 
     public static final CoreRocks[] VALUES = values();
 
     private final String serializedName;
     private final RockDisplayCategory category;
     private final MapColor color;
-    private final boolean hasVariants;
-    private final boolean hasCobble; //whether it has cobble from this mod, vanilla cobble can be used for argillite.
+    private final boolean hasVariants;//whether it has cobble from this mod, vanilla cobble can be used for argillite.
 
     CoreRocks(RockDisplayCategory category, MapColor color)
     {
@@ -35,16 +34,14 @@ public enum CoreRocks implements RegistryRock
         this.category = category;
         this.color = color;
         this.hasVariants = true;
-        this.hasCobble = true;
     }
 
-    CoreRocks(RockDisplayCategory category, MapColor color, boolean hasVariants, boolean hasCobble)
+    CoreRocks(RockDisplayCategory category, MapColor color, boolean hasVariants)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.category = category;
         this.color = color;
         this.hasVariants = hasVariants;
-        this.hasCobble = hasCobble;
     }
 
     public Item.Properties createItemProperties()
@@ -69,25 +66,16 @@ public enum CoreRocks implements RegistryRock
         return hasVariants;
     }
 
-    public boolean hasCobble()
-    {
-        return hasCobble;
-    }
-
     public boolean hasVariant(Rock.BlockType blockType){
         if (hasVariants){
             return true;
         }
 
-        if (hasCobble && blockType == Rock.BlockType.COBBLE){
-            return true;
-        }
-
         switch (blockType){
-            case RAW, BRICKS, SMOOTH, COBBLE, CRACKED_BRICKS, CHISELED, PRESSURE_PLATE, BUTTON  -> {
+            case RAW, BRICKS, SMOOTH, CRACKED_BRICKS, CHISELED, PRESSURE_PLATE, BUTTON  -> {
                 return false;
             }
-            case HARDENED, GRAVEL, SPIKE, MOSSY_BRICKS, MOSSY_COBBLE, MOSSY_LOOSE, LOOSE, AQUEDUCT -> {
+            case HARDENED, GRAVEL, SPIKE, MOSSY_BRICKS, COBBLE, MOSSY_COBBLE, MOSSY_LOOSE, LOOSE, AQUEDUCT -> {
                 return true;
             }
         }
