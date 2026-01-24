@@ -113,7 +113,7 @@ public class CategoryUtil {
         return list;
     }
 
-    public static ArrayList<String> getNoVariantRockNames(){
+    public static ArrayList<String> getAllVariantRockNames(){
         ArrayList<String> list = new ArrayList<String>();
 
         for (CoreRocks rock : CoreRocks.values()){
