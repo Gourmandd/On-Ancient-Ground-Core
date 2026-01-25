@@ -22,6 +22,7 @@ public enum CoreRocks implements RegistryRock
     TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN, false),
     BRECCIA(RockDisplayCategory.SEDIMENTARY, MapColor.SNOW, false), // Caupona's felsic tuff
     KOMATIITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BROWN, false),
+    BLUESCHIST(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_BLUE, true),
     PERIDOTITE(RockDisplayCategory.MAFIC_IGNEOUS_INTRUSIVE, MapColor.TERRACOTTA_LIGHT_GREEN, true),
     SERPENTINE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_GREEN, true);
 
