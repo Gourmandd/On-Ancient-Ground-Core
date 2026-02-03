@@ -21,8 +21,8 @@ public enum CoreOres implements RegistryOre {
     PALTAERIA(Type.NORMAL, PastelOreType.PALTAERIA),
     MALACHITE(Type.NORMAL, PastelOreType.MALACHITE),
     GALENA(Type.GRADED),
-    ANTHRACITE(Type.NORMAL_WITH_POWDER),
-    BAUXITE(Type.NORMAL_WITH_POWDER);
+    ANTHRACITE(Type.ITEM_ONLY),
+    BAUXITE(Type.ITEM_ONLY);
 
     private final Type type;
     private final PastelOreType pastelOreType;

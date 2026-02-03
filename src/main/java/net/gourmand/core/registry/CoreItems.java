@@ -36,9 +36,10 @@ public class CoreItems {
             register("seeds/" + crop.name(), () -> new CoreSeedItem(crop, CoreBlocks.CROPS.get(crop).get(), new Item.Properties()))
     );
 
-    public static final Map<CoreOres, DeferredHolder<Item, Item>> ORES = Helpers.mapOf(CoreOres.class, ore -> !(ore.isGraded() || ore.hasPastelOreType()), type ->
+    public static final Map<CoreOres, DeferredHolder<Item, Item>> ORES = Helpers.mapOf(CoreOres.class, ore -> !(!ore.hasBlock() || ore.isGraded() || ore.hasPastelOreType()), type ->
             register("ore/" + type.name())
     );
+
     public static final Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Item, Item>>> GRADED_ORES = Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore ->
             Helpers.mapOf(CoreOres.Grade.class, grade ->
                     register("ore/" + grade.name() + '_' + ore.name())
