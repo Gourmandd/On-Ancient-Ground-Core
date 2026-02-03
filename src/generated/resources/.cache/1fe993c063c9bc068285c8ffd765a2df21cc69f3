@@ -1,0 +1,13 @@
+// 1.21.1	2026-02-03T16:56:15.843280848	Tags for minecraft:block mod id modpack
+7c0cb861dff140dcc844bd8fd782948b70f42d82 data/c/tags/block/ores.json
+2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
+25a1a97177a06510355cad081a3ec15029c150f9 data/minecraft/tags/block/mineable/axe.json
+e0c6895860239ca52d65f80c2e644f1bd9278c3e data/minecraft/tags/block/mineable/hoe.json
+7c0cb861dff140dcc844bd8fd782948b70f42d82 data/minecraft/tags/block/mineable/pickaxe.json
+25a1a97177a06510355cad081a3ec15029c150f9 data/tfc/tags/block/fruit_tree_branches.json
+2c0bffeb3adcd01c6502d13834905252e7876bba data/tfc/tags/block/fruit_tree_leaves.json
+37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/fruit_tree_saplings.json
+37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/mineable/hoe.json
+37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/mineable/knife.json
+37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/mineable/scythe.json
+7c0cb861dff140dcc844bd8fd782948b70f42d82 data/tfc/tags/block/prospectable.json

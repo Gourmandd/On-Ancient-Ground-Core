@@ -4,13 +4,16 @@ import earth.terrarium.pastel.blocks.conditional.CloakedOreBlock;
 import earth.terrarium.pastel.blocks.geology.AzuriteOreBlock;
 import earth.terrarium.pastel.blocks.geology.ShimmerstoneOreBlock;
 import net.dries007.tfc.util.registry.RegistryRock;
+import net.gourmand.core.util.RegistryOre;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 
-public enum CoreOres {
+import java.util.Locale;
+
+public enum CoreOres implements RegistryOre {
 
     SHIMMERSTONE(Type.NORMAL, PastelOreType.SHIMMERSTONE),
     AZURITE(Type.NORMAL, PastelOreType.AZURITE),
@@ -23,17 +26,20 @@ public enum CoreOres {
 
     private final Type type;
     private final PastelOreType pastelOreType;
+    private final String serializedName;
 
     CoreOres(Type type)
     {
         this.type = type;
         this.pastelOreType = PastelOreType.NONE;
+        this.serializedName = name().toLowerCase(Locale.ROOT);
     }
 
     CoreOres(Type type, PastelOreType pastelOreType)
     {
         this.type = type;
         this.pastelOreType = pastelOreType;
+        this.serializedName = name().toLowerCase(Locale.ROOT);
     }
 
     public boolean isGraded()
@@ -96,6 +102,11 @@ public enum CoreOres {
             }
         }
         return block;
+    }
+
+    @Override
+    public String getSerializedName() {
+        return "";
     }
 
     public enum Grade

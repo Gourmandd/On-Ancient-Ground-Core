@@ -96,7 +96,6 @@ public class CoreBlocks {
             )
     );
 
-    // Even if no ores are registered as of now, it adds the opportunity to easily add them.
     public static final Map<Rock, Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> GRADED_ORES = Helpers.mapOf(Rock.class, rock ->
             Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore ->
                     Helpers.mapOf(CoreOres.Grade.class, grade ->
@@ -126,9 +125,13 @@ public class CoreBlocks {
             )
     );
 
-    public static final Map<CoreRocks, Map<Ore, Map<Ore.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_TFC_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock ->
+    public static final Map<CoreOres, DeferredHolder<Block, Block>> BASIC_ORES = Helpers.mapOf(CoreOres.class, ore -> (!ore.hasBlock()), ore ->
+            register(("ore/" + ore.name()), () -> new Block(BlockBehaviour.Properties.of()))
+    );
+
+    public static final Map<CoreRocks, Map<Ore, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_TFC_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock ->
             Helpers.mapOf(Ore.class, Ore::isGraded, ore ->
-                    Helpers.mapOf(Ore.Grade.class, grade ->
+                    Helpers.mapOf(CoreOres.Grade.class, grade ->
                             register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
                     )
             )

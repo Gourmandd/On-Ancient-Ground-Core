@@ -142,8 +142,17 @@ public class CreativeTabs {
             }
             else
             {
-                CoreBlocks.ORES.values().forEach(map -> accept(out, map, ore));
-                CoreBlocks.CUSTOM_ROCK_ORES.values().forEach(map -> accept(out, map, ore));
+                if (ore.hasBlock())
+                {
+                    CoreBlocks.ORES.values().forEach(map -> accept(out, map, ore));
+                    CoreBlocks.CUSTOM_ROCK_ORES.values().forEach(map -> accept(out, map, ore));
+                }
+                else
+                {
+                    CoreBlocks.BASIC_ORES.values().forEach( basicOre ->
+                            out.accept(basicOre.get())
+                    );
+                }
             }
         }
 
@@ -152,9 +161,9 @@ public class CreativeTabs {
             if (ore.isGraded())
             {
                 CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map -> {
-                            accept(out, map, ore, Ore.Grade.POOR);
-                            accept(out, map, ore, Ore.Grade.NORMAL);
-                            accept(out, map, ore, Ore.Grade.RICH);
+                            accept(out, map, ore, CoreOres.Grade.POOR);
+                            accept(out, map, ore, CoreOres.Grade.NORMAL);
+                            accept(out, map, ore, CoreOres.Grade.RICH);
                         }
                 );
             }
