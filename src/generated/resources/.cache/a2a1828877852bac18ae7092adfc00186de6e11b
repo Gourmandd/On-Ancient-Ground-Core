@@ -1,3 +1,6 @@
-// 1.21.1	2026-02-03T13:21:02.501202439	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-02-03T21:16:55.468340549	Tags for minecraft:item mod id modpack
+08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/c/tags/item/ores.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/item/leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/minecraft/tags/item/saplings.json
+be4e2e491323135b85609f49113de10b12fed939 data/pastel/tags/item/azurite_ores.json
+f46906462675cd1b0f65f2314df5f65ceaff83ae data/pastel/tags/item/shimmerstone_ores.json

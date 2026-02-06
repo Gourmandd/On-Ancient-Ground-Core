@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 
+import earth.terrarium.pastel.registries.PastelBlockTags;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -14,6 +15,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
@@ -39,6 +41,10 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+
+        final TagKey<Block> SHIMMERSTONE_ORES = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("pastel", "shimmerstone_ores"));
+        // adds #c:ores to this tag to be able to isolate and get ore blocks.
+        this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).addTag(Tags.Blocks.ORES);
 
         add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(
             BlockTags.LEAVES,
@@ -118,6 +124,18 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
                     }
                 }
             }
+        }
+
+        for (Rock rock : Rock.values())
+        {
+            this.tag(PastelBlockTags.AZURITE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.AZURITE).getKey());
+            this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
+        }
+
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            this.tag(PastelBlockTags.AZURITE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE).getKey());
+            this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
         }
     }
 
