@@ -3,9 +3,12 @@ package net.gourmand.core.registry.category;
 import earth.terrarium.pastel.blocks.conditional.CloakedOreBlock;
 import earth.terrarium.pastel.blocks.geology.AzuriteOreBlock;
 import earth.terrarium.pastel.blocks.geology.ShimmerstoneOreBlock;
+import earth.terrarium.pastel.registries.PastelItems;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.util.RegistryOre;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -103,6 +106,59 @@ public enum CoreOres implements RegistryOre {
         }
         return block;
     }
+
+    public Item getPastelOre(){
+
+        final Item item;
+
+        switch (pastelOreType){
+            case PastelOreType.SHIMMERSTONE ->
+            {
+                item = PastelItems.SHIMMERSTONE_GEM.asItem();
+            }
+            case PastelOreType.AZURITE ->
+            {
+                item = PastelItems.RAW_AZURITE.asItem();
+            }
+            case PastelOreType.STRATINE ->
+            {
+                item = PastelItems.STRATINE_FRAGMENTS.asItem();
+            }
+            case PastelOreType.PALTAERIA ->
+            {
+                item = PastelItems.PALTAERIA_FRAGMENTS.asItem();
+            }
+            case PastelOreType.MALACHITE ->
+            {
+                item = PastelItems.RAW_MALACHITE.asItem();
+            }
+            case PastelOreType.NONE ->
+            {
+                throw new AssertionError("pastelOre of CoreOre is NONE, only use the method if you are sure pastelOreType isnt NONE");
+            }
+            default -> {
+                throw new AssertionError("pastelOre of CoreOre did not match any PastelOreType enum entry");
+            }
+        }
+        return item;
+    };
+
+    public static Ore.Grade getTFCgrade(Grade grade){
+        switch (grade){
+            case POOR -> {
+                return Ore.Grade.POOR;
+            }
+            case NORMAL ->{
+                return Ore.Grade.NORMAL;
+            }
+            case RICH -> {
+                return Ore.Grade.RICH;
+            }
+            default -> {
+                return Ore.Grade.NORMAL;
+            }
+        }
+    };
 
     @Override
     public String getSerializedName() {

@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "tfc:is_isolated"
+                }
+              ],
+              "name": "modpack:ore/normal_magnetite/blueschist"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "tfc:ore/normal_magnetite"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "modpack:blocks/ore/normal_magnetite/blueschist"
+}
