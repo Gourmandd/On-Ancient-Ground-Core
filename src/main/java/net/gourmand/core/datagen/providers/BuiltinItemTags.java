@@ -1,13 +1,18 @@
 package net.gourmand.core.datagen.providers;
 
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.CoreItems;
+import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
+import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
@@ -26,6 +31,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Stream;
 
 public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 {
@@ -51,10 +57,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 ItemTags.SAPLINGS)
         );
 
-        for (CoreRocks rock : CoreRocks.values())
-        {
-            for (Ore ore : Ore.values())
-            {
+        Stream.of(CoreRocks.values()).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
                 if (ore.hasBlock())
                 {
                     if (ore.isGraded())
@@ -66,11 +70,10 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                         addOreTags(CoreBlocks.CUSTOM_ROCK_TFC_ORES, ore, rock);
                     }
                 }
-            }
-        }
+            });
+        });
 
-        for (CoreOres ore : CoreOres.values())
-        {
+        Stream.of(CoreOres.values()).forEach(ore -> {
             // if it's an ore such as bituminous coal
             if (!ore.hasBlock())
             {
@@ -78,48 +81,51 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             }
             else
             {
-                for (CoreRocks rock : CoreRocks.values())
-                {
-                    if (ore.hasBlock())
+                Stream.of(CoreRocks.values()).forEach(rock -> {
+                    if (ore.isGraded())
                     {
-                        if (ore.isGraded())
-                        {
-                            addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
-                        }
-                        else
-                        {
-                            addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
-                        }
+                        addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
                     }
-                }
-                for (Rock rock : Rock.values())
-                {
-                    if (ore.hasBlock())
+                    else
                     {
-                        if (ore.isGraded())
-                        {
-                            addGradedOreTags(CoreBlocks.GRADED_ORES, ore, rock);
-                        }
-                        else
-                        {
-                            addOreTags(CoreBlocks.ORES, ore, rock);
-                        }
+                        addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
                     }
-                }
+                });
+                Stream.of(Rock.values()).forEach(rock -> {
+                    if (ore.isGraded())
+                    {
+                        addGradedOreTags(CoreBlocks.GRADED_ORES, ore, rock);
+                    }
+                    else
+                    {
+                        addOreTags(CoreBlocks.ORES, ore, rock);
+                    }
+                });
             }
-        }
+        });
 
-        for (Rock rock : Rock.values())
-        {
+        Stream.of(Rock.values()).forEach(rock -> {
             this.tag(AZURITE_ORES).add(getKey(CoreBlocks.ORES.get(rock).get(CoreOres.AZURITE)));
             this.tag(SHIMMERSTONE_ORES).add(getKey(CoreBlocks.ORES.get(rock).get(CoreOres.SHIMMERSTONE)));
-        }
+        });
 
-        for (CoreRocks rock : CoreRocks.values())
-        {
+        Stream.of(CoreRocks.values()).forEach(rock -> {
             this.tag(AZURITE_ORES).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE)));
             this.tag(SHIMMERSTONE_ORES).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE)));
-        }
+        });
+
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+            this.tag(Tags.Items.INGOTS).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.INGOT).getKey());
+            this.tag(TFCTags.Items.DOUBLE_INGOTS).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_INGOT).getKey());
+            this.tag(TFCTags.Items.SHEETS).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.SHEET).getKey());
+            this.tag(TFCTags.Items.DOUBLE_SHEETS).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_SHEET).getKey());
+            this.tag(Tags.Items.RODS).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.ROD).getKey());
+
+            this.tag(CoreTags.Items.METAL_INGOTS.get(metal)).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.INGOT).getKey());
+            this.tag(CoreTags.Items.METAL_DOUBLE_INGOTS.get(metal)).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_INGOT).getKey());
+            this.tag(CoreTags.Items.METAL_SHEETS.get(metal)).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.SHEET).getKey());
+            this.tag(CoreTags.Items.METAL_DOUBLE_SHEETS.get(metal)).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_SHEET).getKey());
+        });
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Item>> tags ){

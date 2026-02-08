@@ -1,0 +1,11 @@
+{
+  "values": [
+    "modpack:metal/rod/aluminium",
+    "modpack:metal/rod/aluminium_bronze",
+    "modpack:metal/rod/cast_iron_alloy",
+    "modpack:metal/rod/hardened_steel",
+    "modpack:metal/rod/nethersteel",
+    "modpack:metal/rod/lead",
+    "modpack:metal/rod/electrum"
+  ]
+}

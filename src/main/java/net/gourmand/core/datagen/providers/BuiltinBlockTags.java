@@ -5,10 +5,12 @@ import earth.terrarium.pastel.registries.PastelBlockTags;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.core.HolderLookup;
@@ -127,6 +129,15 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
             this.tag(PastelBlockTags.AZURITE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.AZURITE).getKey());
             this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
         });
+
+        Stream.of(CoreMetals.MetalType.values()).forEach((metal -> {
+            this.tag(BlockTags.SLABS).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB).getKey());
+            this.tag(BlockTags.STAIRS).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS).getKey());
+
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).getKey());
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB).getKey());
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS).getKey());
+        }));
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){

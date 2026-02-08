@@ -1,0 +1,11 @@
+{
+  "values": [
+    "modpack:metal/ingot/aluminium",
+    "modpack:metal/ingot/aluminium_bronze",
+    "modpack:metal/ingot/cast_iron_alloy",
+    "modpack:metal/ingot/hardened_steel",
+    "modpack:metal/ingot/nethersteel",
+    "modpack:metal/ingot/lead",
+    "modpack:metal/ingot/electrum"
+  ]
+}

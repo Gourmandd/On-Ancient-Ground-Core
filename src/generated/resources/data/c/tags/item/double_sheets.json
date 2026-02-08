@@ -1,0 +1,11 @@
+{
+  "values": [
+    "modpack:metal/double_sheet/aluminium",
+    "modpack:metal/double_sheet/aluminium_bronze",
+    "modpack:metal/double_sheet/cast_iron_alloy",
+    "modpack:metal/double_sheet/hardened_steel",
+    "modpack:metal/double_sheet/nethersteel",
+    "modpack:metal/double_sheet/lead",
+    "modpack:metal/double_sheet/electrum"
+  ]
+}
