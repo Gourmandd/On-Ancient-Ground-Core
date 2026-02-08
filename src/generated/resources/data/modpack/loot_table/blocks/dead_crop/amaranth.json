@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "modpack:dead_crop/amaranth",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "mature": "false",
+                    "part": "bottom"
+                  }
+                }
+              ],
+              "name": "pastel:amaranth_bushel"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "modpack:dead_crop/amaranth",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "mature": "true",
+                    "part": "bottom"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "add": false,
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "max": 3.0,
+                    "min": 1.0
+                  },
+                  "function": "minecraft:set_count"
+                }
+              ],
+              "name": "pastel:amaranth_bushel"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "modpack:blocks/dead_crop/amaranth"
+}

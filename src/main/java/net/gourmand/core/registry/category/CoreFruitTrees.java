@@ -120,4 +120,6 @@ public enum CoreFruitTrees implements StringRepresentable {
     {
         return serializedName;
     }
+
+    public Item getProduct(){ return product; }
 }

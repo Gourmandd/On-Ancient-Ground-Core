@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "block": "modpack:wood/sluice/ivory_noxwood",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "upper": "true"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "modpack:wood/sluice/ivory_noxwood"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "modpack:blocks/wood/sluice/ivory_noxwood"
+}

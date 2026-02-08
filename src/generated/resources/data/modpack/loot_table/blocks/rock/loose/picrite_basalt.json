@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "modpack:rock/loose/picrite_basalt"
+        }
+      ],
+      "functions": [
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "modpack:rock/loose/picrite_basalt",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "count": "2"
+              }
+            }
+          ],
+          "count": 2.0,
+          "function": "minecraft:set_count"
+        },
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "modpack:rock/loose/picrite_basalt",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "count": "3"
+              }
+            }
+          ],
+          "count": 3.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "modpack:blocks/rock/loose/picrite_basalt"
+}

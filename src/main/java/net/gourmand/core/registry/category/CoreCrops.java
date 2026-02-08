@@ -28,22 +28,22 @@ public enum CoreCrops implements StringRepresentable {
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int singleBlockStages)
     {
-        this(nitrogen, phosphorus, potassium, self -> CoreDefaultCropBlock.create(crop(), singleBlockStages, self), self -> new DeadCropBlock(dead(), self.getClimateRange()), self -> new WildCropBlock(dead().randomTicks()));
+        this(nitrogen, phosphorus, potassium, self -> CoreDefaultCropBlock.create(crop(), singleBlockStages, self), self -> new DeadCropBlock(dead(), self.getClimateRange()), self -> new WildCropBlock(dead().randomTicks()), CropType.SINGLE, (singleBlockStages - 1));
     }
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int spreadingSingleBlockStages, Supplier<Supplier<? extends Block>> fruit)
     {
-        this(nitrogen, phosphorus, potassium, self -> CoreSpreadingCropBlock.create(crop(), spreadingSingleBlockStages, self, fruit), self -> new DeadCropBlock(dead(), self.getClimateRange()), self -> new WildSpreadingCropBlock(dead().randomTicks(), fruit));
+        this(nitrogen, phosphorus, potassium, self -> CoreSpreadingCropBlock.create(crop(), spreadingSingleBlockStages, self, fruit), self -> new DeadCropBlock(dead(), self.getClimateRange()), self -> new WildSpreadingCropBlock(dead().randomTicks(), fruit), CropType.SPREADING, (spreadingSingleBlockStages - 1));
     }
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int spreadingSingleBlockStages, @Nullable Supplier<Supplier<? extends Item>> fruit1, Supplier<Supplier<? extends Item>> fruit2)
     {
-        this(nitrogen, phosphorus, potassium, self -> CorePickableCropBlock.create(crop(), spreadingSingleBlockStages, self, fruit1, fruit2), self -> new DeadCropBlock(dead(), self.getClimateRange()), self -> new WildCropBlock(dead().randomTicks()));
+        this(nitrogen, phosphorus, potassium, self -> CorePickableCropBlock.create(crop(), spreadingSingleBlockStages, self, fruit1, fruit2), self -> new DeadCropBlock(dead(), self.getClimateRange()), self -> new WildCropBlock(dead().randomTicks()), CropType.SPREADING, (spreadingSingleBlockStages - 1));
     }
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int floodedSingleBlockStages, boolean flooded)
     {
-        this(nitrogen, phosphorus, potassium, self -> CoreFloodedCropBlock.create(crop(), floodedSingleBlockStages, self), self -> new FloodedDeadCropBlock(dead(), self.getClimateRange()), self -> new FloodedWildCropBlock(dead().randomTicks()));
+        this(nitrogen, phosphorus, potassium, self -> CoreFloodedCropBlock.create(crop(), floodedSingleBlockStages, self), self -> new FloodedDeadCropBlock(dead(), self.getClimateRange()), self -> new FloodedWildCropBlock(dead().randomTicks()), CropType.SINGLE, (floodedSingleBlockStages - 1));
         assert flooded;
     }
 
@@ -56,7 +56,9 @@ public enum CoreCrops implements StringRepresentable {
                 requiresStick ?
                         self -> new DeadClimbingCropBlock(dead(), self.getClimateRange()) :
                         self -> new DeadDoubleCropBlock(dead(), self.getClimateRange()),
-                self -> new WildDoubleCropBlock(dead().randomTicks())
+                self -> new WildDoubleCropBlock(dead().randomTicks()),
+                CropType.DOUBLE,
+                (doubleBlockBottomStages + doubleBlockTopStages - 1)
         );
     }
 
@@ -69,11 +71,13 @@ public enum CoreCrops implements StringRepresentable {
                 requiresStick ?
                         self -> new DeadClimbingCropBlock(dead(), self.getClimateRange()) :
                         self -> new DeadDoubleCropBlock(dead(), self.getClimateRange()),
-                self -> new WildDoubleCropBlock(dead().randomTicks())
+                self -> new WildDoubleCropBlock(dead().randomTicks()),
+                CropType.DOUBLE,
+                (doubleBlockBottomStages + doubleBlockTopStages - 1)
         );
     }
 
-    CoreCrops(float nitrogen, float phosphorus, float potassium, Function<CoreCrops, Block> factory, Function<CoreCrops, Block> deadFactory, Function<CoreCrops, Block> wildFactory)
+    CoreCrops(float nitrogen, float phosphorus, float potassium, Function<CoreCrops, Block> factory, Function<CoreCrops, Block> deadFactory, Function<CoreCrops, Block> wildFactory, CropType cropType, int ripeStage)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.nitrogen = nitrogen;
@@ -82,6 +86,8 @@ public enum CoreCrops implements StringRepresentable {
         this.factory = () -> factory.apply(this);
         this.deadFactory = () -> deadFactory.apply(this);
         this.wildFactory = () -> wildFactory.apply(this);
+        this.cropType = cropType;
+        this.ripeStage = ripeStage;
     }
 
     private final String serializedName;
@@ -91,6 +97,8 @@ public enum CoreCrops implements StringRepresentable {
     private final Supplier<Block> factory;
     private final Supplier<Block> deadFactory;
     private final Supplier<Block> wildFactory;
+    private final CropType cropType;
+    private final int ripeStage;
 
     private static ExtendedProperties doubleCrop()
     {
@@ -146,6 +154,22 @@ public enum CoreCrops implements StringRepresentable {
     public Supplier<ClimateRange> getClimateRange()
     {
         return CoreClimateRanges.CROPS.get(this);
+    }
+
+    public CropType getCropType()
+    {
+        return this.cropType;
+    }
+
+    public int getRipeStage()
+    {
+        return ripeStage;
+    }
+
+    public enum CropType {
+        SINGLE,
+        DOUBLE,
+        SPREADING;
     }
 }
 

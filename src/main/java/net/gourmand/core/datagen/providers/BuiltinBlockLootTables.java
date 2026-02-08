@@ -1,27 +1,32 @@
 package net.gourmand.core.datagen.providers;
 
+import earth.terrarium.pastel.registries.PastelBlocks;
+import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
-import net.dries007.tfc.util.loot.IsIsolatedCondition;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Stream;
 
@@ -41,27 +46,134 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                 .toList();
     }
 
-    private static LootTable.Builder createOreTable(Block oreBlock, Item oreItem){
-        return LootTable.lootTable()
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
-                        .add(LootItem.lootTableItem(oreBlock).when(() -> IsIsolatedCondition.INSTANCE)
-                                .otherwise(LootItem.lootTableItem(oreItem))
-                        )
-                );
+    // methods to call from generate()
+    private void addOreTable(Block oreBlock, Item oreItem){
+        this.add(oreBlock, LootTableBuilders.createOreTable(oreBlock, oreItem));
+    };
+
+    private void addCropTable(CoreCrops crop){
+
+        switch (crop.getCropType()){
+            case SINGLE -> {
+                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSingleCropTable(crop, getCropProduct(crop)));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, getCropProduct(crop)));
+                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSingleCropTable(crop, getCropProduct(crop)));
+            }
+            case DOUBLE -> {
+                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createDoubleCropTable(crop, getCropProduct(crop)));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadDoubleCropTable(crop, getCropProduct(crop)));
+                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildDoubleCropTable(crop, getCropProduct(crop)));
+            }
+            case SPREADING -> {
+                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSpreadingCropTable(crop));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, getCropProduct(crop)));
+                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSpreadingCropTable(crop));
+            }
+        }
     }
 
-    private void addOreTable(Block oreBlock, Item oreItem){
-        this.add(oreBlock, createOreTable(oreBlock, oreItem));
+    private void addFruitTreeTable(CoreFruitTrees tree){
+
+        this.dropPottedContents(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(tree).get());
+        this.add(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree).get(), LootTableBuilders.createBranchTable(tree));
+        this.add(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(tree).get(), LootTableBuilders.createGrowingBranchTable());
+        this.add(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get(), createFruitTreeLeavesTable(tree));
+        this.add(CoreBlocks.FRUIT_TREE_SAPLINGS.get(tree).get(), LootTableBuilders.createFruitTreeSaplingTable(tree));
+    }
+
+    private void addStationaryBushTable(CoreStationaryBushes bush){
+        this.add(CoreBlocks.STATIONARY_BUSHES.get(bush).get(), LootTableBuilders.createStationaryBushTable(bush));
+    }
+
+    private void addSpreadingBushTable(CoreSpreadingBushes bush){
+        this.add(CoreBlocks.SPREADING_BUSHES.get(bush).get(), LootTableBuilders.createSpreadingBushTable(bush));
+        this.add(CoreBlocks.SPREADING_CANES.get(bush).get(), LootTableBuilders.createSpreadingBushCaneTable(bush));
+    }
+
+    private void addRockBlockTable(CoreRocks rock, Rock.BlockType type){
+      switch (type){
+          case LOOSE, MOSSY_LOOSE -> {
+              this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createLooseRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get()));
+          }
+          case SPIKE -> {
+              this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1, 2));
+          }
+          case RAW, HARDENED -> {
+              this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRawRockDropTable(
+                      getRawRock(rock),
+                      CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get()
+              ));
+          }
+          default -> {
+              this.dropSelf(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get());
+          }
+      }
     };
+
+    // methods for getting items and other data
+    public static Item getCropProduct(CoreCrops crop)
+    {
+        switch(crop){
+            case COFFEE -> {
+                return BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "coffee_beans"));
+            }
+            case COTTON -> {
+                return BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "cotton_boll"));
+            }
+            case GLISTERING_MELON -> {
+                return Objects.requireNonNull(BuiltInRegistries.BLOCK.get(PastelBlocks.GLISTERING_MELON)).asItem();
+            }
+            case AMARANTH -> {
+                return PastelBlocks.AMARANTH_BUSHEL.asItem();
+            }
+            case null, default -> {
+                throw new AssertionError("no product for this crop type");
+            }
+        }
+    }
+
+    public static Block getRawRock(CoreRocks rock)
+    {
+        if (rock.hasVariants()){
+            return CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get();
+        } else {
+            switch (rock){
+                case BRECCIA -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("caupona", "felsic_tuff"));
+                }
+                case KOMATIITE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "scoria"));
+                }
+                case ARGILLITE -> {
+                    return Blocks.STONE;
+                }
+                case NEPHELINITE -> {
+                    return Blocks.DEEPSLATE;
+                }
+                case TRAVERTINE-> {
+                    return Blocks.DRIPSTONE_BLOCK;
+                }
+                case BLACKSLAG -> {
+                    return PastelBlocks.BLACKSLAG.get();
+                }
+                case PICRITE_BASALT -> {
+                    return PastelBlocks.BASAL_MARBLE.get();
+                }
+                case null, default -> {
+                    throw new AssertionError("no raw rock for this rock type");
+                }
+            }
+        }
+    }
 
     @Override
     protected void generate() {
 
         generateOre();
-        //generateCrop();
-        //generateMetal();
-        //generateRock();
-        //generateWood();
+        generateCrop();
+        generateMetal();
+        generateRock();
+        generateWood();
     }
 
     private void generateOre(){
@@ -138,28 +250,13 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
     private void generateCrop(){
 
-        Stream.of(CoreCrops.values()).forEach(crop -> {
-            this.add(CoreBlocks.CROPS.get(crop).get(), this.createOreDrop(CoreBlocks.CROPS.get(crop).get(), CoreItems.CROP_SEEDS.get(crop).get()));
-            this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), this.createOreDrop(CoreBlocks.DEAD_CROPS.get(crop).get(), CoreItems.CROP_SEEDS.get(crop).get()));
-            this.add(CoreBlocks.WILD_CROPS.get(crop).get(), this.createOreDrop(CoreBlocks.WILD_CROPS.get(crop).get(), CoreItems.CROP_SEEDS.get(crop).get()));
-        });
+        Stream.of(CoreCrops.values()).forEach(this::addCropTable);
 
-        Stream.of(CoreFruitTrees.values()).forEach(tree -> {
-            this.dropPottedContents(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(tree).get());
-            this.dropSelf(CoreBlocks.FRUIT_TREE_SAPLINGS.get(tree).get());
-            this.add(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get(), this.createOreDrop(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get(), Items.STICK.asItem()));
-            this.add(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree).get(), this.createOreDrop(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree).get(), Items.STICK.asItem()));
-            this.add(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(tree).get(), this.createOreDrop(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(tree).get(), Items.STICK.asItem()));
-        });
+        Stream.of(CoreFruitTrees.values()).forEach(this::addFruitTreeTable);
 
-        Stream.of(CoreStationaryBushes.values()).forEach(bush -> {
-            this.add(CoreBlocks.STATIONARY_BUSHES.get(bush).get(), this.createOreDrop(CoreBlocks.STATIONARY_BUSHES.get(bush).get(), CoreBlocks.STATIONARY_BUSHES.get(bush).get().asItem()));
-        });
+        Stream.of(CoreStationaryBushes.values()).forEach(this::addStationaryBushTable);
 
-        Stream.of(CoreSpreadingBushes.values()).forEach(bush -> {
-            this.add(CoreBlocks.SPREADING_BUSHES.get(bush).get(), this.createOreDrop(CoreBlocks.SPREADING_BUSHES.get(bush).get(), CoreBlocks.SPREADING_CANES.get(bush).get().asItem()));
-            this.add(CoreBlocks.SPREADING_CANES.get(bush).get(), this.createOreDrop(CoreBlocks.SPREADING_CANES.get(bush).get(), CoreBlocks.SPREADING_CANES.get(bush).get().asItem()));
-        });
+        Stream.of(CoreSpreadingBushes.values()).forEach(this::addSpreadingBushTable);
     }
 
     private void generateMetal(){
@@ -182,12 +279,12 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         Stream.of(CoreRocks.values()).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
                 if (rock.hasVariant(type)){
-                    this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), this.createOreDrop(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get().asItem()));
+                    addRockBlockTable(rock, type);
                 }
                 if ((type.hasVariants() || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_BRICKS) && rock.hasVariant(type)){
-                    this.add(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().get(), this.createOreDrop(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().get(), CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().get().asItem()));
-                    this.add(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().get(), this.createOreDrop(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().get(), CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().get().asItem()));
-                    this.add(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().get(), this.createOreDrop(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().get(), CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().get().asItem()));
+                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().get());
+                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().get());
+                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().get());
                 }
             });
         });
@@ -198,7 +295,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         Stream.of(CorePastelWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach( type -> {
                 if (wood.hasBlockType(type)){
-                    this.add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get(), this.createOreDrop(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get(), CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get().asItem()));
+                    this.dropSelf(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get());
                 }
             });
         });
@@ -212,11 +309,23 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         });
 
         CoreBlocks.SLUICES.values().forEach( holder -> {
-            this.dropSelf(holder.get());
+            this.add(holder.get() ,LootTableBuilders.createSluiceTable(holder.get()));
         });
 
         CoreBlocks.SHELVES.values().forEach( holder -> {
             this.dropSelf(holder.get());
         });
+    }
+
+    private LootTable.Builder createFruitTreeLeavesTable(CoreFruitTrees tree){
+        return this.createSilkTouchOrShearsDispatchTable(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get(),
+                this.applyExplosionCondition(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get(), LootItem.lootTableItem(Items.STICK)
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get())
+                            .setProperties(StatePropertiesPredicate.Builder.properties()
+                                .hasProperty(TFCBlockStateProperties.LIFECYCLE, Lifecycle.FRUITING))
+                        )
+                )
+        );
+
     }
 }
