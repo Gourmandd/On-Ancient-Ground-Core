@@ -1,5 +1,7 @@
 package net.gourmand.core.registry.category;
 
+import net.dries007.tfc.util.Metal;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -171,6 +173,48 @@ public class CategoryUtil {
         for (CoreClay.ItemType type : CoreClay.ItemType.values()){
             if (type.getType() == CoreClay.ItemPartType.UNFIRED_MOLD){
                 list.add(type.getSerializedName());
+            }
+        }
+
+        return list;
+    }
+
+    public static Metal.ItemType[] getTFCTools(){
+        return new Metal.ItemType[] {
+            Metal.ItemType.PICKAXE,
+                    Metal.ItemType.PROPICK,
+                    Metal.ItemType.AXE,
+                    Metal.ItemType.SHOVEL,
+                    Metal.ItemType.HOE,
+                    Metal.ItemType.CHISEL,
+                    Metal.ItemType.HAMMER,
+                    Metal.ItemType.SAW,
+                    Metal.ItemType.JAVELIN,
+                    Metal.ItemType.SWORD,
+                    Metal.ItemType.MACE,
+                    Metal.ItemType.KNIFE,
+                    Metal.ItemType.SCYTHE
+        };
+    }
+    public static ArrayList<Metal.ItemType> getTFCToolHeads(){
+        ArrayList<Metal.ItemType> list = new ArrayList<Metal.ItemType>();
+
+        for (Metal.ItemType type : Metal.ItemType.values()){
+            if (type.hasMold() && type != Metal.ItemType.INGOT){
+                list.add(type);
+            }
+        }
+
+        return list;
+    }
+
+
+    public static ArrayList<Metal> getTFCToolMetals(){
+        ArrayList<Metal> list = new ArrayList<Metal>();
+
+        for (Metal metal : Metal.values()){
+            if (Metal.ItemType.PICKAXE.has(metal)){
+                list.add(metal);
             }
         }
 

@@ -3,16 +3,14 @@ package net.gourmand.core.datagen.providers;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.items.*;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
-import net.gourmand.core.registry.category.CoreMetals;
-import net.gourmand.core.registry.category.CoreOres;
-import net.gourmand.core.registry.category.CoreRocks;
-import net.gourmand.core.registry.category.CoreTags;
+import net.gourmand.core.registry.category.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
@@ -21,7 +19,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -48,6 +46,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+
+        final TagKey<Item> UPRIGHT_ON_BELT = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("create", "upright_on_belt"));
 
         add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(
                 ItemTags.LEAVES)
@@ -125,6 +125,64 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             this.tag(CoreTags.Items.METAL_DOUBLE_INGOTS.get(metal)).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_INGOT).getKey());
             this.tag(CoreTags.Items.METAL_SHEETS.get(metal)).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.SHEET).getKey());
             this.tag(CoreTags.Items.METAL_DOUBLE_SHEETS.get(metal)).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_SHEET).getKey());
+        });
+
+        Stream.of(CoreClay.values()).forEach(clay -> {
+            Stream.of(CoreClay.ItemType.values()).forEach(type -> {
+                if (type.getType() == CoreClay.ItemPartType.UNFIRED_MOLD && type != CoreClay.ItemType.INGOT){
+                    this.tag(TFCTags.Items.UNFIRED_MOLDS).add(CoreItems.CERAMICS.get(clay).get(type).getKey());
+                    this.tag(CoreTags.Items.CLAY_RECYCLING_5.get(clay)).add(CoreItems.CERAMICS.get(clay).get(type).getKey());
+                }
+            });
+
+            this.tag(TFCTags.Items.VESSELS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.VESSEL).getKey());
+            this.tag(CoreTags.Items.UNFIRED_VESSELS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey());
+            this.tag(TFCTags.Items.UNFIRED_VESSELS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey());
+            this.tag(TFCTags.Items.FLUID_ITEM_INGREDIENT_EMPTY_CONTAINERS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).getKey());
+            this.tag(UPRIGHT_ON_BELT).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).getKey());
+
+
+            this.tag(CoreTags.Items.CLAY_RECYCLING_5.get(clay)).add(
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_JUG).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_POT).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_PAN).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).getKey()
+            );
+
+            this.tag(CoreTags.Items.CLAY_RECYCLING_1.get(clay)).add(
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BRICK).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BOWL).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.INGOT).getKey()
+            );
+
+            this.tag(TFCTags.Items.UNFIRED_POTTERY).add(
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BRICK).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BOWL).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_JUG).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_POT).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_PAN).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).getKey()
+            );
+
+            if (!clay.hasReducedSet()){
+                this.tag(CoreTags.Items.CLAY_BALLS).add(
+                        CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.CLAY_BALL).getKey()
+                );
+            }
+        });
+
+        CategoryUtil.getTFCToolMetals().forEach(metal -> {
+            CategoryUtil.getTFCToolHeads().forEach(tool -> {
+                this.tag(CoreTags.Items.TOOL_HEADS.get(tool)).add(
+                        TFCItems.METAL_ITEMS.get(metal).get(tool).holder().getKey()
+                );
+            });
         });
     }
 

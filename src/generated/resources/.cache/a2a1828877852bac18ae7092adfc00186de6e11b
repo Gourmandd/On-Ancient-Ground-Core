@@ -1,4 +1,5 @@
-// 1.21.1	2026-02-08T11:23:36.504158194	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-02-08T12:33:43.623322186	Tags for minecraft:item mod id modpack
+5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 1f10c6244542fd21d417aef571afef4a96f33256 data/c/tags/item/double_ingots.json
 7ea41d753dc315ba2a6fb560f47d64abd9f3b9cb data/c/tags/item/double_ingots/aluminium.json
 70e878bcf32ff25aaae018602c5c2df0fa4682b5 data/c/tags/item/double_ingots/aluminium_bronze.json
@@ -33,7 +34,37 @@ c732d4b2fe1e630818305424d45be162f56f1bae data/c/tags/item/sheets/cast_iron_alloy
 e3c861d4707426d39418ffbe4153d48024936306 data/c/tags/item/sheets/hardened_steel.json
 123cec497c262c76ca268e7f9ccb4f1884563a61 data/c/tags/item/sheets/lead.json
 2ab0bc683061b95c7b10382290919ba9d7ea1618 data/c/tags/item/sheets/nethersteel.json
+3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/create/tags/item/upright_on_belt.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/item/leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/minecraft/tags/item/saplings.json
+e878683411443f42fcf70bcbfc599547d733fc3b data/modpack/tags/item/clay/earthenware_recycling_1.json
+8d65cc3f225e7b263aa9ebabdc4a75ece126493e data/modpack/tags/item/clay/earthenware_recycling_5.json
+7d50c83a31f4a55cfc8c348608bbf1a986908467 data/modpack/tags/item/clay/kaolinite_recycling_1.json
+695a9e1a40468a5cb71b746f5a7b43090a0e609a data/modpack/tags/item/clay/kaolinite_recycling_5.json
+891ca60902dd42c13ccdffd414648a3843066e4d data/modpack/tags/item/clay/porcelain_recycling_1.json
+6eecbc53cf3b4dc7513fcbbfd5d9be34169426dd data/modpack/tags/item/clay/porcelain_recycling_5.json
+b2312ebde29079c6e591aa4b4104fc9a7124529e data/modpack/tags/item/clay/yellowware_recycling_1.json
+2e461972e31c372a9588a8d7033e15ebe16d2f27 data/modpack/tags/item/clay/yellowware_recycling_5.json
+9ad88fb52c4069029918f419178f4b063761f751 data/modpack/tags/item/clay/yixing_recycling_1.json
+604789ce7039198303486f848d2644a77cee7416 data/modpack/tags/item/clay/yixing_recycling_5.json
+a94698ca2035dc79092afc0e139ec90c8c705066 data/modpack/tags/item/tool_heads/axe_head.json
+91f4d6daea9b146ef7352378faee99c59a88fc3f data/modpack/tags/item/tool_heads/chisel_head.json
+2a9b9e401d5debebd10ce08a03fa659057e4f964 data/modpack/tags/item/tool_heads/hammer_head.json
+3e095b0ee78e7dbb3cd3f5445dbf949c8bd6dea1 data/modpack/tags/item/tool_heads/hoe_head.json
+bb33091392a77ff72bae4d04dd7e01806ec16c17 data/modpack/tags/item/tool_heads/javelin_head.json
+2c8d625d16fc61e8d0ec5de52ebe24b14e763716 data/modpack/tags/item/tool_heads/knife_blade.json
+5a2b910fbc9cd9eecb79a2a98fa9fb21e3d49c2b data/modpack/tags/item/tool_heads/mace_head.json
+ac4cce58e8d858dd3807199f7f7680dba6779bb6 data/modpack/tags/item/tool_heads/pickaxe_head.json
+ce446ae1e519bf3a6c97c930c0487e023aa26628 data/modpack/tags/item/tool_heads/propick_head.json
+f5d7bdc3e56fa8c0d87d4f43a8df33a18823e85a data/modpack/tags/item/tool_heads/saw_blade.json
+d8aeb7183a6c0a6a35c9e9e0395d7b82468257d1 data/modpack/tags/item/tool_heads/scythe_blade.json
+2803108596765aa3ad89f7db097cd48c774490b0 data/modpack/tags/item/tool_heads/shovel_head.json
+f64dbebaf0f360a39de6bc8ccee6d98df1898296 data/modpack/tags/item/tool_heads/sword_blade.json
+f33be10308ac957535de398b32edc53435d050df data/modpack/tags/item/unfired_vessels.json
 be4e2e491323135b85609f49113de10b12fed939 data/pastel/tags/item/azurite_ores.json
 f46906462675cd1b0f65f2314df5f65ceaff83ae data/pastel/tags/item/shimmerstone_ores.json
+3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/tfc/tags/item/fluid_item_ingredient_empty_containers.json
+a95eece88a4a48fd1080df8ab87d752b419d1dd1 data/tfc/tags/item/unfired_molds.json
+2eda10c3af5b83fac8185cbc3734f18b0e9749d9 data/tfc/tags/item/unfired_pottery.json
+f33be10308ac957535de398b32edc53435d050df data/tfc/tags/item/unfired_vessels.json
+fa7f97402203e4a26c47673258cdfe8d223abb73 data/tfc/tags/item/vessels.json

@@ -1,6 +1,7 @@
 package net.gourmand.core.registry.category;
 
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 
+import java.util.Locale;
 import java.util.Map;
 
 public class CoreTags {
@@ -37,6 +39,10 @@ public class CoreTags {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
         }
 
+        private static TagKey<Item> tag(String namespace, String name) {
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, name));
+        }
+
         public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_INGOTS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
             tag("ingots/" + metal.getSerializedName())
         );
@@ -52,5 +58,21 @@ public class CoreTags {
         public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_SHEETS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
                 tag("double_sheets/" + metal.getSerializedName())
         );
+
+        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_5 = Helpers.mapOf(CoreClay.class, clay ->
+                tag(AncientGroundCore.MODID ,"clay/" + clay.getSerializedName() + "_recycling_5")
+        );
+
+        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_1 = Helpers.mapOf(CoreClay.class, clay ->
+                tag(AncientGroundCore.MODID ,"clay/" + clay.getSerializedName() + "_recycling_1")
+        );
+
+        public static final Map<Metal.ItemType, TagKey<Item>> TOOL_HEADS = Helpers.mapOf(Metal.ItemType.class, tool -> (tool.hasMold() && tool != Metal.ItemType.INGOT), tool ->
+                tag(AncientGroundCore.MODID ,"tool_heads/" + tool.name().toLowerCase(Locale.ROOT))
+        );
+
+        public static final TagKey<Item> UNFIRED_VESSELS = tag(AncientGroundCore.MODID ,"unfired_vessels");
+
+        public static final TagKey<Item> CLAY_BALLS = tag("clay_balls");
     }
 }
