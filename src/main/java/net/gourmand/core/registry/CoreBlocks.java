@@ -90,6 +90,10 @@ public class CoreBlocks {
             registerNoItem("plant/potted/" + tree.name() + "_sapling", tree::createPottedSapling)
     );
 
+    public static final Map<CoreOres, DeferredHolder<Block, Block>> BASIC_ORES = Helpers.mapOf(CoreOres.class, ore -> (!ore.hasBlock()), ore ->
+            register(("ore/" + ore.name()), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(Rock.ANDESITE.category().hardness(6.5f), 10).requiresCorrectToolForDrops()))
+    );
+
     public static final Map<Rock, Map<CoreOres, DeferredHolder<Block, Block>>> ORES = Helpers.mapOf(Rock.class, rock ->
             Helpers.mapOf(CoreOres.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
                     register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
@@ -123,10 +127,6 @@ public class CoreBlocks {
             Helpers.mapOf(Ore.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
                     register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
             )
-    );
-
-    public static final Map<CoreOres, DeferredHolder<Block, Block>> BASIC_ORES = Helpers.mapOf(CoreOres.class, ore -> (!ore.hasBlock()), ore ->
-            register(("ore/" + ore.name()), () -> new Block(BlockBehaviour.Properties.of()))
     );
 
     public static final Map<CoreRocks, Map<Ore, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_TFC_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock ->
