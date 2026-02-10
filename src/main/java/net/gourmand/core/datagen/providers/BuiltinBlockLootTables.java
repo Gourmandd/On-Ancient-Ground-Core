@@ -20,7 +20,6 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
@@ -49,7 +48,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
     // methods to call from generate()
     private void addOreTable(Block oreBlock, Item oreItem){
         this.add(oreBlock, LootTableBuilders.createOreTable(oreBlock, oreItem));
-    };
+    }
 
     private void addCropTable(CoreCrops crop){
 
@@ -100,7 +99,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
           }
           case RAW, HARDENED -> {
               this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRawRockDropTable(
-                      getRawRock(rock),
+                      CoreRocks.getRawRock(rock),
                       CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get()
               ));
           }
@@ -108,7 +107,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
               this.dropSelf(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get());
           }
       }
-    };
+    }
 
     // methods for getting items and other data
     public static Item getCropProduct(CoreCrops crop)
@@ -128,40 +127,6 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
             }
             case null, default -> {
                 throw new AssertionError("no product for this crop type");
-            }
-        }
-    }
-
-    public static Block getRawRock(CoreRocks rock)
-    {
-        if (rock.hasVariants()){
-            return CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get();
-        } else {
-            switch (rock){
-                case BRECCIA -> {
-                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("caupona", "felsic_tuff"));
-                }
-                case KOMATIITE -> {
-                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "scoria"));
-                }
-                case ARGILLITE -> {
-                    return Blocks.STONE;
-                }
-                case NEPHELINITE -> {
-                    return Blocks.DEEPSLATE;
-                }
-                case TRAVERTINE-> {
-                    return Blocks.DRIPSTONE_BLOCK;
-                }
-                case BLACKSLAG -> {
-                    return PastelBlocks.BLACKSLAG.get();
-                }
-                case PICRITE_BASALT -> {
-                    return PastelBlocks.BASAL_MARBLE.get();
-                }
-                case null, default -> {
-                    throw new AssertionError("no raw rock for this rock type");
-                }
             }
         }
     }

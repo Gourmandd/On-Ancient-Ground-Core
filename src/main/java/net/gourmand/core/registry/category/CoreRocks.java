@@ -3,9 +3,12 @@ package net.gourmand.core.registry.category;
 import java.util.Locale;
 import java.util.function.Supplier;
 
+import earth.terrarium.pastel.registries.PastelBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockDisplayCategory;
 import net.gourmand.core.registry.CoreBlocks;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.MapColor;
@@ -120,5 +123,39 @@ public enum CoreRocks implements RegistryRock
     public String getSerializedName()
     {
         return serializedName;
+    }
+
+    public static Block getRawRock(CoreRocks rock)
+    {
+        if (rock.hasVariants()){
+            return CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get();
+        } else {
+            switch (rock){
+                case BRECCIA -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("caupona", "felsic_tuff"));
+                }
+                case KOMATIITE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "scoria"));
+                }
+                case ARGILLITE -> {
+                    return Blocks.STONE;
+                }
+                case NEPHELINITE -> {
+                    return Blocks.DEEPSLATE;
+                }
+                case TRAVERTINE-> {
+                    return Blocks.DRIPSTONE_BLOCK;
+                }
+                case BLACKSLAG -> {
+                    return PastelBlocks.BLACKSLAG.get();
+                }
+                case PICRITE_BASALT -> {
+                    return PastelBlocks.BASAL_MARBLE.get();
+                }
+                case null, default -> {
+                    throw new AssertionError("no raw rock for this rock type");
+                }
+            }
+        }
     }
 }
