@@ -3,6 +3,7 @@ package net.gourmand.core.datagen.providers;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.*;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
@@ -251,6 +252,22 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 this.tag(ItemTags.BUTTONS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON)));
             }
         });
+
+        Stream.of(CorePastelWood.values()).forEach(wood ->{
+
+            this.tag(TFCTags.Items.LUMBER).add(getKey(CoreItems.LUMBER.get(wood).get()));
+
+            this.tag(TFCTags.Items.TWIGS).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG)));
+            this.tag(TFCTags.Items.CAN_BE_LIT_ON_TORCH).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG)));
+            this.tag(Tags.Items.RODS_WOODEN).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG)));
+
+            this.tag(TFCTags.Items.SUPPORT_BEAMS).add(getKey(CoreItems.SUPPORTS.get(wood).get()));
+            this.tag(TFCTags.Items.SCRIBING_TABLES).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SCRIBING_TABLE)));
+            this.tag(TFCTags.Items.SEWING_TABLES).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SEWING_TABLE)));
+            this.tag(TFCTags.Items.LOOMS).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.LOOM)));
+            this.tag(TFCTags.Items.TOOL_RACKS).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TOOL_RACK)));
+            this.tag(TFCTags.Items.SLUICES).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SLUICE)));
+        });
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Item>> tags ){
@@ -267,6 +284,10 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 
     protected ResourceKey<Item> getKey(Block block){
         return block.asItem().builtInRegistryHolder().key();
+    };
+
+    protected ResourceKey<Item> getKey(Item item){
+        return item.builtInRegistryHolder().key();
     };
 
     private <T1 extends RegistryRock, T2> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock){

@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-10T14:20:04.968338714	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-02-10T15:15:54.73497774	Tags for minecraft:item mod id modpack
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 e4aedff054b4b75c19dce5bb07196820ea097136 data/c/tags/item/cobblestones.json
 abbd20b0fa4fd242129da8231562b9dd45a2c7e2 data/c/tags/item/cobblestones/mossy.json
@@ -30,6 +30,7 @@ aa52434093064b6b0d04e6e3829f5079e3766b71 data/c/tags/item/ingots/electrum.json
 e43dd5d410c754631909b23e097406e75a7bf7d2 data/c/tags/item/ingots/nethersteel.json
 08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/c/tags/item/ores.json
 70154efbdbdd233bd0f7c14a298d868d23c6a1e1 data/c/tags/item/rods.json
+a89b6ca3c6e9ead47b27388f16f972911474533b data/c/tags/item/rods/wooden.json
 5a6ec5d759b0b9ba9aa5b5e5be4bfd19e87b547a data/c/tags/item/sheets.json
 fe5ce68d2840b00fed9b3695a21444ec86e8a60b data/c/tags/item/sheets/aluminium.json
 da0d7cefae437f5e195476beb857f2695f671f82 data/c/tags/item/sheets/aluminium_bronze.json
@@ -79,7 +80,16 @@ f33be10308ac957535de398b32edc53435d050df data/modpack/tags/item/unfired_vessels.
 be4e2e491323135b85609f49113de10b12fed939 data/pastel/tags/item/azurite_ores.json
 f46906462675cd1b0f65f2314df5f65ceaff83ae data/pastel/tags/item/shimmerstone_ores.json
 84e51bedae726b8d9f616778e7c943abfc9b3cb0 data/tfc/tags/item/aqueducts.json
+a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/can_be_lit_on_torch.json
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/tfc/tags/item/fluid_item_ingredient_empty_containers.json
+df0a75d46911aae0147d30a3849d1a2dbf21c508 data/tfc/tags/item/looms.json
+62e6e1ed83fa606df559dd925f5cfe552f64afba data/tfc/tags/item/lumber.json
+19794141ae28f9266f50b60c1ce235367edde4fa data/tfc/tags/item/scribing_tables.json
+c5dac1fb2f237e8f98f11087d4b608c891623734 data/tfc/tags/item/sewing_tables.json
+d0cd34c4f53db7339b1630cccf4780ca8209550f data/tfc/tags/item/sluices.json
+d6d3564aa1f14eb6c3c3df74fd4ad163bdfa205e data/tfc/tags/item/support_beams.json
+71e013112fd9d6c8ddf41f7a9946bdc5beb2ef41 data/tfc/tags/item/tool_racks.json
+a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/twigs.json
 a95eece88a4a48fd1080df8ab87d752b419d1dd1 data/tfc/tags/item/unfired_molds.json
 2eda10c3af5b83fac8185cbc3734f18b0e9749d9 data/tfc/tags/item/unfired_pottery.json
 f33be10308ac957535de398b32edc53435d050df data/tfc/tags/item/unfired_vessels.json

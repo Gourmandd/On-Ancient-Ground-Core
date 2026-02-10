@@ -5,6 +5,7 @@ import earth.terrarium.pastel.registries.PastelBlockTags;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
@@ -12,6 +13,7 @@ import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
+import net.gourmand.core.registry.category.CorePastelWood;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -239,6 +241,25 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
                 this.tag(BlockTags.STONE_BUTTONS).add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).getKey());
                 this.tag(BlockTags.BUTTONS).add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).getKey());
             }
+        });
+
+        Stream.of(CorePastelWood.values()).forEach(wood ->{
+            this.tag(BlockTags.MINEABLE_WITH_AXE)
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SCRIBING_TABLE).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SEWING_TABLE).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SLUICE).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TOOL_RACK).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SHELF).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.LOOM).getKey());
+
+            this.tag(TFCTags.Blocks.SUPPORT_BEAMS)
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).getKey());
+
+            this.tag(TFCTags.Blocks.CAN_BE_SNOW_PILED).add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG).getKey());
         });
     }
 

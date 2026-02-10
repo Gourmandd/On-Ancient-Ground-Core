@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-10T14:20:04.967206085	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-02-10T15:17:27.325698279	Tags for minecraft:block mod id modpack
 e4aedff054b4b75c19dce5bb07196820ea097136 data/c/tags/block/cobblestones.json
 abbd20b0fa4fd242129da8231562b9dd45a2c7e2 data/c/tags/block/cobblestones/mossy.json
 e371ab2fa981d3e72cdc7407c120f27176fde4bd data/c/tags/block/cobblestones/normal.json
@@ -13,7 +13,7 @@ d4318b7c1669f905ef550da9c7648625f0433977 data/c/tags/block/stones/pressure_plate
 6c83addf9f2ca8e4b3406333a1cc308ce404161f data/c/tags/block/stones/spike.json
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/block/buttons.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
-25a1a97177a06510355cad081a3ec15029c150f9 data/minecraft/tags/block/mineable/axe.json
+efaeb68ba98302552a5fd373e76414707d90bf20 data/minecraft/tags/block/mineable/axe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/minecraft/tags/block/mineable/hoe.json
 ed2d08d4bdcadb6ea38408bd7112f4019f52d548 data/minecraft/tags/block/mineable/pickaxe.json
 4cdb6b9ee503bce7add60293fd12362e73640525 data/minecraft/tags/block/mineable/shovel.json
@@ -28,6 +28,7 @@ d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/stone_pressur
 a614adfd48a3bbf45eb3dba5a9c386936d93a199 data/pastel/tags/block/shimmerstone_ores.json
 84e51bedae726b8d9f616778e7c943abfc9b3cb0 data/tfc/tags/block/aqueducts.json
 ce33c5d03f4998084eb2116dfafda0f867b4b74a data/tfc/tags/block/breaks_when_isolated.json
+a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/block/can_be_snow_piled.json
 d78af09b9aa81fca0acafb05c1fa86555255e58d data/tfc/tags/block/can_collapse.json
 1439dae5b57b38a7865d96db4ae2b6344d5659ca data/tfc/tags/block/can_landslide.json
 5cb6d859ba72e45371ee834d36026d6f8a4efa55 data/tfc/tags/block/can_start_collapse.json
@@ -39,3 +40,4 @@ e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/hoe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/knife.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/scythe.json
 08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/tfc/tags/block/prospectable.json
+98548d218f2823032aa12a4a80260591cef9b1ad data/tfc/tags/block/support_beams.json
