@@ -22,7 +22,7 @@ public class BuiltinSupports extends DataManagerProvider<Support>
     @Override
     protected void addData(HolderLookup.Provider provider)
     {
-        add("horizontal_support_beam", new Support(BlockIngredient.of(
+        add("deeper_down_horizontal_support_beam", new Support(BlockIngredient.of(
                 Arrays.stream(CorePastelWood.values()).map(wood ->
                         CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get())),
                 2, 2, 4
