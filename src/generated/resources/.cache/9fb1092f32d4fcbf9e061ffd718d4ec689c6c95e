@@ -1,4 +1,18 @@
-// 1.21.1	2026-02-12T09:25:01.796179885	Recipes
+// 1.21.1	2026-02-12T09:33:53.633607026	Recipes
+35606d0a93572f654fa9a9c5ecfa754c1c128f31 data/modpack/recipe/anvil/metal/rod/aluminium.json
+55d8095a900eb21cbcfd0a666fa86ba05fe7733a data/modpack/recipe/anvil/metal/rod/aluminium_bronze.json
+9ff27256328019eca562696c9248f0cd472d5253 data/modpack/recipe/anvil/metal/rod/cast_iron_alloy.json
+1fd6b913b85c55d00bb3d10fdb36ea1a7f62ac30 data/modpack/recipe/anvil/metal/rod/electrum.json
+4fbc0c3d18d37d203f4c5c6a313e05334761f1c5 data/modpack/recipe/anvil/metal/rod/hardened_steel.json
+0b1c2808dec97124034d2725214bb0d7e442fe17 data/modpack/recipe/anvil/metal/rod/lead.json
+d90499a68f9c1f4b78ca5ac1bad1d8ab5e713baa data/modpack/recipe/anvil/metal/rod/nethersteel.json
+8a223e9a329c4715f7914f05517e8162b7739a4c data/modpack/recipe/anvil/metal/sheet/aluminium.json
+cfc59fb591e14707efd6e0235b37fc0f3ef66f85 data/modpack/recipe/anvil/metal/sheet/aluminium_bronze.json
+d77862d8429e804f893416887dc9997e2f35b8c3 data/modpack/recipe/anvil/metal/sheet/cast_iron_alloy.json
+c090cb78462ef0e18a6d42bce7170b2ec5c37882 data/modpack/recipe/anvil/metal/sheet/electrum.json
+b320d016fd065731177706ea4d07c4a2d97c1dc7 data/modpack/recipe/anvil/metal/sheet/hardened_steel.json
+e6a4bb2ce89d6b0776e4a061f68426d5558bdddb data/modpack/recipe/anvil/metal/sheet/lead.json
+393484350b248b92728d9321bcffa35ca7f9fde1 data/modpack/recipe/anvil/metal/sheet/nethersteel.json
 8b1642f585b36b397ce7cc64bb11ae36b3f96de9 data/modpack/recipe/welding/metal/double_ingot/aluminium.json
 91f7d79b0d4c9b7e661d59b3cae8fb0671b77c39 data/modpack/recipe/welding/metal/double_ingot/aluminium_bronze.json
 20b68861f8a2a54a34c0d8b1812738ff5d8b072c data/modpack/recipe/welding/metal/double_ingot/cast_iron_alloy.json

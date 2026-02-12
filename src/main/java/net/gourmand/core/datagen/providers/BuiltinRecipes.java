@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.datagen.recipes.AnvilRecipes;
 import net.gourmand.core.datagen.recipes.WeldingRecipes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;
@@ -9,11 +10,12 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Recipe;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 
-public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes {
+public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, AnvilRecipes {
 
     RecipeOutput output;
     HolderLookup.Provider lookup;
@@ -23,11 +25,12 @@ public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes {
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput) {
+    protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
 
         this.output = recipeOutput;
 
         weldingRecipes();
+        anvilRecipes();
     }
 
     @Override

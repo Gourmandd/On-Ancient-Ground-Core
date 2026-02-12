@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "modpack:metal/double_ingot/aluminium_bronze"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/sheet/aluminium_bronze"
+  },
+  "rules": [
+    "hit_last",
+    "hit_second_last",
+    "hit_third_last"
+  ],
+  "tier": 2
+}

@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "modpack:metal/ingot/electrum"
+  },
+  "result": {
+    "count": 2,
+    "id": "modpack:metal/rod/electrum"
+  },
+  "rules": [
+    "bend_last",
+    "draw_second_last",
+    "draw_third_last"
+  ],
+  "tier": 1
+}

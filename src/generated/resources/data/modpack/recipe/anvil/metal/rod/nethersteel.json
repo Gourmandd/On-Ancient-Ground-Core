@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "modpack:metal/ingot/nethersteel"
+  },
+  "result": {
+    "count": 2,
+    "id": "modpack:metal/rod/nethersteel"
+  },
+  "rules": [
+    "bend_last",
+    "draw_second_last",
+    "draw_third_last"
+  ],
+  "tier": 6
+}

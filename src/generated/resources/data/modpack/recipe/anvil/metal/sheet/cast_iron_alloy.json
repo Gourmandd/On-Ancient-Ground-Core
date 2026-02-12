@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "modpack:metal/double_ingot/cast_iron_alloy"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/sheet/cast_iron_alloy"
+  },
+  "rules": [
+    "hit_last",
+    "hit_second_last",
+    "hit_third_last"
+  ],
+  "tier": 3
+}

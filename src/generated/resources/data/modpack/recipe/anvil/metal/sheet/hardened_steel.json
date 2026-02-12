@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "modpack:metal/double_ingot/hardened_steel"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/sheet/hardened_steel"
+  },
+  "rules": [
+    "hit_last",
+    "hit_second_last",
+    "hit_third_last"
+  ],
+  "tier": 4
+}
