@@ -1,5 +1,4 @@
-// 1.21.1	2026-02-12T09:14:15.236028811	Recipes
-d248c5232893b08a0d5830d0f2f575fd11fe9f3a data/minecraft/advancement/recipes/root.json
+// 1.21.1	2026-02-12T09:25:01.796179885	Recipes
 8b1642f585b36b397ce7cc64bb11ae36b3f96de9 data/modpack/recipe/welding/metal/double_ingot/aluminium.json
 91f7d79b0d4c9b7e661d59b3cae8fb0671b77c39 data/modpack/recipe/welding/metal/double_ingot/aluminium_bronze.json
 20b68861f8a2a54a34c0d8b1812738ff5d8b072c data/modpack/recipe/welding/metal/double_ingot/cast_iron_alloy.json

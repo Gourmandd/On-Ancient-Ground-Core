@@ -3,16 +3,17 @@ package net.gourmand.core.datagen.providers;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.recipes.WeldingRecipes;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.data.CachedOutput;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.packs.VanillaRecipeProvider;
+import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Recipe;
 
 import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 
-public class BuiltinRecipes extends VanillaRecipeProvider implements WeldingRecipes {
+public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes {
 
     RecipeOutput output;
     HolderLookup.Provider lookup;
@@ -32,6 +33,11 @@ public class BuiltinRecipes extends VanillaRecipeProvider implements WeldingReci
     @Override
     public HolderLookup.Provider lookup() {
         return lookup;
+    }
+
+    public CompletableFuture<?> run(CachedOutput output, HolderLookup.Provider registries){
+        this.lookup = registries;
+        return CompletableFuture.allOf(super.run(output, lookup));
     }
 
     @Override
