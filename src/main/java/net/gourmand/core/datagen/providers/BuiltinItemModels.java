@@ -92,7 +92,7 @@ public class BuiltinItemModels extends ItemModelProvider {
             if (rock.hasVariants()){
                 simpleBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CHISELED));
                 pressurePlate(getItemModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.PRESSURE_PLATE).getId()), TextureUtil.getRockTexture(rock, Rock.BlockType.PRESSURE_PLATE));
-                button(getItemModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).getId()), TextureUtil.getRockTexture(rock, Rock.BlockType.BUTTON));
+                buttonInventory(getItemModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).getId()), TextureUtil.getRockTexture(rock, Rock.BlockType.BUTTON));
             }
 
             simpleItem(CoreItems.BRICKS.get(rock).get(), getItemModelLocation(CoreItems.BRICKS.get(rock).getId()));
