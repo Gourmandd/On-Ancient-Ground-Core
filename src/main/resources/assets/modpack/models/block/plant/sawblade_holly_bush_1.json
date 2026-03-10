@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "pastel:block/sawblade_holly_bush1"
+    "cross": "spectrum:block/sawblade_holly_bush1"
   }
 }

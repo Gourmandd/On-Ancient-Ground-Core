@@ -2,9 +2,9 @@
     "render_type": "cutout",
     "parent": "modpack:block/overlay_stairs",
     "textures": {
-        "bottom": "pastel:block/cobbled_blackslag",
-        "side": "pastel:block/cobbled_blackslag",
-        "top": "pastel:block/cobbled_blackslag",
+        "bottom": "spectrum:block/cobbled_blackslag",
+        "side": "spectrum:block/cobbled_blackslag",
+        "top": "spectrum:block/cobbled_blackslag",
         "overlay": "modpack:block/moss_overlay"
     }
 }

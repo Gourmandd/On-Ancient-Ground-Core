@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-17T10:04:05.146523461	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-03-10T19:10:34.79982295	Tags for minecraft:item mod id modpack
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 b640843692bdc4754fb81667ad999ebcee6fc128 data/c/tags/item/clay_bricks.json
@@ -41,7 +41,7 @@ c732d4b2fe1e630818305424d45be162f56f1bae data/c/tags/item/sheets/cast_iron_alloy
 e3c861d4707426d39418ffbe4153d48024936306 data/c/tags/item/sheets/hardened_steel.json
 123cec497c262c76ca268e7f9ccb4f1884563a61 data/c/tags/item/sheets/lead.json
 2ab0bc683061b95c7b10382290919ba9d7ea1618 data/c/tags/item/sheets/nethersteel.json
-5cb6d859ba72e45371ee834d36026d6f8a4efa55 data/c/tags/item/stones.json
+ef517a2acb9f79aeb31385d4a7eac6fd0bd0e641 data/c/tags/item/stones.json
 80801b6ffce6b9ac8bb01eec848a3065d976483e data/c/tags/item/stones/hardened.json
 ef367df334ec4a7ae2b4bc9a1b0a480b48db50bf data/c/tags/item/stones/loose.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/c/tags/item/stones/pressure_plate.json
@@ -79,8 +79,8 @@ d8aeb7183a6c0a6a35c9e9e0395d7b82468257d1 data/modpack/tags/item/tool_heads/scyth
 2803108596765aa3ad89f7db097cd48c774490b0 data/modpack/tags/item/tool_heads/shovel_head.json
 f64dbebaf0f360a39de6bc8ccee6d98df1898296 data/modpack/tags/item/tool_heads/sword_blade.json
 f33be10308ac957535de398b32edc53435d050df data/modpack/tags/item/unfired_vessels.json
-be4e2e491323135b85609f49113de10b12fed939 data/pastel/tags/item/azurite_ores.json
-f46906462675cd1b0f65f2314df5f65ceaff83ae data/pastel/tags/item/shimmerstone_ores.json
+be4e2e491323135b85609f49113de10b12fed939 data/spectrum/tags/item/azurite_ores.json
+f46906462675cd1b0f65f2314df5f65ceaff83ae data/spectrum/tags/item/shimmerstone_ores.json
 84e51bedae726b8d9f616778e7c943abfc9b3cb0 data/tfc/tags/item/aqueducts.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/can_be_lit_on_torch.json
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/tfc/tags/item/fluid_item_ingredient_empty_containers.json

@@ -94,9 +94,23 @@ description='''${mod_description}'''
     side="BOTH"
 
 [[dependencies.${mod_id}]]
-    modId="pastel"
+    modId="spectrum"
     type="required"
-    versionRange="[1.1.4.1,)"
+    versionRange="[1.9.0-neo-beta-2,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="create"
+    type="required"
+    versionRange="[6.0.8,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="caupona"
+    type="required"
+    versionRange="[0.5.3,)"
     ordering="AFTER"
     side="BOTH"
 

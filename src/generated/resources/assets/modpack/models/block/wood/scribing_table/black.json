@@ -1,8 +1,8 @@
 {
   "parent": "tfc:block/scribing_table",
   "textures": {
-    "particle": "pastel:block/black_planks",
-    "planks": "pastel:block/black_planks",
-    "sheet": "pastel:block/stripped_black_log"
+    "particle": "spectrum:block/black_planks",
+    "planks": "spectrum:block/black_planks",
+    "sheet": "spectrum:block/stripped_black_log"
   }
 }

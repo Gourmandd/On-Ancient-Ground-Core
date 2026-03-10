@@ -23,7 +23,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "pastel:stratine_fragments"
+              "name": "spectrum:stratine_fragments"
             }
           ]
         }

@@ -1,5 +1,5 @@
 {
-  "background": "pastel:textures/gui/modonomicon/category_background.png",
+  "background": "spectrum:textures/gui/modonomicon/category_background.png",
   "background_height": 512,
   "background_parallax_layers": [],
   "background_texture_zoom_multiplier": 1.0,

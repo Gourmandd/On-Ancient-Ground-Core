@@ -4,6 +4,7 @@ import com.klikli_dev.modonomicon.api.datagen.CategoryProvider;
 import com.klikli_dev.modonomicon.api.datagen.ModonomiconProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.book.BookCategoryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
+import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.datagen.book.guide.entries.ores.OreEntry;
@@ -81,7 +82,7 @@ public class OresCategory extends CategoryProvider {
 
     @Override
     protected BookCategoryModel additionalSetup(BookCategoryModel category) {
-        category.withBackground(ResourceLocation.parse("pastel:textures/gui/modonomicon/category_background.png"));
+        category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }
 }

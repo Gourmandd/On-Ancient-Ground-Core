@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/loom",
   "textures": {
-    "particle": "pastel:block/ebony_noxwood_planks",
-    "texture": "pastel:block/ebony_noxwood_planks"
+    "particle": "spectrum:block/ebony_noxwood_planks",
+    "texture": "spectrum:block/ebony_noxwood_planks"
   }
 }

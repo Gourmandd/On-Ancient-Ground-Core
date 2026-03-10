@@ -1,5 +1,6 @@
 package net.gourmand.core.datagen.providers;
 
+import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -36,8 +37,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 {
     private final ExistingFileHelper.IResourceType resourceType;
 
-    final TagKey<Item> SHIMMERSTONE_ORES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("pastel", "shimmerstone_ores"));
-    final TagKey<Item> AZURITE_ORES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("pastel", "azurite_ores"));
+    final TagKey<Item> SHIMMERSTONE_ORES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "shimmerstone_ores"));
+    final TagKey<Item> AZURITE_ORES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "azurite_ores"));
 
     public BuiltinItemTags(GatherDataEvent event, CompletableFuture<HolderLookup.Provider> lookup)
     {
@@ -256,7 +257,7 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             }
         });
 
-        Stream.of(CorePastelWood.values()).forEach(wood ->{
+        Stream.of(CoreDeeperDownWood.values()).forEach(wood ->{
 
             this.tag(TFCTags.Items.LUMBER).add(getKey(CoreItems.LUMBER.get(wood).get()));
 
@@ -279,11 +280,11 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 this.tag(tag).add(getKey(block));
             };
         }
-    };
+    }
 
     protected ResourceKey<Item> getKey(DeferredHolder<Block, ? extends Block> block ){
         return block.get().asItem().builtInRegistryHolder().key();
-    };
+    }
 
     protected ResourceKey<Item> getKey(Block block){
         return block.asItem().builtInRegistryHolder().key();
@@ -296,7 +297,7 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
     private <T1 extends RegistryRock, T2> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock){
         DeferredHolder<Block, Block> block = map.get(rock).get(ore);
         this.tag(Tags.Items.ORES).add(getKey(block));
-    };
+    }
 
     private <T1 extends RegistryRock, T2, T3 extends CoreOres.Grade> void addGradedOreTags(Map<T1, Map<T2, Map<T3, DeferredHolder<Block, Block>>>> map, T2 ore, T1 rock){
 
@@ -304,5 +305,5 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             DeferredHolder<Block, Block> block = map.get(rock).get(ore).get(grade);
             this.tag(Tags.Items.ORES).add(getKey(block));
         }
-    };
+    }
 }

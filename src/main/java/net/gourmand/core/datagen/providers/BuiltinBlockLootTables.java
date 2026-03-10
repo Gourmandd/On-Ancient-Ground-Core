@@ -1,7 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
-import earth.terrarium.pastel.registries.PastelBlocks;
-import earth.terrarium.pastel.registries.PastelItems;
+import de.dafuqs.spectrum.registries.SpectrumBlocks;
+import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.rock.Ore;
@@ -26,7 +26,6 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Stream;
 
@@ -121,10 +120,10 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                 return BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "cotton_boll"));
             }
             case GLISTERING_MELON -> {
-                return Objects.requireNonNull(BuiltInRegistries.BLOCK.get(PastelBlocks.GLISTERING_MELON)).asItem();
+                return SpectrumBlocks.GLISTERING_MELON.asItem();
             }
             case AMARANTH -> {
-                return PastelBlocks.AMARANTH_BUSHEL.asItem();
+                return SpectrumBlocks.AMARANTH_BUSHEL.asItem();
             }
             case null, default -> {
                 throw new AssertionError("no product for this crop type");
@@ -145,7 +144,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
     private void generateOre(){
         CoreBlocks.BASIC_ORES.values().forEach( holder -> {
             if (holder == CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE)){
-                addOreTable(holder.get(), PastelItems.PURE_COAL.get());
+                addOreTable(holder.get(), SpectrumItems.PURE_COAL.get());
             } else {
                 this.dropSelf(holder.get());
             }
@@ -157,11 +156,11 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
         CoreBlocks.ORES.values().forEach( map -> {
             Stream.of(CoreOres.values()).forEach(ore -> {
-                if (!ore.isGraded() && ore.hasBlock() && !ore.hasPastelOreType()){
+                if (!ore.isGraded() && ore.hasBlock() && !ore.hasSpectrumOreType()){
                     addOreTable(map.get(ore).get(), CoreItems.ORES.get(ore).get());
                 }
 
-                if (!ore.isGraded() && ore.hasBlock() && ore.hasPastelOreType()){
+                if (!ore.isGraded() && ore.hasBlock() && ore.hasSpectrumOreType()){
                     addOreTable(map.get(ore).get(),  ore.getPastelOre());
                 }
             });
@@ -179,11 +178,11 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
         CoreBlocks.CUSTOM_ROCK_ORES.values().forEach( map -> {
             Stream.of(CoreOres.values()).forEach(ore -> {
-                if (!ore.isGraded() && ore.hasBlock() && !ore.hasPastelOreType()) {
+                if (!ore.isGraded() && ore.hasBlock() && !ore.hasSpectrumOreType()) {
                     addOreTable(map.get(ore).get(), CoreItems.ORES.get(ore).get());
                 }
 
-                if (!ore.isGraded() && ore.hasBlock() && ore.hasPastelOreType()) {
+                if (!ore.isGraded() && ore.hasBlock() && ore.hasSpectrumOreType()) {
                     addOreTable(map.get(ore).get(), ore.getPastelOre());
                 }
             });
@@ -262,7 +261,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
     private void generateWood(){
 
-        Stream.of(CorePastelWood.values()).forEach(wood -> {
+        Stream.of(CoreDeeperDownWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach( type -> {
                 if (wood.hasBlockType(type)){
                     if (type == Wood.BlockType.SLUICE){

@@ -19,7 +19,7 @@
                   "condition": "tfc:is_isolated"
                 }
               ],
-              "name": "pastel:basal_marble"
+              "name": "spectrum:basal_marble"
             },
             {
               "type": "minecraft:item",

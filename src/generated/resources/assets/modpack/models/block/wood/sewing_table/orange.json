@@ -1,8 +1,8 @@
 {
   "parent": "tfc:block/sewing_table",
   "textures": {
-    "0": "pastel:block/stripped_orange_log",
-    "1": "pastel:block/orange_planks",
-    "particle": "pastel:block/orange_planks"
+    "0": "spectrum:block/stripped_orange_log",
+    "1": "spectrum:block/orange_planks",
+    "particle": "spectrum:block/orange_planks"
   }
 }

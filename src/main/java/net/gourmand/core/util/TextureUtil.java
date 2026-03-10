@@ -1,6 +1,7 @@
 package net.gourmand.core.util;
 
-import earth.terrarium.pastel.PastelCommon;
+import com.simibubi.create.Create;
+import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -8,7 +9,7 @@ import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
-import net.gourmand.core.registry.category.CorePastelWood;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.resources.ResourceLocation;
 
@@ -52,13 +53,13 @@ public class TextureUtil {
                     return "caupona:block/felsic_tuff";
                 }
                 case KOMATIITE -> {
-                    return "create:block/palettes/stone_types/scoria";
+                    return Create.ID + ":block/palettes/stone_types/scoria";
                 }
                 case BLACKSLAG -> {
-                    return "pastel:block/blackslag";
+                    return SpectrumCommon.MOD_ID + ":block/blackslag";
                 }
                 case PICRITE_BASALT -> {
-                    return "pastel:block/basal_marble";
+                    return SpectrumCommon.MOD_ID + ":block/basal_marble";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
             }
@@ -80,7 +81,7 @@ public class TextureUtil {
                     return (AncientGroundCore.MODID + ":block/rock/cobble/" + rock.getSerializedName());
                 }
                 case BLACKSLAG -> {
-                    return "pastel:block/cobbled_blackslag";
+                    return SpectrumCommon.MOD_ID + ":block/cobbled_blackslag";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
             }
@@ -102,7 +103,7 @@ public class TextureUtil {
                     return (AncientGroundCore.MODID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
                 }
                 case BLACKSLAG -> {
-                    return "pastel:block/cobbled_blackslag";
+                    return SpectrumCommon.MOD_ID + ":block/cobbled_blackslag";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
             }
@@ -130,10 +131,10 @@ public class TextureUtil {
                     return "create:block/palettes/stone_types/brick/scoria_cut_brick";
                 }
                 case BLACKSLAG -> {
-                    return "pastel:block/blackslag_bricks";
+                    return SpectrumCommon.MOD_ID + ":block/blackslag_bricks";
                 }
                 case PICRITE_BASALT -> {
-                    return "pastel:block/basal_marble_bricks";
+                    return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
             }
@@ -161,10 +162,10 @@ public class TextureUtil {
                     return "create:block/palettes/stone_types/brick/scoria_cut_brick";
                 }
                 case BLACKSLAG -> {
-                    return "pastel:block/blackslag_bricks";
+                    return SpectrumCommon.MOD_ID + ":block/blackslag_bricks";
                 }
                 case PICRITE_BASALT -> {
-                    return "pastel:block/basal_marble_bricks";
+                    return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
             }
@@ -192,10 +193,10 @@ public class TextureUtil {
                     return "create:block/palettes/stone_types/brick/scoria_cut_brick";
                 }
                 case BLACKSLAG -> {
-                    return "pastel:block/blackslag_bricks";
+                    return SpectrumCommon.MOD_ID + ":block/blackslag_bricks";
                 }
                 case PICRITE_BASALT -> {
-                    return "pastel:block/basal_marble_bricks";
+                    return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
             }
@@ -329,23 +330,23 @@ public class TextureUtil {
         }
     }
 
-    public static ResourceLocation getPlanksTexture(CorePastelWood wood){
-        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, "block/" + wood.getSerializedName() + "_planks");
+    public static ResourceLocation getPlanksTexture(CoreDeeperDownWood wood){
+        return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName() + "_planks");
     }
 
-    public static ResourceLocation getLogTexture(CorePastelWood wood){
-        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
+    public static ResourceLocation getLogTexture(CoreDeeperDownWood wood){
+        return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getLogTopTexture(CorePastelWood wood){
-        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
+    public static ResourceLocation getLogTopTexture(CoreDeeperDownWood wood){
+        return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getStrippedLogTexture(CorePastelWood wood){
-        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
+    public static ResourceLocation getStrippedLogTexture(CoreDeeperDownWood wood){
+        return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getStrippedLogTopTexture(CorePastelWood wood){
-        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
+    public static ResourceLocation getStrippedLogTopTexture(CoreDeeperDownWood wood){
+        return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
     }
 }

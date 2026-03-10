@@ -23,7 +23,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "pastel:raw_azurite"
+              "name": "spectrum:raw_azurite"
             }
           ]
         }

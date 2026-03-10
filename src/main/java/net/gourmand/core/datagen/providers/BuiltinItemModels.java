@@ -138,8 +138,8 @@ public class BuiltinItemModels extends ItemModelProvider {
             });
         });
 
-        // pastel wood types.
-        Stream.of(CorePastelWood.values()).forEach(woodType -> {
+        // spectrum wood types.
+        Stream.of(CoreDeeperDownWood.values()).forEach(woodType -> {
 
             supportBlockItem(CoreItems.SUPPORTS.get(woodType).get(), woodType);
             // do support
@@ -167,7 +167,7 @@ public class BuiltinItemModels extends ItemModelProvider {
         this.getBuilder(getItemModelString(item)).parent(new ModelFile.UncheckedModelFile("item/generated")).texture("layer0", texture);
     }
 
-    private void supportBlockItem(Item item, CorePastelWood wood){
+    private void supportBlockItem(Item item, CoreDeeperDownWood wood){
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
         ResourceLocation textureTop = TextureUtil.getStrippedLogTopTexture(wood);
 

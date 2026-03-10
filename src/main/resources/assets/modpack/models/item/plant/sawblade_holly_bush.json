@@ -1,6 +1,6 @@
 {
   "parent": "tfc:block/plant/stationary_bush_2",
   "textures": {
-    "bush": "pastel:block/sawblade_holly_bush3"
+    "bush": "spectrum:block/sawblade_holly_bush3"
   }
 }

@@ -9,7 +9,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.CorePastelWood;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.items.BucketItem;
 import net.gourmand.core.registry.items.CoreSeedItem;
 import net.minecraft.core.Direction;
@@ -36,7 +36,7 @@ public class CoreItems {
             register("seeds/" + crop.name(), () -> new CoreSeedItem(crop, CoreBlocks.CROPS.get(crop).get(), new Item.Properties()))
     );
 
-    public static final Map<CoreOres, DeferredHolder<Item, Item>> ORES = Helpers.mapOf(CoreOres.class, ore -> !(!ore.hasBlock() || ore.isGraded() || ore.hasPastelOreType()), type ->
+    public static final Map<CoreOres, DeferredHolder<Item, Item>> ORES = Helpers.mapOf(CoreOres.class, ore -> !(!ore.hasBlock() || ore.isGraded() || ore.hasSpectrumOreType()), type ->
             register("ore/" + type.name())
     );
 
@@ -55,9 +55,9 @@ public class CoreItems {
     );
 
 
-    public static final Map<CorePastelWood, DeferredHolder<Item, Item>> LUMBER = Helpers.mapOf(CorePastelWood.class, wood -> register("wood/lumber/" + wood.name()));
+    public static final Map<CoreDeeperDownWood, DeferredHolder<Item, Item>> LUMBER = Helpers.mapOf(CoreDeeperDownWood.class, wood -> register("wood/lumber/" + wood.name()));
 
-    public static final Map<CorePastelWood, DeferredHolder<Item, Item>> SUPPORTS = Helpers.mapOf(CorePastelWood.class, wood ->
+    public static final Map<CoreDeeperDownWood, DeferredHolder<Item, Item>> SUPPORTS = Helpers.mapOf(CoreDeeperDownWood.class, wood ->
             register("wood/support/" + wood.name(), () -> new StandingAndWallBlockItem(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).get(), CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get(), new Item.Properties(), Direction.DOWN))
     );
 

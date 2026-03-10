@@ -1,14 +1,14 @@
-// 1.21.1	2026-02-10T15:17:27.325698279	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-03-10T19:10:34.798822603	Tags for minecraft:block mod id modpack
 e4aedff054b4b75c19dce5bb07196820ea097136 data/c/tags/block/cobblestones.json
 abbd20b0fa4fd242129da8231562b9dd45a2c7e2 data/c/tags/block/cobblestones/mossy.json
 e371ab2fa981d3e72cdc7407c120f27176fde4bd data/c/tags/block/cobblestones/normal.json
 4cdb6b9ee503bce7add60293fd12362e73640525 data/c/tags/block/gravels.json
 08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/c/tags/block/ores.json
-79a7b5d764d850ca886e59aad4ef626a1fbf7f3a data/c/tags/block/stones.json
+e620d2264b364bd1dec87af8f17778f30c9e415e data/c/tags/block/stones.json
 80801b6ffce6b9ac8bb01eec848a3065d976483e data/c/tags/block/stones/hardened.json
 ef367df334ec4a7ae2b4bc9a1b0a480b48db50bf data/c/tags/block/stones/loose.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/c/tags/block/stones/pressure_plate.json
-5cb6d859ba72e45371ee834d36026d6f8a4efa55 data/c/tags/block/stones/raw.json
+ef517a2acb9f79aeb31385d4a7eac6fd0bd0e641 data/c/tags/block/stones/raw.json
 9a111aade36aace43690446211992be9f6c0962d data/c/tags/block/stones/smooth.json
 6c83addf9f2ca8e4b3406333a1cc308ce404161f data/c/tags/block/stones/spike.json
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/block/buttons.json
@@ -24,15 +24,15 @@ f70de05d22e9265e567104afbda46456988d582d data/minecraft/tags/block/stairs.json
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/block/stone_buttons.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/stone_pressure_plates.json
 4beeb7c76949bd7c1fa08b4da80c4efec791d0b6 data/minecraft/tags/block/walls.json
-60868d9bf31028a94cdfc8b852a1f80dbbb86fc2 data/pastel/tags/block/azurite_ores.json
-a614adfd48a3bbf45eb3dba5a9c386936d93a199 data/pastel/tags/block/shimmerstone_ores.json
+60868d9bf31028a94cdfc8b852a1f80dbbb86fc2 data/spectrum/tags/block/azurite_ores.json
+a614adfd48a3bbf45eb3dba5a9c386936d93a199 data/spectrum/tags/block/shimmerstone_ores.json
 84e51bedae726b8d9f616778e7c943abfc9b3cb0 data/tfc/tags/block/aqueducts.json
-ce33c5d03f4998084eb2116dfafda0f867b4b74a data/tfc/tags/block/breaks_when_isolated.json
+f847dfb2dfdc4ab6438aa2d8631678218abc78f3 data/tfc/tags/block/breaks_when_isolated.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/block/can_be_snow_piled.json
-d78af09b9aa81fca0acafb05c1fa86555255e58d data/tfc/tags/block/can_collapse.json
+e660a256b54f917805b37ac982a2e85566cd5bd7 data/tfc/tags/block/can_collapse.json
 1439dae5b57b38a7865d96db4ae2b6344d5659ca data/tfc/tags/block/can_landslide.json
-5cb6d859ba72e45371ee834d36026d6f8a4efa55 data/tfc/tags/block/can_start_collapse.json
-3f9ff5505ec365dfd24010b65fe682e0f4c1aadf data/tfc/tags/block/can_trigger_collapse.json
+ef517a2acb9f79aeb31385d4a7eac6fd0bd0e641 data/tfc/tags/block/can_start_collapse.json
+4df605f44c34b1a8274095313b3c106883b2a247 data/tfc/tags/block/can_trigger_collapse.json
 25a1a97177a06510355cad081a3ec15029c150f9 data/tfc/tags/block/fruit_tree_branches.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/tfc/tags/block/fruit_tree_leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/fruit_tree_saplings.json

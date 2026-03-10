@@ -2,7 +2,7 @@
     "render_type": "cutout",
     "parent": "modpack:block/overlay_template_wall_post",
     "textures": {
-        "wall": "pastel:block/blackslag_bricks",
+        "wall": "spectrum:block/blackslag_bricks",
         "overlay": "modpack:block/moss_brick_overlay"
     }
 }

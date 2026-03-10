@@ -55,16 +55,6 @@ repositories {
     exclusiveContent {
         forRepository {
             maven {
-                url = "https://maven.resourcefulbees.com/repository/terrarium/"
-            }
-        }
-        filter {
-            includeGroup "earth.terrarium"
-        }
-    }
-    exclusiveContent {
-        forRepository {
-            maven {
                 url = "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
             }
         }
@@ -134,7 +124,7 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/extra/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'pastel', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette'
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/extra/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'spectrum', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette'
         }
 
         // applies to all the run configs above
@@ -181,8 +171,10 @@ dependencies {
     implementation "curse.maven:patchouli-306770:6842247"
 
     // Pastel Dependencies
-    implementation "curse.maven:pastel-1264556:6847961"
-    implementation "curse.maven:databank-1181408:7007287"
+    //implementation "curse.maven:pastel-1264556:6847961"
+    //implementation "curse.maven:databank-1181408:7007287"
+    implementation "curse.maven:spectrum-556967:7728432"
+    implementation "curse.maven:revelationary-656526:6728488"
     implementation "dev.architectury:architectury-neoforge:13.0.8"
     implementation "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"

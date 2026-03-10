@@ -107,7 +107,7 @@ public class CategoryUtil {
         ArrayList<String> list = new ArrayList<String>();
 
         for (CoreOres ore : CoreOres.values()){
-            if (ore.hasPastelOreType()){
+            if (ore.hasSpectrumOreType()){
                 list.add(ore.name().toLowerCase(Locale.ROOT));
             }
         }
@@ -140,7 +140,7 @@ public class CategoryUtil {
     public static ArrayList<String> getPastelWoodNames(){
         ArrayList<String> list = new ArrayList<String>();
 
-        for (CorePastelWood wood : CorePastelWood.values()){
+        for (CoreDeeperDownWood wood : CoreDeeperDownWood.values()){
             list.add(wood.getSerializedName());
         }
 

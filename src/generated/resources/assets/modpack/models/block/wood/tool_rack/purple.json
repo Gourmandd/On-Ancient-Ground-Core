@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/tool_rack",
   "textures": {
-    "particle": "pastel:block/stripped_purple_log",
-    "texture": "pastel:block/stripped_purple_log"
+    "particle": "spectrum:block/stripped_purple_log",
+    "texture": "spectrum:block/stripped_purple_log"
   }
 }

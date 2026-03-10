@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "pastel:block/cobbled_blackslag"
+    "all": "spectrum:block/cobbled_blackslag"
   }
 }

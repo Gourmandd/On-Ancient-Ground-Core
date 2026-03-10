@@ -23,7 +23,7 @@
                   }
                 }
               ],
-              "name": "pastel:glistering_melon"
+              "name": "spectrum:glistering_melon"
             },
             {
               "type": "minecraft:item",
@@ -47,7 +47,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "pastel:glistering_melon"
+              "name": "spectrum:glistering_melon"
             }
           ]
         }

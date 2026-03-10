@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "pastel:amaranth_bushel"
+              "name": "spectrum:amaranth_bushel"
             },
             {
               "type": "minecraft:item",
@@ -49,7 +49,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "pastel:amaranth_bushel"
+              "name": "spectrum:amaranth_bushel"
             }
           ]
         }

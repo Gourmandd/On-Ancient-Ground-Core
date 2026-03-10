@@ -19,7 +19,7 @@
                   "condition": "tfc:is_isolated"
                 }
               ],
-              "name": "pastel:blackslag"
+              "name": "spectrum:blackslag"
             },
             {
               "type": "minecraft:item",

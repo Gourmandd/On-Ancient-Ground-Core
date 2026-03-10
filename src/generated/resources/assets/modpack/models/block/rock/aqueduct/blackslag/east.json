@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/aqueduct/east",
   "textures": {
-    "particle": "pastel:block/blackslag_bricks",
-    "texture": "pastel:block/blackslag_bricks"
+    "particle": "spectrum:block/blackslag_bricks",
+    "texture": "spectrum:block/blackslag_bricks"
   }
 }

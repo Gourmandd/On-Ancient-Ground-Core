@@ -3,7 +3,7 @@ package net.gourmand.core.registry.category;
 import java.util.Locale;
 import java.util.function.Supplier;
 
-import earth.terrarium.pastel.registries.PastelBlocks;
+import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockDisplayCategory;
 import net.gourmand.core.registry.CoreBlocks;
@@ -93,7 +93,11 @@ public enum CoreRocks implements RegistryRock
     @Override
     public Supplier<? extends Block> getBlock(Rock.BlockType type)
     {
-        return CoreBlocks.ROCK_BLOCKS.get(this).get(type);
+        if (type == Rock.BlockType.RAW){
+            return () -> getRawRock(this);
+        } else {
+            return CoreBlocks.ROCK_BLOCKS.get(this).get(type);
+        }
     }
 
     @Override
@@ -147,10 +151,10 @@ public enum CoreRocks implements RegistryRock
                     return Blocks.DRIPSTONE_BLOCK;
                 }
                 case BLACKSLAG -> {
-                    return PastelBlocks.BLACKSLAG.get();
+                    return SpectrumBlocks.BLACKSLAG.get();
                 }
                 case PICRITE_BASALT -> {
-                    return PastelBlocks.BASAL_MARBLE.get();
+                    return SpectrumBlocks.BASAL_MARBLE.get();
                 }
                 case null, default -> {
                     throw new AssertionError("no raw rock for this rock type");
@@ -181,10 +185,10 @@ public enum CoreRocks implements RegistryRock
                     return ResourceLocation.fromNamespaceAndPath("minecraft", "dripstone_block");
                 }
                 case BLACKSLAG -> {
-                    return PastelBlocks.BLACKSLAG.getId();
+                    return SpectrumBlocks.BLACKSLAG.getId();
                 }
                 case PICRITE_BASALT -> {
-                    return PastelBlocks.BASAL_MARBLE.getId();
+                    return SpectrumBlocks.BASAL_MARBLE.getId();
                 }
                 case null, default -> throw new AssertionError("no raw rock for this rock type");
             }

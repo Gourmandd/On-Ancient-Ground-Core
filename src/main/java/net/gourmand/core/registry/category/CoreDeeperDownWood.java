@@ -1,6 +1,6 @@
 package net.gourmand.core.registry.category;
 
-import earth.terrarium.pastel.PastelCommon;
+import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -23,7 +23,7 @@ import net.minecraft.world.level.material.MapColor;
 import java.util.Locale;
 import java.util.function.Supplier;
 
-public enum CorePastelWood implements RegistryWood {
+public enum CoreDeeperDownWood implements RegistryWood {
     CHESTNUT_NOXWOOD(true, MapColor.CRIMSON_NYLIUM, MapColor.CRIMSON_NYLIUM),
     SLATE_NOXWOOD(true, MapColor.COLOR_GRAY, MapColor.COLOR_GRAY),
     EBONY_NOXWOOD(true, MapColor.TERRACOTTA_BLACK, MapColor.TERRACOTTA_BLACK),
@@ -54,14 +54,14 @@ public enum CorePastelWood implements RegistryWood {
     private final WoodType woodType;
     private final ResourceLocation planksTextures;
 
-    CorePastelWood(boolean isNoxfungi, MapColor woodColor, MapColor barkColor){
+    CoreDeeperDownWood(boolean isNoxfungi, MapColor woodColor, MapColor barkColor){
         this.isNoxfungi = isNoxfungi;
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.woodColor = woodColor;
         this.barkColor = barkColor;
         this.blockSet = new BlockSetType(serializedName);
         this.woodType = new WoodType(Helpers.identifier(serializedName).toString(), blockSet);
-        this.planksTextures = ResourceLocation.parse(PastelCommon.MOD_ID + ":block/" + serializedName + "_planks");
+        this.planksTextures = ResourceLocation.parse(SpectrumCommon.MOD_ID + ":block/" + serializedName + "_planks");
     }
     @Override
     public MapColor woodColor() {
@@ -121,7 +121,7 @@ public enum CorePastelWood implements RegistryWood {
         return planksTextures;
     }
 
-    public static Supplier<Block> create(Wood.BlockType type, CorePastelWood wood) {
+    public static Supplier<Block> create(Wood.BlockType type, CoreDeeperDownWood wood) {
 
         switch (type){
             case TOOL_RACK -> {

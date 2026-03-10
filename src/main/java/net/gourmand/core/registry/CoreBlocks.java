@@ -11,7 +11,7 @@ import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.CorePastelWood;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -84,6 +84,22 @@ public class CoreBlocks {
             registerNoItem("plant/potted/" + tree.name() + "_sapling", tree::createPottedSapling)
     );
 
+    public static final Map<CoreRocks, Map<Rock.BlockType, DeferredHolder<Block, Block>>> ROCK_BLOCKS = Helpers.mapOf(CoreRocks.class, rock ->
+            Helpers.mapOf(Rock.BlockType.class, rock::hasVariant, type ->
+                    register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock), rock.createItemProperties())
+            )
+    );
+
+    public static final Map<CoreRocks, Map<Rock.BlockType, CoreDecorationBlockHolder>> ROCK_DECORATIONS = Helpers.mapOf(CoreRocks.class, rock ->
+            Helpers.mapOf(Rock.BlockType.class, type -> (type.hasVariants() || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_BRICKS) && rock.hasVariant(type), type -> registerDecorations(
+                    "rock/" + type.name() + "/" + rock.name(),
+                    () -> type.createSlab(rock),
+                    () -> type.createStairs(rock),
+                    () -> type.createWall(rock),
+                    rock.createItemProperties()
+            ))
+    );
+
     public static final Map<CoreOres, DeferredHolder<Block, Block>> BASIC_ORES = Helpers.mapOf(CoreOres.class, ore -> (!ore.hasBlock()), ore ->
             register(("ore/" + ore.name()), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(Rock.ANDESITE.category().hardness(6.5f), 10).requiresCorrectToolForDrops()))
     );
@@ -135,29 +151,13 @@ public class CoreBlocks {
             register(("ore/small_" + type.name()), () -> GroundcoverBlock.looseOre(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.05F, 0.0F).sound(SoundType.NETHER_ORE).noCollission().pushReaction(PushReaction.DESTROY)))
     );
 
-    public static final Map<CoreRocks, Map<Rock.BlockType, DeferredHolder<Block, Block>>> ROCK_BLOCKS = Helpers.mapOf(CoreRocks.class, rock ->
-            Helpers.mapOf(Rock.BlockType.class, rock::hasVariant, type ->
-                    register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock), rock.createItemProperties())
-            )
-    );
-
-    public static final Map<CoreRocks, Map<Rock.BlockType, CoreDecorationBlockHolder>> ROCK_DECORATIONS = Helpers.mapOf(CoreRocks.class, rock ->
-            Helpers.mapOf(Rock.BlockType.class, type -> (type.hasVariants() || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_BRICKS) && rock.hasVariant(type), type -> registerDecorations(
-                    "rock/" + type.name() + "/" + rock.name(),
-                    () -> type.createSlab(rock),
-                    () -> type.createStairs(rock),
-                    () -> type.createWall(rock),
-                    rock.createItemProperties()
-            ))
-    );
-
     public static final Map<CoreRocks, DeferredHolder<Block, Block>> MAGMA_BLOCKS = Helpers.mapOf(CoreRocks.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
             register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(ExtendedProperties.of().pathType(PathType.LAVA).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(CoreBlocks::always)), b -> new BlockItem(b, rock.createItemProperties()))
     );
 
-    public static final Map<CorePastelWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(CorePastelWood.class, wood ->
-            Helpers.mapOf(Wood.BlockType.class, type -> wood.hasBlockType(type), type ->
-                    register(type.nameFor(wood), CorePastelWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))
+    public static final Map<CoreDeeperDownWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(CoreDeeperDownWood.class, wood ->
+            Helpers.mapOf(Wood.BlockType.class, wood::hasBlockType, type ->
+                    register(type.nameFor(wood), CoreDeeperDownWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))
             )
     );
 

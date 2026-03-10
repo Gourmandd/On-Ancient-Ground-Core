@@ -2,9 +2,9 @@
     "render_type": "cutout",
     "parent": "modpack:block/overlay_inner_stairs",
     "textures": {
-        "bottom": "pastel:block/basal_marble_bricks",
-        "side": "pastel:block/basal_marble_bricks",
-        "top": "pastel:block/basal_marble_bricks",
+        "bottom": "spectrum:block/basal_marble_bricks",
+        "side": "spectrum:block/basal_marble_bricks",
+        "top": "spectrum:block/basal_marble_bricks",
         "overlay": "modpack:block/moss_brick_overlay"
     }
 }

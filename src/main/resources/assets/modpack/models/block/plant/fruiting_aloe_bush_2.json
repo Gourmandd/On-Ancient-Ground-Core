@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "pastel:block/aloe4"
+    "cross": "spectrum:block/aloe4"
   }
 }

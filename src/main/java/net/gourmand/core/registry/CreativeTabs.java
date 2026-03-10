@@ -6,7 +6,7 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.CorePastelWood;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -119,7 +119,7 @@ public class CreativeTabs {
 
         for (CoreOres ore : CoreOres.values())
         {
-            if (!(ore.isGraded() || ore.hasPastelOreType())) accept(out, CoreItems.ORES, ore);
+            if (!(ore.isGraded() || ore.hasSpectrumOreType())) accept(out, CoreItems.ORES, ore);
         }
 
         for (CoreOres ore : CoreOres.values())
@@ -237,7 +237,7 @@ public class CreativeTabs {
 
     private static void fillWood(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
-        for (CorePastelWood wood : CorePastelWood.values()){
+        for (CoreDeeperDownWood wood : CoreDeeperDownWood.values()){
             CoreBlocks.DEEPER_DOWN_WOODS.get(wood).forEach((type,reg) -> {
                 if (type.needsItem() && wood.hasBlockType(type)) {
                     out.accept(reg.get());

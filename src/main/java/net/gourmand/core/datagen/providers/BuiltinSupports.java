@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 
 import net.gourmand.core.registry.CoreBlocks;
-import net.gourmand.core.registry.category.CorePastelWood;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 
@@ -23,7 +23,7 @@ public class BuiltinSupports extends DataManagerProvider<Support>
     protected void addData(HolderLookup.Provider provider)
     {
         add("deeper_down_horizontal_support_beam", new Support(BlockIngredient.of(
-                Arrays.stream(CorePastelWood.values()).map(wood ->
+                Arrays.stream(CoreDeeperDownWood.values()).map(wood ->
                         CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get())),
                 2, 2, 4
         ));

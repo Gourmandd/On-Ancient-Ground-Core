@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "pastel:block/cobbled_blackslag"
+    "wall": "spectrum:block/cobbled_blackslag"
   }
 }

@@ -1,9 +1,9 @@
 package net.gourmand.core.registry;
 
-import earth.terrarium.pastel.api.energy.color.InkColor;
-import earth.terrarium.pastel.api.energy.color.InkColors;
-import earth.terrarium.pastel.api.item.GemstoneColor;
-import earth.terrarium.pastel.registries.PastelRegistries;
+import de.dafuqs.spectrum.api.energy.color.InkColor;
+import de.dafuqs.spectrum.api.energy.color.InkColors;
+import de.dafuqs.spectrum.api.item.GemstoneColor;
+import de.dafuqs.spectrum.registries.SpectrumRegistries;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.AncientGroundCore;
@@ -32,7 +32,7 @@ public enum CoreGemstoneColors implements GemstoneColor, StringRepresentable {
         this.name = name;
         this.powder = powder;
 
-        Registry.register(PastelRegistries.GEMSTONE_COLOR, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, name), this);
+        Registry.register(SpectrumRegistries.GEMSTONE_COLOR, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, name), this);
     }
 
     @Override
@@ -41,16 +41,18 @@ public enum CoreGemstoneColors implements GemstoneColor, StringRepresentable {
     }
 
     @Override
+    public Item getGemstonePowderItem() {
+        return powder.get();
+    }
+
     public Item getPowder() {
         return powder.get();
     }
 
-    @Override
     public InkColor getInkColor() {
         return inkColor;
     }
 
-    @Override
     public int getOffset() {
         return offset;
     }

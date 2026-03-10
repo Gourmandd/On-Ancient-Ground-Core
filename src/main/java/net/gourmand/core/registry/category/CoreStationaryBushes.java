@@ -1,6 +1,6 @@
 package net.gourmand.core.registry.category;
 
-import earth.terrarium.pastel.registries.PastelItems;
+import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.plant.fruit.StationaryBerryBushBlock;
@@ -20,8 +20,8 @@ import static net.dries007.tfc.common.blocks.plant.fruit.Lifecycle.*;
 
 public enum CoreStationaryBushes implements StringRepresentable {
 
-    SAWBLADE_HOLLY(PastelItems.SAWBLADE_HOLLY_BERRY, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT),
-    ALOE(PastelItems.ALOE_LEAF, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING);
+    SAWBLADE_HOLLY(SpectrumItems.SAWBLADE_HOLLY_BERRY, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT),
+    ALOE(SpectrumItems.ALOE_LEAF, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING);
 
     private final String serializedName;
     private final DeferredHolder<Item, Item> product;

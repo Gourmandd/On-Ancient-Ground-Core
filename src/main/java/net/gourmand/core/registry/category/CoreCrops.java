@@ -1,13 +1,12 @@
 package net.gourmand.core.registry.category;
 
-import earth.terrarium.pastel.registries.PastelBlocks;
+import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.crop.*;
 import net.dries007.tfc.util.climate.ClimateRange;
 import net.gourmand.core.registry.CoreBlockEntities;
 import net.gourmand.core.registry.blockentities.CoreCropBlockEntity;
 import net.gourmand.core.registry.blocks.*;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -21,7 +20,7 @@ import java.util.function.Supplier;
 
 public enum CoreCrops implements StringRepresentable {
 
-    GLISTERING_MELON(0.75f, -0.2f, -0.2f, 8, () -> () -> BuiltInRegistries.BLOCK.get(PastelBlocks.GLISTERING_MELON)),
+    GLISTERING_MELON(0.75f, -0.2f, -0.2f, 8, () -> SpectrumBlocks.GLISTERING_MELON),
     COTTON(0.75f, -0.2f, -0.2f, 4),
     COFFEE(0.75f, -0.2f, -0.2f, 6),
     AMARANTH(0.75f, -0.2f, -0.2f, 4, 4, false);

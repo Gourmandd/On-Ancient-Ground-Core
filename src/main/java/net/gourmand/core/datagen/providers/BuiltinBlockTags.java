@@ -1,7 +1,8 @@
 package net.gourmand.core.datagen.providers;
 
 
-import earth.terrarium.pastel.registries.PastelBlockTags;
+import de.dafuqs.spectrum.SpectrumCommon;
+import de.dafuqs.spectrum.registries.SpectrumBlockTags;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -13,7 +14,7 @@ import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
-import net.gourmand.core.registry.category.CorePastelWood;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -47,7 +48,7 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
-        final TagKey<Block> SHIMMERSTONE_ORES = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("pastel", "shimmerstone_ores"));
+        final TagKey<Block> SHIMMERSTONE_ORES = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "shimmerstone_ores"));
         // adds #c:ores to this tag to be able to isolate and get ore blocks.
         this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).addTag(Tags.Blocks.ORES);
 
@@ -123,12 +124,12 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            this.tag(PastelBlockTags.AZURITE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE).getKey());
+            this.tag(SpectrumBlockTags.AZURITE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE).getKey());
             this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
         });
 
         Stream.of(Rock.values()).forEach(rock -> {
-            this.tag(PastelBlockTags.AZURITE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.AZURITE).getKey());
+            this.tag(SpectrumBlockTags.AZURITE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.AZURITE).getKey());
             this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
         });
 
@@ -243,7 +244,7 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
             }
         });
 
-        Stream.of(CorePastelWood.values()).forEach(wood ->{
+        Stream.of(CoreDeeperDownWood.values()).forEach(wood ->{
             this.tag(BlockTags.MINEABLE_WITH_AXE)
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG).getKey())
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).getKey())

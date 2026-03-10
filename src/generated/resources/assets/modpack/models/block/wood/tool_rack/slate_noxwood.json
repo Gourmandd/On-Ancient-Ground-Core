@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/tool_rack",
   "textures": {
-    "particle": "pastel:block/stripped_slate_noxcap_stem",
-    "texture": "pastel:block/stripped_slate_noxcap_stem"
+    "particle": "spectrum:block/stripped_slate_noxcap_stem",
+    "texture": "spectrum:block/stripped_slate_noxcap_stem"
   }
 }

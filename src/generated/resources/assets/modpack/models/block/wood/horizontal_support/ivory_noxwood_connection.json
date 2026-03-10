@@ -1,8 +1,8 @@
 {
   "parent": "tfc:block/wood/support/connection_vex",
   "textures": {
-    "particle": "pastel:block/stripped_ivory_noxcap_stem",
-    "texture": "pastel:block/stripped_ivory_noxcap_stem",
-    "top": "pastel:block/stripped_ivory_noxcap_stem_top"
+    "particle": "spectrum:block/stripped_ivory_noxcap_stem",
+    "texture": "spectrum:block/stripped_ivory_noxcap_stem",
+    "top": "spectrum:block/stripped_ivory_noxcap_stem_top"
   }
 }

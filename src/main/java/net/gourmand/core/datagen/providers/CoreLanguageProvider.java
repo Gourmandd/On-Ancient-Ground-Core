@@ -107,7 +107,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             addItem(CoreItems.BRICKS.get(rock), getName(rock.name()) + "  Brick");
         });
 
-        Stream.of(CorePastelWood.values()).forEach(wood -> {
+        Stream.of(CoreDeeperDownWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach(type -> {
                 if (wood.hasBlockType(type)){
                     addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type), getName(wood.name()) + " " + getName(type.name()));

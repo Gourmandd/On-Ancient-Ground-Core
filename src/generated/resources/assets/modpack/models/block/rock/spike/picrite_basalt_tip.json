@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/rock/spike_tip",
   "textures": {
-    "particle": "pastel:block/basal_marble",
-    "texture": "pastel:block/basal_marble"
+    "particle": "spectrum:block/basal_marble",
+    "texture": "spectrum:block/basal_marble"
   }
 }
