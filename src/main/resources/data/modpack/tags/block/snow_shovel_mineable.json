@@ -3,8 +3,8 @@
     "values": [
         "minecraft:snow",
         "minecraft:snow_block",
-        "pastel:ash",
-        "pastel:ash_pile",
+        "spectrum:ash",
+        "spectrum:ash_pile",
         "tfc:snow_pile"
     ]
 }
