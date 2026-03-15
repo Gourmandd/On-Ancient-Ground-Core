@@ -1,0 +1,19 @@
+{
+    "effect.quark.resilience.description": "You are now sturdy as a rock, nobody can knock you back now!",
+    "block.quark.polished_dripstone": "Polished Travertine",
+    "block.quark.dripstone_bricks": "Travertine Bricks",
+    "block.quark.chiseled_dripstone_bricks": "Chiseled Travertine Bricks",
+    "block.quark.dripstone_pillar": "Travertine Pillar",
+    "block.quark.dripstone_bricks_wall": "Travertine Brick Wall",
+    "block.quark.dripstone_bricks_stairs": "Travertine Brick Stairs",
+    "block.quark.dripstone_bricks_slab": "Travertine Brick Slab",
+    "block.quark.dripstone_block_wall": "Travertine Wall",
+    "block.quark.dripstone_block_stairs": "Travertine Stairs",
+    "block.quark.dripstone_block_slab": "Travertine Slab",
+    "block.quark.polished_dripstone_slab": "Polished Travertine Slab",
+    "block.quark.polished_dripstone_stairs": "Polished Travertine Stairs",
+    "block.quark.cobblestone_bricks": "Large Argillite Cobble Bricks",
+    "block.quark.cobblestone_brick_stairs": "Large Argillite Cobble Brick Stairs",
+    "block.quark.cobblestone_brick_slab": "Large Argillite Cobble Slab",
+    "block.quark.cobblestone_brick_wall": "Large Argillite Brick Wall"
+}

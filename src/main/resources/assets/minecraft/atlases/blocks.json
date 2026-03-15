@@ -1,0 +1,44 @@
+{
+    "sources": [
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/block/aluminium"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/full/aluminium"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/block/aluminium_bronze"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/full/aluminium_bronze"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/block/nethersteel"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/full/nethersteel"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/block/cast_iron_alloy"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/full/cast_iron_alloy"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/block/harderned_steel"
+        },
+        {
+            "type": "single",
+            "resource": "modpack:block/metal/full/harderned_steel"
+        }
+    ]
+}

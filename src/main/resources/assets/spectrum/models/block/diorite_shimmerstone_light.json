@@ -1,0 +1,8 @@
+{
+  "parent": "spectrum:templates/shimmerstone_light",
+  "textures": {
+    "inner": "spectrum:block/shimmerstone_light",
+    "outer": "tfc:block/rock/smooth/diorite",
+    "particle": "tfc:block/rock/smooth/diorite"
+  }
+}

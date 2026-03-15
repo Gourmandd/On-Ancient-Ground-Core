@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-15T09:24:52.905466439	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-03-15T09:58:03.061694467	Tags for minecraft:block mod id modpack
 e4aedff054b4b75c19dce5bb07196820ea097136 data/c/tags/block/cobblestones.json
 abbd20b0fa4fd242129da8231562b9dd45a2c7e2 data/c/tags/block/cobblestones/mossy.json
 e371ab2fa981d3e72cdc7407c120f27176fde4bd data/c/tags/block/cobblestones/normal.json
@@ -24,6 +24,7 @@ f70de05d22e9265e567104afbda46456988d582d data/minecraft/tags/block/stairs.json
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/block/stone_buttons.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/stone_pressure_plates.json
 4beeb7c76949bd7c1fa08b4da80c4efec791d0b6 data/minecraft/tags/block/walls.json
+341d3a8bcca759951f2de06dcbc28ef705e7d73d data/modpack/tags/block/snow_shovel_mineable.json
 60868d9bf31028a94cdfc8b852a1f80dbbb86fc2 data/spectrum/tags/block/azurite_ores.json
 a614adfd48a3bbf45eb3dba5a9c386936d93a199 data/spectrum/tags/block/shimmerstone_ores.json
 84e51bedae726b8d9f616778e7c943abfc9b3cb0 data/tfc/tags/block/aqueducts.json

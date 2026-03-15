@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+          {
+            "type": "minecraft:alternatives",
+            "children": [
+              {
+                "type": "minecraft:item",
+                "name": "modpack:ore/normal_native_gold/argillite",
+                "conditions": [
+                  {
+                    "condition": "tfc:is_isolated"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:item",
+                "name": "tfc:ore/normal_native_gold"
+              }
+            ]
+          }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

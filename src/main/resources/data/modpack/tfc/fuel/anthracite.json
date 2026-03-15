@@ -1,0 +1,12 @@
+{
+    "ingredient": [
+        {
+            "item": "spectrum:pure_coal"
+        },
+        {
+            "item": "modpack:ore/anthracite"
+        }
+    ],
+    "duration": 3200,
+    "temperature": 1699
+}

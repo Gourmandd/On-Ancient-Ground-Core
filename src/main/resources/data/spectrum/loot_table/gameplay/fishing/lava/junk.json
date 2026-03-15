@@ -1,0 +1,63 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tfc:ore/bituminous_coal",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tfc:ore/lignite",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tfc:ore/halite",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherrack",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:nether_brick",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tfc:rock/gravel/basalt",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tfc:rock/cobble/basalt",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tfc:rock/loose/basalt",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:magma_cream",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,9 @@ package net.gourmand.core.datagen.providers;
 
 import de.dafuqs.spectrum.SpectrumCommon;
 import de.dafuqs.spectrum.registries.SpectrumBlockTags;
+import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -12,10 +14,7 @@ import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreBlocks;
-import net.gourmand.core.registry.category.CoreMetals;
-import net.gourmand.core.registry.category.CoreOres;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
-import net.gourmand.core.registry.category.CoreRocks;
+import net.gourmand.core.registry.category.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
@@ -25,6 +24,7 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -51,6 +51,14 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
         final TagKey<Block> SHIMMERSTONE_ORES = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "shimmerstone_ores"));
         // adds #c:ores to this tag to be able to isolate and get ore blocks.
         this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).addTag(Tags.Blocks.ORES);
+
+        this.tag(CoreTags.SNOW_SHOVEL_MINEABLE).add(
+                Blocks.SNOW.builtInRegistryHolder().key(),
+                Blocks.SNOW_BLOCK.builtInRegistryHolder().key(),
+                TFCBlocks.SNOW_PILE.key(),
+                SpectrumBlocks.ASH.getKey(),
+                SpectrumBlocks.ASH_PILE.getKey()
+        );
 
         add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(
             BlockTags.LEAVES,
