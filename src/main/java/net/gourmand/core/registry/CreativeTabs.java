@@ -117,6 +117,10 @@ public class CreativeTabs {
             }
         }
 
+        CoreBlocks.BASIC_ORES.values().forEach( basicOre ->
+                out.accept(basicOre.get())
+        );
+
         for (CoreOres ore : CoreOres.values())
         {
             if (!(ore.isGraded() || ore.hasSpectrumOreType())) accept(out, CoreItems.ORES, ore);
@@ -146,12 +150,6 @@ public class CreativeTabs {
                 {
                     CoreBlocks.ORES.values().forEach(map -> accept(out, map, ore));
                     CoreBlocks.CUSTOM_ROCK_ORES.values().forEach(map -> accept(out, map, ore));
-                }
-                else
-                {
-                    CoreBlocks.BASIC_ORES.values().forEach( basicOre ->
-                            out.accept(basicOre.get())
-                    );
                 }
             }
         }

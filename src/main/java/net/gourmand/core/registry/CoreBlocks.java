@@ -101,7 +101,7 @@ public class CoreBlocks {
     );
 
     public static final Map<CoreOres, DeferredHolder<Block, Block>> BASIC_ORES = Helpers.mapOf(CoreOres.class, ore -> (!ore.hasBlock()), ore ->
-            register(("ore/" + ore.name()), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(Rock.ANDESITE.category().hardness(6.5f), 10).requiresCorrectToolForDrops()))
+            register(ore.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(Rock.ANDESITE.category().hardness(6.5f), 10).requiresCorrectToolForDrops()))
     );
 
     public static final Map<Rock, Map<CoreOres, DeferredHolder<Block, Block>>> ORES = Helpers.mapOf(Rock.class, rock ->

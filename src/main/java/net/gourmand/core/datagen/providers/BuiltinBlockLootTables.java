@@ -142,11 +142,15 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
     }
 
     private void generateOre(){
-        CoreBlocks.BASIC_ORES.values().forEach( holder -> {
-            if (holder == CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE)){
-                addOreTable(holder.get(), SpectrumItems.PURE_COAL.get());
-            } else {
-                this.dropSelf(holder.get());
+
+
+        Stream.of(CoreOres.values()).forEach(ore -> {
+            if (!ore.hasBlock()){
+                if (CoreBlocks.BASIC_ORES.get(ore) == CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE)){
+                    addOreTable(CoreBlocks.BASIC_ORES.get(ore).get(), SpectrumItems.PURE_COAL.get());
+                } else {
+                    addOreTable(CoreBlocks.BASIC_ORES.get(ore).get(), CoreItems.ORES.get(ore).get());
+                }
             }
         });
 

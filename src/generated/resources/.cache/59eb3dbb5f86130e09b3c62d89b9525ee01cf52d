@@ -1,4 +1,6 @@
-// 1.21.1	2026-03-10T19:10:34.800453129	Loot Tables
+// 1.21.1	2026-03-15T09:37:43.684029218	Loot Tables
+441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
+4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 42e110bf604b9132e4fc4a58f42a8229b080bf02 data/modpack/loot_table/blocks/crop/amaranth.json
 31047b9922b12c6d981fc07f6022da30f382aacb data/modpack/loot_table/blocks/crop/coffee.json
 fae2013bf934f04ea037a03788c27766ed190fec data/modpack/loot_table/blocks/crop/cotton.json
@@ -38,7 +40,6 @@ ede4f17327b9db826c0b77c7f899dcbd30cb1ce5 data/modpack/loot_table/blocks/ore/amet
 4d396a5e579277e36edd09b09faaecbf7ac51528 data/modpack/loot_table/blocks/ore/amethyst/picrite_basalt.json
 8dac23221c7cacc8d88d18b8a8adab87cce987f4 data/modpack/loot_table/blocks/ore/amethyst/serpentine.json
 e8c79c25cf760d1588f9ac5f3b8cd9b418eebf33 data/modpack/loot_table/blocks/ore/amethyst/travertine.json
-fd7d9c78a907ad309b17d9cb66da61940ed5aae1 data/modpack/loot_table/blocks/ore/anthracite.json
 cc1218d15969db10429b77e2542873ddf9246ced data/modpack/loot_table/blocks/ore/azurite/andesite.json
 c3fa2e0d75f71f4f7c06afa518f032da79ac29ae data/modpack/loot_table/blocks/ore/azurite/argillite.json
 f6872c33ae0d9ce19a5aec4acd6b199100a99e70 data/modpack/loot_table/blocks/ore/azurite/basalt.json
@@ -70,7 +71,6 @@ eed6fbd941bb5d1bc51ab08ab9c0803770c1fa51 data/modpack/loot_table/blocks/ore/azur
 88973a29d9730b3d453b6ac134e16960ebc5ecdf data/modpack/loot_table/blocks/ore/azurite/slate.json
 499d16fda535ea192933cb69804cfe76ac85459b data/modpack/loot_table/blocks/ore/azurite/travertine.json
 af4d5fff68c0cc71967e2ea5e19d6eeec77669ad data/modpack/loot_table/blocks/ore/azurite/tuff.json
-c62e6baa9b18910aefd7283e01260af88958ebf7 data/modpack/loot_table/blocks/ore/bauxite.json
 9d6e58f9193769bb4992d6e024f2011303e37051 data/modpack/loot_table/blocks/ore/borax/argillite.json
 251a5e2985a306d26331733fc6e718b14da01ff6 data/modpack/loot_table/blocks/ore/borax/blackslag.json
 7738f5f9c58b6b455a777aef4b34c73d6188fa8c data/modpack/loot_table/blocks/ore/borax/blueschist.json

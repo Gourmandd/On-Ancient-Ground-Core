@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-10T19:10:34.79982295	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-03-15T09:39:34.293194565	Tags for minecraft:item mod id modpack
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 b640843692bdc4754fb81667ad999ebcee6fc128 data/c/tags/item/clay_bricks.json
@@ -22,6 +22,7 @@ e3cae0c618687cd9e1ff4a92492b72da8dd9a6eb data/c/tags/item/double_sheets/hardened
 1b186ce34245c72025091bf30f4ab239e6cc08bc data/c/tags/item/double_sheets/lead.json
 e8145a0399ad79bb661620a8335b4ef33cd36faf data/c/tags/item/double_sheets/nethersteel.json
 4cdb6b9ee503bce7add60293fd12362e73640525 data/c/tags/item/gravels.json
+3dfc83b27985bc838ddb94a27639de88f9bf1ffd data/c/tags/item/hidden_from_recipe_viewers.json
 f8c6d36a11390bd3b8446ed9ecb10056f38b08e3 data/c/tags/item/ingots.json
 49115a3cf939bc82a600f53e194c743c6342d7e5 data/c/tags/item/ingots/aluminium.json
 49aee8810184ec56c5bad3546dd79ec5c399a5ac data/c/tags/item/ingots/aluminium_bronze.json
@@ -30,7 +31,7 @@ aa52434093064b6b0d04e6e3829f5079e3766b71 data/c/tags/item/ingots/electrum.json
 07435c5f2e06079d489ef62195e4f362ff2fff2b data/c/tags/item/ingots/hardened_steel.json
 7298f242b83bc97a16e46481dab701848374cd6e data/c/tags/item/ingots/lead.json
 e43dd5d410c754631909b23e097406e75a7bf7d2 data/c/tags/item/ingots/nethersteel.json
-08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/c/tags/item/ores.json
+69529a2c1c4f77dc2f5d7aa4c81591bd6134d4e8 data/c/tags/item/ores.json
 70154efbdbdd233bd0f7c14a298d868d23c6a1e1 data/c/tags/item/rods.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/c/tags/item/rods/wooden.json
 5a6ec5d759b0b9ba9aa5b5e5be4bfd19e87b547a data/c/tags/item/sheets.json

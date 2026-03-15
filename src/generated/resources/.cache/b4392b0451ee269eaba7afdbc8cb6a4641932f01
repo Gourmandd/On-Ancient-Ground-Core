@@ -1,4 +1,6 @@
-// 1.21.1	2026-03-10T19:10:34.808534592	Block States: modpack
+// 1.21.1	2026-03-15T09:24:52.913623006	Block States: modpack
+28ef1e55551722f68f204d793cc49f3d5e37320d assets/modpack/blockstates/anthracite.json
+916700fca3bb7acd96169872356a8367e8537559 assets/modpack/blockstates/bauxite.json
 a6d7d07fb1a510f52e9df1fcd8a7bd748812437d assets/modpack/blockstates/metal/block/aluminium.json
 f0e3b3c7ec9d0301663bee687a60cdad099cc6ec assets/modpack/blockstates/metal/block/aluminium_bronze.json
 2e7d86532d8b9fb509df8b793e26dd0497171fad assets/modpack/blockstates/metal/block/aluminium_bronze_slab.json
@@ -30,7 +32,6 @@ dee6eedff94cebd3a87067000729e0ff14a96e56 assets/modpack/blockstates/ore/amethyst
 7925be62764cc3863a5c7f58bf2e4d5fd181e194 assets/modpack/blockstates/ore/amethyst/picrite_basalt.json
 39fd7839884cb5213032e1567ea6d78cd893f8fe assets/modpack/blockstates/ore/amethyst/serpentine.json
 11ffd424cb7972606ddeb2d1828fe5a93e74c005 assets/modpack/blockstates/ore/amethyst/travertine.json
-0808f9536b6555c79e61f75289e8f994be7cb9fd assets/modpack/blockstates/ore/anthracite.json
 82c82c4588956b1cd17db70cf818a836d278ad8f assets/modpack/blockstates/ore/azurite/andesite.json
 cf9cb3d0b5ea9fb6ccfdff2befd3e5ee717e8097 assets/modpack/blockstates/ore/azurite/argillite.json
 63260f887ad582796cc4ee10e94912938213e513 assets/modpack/blockstates/ore/azurite/basalt.json
@@ -62,7 +63,6 @@ b8ab14c27858b6dfaf0aaa21cd094a12da3e39f5 assets/modpack/blockstates/ore/azurite/
 4e8ca27e2e9764a9fa0082fe043d7588e2b85223 assets/modpack/blockstates/ore/azurite/slate.json
 1b1de5fca3fc3b7692cebc8c2340fd5725880f36 assets/modpack/blockstates/ore/azurite/travertine.json
 b37d98eb36f8d2506d57505722860a6d49fedf06 assets/modpack/blockstates/ore/azurite/tuff.json
-e3100e147b21e4e977e97b4bd7a3605da0d7c748 assets/modpack/blockstates/ore/bauxite.json
 1607f493f077a758c730bad993fb34df29563685 assets/modpack/blockstates/ore/borax/argillite.json
 d783e93abfdb6a5ac0c5d4b06981a71be298da9d assets/modpack/blockstates/ore/borax/blackslag.json
 1743912175241d760b07707d8f4b3fb0f33662a9 assets/modpack/blockstates/ore/borax/blueschist.json
@@ -1194,6 +1194,8 @@ e38f90b6c91cb51c3c1eac6e1ceb6f444df296c4 assets/modpack/blockstates/wood/vertica
 d03c86886074a213b50a673fd7fda1b900ba27ea assets/modpack/blockstates/wood/vertical_support/weeping_gala.json
 2860a50d9056d06292186b32c737d7f9f60503a2 assets/modpack/blockstates/wood/vertical_support/white.json
 ab25cdf81edeed84776ab320e1dfe2f123814e25 assets/modpack/blockstates/wood/vertical_support/yellow.json
+4cd9f8462cf3755cde4cdd8488f8c17e718479f1 assets/modpack/models/block/anthracite.json
+f3cdb137a01b9f9d43f8dfb61017e25baa6049ea assets/modpack/models/block/bauxite.json
 21028b17e95086a4ddc655fc7624498d0e085e7f assets/modpack/models/block/metal/block/aluminium.json
 bd432fda3d095c66712423f79784f9f665b1582b assets/modpack/models/block/metal/block/aluminium_bronze.json
 edc096751be9f886c2d0dd195ab2e5b28f7529b1 assets/modpack/models/block/metal/block/aluminium_bronze_slab.json
@@ -1246,7 +1248,6 @@ a59258cacc89bac6d280d3bbf2d1cf63d7b9c9ad assets/modpack/models/block/ore/amethys
 6f484cda46fd9618133167e72c09b4a4d58417b3 assets/modpack/models/block/ore/amethyst/picrite_basalt.json
 5fa18f723f593e0e65374be2839f0a7275fefcaa assets/modpack/models/block/ore/amethyst/serpentine.json
 acbf9fda0607d711e61d90512ffab2b73e4c9037 assets/modpack/models/block/ore/amethyst/travertine.json
-4cd9f8462cf3755cde4cdd8488f8c17e718479f1 assets/modpack/models/block/ore/anthracite.json
 cd319eb392d4f701b4f8b229b9c16c5ac13c802d assets/modpack/models/block/ore/azurite/andesite.json
 a59c88e1999b20bab1ae8e069b0a587fae7db9fb assets/modpack/models/block/ore/azurite/argillite.json
 75ecd25a82b85147065f8136aad25bf1be472719 assets/modpack/models/block/ore/azurite/basalt.json
@@ -1278,7 +1279,6 @@ fc21733bdb0df68754940731e4dab94b898ad502 assets/modpack/models/block/ore/azurite
 09047de718b571feb318de1a4b8ed675390aa350 assets/modpack/models/block/ore/azurite/slate.json
 ed25dae43d00d015afb6b66f260e9d7c8d6dd0c6 assets/modpack/models/block/ore/azurite/travertine.json
 72a4ab4237912de6c59e61fa854a5033f58c70b4 assets/modpack/models/block/ore/azurite/tuff.json
-f3cdb137a01b9f9d43f8dfb61017e25baa6049ea assets/modpack/models/block/ore/bauxite.json
 5e45a95476c3611d74906692048061d728964be0 assets/modpack/models/block/ore/borax/argillite.json
 451dddd2f785fddbb7303350193469936a921eba assets/modpack/models/block/ore/borax/blackslag.json
 ae988bd97117001555f6150f9277838a78a11e7e assets/modpack/models/block/ore/borax/blueschist.json

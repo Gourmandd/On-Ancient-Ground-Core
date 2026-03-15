@@ -51,6 +51,10 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 
         final TagKey<Item> UPRIGHT_ON_BELT = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("create", "upright_on_belt"));
 
+
+
+        this.tag(Tags.Items.HIDDEN_FROM_RECIPE_VIEWERS).add(CoreItems.ORES.get(CoreOres.ANTHRACITE).getKey());
+
         add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(
                 ItemTags.LEAVES)
         );

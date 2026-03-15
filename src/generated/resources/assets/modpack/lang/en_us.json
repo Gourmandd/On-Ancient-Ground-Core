@@ -1,4 +1,8 @@
 {
+  "block.modpack.anthracite": "Anthracite",
+  "block.modpack.anthracite.prospected": "Anthracite",
+  "block.modpack.bauxite": "Bauxite",
+  "block.modpack.bauxite.prospected": "Bauxite",
   "block.modpack.crop.amaranth": "Amaranth",
   "block.modpack.crop.coffee": "Coffee",
   "block.modpack.crop.cotton": "Cotton",
@@ -2333,6 +2337,8 @@
   "item.modpack.metal.sheet.hardened_steel": "Hardened Steel Sheet",
   "item.modpack.metal.sheet.lead": "Lead Sheet",
   "item.modpack.metal.sheet.nethersteel": "Nethersteel Sheet",
+  "item.modpack.ore.anthracite": "Anthracite",
+  "item.modpack.ore.bauxite": "Bauxite",
   "item.modpack.ore.normal_galena": "Normal Galena",
   "item.modpack.ore.poor_galena": "Poor Galena",
   "item.modpack.ore.rich_galena": "Rich Galena",

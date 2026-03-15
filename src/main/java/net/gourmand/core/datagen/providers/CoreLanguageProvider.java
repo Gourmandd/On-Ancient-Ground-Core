@@ -169,7 +169,8 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                     });
                 }
             } else {
-                //createOreKey(CoreBlocks.BASIC_ORES.get(ore), getName(ore.name()));
+                createOreKey(CoreBlocks.BASIC_ORES.get(ore), getName(ore.name()));
+                addItem(CoreItems.ORES.get(ore), getName(ore.name()));
             }
         });
 
@@ -215,6 +216,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 //        add(MyMobEffects.EXAMPLE_MOB_EFFECT.get(), "Example Effect");
 //        addEffect(MyMobEffects.EXAMPLE_MOB_EFFECT, "Example Effect");
     }
+
     private void createOreKey(Supplier<Block> block, String rock, String ore){
         addBlock(block, rock + " " + ore);
 
@@ -223,6 +225,13 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
         }
         add(block.get().getDescriptionId() + ".prospected", ore);
     }
+
+    private void createOreKey(Supplier<Block> block, String ore){
+        addBlock(block, ore);
+
+        add(block.get().getDescriptionId() + ".prospected", ore);
+    }
+
 
     private boolean isRockTypePrefixed(Rock.BlockType type){
         return type == Rock.BlockType.LOOSE || type == Rock.BlockType.MOSSY_LOOSE || type == Rock.BlockType.CHISELED || type == Rock.BlockType.HARDENED || type == Rock.BlockType.SMOOTH || type == Rock.BlockType.RAW;

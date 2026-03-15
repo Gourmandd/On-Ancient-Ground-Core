@@ -36,7 +36,7 @@ public class CoreItems {
             register("seeds/" + crop.name(), () -> new CoreSeedItem(crop, CoreBlocks.CROPS.get(crop).get(), new Item.Properties()))
     );
 
-    public static final Map<CoreOres, DeferredHolder<Item, Item>> ORES = Helpers.mapOf(CoreOres.class, ore -> !(!ore.hasBlock() || ore.isGraded() || ore.hasSpectrumOreType()), type ->
+    public static final Map<CoreOres, DeferredHolder<Item, Item>> ORES = Helpers.mapOf(CoreOres.class, ore -> !(ore.isGraded() || ore.hasSpectrumOreType()), type ->
             register("ore/" + type.name())
     );
 

@@ -33,7 +33,8 @@ public class BuiltinItemModels extends ItemModelProvider {
 
         Stream.of(CoreOres.values()).forEach(ore -> {
             if (!ore.hasBlock()){
-                simpleItem(CoreBlocks.BASIC_ORES.get(ore).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "item/ore/" + ore.getSerializedName()));
+                simpleBlock(CoreBlocks.BASIC_ORES.get(ore));
+                simpleItem(CoreItems.ORES.get(ore).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "item/ore/" + ore.getSerializedName()));
             }
         });
 

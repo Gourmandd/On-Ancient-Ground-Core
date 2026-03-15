@@ -19,7 +19,7 @@
                   "condition": "tfc:is_isolated"
                 }
               ],
-              "name": "modpack:ore/anthracite"
+              "name": "modpack:anthracite"
             },
             {
               "type": "minecraft:item",
@@ -31,5 +31,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "modpack:blocks/ore/anthracite"
+  "random_sequence": "modpack:blocks/anthracite"
 }

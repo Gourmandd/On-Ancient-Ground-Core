@@ -1,9 +1,9 @@
-// 1.21.1	2026-03-10T19:10:34.798822603	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-03-15T09:24:52.905466439	Tags for minecraft:block mod id modpack
 e4aedff054b4b75c19dce5bb07196820ea097136 data/c/tags/block/cobblestones.json
 abbd20b0fa4fd242129da8231562b9dd45a2c7e2 data/c/tags/block/cobblestones/mossy.json
 e371ab2fa981d3e72cdc7407c120f27176fde4bd data/c/tags/block/cobblestones/normal.json
 4cdb6b9ee503bce7add60293fd12362e73640525 data/c/tags/block/gravels.json
-08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/c/tags/block/ores.json
+69529a2c1c4f77dc2f5d7aa4c81591bd6134d4e8 data/c/tags/block/ores.json
 e620d2264b364bd1dec87af8f17778f30c9e415e data/c/tags/block/stones.json
 80801b6ffce6b9ac8bb01eec848a3065d976483e data/c/tags/block/stones/hardened.json
 ef367df334ec4a7ae2b4bc9a1b0a480b48db50bf data/c/tags/block/stones/loose.json
@@ -15,7 +15,7 @@ ef517a2acb9f79aeb31385d4a7eac6fd0bd0e641 data/c/tags/block/stones/raw.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
 efaeb68ba98302552a5fd373e76414707d90bf20 data/minecraft/tags/block/mineable/axe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/minecraft/tags/block/mineable/hoe.json
-ed2d08d4bdcadb6ea38408bd7112f4019f52d548 data/minecraft/tags/block/mineable/pickaxe.json
+b591b49bc71882903b8578fda7c813ef966539e8 data/minecraft/tags/block/mineable/pickaxe.json
 4cdb6b9ee503bce7add60293fd12362e73640525 data/minecraft/tags/block/mineable/shovel.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/pressure_plates.json
 b4e2f5e54164227cefdc1ead1daedbf3cd7c8204 data/minecraft/tags/block/slabs.json
@@ -39,5 +39,5 @@ ef517a2acb9f79aeb31385d4a7eac6fd0bd0e641 data/tfc/tags/block/can_start_collapse.
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/hoe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/knife.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/scythe.json
-08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/tfc/tags/block/prospectable.json
+69529a2c1c4f77dc2f5d7aa4c81591bd6134d4e8 data/tfc/tags/block/prospectable.json
 98548d218f2823032aa12a4a80260591cef9b1ad data/tfc/tags/block/support_beams.json

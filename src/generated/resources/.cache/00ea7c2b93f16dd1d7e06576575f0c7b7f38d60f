@@ -1,4 +1,6 @@
-// 1.21.1	2026-03-10T19:10:34.790194902	Item Models: modpack
+// 1.21.1	2026-03-15T09:33:33.360746874	Item Models: modpack
+b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
+4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
 8c20c35478a622589b39a16674f1ada335eb1fdd assets/modpack/models/item/brick/blackslag.json
 6c146ec788d45ca6e66b1315564fb6bc228fddad assets/modpack/models/item/brick/blueschist.json
