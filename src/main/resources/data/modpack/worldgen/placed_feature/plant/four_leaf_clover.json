@@ -1,0 +1,28 @@
+{
+  "feature": "modpack:plant/four_leaf_clover",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "would_survive",
+        "state": {
+          "Name": "spectrum:four_leaf_clover",
+          "Properties": {
+            "age": "1",
+            "stage": "1"
+          }
+        }
+      }
+    }
+  ]
+}

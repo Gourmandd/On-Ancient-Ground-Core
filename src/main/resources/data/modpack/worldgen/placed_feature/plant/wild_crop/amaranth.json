@@ -1,0 +1,14 @@
+{
+  "feature": "modpack:plant/wild_crop/amaranth",
+  "placement": [
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "would_survive",
+        "state": {
+          "Name": "modpack:wild_crop/amaranth"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "modpack:plant/wild_crop/cotton_patch",
+        "modpack:plant/wild_crop/coffee_patch"
+    ]
+}

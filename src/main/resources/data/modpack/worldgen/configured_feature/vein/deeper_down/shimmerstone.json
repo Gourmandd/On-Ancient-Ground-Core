@@ -1,0 +1,17 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "modpack:rock/hardened/nephelinite",
+    "inner": [
+      {
+        "data": "modpack:ore/shimmerstone/nephelinite",
+        "weight": 2
+      },
+      {
+        "data": "modpack:rock/hardened/nephelinite",
+        "weight": 2
+      }
+    ]
+  }
+}

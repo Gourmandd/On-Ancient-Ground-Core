@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "#tfc:feature/soil_discs",
+        "modpack:yellowware_patch"
+    ]
+}

@@ -1,0 +1,115 @@
+{
+  "type": "tfc:disc_vein",
+  "config": {
+    "rarity": 600,
+    "density": 0.8,
+    "min_y": 0,
+    "max_y": 120,
+    "size": 50,
+    "height": 1,
+    "random_name": "bauxite",
+    "blocks": [
+        {
+            "replace": [
+                "tfc:rock/raw/dolomite"
+            ],
+            "with": [
+                {
+                "block": "modpack:bauxite"
+                }
+            ]
+        },
+        {
+            "replace": [
+                "tfc:rock/raw/chalk"
+            ],
+            "with": [
+                {
+                "block": "modpack:bauxite"
+                }
+            ]
+        },
+        {
+            "replace": [
+                "tfc:rock/raw/limestone"
+            ],
+            "with": [
+                {
+                "block": "modpack:bauxite"
+                }
+            ]
+        },
+        {
+            "replace": [
+                "tfc:rock/raw/basalt"
+            ],
+            "with": [
+                {
+                "block": "modpack:bauxite"
+                }
+            ]
+        },
+        {
+            "replace": [
+                "tfc:rock/raw/rhyolite"
+            ],
+            "with": [
+                {
+                "block": "modpack:bauxite"
+                }
+            ]
+        },
+        {
+            "replace": [
+                "tfc:rock/raw/granite"
+            ],
+            "with": [
+                {
+                "block": "modpack:bauxite"
+                }
+            ]
+        },
+        {
+            "replace": [
+            "tfc:rock/raw/gneiss"
+            ],
+            "with": [
+                {
+                    "block": "modpack:bauxite"
+                }
+            ]
+        },
+        {
+            "replace": [
+            "modpack:rock/raw/serpentine"
+            ],
+            "with": [
+                {
+                    "block": "modpack:bauxite"
+                }
+            ]
+        },
+        {
+            "replace": [
+            "modpack:rock/raw/blueschist"
+            ],
+            "with": [
+                {
+                    "block": "modpack:bauxite"
+                }
+            ]
+        }
+    ],
+    "indicator": {
+      "rarity": 12,
+      "depth": 35,
+      "underground_rarity": 1,
+      "underground_count": 0,
+      "blocks": [
+        {
+          "block": "tfc:rock/loose/granite"
+        }
+      ]
+    }
+  }
+}

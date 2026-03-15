@@ -1,0 +1,6 @@
+{
+  "type": "tfc:tall_wild_crop",
+  "config": {
+    "block": "modpack:wild_crop/amaranth"
+  }
+}

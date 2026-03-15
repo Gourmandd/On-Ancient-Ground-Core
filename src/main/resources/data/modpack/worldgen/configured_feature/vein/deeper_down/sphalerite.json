@@ -1,0 +1,25 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "modpack:ore/poor_sphalerite/blackslag",
+    "inner": [
+      {
+        "data": "modpack:ore/rich_sphalerite/blackslag",
+        "weight": 1
+      },
+      {
+        "data": "modpack:ore/normal_sphalerite/blackslag",
+        "weight": 2
+      },
+      {
+        "data": "modpack:ore/poor_sphalerite/blackslag",
+        "weight": 1
+      },
+      {
+        "data": "modpack:rock/hardened/blackslag",
+        "weight": 2
+      }
+    ]
+  }
+}

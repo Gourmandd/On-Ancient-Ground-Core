@@ -1,0 +1,25 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "tfc:ore/poor_native_silver/granite",
+    "inner": [
+      {
+        "data": "tfc:ore/rich_native_silver/granite",
+        "weight": 1
+      },
+      {
+        "data": "tfc:ore/normal_native_silver/granite",
+        "weight": 2
+      },
+      {
+        "data": "tfc:ore/poor_native_silver/granite",
+        "weight": 1
+      },
+      {
+        "data": "tfc:rock/hardened/granite",
+        "weight": 2
+      }
+    ]
+  }
+}

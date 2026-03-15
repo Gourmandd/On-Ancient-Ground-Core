@@ -1,0 +1,93 @@
+{
+    "type": "tfc:cluster_vein",
+    "config": {
+      "rarity": 80,
+      "density": 0.1,
+      "min_y": -60,
+      "max_y": 30,
+      "size": 27,
+      "random_name": "stratine_ore",
+      "blocks": [
+        {
+          "replace": [
+            "tfc:rock/raw/quartzite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/stratine/quartzite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/slate"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/stratine/slate"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/phyllite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/stratine/phyllite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/schist"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/stratine/schist"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/gneiss"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/stratine/gneiss"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/marble"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/stratine/marble"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "modpack:rock/raw/blueschist"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/stratine/blueschist"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "modpack:rock/raw/serpentine"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/stratine/serpentine"
+            }
+          ]
+        }
+      ]
+    }
+  }

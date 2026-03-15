@@ -1,0 +1,17 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "modpack:rock/hardened/travertine",
+    "inner": [
+      {
+        "data": "modpack:ore/paltaeria/travertine",
+        "weight": 2
+      },
+      {
+        "data": "modpack:rock/hardened/travertine",
+        "weight": 2
+      }
+    ]
+  }
+}

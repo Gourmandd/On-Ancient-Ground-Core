@@ -1,0 +1,25 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "modpack:ore/poor_limonite/argillite",
+    "inner": [
+      {
+        "data": "modpack:ore/rich_limonite/argillite",
+        "weight": 1
+      },
+      {
+        "data": "modpack:ore/normal_limonite/argillite",
+        "weight": 2
+      },
+      {
+        "data": "modpack:ore/poor_limonite/argillite",
+        "weight": 1
+      },
+      {
+        "data": "modpack:rock/hardened/argillite",
+        "weight": 2
+      }
+    ]
+  }
+}

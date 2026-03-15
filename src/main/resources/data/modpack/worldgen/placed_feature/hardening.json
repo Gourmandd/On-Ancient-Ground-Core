@@ -1,0 +1,122 @@
+{
+  "_comment": "thank you to the TFG team for helping me out with this",
+  "feature": {
+    "type": "minecraft:replace_single_block",
+    "config": {
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "tfc:rock/raw/diorite"
+          },
+          "state": {
+            "Name": "tfc:rock/hardened/diorite"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "tfc:rock/raw/granite"
+          },
+          "state": {
+            "Name": "tfc:rock/hardened/granite"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "tfc:rock/raw/schist"
+          },
+          "state": {
+            "Name": "tfc:rock/hardened/schist"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "tfc:rock/raw/andesite"
+          },
+          "state": {
+            "Name": "tfc:rock/hardened/andesite"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "spectrum:blackslag"
+          },
+          "state": {
+            "Name": "modpack:rock/hardened/blackslag"
+          }
+        },
+		{
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:stone"
+          },
+          "state": {
+            "Name": "modpack:rock/hardened/argillite"
+          }
+        },
+		{
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:deepslate"
+          },
+          "state": {
+            "Name": "modpack:rock/hardened/nephelinite"
+          }
+        },
+		{
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:dripstone_block"
+          },
+          "state": {
+            "Name": "modpack:rock/hardened/travertine"
+          }
+        },
+		{
+          "target": {
+            "predicate_type": "minecraft:block_match",
+            "block": "spectrum:basal_marble"
+          },
+          "state": {
+            "Name": "modpack:rock/hardened/picrite_basalt"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:carving_mask",
+      "step": "air"
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "up",
+      "max_steps": 1,
+      "target_condition": {
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "tag": "spectrum:deeper_down_carver_replaceables",
+            "blocks": [
+              "tfc:rock/raw/diorite",
+              "tfc:rock/raw/granite",
+              "tfc:rock/raw/andesite",
+              "tfc:rock/raw/schist",
+              "spectrum:blackslag",
+              "spectrum:basal_marble",
+              "minecraft:deepslate",
+              "minecraft:stone",
+              "minecraft:dripstone_block"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

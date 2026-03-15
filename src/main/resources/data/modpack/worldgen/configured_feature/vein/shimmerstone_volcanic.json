@@ -1,0 +1,83 @@
+{
+    "type": "tfc:cluster_vein",
+    "config": {
+      "rarity": 50,
+      "density": 0.3,
+      "min_y": 0,
+      "max_y": 100,
+      "size": 20,
+      "random_name": "shimmerstone_volcanic_ore",
+      "blocks": [
+        {
+          "replace": [
+            "tfc:rock/raw/basalt"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/basalt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/dacite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/dacite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/rhyolite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/rhyolite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/andesite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/andesite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/tuff"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/tuff"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "modpack:rock/raw/blueschist"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/blueschist"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:scoria"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/komatiite"
+            }
+          ]
+        }
+      ]
+    }
+  }

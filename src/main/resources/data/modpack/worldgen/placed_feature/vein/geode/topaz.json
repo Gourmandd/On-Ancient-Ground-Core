@@ -1,0 +1,37 @@
+{
+	"feature": "modpack:vein/geode/topaz",
+	"placement": [
+		{
+			"type": "minecraft:rarity_filter",
+			"chance": 10
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"type": "minecraft:height_range",
+			"height": {
+				"type": "minecraft:uniform",
+				"min_inclusive": {
+					"absolute": 110
+				},
+				"max_inclusive": {
+					"below_top": 30
+				}
+			}
+		},
+		{
+			"type": "minecraft:block_predicate_filter",
+			"predicate": {
+				"type": "minecraft:not",
+				"predicate": {
+					"type": "exclusions_lib:overlaps_structure",
+					"range": 4
+				}
+			}
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

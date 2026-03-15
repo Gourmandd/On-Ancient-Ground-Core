@@ -1,0 +1,6 @@
+{
+  "type": "tfc:fruit_trees",
+  "config": {
+    "state": "modpack:plant/fig_growing_branch"
+  }
+}

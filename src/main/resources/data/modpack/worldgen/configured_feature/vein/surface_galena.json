@@ -1,0 +1,176 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 40,
+    "density": 0.3,
+    "min_y": 40,
+    "max_y": 130,
+    "size": 20,
+    "random_name": "surface_galena",
+    "blocks": [
+        {
+          "replace": [
+            "tfc:rock/raw/limestone"
+          ],
+          "with": [
+            {
+              "weight": 70,
+              "block": "modpack:ore/poor_galena/limestone"
+            },
+            {
+              "weight": 25,
+              "block": "modpack:ore/normal_galena/limestone"
+            },
+            {
+              "weight": 5,
+              "block": "modpack:ore/rich_galena/limestone"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/dolomite"
+          ],
+          "with": [
+            {
+              "weight": 70,
+              "block": "modpack:ore/poor_galena/dolomite"
+            },
+            {
+              "weight": 25,
+              "block": "modpack:ore/normal_galena/dolomite"
+            },
+            {
+              "weight": 5,
+              "block": "modpack:ore/rich_galena/dolomite"
+            }
+          ]
+        },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/rhyolite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/rhyolite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/basalt"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/basalt"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/andesite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/andesite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/dacite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/dacite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/blueschist"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/blueschist"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/komatiite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/komatiite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/komatiite"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 12,
+      "depth": 35,
+      "underground_rarity": 1,
+      "underground_count": 0,
+      "blocks": [
+        {
+          "block": "modpack:ore/small_galena"
+        }
+      ]
+    }
+  }
+}

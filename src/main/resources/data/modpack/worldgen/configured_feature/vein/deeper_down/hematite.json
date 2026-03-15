@@ -1,0 +1,26 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "tfc:ore/poor_hematite/andesite",
+    "inner": [
+      {
+        "data": "tfc:ore/rich_hematite/andesite",
+        "weight": 1
+      },
+      {
+        "data": "tfc:ore/normal_hematite/andesite",
+        "weight": 2
+      },
+      {
+        "data": "tfc:ore/poor_hematite/andesite",
+        "weight": 1
+      },
+      {
+        "data": "tfc:rock/hardened/andesite",
+        "weight": 2
+      }
+    ]
+  }
+}
+

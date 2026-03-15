@@ -1,0 +1,17 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "minecraft:smooth_basalt",
+    "middle": "minecraft:calcite",
+    "inner": [
+      {
+        "data": "minecraft:budding_amethyst",
+        "weight": 1
+      },
+      {
+        "data": "minecraft:amethyst_block",
+        "weight": 9
+      }
+    ]
+  }
+}

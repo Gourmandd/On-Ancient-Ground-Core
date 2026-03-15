@@ -1,0 +1,25 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "modpack:ore/poor_bismuthinite/argillite",
+    "inner": [
+      {
+        "data": "modpack:ore/rich_bismuthinite/argillite",
+        "weight": 1
+      },
+      {
+        "data": "modpack:ore/normal_bismuthinite/argillite",
+        "weight": 2
+      },
+      {
+        "data": "modpack:ore/poor_bismuthinite/argillite",
+        "weight": 1
+      },
+      {
+        "data": "modpack:rock/hardened/argillite",
+        "weight": 2
+      }
+    ]
+  }
+}

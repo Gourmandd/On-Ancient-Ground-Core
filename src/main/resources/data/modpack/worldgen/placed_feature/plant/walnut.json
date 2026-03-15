@@ -1,0 +1,24 @@
+{
+  "feature": "modpack:plant/walnut",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": -16,
+      "max_temperature": 15,
+      "min_groundwater": 50,
+      "max_groundwater": 350,
+      "max_forest": 3
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 50
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+    "type": "neoforge:add_features",
+    "biomes": "#modpack:in_deeper_down",
+    "features": "modpack:hardening",
+    "step": "top_layer_modification"
+}

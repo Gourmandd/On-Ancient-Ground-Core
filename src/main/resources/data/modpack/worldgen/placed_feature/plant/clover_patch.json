@@ -1,0 +1,30 @@
+{
+  "feature": "modpack:plant/clover",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -3,
+      "max_temperature": 11,
+      "min_groundwater": 150,
+      "max_groundwater": 400,
+      "min_rain_variance": -1,
+      "max_rain_variance": 1,
+      "rain_variance_absolute": false,
+      "min_forest": 0,
+      "max_forest": 3,
+      "min_elevation": -64,
+      "max_elevation": 320
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+    "type": "tfc:cluster_vein",
+    "config": {
+      "rarity": 50,
+      "density": 0.1,
+      "min_y": 0,
+      "max_y": 100,
+      "size": 10,
+      "random_name": "azurite_volcanic_ore",
+      "blocks": [
+        {
+          "replace": [
+            "tfc:rock/raw/basalt"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/basalt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/dacite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/dacite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/rhyolite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/rhyolite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/andesite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/andesite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/tuff"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/tuff"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "modpack:rock/raw/blueschist"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/blueschist"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:scoria"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/komatiite"
+            }
+          ]
+        }
+      ]
+    }
+  }

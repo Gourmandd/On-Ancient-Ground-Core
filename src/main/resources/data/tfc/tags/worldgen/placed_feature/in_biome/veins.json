@@ -1,0 +1,18 @@
+{
+    "replace": false,
+    "values": [
+        "modpack:vein/geode/topaz",
+        "modpack:vein/geode/amethyst",
+        "modpack:vein/geode/citrine",
+        "modpack:vein/shimmerstone",
+        "modpack:vein/shimmerstone_volcanic",
+        "modpack:vein/azurite",
+        "modpack:vein/azurite_volcanic",
+        "modpack:vein/stratine",
+        "modpack:vein/paltaeria",
+        "modpack:vein/bauxite",
+        "modpack:vein/anthracite",
+        "modpack:vein/surface_galena",
+        "modpack:vein/normal_galena"
+    ]
+}

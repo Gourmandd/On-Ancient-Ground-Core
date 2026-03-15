@@ -1,0 +1,17 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/schist",
+    "middle": "tfc:rock/hardened/gabbro",
+    "inner": [
+      {
+        "data": "tfc:ore/diamond/gabbro",
+        "weight": 1
+      },
+      {
+        "data": "tfc:rock/hardened/gabbro",
+        "weight": 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "#tfc:feature/soil_discs",
+        "modpack:earthenware_patch"
+    ]
+}

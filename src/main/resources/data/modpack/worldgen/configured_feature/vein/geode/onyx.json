@@ -1,0 +1,17 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "minecraft:smooth_basalt",
+    "middle": "minecraft:calcite",
+    "inner": [
+      {
+        "data": "spectrum:budding_onyx",
+        "weight": 1
+      },
+      {
+        "data": "spectrum:onyx_block",
+        "weight": 9
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+    "type": "tfc:disc_vein",
+    "config": {
+        "rarity": 180,
+        "density": 0.1,
+        "min_y": -35,
+        "max_y": -12,
+        "project": true,
+        "project_offset": true,
+        "size": 50,
+        "height": 3,
+      "random_name": "shimmerstone_ore",
+      "blocks": [
+        {
+          "replace": [
+            "tfc:rock/raw/shale"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/shale"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/claystone"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/claystone"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/limestone"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/limestone"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/conglomerate"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/conglomerate"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/dolomite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/dolomite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/chert"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/chert"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/chalk"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/chalk"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "caupona:felsic_tuff"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/breccia"
+            }
+          ]
+        }
+      ]
+    }
+  }

@@ -1,0 +1,17 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "modpack:rock/hardened/argillite",
+    "inner": [
+      {
+        "data": "modpack:ore/stratine/argillite",
+        "weight": 2
+      },
+      {
+        "data": "modpack:rock/hardened/argillite",
+        "weight": 2
+      }
+    ]
+  }
+}

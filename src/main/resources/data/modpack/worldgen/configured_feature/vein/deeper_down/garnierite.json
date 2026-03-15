@@ -1,0 +1,25 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "tfc:ore/poor_garnierite/gabbro",
+    "inner": [
+      {
+        "data": "tfc:ore/rich_garnierite/gabbro",
+        "weight": 1
+      },
+      {
+        "data": "tfc:ore/normal_garnierite/gabbro",
+        "weight": 2
+      },
+      {
+        "data": "tfc:ore/poor_garnierite/gabbro",
+        "weight": 1
+      },
+      {
+        "data": "tfc:rock/hardened/gabbro",
+        "weight": 2
+      }
+    ]
+  }
+}

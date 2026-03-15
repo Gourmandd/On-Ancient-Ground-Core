@@ -1,0 +1,17 @@
+{
+  "type": "tfc:geode",
+  "config": {
+    "outer": "tfc:rock/hardened/schist",
+    "middle": "tfc:rock/hardened/gneiss",
+    "inner": [
+      {
+        "data": "tfc:ore/cinnabar/gneiss",
+        "weight": 1
+      },
+      {
+        "data": "tfc:rock/hardened/gneiss",
+        "weight": 2
+      }
+    ]
+  }
+}

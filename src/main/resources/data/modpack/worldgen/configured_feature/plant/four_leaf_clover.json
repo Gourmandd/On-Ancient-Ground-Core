@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "tfc:random_property",
+      "state": {
+        "Name": "spectrum:four_leaf_clover",
+        "Properties": {
+          "age": "1",
+          "stage": "1"
+        }
+      },
+      "property": "age"
+    }
+  }
+}
