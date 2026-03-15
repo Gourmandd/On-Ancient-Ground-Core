@@ -10,19 +10,20 @@
   "name": "book.modpack.guide.ores.diamond.name",
   "pages": [
     {
-      "type": "modonomicon:text",
+      "type": "modonomicon:spotlight",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
       },
-      "show_title_separator": true,
+      "item": {
+        "item": "tfc:gem/diamond"
+      },
       "text": "book.modpack.guide.ores.diamond.page1.text",
-      "title": "book.modpack.guide.ores.diamond.page1.title",
-      "use_markdown_in_title": false
+      "title": "book.modpack.guide.ores.diamond.page1.title"
     }
   ],
   "show_when_any_parent_unlocked": false,
   "sort_number": 14,
-  "x": -3,
-  "y": 2
+  "x": -2,
+  "y": 1
 }

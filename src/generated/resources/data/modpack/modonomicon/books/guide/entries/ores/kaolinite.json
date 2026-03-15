@@ -1,0 +1,29 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "ores",
+  "description": "book.modpack.guide.ores.kaolinite.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:kaolin_clay"
+  },
+  "name": "book.modpack.guide.ores.kaolinite.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:kaolin_clay"
+      },
+      "text": "book.modpack.guide.ores.kaolinite.page1.text",
+      "title": "book.modpack.guide.ores.kaolinite.page1.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 25,
+  "x": -6,
+  "y": 2
+}

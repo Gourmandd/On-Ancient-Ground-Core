@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "ores",
-  "description": "book.modpack.guide.ores.limonite.description",
+  "description": "book.modpack.guide.ores.anthracite.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:ore/rich_limonite"
+    "item": "modpack:ore/anthracite"
   },
-  "name": "book.modpack.guide.ores.limonite.name",
+  "name": "book.modpack.guide.ores.anthracite.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,14 +16,14 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:ore/rich_limonite"
+        "item": "modpack:ore/anthracite"
       },
-      "text": "book.modpack.guide.ores.limonite.page1.text",
-      "title": "book.modpack.guide.ores.limonite.page1.title"
+      "text": "book.modpack.guide.ores.anthracite.page1.text",
+      "title": "book.modpack.guide.ores.anthracite.page1.title"
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 11,
-  "x": 0,
+  "sort_number": 24,
+  "x": -6,
   "y": -1
 }

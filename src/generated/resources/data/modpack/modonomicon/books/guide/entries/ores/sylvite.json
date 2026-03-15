@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "ores",
-  "description": "book.modpack.guide.ores.malachite.description",
+  "description": "book.modpack.guide.ores.sylvite.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:ore/rich_malachite"
+    "item": "tfc:ore/sylvite"
   },
-  "name": "book.modpack.guide.ores.malachite.name",
+  "name": "book.modpack.guide.ores.sylvite.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,14 +16,14 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:ore/rich_malachite"
+        "item": "tfc:ore/sylvite"
       },
-      "text": "book.modpack.guide.ores.malachite.page1.text",
-      "title": "book.modpack.guide.ores.malachite.page1.title"
+      "text": "book.modpack.guide.ores.sylvite.page1.text",
+      "title": "book.modpack.guide.ores.sylvite.page1.title"
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 1,
+  "sort_number": 32,
   "x": -3,
-  "y": -2
+  "y": 3
 }

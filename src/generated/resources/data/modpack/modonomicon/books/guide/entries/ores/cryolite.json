@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "ores",
-  "description": "book.modpack.guide.ores.opal.description",
+  "description": "book.modpack.guide.ores.cryolite.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:gem/opal"
+    "item": "tfc:ore/cryolite"
   },
-  "name": "book.modpack.guide.ores.opal.name",
+  "name": "book.modpack.guide.ores.cryolite.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,14 +16,14 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:gem/opal"
+        "item": "tfc:ore/cryolite"
       },
-      "text": "book.modpack.guide.ores.opal.page1.text",
-      "title": "book.modpack.guide.ores.opal.page1.title"
+      "text": "book.modpack.guide.ores.cryolite.page1.text",
+      "title": "book.modpack.guide.ores.cryolite.page1.title"
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 17,
-  "x": 1,
-  "y": 1
+  "sort_number": 29,
+  "x": -1,
+  "y": 3
 }
