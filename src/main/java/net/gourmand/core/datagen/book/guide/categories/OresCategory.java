@@ -93,7 +93,7 @@ public class OresCategory extends CategoryProvider {
                 """
                 Native Silver is an ore of *Silver* metal. \s
                 Small poor veins can be found in *Granite* or *Diorite* in uplift regions, above y=90. \s
-                Larger and richer veins can be found in *Granite*, *Diorite*, *Schist*, and *Gneiss* deep underground below y=20. \s
+                Larger and richer veins can be found in *Granite*, *Diorite*, *Schist*, *Peridotite* and *Gneiss* deep underground below y=20. \s
                 It can also be found in deposits in *rivers*, which can be *panned*. \s
                 """
         );

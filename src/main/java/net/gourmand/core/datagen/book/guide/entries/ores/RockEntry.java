@@ -10,21 +10,20 @@ import net.gourmand.core.util.TextUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class OreEntry extends EntryProvider {
+public class RockEntry extends EntryProvider {
 
     public final String ID;
     public final BookIconModel ICON;
     public final String text;
     public final Item item;
 
-    public OreEntry(CategoryProviderBase parent, String id, Item item, String text) {
+    public RockEntry(CategoryProviderBase parent, String id, Item item, String text) {
         super(parent);
         this.ID = id;
         this.ICON = BookIconModel.create(item);
         this.text = text;
         this.item = item;
     }
-
 
     @Override
     protected void generatePages() {
