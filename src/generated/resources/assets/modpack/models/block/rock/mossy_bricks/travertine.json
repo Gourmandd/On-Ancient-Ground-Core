@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "architects_palette:block/dripstone_bricks",
+    "overlay": "modpack:block/moss_brick_overlay"
+  }
+}

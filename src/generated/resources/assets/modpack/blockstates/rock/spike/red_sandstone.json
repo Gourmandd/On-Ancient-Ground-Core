@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=base": {
+      "model": "modpack:block/rock/spike/red_sandstone_base"
+    },
+    "part=middle": {
+      "model": "modpack:block/rock/spike/red_sandstone_middle"
+    },
+    "part=tip": {
+      "model": "modpack:block/rock/spike/red_sandstone_tip"
+    }
+  }
+}

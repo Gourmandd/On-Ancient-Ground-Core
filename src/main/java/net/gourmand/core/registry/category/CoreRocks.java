@@ -15,6 +15,7 @@ import net.minecraft.world.level.material.MapColor;
 
 import net.dries007.tfc.common.Lore;
 import net.dries007.tfc.util.registry.RegistryRock;
+import org.violetmoon.quark.content.world.module.NewStoneTypesModule;
 
 public enum CoreRocks implements RegistryRock
 {
@@ -24,7 +25,13 @@ public enum CoreRocks implements RegistryRock
     PICRITE_BASALT(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY, false), // Pastel's basal marble
     TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN, false),
     BRECCIA(RockDisplayCategory.SEDIMENTARY, MapColor.SNOW, false), // Caupona's felsic tuff
-    KOMATIITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BROWN, false),
+    KOMATIITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BROWN, false), // Create scoria
+    SANDSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.SAND, false), // Create orchum
+    RED_SANDSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_RED, false), // Quark jasper
+    SUEVITE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_BLACK, false), // Create scorchia
+    PHONOLITE(RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY, false), // Quark shale
+    ARKOSE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE, false), // Quark limestone
+    SOAPSTONE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_WHITE, false), // Create limestone
     BLUESCHIST(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_BLUE, true),
     PERIDOTITE(RockDisplayCategory.MAFIC_IGNEOUS_INTRUSIVE, MapColor.TERRACOTTA_LIGHT_GREEN, true),
     SERPENTINE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_GREEN, true);
@@ -156,8 +163,26 @@ public enum CoreRocks implements RegistryRock
                 case PICRITE_BASALT -> {
                     return SpectrumBlocks.BASAL_MARBLE.get();
                 }
+                case SANDSTONE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "ochrum"));
+                }
+                case RED_SANDSTONE -> {
+                    return NewStoneTypesModule.jasperBlock;
+                }
+                case SUEVITE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "scorchia"));
+                }
+                case PHONOLITE -> {
+                    return NewStoneTypesModule.shaleBlock;
+                }
+                case ARKOSE -> {
+                    return NewStoneTypesModule.limestoneBlock;
+                }
+                case SOAPSTONE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "limestone"));
+                }
                 case null, default -> {
-                    throw new AssertionError("no raw rock for this rock type");
+                    throw new AssertionError("no raw rock for this rock type " + rock.getSerializedName());
                 }
             }
         }
@@ -184,11 +209,23 @@ public enum CoreRocks implements RegistryRock
                 case TRAVERTINE-> {
                     return ResourceLocation.fromNamespaceAndPath("minecraft", "dripstone_block");
                 }
-                case BLACKSLAG -> {
-                    return SpectrumBlocks.BLACKSLAG.getId();
+                case SANDSTONE -> {
+                    return ResourceLocation.fromNamespaceAndPath("create", "ochrum");
                 }
-                case PICRITE_BASALT -> {
-                    return SpectrumBlocks.BASAL_MARBLE.getId();
+                case RED_SANDSTONE -> {
+                    return ResourceLocation.fromNamespaceAndPath("quark", "jasper");
+                }
+                case SUEVITE -> {
+                    return ResourceLocation.fromNamespaceAndPath("create", "scorchia");
+                }
+                case PHONOLITE -> {
+                    return ResourceLocation.fromNamespaceAndPath("quark", "shale");
+                }
+                case ARKOSE -> {
+                    return ResourceLocation.fromNamespaceAndPath("quark", "limestone");
+                }
+                case SOAPSTONE -> {
+                    return ResourceLocation.fromNamespaceAndPath("create", "limestone");
                 }
                 case null, default -> throw new AssertionError("no raw rock for this rock type");
             }

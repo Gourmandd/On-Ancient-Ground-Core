@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "modpack:block/rock/cobble/arkose",
+    "side": "modpack:block/rock/cobble/arkose",
+    "top": "modpack:block/rock/cobble/arkose"
+  }
+}

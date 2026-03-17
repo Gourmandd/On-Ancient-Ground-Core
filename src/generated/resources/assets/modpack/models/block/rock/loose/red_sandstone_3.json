@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_sedimentary_3",
+  "textures": {
+    "particle": "modpack:block/rock/cobble/red_sandstone",
+    "texture": "modpack:block/rock/cobble/red_sandstone"
+  }
+}

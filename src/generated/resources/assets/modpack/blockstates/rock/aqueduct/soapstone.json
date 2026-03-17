@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/soapstone/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/soapstone/north"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/soapstone/south"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/soapstone/east"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/soapstone/west"
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

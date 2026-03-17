@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_cobble/arkose_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_cobble/arkose"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_cobble/arkose_slab_top"
+    }
+  }
+}

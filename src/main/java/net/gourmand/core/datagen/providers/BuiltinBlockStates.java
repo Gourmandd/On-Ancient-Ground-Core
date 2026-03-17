@@ -33,6 +33,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
     private final static ResourceLocation aqueductSouthParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/south");
     private final static ResourceLocation aqueductEastParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/east");
     private final static ResourceLocation aqueductWestParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/west");
+    private final static ResourceLocation mossOverlay = ResourceLocation.parse("modpack:block/moss_brick_overlay");
 
     public BuiltinBlockStates(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, AncientGroundCore.MODID, exFileHelper);
@@ -93,12 +94,20 @@ public class BuiltinBlockStates extends BlockStateProvider {
         Stream.of(CoreRocks.values()).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
 
-                if (type.hasVariants() && rock.hasVariant(type) && generateMossyVariant(type, rock)){
-                    ResourceLocation texture = TextureUtil.getRockTexture(rock, type);
-                    cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), texture);
-                    stairsBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), texture);
-                    slabBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()));
-                    wallBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()), texture);
+                if (type.hasVariants() && rock.hasVariant(type)){
+                    if (generateMossyVariant(type, rock)){
+                        ResourceLocation texture = TextureUtil.getRockTexture(rock, type);
+                        cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), texture);
+                        stairsBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), texture);
+                        slabBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()));
+                        wallBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()), texture);
+                    } else {
+                        ResourceLocation texture = TextureUtil.getRockTexture(rock, type);
+                        cubeMossOverlayAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), texture);
+                        stairsMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), texture);
+                        slabMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()));
+                        wallMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()), texture);
+                    }
                 }
 
 
@@ -174,6 +183,10 @@ public class BuiltinBlockStates extends BlockStateProvider {
         simpleBlock(block.get(), this.models().cubeAll(block.getId().getNamespace() + ":block/" + block.getId().getPath(), texture));
     }
 
+    private void cubeMossOverlayAll(DeferredHolder<Block, Block> block, ResourceLocation texture){
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), texture.toString(), mossOverlay.toString())).buildLast());
+    }
+
     private void stairsBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture){
         ModelFile stairs = this.models().stairs(getBlockModelString(block.getId()), texture, texture, texture);
         ModelFile stairsInner = this.models().stairsInner(getBlockModelString(block.getId()) + "_inner", texture, texture, texture);
@@ -198,9 +211,73 @@ public class BuiltinBlockStates extends BlockStateProvider {
         }, StairBlock.WATERLOGGED);
     }
 
+    private void stairsMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture){
+
+        ModelFile stairs = createModel(getBlockModelString(block.getId()), "modpack:block/overlay_stairs")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
+        ModelFile stairsInner = createModel(getBlockModelString(block.getId()) + "_inner", "modpack:block/overlay_inner_stairs")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
+        ModelFile stairsOuter = createModel(getBlockModelString(block.getId()) + "_outer", "modpack:block/overlay_outer_stairs")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
+
+        this.getVariantBuilder(block.get()).forAllStatesExcept((state) -> {
+            Direction facing = state.getValue(StairBlock.FACING);
+            Half half = state.getValue(StairBlock.HALF);
+            StairsShape shape = state.getValue(StairBlock.SHAPE);
+            int yRot = (int)facing.getClockWise().toYRot();
+            if (shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT) {
+                yRot += 270;
+            }
+
+            if (shape != StairsShape.STRAIGHT && half == Half.TOP) {
+                yRot += 90;
+            }
+
+            yRot %= 360;
+            boolean uvlock = yRot != 0 || half == Half.TOP;
+            return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? stairs : (shape != StairsShape.INNER_LEFT && shape != StairsShape.INNER_RIGHT ? stairsOuter : stairsInner)).rotationX(half == Half.BOTTOM ? 0 : 180).rotationY(yRot).uvLock(uvlock).build();
+        }, StairBlock.WATERLOGGED);
+    }
+
     private void slabBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab){
         ModelFile slabBottom = this.models().slab(getBlockModelString(block.getId()), texture, texture, texture);
         ModelFile slabTop = this.models().slabTop(getBlockModelString(block.getId()) + "_top", texture, texture, texture);
+        ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
+
+        this.getVariantBuilder(block.get())
+                .partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).addModels(new ConfiguredModel(slabBottom))
+                .partialState().with(SlabBlock.TYPE, SlabType.TOP).addModels(new ConfiguredModel(slabTop))
+                .partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).addModels(new ConfiguredModel(slabDouble));
+    }
+
+    private void slabMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab){
+
+        ModelFile slabBottom = createModel(getBlockModelString(block.getId()) , "modpack:block/overlay_slab")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
+
+        ModelFile slabTop = createModel(getBlockModelString(block.getId()) + "_top", "modpack:block/overlay_slab_top")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
+
         ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
 
         this.getVariantBuilder(block.get())
@@ -290,6 +367,24 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
     private void wallBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture){
         this.wallBlock(block.get(), baseName, texture);
+    }
+
+    private void wallMossOverlayBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture){
+
+        this.wallBlock(block.get(),
+                createModel(baseName + "_post", "modpack:block/overlay_template_wall_post")
+                        .texture("wall", texture)
+                        .texture("particle", texture)
+                        .texture("overlay", mossOverlay),
+                createModel(baseName + "_side", "modpack:block/overlay_template_wall_side")
+                        .texture("wall", texture)
+                        .texture("particle", texture)
+                        .texture("overlay", mossOverlay),
+                createModel(baseName + "_side_tall", "modpack:block/overlay_template_wall_side_tall")
+                        .texture("wall", texture)
+                        .texture("particle", texture)
+                        .texture("overlay", mossOverlay)
+        );
     }
 
     private void supportBlock(DeferredHolder<Block, Block> Hblock, DeferredHolder<Block, Block> Vblock, CoreDeeperDownWood wood){
@@ -481,7 +576,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
     private boolean generateMossyVariant(Rock.BlockType type, CoreRocks rock){
         if (type == Rock.BlockType.MOSSY_BRICKS){
             switch (rock){
-                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE -> {return false;}
+                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE, ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE -> {return false;}
                 default -> {return true;}
             }
         }

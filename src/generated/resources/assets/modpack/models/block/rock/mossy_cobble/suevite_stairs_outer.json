@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "modpack:block/rock/mossy_cobble/suevite",
+    "side": "modpack:block/rock/mossy_cobble/suevite",
+    "top": "modpack:block/rock/mossy_cobble/suevite"
+  }
+}

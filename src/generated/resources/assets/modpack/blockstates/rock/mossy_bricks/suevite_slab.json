@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_bricks/suevite_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_bricks/suevite"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_bricks/suevite_slab_top"
+    }
+  }
+}

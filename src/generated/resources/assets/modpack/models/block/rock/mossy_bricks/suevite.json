@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "create:block/palettes/stone_types/brick/scorchia_cut_brick",
+    "overlay": "modpack:block/moss_brick_overlay"
+  }
+}

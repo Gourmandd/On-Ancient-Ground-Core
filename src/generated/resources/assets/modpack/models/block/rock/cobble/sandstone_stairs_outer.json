@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "modpack:block/rock/cobble/sandstone",
+    "side": "modpack:block/rock/cobble/sandstone",
+    "top": "modpack:block/rock/cobble/sandstone"
+  }
+}

@@ -12,6 +12,7 @@ import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.resources.ResourceLocation;
+import org.violetmoon.quark.base.Quark;
 
 import java.util.Locale;
 
@@ -61,6 +62,24 @@ public class TextureUtil {
                 case PICRITE_BASALT -> {
                     return SpectrumCommon.MOD_ID + ":block/basal_marble";
                 }
+                case SANDSTONE -> {
+                    return Create.ID + ":block/palettes/stone_types/natural/ochrum_0";
+                }
+                case RED_SANDSTONE -> {
+                    return Quark.MOD_ID + ":block/jasper";
+                }
+                case SUEVITE -> {
+                    return Create.ID + ":block/palettes/stone_types/scorchia";
+                }
+                case PHONOLITE -> {
+                    return Quark.MOD_ID + ":block/shale";
+                }
+                case ARKOSE -> {
+                    return Quark.MOD_ID + ":block/limestone";
+                }
+                case SOAPSTONE -> {
+                    return Create.ID + ":block/palettes/stone_types/limestone";
+                }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
             }
         }
@@ -77,7 +96,7 @@ public class TextureUtil {
                 case NEPHELINITE -> {
                     return "minecraft:block/cobbled_deepslate";
                 }
-                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT -> {
+                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE, ARKOSE, SOAPSTONE -> {
                     return (AncientGroundCore.MODID + ":block/rock/cobble/" + rock.getSerializedName());
                 }
                 case BLACKSLAG -> {
@@ -99,7 +118,7 @@ public class TextureUtil {
                 case NEPHELINITE -> {
                     return "minecraft:block/cobbled_deepslate";
                 }
-                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT -> {
+                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE, ARKOSE, SOAPSTONE -> {
                     return (AncientGroundCore.MODID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
                 }
                 case BLACKSLAG -> {
@@ -136,6 +155,24 @@ public class TextureUtil {
                 case PICRITE_BASALT -> {
                     return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
                 }
+                case SANDSTONE -> {
+                    return "create:block/palettes/stone_types/brick/ochrum_cut_brick";
+                }
+                case RED_SANDSTONE -> {
+                    return Quark.MOD_ID + ":block/jasper_bricks";
+                }
+                case SUEVITE -> {
+                    return "create:block/palettes/stone_types/brick/scorchia_cut_brick";
+                }
+                case PHONOLITE -> {
+                    return Quark.MOD_ID + ":block/shale_bricks";
+                }
+                case ARKOSE -> {
+                    return Quark.MOD_ID + ":block/limestone_bricks";
+                }
+                case SOAPSTONE -> {
+                    return "create:block/palettes/stone_types/brick/limestone_cut_brick";
+                }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
             }
         }
@@ -167,6 +204,24 @@ public class TextureUtil {
                 case PICRITE_BASALT -> {
                     return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
                 }
+                case SANDSTONE -> {
+                    return "create:block/palettes/stone_types/brick/ochrum_cut_brick";
+                }
+                case RED_SANDSTONE -> {
+                    return Quark.MOD_ID + ":block/jasper_bricks";
+                }
+                case SUEVITE -> {
+                    return "create:block/palettes/stone_types/brick/scorchia_cut_brick";
+                }
+                case PHONOLITE -> {
+                    return Quark.MOD_ID + ":block/shale_bricks";
+                }
+                case ARKOSE -> {
+                    return Quark.MOD_ID + ":block/limestone_bricks";
+                }
+                case SOAPSTONE -> {
+                    return "create:block/palettes/stone_types/brick/limestone_cut_brick";
+                }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
             }
         }
@@ -197,6 +252,24 @@ public class TextureUtil {
                 }
                 case PICRITE_BASALT -> {
                     return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
+                }
+                case SANDSTONE -> {
+                    return "create:block/palettes/stone_types/brick/ochrum_cut_brick";
+                }
+                case RED_SANDSTONE -> {
+                    return Quark.MOD_ID + ":block/jasper_bricks";
+                }
+                case SUEVITE -> {
+                    return "create:block/palettes/stone_types/brick/scorchia_cut_brick";
+                }
+                case PHONOLITE -> {
+                    return Quark.MOD_ID + ":block/shale_bricks";
+                }
+                case ARKOSE -> {
+                    return Quark.MOD_ID + ":block/limestone_bricks";
+                }
+                case SOAPSTONE -> {
+                    return "create:block/palettes/stone_types/brick/limestone_cut_brick";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
             }

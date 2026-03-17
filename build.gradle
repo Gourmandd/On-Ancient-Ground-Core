@@ -124,7 +124,7 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/extra/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'spectrum', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette'
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/extra/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'spectrum', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette', '--existing-mod', 'quark'
         }
 
         // applies to all the run configs above
@@ -189,7 +189,8 @@ dependencies {
     implementation "curse.maven:create-328085:7178775"
     implementation "curse.maven:architects-palette-433862:6861008"
     implementation ("com.klikli_dev:modonomicon-${minecraft_version}-neoforge:${modonomicon_version}"){transitive=false}
-
+    implementation "curse.maven:quark-243121:7640331"
+    implementation "curse.maven:zeta-968868:7640154"
 
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository

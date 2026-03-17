@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_cobble/soapstone_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_cobble/soapstone"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_cobble/soapstone_slab_top"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "create:block/palettes/stone_types/scorchia",
+    "overlay": "tfc:block/ore/normal_bismuthinite"
+  }
+}

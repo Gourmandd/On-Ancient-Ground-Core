@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/south",
+  "textures": {
+    "particle": "quark:block/jasper_bricks",
+    "texture": "quark:block/jasper_bricks"
+  }
+}

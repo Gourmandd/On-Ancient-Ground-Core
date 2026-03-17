@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/east",
+  "textures": {
+    "particle": "create:block/palettes/stone_types/brick/limestone_cut_brick",
+    "texture": "create:block/palettes/stone_types/brick/limestone_cut_brick"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "modpack:block/overlay_outer_stairs",
+  "textures": {
+    "bottom": "quark:block/shale_bricks",
+    "overlay": "modpack:block/moss_brick_overlay",
+    "particle": "quark:block/shale_bricks",
+    "side": "quark:block/shale_bricks",
+    "top": "quark:block/shale_bricks"
+  }
+}

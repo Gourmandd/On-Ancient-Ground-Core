@@ -1,8 +1,0 @@
-{
-    "render_type": "cutout",
-    "parent": "modpack:block/overlay_template_wall_side_tall",
-    "textures": {
-        "wall": "caupona:block/felsic_tuff_bricks",
-        "overlay": "modpack:block/moss_brick_overlay"
-    }
-}

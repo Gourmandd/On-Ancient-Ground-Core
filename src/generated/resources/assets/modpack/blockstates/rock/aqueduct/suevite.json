@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/suevite/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/suevite/north"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/suevite/south"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/suevite/east"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/suevite/west"
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

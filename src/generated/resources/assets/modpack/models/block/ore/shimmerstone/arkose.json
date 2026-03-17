@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "quark:block/limestone",
+    "overlay": "modpack:block/ore/shimmerstone"
+  }
+}

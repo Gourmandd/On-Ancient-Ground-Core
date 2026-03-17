@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "modpack:block/rock/cobble/phonolite",
+    "side": "modpack:block/rock/cobble/phonolite",
+    "top": "modpack:block/rock/cobble/phonolite"
+  }
+}

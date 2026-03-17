@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/cobble/red_sandstone_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/cobble/red_sandstone"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/cobble/red_sandstone_slab_top"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "modpack:block/overlay_stairs",
+  "textures": {
+    "bottom": "spectrum:block/blackslag_bricks",
+    "overlay": "modpack:block/moss_brick_overlay",
+    "particle": "spectrum:block/blackslag_bricks",
+    "side": "spectrum:block/blackslag_bricks",
+    "top": "spectrum:block/blackslag_bricks"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/phonolite/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/phonolite/north"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/phonolite/south"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/phonolite/east"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/phonolite/west"
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

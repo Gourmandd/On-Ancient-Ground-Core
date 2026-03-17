@@ -7,10 +7,12 @@ import net.dries007.tfc.client.render.blockentity.LoomBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.PlacedItemBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.ToolRackBlockEntityRenderer;
+import net.dries007.tfc.common.blocks.rock.Rock;
 import net.gourmand.core.registry.CoreBlockEntities;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
+import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -88,6 +90,17 @@ public class ClientEventHandler {
         CoreBlocks.DEEPER_DOWN_WOODS.values().forEach(map -> {
             Stream.of(SCRIBING_TABLE, SEWING_TABLE).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), cutout));
         });
+
+        for (CoreRocks rock : CoreRocks.values()){
+            for (Rock.BlockType type : Rock.BlockType.values()){
+                if (makeMossyVariantCutout(type, rock)){
+                    ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), cutoutMipped);
+                    ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().get(), cutoutMipped);
+                    ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().get(), cutoutMipped);
+                    ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().get(), cutoutMipped);
+                }
+            }
+        }
     }
 
     public static void registerColorHandlerBlocks(RegisterColorHandlersEvent.Block event){
@@ -108,5 +121,21 @@ public class ClientEventHandler {
                 CoreItems.GLASS_PANE_MOLD.get(),
                 CoreItems.WROUGHT_IRON_BUCKET.get()
         );
+    }
+
+    private static boolean makeMossyVariantCutout(Rock.BlockType type, CoreRocks rock){
+        if (type == Rock.BlockType.MOSSY_BRICKS){
+            switch (rock){
+                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE, ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE -> {return true;}
+                default -> {return false;}
+            }
+        }
+        if (type == Rock.BlockType.MOSSY_COBBLE){
+            switch (rock){
+                case BLACKSLAG, NEPHELINITE -> {return true;}
+                default -> {return false;}
+            }
+        }
+        return false;
     }
 }

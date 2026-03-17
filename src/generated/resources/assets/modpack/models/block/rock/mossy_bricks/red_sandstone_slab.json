@@ -1,0 +1,10 @@
+{
+  "parent": "modpack:block/overlay_slab",
+  "textures": {
+    "bottom": "quark:block/jasper_bricks",
+    "overlay": "modpack:block/moss_brick_overlay",
+    "particle": "quark:block/jasper_bricks",
+    "side": "quark:block/jasper_bricks",
+    "top": "quark:block/jasper_bricks"
+  }
+}

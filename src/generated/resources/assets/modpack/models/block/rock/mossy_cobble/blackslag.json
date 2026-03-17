@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "spectrum:block/cobbled_blackslag",
+    "overlay": "modpack:block/moss_brick_overlay"
+  }
+}

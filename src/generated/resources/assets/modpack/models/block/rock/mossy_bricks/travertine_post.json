@@ -1,0 +1,8 @@
+{
+  "parent": "modpack:block/overlay_template_wall_post",
+  "textures": {
+    "overlay": "modpack:block/moss_brick_overlay",
+    "particle": "architects_palette:block/dripstone_bricks",
+    "wall": "architects_palette:block/dripstone_bricks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/base",
+  "textures": {
+    "particle": "quark:block/limestone_bricks",
+    "texture": "quark:block/limestone_bricks"
+  }
+}

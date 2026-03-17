@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/north",
+  "textures": {
+    "particle": "quark:block/shale_bricks",
+    "texture": "quark:block/shale_bricks"
+  }
+}

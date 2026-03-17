@@ -1,0 +1,10 @@
+{
+  "parent": "modpack:block/overlay_slab",
+  "textures": {
+    "bottom": "spectrum:block/cobbled_blackslag",
+    "overlay": "modpack:block/moss_brick_overlay",
+    "particle": "spectrum:block/cobbled_blackslag",
+    "side": "spectrum:block/cobbled_blackslag",
+    "top": "spectrum:block/cobbled_blackslag"
+  }
+}
