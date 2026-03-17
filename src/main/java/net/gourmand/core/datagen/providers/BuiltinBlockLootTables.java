@@ -125,6 +125,9 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
             case AMARANTH -> {
                 return SpectrumBlocks.AMARANTH_BUSHEL.asItem();
             }
+            case WART -> {
+                return Items.NETHER_WART;
+            }
             case null, default -> {
                 throw new AssertionError("no product for this crop type");
             }

@@ -32,6 +32,7 @@ public class BuiltinClimateRanges extends DataManagerProvider<ClimateRange>
         add(CROPS, COTTON, b -> b.hydration(15, 62).temperature(-1f, 28f));
         add(CROPS, GLISTERING_MELON, b -> b.hydration(35, 100).temperature(5.0f, 31f));
         add(CROPS, AMARANTH, b -> b.hydration(8, 70).temperature(5f, 27f));
+        add(CROPS, WART, b -> b.hydration(8, 32).temperature(8f, 24f));
     }
 
     private <T> void add(Map<T, DataManager.Reference<ClimateRange>> map, T value, UnaryOperator<ClimateRange.Builder> builder)

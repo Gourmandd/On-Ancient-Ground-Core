@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "mature=true": {
+      "model": "minecraft:block/nether_wart_stage2"
+    },
+    "mature=false": {
+      "model": "tfc:block/dead_crop/alfalfa"
+    }
+  }
+}

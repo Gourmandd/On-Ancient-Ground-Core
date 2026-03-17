@@ -1,14 +1,16 @@
-// 1.21.1	2026-03-15T09:37:43.684029218	Loot Tables
+// 1.21.1	2026-03-17T18:51:45.08366692	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 42e110bf604b9132e4fc4a58f42a8229b080bf02 data/modpack/loot_table/blocks/crop/amaranth.json
 31047b9922b12c6d981fc07f6022da30f382aacb data/modpack/loot_table/blocks/crop/coffee.json
 fae2013bf934f04ea037a03788c27766ed190fec data/modpack/loot_table/blocks/crop/cotton.json
 79a2ab5c185033998bff8c272cea15b66a61ccca data/modpack/loot_table/blocks/crop/glistering_melon.json
+acf2eb9d9f2f5a0bd14699c7a0a8c4d6bef57a35 data/modpack/loot_table/blocks/crop/wart.json
 c7b6aec1833edd9fee384502a15e7bc8f98c63e6 data/modpack/loot_table/blocks/dead_crop/amaranth.json
 823e6ea42e391b8c96c99f89f72e137e1e96c7ca data/modpack/loot_table/blocks/dead_crop/coffee.json
 5d2b778a8b3311113dac08b7775e8b6580d90094 data/modpack/loot_table/blocks/dead_crop/cotton.json
 d62567f6525811953d87cb9ec3815cbee90cb7eb data/modpack/loot_table/blocks/dead_crop/glistering_melon.json
+ad64c04081e83055d55f12d7fc48111d1da07f33 data/modpack/loot_table/blocks/dead_crop/wart.json
 bd5c27ab30945e2d2c24ce0811cd8e2feb1036dd data/modpack/loot_table/blocks/metal/block/aluminium.json
 e10fc921a208e3c6427fa6679c76024ca8dc11cb data/modpack/loot_table/blocks/metal/block/aluminium_bronze.json
 3487eb85a5582928964f74b4aad24ce812093216 data/modpack/loot_table/blocks/metal/block/aluminium_bronze_slab.json
@@ -1072,6 +1074,7 @@ f45973b8c598eec8fe0153589ac0f965f57a7e04 data/modpack/loot_table/blocks/rock/spi
 65c06711bb9e6331de315c8508c3d61e19c237b9 data/modpack/loot_table/blocks/wild_crop/coffee.json
 a27121b3f2f4af14e424f8d73a35e27bc81fbfc5 data/modpack/loot_table/blocks/wild_crop/cotton.json
 bfb05a0351a0abe4951b2576d84685fc28b2cc44 data/modpack/loot_table/blocks/wild_crop/glistering_melon.json
+2ff0c8334ff9a0c1c38e6c45e0a9e6669d39b3be data/modpack/loot_table/blocks/wild_crop/wart.json
 48273de9175aaf55e7694c49cd687a4f0d1893a9 data/modpack/loot_table/blocks/wood/horizontal_support/black.json
 baf513bae804fb5daab60fa67cded93e1e3318ca data/modpack/loot_table/blocks/wood/horizontal_support/blue.json
 fd152a96d28d013748db5b1d10af1018694d6e26 data/modpack/loot_table/blocks/wood/horizontal_support/brown.json

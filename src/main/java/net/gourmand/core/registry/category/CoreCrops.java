@@ -23,7 +23,8 @@ public enum CoreCrops implements StringRepresentable {
     GLISTERING_MELON(0.75f, -0.2f, -0.2f, 8, () -> SpectrumBlocks.GLISTERING_MELON),
     COTTON(0.75f, -0.2f, -0.2f, 4),
     COFFEE(0.75f, -0.2f, -0.2f, 6),
-    AMARANTH(0.75f, -0.2f, -0.2f, 4, 4, false);
+    AMARANTH(0.75f, -0.2f, -0.2f, 4, 4, false),
+    WART(-0.1f, -0.1f, -0.1f, 3);
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int singleBlockStages)
     {
