@@ -1,8 +1,8 @@
-// 1.21.1	2026-03-15T21:40:21.080094818	Books: modpack
+// 1.21.1	2026-03-17T18:05:51.991638425	Books: modpack
 99e1eb332df3374f0f290cbeb722be9e39ed5df4 data/modpack/modonomicon/books/guide/book.json
 22833f2a541a55e4d080ec84bf330cccb299dbd6 data/modpack/modonomicon/books/guide/categories/ores.json
 8a651bb5253b572952ed207573e9198e7b2ff6dd data/modpack/modonomicon/books/guide/entries/ores/amethyst.json
-ba74e79137bf8c1cd18680d26782b2745042bac6 data/modpack/modonomicon/books/guide/entries/ores/anthracite.json
+ab908808e8b86b06e1c7174791a7b7b564015071 data/modpack/modonomicon/books/guide/entries/ores/anthracite.json
 b68f495aa40bd024d01e10cd4e0adc2f00c92a1b data/modpack/modonomicon/books/guide/entries/ores/bauxite.json
 3709c7c9bdce375434bc0ea8cb54465625d29e35 data/modpack/modonomicon/books/guide/entries/ores/bismuthinite.json
 297b21b36d88d2d1b996832f651da3f17107cb10 data/modpack/modonomicon/books/guide/entries/ores/bituminous.json
