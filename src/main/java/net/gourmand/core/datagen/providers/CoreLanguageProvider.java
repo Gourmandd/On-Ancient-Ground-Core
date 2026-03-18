@@ -104,7 +104,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
                 }
             });
-            addItem(CoreItems.BRICKS.get(rock), getName(rock.name()) + "  Brick");
+            addItem(CoreItems.BRICKS.get(rock), getName(rock.name()) + " Brick");
         });
 
         Stream.of(CoreDeeperDownWood.values()).forEach(wood -> {
