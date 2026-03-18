@@ -19,19 +19,19 @@ import org.violetmoon.quark.content.world.module.NewStoneTypesModule;
 
 public enum CoreRocks implements RegistryRock
 {
-    ARGILLITE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE, false), //vanilla cobble
-    NEPHELINITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.DEEPSLATE, false), //deepslate
-    BLACKSLAG(RockDisplayCategory.FELSIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BLACK, false),
-    PICRITE_BASALT(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY, false), // Pastel's basal marble
-    TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN, false),
-    BRECCIA(RockDisplayCategory.SEDIMENTARY, MapColor.SNOW, false), // Caupona's felsic tuff
-    KOMATIITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BROWN, false), // Create scoria
-    SANDSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.SAND, false), // Create orchum
-    RED_SANDSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_RED, false), // Quark jasper
-    SUEVITE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_BLACK, false), // Create scorchia
-    PHONOLITE(RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY, false), // Quark shale
-    ARKOSE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE, false), // Quark limestone
-    SOAPSTONE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_WHITE, false), // Create limestone
+    ARGILLITE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE), //vanilla cobble
+    NEPHELINITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.DEEPSLATE), //deepslate
+    BLACKSLAG(RockDisplayCategory.FELSIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BLACK),
+    PICRITE_BASALT(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY), // Pastel's basal marble
+    TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN),
+    BRECCIA(RockDisplayCategory.SEDIMENTARY, MapColor.SNOW), // Caupona's felsic tuff
+    KOMATIITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BROWN), // Create scoria
+    SANDSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.SAND), // Create orchum
+    RED_SANDSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_RED), // Quark jasper
+    SUEVITE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_BLACK), // Create scorchia
+    PHONOLITE(RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY), // Quark shale
+    ARKOSE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE), // Quark limestone
+    SOAPSTONE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_WHITE), // Create limestone
     BLUESCHIST(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_BLUE, true),
     PERIDOTITE(RockDisplayCategory.MAFIC_IGNEOUS_INTRUSIVE, MapColor.TERRACOTTA_LIGHT_GREEN, true),
     SERPENTINE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_GREEN, true);
@@ -45,10 +45,7 @@ public enum CoreRocks implements RegistryRock
 
     CoreRocks(RockDisplayCategory category, MapColor color)
     {
-        this.serializedName = name().toLowerCase(Locale.ROOT);
-        this.category = category;
-        this.color = color;
-        this.hasVariants = true;
+        this(category, color, false);
     }
 
     CoreRocks(RockDisplayCategory category, MapColor color, boolean hasVariants)
