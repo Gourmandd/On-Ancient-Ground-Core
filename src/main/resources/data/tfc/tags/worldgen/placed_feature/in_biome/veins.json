@@ -13,6 +13,7 @@
         "modpack:vein/bauxite",
         "modpack:vein/anthracite",
         "modpack:vein/surface_galena",
-        "modpack:vein/normal_galena"
+        "modpack:vein/normal_galena",
+        "modpack:vein/terracotta"
     ]
 }
