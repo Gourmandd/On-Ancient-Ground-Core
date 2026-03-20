@@ -24,7 +24,8 @@ public class BuiltinClimateRanges extends DataManagerProvider<ClimateRange>
     protected void addData(HolderLookup.Provider provider)
     {
         add(FRUIT_TREES, WALNUT, b -> b.hydration(10, 60).temperature(-14.8f, 16.6f));
-        add(FRUIT_TREES, WOLFBERRY, b -> b.hydration(35, 80).temperature(8.8f, 36.5f));
+        add(FRUIT_TREES, WOLFBERRY, b -> b.hydration(35, 80).temperature(12.8f, 36.5f));
+        add(FRUIT_TREES, FIG, b -> b.hydration(20, 55).temperature(10f, 28.8f));
         //add(SPREADING_BUSHES, TEST, b -> b.hydration(0, 100).temperature(9.8f, 41.2f));
         add(STATIONARY_BUSHES, ALOE, b -> b.hydration(17, 100).temperature(-11.8f, 6.2f));
         add(STATIONARY_BUSHES, SAWBLADE_HOLLY, b -> b.hydration(17, 100).temperature(-11.8f, 6.2f));

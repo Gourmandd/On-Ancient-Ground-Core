@@ -1,10 +1,11 @@
-// 1.21.1	2026-03-17T19:06:26.440071165	Data Manager (climate_range)
+// 1.21.1	2026-03-20T18:03:29.42521756	Data Manager (climate_range)
 fc084c7fa93ad5eeaed288eb5be1bc01e6cea749 data/modpack/tfc/climate_range/crop/amaranth.json
 11e030b98953380c4990a4e73982a8bb5e5ad276 data/modpack/tfc/climate_range/crop/coffee.json
 3d4819948fe89d0d2a1fea16ed26ac34ff6a7bac data/modpack/tfc/climate_range/crop/cotton.json
 872e01a981c6cf393e22c4ff5f1d68cf29f32627 data/modpack/tfc/climate_range/crop/glistering_melon.json
 4234e1805156183a46b7309efa6fb3c5f4516cd5 data/modpack/tfc/climate_range/crop/wart.json
 a0ebc359fdb36d8a44e2c9aa6cf565c7be5596a9 data/modpack/tfc/climate_range/plant/aloe_bush.json
+3dbc187b170ba25d59f1a1a2d330af85e56a4d38 data/modpack/tfc/climate_range/plant/fig_tree.json
 a0ebc359fdb36d8a44e2c9aa6cf565c7be5596a9 data/modpack/tfc/climate_range/plant/sawblade_holly_bush.json
 b7b0cb4cd0310ba526056dbee443d14db089131e data/modpack/tfc/climate_range/plant/walnut_tree.json
-79a4d834b2d09298b5415a4083f1aa8f6b699ebf data/modpack/tfc/climate_range/plant/wolfberry_tree.json
+2335bfbb3a69b12969f55b597316dd41774b8850 data/modpack/tfc/climate_range/plant/wolfberry_tree.json
