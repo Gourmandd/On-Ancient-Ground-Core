@@ -70,11 +70,61 @@
         },
         {
           "replace": [
+            "modpack:rock/raw/peridotite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/peridotite"
+            }
+          ]
+        },
+        {
+          "replace": [
             "create:scoria"
           ],
           "with": [
             {
               "block": "modpack:ore/azurite/komatiite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "minecraft:deepslate"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/nephelinite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:blackslag"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/blackslag"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:basal_marble"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/picrite_basalt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "quark:shale"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/azurite/phonolite"
             }
           ]
         }

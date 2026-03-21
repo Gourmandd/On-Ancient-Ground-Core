@@ -83,11 +83,71 @@
         },
         {
           "replace": [
+            "tfc:rock/raw/tuff"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/tuff"
+            }
+          ]
+        },
+        {
+          "replace": [
             "caupona:felsic_tuff"
           ],
           "with": [
             {
               "block": "modpack:ore/shimmerstone/breccia"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:ochrum"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/sandstone"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "quark:jasper"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/red_sandstone"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "quark:limestone"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/arkose"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "minecraft:stone"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/argillite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "minecraft:dripstone_block"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/travertine"
             }
           ]
         }

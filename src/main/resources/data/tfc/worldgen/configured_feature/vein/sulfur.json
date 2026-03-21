@@ -139,6 +139,26 @@
             "block": "modpack:ore/sulfur/komatiite"
           }
         ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/sulfur/suevite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/sulfur/soapstone"
+          }
+        ]
       }
     ]
   }

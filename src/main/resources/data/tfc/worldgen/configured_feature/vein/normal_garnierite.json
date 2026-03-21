@@ -83,44 +83,6 @@
             "block": "modpack:ore/rich_garnierite/peridotite"
           }
         ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "weight": 35,
-            "block": "modpack:ore/poor_garnierite/blueschist"
-          },
-          {
-            "weight": 40,
-            "block": "modpack:ore/normal_garnierite/blueschist"
-          },
-          {
-            "weight": 25,
-            "block": "modpack:ore/rich_garnierite/blueschist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "weight": 35,
-            "block": "modpack:ore/poor_garnierite/komatiite"
-          },
-          {
-            "weight": 40,
-            "block": "modpack:ore/normal_garnierite/komatiite"
-          },
-          {
-            "weight": 25,
-            "block": "modpack:ore/rich_garnierite/komatiite"
-          }
-        ]
       }
     ],
     "indicator": {

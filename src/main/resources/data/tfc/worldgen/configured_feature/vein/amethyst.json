@@ -151,16 +151,6 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/amethyst/peridotite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "modpack:rock/raw/serpentine"
         ],
         "with": [
@@ -181,21 +171,81 @@
       },
       {
         "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/amethyst/komatiite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "caupona:felsic_tuff"
         ],
         "with": [
           {
             "block": "modpack:ore/amethyst/breccia"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/suevite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/soapstone"
           }
         ]
       }

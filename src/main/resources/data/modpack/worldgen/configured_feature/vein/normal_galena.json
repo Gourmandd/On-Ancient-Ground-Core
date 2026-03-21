@@ -102,25 +102,6 @@
             "block": "modpack:ore/rich_galena/blueschist"
           }
         ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "weight": 15,
-            "block": "modpack:ore/poor_galena/komatiite"
-          },
-          {
-            "weight": 25,
-            "block": "modpack:ore/normal_galena/komatiite"
-          },
-          {
-            "weight": 60,
-            "block": "modpack:ore/rich_galena/komatiite"
-          }
-        ]
       }
     ],
     "indicator": {

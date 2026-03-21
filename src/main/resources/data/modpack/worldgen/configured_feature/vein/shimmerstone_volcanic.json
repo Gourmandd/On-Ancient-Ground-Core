@@ -50,31 +50,51 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/tuff"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/shimmerstone/tuff"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "modpack:rock/raw/blueschist"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/shimmerstone/blueschist"
-            }
-          ]
-        },
-        {
-          "replace": [
             "create:scoria"
           ],
           "with": [
             {
               "block": "modpack:ore/shimmerstone/komatiite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "minecraft:deepslate"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/nephelinite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:blackslag"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/blackslag"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:basal_marble"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/picrite_basalt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "quark:shale"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/shimmerstone/phonolite"
             }
           ]
         }

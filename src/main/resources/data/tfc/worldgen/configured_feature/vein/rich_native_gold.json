@@ -83,44 +83,6 @@
             "block": "modpack:ore/rich_native_gold/peridotite"
           }
         ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "weight": 15,
-            "block": "modpack:ore/poor_native_gold/blueschist"
-          },
-          {
-            "weight": 25,
-            "block": "modpack:ore/normal_native_gold/blueschist"
-          },
-          {
-            "weight": 60,
-            "block": "modpack:ore/rich_native_gold/blueschist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "weight": 15,
-            "block": "modpack:ore/poor_native_gold/komatiite"
-          },
-          {
-            "weight": 25,
-            "block": "modpack:ore/normal_native_gold/komatiite"
-          },
-          {
-            "weight": 60,
-            "block": "modpack:ore/rich_native_gold/komatiite"
-          }
-        ]
       }
     ],
     "indicator": {

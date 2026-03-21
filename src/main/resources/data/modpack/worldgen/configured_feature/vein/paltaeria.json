@@ -80,21 +80,11 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/tuff"
+            "modpack:rock/raw/peridotite"
           ],
           "with": [
             {
-              "block": "modpack:ore/paltaeria/tuff"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "modpack:rock/raw/blueschist"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/paltaeria/blueschist"
+              "block": "modpack:ore/paltaeria/peridotite"
             }
           ]
         },
@@ -105,6 +95,46 @@
           "with": [
             {
               "block": "modpack:ore/paltaeria/komatiite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "minecraft:deepslate"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/paltaeria/nephelinite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:blackslag"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/paltaeria/blackslag"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:basal_marble"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/paltaeria/picrite_basalt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "quark:shale"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/paltaeria/phonolite"
             }
           ]
         }

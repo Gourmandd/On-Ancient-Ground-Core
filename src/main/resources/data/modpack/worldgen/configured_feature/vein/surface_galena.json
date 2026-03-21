@@ -159,6 +159,82 @@
             "block": "modpack:ore/rich_galena/komatiite"
           }
         ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/nephelinite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/nephelinite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/blackslag"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/blackslag"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/picrite_basalt"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/picrite_basalt"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_galena/phonolite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_galena/phonolite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_galena/phonolite"
+          }
+        ]
       }
     ],
     "indicator": {

@@ -86,25 +86,6 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "weight": 70,
-            "block": "modpack:ore/poor_sphalerite/blueschist"
-          },
-          {
-            "weight": 25,
-            "block": "modpack:ore/normal_sphalerite/blueschist"
-          },
-          {
-            "weight": 5,
-            "block": "modpack:ore/rich_sphalerite/blueschist"
-          }
-        ]
-      },
-      {
-        "replace": [
           "create:scoria"
         ],
         "with": [
@@ -119,6 +100,82 @@
           {
             "weight": 5,
             "block": "modpack:ore/rich_sphalerite/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_sphalerite/nephelinite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_sphalerite/nephelinite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_sphalerite/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_sphalerite/blackslag"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_sphalerite/blackslag"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_sphalerite/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_sphalerite/picrite_basalt"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_sphalerite/picrite_basalt"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_sphalerite/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_sphalerite/phonolite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_sphalerite/phonolite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_sphalerite/phonolite"
           }
         ]
       }

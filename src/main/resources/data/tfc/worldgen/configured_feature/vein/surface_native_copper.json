@@ -102,25 +102,6 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "weight": 20,
-            "block": "modpack:ore/poor_native_copper/blueschist"
-          },
-          {
-            "weight": 70,
-            "block": "modpack:ore/normal_native_copper/blueschist"
-          },
-          {
-            "weight": 10,
-            "block": "modpack:ore/rich_native_copper/blueschist"
-          }
-        ]
-      },
-      {
-        "replace": [
           "create:scoria"
         ],
         "with": [
@@ -135,6 +116,82 @@
           {
             "weight": 10,
             "block": "modpack:ore/rich_native_copper/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "modpack:ore/poor_native_copper/phonolite"
+          },
+          {
+            "weight": 70,
+            "block": "modpack:ore/normal_native_copper/phonolite"
+          },
+          {
+            "weight": 10,
+            "block": "modpack:ore/rich_native_copper/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "modpack:ore/poor_native_copper/nephelinite"
+          },
+          {
+            "weight": 70,
+            "block": "modpack:ore/normal_native_copper/nephelinite"
+          },
+          {
+            "weight": 10,
+            "block": "modpack:ore/rich_native_copper/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "modpack:ore/poor_native_copper/blackslag"
+          },
+          {
+            "weight": 70,
+            "block": "modpack:ore/normal_native_copper/blackslag"
+          },
+          {
+            "weight": 10,
+            "block": "modpack:ore/rich_native_copper/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "modpack:ore/poor_native_copper/picrite_basalt"
+          },
+          {
+            "weight": 70,
+            "block": "modpack:ore/normal_native_copper/picrite_basalt"
+          },
+          {
+            "weight": 10,
+            "block": "modpack:ore/rich_native_copper/picrite_basalt"
           }
         ]
       }

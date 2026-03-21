@@ -95,44 +95,6 @@
             "block": "modpack:ore/rich_cassiterite/peridotite"
           }
         ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "weight": 35,
-            "block": "modpack:ore/poor_cassiterite/blueschist"
-          },
-          {
-            "weight": 40,
-            "block": "modpack:ore/normal_cassiterite/blueschist"
-          },
-          {
-            "weight": 25,
-            "block": "modpack:ore/rich_cassiterite/blueschist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "weight": 35,
-            "block": "modpack:ore/poor_cassiterite/komatiite"
-          },
-          {
-            "weight": 40,
-            "block": "modpack:ore/normal_cassiterite/komatiite"
-          },
-          {
-            "weight": 25,
-            "block": "modpack:ore/rich_cassiterite/komatiite"
-          }
-        ]
       }
     ],
     "indicator": {

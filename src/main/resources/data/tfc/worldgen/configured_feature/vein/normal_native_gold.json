@@ -162,20 +162,58 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
+          "minecraft:deepslate"
         ],
         "with": [
           {
             "weight": 35,
-            "block": "modpack:ore/poor_native_gold/blueschist"
+            "block": "modpack:ore/poor_native_gold/nephelinite"
           },
           {
             "weight": 40,
-            "block": "modpack:ore/normal_native_gold/blueschist"
+            "block": "modpack:ore/normal_native_gold/nephelinite"
           },
           {
             "weight": 25,
-            "block": "modpack:ore/rich_native_gold/blueschist"
+            "block": "modpack:ore/rich_native_gold/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_native_gold/blackslag"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_native_gold/blackslag"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_native_gold/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_native_gold/picrite_basalt"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_native_gold/picrite_basalt"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_native_gold/picrite_basalt"
           }
         ]
       },
@@ -195,6 +233,25 @@
           {
             "weight": 25,
             "block": "modpack:ore/rich_native_gold/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_native_gold/phonolite"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_native_gold/phonolite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_native_gold/phonolite"
           }
         ]
       }

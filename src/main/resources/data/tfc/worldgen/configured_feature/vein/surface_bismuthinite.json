@@ -178,6 +178,101 @@
             "block": "modpack:ore/rich_bismuthinite/breccia"
           }
         ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_bismuthinite/argillite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_bismuthinite/argillite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_bismuthinite/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_bismuthinite/travertine"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_bismuthinite/travertine"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_bismuthinite/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_bismuthinite/sandstone"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_bismuthinite/sandstone"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_bismuthinite/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_bismuthinite/red_sandstone"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_bismuthinite/red_sandstone"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_bismuthinite/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_bismuthinite/arkose"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_bismuthinite/arkose"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_bismuthinite/arkose"
+          }
+        ]
       }
     ],
     "indicator": {

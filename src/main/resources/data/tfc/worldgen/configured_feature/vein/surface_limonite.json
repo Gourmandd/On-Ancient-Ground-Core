@@ -178,6 +178,101 @@
             "block": "modpack:ore/rich_limonite/breccia"
           }
         ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_limonite/argillite"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_limonite/argillite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_limonite/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_limonite/travertine"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_limonite/travertine"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_limonite/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_limonite/sandstone"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_limonite/sandstone"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_limonite/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_limonite/red_sandstone"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_limonite/red_sandstone"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_limonite/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_limonite/arkose"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_limonite/arkose"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_limonite/arkose"
+          }
+        ]
       }
     ],
     "indicator": {

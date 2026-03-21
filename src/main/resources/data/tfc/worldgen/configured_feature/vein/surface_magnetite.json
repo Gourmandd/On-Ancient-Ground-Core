@@ -178,6 +178,101 @@
             "block": "modpack:ore/rich_magnetite/breccia"
           }
         ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_magnetite/argillite"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_magnetite/argillite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_magnetite/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_magnetite/travertine"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_magnetite/travertine"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_magnetite/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_magnetite/sandstone"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_magnetite/sandstone"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_magnetite/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_magnetite/red_sandstone"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_magnetite/red_sandstone"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_magnetite/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "modpack:ore/poor_magnetite/arkose"
+          },
+          {
+            "weight": 40,
+            "block": "modpack:ore/normal_magnetite/arkose"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/rich_magnetite/arkose"
+          }
+        ]
       }
     ],
     "indicator": {

@@ -159,6 +159,44 @@
             "block": "modpack:ore/rich_tetrahedrite/blueschist"
           }
         ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_tetrahedrite/suevite"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_tetrahedrite/suevite"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_tetrahedrite/suevite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "modpack:ore/poor_tetrahedrite/soapstone"
+          },
+          {
+            "weight": 25,
+            "block": "modpack:ore/normal_tetrahedrite/soapstone"
+          },
+          {
+            "weight": 5,
+            "block": "modpack:ore/rich_tetrahedrite/soapstone"
+          }
+        ]
       }
     ],
     "indicator": {

@@ -1,41 +1,41 @@
 {
   "type": "tfc:disc_vein",
   "config": {
-    "rarity": 60,
-    "density": 0.35,
+    "rarity": 40,
+    "density": 0.2,
     "min_y": 40,
     "max_y": 100,
-    "size": 35,
-    "height": 5,
-    "random_name": "sylvite",
+    "size": 23,
+    "height": 3,
+    "random_name": "borax",
     "blocks": [
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sylvite/shale"
-          }
-        ]
-      },
       {
         "replace": [
           "tfc:rock/raw/claystone"
         ],
         "with": [
           {
-            "block": "tfc:ore/sylvite/claystone"
+            "block": "tfc:ore/borax/claystone"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/chert"
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
-            "block": "tfc:ore/sylvite/chert"
+            "block": "tfc:ore/borax/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/borax/shale"
           }
         ]
       },
@@ -45,7 +45,7 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/sylvite/sandstone"
+            "block": "modpack:ore/borax/sandstone"
           }
         ]
       },
@@ -55,7 +55,7 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/sylvite/red_sandstone"
+            "block": "modpack:ore/borax/red_sandstone"
           }
         ]
       },
@@ -65,7 +65,7 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/sylvite/arkose"
+            "block": "modpack:ore/borax/arkose"
           }
         ]
       },
@@ -75,7 +75,7 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/sylvite/argillite"
+            "block": "modpack:ore/borax/argillite"
           }
         ]
       },
@@ -85,7 +85,7 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/sylvite/travertine"
+            "block": "modpack:ore/borax/travertine"
           }
         ]
       }
