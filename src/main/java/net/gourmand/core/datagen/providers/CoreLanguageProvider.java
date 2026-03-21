@@ -134,11 +134,11 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
         // TODO: find out if TFC still wants these as metal definitions don't exist anymore.
         Stream.of(DyeColor.values()).forEach(colour -> {
-            add("metal." + AncientGroundCore.MODID + "." + colour.getSerializedName(), getName(colour.name()) + " Glass");
-            add("fluid_type." + AncientGroundCore.MODID + "." + colour.getSerializedName(), "Molten " + getName(colour.name()) + " Glass");
+            add("metal." + AncientGroundCore.MODID + ".glass." + colour.getSerializedName(), getName(colour.name()) + " Glass");
+            add("fluid_type." + AncientGroundCore.MODID + ".glass." + colour.getSerializedName(), "Molten " + getName(colour.name()) + " Glass");
         });
-        add("metal." + AncientGroundCore.MODID + ".clear", "Clear Glass");
-        add("fluid_type." + AncientGroundCore.MODID + ".clear", "Molten Clear Glass");
+        add("metal." + AncientGroundCore.MODID + ".glass.clear", "Clear Glass");
+        add("fluid_type." + AncientGroundCore.MODID + ".glass.clear", "Molten Clear Glass");
 
         Stream.of(CoreOres.values()).forEach(ore -> {
 
