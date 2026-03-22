@@ -1,10 +1,15 @@
 package net.gourmand.core.registry;
 
 import net.dries007.tfc.common.fluids.FluidHolder;
+import net.dries007.tfc.common.fluids.MoltenFluid;
+import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.registry.category.CoreMetals;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.pathfinder.PathType;
@@ -14,6 +19,8 @@ import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
+import java.util.Locale;
+import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -22,20 +29,44 @@ public class CoreFluids {
     public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, AncientGroundCore.MODID);
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(Registries.FLUID, AncientGroundCore.MODID);
 
-    /* Much easier with kjs for now.
-    public static final Map<Metals.Metal, FluidHolder<BaseFlowingFluid>> METALS = Helpers.mapOf(Metals.Metal.class, metal -> register(
+    public static final Map<CoreMetals.MetalType, FluidHolder<BaseFlowingFluid>> METALS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal -> register(
             "metal/" + metal.getSerializedName(),
             properties -> properties
                     .block(CoreBlocks.METAL_FLUIDS.get(metal))
                     .bucket(CoreItems.METAL_FLUID_BUCKETS.get(metal))
                     .explosionResistance(100),
             lavaLike()
-                    .descriptionId("fluid.tfc.metal." + metal.getSerializedName())
+                    .descriptionId("fluid." + AncientGroundCore.MODID + ".metal." + metal.getSerializedName())
                     .rarity(metal.rarity()),
             MoltenFluid.Source::new,
             MoltenFluid.Flowing::new
     ));
-     */
+
+    public static final Map<DyeColor, FluidHolder<BaseFlowingFluid>> COLORED_GLASS = Helpers.mapOf(DyeColor.class, color -> register(
+            "glass/" + color.name().toLowerCase(Locale.ROOT),
+            properties -> properties
+                    .block(CoreBlocks.COLORED_GLASS_FLUIDS.get(color))
+                    .bucket(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(color))
+                    .explosionResistance(100),
+            lavaLike()
+                    .descriptionId("fluid." + AncientGroundCore.MODID + ".glass." + color.getSerializedName())
+                     .rarity(Rarity.COMMON),
+            MoltenFluid.Source::new,
+            MoltenFluid.Flowing::new
+    ));
+
+    public static final FluidHolder<BaseFlowingFluid> CLEAR_GLASS = register(
+                "glass/clear" ,
+        properties -> properties
+                .block(CoreBlocks.CLEAR_GLASS_FLUID)
+                .bucket(CoreItems.CLEAR_GLASS_FLUID_BUCKET)
+                .explosionResistance(100),
+            lavaLike()
+                    .descriptionId("fluid." + AncientGroundCore.MODID + ".glass.clear")
+                    .rarity(Rarity.COMMON),
+        MoltenFluid.Source::new,
+        MoltenFluid.Flowing::new
+    );
 
     private static FluidType.Properties lavaLike()
     {

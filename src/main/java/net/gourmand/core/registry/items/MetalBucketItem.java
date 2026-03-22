@@ -7,9 +7,9 @@ import net.minecraft.world.level.material.Fluid;
 
 import java.util.function.Supplier;
 
-public class BucketItem extends FluidContainerItem {
+public class MetalBucketItem extends FluidContainerItem {
 
-    public BucketItem(Properties properties, TagKey<Fluid> whitelist, boolean canPlaceLiquidsInWorld, Supplier<Boolean> canPlaceSourceBlocks) {
+    public MetalBucketItem(Properties properties, TagKey<Fluid> whitelist, boolean canPlaceLiquidsInWorld, Supplier<Boolean> canPlaceSourceBlocks) {
         super(properties, TFCConfig.SERVER.metalBucketCapacity, whitelist, canPlaceLiquidsInWorld, canPlaceSourceBlocks);
     }
 }

@@ -12,11 +12,14 @@ import net.gourmand.core.registry.category.*;
 import net.gourmand.core.util.TextureUtil;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.client.model.generators.loaders.DynamicFluidContainerModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Locale;
@@ -154,6 +157,17 @@ public class BuiltinItemModels extends ItemModelProvider {
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TOOL_RACK));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE), getBlockModelLocation(AncientGroundCore.MODID,CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE).getId().getPath() + "_lower"));
         });
+
+        // buckets
+        CoreItems.METAL_FLUID_BUCKETS.forEach((metal, holder) -> {
+            simpleBucket(holder);
+        });
+
+        CoreItems.COLORED_GLASS_FLUID_BUCKETS.forEach((metal, holder) -> {
+            simpleBucket(holder);
+        });
+
+        simpleBucket(CoreItems.CLEAR_GLASS_FLUID_BUCKET);
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){
@@ -219,5 +233,13 @@ public class BuiltinItemModels extends ItemModelProvider {
             }
         }
         return true;
+    }
+
+    private void simpleBucket(DeferredHolder<Item, Item> holder){
+        if (holder.value() instanceof BucketItem bucket) {
+            withExistingParent(getItemModelString(holder.get()), ResourceLocation.fromNamespaceAndPath(NeoForgeVersion.MOD_ID, "item/bucket"))
+                    .customLoader(DynamicFluidContainerModelBuilder::begin)
+                    .fluid(bucket.content);
+        }
     }
 }

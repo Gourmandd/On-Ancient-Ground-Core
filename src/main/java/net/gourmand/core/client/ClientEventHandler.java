@@ -2,14 +2,17 @@ package net.gourmand.core.client;
 
 import net.dries007.tfc.client.IGhostBlockHandler;
 import net.dries007.tfc.client.TFCColors;
+import net.dries007.tfc.client.extensions.FluidRendererExtension;
 import net.dries007.tfc.client.model.ContainedFluidModel;
 import net.dries007.tfc.client.render.blockentity.LoomBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.PlacedItemBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.ToolRackBlockEntityRenderer;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.fluids.TFCFluids;
 import net.gourmand.core.registry.CoreBlockEntities;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.CoreFluids;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
 import net.gourmand.core.registry.category.CoreRocks;
@@ -22,10 +25,14 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.neoforged.neoforge.client.model.DynamicFluidContainerModel;
 
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
+import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_FLOW;
+import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_STILL;
 import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.*;
 
 public class ClientEventHandler {
@@ -36,6 +43,31 @@ public class ClientEventHandler {
         modEventBus.addListener(ClientEventHandler::clientSetup);
         modEventBus.addListener(ClientEventHandler::registerColorHandlerItems);
         modEventBus.addListener(ClientEventHandler::registerEntityRenderers);
+        modEventBus.addListener(ClientEventHandler::registerExtensions);
+    }
+
+    private static void registerExtensions(RegisterClientExtensionsEvent event) {
+        CoreFluids.METALS.forEach((metal, holder) -> {
+            if (!metal.hasOtherFluid()){
+                event.registerFluidType(
+                        new FluidRendererExtension(TFCFluids.ALPHA_MASK | metal.getColor(), MOLTEN_STILL, MOLTEN_FLOW, null, null),
+                        holder.getType()
+                );
+            }
+        });
+
+        CoreFluids.COLORED_GLASS.forEach((color, holder) -> {
+            event.registerFluidType(
+                    new FluidRendererExtension(TFCFluids.ALPHA_MASK | color.getTextureDiffuseColor(), MOLTEN_STILL, MOLTEN_FLOW, null, null),
+                    holder.getType()
+            );
+        });
+
+        // clear glass
+        event.registerFluidType(
+                new FluidRendererExtension(TFCFluids.ALPHA_MASK | 0xD4FBFB, MOLTEN_STILL, MOLTEN_FLOW, null, null),
+                CoreFluids.CLEAR_GLASS.getType()
+        );
     }
 
     private static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
@@ -121,6 +153,17 @@ public class ClientEventHandler {
                 CoreItems.GLASS_PANE_MOLD.get(),
                 CoreItems.WROUGHT_IRON_BUCKET.get()
         );
+
+        // buckets
+        CoreFluids.METALS.forEach((metal, holder) -> {
+            event.register(new DynamicFluidContainerModel.Colors(), holder.getSource().getBucket());
+        });
+
+        CoreFluids.COLORED_GLASS.forEach((color, holder) -> {
+            event.register(new DynamicFluidContainerModel.Colors(), holder.getSource().getBucket());
+        });
+
+        event.register(new DynamicFluidContainerModel.Colors(), CoreFluids.CLEAR_GLASS.getSource().getBucket());
     }
 
     private static boolean makeMossyVariantCutout(Rock.BlockType type, CoreRocks rock){

@@ -1,0 +1,5 @@
+{
+  "parent": "neoforge:item/bucket",
+  "fluid": "modpack:glass/orange",
+  "loader": "neoforge:fluid_container"
+}

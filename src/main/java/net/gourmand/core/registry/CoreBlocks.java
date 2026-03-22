@@ -14,6 +14,7 @@ import net.gourmand.core.registry.category.*;
 import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
@@ -161,11 +162,15 @@ public class CoreBlocks {
             )
     );
 
-    /* Much easier with kjs for now.
-    public static final Map<Metals.Metal, DeferredHolder<Block, LiquidBlock>> METAL_FLUIDS = Helpers.mapOf(Metals.Metal.class, metal ->
+    public static final Map<CoreMetals.MetalType, DeferredHolder<Block, LiquidBlock>> METAL_FLUIDS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal ->
             registerNoItem("fluid/metal/" + metal.name(), () -> new LiquidBlock(CoreFluids.METALS.get(metal).getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()))
     );
-    */
+
+    public static final Map<DyeColor, DeferredHolder<Block, LiquidBlock>> COLORED_GLASS_FLUIDS = Helpers.mapOf(DyeColor.class, color ->
+            registerNoItem("fluid/glass/" + color.getSerializedName(), () -> new LiquidBlock(CoreFluids.COLORED_GLASS.get(color).getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()))
+    );
+
+    public static final DeferredHolder<Block, LiquidBlock> CLEAR_GLASS_FLUID = registerNoItem("fluid/glass/clear", () -> new LiquidBlock(CoreFluids.CLEAR_GLASS.getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()));
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {

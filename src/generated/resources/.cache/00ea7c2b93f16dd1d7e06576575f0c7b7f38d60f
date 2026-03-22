@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-17T20:41:59.963775312	Item Models: modpack
+// 1.21.1	2026-03-22T17:16:08.81968587	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -17,6 +17,26 @@ d9c7f45c63c1d332eb0e05f48a8ec070fe1bc610 assets/modpack/models/item/brick/sandst
 0de7ea7b88d8b5d9c30533d2ba38279003d8610d assets/modpack/models/item/brick/soapstone.json
 499fc3ba74016796b314ff662c9cc7fccee95ddf assets/modpack/models/item/brick/suevite.json
 75bfe7b7ddc30afbf4383ca521f4e1ba4f59445e assets/modpack/models/item/brick/travertine.json
+5e1241b82da07ca3c27ab289244d3c7951556ee8 assets/modpack/models/item/bucket/glass/black.json
+358c1c48cc16b5053849272a1adcb147ec3c2014 assets/modpack/models/item/bucket/glass/blue.json
+c090aa9456af667149ecd62bc02db04ffe186b03 assets/modpack/models/item/bucket/glass/brown.json
+ae774ba03af558b38a4f665ff509ba33c751a53b assets/modpack/models/item/bucket/glass/clear.json
+d4ed3b947cfc6674d32443adad41b9880caaf185 assets/modpack/models/item/bucket/glass/cyan.json
+a9209882e41b325392bb3782a51cbdeceabe44ed assets/modpack/models/item/bucket/glass/gray.json
+836ff4b466cb97382712ad0fd860f322e3949417 assets/modpack/models/item/bucket/glass/green.json
+17c0d6563b31333ba0781de8428e07960256f36c assets/modpack/models/item/bucket/glass/light_blue.json
+d3b314b8be49e7eae1ddd32ccf24a538ba82ecbe assets/modpack/models/item/bucket/glass/light_gray.json
+421c6eb32b9670431e943c697d5ce12dfe947592 assets/modpack/models/item/bucket/glass/lime.json
+565ad90aae626aed39b44b27ea9814e02c38f67f assets/modpack/models/item/bucket/glass/magenta.json
+4d372471baad47dffa39d5d6c4a2f27d217fae7e assets/modpack/models/item/bucket/glass/orange.json
+65c8c039cc3bacb168591d30bc3584d481dc835c assets/modpack/models/item/bucket/glass/pink.json
+f112a63d7aa599d4091d453d90f4e9accb99734a assets/modpack/models/item/bucket/glass/purple.json
+790c6a1fce40de709c91abd0e0ab344d20c28e0e assets/modpack/models/item/bucket/glass/red.json
+3ae593c586d9ed74bc1a70c8ea7f05222026eab5 assets/modpack/models/item/bucket/glass/white.json
+b220df8a3ead2c8fbcc461c44fa1afa89436af40 assets/modpack/models/item/bucket/glass/yellow.json
+022a15034470e32a50c4df5d23c3c83f41358c2a assets/modpack/models/item/bucket/metal/aluminium.json
+e16f332428bca97ae3c453865f20caedca30dfc7 assets/modpack/models/item/bucket/metal/electrum.json
+a71133d0dff5091168a4353aab367e4028d9ddc5 assets/modpack/models/item/bucket/metal/lead.json
 8dca9cc9d320f25d499ad8a703d660bce253c1c3 assets/modpack/models/item/ceramic/earthenware/brick.json
 b85d9c68198a2918d535feb1ec5bfd448baa5156 assets/modpack/models/item/ceramic/earthenware/clay_ball.json
 ac2f89e57812a156b3dfce33942d488f3e37a977 assets/modpack/models/item/ceramic/earthenware/unfired_axe_head_mold.json

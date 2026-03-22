@@ -10,11 +10,10 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.*;
 import net.gourmand.core.registry.category.CoreDeeperDownWood;
-import net.gourmand.core.registry.items.BucketItem;
 import net.gourmand.core.registry.items.CoreSeedItem;
+import net.gourmand.core.registry.items.MetalBucketItem;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -67,11 +66,15 @@ public class CoreItems {
             )
     );
 
-    /* Much easier with kjs for now.
-    public static final Map<Metals.Metal,DeferredHolder<Item, Item>> METAL_FLUID_BUCKETS = Helpers.mapOf(Metals.Metal.class, metal ->
+    public static final Map<CoreMetals.MetalType, DeferredHolder<Item, Item>> METAL_FLUID_BUCKETS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal ->
             register("bucket/metal/" + metal.name(), () -> new BucketItem(CoreFluids.METALS.get(metal).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
     );
-    */
+
+    public static final Map<DyeColor, DeferredHolder<Item, Item>> COLORED_GLASS_FLUID_BUCKETS = Helpers.mapOf(DyeColor.class, color ->
+            register("bucket/glass/" + color.getSerializedName(), () -> new BucketItem(CoreFluids.COLORED_GLASS.get(color).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
+    );
+
+    public static final DeferredHolder<Item, Item> CLEAR_GLASS_FLUID_BUCKET = register("bucket/glass/clear", () -> new BucketItem(CoreFluids.CLEAR_GLASS.source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static final DeferredHolder<Item, ToolItem> SNOW_SHOVEL = ITEMS.register("tool/snow_shovel", () -> new ToolItem(TFCTiers.STEEL, CoreTags.SNOW_SHOVEL_MINEABLE, new Item.Properties().durability(3200).stacksTo(0).setNoRepair()));
     public static final DeferredHolder<Item, Item> SNOW_SHOVEL_HEAD = ITEMS.register("tool/snow_shovel_head", CoreItems::basicItem);
@@ -79,7 +82,7 @@ public class CoreItems {
     public static final DeferredHolder<Item, MoldItem> GLASS_MOLD = ITEMS.register("glass_mold", ()-> new MoldItem(() -> 800, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(1)));
     public static final DeferredHolder<Item, MoldItem> GLASS_PANE_MOLD = ITEMS.register("glass_pane_mold", ()-> new MoldItem(() -> 50, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(1)));
 
-    public static final DeferredHolder<Item, Item> WROUGHT_IRON_BUCKET = register("metal/bucket/wrought_iron", () -> new BucketItem(new Item.Properties(), CoreTags.WROUGHT_IRON_BUCKET_ACCEPTABLE, true, TFCConfig.SERVER.metalBucketCanPlaceSources));
+    public static final DeferredHolder<Item, Item> WROUGHT_IRON_BUCKET = register("metal/bucket/wrought_iron", () -> new MetalBucketItem(new Item.Properties(), CoreTags.WROUGHT_IRON_BUCKET_ACCEPTABLE, true, TFCConfig.SERVER.metalBucketCanPlaceSources));
 
     private static Item basicItem(){
         return new Item(new Item.Properties());

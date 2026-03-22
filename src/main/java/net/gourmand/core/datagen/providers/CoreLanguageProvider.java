@@ -8,6 +8,7 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.CoreFluids;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
 import net.gourmand.core.util.TextUtil;
@@ -123,6 +124,12 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 }
             });
 
+            if (!metal.hasOtherFluid()){
+                add(CoreBlocks.METAL_FLUIDS.get(metal).get(), getName(metal.name()));
+                add(CoreItems.METAL_FLUID_BUCKETS.get(metal).get(), getName(metal.name()) + " Bucket");
+                add(CoreFluids.METALS.get(metal).type().get().getDescriptionId(), getName(metal.name()));
+            }
+
             Stream.of(Metal.BlockType.values()).forEach(blockType -> {
                 if (blockType.has(metal.getLikeMetal())){
                     addBlock(CoreBlocks.METALS.get(metal).get(blockType), getName(metal.name()) + " " + getName(blockType.name()));
@@ -135,10 +142,14 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
         // TODO: find out if TFC still wants these as metal definitions don't exist anymore.
         Stream.of(DyeColor.values()).forEach(colour -> {
             add("metal." + AncientGroundCore.MODID + ".glass." + colour.getSerializedName(), getName(colour.name()) + " Glass");
-            add("fluid_type." + AncientGroundCore.MODID + ".glass." + colour.getSerializedName(), "Molten " + getName(colour.name()) + " Glass");
+            add(CoreBlocks.COLORED_GLASS_FLUIDS.get(colour).get(), getName(colour.name()) + " Glass");
+            add(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(colour).get(), getName(colour.name()) + " Glass Bucket");
+            add(CoreFluids.COLORED_GLASS.get(colour).type().get().getDescriptionId(), getName(colour.name()) + " Glass");
         });
         add("metal." + AncientGroundCore.MODID + ".glass.clear", "Clear Glass");
-        add("fluid_type." + AncientGroundCore.MODID + ".glass.clear", "Molten Clear Glass");
+        add(CoreBlocks.CLEAR_GLASS_FLUID.get(), "Clear Glass");
+        add(CoreItems.CLEAR_GLASS_FLUID_BUCKET.get(), "Clear Glass Bucket");
+        add(CoreFluids.CLEAR_GLASS.type().get().getDescriptionId(), "Clear Glass");
 
         Stream.of(CoreOres.values()).forEach(ore -> {
 
