@@ -186,6 +186,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             }
         });
 
+        this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_VESSEL.key());
+
         CategoryUtil.getTFCToolMetals().forEach(metal -> {
             CategoryUtil.getTFCToolHeads().forEach(tool -> {
                 this.tag(CoreTags.Items.TOOL_HEADS.get(tool)).add(

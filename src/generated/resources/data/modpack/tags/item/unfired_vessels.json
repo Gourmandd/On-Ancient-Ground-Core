@@ -4,6 +4,7 @@
     "modpack:ceramic/yellowware/unfired_vessel",
     "modpack:ceramic/porcelain/unfired_vessel",
     "modpack:ceramic/kaolinite/unfired_vessel",
-    "modpack:ceramic/earthenware/unfired_vessel"
+    "modpack:ceramic/earthenware/unfired_vessel",
+    "tfc:ceramic/unfired_vessel"
   ]
 }
