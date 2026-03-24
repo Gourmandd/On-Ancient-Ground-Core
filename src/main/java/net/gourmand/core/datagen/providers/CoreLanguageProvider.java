@@ -200,6 +200,13 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             }
         });
 
+        Stream.of(DyeColor.values()).forEach(color -> {
+            addItem(() -> CoreItems.COLORED_LENS.get(color).get(), getName(color.getSerializedName()) + " Lens");
+            addBlock(() -> CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get(), getName(color.getSerializedName()) + " Molten Glass");
+        });
+
+        addBlock(CoreBlocks.CLEAR_MOLTEN_GLASS, "Clear Molten Glass");
+
 //        // Adds a translation with the given key and the given value.
 //        add("translation.key.1", "Translation 1");
 //

@@ -10,6 +10,7 @@ import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -17,6 +18,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Map;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class CreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AncientGroundCore.MODID);
@@ -29,6 +31,7 @@ public class CreativeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WOOD = register("wood", () -> new ItemStack(CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get()), CreativeTabs::fillWood);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS = register("tools", () -> new ItemStack(CoreItems.SNOW_SHOVEL), CreativeTabs::fillTools);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CERAMICS = register("ceramics", () -> new ItemStack(CoreItems.CERAMICS.get(CoreClay.YIXING).get(CoreClay.ItemType.VESSEL)), CreativeTabs::fillCeramics);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GLASS = register("glass", () -> new ItemStack(CoreBlocks.CLEAR_MOLTEN_GLASS.get()), CreativeTabs::fillGlass);
 
     private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
@@ -213,6 +216,15 @@ public class CreativeTabs {
         }
     }
 
+    private static void fillGlass(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        Stream.of(DyeColor.values()).forEach(color -> {
+            out.accept(CoreItems.COLORED_LENS.get(color).get());
+            out.accept(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
+        });
+
+        out.accept(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
+    }
 
     private static <R extends DeferredHolder<?, ?>, K1, K2> void accept(CreativeModeTab.Output out, Map<K1, Map<K2, R>> map, K1 key1, K2 key2)
     {

@@ -66,6 +66,10 @@ public class CoreItems {
             )
     );
 
+    public static final Map<DyeColor, DeferredHolder<Item, Item>> COLORED_LENS = Helpers.mapOf(DyeColor.class, color ->
+            register("lens/" + color.getSerializedName())
+    );
+
     public static final Map<CoreMetals.MetalType, DeferredHolder<Item, Item>> METAL_FLUID_BUCKETS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal ->
             register("bucket/metal/" + metal.name(), () -> new BucketItem(CoreFluids.METALS.get(metal).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
     );

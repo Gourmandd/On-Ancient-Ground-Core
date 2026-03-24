@@ -16,6 +16,7 @@ import net.gourmand.core.util.TextureUtil;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.*;
 import net.neoforged.neoforge.client.model.generators.*;
@@ -33,7 +34,9 @@ public class BuiltinBlockStates extends BlockStateProvider {
     private final static ResourceLocation aqueductSouthParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/south");
     private final static ResourceLocation aqueductEastParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/east");
     private final static ResourceLocation aqueductWestParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/west");
-    private final static ResourceLocation mossOverlay = ResourceLocation.parse("modpack:block/moss_brick_overlay");
+    private final static ResourceLocation mossOverlay = ResourceLocation.parse(AncientGroundCore.MODID + ":block/moss_brick_overlay");
+
+    private final static ResourceLocation thickFluidFlowTexture = ResourceLocation.parse(AncientGroundCore.MODID + ":block/thick_fluid_flow");
 
     public BuiltinBlockStates(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, AncientGroundCore.MODID, exFileHelper);
@@ -147,6 +150,12 @@ public class BuiltinBlockStates extends BlockStateProvider {
             toolRackBlock(map.get(Wood.BlockType.TOOL_RACK), woodType);
             sluiceBlock(map.get(Wood.BlockType.SLUICE), woodType);
         });
+
+        Stream.of(DyeColor.values()).forEach(color -> {
+            moltenGlassBlock(CoreBlocks.COLORED_MOLTEN_GLASS.get(color));
+        });
+
+        moltenGlassBlock(CoreBlocks.CLEAR_MOLTEN_GLASS);
     }
 
 
@@ -587,5 +596,16 @@ public class BuiltinBlockStates extends BlockStateProvider {
             }
         }
         return true;
+    }
+
+    private void moltenGlassBlock(DeferredHolder<Block, Block> block){
+        this.getVariantBuilder(block.get())
+                .partialState()
+                .setModels(
+                        new ConfiguredModel(
+                                createModel(block.getId().getNamespace() + ":block/" + block.getId().getPath(), AncientGroundCore.MODID + ":block/colored_cube_all")
+                                        .texture("all", thickFluidFlowTexture)
+                        )
+                );
     }
 }

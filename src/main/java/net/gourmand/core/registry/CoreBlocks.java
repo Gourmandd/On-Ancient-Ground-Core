@@ -156,6 +156,13 @@ public class CoreBlocks {
             register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(ExtendedProperties.of().pathType(PathType.LAVA).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(CoreBlocks::always)), b -> new BlockItem(b, rock.createItemProperties()))
     );
 
+    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLORED_MOLTEN_GLASS = Helpers.mapOf(DyeColor.class, color ->
+            register("molten_glass/" + color.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)))
+    );
+
+    public static final DeferredHolder<Block, Block> CLEAR_MOLTEN_GLASS =  register("molten_glass/clear", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
+
+
     public static final Map<CoreDeeperDownWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(CoreDeeperDownWood.class, wood ->
             Helpers.mapOf(Wood.BlockType.class, wood::hasBlockType, type ->
                     register(type.nameFor(wood), CoreDeeperDownWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))

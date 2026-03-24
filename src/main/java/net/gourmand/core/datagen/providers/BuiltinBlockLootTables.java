@@ -18,6 +18,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
@@ -142,6 +143,12 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         generateMetal();
         generateRock();
         generateWood();
+
+        Stream.of(DyeColor.values()).forEach(color -> {
+            this.dropSelf(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
+        });
+
+        this.dropSelf(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
     }
 
     private void generateOre(){

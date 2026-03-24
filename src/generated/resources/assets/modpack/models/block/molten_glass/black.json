@@ -1,0 +1,6 @@
+{
+  "parent": "modpack:block/colored_cube_all",
+  "textures": {
+    "all": "modpack:block/thick_fluid_flow"
+  }
+}

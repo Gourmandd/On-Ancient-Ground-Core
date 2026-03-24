@@ -13,6 +13,7 @@ import net.gourmand.core.util.TextureUtil;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -168,6 +169,14 @@ public class BuiltinItemModels extends ItemModelProvider {
         });
 
         simpleBucket(CoreItems.CLEAR_GLASS_FLUID_BUCKET);
+
+
+        Stream.of(DyeColor.values()).forEach(color -> {
+            simpleItem(CoreItems.COLORED_LENS.get(color).get(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/lens/" + color.getSerializedName()));
+            simpleItem(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/molten_glass/" + color.getSerializedName()));
+        });
+
+        simpleItem(CoreBlocks.CLEAR_MOLTEN_GLASS.get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/molten_glass/clear"));
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){

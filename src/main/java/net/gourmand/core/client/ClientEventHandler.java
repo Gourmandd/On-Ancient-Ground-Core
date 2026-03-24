@@ -20,6 +20,7 @@ import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.world.item.DyeColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -140,6 +141,14 @@ public class ClientEventHandler {
         final BlockColor grassColor = (state, level, pos, tintIndex) -> TFCColors.getGrassColor(pos, tintIndex);
 
         CoreBlocks.WILD_CROPS.forEach((crop, reg) -> event.register(grassColor, reg.get()));
+
+        Stream.of(DyeColor.values()).forEach(color -> {
+            final BlockColor glassColor = (state, level, pos, tintIndex) -> color.getTextureDiffuseColor();
+            event.register(glassColor, CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
+        });
+
+        final BlockColor clearGlassColor = (state, level, pos, tintIndex) -> 14611449;
+        event.register(clearGlassColor, CoreBlocks.CLEAR_MOLTEN_GLASS.get());
     }
 
     private static void registerColorHandlerItems(RegisterColorHandlersEvent.Item event) {

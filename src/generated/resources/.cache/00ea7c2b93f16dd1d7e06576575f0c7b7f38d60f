@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-22T17:16:08.81968587	Item Models: modpack
+// 1.21.1	2026-03-24T18:43:26.92092806	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -166,6 +166,22 @@ bacf5c00b3a3600205113769b4d66a891961a33a assets/modpack/models/item/ceramic/yixi
 68d065d3c8c353c567b43fd4ac9b0b654d5860e8 assets/modpack/models/item/ceramic/yixing/unfired_sword_blade_mold.json
 35f7a68a69cdbf5252b01c63d66c8cdf2b27bbb6 assets/modpack/models/item/ceramic/yixing/unfired_vessel.json
 7d8ec023208855fc3e7d135509beeb36a0fe20ea assets/modpack/models/item/ceramic/yixing/vessel.json
+75bcaddcb7d1d399127b1809bf0189cbe39af6d5 assets/modpack/models/item/lens/black.json
+47c6a4f0c3ecf3b7bae7973c029984a13d4ce1d9 assets/modpack/models/item/lens/blue.json
+836f8296fd74e4ba9f26f948c96160c4671e368e assets/modpack/models/item/lens/brown.json
+15919a30d4c6a468729528fadd4534efd627fc69 assets/modpack/models/item/lens/cyan.json
+e3b2656564c0dd2d02a8e6d4a383dc70e673a33a assets/modpack/models/item/lens/gray.json
+d58e07d8333e46fdcb7e2b7b17f398517a83087e assets/modpack/models/item/lens/green.json
+c41c560048d261185a41b09e415b240150ba065c assets/modpack/models/item/lens/light_blue.json
+dfaff4b0f1976591154967aef737f38c113d8752 assets/modpack/models/item/lens/light_gray.json
+76ff06f37960f006afe1920062ee711dd52426f7 assets/modpack/models/item/lens/lime.json
+94fbb03729603d8895266c66fa44883f872a5d99 assets/modpack/models/item/lens/magenta.json
+92ac2317574db5239ecfd4c83468ba8834016207 assets/modpack/models/item/lens/orange.json
+4681b96f8647ece87b9b8c6b737a2034d95cb298 assets/modpack/models/item/lens/pink.json
+4b1e6b6c77379069ef33097f1747516a23267d1c assets/modpack/models/item/lens/purple.json
+2706a08c1a9898e9f5627f46b7c98ebee3121eb8 assets/modpack/models/item/lens/red.json
+e05f56a1113dfdaa1dfcdc2d17d95d7df8f6a7ac assets/modpack/models/item/lens/white.json
+71e0ea827b4fd7aa904d144bf482ecd91a57ca46 assets/modpack/models/item/lens/yellow.json
 66fd7d2c7e47b29b66788dfef7cca4b30f9998b2 assets/modpack/models/item/metal/block/aluminium.json
 a1b48a9fca3a7d9ab7fa69eadb6539d3cadbf221 assets/modpack/models/item/metal/block/aluminium_bronze.json
 04e8f585bf00bcd61e30d5cf36cbad68c6266133 assets/modpack/models/item/metal/block/aluminium_bronze_slab.json
@@ -222,6 +238,23 @@ b35711754666db87af0b075a5e86e220a7a78b99 assets/modpack/models/item/metal/sheet/
 d0806b0a695331c6bed4134bc73b13ba61f87b3e assets/modpack/models/item/metal/sheet/hardened_steel.json
 f227b7185c6aa3718f4ee1437f47d87d7ff36a4a assets/modpack/models/item/metal/sheet/lead.json
 7124e5be10f3f0f032d78efeb1c5c638a9eb9a8c assets/modpack/models/item/metal/sheet/nethersteel.json
+de573b4d74d25cc62f4bdd9ebecf574090ebe193 assets/modpack/models/item/molten_glass/black.json
+f2e45b7fd50e4511c5a803f3baf372a3b54926e6 assets/modpack/models/item/molten_glass/blue.json
+59cb246df8897802e964bc8f6812443b3790ea6c assets/modpack/models/item/molten_glass/brown.json
+9df566785bc2bead99f574d8a3550481ed552b5e assets/modpack/models/item/molten_glass/clear.json
+b715145a2f5d75c43b54ec4e6effc264e69f5f36 assets/modpack/models/item/molten_glass/cyan.json
+bd5dbd6dfaf08d127e1532767ab2f6b5dbaf33c6 assets/modpack/models/item/molten_glass/gray.json
+50cfd6a775e440e9c784aab763b141e6252e3519 assets/modpack/models/item/molten_glass/green.json
+592e12d8d2c98ca162cfa5a0037c3602cece3cab assets/modpack/models/item/molten_glass/light_blue.json
+69aa1a2ed7aa7bf67b7651dc84cd3e8b5e68e43a assets/modpack/models/item/molten_glass/light_gray.json
+aecee860e170dc8bbcb413d6d8a0f01ddb22fcab assets/modpack/models/item/molten_glass/lime.json
+9f7284bf7361d68d62a65eab2e32258a455a70a7 assets/modpack/models/item/molten_glass/magenta.json
+70233972feaf981178dec7fb92c28c37768c85c8 assets/modpack/models/item/molten_glass/orange.json
+c6aa4fbd6fb9cc7c320e39e1cdb174e611edda1f assets/modpack/models/item/molten_glass/pink.json
+e32d3a57be67069e4ae057f035590a7290381dbd assets/modpack/models/item/molten_glass/purple.json
+90e1e6f49099b3bea364c648300685db6a76c3ae assets/modpack/models/item/molten_glass/red.json
+649740282955f8135382fc1a7093890a92ec2a2e assets/modpack/models/item/molten_glass/white.json
+67f09b7babbb4ef421da6a807596c8971709173c assets/modpack/models/item/molten_glass/yellow.json
 c2bab2c09b4d01498ad5ab410d3d668f3a65e345 assets/modpack/models/item/ore/amethyst/argillite.json
 da39e9fb8301b89c399c28f0a234b6a65bfc0fc1 assets/modpack/models/item/ore/amethyst/arkose.json
 5939ed94df4abfb11ccdfbc19434a5eeee81e683 assets/modpack/models/item/ore/amethyst/blackslag.json

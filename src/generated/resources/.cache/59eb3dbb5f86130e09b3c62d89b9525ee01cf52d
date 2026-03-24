@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-17T20:41:59.975709085	Loot Tables
+// 1.21.1	2026-03-24T20:52:31.38964765	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 42e110bf604b9132e4fc4a58f42a8229b080bf02 data/modpack/loot_table/blocks/crop/amaranth.json
@@ -32,6 +32,23 @@ dee9755614eb7071b1556515d2ce63eb871d227f data/modpack/loot_table/blocks/metal/bl
 c626cd65069ea86b9b1a9255f7d3bd71e0c31a9e data/modpack/loot_table/blocks/metal/block/nethersteel.json
 1c57ab4014e634f3307a4d33e8e28ee557038a80 data/modpack/loot_table/blocks/metal/block/nethersteel_slab.json
 9c99c5f2d1845644b45b4c057cdb46d5025e2bb7 data/modpack/loot_table/blocks/metal/block/nethersteel_stairs.json
+6125b8463e44b203894e89ef215fbbbfa4729f52 data/modpack/loot_table/blocks/molten_glass/black.json
+ba0005751e10be563de3a37bb9bc26cc9328610b data/modpack/loot_table/blocks/molten_glass/blue.json
+41f8820bf336fde87bead620e690ee2bc271b742 data/modpack/loot_table/blocks/molten_glass/brown.json
+57b18bb990ff91ac1b35ffa2a2b409296be981df data/modpack/loot_table/blocks/molten_glass/clear.json
+21c3a62fa16d6e1b483b0037a9f919e9aa4da665 data/modpack/loot_table/blocks/molten_glass/cyan.json
+2a89ded7ccd7a6c5dd0733ffc13d857debb6da78 data/modpack/loot_table/blocks/molten_glass/gray.json
+324cabc7dbfcda650c6c16102addc05030dcd2a2 data/modpack/loot_table/blocks/molten_glass/green.json
+1608d715cbe8f385feab36f926f9d2b74837925e data/modpack/loot_table/blocks/molten_glass/light_blue.json
+0ac3a172340d6a5013045cf90d6892f2435abb01 data/modpack/loot_table/blocks/molten_glass/light_gray.json
+282eb7c18c469fa2ade25f0ec8e020139b7ee89b data/modpack/loot_table/blocks/molten_glass/lime.json
+1313bb6754d4754553e6dec58e61557a5a479ee5 data/modpack/loot_table/blocks/molten_glass/magenta.json
+aa41f8fdee1477afb77be60d1e5edf010813146a data/modpack/loot_table/blocks/molten_glass/orange.json
+6526cc26b23eca3c608ae8490cdc82dcd81dedb3 data/modpack/loot_table/blocks/molten_glass/pink.json
+d4a6f0da5c1da81f7964fb365d67def7c4d48e12 data/modpack/loot_table/blocks/molten_glass/purple.json
+56cf17206cd2631ad2a69359ae2679112f605c41 data/modpack/loot_table/blocks/molten_glass/red.json
+8fcd25c79ea85c01e4b4999b25426644dc43eb3a data/modpack/loot_table/blocks/molten_glass/white.json
+1b5c0f65bc6a40b4de1271efd8dbae11db5b83e0 data/modpack/loot_table/blocks/molten_glass/yellow.json
 dcfaa3614f1543ef8005642b28b71099d7a555bc data/modpack/loot_table/blocks/ore/amethyst/argillite.json
 f5c099a8cf2bc21f4bb8f08e2bf23d68cc78d02a data/modpack/loot_table/blocks/ore/amethyst/arkose.json
 f51e1e7dd5d076166563f3d4e078c4e03011d892 data/modpack/loot_table/blocks/ore/amethyst/blackslag.json
