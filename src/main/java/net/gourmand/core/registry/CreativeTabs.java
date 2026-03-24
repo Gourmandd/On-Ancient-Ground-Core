@@ -10,58 +10,25 @@ import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Map;
+import java.util.function.Supplier;
 
 public class CreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AncientGroundCore.MODID);
 
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> METAL = CREATIVE_TABS.register("metal", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_group.metal." + AncientGroundCore.MODID)) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> CoreItems.METAL_ITEMS.get(CoreMetals.MetalType.ALUMINIUM).get(Metal.ItemType.INGOT).get().getDefaultInstance())
-            .displayItems(CreativeTabs::fillMetal).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NATURE = CREATIVE_TABS.register("nature", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_group.nature." + AncientGroundCore.MODID)) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> CoreItems.CROP_SEEDS.get(CoreCrops.AMARANTH).get().getDefaultInstance())
-            .displayItems(CreativeTabs::fillNature).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ORES = CREATIVE_TABS.register("ores", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_group.ores." + AncientGroundCore.MODID)) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> CoreBlocks.ORES.get(Rock.ANDESITE).get(CoreOres.AZURITE).get().asItem().getDefaultInstance())
-            .displayItems(CreativeTabs::fillOres).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ROCKS = CREATIVE_TABS.register("rocks", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_group.rocks." + AncientGroundCore.MODID)) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get().asItem().getDefaultInstance())
-            .displayItems(CreativeTabs::fillRocks).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WOOD = CREATIVE_TABS.register("wood", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_group.wood." + AncientGroundCore.MODID)) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get().asItem().getDefaultInstance())
-            .displayItems(CreativeTabs::fillWood).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS = CREATIVE_TABS.register("tools", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_group.tools." + AncientGroundCore.MODID)) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> CoreItems.SNOW_SHOVEL.get().getDefaultInstance())
-            .displayItems(CreativeTabs::fillTools).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CERAMICS = CREATIVE_TABS.register("ceramics", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_group.ceramics." + AncientGroundCore.MODID)) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> CoreItems.CERAMICS.get(CoreClay.YIXING).get(CoreClay.ItemType.VESSEL).get().getDefaultInstance())
-            .displayItems(CreativeTabs::fillCeramics).build());
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> METAL = register("metal", () -> new ItemStack(CoreItems.METAL_ITEMS.get(CoreMetals.MetalType.ALUMINIUM).get(Metal.ItemType.INGOT)), CreativeTabs::fillMetal);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NATURE = register("nature", () -> new ItemStack(CoreItems.CROP_SEEDS.get(CoreCrops.AMARANTH)), CreativeTabs::fillNature);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ORES = register("ores", () -> new ItemStack(CoreBlocks.ORES.get(Rock.ANDESITE).get(CoreOres.AZURITE).get()), CreativeTabs::fillOres);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ROCKS = register("rocks", () -> new ItemStack(CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get()), CreativeTabs::fillRocks);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WOOD = register("wood", () -> new ItemStack(CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get()), CreativeTabs::fillWood);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS = register("tools", () -> new ItemStack(CoreItems.SNOW_SHOVEL), CreativeTabs::fillTools);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CERAMICS = register("ceramics", () -> new ItemStack(CoreItems.CERAMICS.get(CoreClay.YIXING).get(CoreClay.ItemType.VESSEL)), CreativeTabs::fillCeramics);
 
     private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
@@ -267,5 +234,14 @@ public class CreativeTabs {
         if (map.containsKey(key)) {
             out.accept((ItemLike) map.get(key));
         }
+    }
+
+    private static DeferredHolder<CreativeModeTab, CreativeModeTab> register(String id, Supplier<ItemStack> icon, CreativeModeTab.DisplayItemsGenerator gen){
+        return CREATIVE_TABS.register(id, () -> CreativeModeTab.builder()
+                .icon(icon)
+                .title(Component.translatable("item_group." + id + "." + AncientGroundCore.MODID))
+                .displayItems(gen)
+                .build()
+        );
     }
 }
