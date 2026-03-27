@@ -379,6 +379,40 @@ public class TextureUtil {
         return null;
     }
 
+    public static ResourceLocation getRockTexture(Rock rock, Rock.BlockType type){
+
+        switch(type){
+            case RAW, HARDENED, SPIKE -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/raw/" + rock.getSerializedName());
+            }
+            case LOOSE, COBBLE -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
+            }
+            case MOSSY_LOOSE, MOSSY_COBBLE -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
+            }
+            case GRAVEL -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/gravel/" + rock.getSerializedName());
+            }
+            case SMOOTH, BUTTON, PRESSURE_PLATE -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/smooth/" + rock.getSerializedName());
+            }
+            case CHISELED -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/chiseled/" + rock.getSerializedName());
+            }
+            case BRICKS, AQUEDUCT -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/bricks/" + rock.getSerializedName());
+            }
+            case MOSSY_BRICKS -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/mossy_bricks/" + rock.getSerializedName());
+            }
+            case CRACKED_BRICKS -> {
+                return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/cracked_bricks/" + rock.getSerializedName());
+            }
+        }
+        return null;
+    }
+
     public static ResourceLocation getMetalBlockTexture(CoreMetals.MetalType metal){
 
         switch(metal){

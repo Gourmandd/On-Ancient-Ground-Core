@@ -177,6 +177,10 @@ public class BuiltinItemModels extends ItemModelProvider {
         });
 
         simpleItem(CoreBlocks.CLEAR_MOLTEN_GLASS.get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/molten_glass/clear"));
+
+        CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(this::simpleBlock);
+
+        CoreBlocks.MORTARED_CUSTOM_COBBLE.values().forEach(this::simpleBlock);
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){

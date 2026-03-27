@@ -19,6 +19,7 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
@@ -278,6 +279,16 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             this.tag(TFCTags.Items.TOOL_RACKS).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TOOL_RACK)));
             this.tag(TFCTags.Items.SLUICES).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SLUICE)));
         });
+
+        add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(
+                CoreTags.Items.MORTARED_COBBLE
+            )
+        );
+
+        add(CoreBlocks.MORTARED_CUSTOM_COBBLE, List.of(
+                CoreTags.Items.MORTARED_COBBLE
+            )
+        );
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Item>> tags ){

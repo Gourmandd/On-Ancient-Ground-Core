@@ -128,6 +128,12 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 pressurePlateBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.PRESSURE_PLATE), TextureUtil.getRockTexture(rock, Rock.BlockType.PRESSURE_PLATE));
                 buttonBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON), TextureUtil.getRockTexture(rock, Rock.BlockType.BUTTON));
             }
+
+            cubeAll(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rock), TextureUtil.getRockTexture(rock, Rock.BlockType.COBBLE));
+        });
+
+        Stream.of(Rock.values()).forEach(rock -> {
+            cubeAll(CoreBlocks.MORTARED_TFC_COBBLE.get(rock), TextureUtil.getRockTexture(rock, Rock.BlockType.COBBLE));
         });
 
         // metal blocks

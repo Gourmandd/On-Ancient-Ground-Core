@@ -175,7 +175,13 @@ public class CreativeTabs {
                     accept(out, CoreBlocks.ROCK_DECORATIONS.get(rock).get(type));
                 }
             }
+
             accept(out, CoreItems.BRICKS, rock);
+            accept(out, CoreBlocks.MORTARED_CUSTOM_COBBLE, rock);
+        }
+
+        for (Rock rock : Rock.values()){
+            accept(out, CoreBlocks.MORTARED_TFC_COBBLE, rock);
         }
     }
 

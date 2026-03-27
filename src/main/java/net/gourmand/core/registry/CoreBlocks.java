@@ -169,6 +169,15 @@ public class CoreBlocks {
             )
     );
 
+    public static final Map<Rock, DeferredHolder<Block, Block>> MORTARED_TFC_COBBLE = Helpers.mapOf(Rock.class, rock ->
+            register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)))
+    );
+
+    public static final Map<CoreRocks, DeferredHolder<Block, Block>> MORTARED_CUSTOM_COBBLE = Helpers.mapOf(CoreRocks.class, rock ->
+            register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)))
+    );
+
+
     public static final Map<CoreMetals.MetalType, DeferredHolder<Block, LiquidBlock>> METAL_FLUIDS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal ->
             registerNoItem("fluid/metal/" + metal.name(), () -> new LiquidBlock(CoreFluids.METALS.get(metal).getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()))
     );

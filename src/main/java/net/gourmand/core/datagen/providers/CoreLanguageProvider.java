@@ -69,6 +69,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             addBlock(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(tree), getName(tree.name()) + " Potted Sapling");
         });
 
+        // custom clay types.
         Stream.of(CoreClay.values()).forEach(clay -> {
             Stream.of(CoreClay.ItemType.values()).forEach(type -> {
                 if (type.hasType(clay)){
@@ -82,6 +83,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             add("item." + AncientGroundCore.MODID + ".ceramic." + clay.getSerializedName() + ".jug.filled", "%s " + getName(clay.name()) + " Jug");
         });
 
+        // custom rocks.
         Stream.of(CoreRocks.values()).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
                 if (rock.hasVariant(type)){
@@ -106,6 +108,12 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 }
             });
             addItem(CoreItems.BRICKS.get(rock), getName(rock.name()) + " Brick");
+            addBlock(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rock), "Mortared " + getName(rock.name()) + " Cobble");
+        });
+
+        // tfc rocks.
+        Stream.of(Rock.values()).forEach(rock -> {
+            addBlock(CoreBlocks.MORTARED_TFC_COBBLE.get(rock), "Mortared " + getName(rock.name()) + " Cobble");
         });
 
         Stream.of(CoreDeeperDownWood.values()).forEach(wood -> {
@@ -117,6 +125,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             addItem(CoreItems.LUMBER.get(wood), getName(wood.name()) + " Twig");
         });
 
+        // custom metals.
         Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
             Stream.of(Metal.ItemType.values()).forEach(itemType -> {
                 if (itemType.has(metal.getLikeMetal())){
@@ -151,6 +160,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
         add(CoreItems.CLEAR_GLASS_FLUID_BUCKET.get(), "Clear Glass Bucket");
         add(CoreFluids.CLEAR_GLASS.type().get().getDescriptionId(), "Clear Glass");
 
+        // custom ores.
         Stream.of(CoreOres.values()).forEach(ore -> {
 
             if (ore.hasBlock()){
@@ -185,6 +195,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             }
         });
 
+        // tfc ores.
         Stream.of(Ore.values()).forEach(ore -> {
 
             if (ore.hasBlock()){
@@ -200,6 +211,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             }
         });
 
+        // glass.
         Stream.of(DyeColor.values()).forEach(color -> {
             addItem(() -> CoreItems.COLORED_LENS.get(color).get(), getName(color.getSerializedName()) + " Lens");
             addBlock(() -> CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get(), getName(color.getSerializedName()) + " Molten Glass");

@@ -52,7 +52,7 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
         // adds #c:ores to this tag to be able to isolate and get ore blocks.
         this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).addTag(Tags.Blocks.ORES);
 
-        this.tag(CoreTags.SNOW_SHOVEL_MINEABLE).add(
+        this.tag(CoreTags.Blocks.SNOW_SHOVEL_MINEABLE).add(
                 Blocks.SNOW.builtInRegistryHolder().key(),
                 Blocks.SNOW_BLOCK.builtInRegistryHolder().key(),
                 TFCBlocks.SNOW_PILE.key(),
@@ -80,6 +80,26 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
         add(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES, List.of(
                 BlockTags.MINEABLE_WITH_AXE,
                 TFCTags.Blocks.FRUIT_TREE_BRANCH)
+        );
+
+        add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(
+                BlockTags.MINEABLE_WITH_PICKAXE,
+                TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
+                TFCTags.Blocks.CAN_COLLAPSE,
+                TFCTags.Blocks.CAN_START_COLLAPSE,
+                Tags.Blocks.STONES,
+                CoreTags.Blocks.MORTARED_COBBLE
+            )
+        );
+
+        add(CoreBlocks.MORTARED_CUSTOM_COBBLE, List.of(
+                BlockTags.MINEABLE_WITH_PICKAXE,
+                TFCTags.Blocks.CAN_START_COLLAPSE,
+                TFCTags.Blocks.CAN_COLLAPSE,
+                TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
+                Tags.Blocks.STONES,
+                CoreTags.Blocks.MORTARED_COBBLE
+            )
         );
 
         Stream.of(CoreRocks.values()).forEach(rock -> {

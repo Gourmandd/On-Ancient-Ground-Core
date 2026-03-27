@@ -80,7 +80,7 @@ public class CoreItems {
 
     public static final DeferredHolder<Item, Item> CLEAR_GLASS_FLUID_BUCKET = register("bucket/glass/clear", () -> new BucketItem(CoreFluids.CLEAR_GLASS.source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
-    public static final DeferredHolder<Item, ToolItem> SNOW_SHOVEL = ITEMS.register("tool/snow_shovel", () -> new ToolItem(TFCTiers.STEEL, CoreTags.SNOW_SHOVEL_MINEABLE, new Item.Properties().durability(3200).stacksTo(0).setNoRepair()));
+    public static final DeferredHolder<Item, ToolItem> SNOW_SHOVEL = ITEMS.register("tool/snow_shovel", () -> new ToolItem(TFCTiers.STEEL, CoreTags.Blocks.SNOW_SHOVEL_MINEABLE, new Item.Properties().durability(3200).stacksTo(0).setNoRepair()));
     public static final DeferredHolder<Item, Item> SNOW_SHOVEL_HEAD = ITEMS.register("tool/snow_shovel_head", CoreItems::basicItem);
 
     public static final DeferredHolder<Item, MoldItem> GLASS_MOLD = ITEMS.register("glass_mold", ()-> new MoldItem(() -> 800, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(1)));

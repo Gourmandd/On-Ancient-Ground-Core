@@ -271,6 +271,14 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                 }
             });
         });
+
+        CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(holder -> {
+            this.dropSelf(holder.get());
+        });
+
+        CoreBlocks.MORTARED_CUSTOM_COBBLE.values().forEach(holder -> {
+            this.dropSelf(holder.get());
+        });
     }
 
     private void generateWood(){

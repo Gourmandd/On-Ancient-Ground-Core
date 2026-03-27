@@ -16,12 +16,6 @@ import java.util.Map;
 
 public class CoreTags {
 
-    private static TagKey<Block> createBlockTag(String name){
-        return TagKey.create(
-                Registries.BLOCK,
-                ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, name)
-        );
-    }
 
     private static TagKey<Fluid> createFluidTag(String name){
         return TagKey.create(
@@ -30,11 +24,24 @@ public class CoreTags {
         );
     }
 
-    public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = createBlockTag( "snow_shovel_mineable");
     public static final TagKey<Fluid> GLASS_MOLD_ACCEPTABLE = createFluidTag( "molten_glass");
     public static final TagKey<Fluid> WROUGHT_IRON_BUCKET_ACCEPTABLE = createFluidTag( "usable_in_wrought_iron_bucket");
 
-    public class Items {
+    public static class Blocks {
+
+        private static TagKey<Block> tag(String name, String key){
+            return TagKey.create(
+                    Registries.BLOCK,
+                    ResourceLocation.fromNamespaceAndPath(name, key)
+            );
+        }
+
+        public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = tag( AncientGroundCore.MODID,"snow_shovel_mineable");
+
+        public static final TagKey<Block> MORTARED_COBBLE = tag( AncientGroundCore.MODID,"cobblestones/mortared");
+    }
+
+    public static class Items {
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
         }
@@ -76,5 +83,7 @@ public class CoreTags {
         public static final TagKey<Item> CLAY_BALLS = tag("clay_balls");
 
         public static final TagKey<Item> CLAY_BRICKS = tag("clay_bricks");
+
+        public static final TagKey<Item> MORTARED_COBBLE = tag( AncientGroundCore.MODID,"cobblestones/mortared");
     }
 }
