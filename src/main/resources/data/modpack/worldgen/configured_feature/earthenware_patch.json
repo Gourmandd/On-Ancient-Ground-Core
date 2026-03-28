@@ -1,0 +1,42 @@
+{
+  "type": "tfc:soil_disc",
+  "config": {
+    "min_radius": 3,
+    "max_radius": 5,
+    "height": 4,
+    "states": [
+      {
+        "replace": "tfc:dirt/entisol",
+        "with": "modpack:ceramic/clay_block/earthenware"
+      },
+      {
+        "replace": "tfc:dirt/aridisol",
+        "with": "modpack:ceramic/clay_block/earthenware"
+      },
+      {
+        "replace": "tfc:dirt/oxisol",
+        "with": "modpack:ceramic/clay_block/earthenware"
+      },
+      {
+        "replace": "tfc:dirt/fluvisol",
+        "with": "modpack:ceramic/clay_block/earthenware"
+      },
+      {
+        "replace": "tfc:dirt/andisol",
+        "with": "modpack:ceramic/clay_block/earthenware"
+      },
+      {
+        "replace": "tfc:dirt/podzol",
+        "with": "modpack:ceramic/clay_block/earthenware"
+      },
+      {
+        "replace": "tfc:dirt/alfisol",
+        "with": "modpack:ceramic/clay_block/earthenware"
+      },
+      {
+        "replace": "tfc:dirt/mollisol",
+        "with": "modpack:ceramic/clay_block/earthenware"
+      }
+    ]
+  }
+}
