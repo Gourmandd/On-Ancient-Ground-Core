@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "modpack:block/ceramic/clay_block/earthenware"
+    }
+  }
+}

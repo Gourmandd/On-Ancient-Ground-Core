@@ -63,6 +63,11 @@
     "modpack:rock/mossy_bricks/serpentine_slab",
     "modpack:rock/bricks/serpentine_slab",
     "modpack:rock/cracked_bricks/serpentine_slab",
-    "modpack:rock/smooth/serpentine_slab"
+    "modpack:rock/smooth/serpentine_slab",
+    "modpack:ceramic/bricks/yixing_slab",
+    "modpack:ceramic/bricks/yellowware_slab",
+    "modpack:ceramic/bricks/porcelain_slab",
+    "modpack:ceramic/bricks/kaolinite_slab",
+    "modpack:ceramic/bricks/earthenware_slab"
   ]
 }

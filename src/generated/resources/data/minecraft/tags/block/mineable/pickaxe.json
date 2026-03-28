@@ -1548,6 +1548,26 @@
     "modpack:rock/mossy_loose/serpentine",
     "modpack:rock/pressure_plate/serpentine",
     "modpack:rock/button/serpentine",
-    "modpack:rock/aqueduct/serpentine"
+    "modpack:rock/aqueduct/serpentine",
+    "modpack:ceramic/bricks/yixing",
+    "modpack:ceramic/bricks/yixing_stairs",
+    "modpack:ceramic/bricks/yixing_slab",
+    "modpack:ceramic/bricks/yixing_wall",
+    "modpack:ceramic/bricks/yellowware",
+    "modpack:ceramic/bricks/yellowware_stairs",
+    "modpack:ceramic/bricks/yellowware_slab",
+    "modpack:ceramic/bricks/yellowware_wall",
+    "modpack:ceramic/bricks/porcelain",
+    "modpack:ceramic/bricks/porcelain_stairs",
+    "modpack:ceramic/bricks/porcelain_slab",
+    "modpack:ceramic/bricks/porcelain_wall",
+    "modpack:ceramic/bricks/kaolinite",
+    "modpack:ceramic/bricks/kaolinite_stairs",
+    "modpack:ceramic/bricks/kaolinite_slab",
+    "modpack:ceramic/bricks/kaolinite_wall",
+    "modpack:ceramic/bricks/earthenware",
+    "modpack:ceramic/bricks/earthenware_stairs",
+    "modpack:ceramic/bricks/earthenware_slab",
+    "modpack:ceramic/bricks/earthenware_wall"
   ]
 }

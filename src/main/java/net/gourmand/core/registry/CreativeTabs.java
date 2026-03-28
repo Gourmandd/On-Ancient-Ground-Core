@@ -206,6 +206,19 @@ public class CreativeTabs {
                     out.accept(CoreItems.CERAMICS.get(clay).get(type).get());
                 }
             }
+
+            Stream.of(CoreClay.BlockType.values()).forEach(type -> {
+
+                if (type.hasClayType(clay)){
+                    out.accept(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get());
+                }
+
+                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
+                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair().get());
+                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab().get());
+                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall().get());
+                }
+            });
         }
     }
 

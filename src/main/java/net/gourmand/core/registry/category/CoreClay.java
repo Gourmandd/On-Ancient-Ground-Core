@@ -4,9 +4,13 @@ import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.items.JugItem;
 import net.dries007.tfc.common.items.VesselItem;
 import net.dries007.tfc.config.TFCConfig;
+import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.util.RegistryClay;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import org.jetbrains.annotations.NotNull;
 
@@ -146,9 +150,71 @@ public enum CoreClay implements RegistryClay {
         }
     }
 
+    public enum BlockType implements StringRepresentable {
+
+        CLAY_BLOCK(BlockPartType.REDUCED_BLOCK, Blocks.CLAY),
+        BRICKS(BlockPartType.BLOCK_SET, Blocks.BRICKS);
+
+        private final BlockPartType type;
+        private final Function<CoreClay, Block> blockFactory;
+        private final BlockBehaviour.Properties blockProperties;
+        private final String serializedName;
+
+        BlockType(BlockPartType type, Block copyBlock){
+            this(type, BlockBehaviour.Properties.ofFullCopy(copyBlock));
+        }
+
+        BlockType(BlockPartType type, BlockBehaviour.Properties blockProperties){
+            this(type, clay -> new Block(blockProperties), blockProperties);
+        }
+
+        BlockType(BlockPartType type, Function<CoreClay, Block> blockFactory, BlockBehaviour.Properties blockProperties){
+            this.type = type;
+            this.blockFactory = blockFactory;
+            this.blockProperties = blockProperties;
+            this.serializedName = name().toLowerCase(Locale.ROOT);
+        }
+
+        public SlabBlock createSlab(CoreClay clay){
+            return new SlabBlock(this.blockProperties.mapColor(clay.mapColor()));
+        }
+
+        public StairBlock createStairs(CoreClay clay){
+            return new StairBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(this).get().defaultBlockState() ,this.blockProperties.mapColor(clay.mapColor()));
+        }
+
+        public WallBlock createWall(CoreClay clay){
+            return new WallBlock(this.blockProperties.mapColor(clay.mapColor()));
+        }
+
+        public Block getBlock(CoreClay clay){
+            return this.blockFactory.apply(clay);
+        }
+
+        public boolean hasClayType(CoreClay clay)
+        {
+            return !(clay.hasReducedSet() && getType() == BlockPartType.REDUCED_BLOCK);
+        }
+
+        public BlockPartType getType() {
+            return type;
+        }
+
+        @Override
+        public String getSerializedName() {
+            return serializedName;
+        }
+    }
+
     public enum ItemPartType
     {
         // reduced item means that clay types with reducedSet: true won't have this item.
-        UNFIRED_MOLD, ITEM, REDUCED_ITEM;
+        UNFIRED_MOLD, ITEM, REDUCED_ITEM
+    }
+
+    public enum BlockPartType
+    {
+        // reduced block means that clay types with reducedSet: true won't have this block.
+        BLOCK, BLOCK_SET, REDUCED_BLOCK
     }
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/ceramic/bricks/yixing_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/ceramic/bricks/yixing"
+    },
+    "type=top": {
+      "model": "modpack:block/ceramic/bricks/yixing_slab_top"
+    }
+  }
+}

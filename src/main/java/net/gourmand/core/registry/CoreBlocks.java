@@ -177,6 +177,23 @@ public class CoreBlocks {
             register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)))
     );
 
+    public static final Map<CoreClay, Map<CoreClay.BlockType, DeferredHolder<Block, Block>>> CERAMIC_BLOCKS = Helpers.mapOf(CoreClay.class, clay ->
+            Helpers.mapOf(CoreClay.BlockType.class, type -> type.hasClayType(clay), type ->
+                    register("ceramic/" + type.getSerializedName() + "/" + clay.getSerializedName(), () -> type.getBlock(clay))
+            )
+    );
+
+    public static final Map<CoreClay, Map<CoreClay.BlockType, CoreDecorationBlockHolder>> CERAMIC_DECORATION_BLOCKS = Helpers.mapOf(CoreClay.class, clay ->
+            Helpers.mapOf(CoreClay.BlockType.class, type -> type.hasClayType(clay) && type.getType() == CoreClay.BlockPartType.BLOCK_SET, type ->
+                    registerDecorations(
+                            "ceramic/" + type.getSerializedName() + "/" + clay.name(),
+                            () -> type.createSlab(clay),
+                            () -> type.createStairs(clay),
+                            () -> type.createWall(clay),
+                            new Item.Properties()
+                    )
+            )
+    );
 
     public static final Map<CoreMetals.MetalType, DeferredHolder<Block, LiquidBlock>> METAL_FLUIDS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal ->
             registerNoItem("fluid/metal/" + metal.name(), () -> new LiquidBlock(CoreFluids.METALS.get(metal).getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()))

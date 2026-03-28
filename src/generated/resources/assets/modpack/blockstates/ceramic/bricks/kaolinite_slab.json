@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/ceramic/bricks/kaolinite_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/ceramic/bricks/kaolinite"
+    },
+    "type=top": {
+      "model": "modpack:block/ceramic/bricks/kaolinite_slab_top"
+    }
+  }
+}

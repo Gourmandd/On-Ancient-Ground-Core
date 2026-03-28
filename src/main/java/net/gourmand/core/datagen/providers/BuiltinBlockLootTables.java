@@ -143,6 +143,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         generateMetal();
         generateRock();
         generateWood();
+        generateMisc();
 
         Stream.of(DyeColor.values()).forEach(color -> {
             this.dropSelf(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
@@ -287,10 +288,38 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
             Stream.of(Wood.BlockType.values()).forEach( type -> {
                 if (wood.hasBlockType(type)){
                     if (type == Wood.BlockType.SLUICE){
-                        this.add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get() ,LootTableBuilders.createSluiceTable(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get()));
+                        this.add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get(), LootTableBuilders.createSluiceTable(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get()));
                     } else {
                         this.dropSelf(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get());
                     }
+                }
+            });
+        });
+    }
+
+    private void generateMisc(){
+
+        Stream.of(DyeColor.values()).forEach(color -> {
+            this.dropSelf(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
+        });
+
+        this.dropSelf(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
+
+        Stream.of(CoreClay.values()).forEach(clay -> {
+            Stream.of(CoreClay.BlockType.values()).forEach(type -> {
+
+                if (type.hasClayType(clay)){
+                    if (type == CoreClay.BlockType.CLAY_BLOCK){
+                        this.add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), LootTableBuilders.createClayBlockTable(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.CLAY_BALL).get()));
+                    } else {
+                        this.dropSelf(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get());
+                    }
+                }
+
+                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
+                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair().get());
+                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab().get());
+                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall().get());
                 }
             });
         });

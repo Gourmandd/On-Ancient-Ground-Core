@@ -219,6 +219,22 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
         addBlock(CoreBlocks.CLEAR_MOLTEN_GLASS, "Clear Molten Glass");
 
+        Stream.of(CoreClay.values()).forEach(clay -> {
+            Stream.of(CoreClay.BlockType.values()).forEach(type -> {
+
+                if (type.hasClayType(clay)){
+                    addBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), getName(clay.getSerializedName()) + " Clay");
+                }
+
+                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
+                    String baseName = getName(clay.getSerializedName()) + " " + getName(type.getSerializedName()) + " ";
+                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair(), baseName + "Stairs");
+                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab(), baseName + "Slab");
+                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall(), baseName + "Wall");
+                }
+            });
+        });
+
 //        // Adds a translation with the given key and the given value.
 //        add("translation.key.1", "Translation 1");
 //

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "modpack:block/ceramic/bricks/yixing",
+    "side": "modpack:block/ceramic/bricks/yixing",
+    "top": "modpack:block/ceramic/bricks/yixing"
+  }
+}

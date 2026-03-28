@@ -290,6 +290,41 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
 
             this.tag(TFCTags.Blocks.CAN_BE_SNOW_PILED).add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG).getKey());
         });
+
+        Stream.of(CoreClay.values()).forEach(clay -> {
+
+            if (CoreClay.BlockType.CLAY_BLOCK.hasClayType(clay)){
+
+                this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                        .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.CLAY_BLOCK).getKey());
+
+                this.tag(TFCTags.Blocks.HALOPHYTE_PLANTABLE_ON)
+                        .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.CLAY_BLOCK).getKey());
+
+                this.tag(TFCTags.Blocks.GRASS_PLANTABLE_ON)
+                        .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.CLAY_BLOCK).getKey());
+
+                this.tag(TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON)
+                        .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.CLAY_BLOCK).getKey());
+            }
+
+            if (CoreClay.BlockType.BRICKS.hasClayType(clay)){
+                this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                        .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).getKey())
+                        .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).stair().getKey())
+                        .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).slab().getKey())
+                        .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).wall().getKey());
+
+                this.tag(BlockTags.WALLS)
+                        .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).wall().getKey());
+
+                this.tag(BlockTags.SLABS)
+                        .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).slab().getKey());
+
+                this.tag(BlockTags.STAIRS)
+                        .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).stair().getKey());
+            }
+        });
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){

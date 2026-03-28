@@ -15,6 +15,10 @@
     "modpack:rock/gravel/soapstone",
     "modpack:rock/gravel/blueschist",
     "modpack:rock/gravel/peridotite",
-    "modpack:rock/gravel/serpentine"
+    "modpack:rock/gravel/serpentine",
+    "modpack:ceramic/clay_block/yixing",
+    "modpack:ceramic/clay_block/yellowware",
+    "modpack:ceramic/clay_block/porcelain",
+    "modpack:ceramic/clay_block/earthenware"
   ]
 }

@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-25T17:15:01.478902138	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-03-28T09:35:10.55223767	Tags for minecraft:block mod id modpack
 0f0e87285b9cb3318313154fd78f425ca50a7da7 data/c/tags/block/cobblestones.json
 0ddd863158f5fb454bf35b313a37d957d5ed9cb7 data/c/tags/block/cobblestones/mossy.json
 adedb65a2a966b6157ee808231af42ef18a34528 data/c/tags/block/cobblestones/normal.json
@@ -15,15 +15,16 @@ a6e48c3094597b4c40960632f712d64f7fd0f93c data/c/tags/block/stones/spike.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
 efaeb68ba98302552a5fd373e76414707d90bf20 data/minecraft/tags/block/mineable/axe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/minecraft/tags/block/mineable/hoe.json
-9f2c6d459953ca708fe3dc4c93a609df0081d85b data/minecraft/tags/block/mineable/pickaxe.json
-730599181c3a13fa28a48cfee809bf4251780608 data/minecraft/tags/block/mineable/shovel.json
+0a21d71381310d22bfeb84529960f48e4c0673f8 data/minecraft/tags/block/mineable/pickaxe.json
+fd6a79cd0dd4db7268b6becc6a70ecdbcec904db data/minecraft/tags/block/mineable/shovel.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/pressure_plates.json
-a92cd9aac886231b1153c3948d09eb9998ee0e01 data/minecraft/tags/block/slabs.json
-6bb76676565efe58b9a60a0b1a380d4173b35c16 data/minecraft/tags/block/stairs.json
+db2bd5b61617507a8bd2b8b70d840a9ed4b53e92 data/minecraft/tags/block/slabs.json
+9669c4a66e2fa2821cef9ae2f666bb4cd68e4071 data/minecraft/tags/block/stairs.json
 240ae9f95f4f3a20feb49ad673f4df89e267fb94 data/minecraft/tags/block/stone_bricks.json
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/block/stone_buttons.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/stone_pressure_plates.json
-49d83fc23f88ec28a70557cb9887191d1c7aac99 data/minecraft/tags/block/walls.json
+b2516985051666e9ad3bc5fd29e6d1ab914d1e5f data/minecraft/tags/block/walls.json
+16c89ae367b1aacf0dae7ed637f92bff3dd19cad data/modpack/tags/block/cobblestones/mortared.json
 341d3a8bcca759951f2de06dcbc28ef705e7d73d data/modpack/tags/block/snow_shovel_mineable.json
 4ef81c7d65af5e3969757fe2c2e27f20650c920a data/spectrum/tags/block/azurite_ores.json
 331fe2b78218a2a68777d834b9adaf57316422f2 data/spectrum/tags/block/shimmerstone_ores.json
@@ -37,8 +38,11 @@ a5c2ae79b8f281a1544b571ea0121792b47ca8d7 data/tfc/tags/block/can_trigger_collaps
 25a1a97177a06510355cad081a3ec15029c150f9 data/tfc/tags/block/fruit_tree_branches.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/tfc/tags/block/fruit_tree_leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/fruit_tree_saplings.json
+b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/grass_plantable_on.json
+b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/halophyte_plantable_on.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/hoe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/knife.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/scythe.json
 2b578fd891bfd583d4a8ea5c644c742337612537 data/tfc/tags/block/prospectable.json
+b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/sea_bush_plantable_on.json
 98548d218f2823032aa12a4a80260591cef9b1ad data/tfc/tags/block/support_beams.json

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/ceramic/bricks/yellowware_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/ceramic/bricks/yellowware"
+    },
+    "type=top": {
+      "model": "modpack:block/ceramic/bricks/yellowware_slab_top"
+    }
+  }
+}

@@ -2,9 +2,9 @@
   "credit": "Made with Blockbench",
   "parent": "block/block",
   "textures": {
-      "0": "modpack:block/clay/yellowware_clay_block",
-      "1": "modpack:block/clay/yellowware_clay_block",
-      "particle": "modpack:block/clay/yellowware_clay_block"
+      "0": "modpack:block/ceramic/clay_block/yellowware",
+      "1": "modpack:block/ceramic/clay_block/yellowware",
+      "particle": "modpack:block/ceramic/clay_block/yellowware"
   },
   "elements": [
       {

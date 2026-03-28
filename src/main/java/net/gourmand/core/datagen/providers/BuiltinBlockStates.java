@@ -8,10 +8,7 @@ import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
-import net.gourmand.core.registry.category.CoreMetals;
-import net.gourmand.core.registry.category.CoreOres;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
-import net.gourmand.core.registry.category.CoreRocks;
+import net.gourmand.core.registry.category.*;
 import net.gourmand.core.util.TextureUtil;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -162,6 +159,22 @@ public class BuiltinBlockStates extends BlockStateProvider {
         });
 
         moltenGlassBlock(CoreBlocks.CLEAR_MOLTEN_GLASS);
+
+        Stream.of(CoreClay.values()).forEach(clay -> {
+            Stream.of(CoreClay.BlockType.values()).forEach(type -> {
+                ResourceLocation texture = TextureUtil.getCeramicBlockTexture(type, clay);
+
+                if (type.hasClayType(clay)){
+                    cubeAll(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), texture);
+                }
+
+                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
+                    stairsBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair(), texture);
+                    slabBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).getId()));
+                    wallBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall(), getBlockModelString(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).getId()), texture);
+                }
+            });
+        });
     }
 
 

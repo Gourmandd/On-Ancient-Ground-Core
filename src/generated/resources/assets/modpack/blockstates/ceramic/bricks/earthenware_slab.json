@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/ceramic/bricks/earthenware_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/ceramic/bricks/earthenware"
+    },
+    "type=top": {
+      "model": "modpack:block/ceramic/bricks/earthenware_slab_top"
+    }
+  }
+}

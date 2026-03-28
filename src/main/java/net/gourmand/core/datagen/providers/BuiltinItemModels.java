@@ -181,6 +181,22 @@ public class BuiltinItemModels extends ItemModelProvider {
         CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(this::simpleBlock);
 
         CoreBlocks.MORTARED_CUSTOM_COBBLE.values().forEach(this::simpleBlock);
+
+
+        Stream.of(CoreClay.values()).forEach(clay -> {
+            Stream.of(CoreClay.BlockType.values()).forEach(type -> {
+
+                if (type.hasClayType(clay)){
+                    simpleBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type));
+                }
+
+                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
+                    simpleBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair());
+                    simpleBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab());
+                    wallInventory(getItemModelString(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall().getId()), TextureUtil.getCeramicBlockTexture(type, clay));
+                }
+            });
+        });
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){

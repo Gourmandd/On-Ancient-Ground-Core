@@ -329,4 +329,11 @@ public class LootTableBuilders {
                         )
                 );
     }
+
+    protected static LootTable.Builder createClayBlockTable(Block block, Item item){
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
+                        .add(LootItem.lootTableItem(item)).apply(SetItemCountFunction.setCount(new UniformGenerator(ConstantValue.exactly(2), ConstantValue.exactly(4))))
+                );
+    }
 }

@@ -7,10 +7,7 @@ import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.registry.category.CoreMetals;
-import net.gourmand.core.registry.category.CoreOres;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
-import net.gourmand.core.registry.category.CoreRocks;
+import net.gourmand.core.registry.category.*;
 import net.minecraft.resources.ResourceLocation;
 import org.violetmoon.quark.base.Quark;
 
@@ -455,5 +452,10 @@ public class TextureUtil {
 
     public static ResourceLocation getStrippedLogTopTexture(CoreDeeperDownWood wood){
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
+    }
+
+    public static ResourceLocation getCeramicBlockTexture(CoreClay.BlockType type, CoreClay clay){
+
+        return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/ceramic/" + type.getSerializedName() + "/" + clay.getSerializedName());
     }
 }

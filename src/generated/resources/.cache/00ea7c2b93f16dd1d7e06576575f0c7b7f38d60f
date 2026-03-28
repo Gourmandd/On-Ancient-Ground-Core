@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-25T17:15:01.465758324	Item Models: modpack
+// 1.21.1	2026-03-28T08:49:39.73025756	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -37,6 +37,30 @@ b220df8a3ead2c8fbcc461c44fa1afa89436af40 assets/modpack/models/item/bucket/glass
 022a15034470e32a50c4df5d23c3c83f41358c2a assets/modpack/models/item/bucket/metal/aluminium.json
 e16f332428bca97ae3c453865f20caedca30dfc7 assets/modpack/models/item/bucket/metal/electrum.json
 a71133d0dff5091168a4353aab367e4028d9ddc5 assets/modpack/models/item/bucket/metal/lead.json
+b2178d62f43be1cdf5fc673b0af89794f6d5556b assets/modpack/models/item/ceramic/bricks/earthenware.json
+cd6c024acfd407c56cafb79c6b64ffbc1c6ecbfb assets/modpack/models/item/ceramic/bricks/earthenware_slab.json
+1f26a905d665eb7f9fec033e0338c38e8a58b98f assets/modpack/models/item/ceramic/bricks/earthenware_stairs.json
+cea52577b5362e55a33d939ea643ced65488c99d assets/modpack/models/item/ceramic/bricks/earthenware_wall.json
+a06df020c4853f756fe5a2777163e47710ff1971 assets/modpack/models/item/ceramic/bricks/kaolinite.json
+1e284ecb6bb781ba6eb4ee29787ccb7e195fe4c3 assets/modpack/models/item/ceramic/bricks/kaolinite_slab.json
+2f227f0375fc7180fa589a22aea3eea05ff91755 assets/modpack/models/item/ceramic/bricks/kaolinite_stairs.json
+6df9ecb4282af1d4129193263c9cf550c1090fb5 assets/modpack/models/item/ceramic/bricks/kaolinite_wall.json
+e637aa7dead027c3988fb90348eae42e23ffe4c6 assets/modpack/models/item/ceramic/bricks/porcelain.json
+69517959bea1e7c0453c813e745ff424a2e0e913 assets/modpack/models/item/ceramic/bricks/porcelain_slab.json
+07f8fee98d5a18c648c35d9fdb9a699a6790c79e assets/modpack/models/item/ceramic/bricks/porcelain_stairs.json
+e988f961536eb4563129f8c9c7d5fcc373a9cf7c assets/modpack/models/item/ceramic/bricks/porcelain_wall.json
+94487fd663e00ab86b5832515a1c1ed1334db40e assets/modpack/models/item/ceramic/bricks/yellowware.json
+9d4a98a4d3c711ea6eea83e6ea7eef2f6998bc75 assets/modpack/models/item/ceramic/bricks/yellowware_slab.json
+f0939946e8c7a37aa60338e8ec71050fe027b87b assets/modpack/models/item/ceramic/bricks/yellowware_stairs.json
+25b6d06d178fa436539c83d0788cad59d2f3b505 assets/modpack/models/item/ceramic/bricks/yellowware_wall.json
+d25a01705e20b6586286e385c70f66750bd01e6d assets/modpack/models/item/ceramic/bricks/yixing.json
+d8240cf2b708e67b91615ea3455c580705dc6401 assets/modpack/models/item/ceramic/bricks/yixing_slab.json
+e1b1106faf83ed1d185d63f66f1f90d7f53dd843 assets/modpack/models/item/ceramic/bricks/yixing_stairs.json
+f146a47bd8a40d8803d2a7b38ce6041e0a9e648f assets/modpack/models/item/ceramic/bricks/yixing_wall.json
+dc74c6d96b28f05a6a9a53bf456b9465dc8e3cf5 assets/modpack/models/item/ceramic/clay_block/earthenware.json
+5123e2e26de64d7ae7f35cba6f5bc1d29b6409ca assets/modpack/models/item/ceramic/clay_block/porcelain.json
+251170842a725be1be2a743114ccd5ecf37c49ca assets/modpack/models/item/ceramic/clay_block/yellowware.json
+fdaa18d30605d0406804299a18a6eba1ca03e72e assets/modpack/models/item/ceramic/clay_block/yixing.json
 8dca9cc9d320f25d499ad8a703d660bce253c1c3 assets/modpack/models/item/ceramic/earthenware/brick.json
 b85d9c68198a2918d535feb1ec5bfd448baa5156 assets/modpack/models/item/ceramic/earthenware/clay_ball.json
 ac2f89e57812a156b3dfce33942d488f3e37a977 assets/modpack/models/item/ceramic/earthenware/unfired_axe_head_mold.json
