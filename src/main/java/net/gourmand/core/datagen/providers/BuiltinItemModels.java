@@ -218,7 +218,7 @@ public class BuiltinItemModels extends ItemModelProvider {
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
         ResourceLocation textureTop = TextureUtil.getStrippedLogTopTexture(wood);
 
-        this.getBuilder(getItemModelString(item)).parent(new ModelFile.UncheckedModelFile("tfc:block/wood/support/inventory_vex")).texture("vertical", texture).texture("vertical", texture).texture("top", textureTop).texture("partical", texture);
+        this.getBuilder(getItemModelString(item)).parent(new ModelFile.UncheckedModelFile("tfc:block/wood/support/inventory_vex")).texture("vertical", texture).texture("horizontal", texture).texture("top", textureTop).texture("partical", texture);
     }
 
     private void mossyLooseItem(DeferredHolder<Block, ? extends Block> block, CoreRocks rock){

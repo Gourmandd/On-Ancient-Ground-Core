@@ -1,6 +1,7 @@
 {
   "parent": "tfc:block/wood/support/inventory_vex",
   "textures": {
+    "horizontal": "spectrum:block/stripped_green_log",
     "partical": "spectrum:block/stripped_green_log",
     "top": "spectrum:block/stripped_green_log_top",
     "vertical": "spectrum:block/stripped_green_log"

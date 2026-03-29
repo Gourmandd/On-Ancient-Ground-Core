@@ -1,6 +1,7 @@
 {
   "parent": "tfc:block/wood/support/inventory_vex",
   "textures": {
+    "horizontal": "spectrum:block/stripped_pink_log",
     "partical": "spectrum:block/stripped_pink_log",
     "top": "spectrum:block/stripped_pink_log_top",
     "vertical": "spectrum:block/stripped_pink_log"

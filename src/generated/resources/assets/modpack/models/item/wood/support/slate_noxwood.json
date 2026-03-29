@@ -1,6 +1,7 @@
 {
   "parent": "tfc:block/wood/support/inventory_vex",
   "textures": {
+    "horizontal": "spectrum:block/stripped_slate_noxcap_stem",
     "partical": "spectrum:block/stripped_slate_noxcap_stem",
     "top": "spectrum:block/stripped_slate_noxcap_stem_top",
     "vertical": "spectrum:block/stripped_slate_noxcap_stem"

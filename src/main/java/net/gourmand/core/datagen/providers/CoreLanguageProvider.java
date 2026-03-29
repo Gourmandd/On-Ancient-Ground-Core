@@ -118,10 +118,11 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
         Stream.of(CoreDeeperDownWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach(type -> {
-                if (wood.hasBlockType(type)){
+                if (type.needsItem() && wood.hasBlockType(type)){
                     addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type), getName(wood.name()) + " " + getName(type.name()));
                 }
             });
+            addItem(CoreItems.SUPPORTS.get(wood), getName(wood.name()) + " Support");
             addItem(CoreItems.LUMBER.get(wood), getName(wood.name()) + " Twig");
         });
 
