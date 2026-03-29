@@ -2,6 +2,7 @@ package net.gourmand.core.registry;
 
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
@@ -32,6 +33,8 @@ public class CreativeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS = register("tools", () -> new ItemStack(CoreItems.SNOW_SHOVEL), CreativeTabs::fillTools);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CERAMICS = register("ceramics", () -> new ItemStack(CoreItems.CERAMICS.get(CoreClay.YIXING).get(CoreClay.ItemType.VESSEL)), CreativeTabs::fillCeramics);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GLASS = register("glass", () -> new ItemStack(CoreBlocks.CLEAR_MOLTEN_GLASS.get()), CreativeTabs::fillGlass);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MISC = register("misc", () -> new ItemStack(CoreBlocks.PRISMATIC_ICE.get()), CreativeTabs::fillMisc);
+
 
     private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
@@ -224,13 +227,17 @@ public class CreativeTabs {
 
     private static void fillWood(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
-        for (CoreDeeperDownWood wood : CoreDeeperDownWood.values()){
-            CoreBlocks.DEEPER_DOWN_WOODS.get(wood).forEach((type,reg) -> {
-                if (type.needsItem() && wood.hasBlockType(type)) {
+        for (CoreDeeperDownWood wood : CoreDeeperDownWood.values())
+        {
+            CoreBlocks.DEEPER_DOWN_WOODS.get(wood).forEach((type,reg) ->
+            {
+                if (type.needsItem() && wood.hasBlockType(type))
+                {
                     out.accept(reg.get());
                 }
             });
 
+            out.accept(CoreItems.SUPPORTS.get(wood).get());
             out.accept(CoreItems.LUMBER.get(wood).get());
         }
     }
@@ -243,6 +250,13 @@ public class CreativeTabs {
         });
 
         out.accept(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
+    }
+
+    private static void fillMisc(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+
+        out.accept(CoreBlocks.SLUDGE.get());
+        out.accept(CoreBlocks.PRISMATIC_ICE.get());
     }
 
     private static <R extends DeferredHolder<?, ?>, K1, K2> void accept(CreativeModeTab.Output out, Map<K1, Map<K2, R>> map, K1 key1, K2 key2)
@@ -267,7 +281,8 @@ public class CreativeTabs {
         }
     }
 
-    private static DeferredHolder<CreativeModeTab, CreativeModeTab> register(String id, Supplier<ItemStack> icon, CreativeModeTab.DisplayItemsGenerator gen){
+    private static DeferredHolder<CreativeModeTab, CreativeModeTab> register(String id, Supplier<ItemStack> icon, CreativeModeTab.DisplayItemsGenerator gen)
+    {
         return CREATIVE_TABS.register(id, () -> CreativeModeTab.builder()
                 .icon(icon)
                 .title(Component.translatable("item_group." + id + "." + AncientGroundCore.MODID))
