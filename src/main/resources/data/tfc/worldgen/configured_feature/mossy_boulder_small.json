@@ -1,0 +1,259 @@
+{
+  "type": "tfc:baby_boulder",
+  "config": {
+    "states": [
+      {
+        "rock": "tfc:rock/raw/granite",
+        "blocks": [
+          "tfc:rock/cobble/granite",
+          "tfc:rock/mossy_cobble/granite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/diorite",
+        "blocks": [
+          "tfc:rock/cobble/diorite",
+          "tfc:rock/mossy_cobble/diorite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gabbro",
+        "blocks": [
+          "tfc:rock/cobble/gabbro",
+          "tfc:rock/mossy_cobble/gabbro"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/shale",
+        "blocks": [
+          "tfc:rock/cobble/shale",
+          "tfc:rock/mossy_cobble/shale"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/claystone",
+        "blocks": [
+          "tfc:rock/cobble/claystone",
+          "tfc:rock/mossy_cobble/claystone"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/limestone",
+        "blocks": [
+          "tfc:rock/cobble/limestone",
+          "tfc:rock/mossy_cobble/limestone"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/conglomerate",
+        "blocks": [
+          "tfc:rock/cobble/conglomerate",
+          "tfc:rock/mossy_cobble/conglomerate"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dolomite",
+        "blocks": [
+          "tfc:rock/cobble/dolomite",
+          "tfc:rock/mossy_cobble/dolomite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chert",
+        "blocks": [
+          "tfc:rock/cobble/chert",
+          "tfc:rock/mossy_cobble/chert"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chalk",
+        "blocks": [
+          "tfc:rock/cobble/chalk",
+          "tfc:rock/mossy_cobble/chalk"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/tuff",
+        "blocks": [
+          "tfc:rock/cobble/tuff",
+          "tfc:rock/mossy_cobble/tuff"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/rhyolite",
+        "blocks": [
+          "tfc:rock/cobble/rhyolite",
+          "tfc:rock/mossy_cobble/rhyolite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/basalt",
+        "blocks": [
+          "tfc:rock/cobble/basalt",
+          "tfc:rock/mossy_cobble/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/andesite",
+        "blocks": [
+          "tfc:rock/cobble/andesite",
+          "tfc:rock/mossy_cobble/andesite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dacite",
+        "blocks": [
+          "tfc:rock/cobble/dacite",
+          "tfc:rock/mossy_cobble/dacite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/quartzite",
+        "blocks": [
+          "tfc:rock/cobble/quartzite",
+          "tfc:rock/mossy_cobble/quartzite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/slate",
+        "blocks": [
+          "tfc:rock/cobble/slate",
+          "tfc:rock/mossy_cobble/slate"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/phyllite",
+        "blocks": [
+          "tfc:rock/cobble/phyllite",
+          "tfc:rock/mossy_cobble/phyllite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/schist",
+        "blocks": [
+          "tfc:rock/cobble/schist",
+          "tfc:rock/mossy_cobble/schist"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gneiss",
+        "blocks": [
+          "tfc:rock/cobble/gneiss",
+          "tfc:rock/mossy_cobble/gneiss"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/marble",
+        "blocks": [
+          "tfc:rock/cobble/marble",
+          "tfc:rock/mossy_cobble/marble"
+        ]
+      },
+      {
+        "rock": "modpack:rock/raw/peridotite",
+        "blocks": [
+            "modpack:rock/mossy_cobble/peridotite",
+            "modpack:rock/cobble/peridotite"
+        ]
+      },
+      {
+        "rock": "modpack:rock/raw/serpentine",
+        "blocks": [
+            "modpack:rock/mossy_cobble/serpentine",
+            "modpack:rock/cobble/serpentine"
+        ]
+      },
+      {
+        "rock": "modpack:rock/raw/blueschist",
+        "blocks": [
+            "modpack:rock/mossy_cobble/blueschist",
+            "modpack:rock/cobble/blueschist"
+        ]
+      },
+      {
+        "rock": "create:scoria",
+        "blocks": [
+            "modpack:rock/mossy_cobble/komatiite",
+            "modpack:rock/cobble/komatiite"
+        ]
+      },
+      {
+        "rock":  "caupona:felsic_tuff",
+        "blocks": [
+           "modpack:rock/mossy_cobble/breccia",
+            "modpack:rock/cobble/breccia"
+        ]
+      },
+      {
+        "rock": "minecraft:stone",
+        "blocks": [
+            "modpack:rock/mossy_cobble/argillite",
+            "modpack:rock/cobble/argillite"
+        ]
+      },
+      {
+        "rock": "minecraft:deepslate",
+        "blocks": [
+            "modpack:rock/mossy_cobble/nephelinite",
+            "modpack:rock/cobble/nephelinite"
+        ]
+      },
+      {
+        "rock": "spectrum:blackslag",
+        "blocks": [
+            "modpack:rock/mossy_cobble/blackslag",
+            "modpack:rock/cobble/blackslag"
+        ]
+      },
+      {
+        "rock": "spectrum:basal_marble",
+        "blocks": [
+            "modpack:rock/mossy_cobble/picrite_basalt",
+            "modpack:rock/cobble/picrite_basalt"
+        ]
+      },
+      {
+        "rock": "create:ochrum",
+        "blocks": [
+            "modpack:rock/mossy_cobble/sandstone",
+            "modpack:rock/cobble/sandstone"
+        ]
+      },
+      {
+        "rock": "create:limestone",
+        "blocks": [
+            "modpack:rock/mossy_cobble/soapstone",
+            "modpack:rock/cobble/soapstone"
+        ]
+      },
+      {
+        "rock": "create:scorchia",
+        "blocks": [
+            "modpack:rock/mossy_cobble/suevite",
+            "modpack:rock/cobble/suevite"
+        ]
+      },
+      {
+        "rock": "quark:limestone",
+        "blocks": [
+            "modpack:rock/mossy_cobble/arkose",
+            "modpack:rock/cobble/arkose"
+        ]
+      },
+      {
+        "rock": "quark:shale",
+        "blocks": [
+            "modpack:rock/mossy_cobble/phonolite",
+            "modpack:rock/cobble/phonolite"
+        ]
+      },
+      {
+        "rock": "quark:jasper",
+        "blocks": [
+            "modpack:rock/mossy_cobble/red_sandstone",
+            "modpack:rock/cobble/red_sandstone"
+        ]
+      }
+    ]
+  }
+}
