@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-28T08:49:39.73025756	Item Models: modpack
+// 1.21.1	2026-03-29T17:28:29.748229188	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -1429,6 +1429,7 @@ d037d32bc1a99cbc0e5ed8c79d712d56b574303f assets/modpack/models/item/ore/topaz/se
 bcc56df01ee572b29b7b260851a40d83a9e59d6d assets/modpack/models/item/ore/topaz/soapstone.json
 fc3f98d45c2a4039e90a3c9f4b38ac3b60bb3fd7 assets/modpack/models/item/ore/topaz/suevite.json
 48c7d6364056d1691e1126e95f1f50310719e3bc assets/modpack/models/item/ore/topaz/travertine.json
+41358c5b81b631a8940c2dd17e02f5bbbd80299b assets/modpack/models/item/prismatic_ice.json
 b8baa01ab63af8c468da6406c916bf89a061de47 assets/modpack/models/item/rock/aqueduct/argillite.json
 9771cc5067582704bd1fc2f033c498d7daa2c503 assets/modpack/models/item/rock/aqueduct/arkose.json
 88409ea99e61cd0a02dbcc6568f526f9e309c533 assets/modpack/models/item/rock/aqueduct/blackslag.json
@@ -1779,6 +1780,7 @@ e50bc4b9cf9d590c520a657ab607f3bf9e749250 assets/modpack/models/item/rock/spike/p
 3023a39c29c2c6cf9ec835005574eaa22c86478a assets/modpack/models/item/rock/spike/soapstone.json
 9b6a7306e8bf0358f4f9a98561a3f99dca5d6f42 assets/modpack/models/item/rock/spike/suevite.json
 baf032dd21cfaa44e85022c7d33f11237a3cccc4 assets/modpack/models/item/rock/spike/travertine.json
+d2ee205d2b6b8086f7a3365a8f8cf11c2f935053 assets/modpack/models/item/sludge.json
 96b941dbd4d7596037e308a6739395b739812c41 assets/modpack/models/item/wood/loom/black.json
 a86894b425f2f0c9ad766d680d321f9fe63617fc assets/modpack/models/item/wood/loom/blue.json
 b17902bc6913cde2971861defce054de2d1cf55e assets/modpack/models/item/wood/loom/brown.json

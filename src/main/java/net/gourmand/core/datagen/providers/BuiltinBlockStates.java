@@ -175,6 +175,9 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 }
             });
         });
+
+        cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/prismatic_ice" ));
+        cubeAll(CoreBlocks.SLUDGE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/sludge" ));
     }
 
 

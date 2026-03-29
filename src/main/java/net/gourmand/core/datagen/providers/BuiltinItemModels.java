@@ -197,6 +197,9 @@ public class BuiltinItemModels extends ItemModelProvider {
                 }
             });
         });
+
+        simpleBlock(CoreBlocks.PRISMATIC_ICE);
+        simpleBlock(CoreBlocks.SLUDGE);
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){

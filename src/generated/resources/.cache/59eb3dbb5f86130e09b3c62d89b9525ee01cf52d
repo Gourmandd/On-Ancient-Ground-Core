@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-28T09:28:16.677763938	Loot Tables
+// 1.21.1	2026-03-29T17:11:14.848610165	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -1235,6 +1235,7 @@ e4db848f31eae7de815bc129708cab834142a546 data/modpack/loot_table/blocks/plant/wo
 9364493068ebe31d2f06b0085131069cd50ea35d data/modpack/loot_table/blocks/plant/wolfberry_growing_branch.json
 fc72d69a4757c204fc5ee6b6db04badc8962c23d data/modpack/loot_table/blocks/plant/wolfberry_leaves.json
 687ed14c32eef6493f1c936d95c607ca50352c18 data/modpack/loot_table/blocks/plant/wolfberry_sapling.json
+664dc1cf926297c952ed894c72ca012a6a8b81b3 data/modpack/loot_table/blocks/prismatic_ice.json
 41f253c754d5c811103d1c7d18288a057c00e82e data/modpack/loot_table/blocks/rock/aqueduct/argillite.json
 1e2b7aa0be53781eb32f79d7a73752707995f907 data/modpack/loot_table/blocks/rock/aqueduct/arkose.json
 49aebc076694481cdebab382a1cba82e1c00e374 data/modpack/loot_table/blocks/rock/aqueduct/blackslag.json
@@ -1623,6 +1624,7 @@ aac3e1da5a2a381370df01ac4547b51d332d33ac data/modpack/loot_table/blocks/rock/spi
 ab271c78e1b50f762df9283af72785fd54d1fb13 data/modpack/loot_table/blocks/rock/spike/soapstone.json
 3fa54a84ff378189ca685210ac935d3688adedbd data/modpack/loot_table/blocks/rock/spike/suevite.json
 f45973b8c598eec8fe0153589ac0f965f57a7e04 data/modpack/loot_table/blocks/rock/spike/travertine.json
+a5fe135e8f2894b81899358dd5eb4a8f8ce506f1 data/modpack/loot_table/blocks/sludge.json
 4f7d5e4b8608973d8c106197d01467ad06f0e32c data/modpack/loot_table/blocks/wild_crop/amaranth.json
 65c06711bb9e6331de315c8508c3d61e19c237b9 data/modpack/loot_table/blocks/wild_crop/coffee.json
 a27121b3f2f4af14e424f8d73a35e27bc81fbfc5 data/modpack/loot_table/blocks/wild_crop/cotton.json

@@ -323,6 +323,9 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                 }
             });
         });
+
+        this.dropOther(CoreBlocks.SLUDGE.get(), Items.AIR);
+        this.dropOther(CoreBlocks.PRISMATIC_ICE.get(), Items.AIR);
     }
 
     private LootTable.Builder createFruitTreeLeavesTable(CoreFruitTrees tree){

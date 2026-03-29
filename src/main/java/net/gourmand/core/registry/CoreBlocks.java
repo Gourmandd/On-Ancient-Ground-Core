@@ -1,5 +1,6 @@
 package net.gourmand.core.registry;
 
+import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -10,6 +11,7 @@ import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
+import net.gourmand.core.registry.blocks.MeltableBLock;
 import net.gourmand.core.registry.category.*;
 import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.minecraft.core.BlockPos;
@@ -205,11 +207,13 @@ public class CoreBlocks {
 
     public static final DeferredHolder<Block, LiquidBlock> CLEAR_GLASS_FLUID = registerNoItem("fluid/glass/clear", () -> new LiquidBlock(CoreFluids.CLEAR_GLASS.getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()));
 
+    public static final DeferredHolder<Block, Block> PRISMATIC_ICE = register("prismatic_ice", () -> new MeltableBLock(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE).mapColor(MapColor.COLOR_PINK), SpectrumBlocks.LIQUID_CRYSTAL.get().defaultBlockState()));
+    public static final DeferredHolder<Block, Block> SLUDGE = register("sludge", () -> new MeltableBLock(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE).mapColor(MapColor.TERRACOTTA_BROWN), SpectrumBlocks.SLUDGE.get().defaultBlockState()));
+
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {
         return true;
     }
-
 
     private static <T1 extends SlabBlock, T2 extends StairBlock, T3 extends WallBlock> CoreDecorationBlockHolder registerDecorations(String baseName, Supplier<T1> slab, Supplier<T2> stair, Supplier<T3> wall, Item.Properties properties)
     {
