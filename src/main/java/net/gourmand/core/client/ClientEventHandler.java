@@ -8,6 +8,7 @@ import net.dries007.tfc.client.render.blockentity.LoomBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.PlacedItemBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.ToolRackBlockEntityRenderer;
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.fluids.TFCFluids;
 import net.gourmand.core.registry.CoreBlockEntities;
@@ -134,6 +135,12 @@ public class ClientEventHandler {
                 }
             }
         }
+
+        Stream.of(CoreRocks.values()).forEach(rock -> {
+            Stream.of(OreDeposit.values()).forEach(ore -> {
+                ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get(), cutoutMipped);
+            });
+        });
     }
 
     public static void registerColorHandlerBlocks(RegisterColorHandlersEvent.Block event){

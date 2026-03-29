@@ -1,5 +1,6 @@
 package net.gourmand.core.datagen.providers;
 
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.ShelfBlock;
 import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.rock.*;
@@ -89,6 +90,12 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 });
             });
         });
+
+        for (CoreRocks rock : CoreRocks.values()){
+            for (OreDeposit ore : OreDeposit.values()){
+                oreDeposit(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), rock, ore);
+            }
+        }
 
         // rock blocks.
         Stream.of(CoreRocks.values()).forEach(rock -> {
@@ -203,6 +210,12 @@ public class BuiltinBlockStates extends BlockStateProvider {
     private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore, CoreOres.Grade grade){
         String allTexture = TextureUtil.getRawRockTexture(rock);
         String oreTexture = TextureUtil.getOreTexture(ore, grade);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
+    }
+
+    private void oreDeposit(DeferredHolder<Block, Block> block, CoreRocks rock, OreDeposit ore){
+        String allTexture = TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL).toString();
+        String oreTexture = TextureUtil.getOreTexture(ore);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 

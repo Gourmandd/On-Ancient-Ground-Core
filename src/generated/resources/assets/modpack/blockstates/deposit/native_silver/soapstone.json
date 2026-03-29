@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "modpack:block/deposit/native_silver/soapstone"
+    }
+  }
+}

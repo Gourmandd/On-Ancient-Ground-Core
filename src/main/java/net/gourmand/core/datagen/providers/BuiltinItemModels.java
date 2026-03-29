@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 import net.dries007.tfc.TerraFirmaCraft;
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -88,6 +89,12 @@ public class BuiltinItemModels extends ItemModelProvider {
                 });
             });
         });
+
+        for (CoreRocks rock : CoreRocks.values()){
+            for (OreDeposit ore : OreDeposit.values()){
+                simpleBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore));
+            }
+        }
 
         // rock blocks.
         Stream.of(CoreRocks.values()).forEach(rock -> {

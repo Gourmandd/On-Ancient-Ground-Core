@@ -161,6 +161,13 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
             this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
         });
 
+        Stream.of(CoreRocks.values()).forEach(rock -> {
+            add(CoreBlocks.ORE_DEPOSITS.get(rock), List.of(
+                    TFCTags.Blocks.CAN_LANDSLIDE,
+                    BlockTags.MINEABLE_WITH_SHOVEL
+            ));
+        });
+
         Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
             this.tag(BlockTags.SLABS).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB).getKey());
             this.tag(BlockTags.STAIRS).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS).getKey());

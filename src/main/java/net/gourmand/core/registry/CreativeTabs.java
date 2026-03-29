@@ -1,8 +1,8 @@
 package net.gourmand.core.registry;
 
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
@@ -141,6 +141,12 @@ public class CreativeTabs {
             else
             {
                 CoreBlocks.CUSTOM_ROCK_TFC_ORES.values().forEach(map -> accept(out, map, ore));
+            }
+        }
+
+        for (CoreRocks rock : CoreRocks.values()){
+            for (OreDeposit ore : OreDeposit.values()){
+                out.accept(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get());
             }
         }
     }

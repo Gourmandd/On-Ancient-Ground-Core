@@ -154,6 +154,12 @@ public class CoreBlocks {
             register(("ore/small_" + type.name()), () -> GroundcoverBlock.looseOre(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.05F, 0.0F).sound(SoundType.NETHER_ORE).noCollission().pushReaction(PushReaction.DESTROY)))
     );
 
+    public static final Map<CoreRocks, Map<OreDeposit, DeferredHolder<Block, Block>>> ORE_DEPOSITS = Helpers.mapOf(CoreRocks.class, rock ->
+            Helpers.mapOf(OreDeposit.class, ore ->
+                    register("deposit/" + ore.name() + "/" + rock.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.GRAVEL).strength(rock.category().hardness(2.0f))))
+            )
+    );
+
     public static final Map<CoreRocks, DeferredHolder<Block, Block>> MAGMA_BLOCKS = Helpers.mapOf(CoreRocks.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
             register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(ExtendedProperties.of().pathType(PathType.LAVA).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(CoreBlocks::always)), b -> new BlockItem(b, rock.createItemProperties()))
     );

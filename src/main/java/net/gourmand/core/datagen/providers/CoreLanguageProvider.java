@@ -2,6 +2,7 @@ package net.gourmand.core.datagen.providers;
 
 import com.klikli_dev.modonomicon.api.datagen.AbstractModonomiconLanguageProvider;
 import com.klikli_dev.modonomicon.api.datagen.ModonomiconLanguageProvider;
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -15,7 +16,9 @@ import net.gourmand.core.util.TextUtil;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import org.apache.commons.lang3.stream.Streams;
 
+import java.util.Locale;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
@@ -233,6 +236,12 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                     addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab(), baseName + "Slab");
                     addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall(), baseName + "Wall");
                 }
+            });
+        });
+
+        Stream.of(CoreRocks.values()).forEach(rock -> {
+            Streams.of(OreDeposit.values()).forEach(ore -> {
+                addBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), getName(rock.getSerializedName()) + " " + getName(ore.name().toLowerCase(Locale.ROOT)) + " Deposit");
             });
         });
 

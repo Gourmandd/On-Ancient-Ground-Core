@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "modpack:block/rock/gravel/red_sandstone",
+    "overlay": "tfc:block/ore/normal_native_copper"
+  }
+}

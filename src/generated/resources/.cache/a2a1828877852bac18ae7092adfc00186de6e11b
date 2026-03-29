@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-25T17:15:01.479381465	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-03-29T21:20:43.675014048	Tags for minecraft:item mod id modpack
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 b640843692bdc4754fb81667ad999ebcee6fc128 data/c/tags/item/clay_bricks.json
@@ -88,6 +88,7 @@ a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/can_be_lit_on_torch.
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/tfc/tags/item/fluid_item_ingredient_empty_containers.json
 df0a75d46911aae0147d30a3849d1a2dbf21c508 data/tfc/tags/item/looms.json
 62e6e1ed83fa606df559dd925f5cfe552f64afba data/tfc/tags/item/lumber.json
+6d9e12baa5f01ef983f6735595421cbf57d37e63 data/tfc/tags/item/ore_deposits.json
 19794141ae28f9266f50b60c1ce235367edde4fa data/tfc/tags/item/scribing_tables.json
 c5dac1fb2f237e8f98f11087d4b608c891623734 data/tfc/tags/item/sewing_tables.json
 d0cd34c4f53db7339b1630cccf4780ca8209550f data/tfc/tags/item/sluices.json

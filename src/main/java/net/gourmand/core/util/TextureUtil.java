@@ -3,6 +3,7 @@ package net.gourmand.core.util;
 import com.simibubi.create.Create;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.TerraFirmaCraft;
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.registry.RegistryRock;
@@ -339,6 +340,15 @@ public class TextureUtil {
                 return TerraFirmaCraft.MOD_ID + ":block/ore/poor/" + ore.name().toLowerCase(Locale.ROOT);
             }
             case null -> throw new AssertionError("Invalid grade");
+        }
+    }
+
+    public static String getOreTexture(OreDeposit ore){
+        switch (ore){
+            case NATIVE_COPPER, NATIVE_GOLD, NATIVE_SILVER, CASSITERITE -> {
+                return TerraFirmaCraft.MOD_ID + ":block/ore/normal_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case null -> throw new AssertionError("Invalid Ore");
         }
     }
 

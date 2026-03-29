@@ -19,7 +19,6 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
@@ -120,6 +119,12 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             this.tag(AZURITE_ORES).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE)));
             this.tag(SHIMMERSTONE_ORES).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE)));
         });
+
+        for (CoreRocks rock : CoreRocks.values()){
+            add(CoreBlocks.ORE_DEPOSITS.get(rock), List.of(
+                    TFCTags.Items.ORE_DEPOSITS
+            ));
+        }
 
         Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
             this.tag(Tags.Items.INGOTS).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.INGOT).getKey());

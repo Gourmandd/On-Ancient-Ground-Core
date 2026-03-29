@@ -2,6 +2,7 @@ package net.gourmand.core.datagen.providers;
 
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import de.dafuqs.spectrum.registries.SpectrumItems;
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.rock.Ore;
@@ -230,6 +231,12 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                 });
             });
         });
+
+        for (CoreRocks rock : CoreRocks.values()){
+            for (OreDeposit ore : OreDeposit.values()){
+                this.dropSelf(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get());
+            }
+        }
     }
 
     private void generateCrop(){
