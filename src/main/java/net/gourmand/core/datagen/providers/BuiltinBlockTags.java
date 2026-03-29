@@ -325,6 +325,13 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
                         .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).stair().getKey());
             }
         });
+
+        tag(CoreTags.Blocks.GEMSTONE_BLOCKS)
+                .add(Blocks.AMETHYST_BLOCK.builtInRegistryHolder().key())
+                .add(SpectrumBlocks.TOPAZ_BLOCK.getKey())
+                .add(SpectrumBlocks.CITRINE_BLOCK.getKey())
+                .add(SpectrumBlocks.ONYX_BLOCK.getKey())
+                .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){

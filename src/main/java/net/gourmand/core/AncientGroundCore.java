@@ -2,6 +2,7 @@ package net.gourmand.core;
 
 import net.gourmand.core.client.ClientEventHandler;
 import net.gourmand.core.datagen.DataEntryPoint;
+import net.gourmand.core.event.ServerEventHandler;
 import net.gourmand.core.registry.*;
 import net.gourmand.core.registry.items.CoreItemCapabilities;
 import net.neoforged.api.distmarker.Dist;
@@ -29,7 +30,7 @@ public class AncientGroundCore {
     public AncientGroundCore(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(CoreItemCapabilities::register);
-        modEventBus.addListener( DataEntryPoint::gatherData);
+        modEventBus.addListener(DataEntryPoint::gatherData);
 
         CoreBlocks.BLOCKS.register(modEventBus);
         CoreItems.ITEMS.register(modEventBus);
@@ -43,6 +44,7 @@ public class AncientGroundCore {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+        ServerEventHandler.init(NeoForge.EVENT_BUS, modContainer);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         //modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

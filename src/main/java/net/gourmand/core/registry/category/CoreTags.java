@@ -39,6 +39,8 @@ public class CoreTags {
         public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = tag( AncientGroundCore.MODID,"snow_shovel_mineable");
 
         public static final TagKey<Block> MORTARED_COBBLE = tag( AncientGroundCore.MODID,"cobblestones/mortared");
+
+        public static final TagKey<Block> GEMSTONE_BLOCKS = tag( AncientGroundCore.MODID,"gemstone_blocks");
     }
 
     public static class Items {
