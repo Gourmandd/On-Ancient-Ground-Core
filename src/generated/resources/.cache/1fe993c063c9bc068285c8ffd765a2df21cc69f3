@@ -1,9 +1,9 @@
-// 1.21.1	2026-03-29T21:20:43.674419869	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-03-30T09:35:26.819997996	Tags for minecraft:block mod id modpack
 0f0e87285b9cb3318313154fd78f425ca50a7da7 data/c/tags/block/cobblestones.json
 0ddd863158f5fb454bf35b313a37d957d5ed9cb7 data/c/tags/block/cobblestones/mossy.json
 adedb65a2a966b6157ee808231af42ef18a34528 data/c/tags/block/cobblestones/normal.json
 730599181c3a13fa28a48cfee809bf4251780608 data/c/tags/block/gravels.json
-2b578fd891bfd583d4a8ea5c644c742337612537 data/c/tags/block/ores.json
+1346f329bc89f154ebea26a067f2c0aed54d0a25 data/c/tags/block/ores.json
 b450db56a13311531dd28589723b26e25ddefd14 data/c/tags/block/stones.json
 6a28a649dd90f5cfddcb471fbfbf72afe059db88 data/c/tags/block/stones/hardened.json
 355f5133cc6ce091b387f28065344f8f2edd76e3 data/c/tags/block/stones/loose.json
@@ -15,7 +15,7 @@ a6e48c3094597b4c40960632f712d64f7fd0f93c data/c/tags/block/stones/spike.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
 efaeb68ba98302552a5fd373e76414707d90bf20 data/minecraft/tags/block/mineable/axe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/minecraft/tags/block/mineable/hoe.json
-0a21d71381310d22bfeb84529960f48e4c0673f8 data/minecraft/tags/block/mineable/pickaxe.json
+60eadc82464e9cd3dcf559b7d30431989deccbd7 data/minecraft/tags/block/mineable/pickaxe.json
 5a9a1c400e63afb29205df071f0764ca647f0b35 data/minecraft/tags/block/mineable/shovel.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/pressure_plates.json
 db2bd5b61617507a8bd2b8b70d840a9ed4b53e92 data/minecraft/tags/block/slabs.json
@@ -44,6 +44,6 @@ b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/halophyte_plantable
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/hoe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/knife.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/scythe.json
-2b578fd891bfd583d4a8ea5c644c742337612537 data/tfc/tags/block/prospectable.json
+1346f329bc89f154ebea26a067f2c0aed54d0a25 data/tfc/tags/block/prospectable.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/sea_bush_plantable_on.json
 98548d218f2823032aa12a4a80260591cef9b1ad data/tfc/tags/block/support_beams.json

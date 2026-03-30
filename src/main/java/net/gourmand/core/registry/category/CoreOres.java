@@ -29,6 +29,7 @@ public enum CoreOres implements RegistryOre {
     PALTAERIA(Type.NORMAL, SpectrumOreType.PALTAERIA),
     MALACHITE(Type.NORMAL, SpectrumOreType.MALACHITE),
     GALENA(Type.GRADED),
+    METEORIC_IRON(Type.ITEM_ONLY),
     ANTHRACITE(Type.ITEM_ONLY),
     BAUXITE(Type.ITEM_ONLY);
 

@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-29T21:20:43.660260207	Item Models: modpack
+// 1.21.1	2026-03-30T09:35:26.805958397	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -326,6 +326,7 @@ b35711754666db87af0b075a5e86e220a7a78b99 assets/modpack/models/item/metal/sheet/
 d0806b0a695331c6bed4134bc73b13ba61f87b3e assets/modpack/models/item/metal/sheet/hardened_steel.json
 f227b7185c6aa3718f4ee1437f47d87d7ff36a4a assets/modpack/models/item/metal/sheet/lead.json
 7124e5be10f3f0f032d78efeb1c5c638a9eb9a8c assets/modpack/models/item/metal/sheet/nethersteel.json
+d7c6e58cdc9783c1147de57f029cbc6662f13112 assets/modpack/models/item/meteoric_iron.json
 de573b4d74d25cc62f4bdd9ebecf574090ebe193 assets/modpack/models/item/molten_glass/black.json
 f2e45b7fd50e4511c5a803f3baf372a3b54926e6 assets/modpack/models/item/molten_glass/blue.json
 59cb246df8897802e964bc8f6812443b3790ea6c assets/modpack/models/item/molten_glass/brown.json
@@ -563,6 +564,7 @@ e93c99b3981761828468ad7603009ecaa8bd71dd assets/modpack/models/item/ore/malachit
 d6c6640dfe0d8fce9e9b6916cf7ffffc97c2c6d0 assets/modpack/models/item/ore/malachite/suevite.json
 ebacc2d9af2824123cca0ffed88b5381b6e674b0 assets/modpack/models/item/ore/malachite/travertine.json
 181acf6871d6ab56c021f441855aaeae1423cce3 assets/modpack/models/item/ore/malachite/tuff.json
+e67bfd0e4d9283f79f06d65274b166b834d44372 assets/modpack/models/item/ore/meteoric_iron.json
 764c867473a017d063966bd38c912da040de93df assets/modpack/models/item/ore/normal_bismuthinite/argillite.json
 0fe39f184e09cfda59fb9ea0cb409d01b7b30557 assets/modpack/models/item/ore/normal_bismuthinite/arkose.json
 429d9cff039e170fadecb889a779fe2ac2b51064 assets/modpack/models/item/ore/normal_bismuthinite/blackslag.json

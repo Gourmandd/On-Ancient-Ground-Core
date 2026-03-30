@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-29T21:20:43.687891891	Block States: modpack
+// 1.21.1	2026-03-30T09:35:26.83289623	Block States: modpack
 28ef1e55551722f68f204d793cc49f3d5e37320d assets/modpack/blockstates/anthracite.json
 916700fca3bb7acd96169872356a8367e8537559 assets/modpack/blockstates/bauxite.json
 64ad5ff574f6381ee7771836d592b3d17de0acb6 assets/modpack/blockstates/ceramic/bricks/earthenware.json
@@ -110,6 +110,7 @@ bb1484293a883b06ce6e8d77dd0d2a2635ff6b7d assets/modpack/blockstates/metal/block/
 7be8dd0ef7a5f8cc41ae352048fe58c42ef7a12c assets/modpack/blockstates/metal/block/nethersteel.json
 88e962c483c3d8949db66565ddab4ac63d50582f assets/modpack/blockstates/metal/block/nethersteel_slab.json
 00a78b120a785ad5599d8be62728b10c4f7397ea assets/modpack/blockstates/metal/block/nethersteel_stairs.json
+aba3e186964cd7d3ca2d1df6a20d6c3b0727a1bd assets/modpack/blockstates/meteoric_iron.json
 b47c2ec91df6a00e0fa4f227e5cef4f4c496b9f2 assets/modpack/blockstates/molten_glass/black.json
 1b3683bbc7a01b20333459f5fc05e2264f4b8f06 assets/modpack/blockstates/molten_glass/blue.json
 83e26a6cc5d77e225c0cb5a6f17b40ee54d35fab assets/modpack/blockstates/molten_glass/brown.json
@@ -2001,6 +2002,7 @@ cda40a5e75ced4e8f4e4eb8e7dfab62483ea04a4 assets/modpack/models/block/metal/block
 79952a535d89ca69a6cb86415e7db499c1bb5abb assets/modpack/models/block/metal/block/nethersteel_stairs.json
 2ff72cd3c9412033683ade53fd6b0aee1cd7cf8d assets/modpack/models/block/metal/block/nethersteel_stairs_inner.json
 7b9bc2a6c650821f40b8c68b94d2105e70430ccb assets/modpack/models/block/metal/block/nethersteel_stairs_outer.json
+658ea0ebde203a10666c82e5015289a7f08de773 assets/modpack/models/block/meteoric_iron.json
 87bc21e9244cb09189d7bf3db4a5506b1b068334 assets/modpack/models/block/molten_glass/black.json
 87bc21e9244cb09189d7bf3db4a5506b1b068334 assets/modpack/models/block/molten_glass/blue.json
 87bc21e9244cb09189d7bf3db4a5506b1b068334 assets/modpack/models/block/molten_glass/brown.json

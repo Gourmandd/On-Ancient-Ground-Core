@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-29T21:20:43.675737012	Loot Tables
+// 1.21.1	2026-03-30T09:35:26.821578602	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -120,6 +120,7 @@ dee9755614eb7071b1556515d2ce63eb871d227f data/modpack/loot_table/blocks/metal/bl
 c626cd65069ea86b9b1a9255f7d3bd71e0c31a9e data/modpack/loot_table/blocks/metal/block/nethersteel.json
 1c57ab4014e634f3307a4d33e8e28ee557038a80 data/modpack/loot_table/blocks/metal/block/nethersteel_slab.json
 9c99c5f2d1845644b45b4c057cdb46d5025e2bb7 data/modpack/loot_table/blocks/metal/block/nethersteel_stairs.json
+ff2ac5774be71e52da109cb346c0f109303f63c9 data/modpack/loot_table/blocks/meteoric_iron.json
 6125b8463e44b203894e89ef215fbbbfa4729f52 data/modpack/loot_table/blocks/molten_glass/black.json
 ba0005751e10be563de3a37bb9bc26cc9328610b data/modpack/loot_table/blocks/molten_glass/blue.json
 41f8820bf336fde87bead620e690ee2bc271b742 data/modpack/loot_table/blocks/molten_glass/brown.json

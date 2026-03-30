@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-19T18:22:49.625751517	Data Manager (item_heat)
+// 1.21.1	2026-03-30T11:04:40.429449119	Data Manager (item_heat)
 5e15164e9ed2130fc090282cf5f72e89ca5cfcbc data/modpack/tfc/item_heat/ceramic/earthenware/unfired_blowpipe.json
 694ec251572deee1bf12e4df7d8b00a14353d9f2 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_bowl.json
 40fdf255e0432562252a9b9a9e3209764558ad40 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_brick.json
@@ -95,6 +95,7 @@ b77ae87a8b98476e40c93dc2de9cff5074591952 data/modpack/tfc/item_heat/metal/sheet/
 342ea83994ecde412c94cda346e1ed9bd1a38491 data/modpack/tfc/item_heat/metal/sheet/hardened_steel.json
 b649f4b07d50e51b4beb165e403d28fd443caf33 data/modpack/tfc/item_heat/metal/sheet/lead.json
 3ce1f902f759bd510695bd7155813bbfec25d604 data/modpack/tfc/item_heat/metal/sheet/nethersteel.json
+35f5412b7ddd754802bc90ea22316371157912a9 data/modpack/tfc/item_heat/ore/meteoric_iron.json
 00f6b4d37e104497c1d547b120cbfdcecceb92e6 data/modpack/tfc/item_heat/ore/normal_galena.json
 ef70377b02569e1df69718083faff991d24e6bfd data/modpack/tfc/item_heat/ore/poor_galena.json
 c92eb252be759cba3febcd5bb98f190a83b899a0 data/modpack/tfc/item_heat/ore/rich_galena.json

@@ -1,11 +1,13 @@
 package net.gourmand.core.datagen.recipes;
 
 import net.dries007.tfc.common.component.forge.ForgeRule;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.common.recipes.AnvilRecipe;
 import net.dries007.tfc.common.recipes.outputs.ItemStackProvider;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreMetals;
+import net.gourmand.core.registry.category.CoreOres;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
@@ -38,6 +40,17 @@ public interface AnvilRecipes extends Recipes{
                     ItemStackProvider.of(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.ROD).get(), 2)
             );
         });
+
+        anvil(
+                CoreItems.ORES.get(CoreOres.METEORIC_IRON).get(),
+                Metal.COPPER.tier(),
+                List.of(
+                        ForgeRule.HIT_LAST,
+                        ForgeRule.HIT_SECOND_LAST,
+                        ForgeRule.HIT_THIRD_LAST
+                ),
+                TFCItems.METAL_ITEMS.get(Metal.WROUGHT_IRON).get(Metal.ItemType.INGOT).get()
+        );
     }
 
     private void anvil(ItemLike input, int tier, List<ForgeRule> rules, ItemLike output)

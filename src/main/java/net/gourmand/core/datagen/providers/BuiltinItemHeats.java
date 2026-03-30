@@ -61,6 +61,8 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
                 add(CoreBlocks.SMALL_ORES.get(ore).get(), 2.857143f, 138.0f, 184.0f);
             }
         });
+
+        add(CoreItems.ORES.get(CoreOres.METEORIC_IRON).get(), CategoryUtil.HeatCapacities.INGOT);
     }
 
     private void add(ItemLike item, float heatCapacity)

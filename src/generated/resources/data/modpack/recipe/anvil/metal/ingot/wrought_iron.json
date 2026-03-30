@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "modpack:ore/meteoric_iron"
+  },
+  "result": {
+    "count": 1,
+    "id": "tfc:metal/ingot/wrought_iron"
+  },
+  "rules": [
+    "hit_last",
+    "hit_second_last",
+    "hit_third_last"
+  ],
+  "tier": 1
+}
