@@ -1,11 +1,11 @@
 {
   "type": "tfc:cluster_vein",
   "config": {
-    "rarity": 20,
+    "rarity": 40,
     "density": 1,
     "min_y": 30,
     "max_y": 200,
-    "size": 10,
+    "size": 14,
     "random_name": "meteoric_iron",
     "blocks": [
         {
