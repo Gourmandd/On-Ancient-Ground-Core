@@ -1,0 +1,5 @@
+{
+  "fluid": "modpack:metal/electrum",
+  "melt_temperature": 1060.0,
+  "specific_heat_capacity": 0.008571429
+}

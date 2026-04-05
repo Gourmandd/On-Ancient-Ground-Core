@@ -1,0 +1,21 @@
+{
+  "values": [
+    "modpack:molten_glass/clear",
+    "modpack:molten_glass/white",
+    "modpack:molten_glass/orange",
+    "modpack:molten_glass/magenta",
+    "modpack:molten_glass/light_blue",
+    "modpack:molten_glass/yellow",
+    "modpack:molten_glass/lime",
+    "modpack:molten_glass/pink",
+    "modpack:molten_glass/gray",
+    "modpack:molten_glass/light_gray",
+    "modpack:molten_glass/cyan",
+    "modpack:molten_glass/purple",
+    "modpack:molten_glass/blue",
+    "modpack:molten_glass/brown",
+    "modpack:molten_glass/green",
+    "modpack:molten_glass/red",
+    "modpack:molten_glass/black"
+  ]
+}

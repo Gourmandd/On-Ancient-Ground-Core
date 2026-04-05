@@ -294,6 +294,12 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 CoreTags.Items.MORTARED_COBBLE
             )
         );
+
+        this.tag(CoreTags.Items.MOLTEN_GLASS).add(getKey(CoreBlocks.CLEAR_MOLTEN_GLASS.get()));
+        add(CoreBlocks.COLORED_MOLTEN_GLASS, List.of(
+                CoreTags.Items.MOLTEN_GLASS
+            )
+        );
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Item>> tags ){

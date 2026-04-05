@@ -1,0 +1,5 @@
+{
+  "fluid": "modpack:metal/aluminium",
+  "melt_temperature": 780.0,
+  "specific_heat_capacity": 0.008571429
+}

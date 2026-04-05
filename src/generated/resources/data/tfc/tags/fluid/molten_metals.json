@@ -1,0 +1,28 @@
+{
+  "values": [
+    "modpack:metal/aluminium",
+    "createbigcannons:molten_bronze",
+    "createbigcannons:molten_cast_iron",
+    "createbigcannons:molten_steel",
+    "createbigcannons:molten_nethersteel",
+    "modpack:metal/lead",
+    "modpack:metal/electrum",
+    "modpack:glass/white",
+    "modpack:glass/orange",
+    "modpack:glass/magenta",
+    "modpack:glass/light_blue",
+    "modpack:glass/yellow",
+    "modpack:glass/lime",
+    "modpack:glass/pink",
+    "modpack:glass/gray",
+    "modpack:glass/light_gray",
+    "modpack:glass/cyan",
+    "modpack:glass/purple",
+    "modpack:glass/blue",
+    "modpack:glass/brown",
+    "modpack:glass/green",
+    "modpack:glass/red",
+    "modpack:glass/black",
+    "modpack:glass/clear"
+  ]
+}

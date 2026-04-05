@@ -43,9 +43,11 @@ public final class DataEntryPoint
 
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinBlockTags(event, lookup));
+        add(event, new BuiltinFluidTags(event, lookup));
         add(event, new BuiltinItemTags(event, lookup));
         add(event, new BuiltinSupports(output, lookup));
         add(event, new BuiltinItemHeats(output, lookup));
+        add(event, new BuiltinFluidHeats(output, lookup));
         add(event, new BuiltinBlockStates(output, event.getExistingFileHelper()));
         add(event, new BuiltinItemModels(output, event.getExistingFileHelper()));
 

@@ -1,0 +1,5 @@
+{
+  "fluid": "modpack:metal/lead",
+  "melt_temperature": 320.0,
+  "specific_heat_capacity": 0.014285715
+}

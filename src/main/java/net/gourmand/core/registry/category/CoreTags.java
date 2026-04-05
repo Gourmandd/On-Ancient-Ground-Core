@@ -87,5 +87,7 @@ public class CoreTags {
         public static final TagKey<Item> CLAY_BRICKS = tag("clay_bricks");
 
         public static final TagKey<Item> MORTARED_COBBLE = tag( AncientGroundCore.MODID,"cobblestones/mortared");
+
+        public static final TagKey<Item> MOLTEN_GLASS = tag( AncientGroundCore.MODID,"molten_glass");
     }
 }
