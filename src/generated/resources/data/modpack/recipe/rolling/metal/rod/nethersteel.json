@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "modpack:metal/ingot/nethersteel"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "modpack:metal/rod/nethersteel"
+    }
+  ]
+}

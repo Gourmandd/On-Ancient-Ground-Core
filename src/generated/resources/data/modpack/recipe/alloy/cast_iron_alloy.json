@@ -1,0 +1,16 @@
+{
+  "type": "tfc:alloy",
+  "contents": [
+    {
+      "fluid": "tfc:metal/nickel",
+      "max": 0.3,
+      "min": 0.1
+    },
+    {
+      "fluid": "tfc:metal/cast_iron",
+      "max": 0.9,
+      "min": 0.7
+    }
+  ],
+  "result": "createbigcannons:molten_cast_iron"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "modpack:metal/double_ingot/hardened_steel"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:metal/sheet/hardened_steel"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 200,
+      "fluid": "createbigcannons:molten_cast_iron"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:metal/sheet/cast_iron_alloy"
+    }
+  ]
+}

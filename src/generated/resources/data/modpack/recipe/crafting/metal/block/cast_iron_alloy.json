@@ -1,0 +1,31 @@
+{
+  "type": "tfc:advanced_shaped_crafting",
+  "input_column": 2,
+  "key": {
+    "H": {
+      "tag": "c:tools/hammer"
+    },
+    "S": {
+      "item": "modpack:metal/sheet/cast_iron_alloy"
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    " SH",
+    "SWS",
+    " S "
+  ],
+  "remainder": {
+    "modifiers": [
+      {
+        "type": "tfc:damage_crafting_remainder"
+      }
+    ]
+  },
+  "result": {
+    "count": 8,
+    "id": "modpack:metal/block/cast_iron_alloy"
+  }
+}

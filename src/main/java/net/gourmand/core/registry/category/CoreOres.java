@@ -28,24 +28,34 @@ public enum CoreOres implements RegistryOre {
     STRATINE(Type.NORMAL, SpectrumOreType.STRATINE),
     PALTAERIA(Type.NORMAL, SpectrumOreType.PALTAERIA),
     MALACHITE(Type.NORMAL, SpectrumOreType.MALACHITE),
-    GALENA(Type.GRADED),
+    GALENA(Type.GRADED, CoreMetals.MetalType.LEAD),
     METEORIC_IRON(Type.ITEM_ONLY),
     ANTHRACITE(Type.ITEM_ONLY),
     BAUXITE(Type.ITEM_ONLY);
 
+    private final CoreMetals.MetalType metal;
     private final Type type;
     private final SpectrumOreType spectrumOreType;
     private final String serializedName;
 
     CoreOres(Type type)
     {
-        this.type = type;
-        this.spectrumOreType = SpectrumOreType.NONE;
-        this.serializedName = name().toLowerCase(Locale.ROOT);
+        this(type, SpectrumOreType.NONE);
+    }
+
+    CoreOres(Type type, CoreMetals.MetalType metal)
+    {
+        this(type, SpectrumOreType.NONE, metal);
     }
 
     CoreOres(Type type, SpectrumOreType spectrumOreType)
     {
+        this(type, spectrumOreType, null);
+    }
+
+    CoreOres(Type type, SpectrumOreType spectrumOreType, CoreMetals.MetalType metal)
+    {
+        this.metal = metal;
         this.type = type;
         this.spectrumOreType = spectrumOreType;
         this.serializedName = name().toLowerCase(Locale.ROOT);
@@ -64,6 +74,11 @@ public enum CoreOres implements RegistryOre {
     public boolean hasPowder()
     {
         return type != Type.NORMAL && type != Type.ITEM_ONLY;
+    }
+
+    public CoreMetals.MetalType metal()
+    {
+        return metal;
     }
 
     public boolean hasBlock()

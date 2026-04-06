@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "modpack:metal/ingot/electrum"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "modpack:metal/rod/electrum"
+    }
+  ]
+}

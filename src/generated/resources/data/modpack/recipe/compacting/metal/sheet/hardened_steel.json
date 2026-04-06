@@ -1,0 +1,16 @@
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 200,
+      "fluid": "createbigcannons:molten_steel"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:metal/sheet/hardened_steel"
+    }
+  ]
+}

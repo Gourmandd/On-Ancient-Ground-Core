@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "modpack:metal/ingot/cast_iron_alloy"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "modpack:metal/rod/cast_iron_alloy"
+    }
+  ]
+}

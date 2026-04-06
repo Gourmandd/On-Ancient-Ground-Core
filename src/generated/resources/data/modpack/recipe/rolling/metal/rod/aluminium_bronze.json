@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "modpack:metal/ingot/aluminium_bronze"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "modpack:metal/rod/aluminium_bronze"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+// 1.21.1	2026-04-06T08:58:53.393836783	modpack's processing recipes: rolling
+75da976cb3609e25160430694979f555b208f9cb data/modpack/recipe/rolling/metal/rod/aluminium.json
+3848a6c8f126fc987047d0b754b5ebdb1bad87b1 data/modpack/recipe/rolling/metal/rod/aluminium_bronze.json
+d72b597cf01e50b2d5ca02c83f39c7db84c4c40f data/modpack/recipe/rolling/metal/rod/cast_iron_alloy.json
+92815ef66b0af3e15dc1ba4c513b9de7cfc099f5 data/modpack/recipe/rolling/metal/rod/electrum.json
+1f6a595cf25f91eabceaafcff3b133ce25dca6db data/modpack/recipe/rolling/metal/rod/hardened_steel.json
+eacff7d0ed3f3713c1c3fb3eecda5f3e024276ec data/modpack/recipe/rolling/metal/rod/lead.json
+2479e65e91e463c8a08a08170bc9f8ff57d9d4ce data/modpack/recipe/rolling/metal/rod/nethersteel.json

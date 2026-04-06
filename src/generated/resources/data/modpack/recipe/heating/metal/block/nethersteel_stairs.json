@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:metal/block/nethersteel_stairs"
+  },
+  "result_fluid": {
+    "amount": 75,
+    "id": "createbigcannons:molten_nethersteel"
+  },
+  "temperature": 1615.0
+}

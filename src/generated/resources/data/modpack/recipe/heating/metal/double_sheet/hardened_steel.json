@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:metal/double_sheet/hardened_steel"
+  },
+  "result_fluid": {
+    "amount": 400,
+    "id": "createbigcannons:molten_steel"
+  },
+  "temperature": 1585.0
+}

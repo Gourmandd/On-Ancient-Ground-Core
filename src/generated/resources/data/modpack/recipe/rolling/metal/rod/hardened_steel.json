@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "modpack:metal/ingot/hardened_steel"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "modpack:metal/rod/hardened_steel"
+    }
+  ]
+}

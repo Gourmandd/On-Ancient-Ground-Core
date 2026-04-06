@@ -14,7 +14,7 @@ import net.minecraft.world.level.ItemLike;
 import java.util.List;
 import java.util.stream.Stream;
 
-public interface AnvilRecipes extends Recipes{
+public interface AnvilRecipes extends Recipes {
 
     default void anvilRecipes(){
 

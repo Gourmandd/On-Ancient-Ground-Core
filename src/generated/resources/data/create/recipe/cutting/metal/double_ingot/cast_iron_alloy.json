@@ -1,0 +1,15 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "modpack:metal/double_ingot/cast_iron_alloy"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "count": 2,
+      "id": "modpack:metal/ingot/cast_iron_alloy"
+    }
+  ]
+}

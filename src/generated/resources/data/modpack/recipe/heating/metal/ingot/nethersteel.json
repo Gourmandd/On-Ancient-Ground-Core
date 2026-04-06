@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:metal/ingot/nethersteel"
+  },
+  "result_fluid": {
+    "amount": 100,
+    "id": "createbigcannons:molten_nethersteel"
+  },
+  "temperature": 1615.0
+}

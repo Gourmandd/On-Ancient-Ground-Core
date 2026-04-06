@@ -1,8 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.datagen.recipes.AnvilRecipes;
-import net.gourmand.core.datagen.recipes.WeldingRecipes;
+import net.gourmand.core.datagen.recipes.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.PackOutput;
@@ -15,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 
-public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, AnvilRecipes {
+public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, AnvilRecipes, HeatingRecipes, CastingRecipes, CraftingRecipes, AlloyRecipes {
 
     RecipeOutput output;
     HolderLookup.Provider lookup;
@@ -31,6 +30,10 @@ public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, An
 
         weldingRecipes();
         anvilRecipes();
+        heatingRecipes();
+        castingRecipes();
+        craftingRecipes();
+        alloyingRecipes();
     }
 
     @Override

@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "modpack:metal/double_ingot/electrum"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:metal/sheet/electrum"
+    }
+  ]
+}

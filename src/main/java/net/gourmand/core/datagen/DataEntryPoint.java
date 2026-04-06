@@ -13,6 +13,10 @@ import com.klikli_dev.modonomicon.api.datagen.NeoBookProvider;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.book.guide.GuideBook;
 import net.gourmand.core.datagen.providers.*;
+import net.gourmand.core.datagen.recipes.CompactingRecipes;
+import net.gourmand.core.datagen.recipes.CuttingRecipes;
+import net.gourmand.core.datagen.recipes.PressingRecipes;
+import net.gourmand.core.datagen.recipes.RollingRecipes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.data.DataProvider;
@@ -39,8 +43,6 @@ public final class DataEntryPoint
                 new RegistrySetBuilder()
                 , Set.of(AncientGroundCore.MODID, "minecraft"))).getRegistryProvider();
 
-        add(event, new BuiltinRecipes(output, lookup));
-
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinBlockTags(event, lookup));
         add(event, new BuiltinFluidTags(event, lookup));
@@ -50,6 +52,12 @@ public final class DataEntryPoint
         add(event, new BuiltinFluidHeats(output, lookup));
         add(event, new BuiltinBlockStates(output, event.getExistingFileHelper()));
         add(event, new BuiltinItemModels(output, event.getExistingFileHelper()));
+
+        add(event, new BuiltinRecipes(output, lookup));
+        add(event, new CompactingRecipes(output, lookup));
+        add(event, new CuttingRecipes(output, lookup));
+        add(event, new RollingRecipes(output, lookup));
+        add(event, new PressingRecipes(output, lookup));
 
         addLoot(lookup, output, event, BuiltinBlockLootTables::new, LootContextParamSets.BLOCK);
 

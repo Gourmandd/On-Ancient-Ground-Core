@@ -1,0 +1,20 @@
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "modpack:metal/sheet/aluminium_bronze"
+    },
+    {
+      "item": "modpack:metal/sheet/aluminium_bronze"
+    },
+    {
+      "item": "tfc:powder/flux"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:metal/double_sheet/aluminium_bronze"
+    }
+  ]
+}

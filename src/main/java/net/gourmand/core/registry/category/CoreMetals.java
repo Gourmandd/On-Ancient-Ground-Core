@@ -13,6 +13,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.MapColor;
 import org.jetbrains.annotations.NotNull;
@@ -132,7 +133,7 @@ public class CoreMetals {
                     return false;
                 }
             }
-        };
+        }
 
         public Fluid getFluid(){
             switch (this){
@@ -147,6 +148,27 @@ public class CoreMetals {
                 }
                 case CAST_IRON_ALLOY -> {
                     return CBCFluids.MOLTEN_CAST_IRON.get().getSource();
+                }
+                default -> {
+                    assert !hasOtherFluid();
+                    return CoreFluids.METALS.get(this).getSource();
+                }
+            }
+        }
+
+        public FlowingFluid getFlowingFluid(){
+            switch (this){
+                case NETHERSTEEL -> {
+                    return CBCFluids.MOLTEN_NETHERSTEEL.get();
+                }
+                case ALUMINIUM_BRONZE -> {
+                    return CBCFluids.MOLTEN_BRONZE.get();
+                }
+                case HARDENED_STEEL -> {
+                    return CBCFluids.MOLTEN_STEEL.get();
+                }
+                case CAST_IRON_ALLOY -> {
+                    return CBCFluids.MOLTEN_CAST_IRON.get();
                 }
                 default -> {
                     assert !hasOtherFluid();

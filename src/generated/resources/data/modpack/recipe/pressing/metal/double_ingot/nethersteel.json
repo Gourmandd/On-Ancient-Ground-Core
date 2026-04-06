@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "modpack:metal/double_ingot/nethersteel"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:metal/sheet/nethersteel"
+    }
+  ]
+}

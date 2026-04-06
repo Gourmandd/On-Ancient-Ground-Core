@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "modpack:metal/double_ingot/lead"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:metal/sheet/lead"
+    }
+  ]
+}

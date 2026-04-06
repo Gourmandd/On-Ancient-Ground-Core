@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:metal/block/cast_iron_alloy_slab"
+  },
+  "result_fluid": {
+    "amount": 50,
+    "id": "createbigcannons:molten_cast_iron"
+  },
+  "temperature": 1535.0
+}

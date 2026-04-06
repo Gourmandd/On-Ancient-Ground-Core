@@ -1,5 +1,7 @@
 package net.gourmand.core.datagen;
 
+import net.dries007.tfc.common.fluids.TFCFluids;
+import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreMetals;
@@ -14,6 +16,7 @@ import net.minecraft.world.level.ItemLike;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.data.FluidHeat;
+import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 
 public interface Accessors
@@ -32,6 +35,16 @@ public interface Accessors
     {
         assert BuiltInRegistries.ITEM.containsKey(name) : "No item '" + name + "'";
         return BuiltInRegistries.ITEM.get(name);
+    }
+
+    default Fluid fluidOf(Metal metal)
+    {
+        return TFCFluids.METALS.get(metal).getSource();
+    }
+
+    default Fluid fluidOf(CoreMetals.MetalType metal)
+    {
+        return metal.getFluid();
     }
 
     default String nameOf(ItemLike item)
@@ -81,5 +94,10 @@ public interface Accessors
     default float temperatureOf(Metal metal)
     {
         return FluidHeat.MANAGER.getOrThrow(Helpers.identifier(metal.getSerializedName())).meltTemperature();
+    }
+
+    default float temperatureOf(CoreMetals.MetalType metal)
+    {
+        return FluidHeat.MANAGER.getOrThrow(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, metal.getSerializedName())).meltTemperature();
     }
 }

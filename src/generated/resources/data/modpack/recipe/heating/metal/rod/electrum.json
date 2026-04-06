@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:metal/rod/electrum"
+  },
+  "result_fluid": {
+    "amount": 50,
+    "id": "modpack:metal/electrum"
+  },
+  "temperature": 1060.0
+}

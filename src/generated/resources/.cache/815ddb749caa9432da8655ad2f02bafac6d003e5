@@ -1,0 +1,22 @@
+// 1.21.1	2026-04-05T22:03:56.993257157	modpack's processing recipes: compacting
+a338e2ce2271f70871fbffe2b521c16e1e85d192 data/modpack/recipe/compacting/metal/double_ingot/aluminium.json
+6542712598a90375466454ca71f03c5872e8b8fa data/modpack/recipe/compacting/metal/double_ingot/aluminium_bronze.json
+bb8d257920d2efb8967e3a5b490d1e3167dee2ab data/modpack/recipe/compacting/metal/double_ingot/cast_iron_alloy.json
+60b88b2f0cf14eca067ceef10865e877c419af2b data/modpack/recipe/compacting/metal/double_ingot/electrum.json
+2714d0279e2c70bbbed88db231690aef85eb9d3f data/modpack/recipe/compacting/metal/double_ingot/hardened_steel.json
+b02c63b0d56403e613d5e496643b943e877a9615 data/modpack/recipe/compacting/metal/double_ingot/lead.json
+6d70b80ef58dbc23dae30772d6d60058323948f5 data/modpack/recipe/compacting/metal/double_ingot/nethersteel.json
+da57b2a198e8c3526445989189b570ea0d1c5375 data/modpack/recipe/compacting/metal/double_sheet/aluminium.json
+a20ac9a141540d897bb9d0747fd281c6d2724220 data/modpack/recipe/compacting/metal/double_sheet/aluminium_bronze.json
+f51edb62f144e32060a211c7108f8c3ee932ea9f data/modpack/recipe/compacting/metal/double_sheet/cast_iron_alloy.json
+53db203d22cdc22cb67f8cef843f3e4862c664a6 data/modpack/recipe/compacting/metal/double_sheet/electrum.json
+5f0f56c0bf98e2910ed738df457d21555f9cd461 data/modpack/recipe/compacting/metal/double_sheet/hardened_steel.json
+2a03a99eae0ce061d2ff296be1380732b7faf5c9 data/modpack/recipe/compacting/metal/double_sheet/lead.json
+0912e4891075e2c31a300db6a64d7ce9183f6eb7 data/modpack/recipe/compacting/metal/double_sheet/nethersteel.json
+bce600b02fb096cee99ade1c5013a573f1e110e9 data/modpack/recipe/compacting/metal/sheet/aluminium.json
+ebef4f6dc2a116a6fe014601a4ace23c4319f133 data/modpack/recipe/compacting/metal/sheet/aluminium_bronze.json
+b9c72ce1fb6562bf500ef335e357b5c0ed25ef4a data/modpack/recipe/compacting/metal/sheet/cast_iron_alloy.json
+c81ae2519a3c0d5a689d605b78348698ea725365 data/modpack/recipe/compacting/metal/sheet/electrum.json
+f7c09326ce6dafe014fc6c39c3dcc9f412f9c604 data/modpack/recipe/compacting/metal/sheet/hardened_steel.json
+1d5850dbe40c05c436a77d3180c585d79e3443e4 data/modpack/recipe/compacting/metal/sheet/lead.json
+423fdec6a79bc837549ef0251d1d311298d9abee data/modpack/recipe/compacting/metal/sheet/nethersteel.json

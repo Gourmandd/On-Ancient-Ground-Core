@@ -1,0 +1,15 @@
+{
+  "type": "tfc:casting",
+  "break_chance": 0.01,
+  "fluid": {
+    "amount": 100,
+    "fluid": "createbigcannons:molten_cast_iron"
+  },
+  "mold": {
+    "item": "tfc:ceramic/fire_ingot_mold"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/ingot/cast_iron_alloy"
+  }
+}

@@ -195,6 +195,7 @@ dependencies {
     implementation ("com.klikli_dev:modonomicon-${minecraft_version}-neoforge:${modonomicon_version}"){transitive=false}
     implementation "curse.maven:quark-243121:7640331"
     implementation "curse.maven:zeta-968868:7640154"
+    implementation "curse.maven:createaddition-439890:7518252"
 
     // Create Big Cannons
     implementation "curse.maven:create-big-cannons-646668:7689060"

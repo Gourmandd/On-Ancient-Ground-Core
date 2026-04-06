@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:metal/sheet/lead"
+  },
+  "result_fluid": {
+    "amount": 200,
+    "id": "modpack:metal/lead"
+  },
+  "temperature": 320.0
+}

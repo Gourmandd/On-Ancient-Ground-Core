@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:metal/block/aluminium"
+  },
+  "result_fluid": {
+    "amount": 100,
+    "id": "modpack:metal/aluminium"
+  },
+  "temperature": 780.0
+}

@@ -1,0 +1,15 @@
+// 1.21.1	2026-04-05T22:08:39.346166749	modpack's processing recipes: cutting
+3d1142fec0d48477c529e41fb0dcbac7ff1981fc data/create/recipe/cutting/metal/double_ingot/aluminium.json
+41cd59c65a29fdce57ea9275e72f74e1e801deff data/create/recipe/cutting/metal/double_ingot/aluminium_bronze.json
+08bdfff54b8e96ff7cd16c6143d45a2bec31add2 data/create/recipe/cutting/metal/double_ingot/cast_iron_alloy.json
+9d6a239ce4b9e9a32b5befdc724dbac1b7ce87fc data/create/recipe/cutting/metal/double_ingot/electrum.json
+a4ec01eb6cbfcb89b7c394c985b740e487040882 data/create/recipe/cutting/metal/double_ingot/hardened_steel.json
+39dc20afdd9bb20dee3be741be8ee907846182ee data/create/recipe/cutting/metal/double_ingot/lead.json
+7ecff6340b0348b114a01181e7e593dd06011dac data/create/recipe/cutting/metal/double_ingot/nethersteel.json
+9abb00ecb5eac3d0fb97b44f9f10a2b21259877d data/create/recipe/cutting/metal/double_sheet/aluminium.json
+015f216b8471a12e29b508b9ecdf23245b1e81a1 data/create/recipe/cutting/metal/double_sheet/aluminium_bronze.json
+9adc8b79af93f1dc05c2a8727f50414fd5dbba89 data/create/recipe/cutting/metal/double_sheet/cast_iron_alloy.json
+13b82350414b9827242f914ab42159fd0b8f9302 data/create/recipe/cutting/metal/double_sheet/electrum.json
+3ecd3a1fd96e9ee55a568e31eeceb74f98c1f738 data/create/recipe/cutting/metal/double_sheet/hardened_steel.json
+be3ddfdf8a50119a7aaf56b35179c62e6b702efc data/create/recipe/cutting/metal/double_sheet/lead.json
+520248f63cd64c56063b8dec0dade89b764bd3be data/create/recipe/cutting/metal/double_sheet/nethersteel.json
