@@ -1,10 +1,13 @@
 package net.gourmand.core.datagen;
 
 import net.dries007.tfc.common.fluids.TFCFluids;
+import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.category.CoreMetals;
+import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -21,6 +24,12 @@ import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 
 public interface Accessors
 {
+
+    default Ingredient ingredientOf(Metal metal, Metal.ItemType type)
+    {
+        return Ingredient.of(TFCItems.METAL_ITEMS.get(metal).get(type).get());
+    }
+
     default Ingredient ingredientOf(CoreMetals.MetalType metal, Metal.ItemType type)
     {
         return Ingredient.of(CoreItems.METAL_ITEMS.get(metal).get(type).get());
@@ -99,5 +108,30 @@ public interface Accessors
     default float temperatureOf(CoreMetals.MetalType metal)
     {
         return FluidHeat.MANAGER.getOrThrow(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, metal.getSerializedName())).meltTemperature();
+    }
+
+    default TagKey<Item> logsTagOf(CoreDeeperDownWood woodType){
+        if (!woodType.isNoxfungi() && woodType != CoreDeeperDownWood.WEEPING_GALA){
+            return CoreTags.Items.SPECTRUM_COLORED_LOGS.get(woodType);
+        } else {
+            switch (woodType){
+                case SLATE_NOXWOOD -> {
+                    return CoreTags.Items.SLATE_NOXCAP_STEMS;
+                }
+                case CHESTNUT_NOXWOOD -> {
+                    return CoreTags.Items.CHESTNUT_NOXCAP_STEMS;
+                }
+                case IVORY_NOXWOOD -> {
+                    return CoreTags.Items.IVORY_NOXCAP_STEMS;
+                }
+                case EBONY_NOXWOOD -> {
+                    return CoreTags.Items.EBONY_NOXCAP_STEMS;
+                }
+                case WEEPING_GALA -> {
+                    return CoreTags.Items.WEEPING_GALA_LOGS;
+                }
+            }
+        }
+        return null;
     }
 }

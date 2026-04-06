@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/chestnut_noxwood"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "   ",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/tool_rack/chestnut_noxwood"
+  }
+}

@@ -12,6 +12,7 @@ import net.gourmand.core.registry.blockentities.CoreSluiceBlockEntity;
 import net.gourmand.core.registry.blocks.CoreLoomBlock;
 import net.gourmand.core.registry.blocks.CoreShelfBlock;
 import net.gourmand.core.registry.blocks.CoreToolRackBlock;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -141,5 +142,65 @@ public enum CoreDeeperDownWood implements RegistryWood {
             }
 
         }
+    }
+
+    public Block getPlanks(){
+        return getSpectrumWoodBlock("planks");
+    }
+
+    public Block getPlankSlab(){
+        return getSpectrumWoodBlock("slab");
+    }
+
+    public Block getPlankStairs(){
+        return getSpectrumWoodBlock("stairs");
+    }
+
+    public Block getPlankFence(){
+        return getSpectrumWoodBlock("fence");
+    }
+
+    public Block getPlankFenceGate(){
+        return getSpectrumWoodBlock("fence_gate");
+    }
+
+    public Block getDoor(){
+        return getSpectrumWoodBlock("door");
+    }
+
+    public Block getPressurePlate(){
+        return getSpectrumWoodBlock("pressure_plate");
+    }
+
+    public Block getButton(){
+        return getSpectrumWoodBlock("button");
+    }
+
+    public Block getTrapdoor(){
+        return getSpectrumWoodBlock("trapdoor");
+    }
+
+    public Block getLog(){
+        if (isNoxfungi && this != CoreDeeperDownWood.WEEPING_GALA){
+            return getSpectrumWoodBlock("stem", "noxwood", "noxcap");
+        } else {
+            return getSpectrumWoodBlock("log");
+        }
+    }
+
+    public Block getStrippedLog(){
+        if (isNoxfungi && this != CoreDeeperDownWood.WEEPING_GALA){
+            return getSpectrumWoodBlock("stripped_stem", "noxwood", "noxcap");
+        } else {
+            return getSpectrumWoodBlock("stripped_log");
+        }
+    }
+
+    private Block getSpectrumWoodBlock(String suffix){
+        return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, this.getSerializedName() + "_" + suffix));
+    }
+
+    private Block getSpectrumWoodBlock(String suffix, String replace, String replaceWith){
+        return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, this.getSerializedName().replace(replace, replaceWith) + "_" + suffix));
     }
 }

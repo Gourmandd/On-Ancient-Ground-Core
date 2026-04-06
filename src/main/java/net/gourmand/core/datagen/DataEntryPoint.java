@@ -45,13 +45,15 @@ public final class DataEntryPoint
         add(event, new BuiltinFluidTags(event, lookup));
         add(event, new BuiltinItemTags(event, lookup));
         add(event, new BuiltinSupports(output, lookup));
-        add(event, new BuiltinItemHeats(output, lookup));
-        add(event, new BuiltinFluidHeats(output, lookup));
         add(event, new BuiltinBlockStates(output, event.getExistingFileHelper()));
         add(event, new BuiltinItemModels(output, event.getExistingFileHelper()));
-        add(event, new BuiltInKnappingTypes(output, lookup));
 
-        add(event, new BuiltinRecipes(output, lookup));
+        final var fluidHeat = add(event, new BuiltinFluidHeats(output, lookup)).output();
+        final var itemHeat = add(event, new BuiltinItemHeats(output, lookup));
+
+        final var knappingTypes = add(event, new BuiltInKnappingTypes(output, lookup)).output();
+
+        add(event, new BuiltinRecipes(output, lookup, CompletableFuture.allOf(fluidHeat, knappingTypes), itemHeat));
         add(event, new CompactingRecipes(output, lookup));
         add(event, new CuttingRecipes(output, lookup));
         add(event, new RollingRecipes(output, lookup));

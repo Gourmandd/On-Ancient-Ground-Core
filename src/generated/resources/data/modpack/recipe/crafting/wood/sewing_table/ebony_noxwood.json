@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "spectrum:ebony_noxcap_stem"
+    },
+    "L": {
+      "tag": "c:leathers"
+    },
+    "P": {
+      "item": "spectrum:ebony_noxwood_planks"
+    },
+    "S": {
+      "tag": "c:tools/shear"
+    }
+  },
+  "pattern": [
+    " LS",
+    "PPP",
+    "G G"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/sewing_table/ebony_noxwood"
+  }
+}

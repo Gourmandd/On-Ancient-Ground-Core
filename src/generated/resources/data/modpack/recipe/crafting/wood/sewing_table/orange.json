@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "spectrum:orange_log"
+    },
+    "L": {
+      "tag": "c:leathers"
+    },
+    "P": {
+      "item": "spectrum:orange_planks"
+    },
+    "S": {
+      "tag": "c:tools/shear"
+    }
+  },
+  "pattern": [
+    " LS",
+    "PPP",
+    "G G"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/sewing_table/orange"
+  }
+}

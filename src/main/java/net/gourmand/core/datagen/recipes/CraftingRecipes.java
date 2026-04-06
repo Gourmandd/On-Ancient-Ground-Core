@@ -1,17 +1,20 @@
 package net.gourmand.core.datagen.recipes;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.core.registry.category.CoreClay;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Map;
@@ -85,6 +88,167 @@ public interface CraftingRecipes extends Recipes {
                         .input('B', clayType.getClayBallItem().get())
                         .pattern("BB", "BB")
                         .shaped(BLOCK_MAP.get(CoreClay.BlockType.CLAY_BLOCK).get(), 1);
+            }
+        });
+
+        Stream.of(CoreDeeperDownWood.values()).forEach(woodType -> {
+
+            final var blocks = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
+            final var lumber = CoreItems.LUMBER.get(woodType).get();
+            final var planks = woodType.getPlanks();
+
+            /*
+            recipe()
+                    .input('L', lumber)
+                    .pattern("L L", "L L", "LLL")
+                    .shaped(blocks.get(Wood.BlockType.BARREL).get());
+
+             */
+
+            recipe()
+                    .input('P', planks)
+                    .input('L', lumber)
+                    .pattern("PLP", "PLP")
+                    .shaped(woodType.getPlankFence(), 8);
+            recipe()
+                    .input('P', planks)
+                    .input('L', lumber)
+                    .pattern("LPL", "LPL")
+                    .shaped(woodType.getPlankFenceGate(), 2);
+            /*
+            recipe()
+                    .input('L', lumber)
+                    .input('B', blocks.get(Wood.BlockType.BOOKSHELF))
+                    .pattern("LLL", " B ", " L ")
+                    .shaped(blocks.get(Wood.BlockType.LECTERN));
+
+             */
+            /*
+            recipe()
+                    .input('P', blocks.get(Wood.BlockType.LOG))
+                    .input('L', lumber)
+                    .pattern("PLP", "PLP")
+                    .shaped(blocks.get(Wood.BlockType.LOG_FENCE), 8);
+
+             */
+            recipe()
+                    .input('L', lumber)
+                    .input('S', Tags.Items.RODS_WOODEN)
+                    .pattern("LLL", "LSL", "L L")
+                    .shaped(blocks.get(Wood.BlockType.LOOM).get());
+
+            recipe("from_logs")
+                    .inputIsPrimary(TFCTags.Items.TOOLS_SAW)
+                    .input(logsTagOf(woodType))
+                    .damageInputs()
+                    .shapeless(lumber, 8);
+            recipe("from_planks")
+                    .inputIsPrimary(TFCTags.Items.TOOLS_SAW)
+                    .input(planks)
+                    .damageInputs()
+                    .shapeless(lumber, 4);
+            recipe("from_stairs")
+                    .inputIsPrimary(TFCTags.Items.TOOLS_SAW)
+                    .input(woodType.getPlankStairs())
+                    .damageInputs()
+                    .shapeless(lumber, 3);
+            recipe("from_slabs")
+                    .inputIsPrimary(TFCTags.Items.TOOLS_SAW)
+                    .input(woodType.getPlankSlab())
+                    .damageInputs()
+                    .shapeless(lumber, 2);
+            recipe().to2x2(lumber, planks, 1);
+            recipe()
+                    .input('L', lumber)
+                    .pattern("LL")
+                    .shaped(woodType.getPressurePlate());
+            recipe()
+                    .input('F', Tags.Items.FEATHERS)
+                    .input('D', Tags.Items.DYES_BLACK)
+                    .input('S', woodType.getPlankSlab())
+                    .input('W', planks)
+                    .pattern("F D", "SSS", "W W")
+                    .shaped(blocks.get(Wood.BlockType.SCRIBING_TABLE).get());
+            recipe()
+                    .input('S', Tags.Items.TOOLS_SHEAR)
+                    .input('L', Tags.Items.LEATHERS)
+                    .input('P', planks)
+                    .input('G', woodType.getLog())
+                    .pattern(" LS", "PPP", "G G")
+                    .shaped(blocks.get(Wood.BlockType.SEWING_TABLE).get());
+            recipe()
+                    .input('L', lumber)
+                    .input('P', planks)
+                    .input('S', Tags.Items.RODS_WOODEN)
+                    .pattern("PPP", "L L", "S S")
+                    .shaped(blocks.get(Wood.BlockType.SHELF).get(), 2);
+            recipe()
+                    .input('#', planks)
+                    .pattern("###")
+                    .shaped(woodType.getPlankSlab(), 6);
+            recipe()
+                    .input('#', planks)
+                    .pattern("#  ", "## ", "###")
+                    .shaped(woodType.getPlankStairs(), 8);
+            recipe()
+                    .input('L', lumber)
+                    .input('S', Tags.Items.RODS_WOODEN)
+                    .pattern("  S", " SL", "SLL")
+                    .shaped(blocks.get(Wood.BlockType.SLUICE).get());
+            recipe()
+                    .input('L', logsTagOf(woodType))
+                    .input('S', TFCTags.Items.TOOLS_SAW)
+                    .pattern("LS", "L ")
+                    .damageInputs()
+                    .source(0, 1)
+                    .shaped(CoreItems.SUPPORTS.get(woodType).get(), 8);
+            recipe()
+                    .input('L', lumber)
+                    .pattern("LLL", "   ", "LLL")
+                    .shaped(blocks.get(Wood.BlockType.TOOL_RACK).get());
+            //recipe().to2x2(planks, blocks.get(Wood.BlockType.WORKBENCH), 1);
+
+            if (woodType.isNoxfungi() || woodType == CoreDeeperDownWood.WEEPING_GALA){
+                recipe()
+                        .input('L', lumber)
+                        .pattern("LL", "LL", "LL")
+                        .shaped(woodType.getDoor());
+                recipe()
+                        .input('L', lumber)
+                        .pattern("LLL", "LLL")
+                        .shaped(woodType.getTrapdoor(), 2);
+            }
+
+            if (woodType.isNoxfungi() && woodType != CoreDeeperDownWood.WEEPING_GALA){
+                final String name = woodType.getSerializedName().replace("_noxwood", "");
+                remove("spectrum:crafting_table/noxwood/" + name + "_planks");
+                remove("spectrum:crafting_table/noxwood/" + name + "_stairs");
+                remove("spectrum:crafting_table/noxwood/" + name + "_slab");
+                remove("spectrum:crafting_table/noxwood/" + name + "_door");
+                remove("spectrum:crafting_table/noxwood/" + name + "_trapdoor");
+                remove("spectrum:crafting_table/noxwood/" + name + "_fence");
+                remove("spectrum:crafting_table/noxwood/" + name + "_fence_gate");
+                remove("spectrum:crafting_table/noxwood/" + name + "_pressure_plate");
+            }
+
+            if (woodType == CoreDeeperDownWood.WEEPING_GALA){
+                remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/planks");
+                remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/stairs");
+                remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/slab");
+                remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/door");
+                remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/trapdoor");
+                remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/fence");
+                remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/gate");
+                remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/pressure_plate");
+            }
+
+            if (!woodType.isNoxfungi()){
+                remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_planks");
+                remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_plank_stairs");
+                remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_plank_slab");
+                remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_plank_fence");
+                remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_plank_fence_gate");
+                remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_plank_pressure_plate");
             }
         });
     }

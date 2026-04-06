@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/chestnut_noxwood"
+    },
+    "P": {
+      "item": "spectrum:chestnut_noxwood_planks"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "L L",
+    "S S"
+  ],
+  "result": {
+    "count": 2,
+    "id": "modpack:wood/shelf/chestnut_noxwood"
+  }
+}

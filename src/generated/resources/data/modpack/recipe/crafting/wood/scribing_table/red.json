@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "tag": "c:dyes/black"
+    },
+    "F": {
+      "tag": "c:feathers"
+    },
+    "S": {
+      "item": "spectrum:red_slab"
+    },
+    "W": {
+      "item": "spectrum:red_planks"
+    }
+  },
+  "pattern": [
+    "F D",
+    "SSS",
+    "W W"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/scribing_table/red"
+  }
+}

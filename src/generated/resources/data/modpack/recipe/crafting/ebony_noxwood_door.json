@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/ebony_noxwood"
+    }
+  },
+  "pattern": [
+    "LL",
+    "LL",
+    "LL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spectrum:ebony_noxwood_door"
+  }
+}

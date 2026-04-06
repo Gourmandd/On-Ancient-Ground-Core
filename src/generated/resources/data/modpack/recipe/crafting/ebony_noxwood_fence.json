@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/ebony_noxwood"
+    },
+    "P": {
+      "item": "spectrum:ebony_noxwood_planks"
+    }
+  },
+  "pattern": [
+    "PLP",
+    "PLP"
+  ],
+  "result": {
+    "count": 8,
+    "id": "spectrum:ebony_noxwood_fence"
+  }
+}

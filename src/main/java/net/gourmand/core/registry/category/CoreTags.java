@@ -1,5 +1,6 @@
 package net.gourmand.core.registry.category;
 
+import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
@@ -79,6 +80,17 @@ public class CoreTags {
         public static final Map<Metal.ItemType, TagKey<Item>> TOOL_HEADS = Helpers.mapOf(Metal.ItemType.class, tool -> (tool.hasMold() && tool != Metal.ItemType.INGOT), tool ->
                 tag(AncientGroundCore.MODID ,"tool_heads/" + tool.name().toLowerCase(Locale.ROOT))
         );
+
+        public static final Map<CoreDeeperDownWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(CoreDeeperDownWood.class, wood -> (!wood.isNoxfungi() && wood != CoreDeeperDownWood.WEEPING_GALA),color ->
+                tag(SpectrumCommon.MOD_ID , color.getSerializedName() + "_logs")
+        );
+
+        public static final TagKey<Item> WEEPING_GALA_LOGS = tag(SpectrumCommon.MOD_ID , "weeping_gala_logs");
+
+        public static final TagKey<Item> SLATE_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "slate_noxcap_stems");
+        public static final TagKey<Item> IVORY_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "ivory_noxcap_stems");
+        public static final TagKey<Item> CHESTNUT_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "chestnut_noxcap_stems");
+        public static final TagKey<Item> EBONY_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "ebony_noxcap_stems");
 
         public static final TagKey<Item> BELLS = tag(AncientGroundCore.MODID ,"bells");
 

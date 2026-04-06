@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/slate_noxwood"
+    },
+    "P": {
+      "item": "spectrum:slate_noxwood_planks"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "L L",
+    "S S"
+  ],
+  "result": {
+    "count": 2,
+    "id": "modpack:wood/shelf/slate_noxwood"
+  }
+}

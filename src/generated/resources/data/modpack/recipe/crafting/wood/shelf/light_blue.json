@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/light_blue"
+    },
+    "P": {
+      "item": "spectrum:light_blue_planks"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "L L",
+    "S S"
+  ],
+  "result": {
+    "count": 2,
+    "id": "modpack:wood/shelf/light_blue"
+  }
+}
