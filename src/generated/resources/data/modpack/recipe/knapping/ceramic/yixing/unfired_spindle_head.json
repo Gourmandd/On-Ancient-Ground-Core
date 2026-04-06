@@ -1,0 +1,14 @@
+{
+  "type": "tfc:knapping",
+  "default_on": false,
+  "knapping_type": "tfc:yixing",
+  "pattern": [
+    "  #  ",
+    "#####",
+    "  #  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/yixing/unfired_spindle_head"
+  }
+}

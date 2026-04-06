@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "modpack:clay/kaolinite/recycling_5"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "tfc:kaolin_clay"
+  }
+}

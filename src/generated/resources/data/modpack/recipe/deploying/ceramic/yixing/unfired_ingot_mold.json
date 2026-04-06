@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/clay_block/yixing"
+    },
+    {
+      "tag": "c:ingots"
+    }
+  ],
+  "keep_held_item": true,
+  "results": [
+    {
+      "id": "modpack:ceramic/yixing/unfired_ingot_mold"
+    }
+  ]
+}

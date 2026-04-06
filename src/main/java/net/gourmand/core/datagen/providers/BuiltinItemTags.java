@@ -2,6 +2,7 @@ package net.gourmand.core.datagen.providers;
 
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -23,6 +24,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -125,6 +127,11 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                     TFCTags.Items.ORE_DEPOSITS
             ));
         }
+
+        this.tag(CoreTags.Items.BELLS)
+                .add(getKey(TFCBlocks.BRASS_BELL.asItem()))
+                .add(getKey(TFCBlocks.BRONZE_BELL.asItem()))
+                .add(getKey(Blocks.BELL));
 
         Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
             this.tag(Tags.Items.INGOTS).add(CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.INGOT).getKey());

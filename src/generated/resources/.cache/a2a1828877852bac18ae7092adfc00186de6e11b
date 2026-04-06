@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-05T19:46:00.422810073	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-04-06T10:09:23.129489925	Tags for minecraft:item mod id modpack
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 b640843692bdc4754fb81667ad999ebcee6fc128 data/c/tags/item/clay_bricks.json
@@ -56,6 +56,7 @@ ee27698cc59a08c6abf94e712dbe05d5ef4c2ace data/minecraft/tags/item/stairs.json
 240ae9f95f4f3a20feb49ad673f4df89e267fb94 data/minecraft/tags/item/stone_bricks.json
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/item/stone_buttons.json
 49d83fc23f88ec28a70557cb9887191d1c7aac99 data/minecraft/tags/item/walls.json
+840cef0999b0f89a6beef36332d6bcf8f8eb2e4c data/modpack/tags/item/bells.json
 e878683411443f42fcf70bcbfc599547d733fc3b data/modpack/tags/item/clay/earthenware/recycling_1.json
 8d65cc3f225e7b263aa9ebabdc4a75ece126493e data/modpack/tags/item/clay/earthenware/recycling_5.json
 7d50c83a31f4a55cfc8c348608bbf1a986908467 data/modpack/tags/item/clay/kaolinite/recycling_1.json

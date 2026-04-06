@@ -1,0 +1,13 @@
+{
+  "type": "tfc:knapping",
+  "default_on": false,
+  "knapping_type": "tfc:earthenware",
+  "pattern": [
+    "#   #",
+    " ### "
+  ],
+  "result": {
+    "count": 2,
+    "id": "modpack:ceramic/earthenware/unfired_bowl"
+  }
+}

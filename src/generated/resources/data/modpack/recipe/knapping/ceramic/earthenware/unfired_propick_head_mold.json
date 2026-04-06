@@ -1,0 +1,15 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfc:earthenware",
+  "pattern": [
+    "#####",
+    "    #",
+    " ### ",
+    " ####",
+    "#####"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/earthenware/unfired_propick_head_mold"
+  }
+}

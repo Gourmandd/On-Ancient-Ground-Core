@@ -1,0 +1,16 @@
+{
+  "type": "tfc:knapping",
+  "default_on": true,
+  "knapping_type": "tfc:earthenware",
+  "pattern": [
+    "## #",
+    "#  #",
+    "#  #",
+    "#  #",
+    "#  #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/earthenware/unfired_knife_blade_mold"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "tfc:knapping",
+  "default_on": false,
+  "knapping_type": "tfc:yellowware",
+  "pattern": [
+    "  #  ",
+    "#####",
+    "  #  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/yellowware/unfired_spindle_head"
+  }
+}

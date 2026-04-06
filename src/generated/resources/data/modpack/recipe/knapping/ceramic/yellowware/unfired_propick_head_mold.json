@@ -1,0 +1,15 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfc:yellowware",
+  "pattern": [
+    "#####",
+    "    #",
+    " ### ",
+    " ####",
+    "#####"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/yellowware/unfired_propick_head_mold"
+  }
+}

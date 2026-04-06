@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/clay_block/porcelain"
+    },
+    {
+      "tag": "modpack:tool_heads/javelin_head"
+    }
+  ],
+  "keep_held_item": true,
+  "results": [
+    {
+      "id": "modpack:ceramic/porcelain/unfired_javelin_head_mold"
+    }
+  ]
+}

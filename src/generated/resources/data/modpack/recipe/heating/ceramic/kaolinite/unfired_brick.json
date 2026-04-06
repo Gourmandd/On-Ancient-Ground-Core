@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:ceramic/kaolinite/unfired_brick"
+  },
+  "result_item": {
+    "count": 1,
+    "id": "modpack:ceramic/kaolinite/brick"
+  },
+  "temperature": 1399.0
+}

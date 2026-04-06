@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:ceramic/porcelain/unfired_jug"
+  },
+  "result_item": {
+    "count": 1,
+    "id": "modpack:ceramic/porcelain/jug"
+  },
+  "temperature": 1399.0
+}

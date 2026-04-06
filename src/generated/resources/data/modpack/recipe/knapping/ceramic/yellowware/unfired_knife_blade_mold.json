@@ -1,0 +1,16 @@
+{
+  "type": "tfc:knapping",
+  "default_on": true,
+  "knapping_type": "tfc:yellowware",
+  "pattern": [
+    "## #",
+    "#  #",
+    "#  #",
+    "#  #",
+    "#  #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/yellowware/unfired_knife_blade_mold"
+  }
+}

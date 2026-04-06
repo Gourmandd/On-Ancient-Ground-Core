@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/clay_block/yixing"
+    },
+    {
+      "tag": "modpack:tool_heads/chisel_head"
+    }
+  ],
+  "keep_held_item": true,
+  "results": [
+    {
+      "id": "modpack:ceramic/yixing/unfired_chisel_head_mold"
+    }
+  ]
+}

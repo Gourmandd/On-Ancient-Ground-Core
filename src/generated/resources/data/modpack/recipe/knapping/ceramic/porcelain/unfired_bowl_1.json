@@ -1,0 +1,13 @@
+{
+  "type": "tfc:knapping",
+  "default_on": false,
+  "knapping_type": "tfc:porcelain",
+  "pattern": [
+    "#   #",
+    " ### "
+  ],
+  "result": {
+    "count": 2,
+    "id": "modpack:ceramic/porcelain/unfired_bowl"
+  }
+}

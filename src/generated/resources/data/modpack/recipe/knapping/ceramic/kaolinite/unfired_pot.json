@@ -1,0 +1,15 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfc:kaolinite",
+  "pattern": [
+    "#   #",
+    "#   #",
+    "#   #",
+    "#####",
+    " ### "
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/kaolinite/unfired_pot"
+  }
+}

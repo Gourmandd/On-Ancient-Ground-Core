@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "tfc:white_kaolin_clay"
+    },
+    {
+      "tag": "modpack:tool_heads/mace_head"
+    }
+  ],
+  "keep_held_item": true,
+  "results": [
+    {
+      "id": "modpack:ceramic/kaolinite/unfired_mace_head_mold"
+    }
+  ]
+}

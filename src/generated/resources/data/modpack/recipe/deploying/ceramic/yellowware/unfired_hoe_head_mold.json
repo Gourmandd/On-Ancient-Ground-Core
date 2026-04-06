@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/clay_block/yellowware"
+    },
+    {
+      "tag": "modpack:tool_heads/hoe_head"
+    }
+  ],
+  "keep_held_item": true,
+  "results": [
+    {
+      "id": "modpack:ceramic/yellowware/unfired_hoe_head_mold"
+    }
+  ]
+}

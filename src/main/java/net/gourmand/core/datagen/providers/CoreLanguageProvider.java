@@ -2,6 +2,7 @@ package net.gourmand.core.datagen.providers;
 
 import com.klikli_dev.modonomicon.api.datagen.AbstractModonomiconLanguageProvider;
 import com.klikli_dev.modonomicon.api.datagen.ModonomiconLanguageProvider;
+import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -32,12 +33,15 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
     protected void addTranslations() {
 
         // misc lang
-        add("item_group.nature.modpack", "Modpack Nature Items");
         add("item_group.metal.modpack", "Modpack Metal Items");
-        add("item_group.ceramics.modpack", "Modpack Ceramic Items");
-        add("item_group.rocks.modpack", "Modpack Rock Items");
+        add("item_group.nature.modpack", "Modpack Nature Items");
         add("item_group.ores.modpack", "Modpack Ores");
+        add("item_group.rocks.modpack", "Modpack Rock Items");
+        add("item_group.wood.modpack", "Modpack Wood");
         add("item_group.tools.modpack", "Modpack Tools");
+        add("item_group.ceramics.modpack", "Modpack Ceramic Items");
+        add("item_group.glass.modpack", "Modpack Glass");
+        add("item_group.misc.modpack", "Modpack Misc Items");
 
         addItem(CoreItems.GLASS_MOLD, "Glass Block Mold");
         addItem(CoreItems.GLASS_PANE_MOLD, "Glass Pane Mold");
@@ -84,6 +88,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 }
             });
             add("item." + AncientGroundCore.MODID + ".ceramic." + clay.getSerializedName() + ".jug.filled", "%s " + getName(clay.name()) + " Jug");
+            add("emi." + TerraFirmaCraft.MOD_ID + ".ceramic." + clay.getSerializedName() + "_knapping", getName(clay.name()) + " Knapping");
         });
 
         // custom rocks.

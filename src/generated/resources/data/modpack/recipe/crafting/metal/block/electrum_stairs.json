@@ -8,11 +8,10 @@
   },
   "pattern": [
     "B  ",
-    "BB ",
-    "BBB"
+    "BB "
   ],
   "result": {
-    "count": 8,
+    "count": 4,
     "id": "modpack:metal/block/electrum_stairs"
   }
 }

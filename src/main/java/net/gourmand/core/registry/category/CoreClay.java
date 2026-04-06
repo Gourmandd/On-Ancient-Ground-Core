@@ -1,10 +1,13 @@
 package net.gourmand.core.registry.category;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.items.JugItem;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.common.items.VesselItem;
 import net.dries007.tfc.config.TFCConfig;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.util.RegistryClay;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Item;
@@ -12,6 +15,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
@@ -65,6 +69,22 @@ public enum CoreClay implements RegistryClay {
     @Override
     public boolean hasReducedSet() {
         return reducedSet;
+    }
+
+    public DeferredHolder<Item, Item> getClayBallItem() {
+        if (reducedSet){
+            return TFCItems.KAOLIN_CLAY.holder();
+        } else {
+            return CoreItems.CERAMICS.get(this).get(ItemType.CLAY_BALL);
+        }
+    }
+
+    public DeferredHolder<Block, Block> getClayBlock() {
+        if (reducedSet){
+            return TFCBlocks.WHITE_KAOLIN_CLAY.holder();
+        } else {
+            return CoreBlocks.CERAMIC_BLOCKS.get(this).get(BlockType.CLAY_BLOCK);
+        }
     }
 
     public enum ItemType {

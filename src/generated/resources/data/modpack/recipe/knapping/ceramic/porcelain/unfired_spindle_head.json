@@ -1,0 +1,14 @@
+{
+  "type": "tfc:knapping",
+  "default_on": false,
+  "knapping_type": "tfc:porcelain",
+  "pattern": [
+    "  #  ",
+    "#####",
+    "  #  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/porcelain/unfired_spindle_head"
+  }
+}

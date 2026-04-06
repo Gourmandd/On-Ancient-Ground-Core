@@ -1,0 +1,14 @@
+{
+  "click_sound": "tfc:item.knapping.clay",
+  "consume_after_complete": true,
+  "has_off_texture": true,
+  "icon": {
+    "count": 1,
+    "id": "tfc:kaolin_clay"
+  },
+  "input": {
+    "count": 5,
+    "item": "tfc:kaolin_clay"
+  },
+  "spawns_particles": false
+}

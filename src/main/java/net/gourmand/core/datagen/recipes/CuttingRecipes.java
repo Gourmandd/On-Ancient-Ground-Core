@@ -29,10 +29,12 @@ public class CuttingRecipes extends CuttingRecipeGen {
             final DeferredHolder<Item, Item> DOUBLE_SHEET = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_SHEET);
 
             create(DOUBLE_SHEET::get, b -> b.duration(200)
-                    .output(DOUBLE_INGOT.get(), 2));
+                    .output(DOUBLE_INGOT.get(), 2)
+            );
 
             create(DOUBLE_INGOT::get, b -> b.duration(100)
-                    .output(INGOT.get(), 2));
+                    .output(INGOT.get(), 2)
+            );
         });
     }
 }

@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:ceramic/porcelain/unfired_vessel"
+  },
+  "result_item": {
+    "count": 1,
+    "id": "modpack:ceramic/porcelain/vessel"
+  },
+  "temperature": 1399.0
+}

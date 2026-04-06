@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "modpack:ceramic/bricks/yellowware"
+    }
+  },
+  "pattern": [
+    "B  ",
+    "BB "
+  ],
+  "result": {
+    "count": 4,
+    "id": "modpack:ceramic/bricks/yellowware_stairs"
+  }
+}

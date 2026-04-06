@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 
-public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, AnvilRecipes, HeatingRecipes, CastingRecipes, CraftingRecipes, AlloyRecipes {
+public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, AnvilRecipes, HeatingRecipes, CastingRecipes, CraftingRecipes, AlloyRecipes, KnappingRecipes {
 
     RecipeOutput output;
     HolderLookup.Provider lookup;
@@ -34,6 +34,7 @@ public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, An
         castingRecipes();
         craftingRecipes();
         alloyingRecipes();
+        knappingRecipes();
     }
 
     @Override

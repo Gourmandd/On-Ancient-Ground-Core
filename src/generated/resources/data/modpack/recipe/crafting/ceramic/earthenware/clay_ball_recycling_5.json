@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "modpack:clay/earthenware/recycling_5"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "modpack:ceramic/earthenware/clay_ball"
+  }
+}

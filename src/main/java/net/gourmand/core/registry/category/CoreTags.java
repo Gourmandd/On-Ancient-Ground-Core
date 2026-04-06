@@ -80,6 +80,8 @@ public class CoreTags {
                 tag(AncientGroundCore.MODID ,"tool_heads/" + tool.name().toLowerCase(Locale.ROOT))
         );
 
+        public static final TagKey<Item> BELLS = tag(AncientGroundCore.MODID ,"bells");
+
         public static final TagKey<Item> UNFIRED_VESSELS = tag(AncientGroundCore.MODID ,"unfired_vessels");
 
         public static final TagKey<Item> CLAY_BALLS = tag("clay_balls");

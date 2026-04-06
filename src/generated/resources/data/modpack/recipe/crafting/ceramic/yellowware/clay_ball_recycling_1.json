@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "modpack:clay/yellowware/recycling_1"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/yellowware/clay_ball"
+  }
+}

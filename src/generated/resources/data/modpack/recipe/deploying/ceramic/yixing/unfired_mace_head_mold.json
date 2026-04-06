@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/clay_block/yixing"
+    },
+    {
+      "tag": "modpack:tool_heads/mace_head"
+    }
+  ],
+  "keep_held_item": true,
+  "results": [
+    {
+      "id": "modpack:ceramic/yixing/unfired_mace_head_mold"
+    }
+  ]
+}

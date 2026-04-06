@@ -1,0 +1,15 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfc:yellowware",
+  "pattern": [
+    " # # ",
+    " ### ",
+    "     ",
+    " # # ",
+    " ### "
+  ],
+  "result": {
+    "count": 2,
+    "id": "modpack:ceramic/yellowware/unfired_flower_pot"
+  }
+}

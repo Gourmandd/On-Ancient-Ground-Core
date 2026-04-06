@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/clay_block/porcelain"
+    },
+    {
+      "tag": "modpack:tool_heads/hammer_head"
+    }
+  ],
+  "keep_held_item": true,
+  "results": [
+    {
+      "id": "modpack:ceramic/porcelain/unfired_hammer_head_mold"
+    }
+  ]
+}

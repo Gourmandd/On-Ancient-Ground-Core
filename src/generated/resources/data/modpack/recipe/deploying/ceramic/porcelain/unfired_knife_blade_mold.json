@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/clay_block/porcelain"
+    },
+    {
+      "tag": "modpack:tool_heads/knife_blade"
+    }
+  ],
+  "keep_held_item": true,
+  "results": [
+    {
+      "id": "modpack:ceramic/porcelain/unfired_knife_blade_mold"
+    }
+  ]
+}
