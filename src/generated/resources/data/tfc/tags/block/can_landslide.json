@@ -111,6 +111,11 @@
     "modpack:rock/mossy_cobble/peridotite",
     "modpack:rock/gravel/serpentine",
     "modpack:rock/cobble/serpentine",
-    "modpack:rock/mossy_cobble/serpentine"
+    "modpack:rock/mossy_cobble/serpentine",
+    "spectrum:topaz_powder_block",
+    "spectrum:amethyst_powder_block",
+    "spectrum:citrine_powder_block",
+    "spectrum:onyx_powder_block",
+    "spectrum:moonstone_block"
   ]
 }

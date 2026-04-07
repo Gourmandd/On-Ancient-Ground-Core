@@ -307,6 +307,10 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 CoreTags.Items.MOLTEN_GLASS
             )
         );
+
+        Stream.of(DyeColor.values()).forEach(color -> {
+            this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_GLAZED_VESSELS.get(color).key());
+        });
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Item>> tags ){

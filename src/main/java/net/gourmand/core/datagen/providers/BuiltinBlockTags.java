@@ -333,11 +333,18 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
             }
         });
 
-        tag(CoreTags.Blocks.GEMSTONE_BLOCKS)
+        this.tag(CoreTags.Blocks.GEMSTONE_BLOCKS)
                 .add(Blocks.AMETHYST_BLOCK.builtInRegistryHolder().key())
                 .add(SpectrumBlocks.TOPAZ_BLOCK.getKey())
                 .add(SpectrumBlocks.CITRINE_BLOCK.getKey())
                 .add(SpectrumBlocks.ONYX_BLOCK.getKey())
+                .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
+
+        this.tag(TFCTags.Blocks.CAN_LANDSLIDE)
+                .add(SpectrumBlocks.TOPAZ_POWDER_BLOCK.getKey())
+                .add(SpectrumBlocks.AMETHYST_POWDER_BLOCK.getKey())
+                .add(SpectrumBlocks.CITRINE_POWDER_BLOCK.getKey())
+                .add(SpectrumBlocks.ONYX_POWDER_BLOCK.getKey())
                 .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
     }
 
