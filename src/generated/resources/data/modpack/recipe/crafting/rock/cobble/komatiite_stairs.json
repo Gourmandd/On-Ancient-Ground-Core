@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "modpack:rock/cobble/komatiite"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## "
+  ],
+  "result": {
+    "count": 4,
+    "id": "modpack:rock/cobble/komatiite_stairs"
+  }
+}

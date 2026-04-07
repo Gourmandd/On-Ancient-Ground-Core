@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/gravel/nephelinite"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:sand/black"
+    }
+  ]
+}

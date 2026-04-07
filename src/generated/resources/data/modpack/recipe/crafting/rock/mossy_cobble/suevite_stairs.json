@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "modpack:rock/mossy_cobble/suevite"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## "
+  ],
+  "result": {
+    "count": 4,
+    "id": "modpack:rock/mossy_cobble/suevite_stairs"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "minecraft:dripstone_block",
+    "modpack:rock/hardened/travertine"
+  ],
+  "result": "modpack:rock/cobble/travertine"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "modpack:rock/cobble/red_sandstone"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## "
+  ],
+  "result": {
+    "count": 4,
+    "id": "modpack:rock/cobble/red_sandstone_stairs"
+  }
+}

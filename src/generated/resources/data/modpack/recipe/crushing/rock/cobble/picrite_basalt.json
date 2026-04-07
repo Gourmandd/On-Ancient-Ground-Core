@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/cobble/picrite_basalt"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:rock/gravel/picrite_basalt"
+    }
+  ]
+}

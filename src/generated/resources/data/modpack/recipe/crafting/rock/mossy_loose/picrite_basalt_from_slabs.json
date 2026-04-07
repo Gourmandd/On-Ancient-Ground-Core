@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:rock/mossy_cobble/picrite_basalt_slab"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "modpack:rock/mossy_loose/picrite_basalt"
+  }
+}

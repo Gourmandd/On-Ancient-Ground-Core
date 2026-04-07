@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "minecraft:stone",
+    "modpack:rock/hardened/argillite"
+  ],
+  "result": "modpack:rock/cobble/argillite"
+}

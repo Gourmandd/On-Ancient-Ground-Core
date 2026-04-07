@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "create:scorchia",
+    "modpack:rock/hardened/suevite"
+  ],
+  "result": "modpack:rock/cobble/suevite"
+}

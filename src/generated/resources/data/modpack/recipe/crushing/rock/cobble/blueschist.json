@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/cobble/blueschist"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:rock/gravel/blueschist"
+    }
+  ]
+}

@@ -3,9 +3,11 @@ package net.gourmand.core.registry.category;
 import java.util.Locale;
 import java.util.function.Supplier;
 
+import architectspalette.core.registry.APBlocks;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockDisplayCategory;
+import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.gourmand.core.registry.CoreBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -185,6 +187,58 @@ public enum CoreRocks implements RegistryRock
         }
     }
 
+    public static Block getBricksBlock(CoreRocks rock)
+    {
+        if (rock.hasVariants()){
+            return CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BRICKS).get();
+        } else {
+            switch (rock){
+                case BRECCIA -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("caupona", "felsic_tuff_bricks"));
+                }
+                case KOMATIITE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "cut_scoria_bricks"));
+                }
+                case ARGILLITE -> {
+                    return Blocks.STONE_BRICKS;
+                }
+                case NEPHELINITE -> {
+                    return Blocks.DEEPSLATE_BRICKS;
+                }
+                case TRAVERTINE-> {
+                    return APBlocks.DRIPSTONE_BRICKS.get();
+                }
+                case BLACKSLAG -> {
+                    return SpectrumBlocks.BLACKSLAG_BRICKS.get();
+                }
+                case PICRITE_BASALT -> {
+                    return SpectrumBlocks.BASAL_MARBLE_BRICKS.get();
+                }
+                case SANDSTONE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "cut_ochrum_bricks"));
+                }
+                case RED_SANDSTONE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("quark", "jasper_bricks"));
+                }
+                case SUEVITE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "cut_scorchia_bricks"));
+                }
+                case PHONOLITE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("quark", "shale_bricks"));
+                }
+                case ARKOSE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("quark", "limestone_bricks"));
+                }
+                case SOAPSTONE -> {
+                    return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("create", "cut_limestone_bricks"));
+                }
+                case null, default -> {
+                    throw new AssertionError("no bricks for this rock type " + rock.getSerializedName());
+                }
+            }
+        }
+    }
+
     public static ResourceLocation getRawRockId(CoreRocks rock)
     {
         if (rock.hasVariants()){
@@ -227,5 +281,30 @@ public enum CoreRocks implements RegistryRock
                 case null, default -> throw new AssertionError("no raw rock for this rock type");
             }
         }
+    }
+
+    public static SandBlockType getSandColor(CoreRocks rock)
+    {
+            switch (rock){
+                case BRECCIA, SANDSTONE, ARKOSE -> {
+                    return SandBlockType.YELLOW;
+                }
+                case KOMATIITE, ARGILLITE, TRAVERTINE -> {
+                    return SandBlockType.BROWN;
+                }
+                case NEPHELINITE, BLACKSLAG, PICRITE_BASALT, SUEVITE, PHONOLITE, BLUESCHIST -> {
+                    return SandBlockType.BLACK;
+                }
+                case RED_SANDSTONE -> {
+                    return SandBlockType.RED;
+                }
+                case SOAPSTONE -> {
+                    return SandBlockType.WHITE;
+                }
+                case PERIDOTITE, SERPENTINE -> {
+                    return SandBlockType.GREEN;
+                }
+                case null, default -> throw new AssertionError("no sand type for this rock type");
+            }
     }
 }

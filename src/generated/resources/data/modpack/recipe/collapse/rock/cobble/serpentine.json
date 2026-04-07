@@ -1,0 +1,10 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "modpack:rock/raw/serpentine",
+    "modpack:rock/hardened/serpentine",
+    "modpack:rock/smooth/serpentine",
+    "modpack:rock/cracked_bricks/serpentine"
+  ],
+  "result": "modpack:rock/cobble/serpentine"
+}

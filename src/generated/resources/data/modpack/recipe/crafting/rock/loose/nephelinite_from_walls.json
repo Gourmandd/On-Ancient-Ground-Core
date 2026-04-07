@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:rock/cobble/nephelinite_wall"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "modpack:rock/loose/nephelinite"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/gravel/suevite"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:sand/black"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/cobble/sandstone"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:rock/gravel/sandstone"
+    }
+  ]
+}

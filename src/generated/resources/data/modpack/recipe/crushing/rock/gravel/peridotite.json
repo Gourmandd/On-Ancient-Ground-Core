@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/gravel/peridotite"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:sand/green"
+    }
+  ]
+}

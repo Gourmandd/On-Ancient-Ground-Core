@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "spectrum:basal_marble",
+    "modpack:rock/hardened/picrite_basalt"
+  ],
+  "result": "modpack:rock/cobble/picrite_basalt"
+}

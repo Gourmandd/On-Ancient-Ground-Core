@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/mossy_cobble/phonolite"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:rock/gravel/phonolite"
+    }
+  ]
+}

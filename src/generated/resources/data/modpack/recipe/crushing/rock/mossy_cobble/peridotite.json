@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/mossy_cobble/peridotite"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:rock/gravel/peridotite"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:rock/mossy_cobble/red_sandstone_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "modpack:rock/mossy_loose/red_sandstone"
+  }
+}

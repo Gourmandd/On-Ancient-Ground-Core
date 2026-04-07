@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "quark:jasper",
+    "modpack:rock/hardened/red_sandstone"
+  ],
+  "result": "modpack:rock/cobble/red_sandstone"
+}

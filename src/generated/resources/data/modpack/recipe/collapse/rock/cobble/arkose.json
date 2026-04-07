@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "quark:limestone",
+    "modpack:rock/hardened/arkose"
+  ],
+  "result": "modpack:rock/cobble/arkose"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "caupona:felsic_tuff",
+    "modpack:rock/hardened/breccia"
+  ],
+  "result": "modpack:rock/cobble/breccia"
+}

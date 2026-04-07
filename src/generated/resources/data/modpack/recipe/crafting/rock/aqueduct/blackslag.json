@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "tfc:mortar"
+    },
+    "X": {
+      "item": "modpack:brick/blackslag"
+    }
+  },
+  "pattern": [
+    "X X",
+    "MXM"
+  ],
+  "result": {
+    "count": 2,
+    "id": "modpack:rock/aqueduct/blackslag"
+  }
+}

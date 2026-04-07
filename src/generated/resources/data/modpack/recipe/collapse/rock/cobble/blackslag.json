@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "spectrum:blackslag",
+    "modpack:rock/hardened/blackslag"
+  ],
+  "result": "modpack:rock/cobble/blackslag"
+}

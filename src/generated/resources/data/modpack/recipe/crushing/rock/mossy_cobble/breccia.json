@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/mossy_cobble/breccia"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:rock/gravel/breccia"
+    }
+  ]
+}

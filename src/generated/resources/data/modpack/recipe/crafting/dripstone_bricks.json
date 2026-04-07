@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "modpack:brick/travertine"
+    },
+    "Y": {
+      "item": "tfc:mortar"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "YXY",
+    "XYX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "architects_palette:dripstone_bricks"
+  }
+}

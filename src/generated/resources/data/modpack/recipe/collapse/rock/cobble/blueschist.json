@@ -1,0 +1,10 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "modpack:rock/raw/blueschist",
+    "modpack:rock/hardened/blueschist",
+    "modpack:rock/smooth/blueschist",
+    "modpack:rock/cracked_bricks/blueschist"
+  ],
+  "result": "modpack:rock/cobble/blueschist"
+}

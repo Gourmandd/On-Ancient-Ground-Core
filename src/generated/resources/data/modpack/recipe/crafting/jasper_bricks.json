@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "modpack:brick/red_sandstone"
+    },
+    "Y": {
+      "item": "tfc:mortar"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "YXY",
+    "XYX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quark:jasper_bricks"
+  }
+}

@@ -1,18 +1,18 @@
 package net.gourmand.core.datagen.recipes;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
-import net.gourmand.core.registry.category.CoreClay;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
-import net.gourmand.core.registry.category.CoreMetals;
-import net.gourmand.core.registry.category.CoreTags;
+import net.gourmand.core.registry.category.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -251,6 +251,90 @@ public interface CraftingRecipes extends Recipes {
                 remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_plank_pressure_plate");
             }
         });
+
+        Stream.of(CoreRocks.values()).forEach(rockType -> {
+
+            final var MAP = CoreBlocks.ROCK_BLOCKS.get(rockType);
+            final var BRICK_ITEM = CoreItems.BRICKS.get(rockType).get();
+            final var RAW_BLOCK = CoreRocks.getRawRock(rockType);
+
+            recipe()
+                    .input('X', BRICK_ITEM)
+                    .input('M', TFCItems.MORTAR)
+                    .pattern("X X", "MXM")
+                    .shaped(MAP.get(Rock.BlockType.AQUEDUCT).get(), 2);
+            recipe()
+                    .input(Ingredient.of(
+                            MAP.get(Rock.BlockType.LOOSE).get(),
+                            MAP.get(Rock.BlockType.MOSSY_LOOSE).get()
+                            )
+                    )
+                    .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                    .damageInputs()
+                    .shapeless(BRICK_ITEM);
+            recipe().bricksWithMortar(BRICK_ITEM, CoreRocks.getBricksBlock(rockType), 4);
+            recipe()
+                    .input(MAP.get(Rock.BlockType.COBBLE).get())
+                    .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 4);
+            recipe().bricksWithMortar(RAW_BLOCK, MAP.get(Rock.BlockType.HARDENED).get(), 2);
+            recipe().to2x2(MAP.get(Rock.BlockType.LOOSE).get(), MAP.get(Rock.BlockType.COBBLE).get(), 1);
+            recipe()
+                    .input(MAP.get(Rock.BlockType.MOSSY_COBBLE).get())
+                    .shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 4);
+            recipe().to2x2(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), MAP.get(Rock.BlockType.MOSSY_COBBLE).get(), 1);
+
+            CoreBlocks.ROCK_DECORATIONS.get(rockType).forEach((type, decorations) -> addDecorations(MAP.get(type).get(), decorations));
+
+            recipe("from_slabs")
+                    .input(rockType.getSlab(Rock.BlockType.COBBLE).get())
+                    .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 2);
+            recipe("from_slabs")
+                    .input(rockType.getSlab(Rock.BlockType.MOSSY_COBBLE).get())
+                    .shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 2);
+            recipe("from_stairs")
+                    .input(rockType.getStair(Rock.BlockType.COBBLE).get())
+                    .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 3);
+            recipe("from_stairs")
+                    .input(rockType.getStair(Rock.BlockType.MOSSY_COBBLE).get())
+                    .shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 3);
+            recipe("from_walls")
+                    .input(rockType.getWall(Rock.BlockType.COBBLE).get())
+                    .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 4);
+            recipe("from_walls")
+                    .input(rockType.getWall(Rock.BlockType.MOSSY_COBBLE).get())
+                    .shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 4);
+
+            if (rockType.hasVariants()){
+                recipe().useTool(TFCTags.Items.TOOLS_CHISEL, BRICK_ITEM, MAP.get(Rock.BlockType.BUTTON).get());
+                recipe().useTool(TFCTags.Items.TOOLS_CHISEL, MAP.get(Rock.BlockType.BRICKS).get(), MAP.get(Rock.BlockType.CHISELED).get());
+                recipe().useTool(TFCTags.Items.TOOLS_CHISEL, MAP.get(Rock.BlockType.RAW).get(), MAP.get(Rock.BlockType.SMOOTH).get());
+                recipe().useTool(TFCTags.Items.TOOLS_HAMMER, MAP.get(Rock.BlockType.BRICKS).get(), MAP.get(Rock.BlockType.CRACKED_BRICKS).get());
+
+                recipe()
+                        .input('C', TFCTags.Items.TOOLS_CHISEL)
+                        .input('X', BRICK_ITEM)
+                        .pattern(" C", "XX")
+                        .damageInputs()
+                        .source(0, 1)
+                        .shaped(MAP.get(Rock.BlockType.PRESSURE_PLATE).get());
+            }
+        });
+    }
+
+    private void addDecorations(ItemLike input, CoreDecorationBlockHolder output)
+    {
+        recipe()
+                .input('#', input)
+                .pattern("###")
+                .shaped(output.slab().get(), 6);
+        recipe()
+                .input('#', input)
+                .pattern("#  ", "## ")
+                .shaped(output.stair().get(), 4);
+        recipe()
+                .input('#', input)
+                .pattern("###", "###")
+                .shaped(output.wall().get(), 6);
     }
 
     private Builder recipe()

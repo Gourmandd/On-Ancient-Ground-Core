@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:rock/mossy_cobble/phonolite_wall"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "modpack:rock/mossy_loose/phonolite"
+  }
+}

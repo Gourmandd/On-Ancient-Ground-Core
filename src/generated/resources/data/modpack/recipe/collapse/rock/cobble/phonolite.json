@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "quark:shale",
+    "modpack:rock/hardened/phonolite"
+  ],
+  "result": "modpack:rock/cobble/phonolite"
+}

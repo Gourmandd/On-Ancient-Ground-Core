@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/mossy_cobble/nephelinite"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:rock/gravel/nephelinite"
+    }
+  ]
+}

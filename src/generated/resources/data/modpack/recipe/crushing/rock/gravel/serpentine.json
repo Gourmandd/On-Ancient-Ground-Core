@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/gravel/serpentine"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:sand/green"
+    }
+  ]
+}

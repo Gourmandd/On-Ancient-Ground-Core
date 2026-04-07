@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:rock/gravel/sandstone"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:sand/yellow"
+    }
+  ]
+}

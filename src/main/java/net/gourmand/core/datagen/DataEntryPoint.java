@@ -59,6 +59,7 @@ public final class DataEntryPoint
         add(event, new RollingRecipes(output, lookup));
         add(event, new PressingRecipes(output, lookup));
         add(event, new DeployingRecipes(output, lookup));
+        add(event, new CrushingRecipes(output, lookup));
 
         addLoot(lookup, output, event, BuiltinBlockLootTables::new, LootContextParamSets.BLOCK);
 

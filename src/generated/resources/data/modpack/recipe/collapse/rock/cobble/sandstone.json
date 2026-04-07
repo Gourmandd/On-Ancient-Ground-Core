@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "create:ochrum",
+    "modpack:rock/hardened/sandstone"
+  ],
+  "result": "modpack:rock/cobble/sandstone"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:rock/cobble/breccia_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "modpack:rock/loose/breccia"
+  }
+}

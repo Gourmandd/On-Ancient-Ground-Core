@@ -1,0 +1,10 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "modpack:rock/raw/peridotite",
+    "modpack:rock/hardened/peridotite",
+    "modpack:rock/smooth/peridotite",
+    "modpack:rock/cracked_bricks/peridotite"
+  ],
+  "result": "modpack:rock/cobble/peridotite"
+}

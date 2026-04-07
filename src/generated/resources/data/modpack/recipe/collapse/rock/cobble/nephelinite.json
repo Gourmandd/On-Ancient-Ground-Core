@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "minecraft:deepslate",
+    "modpack:rock/hardened/nephelinite"
+  ],
+  "result": "modpack:rock/cobble/nephelinite"
+}

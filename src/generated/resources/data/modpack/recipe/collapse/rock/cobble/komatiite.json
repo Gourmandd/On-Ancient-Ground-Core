@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "create:scoria",
+    "modpack:rock/hardened/komatiite"
+  ],
+  "result": "modpack:rock/cobble/komatiite"
+}
