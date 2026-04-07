@@ -1,5 +1,6 @@
 package net.gourmand.core.util;
 
+import com.google.common.collect.ImmutableMap;
 import com.simibubi.create.Create;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.TerraFirmaCraft;
@@ -13,75 +14,44 @@ import net.minecraft.resources.ResourceLocation;
 import org.violetmoon.quark.base.Quark;
 
 import java.util.Locale;
+import java.util.Map;
+
+import static net.gourmand.core.registry.category.CoreRocks.*;
 
 public class TextureUtil {
 
     //by converting the rock to a string we can determine which Enum it belongs to...
     public static String getRawRockTexture(RegistryRock rock){
 
-        for (Rock rockType : Rock.values()){
-            if (rockType.getSerializedName().equals(rock.getSerializedName())){
-                return getRawRockTexture(rockType);
-            }
+        if (rock instanceof Rock){
+            return getRawRockTexture((Rock) rock);
         }
 
-        for (CoreRocks rockType : CoreRocks.values()){
-            if (rockType.getSerializedName().equals(rock.getSerializedName())){
-                return getRawRockTexture(rockType);
-            }
+        if (rock instanceof CoreRocks){
+            return GET_RAW_CORE_ROCK_TEXTURE.get((CoreRocks) rock);
         }
 
         throw new IllegalArgumentException("RockType: " + rock.getSerializedName() + " not found");
     }
 
-    private static String getRawRockTexture(CoreRocks rock){
-        if (rock.hasVariants()){
-            return (AncientGroundCore.MODID + ":block/rock/raw/" + rock.getSerializedName());
-        } else {
-            switch (rock){
-                case ARGILLITE -> {
-                    return "minecraft:block/stone";
-                }
-                case NEPHELINITE -> {
-                    return "minecraft:block/deepslate";
-                }
-                case TRAVERTINE -> {
-                    return "minecraft:block/dripstone_block";
-                }
-                case BRECCIA -> {
-                    return "caupona:block/felsic_tuff";
-                }
-                case KOMATIITE -> {
-                    return Create.ID + ":block/palettes/stone_types/scoria";
-                }
-                case BLACKSLAG -> {
-                    return SpectrumCommon.MOD_ID + ":block/blackslag";
-                }
-                case PICRITE_BASALT -> {
-                    return SpectrumCommon.MOD_ID + ":block/basal_marble";
-                }
-                case SANDSTONE -> {
-                    return Create.ID + ":block/palettes/stone_types/natural/ochrum_0";
-                }
-                case RED_SANDSTONE -> {
-                    return Quark.MOD_ID + ":block/jasper";
-                }
-                case SUEVITE -> {
-                    return Create.ID + ":block/palettes/stone_types/scorchia";
-                }
-                case PHONOLITE -> {
-                    return Quark.MOD_ID + ":block/shale";
-                }
-                case ARKOSE -> {
-                    return Quark.MOD_ID + ":block/limestone";
-                }
-                case SOAPSTONE -> {
-                    return Create.ID + ":block/palettes/stone_types/limestone";
-                }
-                case null, default -> throw new AssertionError("Invalid Rock to get texture for");
-            }
-        }
-    }
+    public static final Map<CoreRocks, String> GET_RAW_CORE_ROCK_TEXTURE = ImmutableMap.<CoreRocks, String>builder()
+            .put(SERPENTINE, AncientGroundCore.MODID + ":block/rock/raw/" + SERPENTINE.getSerializedName())
+            .put(PERIDOTITE, AncientGroundCore.MODID + ":block/rock/raw/" + PERIDOTITE.getSerializedName())
+            .put(BLUESCHIST, AncientGroundCore.MODID + ":block/rock/raw/" + BLUESCHIST.getSerializedName())
+            .put(SOAPSTONE, Create.ID + ":block/palettes/stone_types/limestone")
+            .put(SANDSTONE, Create.ID + ":block/palettes/stone_types/natural/ochrum_0")
+            .put(SUEVITE, Create.ID + ":block/palettes/stone_types/scorchia")
+            .put(KOMATIITE, Create.ID + ":block/palettes/stone_types/scoria")
+            .put(RED_SANDSTONE, Quark.MOD_ID + ":block/jasper")
+            .put(PHONOLITE, Quark.MOD_ID + ":block/shale")
+            .put(ARKOSE, Quark.MOD_ID + ":block/limestone")
+            .put(BLACKSLAG, SpectrumCommon.MOD_ID + ":block/blackslag")
+            .put(PICRITE_BASALT, SpectrumCommon.MOD_ID + ":block/basal_marble")
+            .put(TRAVERTINE, "minecraft:block/dripstone_block")
+            .put(ARGILLITE, "minecraft:block/stone")
+            .put(NEPHELINITE, "minecraft:block/deepslate")
+            .put(BRECCIA, "caupona:block/felsic_tuff")
+            .build();
 
     private static String getCobbleTexture(CoreRocks rock){
         if (rock.hasVariants()){

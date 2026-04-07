@@ -1,6 +1,5 @@
 package net.gourmand.core.datagen.providers;
 
-import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
@@ -15,9 +14,7 @@ import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -54,20 +51,22 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
     private void addCropTable(CoreCrops crop){
 
+        final var PRODUCT = CategoryUtil.CoreCrop.TO_CROP_PRODUCT.get(crop);
+
         switch (crop.getCropType()){
             case SINGLE -> {
-                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSingleCropTable(crop, getCropProduct(crop)));
-                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, getCropProduct(crop)));
-                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSingleCropTable(crop, getCropProduct(crop)));
+                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSingleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSingleCropTable(crop, PRODUCT));
             }
             case DOUBLE -> {
-                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createDoubleCropTable(crop, getCropProduct(crop)));
-                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadDoubleCropTable(crop, getCropProduct(crop)));
-                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildDoubleCropTable(crop, getCropProduct(crop)));
+                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createDoubleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadDoubleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildDoubleCropTable(crop, PRODUCT));
             }
             case SPREADING -> {
                 this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSpreadingCropTable(crop));
-                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, getCropProduct(crop)));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, PRODUCT));
                 this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSpreadingCropTable(crop));
             }
         }
@@ -101,7 +100,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
           }
           case RAW, HARDENED -> {
               this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRawRockDropTable(
-                      CoreRocks.getRawRock(rock),
+                      CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).value(),
                       CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get()
               ));
           }
@@ -109,31 +108,6 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
               this.dropSelf(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get());
           }
       }
-    }
-
-    // methods for getting items and other data
-    public static Item getCropProduct(CoreCrops crop)
-    {
-        switch(crop){
-            case COFFEE -> {
-                return BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "coffee_beans"));
-            }
-            case COTTON -> {
-                return BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "cotton_boll"));
-            }
-            case GLISTERING_MELON -> {
-                return SpectrumBlocks.GLISTERING_MELON.asItem();
-            }
-            case AMARANTH -> {
-                return SpectrumBlocks.AMARANTH_BUSHEL.asItem();
-            }
-            case WART -> {
-                return Items.NETHER_WART;
-            }
-            case null, default -> {
-                throw new AssertionError("no product for this crop type");
-            }
-        }
     }
 
     @Override

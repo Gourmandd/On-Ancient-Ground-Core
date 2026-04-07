@@ -4,6 +4,7 @@ import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.recipes.CollapseRecipe;
 import net.dries007.tfc.common.recipes.ingredients.BlockIngredient;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.category.CategoryUtil;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -22,7 +23,7 @@ public interface CollapseRecipes extends Recipes {
         if (rockType.hasVariants()){
             collapse(
                     BlockIngredient.of(
-                        CoreRocks.getRawRock(rockType),
+                        CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rockType).value(),
                         BLOCK_MAP.get(Rock.BlockType.HARDENED).get(),
                         BLOCK_MAP.get(Rock.BlockType.SMOOTH).get(),
                         BLOCK_MAP.get(Rock.BlockType.CRACKED_BRICKS).get()
@@ -32,7 +33,7 @@ public interface CollapseRecipes extends Recipes {
         } else {
             collapse(
                     BlockIngredient.of(
-                            CoreRocks.getRawRock(rockType),
+                            CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rockType).value(),
                             BLOCK_MAP.get(Rock.BlockType.HARDENED).get()
                     ),
                     BLOCK_MAP.get(Rock.BlockType.COBBLE).get().defaultBlockState()

@@ -113,9 +113,9 @@ public enum CoreOres implements RegistryOre {
             return TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get().defaultBlockState();
         }
         if (rock instanceof CoreRocks) {
-            return CoreRocks.getRawRock((CoreRocks) rock).defaultBlockState();
+            return CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).value().defaultBlockState();
         }
-        return Blocks.GOLD_BLOCK.defaultBlockState();
+        return Blocks.STONE.defaultBlockState();
     }
 
     public Item getPastelOre(){

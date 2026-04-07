@@ -256,7 +256,7 @@ public interface CraftingRecipes extends Recipes {
 
             final var MAP = CoreBlocks.ROCK_BLOCKS.get(rockType);
             final var BRICK_ITEM = CoreItems.BRICKS.get(rockType).get();
-            final var RAW_BLOCK = CoreRocks.getRawRock(rockType);
+            final var RAW_BLOCK = CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rockType).value();
 
             recipe()
                     .input('X', BRICK_ITEM)
@@ -272,7 +272,7 @@ public interface CraftingRecipes extends Recipes {
                     .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
                     .damageInputs()
                     .shapeless(BRICK_ITEM);
-            recipe().bricksWithMortar(BRICK_ITEM, CoreRocks.getBricksBlock(rockType), 4);
+            recipe().bricksWithMortar(BRICK_ITEM, CategoryUtil.CoreRock.TO_BRICK_BLOCK.get(rockType).value(), 4);
             recipe()
                     .input(MAP.get(Rock.BlockType.COBBLE).get())
                     .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 4);

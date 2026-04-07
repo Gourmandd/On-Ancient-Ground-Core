@@ -195,17 +195,17 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
             this.tag(TFCTags.Blocks.CAN_COLLAPSE)
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE).getKey())
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).getKey())
-                    .add(CoreRocks.getRawRock(rock).builtInRegistryHolder().key());
+                    .add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
 
             this.tag(Tags.Blocks.STONES)
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).getKey())
-                    .add(CoreRocks.getRawRock(rock).builtInRegistryHolder().key());
+                    .add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
 
-            this.tag(TFCTags.Blocks.STONES_RAW).add(CoreRocks.getRawRock(rock).builtInRegistryHolder().key());
-            this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).add(CoreRocks.getRawRock(rock).builtInRegistryHolder().key());
-            this.tag(TFCTags.Blocks.CAN_START_COLLAPSE).add(CoreRocks.getRawRock(rock).builtInRegistryHolder().key());
+            this.tag(TFCTags.Blocks.STONES_RAW).add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
+            this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
+            this.tag(TFCTags.Blocks.CAN_START_COLLAPSE).add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
             this.tag(TFCTags.Blocks.CAN_TRIGGER_COLLAPSE)
-                    .add(CoreRocks.getRawRock(rock).builtInRegistryHolder().key())
+                    .add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key())
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).getKey());
 
             this.tag(TFCTags.Blocks.STONES_SPIKE).add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE).getKey());

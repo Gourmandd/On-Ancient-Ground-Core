@@ -216,7 +216,7 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 
             this.tag(TFCTags.Items.STONES_HARDENED).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED)));
 
-            this.tag(Tags.Items.STONES).add(getKey(CoreRocks.getRawRock(rock)));
+            this.tag(Tags.Items.STONES).add(getKey(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).value()));
 
             this.tag(Tags.Items.COBBLESTONES)
                     .add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE)))
