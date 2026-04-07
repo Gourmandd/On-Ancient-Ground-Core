@@ -35,6 +35,7 @@ public class AncientGroundCore {
         CoreBlocks.BLOCKS.register(modEventBus);
         CoreItems.ITEMS.register(modEventBus);
         CreativeTabs.CREATIVE_TABS.register(modEventBus);
+        CoreWorldGen.BIOME_SOURCES.register(modEventBus);
 
         CoreFluids.FLUIDS.register(modEventBus);
         CoreFluids.FLUID_TYPES.register(modEventBus);
