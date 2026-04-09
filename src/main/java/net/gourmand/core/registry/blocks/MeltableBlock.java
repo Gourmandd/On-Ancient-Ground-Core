@@ -10,11 +10,11 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import javax.annotation.Nullable;
 
-public class MeltableBLock extends Block {
+public class MeltableBlock extends Block {
 
     private final BlockState meltsInto;
 
-    public MeltableBLock(Properties properties, BlockState meltsInto) {
+    public MeltableBlock(Properties properties, BlockState meltsInto) {
         super(properties);
         this.meltsInto = meltsInto;
     }
