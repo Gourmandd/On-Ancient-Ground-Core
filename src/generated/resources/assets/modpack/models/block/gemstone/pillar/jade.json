@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "modpack:block/gemstone/pillar/jade_bottom",
+    "particle": "modpack:block/gemstone/pillar/jade_side",
+    "side": "modpack:block/gemstone/pillar/jade_side",
+    "top": "modpack:block/gemstone/pillar/jade_top"
+  }
+}

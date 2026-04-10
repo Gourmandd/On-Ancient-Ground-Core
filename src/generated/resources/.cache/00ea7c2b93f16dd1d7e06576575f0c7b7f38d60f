@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-30T09:35:26.805958397	Item Models: modpack
+// 1.21.1	2026-04-10T11:01:20.339796358	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -254,6 +254,36 @@ b76294469d8ccbd22d5fc92b5c8d33bed4063457 assets/modpack/models/item/deposit/nati
 8c89ea1d86890d512cecb09fc1baf2c4a7b886c1 assets/modpack/models/item/deposit/native_silver/soapstone.json
 a7efcb39f2ca8c516db25a35959032e3879791fa assets/modpack/models/item/deposit/native_silver/suevite.json
 5c3653cac8a5167230c46080d8881faadec98fcd assets/modpack/models/item/deposit/native_silver/travertine.json
+8b796a141a79f48333fd02cb7a1868962c497cf6 assets/modpack/models/item/gemstone/block/aquamarine.json
+77eb55cfc7ddc0484037f7729512879dcf9ea4aa assets/modpack/models/item/gemstone/block/jade.json
+30107ae5b9c4e247c206faef6f64468c1a371690 assets/modpack/models/item/gemstone/block/spinel.json
+1df3cfd4fb8fbcfbe5cc9fda7d8966e2681b7b9f assets/modpack/models/item/gemstone/budding_block/aquamarine.json
+ed4176806df08d32e081fd579a127f756992189e assets/modpack/models/item/gemstone/budding_block/jade.json
+b7ff34885b27e43d8f494c63b6088d0df8a30363 assets/modpack/models/item/gemstone/budding_block/spinel.json
+23a570742804c6ac139d9e7d55747a3036b65fe0 assets/modpack/models/item/gemstone/cluster/aquamarine.json
+7d642882c02cd2e7d4a0eadf8817b5f686a22102 assets/modpack/models/item/gemstone/cluster/jade.json
+522e7ad5a8e1fef1b686ef03566cdcc4d0c9443a assets/modpack/models/item/gemstone/cluster/spinel.json
+a4b09c59fa31f9daa914e0cbb8e0772b65214f47 assets/modpack/models/item/gemstone/large_cluster/aquamarine.json
+16241407bd0a2c175255985bdbd6d7a439ac8a5e assets/modpack/models/item/gemstone/large_cluster/jade.json
+5d987bfbc214beed522b9f090af5daa3972aca70 assets/modpack/models/item/gemstone/large_cluster/spinel.json
+a9551550ff58a0a8ba22812811c412b4e7f15e48 assets/modpack/models/item/gemstone/medium_cluster/aquamarine.json
+0f5b5ea0d1dbbfa9864d3c22e0d8a3b3a2a554bd assets/modpack/models/item/gemstone/medium_cluster/jade.json
+7bbcd2980b42740300661c93901f1e38edc3c724 assets/modpack/models/item/gemstone/medium_cluster/spinel.json
+eafe2af26aeda5b45287b8a2f8cf5f31b35a714e assets/modpack/models/item/gemstone/pillar/aquamarine.json
+cc2c9758b089e629adafe94cb0a088b9dd6aad90 assets/modpack/models/item/gemstone/pillar/jade.json
+10e7cbcdd7b806dbb3febe3d71826fb39cd78741 assets/modpack/models/item/gemstone/pillar/spinel.json
+511f5361ba2c1341726f43e9fafe4e929a7a4f4d assets/modpack/models/item/gemstone/powder/aquamarine.json
+18c094cc1b56f84d50f6a61549df831614525d48 assets/modpack/models/item/gemstone/powder/jade.json
+6afb24358ee32bea31144a8b1ca5c42249e80afd assets/modpack/models/item/gemstone/powder/spinel.json
+e13c3046db05a743da72cb8a46871d7c678b4efa assets/modpack/models/item/gemstone/powder_block/aquamarine.json
+e6b09b8bd8b47e7cefec98a0d84c4adb754a7615 assets/modpack/models/item/gemstone/powder_block/jade.json
+0b1519288a912a5b300ee92508c5f8241e1c2be4 assets/modpack/models/item/gemstone/powder_block/spinel.json
+07907b575416921055d36668fd9420733d1ba0f0 assets/modpack/models/item/gemstone/shard/aquamarine.json
+518bd4f06cacdb41be248544f455e53faab1a769 assets/modpack/models/item/gemstone/shard/jade.json
+905a57a11b130c5e3a94f40bd86e07e81030786a assets/modpack/models/item/gemstone/shard/spinel.json
+a6355624a51882f05b6f33c33ccd3b8b94632d38 assets/modpack/models/item/gemstone/small_cluster/aquamarine.json
+53cc864d3d24b1600eaf1be4d1626594dd6c8297 assets/modpack/models/item/gemstone/small_cluster/jade.json
+0309e19c9b85c62cef79fcb86659f47572b14a3f assets/modpack/models/item/gemstone/small_cluster/spinel.json
 75bcaddcb7d1d399127b1809bf0189cbe39af6d5 assets/modpack/models/item/lens/black.json
 47c6a4f0c3ecf3b7bae7973c029984a13d4ce1d9 assets/modpack/models/item/lens/blue.json
 836f8296fd74e4ba9f26f948c96160c4671e368e assets/modpack/models/item/lens/brown.json

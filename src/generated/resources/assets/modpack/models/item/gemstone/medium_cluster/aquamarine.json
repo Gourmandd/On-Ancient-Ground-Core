@@ -1,0 +1,6 @@
+{
+  "parent": "spectrum:templates_item/medium_bud",
+  "textures": {
+    "layer0": "modpack:block/gemstone/medium_cluster/aquamarine"
+  }
+}

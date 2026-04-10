@@ -5,6 +5,7 @@ import net.gourmand.core.datagen.DataEntryPoint;
 import net.gourmand.core.event.ServerEventHandler;
 import net.gourmand.core.registry.*;
 import net.gourmand.core.registry.items.CoreItemCapabilities;
+import net.gourmand.core.registry.CoreGemstoneColors;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
@@ -36,6 +37,7 @@ public class AncientGroundCore {
         CoreItems.ITEMS.register(modEventBus);
         CreativeTabs.CREATIVE_TABS.register(modEventBus);
         CoreWorldGen.BIOME_SOURCES.register(modEventBus);
+        CoreGemstoneColors.GEMSTONE_COLORS.register(modEventBus);
 
         CoreFluids.FLUIDS.register(modEventBus);
         CoreFluids.FLUID_TYPES.register(modEventBus);

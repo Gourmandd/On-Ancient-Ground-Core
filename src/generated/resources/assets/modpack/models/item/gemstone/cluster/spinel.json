@@ -1,0 +1,6 @@
+{
+  "parent": "spectrum:templates_item/cluster",
+  "textures": {
+    "layer0": "modpack:block/gemstone/cluster/spinel"
+  }
+}

@@ -88,6 +88,12 @@ public class CoreItems {
 
     public static final DeferredHolder<Item, Item> WROUGHT_IRON_BUCKET = register("metal/bucket/wrought_iron", () -> new MetalBucketItem(new Item.Properties(), CoreTags.WROUGHT_IRON_BUCKET_ACCEPTABLE, true, TFCConfig.SERVER.metalBucketCanPlaceSources));
 
+    public static final Map<CoreGemstones, Map<CoreGemstones.GemstoneItems, DeferredHolder<Item, Item>>> GEMSTONE_ITEMS = Helpers.mapOf(CoreGemstones.class, gem ->
+            Helpers.mapOf(CoreGemstones.GemstoneItems.class, itemType ->
+                    register("gemstone/" + itemType.getSerializedName() + "/" + gem.getSerializedName(), () -> itemType.create(gem))
+            )
+    );
+
     private static Item basicItem(){
         return new Item(new Item.Properties());
     }

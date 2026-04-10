@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "modpack:block/gemstone/small_cluster/jade",
+    "particle": "modpack:block/gemstone/small_cluster/jade"
+  }
+}

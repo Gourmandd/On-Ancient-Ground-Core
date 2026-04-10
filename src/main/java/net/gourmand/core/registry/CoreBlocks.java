@@ -216,6 +216,12 @@ public class CoreBlocks {
     public static final DeferredHolder<Block, Block> PRISMATIC_ICE = register("prismatic_ice", () -> new MeltableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE).mapColor(MapColor.COLOR_PINK), SpectrumBlocks.LIQUID_CRYSTAL.get().defaultBlockState()));
     public static final DeferredHolder<Block, Block> SLUDGE = register("sludge", () -> new MeltableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE).mapColor(MapColor.TERRACOTTA_BROWN).sound(SoundType.SLIME_BLOCK), SpectrumBlocks.SLUDGE.get().defaultBlockState()));
 
+    public static final Map<CoreGemstones, Map<CoreGemstones.GemstoneBlocks, DeferredHolder<Block, Block>>> GEMSTONE_BLOCKS = Helpers.mapOf(CoreGemstones.class, gem ->
+            Helpers.mapOf(CoreGemstones.GemstoneBlocks.class, blockType ->
+                    register("gemstone/" + blockType.getSerializedName() + "/" + gem.getSerializedName(), () -> blockType.create(gem))
+            )
+    );
+
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {
         return true;

@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "modpack:block/gemstone/small_cluster/jade",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "modpack:block/gemstone/small_cluster/jade",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/gemstone/small_cluster/jade",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "modpack:block/gemstone/small_cluster/jade",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "modpack:block/gemstone/small_cluster/jade"
+    },
+    "facing=west": {
+      "model": "modpack:block/gemstone/small_cluster/jade",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

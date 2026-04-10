@@ -12,17 +12,24 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.*;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
@@ -110,6 +117,10 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
       }
     }
 
+    private void dropAir(Block block){
+        this.add(block, LootTable.lootTable());
+    }
+
     @Override
     protected void generate() {
 
@@ -119,6 +130,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         generateRock();
         generateWood();
         generateMisc();
+        generateGemstones();
 
         Stream.of(DyeColor.values()).forEach(color -> {
             this.dropSelf(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
@@ -278,6 +290,37 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         });
     }
 
+    private void generateGemstones(){
+
+        Stream.of(CoreGemstones.values()).forEach(gem -> {
+            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType -> {
+
+                DeferredHolder<Block, Block> block = CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType);
+
+                switch (blockType){
+                    case BLOCK, POWDER_BLOCK, PILLAR -> {
+                        this.dropSelf(block.get());
+                    }
+                    case BUDDING_BLOCK -> {
+                        dropAir(block.get());
+                    }
+                    case CLUSTER -> {
+                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gem).get(CoreGemstones.GemstoneItems.SHARD).get(), 4));
+                    }
+                    case LARGE_CLUSTER -> {
+                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gem).get(CoreGemstones.GemstoneItems.POWDER).get(), 4));
+                    }
+                    case MEDIUM_CLUSTER -> {
+                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gem).get(CoreGemstones.GemstoneItems.POWDER).get(), 2));
+                    }
+                    case SMALL_CLUSTER -> {
+                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gem).get(CoreGemstones.GemstoneItems.POWDER).get(), 1));
+                    }
+                }
+            });
+        });
+    }
+
     private void generateMisc(){
 
         Stream.of(DyeColor.values()).forEach(color -> {
@@ -318,6 +361,21 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                         )
                 )
         );
+    }
 
+    //gemstones
+    protected LootTable.Builder createClusterTable(Block block, Item item, float amount){
+        return this.createSilkTouchDispatchTable(
+                block,
+                LootItem.lootTableItem(item)
+                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(amount)))
+                        .apply(ApplyBonusCount.addOreBonusCount(this.registries.holderOrThrow(Enchantments.FORTUNE)))
+                        .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                        .otherwise(
+                                this.applyExplosionDecay(
+                                        block, LootItem.lootTableItem(item).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))
+                                )
+                        )
+        );
     }
 }

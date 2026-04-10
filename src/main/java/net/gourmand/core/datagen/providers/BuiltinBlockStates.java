@@ -1,5 +1,6 @@
 package net.gourmand.core.datagen.providers;
 
+import de.dafuqs.spectrum.blocks.crystallarieum.SpectrumClusterBlock;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.ShelfBlock;
 import net.dries007.tfc.common.blocks.devices.SluiceBlock;
@@ -185,6 +186,27 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/prismatic_ice" ));
         cubeAll(CoreBlocks.SLUDGE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/sludge" ));
+
+        Stream.of(CoreGemstones.values()).forEach(gem -> {
+
+            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType -> {
+
+                DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType);
+                ResourceLocation TEXTURE = blockTexture(BLOCK.get());
+
+                switch (blockType){
+                    case BLOCK, POWDER_BLOCK, BUDDING_BLOCK -> {
+                        cubeAll(BLOCK, TEXTURE);
+                    }
+                    case PILLAR -> {
+                        cubeBottomTop(BLOCK, TEXTURE);
+                    }
+                    case CLUSTER, LARGE_CLUSTER, MEDIUM_CLUSTER, SMALL_CLUSTER -> {
+                        cluster(BLOCK, TEXTURE);
+                    }
+                }
+            });
+        });
     }
 
 
@@ -642,5 +664,47 @@ public class BuiltinBlockStates extends BlockStateProvider {
                                         .texture("all", thickFluidFlowTexture)
                         )
                 );
+    }
+
+    private void cubeBottomTop(DeferredHolder<Block, Block> block, ResourceLocation texture){
+
+        final ResourceLocation BOTTOM = ResourceLocation.fromNamespaceAndPath(texture.getNamespace(), texture.getPath() + "_bottom");
+        final ResourceLocation TOP = ResourceLocation.fromNamespaceAndPath(texture.getNamespace(), texture.getPath() + "_top");
+        final ResourceLocation SIDE = ResourceLocation.fromNamespaceAndPath(texture.getNamespace(), texture.getPath() + "_side");
+
+        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cube_bottom_top")
+                .texture("bottom", BOTTOM)
+                .texture("side", SIDE)
+                .texture("top", TOP)
+                .texture("particle", SIDE);
+
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(MODEL).buildLast());
+    }
+
+    private void cross(DeferredHolder<Block, Block> block, ResourceLocation texture){
+
+        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cross")
+                .texture("cross", texture)
+                .texture("particle", texture);
+
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(MODEL).buildLast());
+    }
+
+    private void cluster(DeferredHolder<Block, Block> block, ResourceLocation texture){
+
+        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cross")
+                .texture("cross", texture)
+                .texture("particle", texture);
+
+
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(SpectrumClusterBlock.FACING, Direction.UP).modelForState().modelFile(MODEL).addModel()
+                .partialState().with(SpectrumClusterBlock.FACING, Direction.DOWN).modelForState().modelFile(MODEL).rotationX(180).addModel()
+                .partialState().with(SpectrumClusterBlock.FACING, Direction.NORTH).modelForState().modelFile(MODEL).rotationX(90).addModel()
+                .partialState().with(SpectrumClusterBlock.FACING, Direction.EAST).modelForState().modelFile(MODEL).rotationY(90).rotationX(90).addModel()
+                .partialState().with(SpectrumClusterBlock.FACING, Direction.SOUTH).modelForState().modelFile(MODEL).rotationX(90).rotationY(180).addModel()
+                .partialState().with(SpectrumClusterBlock.FACING, Direction.WEST).modelForState().modelFile(MODEL).rotationX(90).rotationY(270).addModel();
     }
 }

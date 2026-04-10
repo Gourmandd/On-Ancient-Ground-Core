@@ -15,6 +15,7 @@ import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
 import net.gourmand.core.util.TextUtil;
 import net.minecraft.data.PackOutput;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import org.apache.commons.lang3.stream.Streams;
@@ -54,26 +55,26 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
         // bulk lang
         Stream.of(CoreCrops.values()).forEach(crop -> {
-            addItem(CoreItems.CROP_SEEDS.get(crop), getName(crop.name()) + " Seeds");
-            addBlock(CoreBlocks.WILD_CROPS.get(crop), "Wild " + getName(crop.name()));
-            addBlock(CoreBlocks.CROPS.get(crop), getName(crop.name()));
-            addBlock(CoreBlocks.DEAD_CROPS.get(crop), "Dead " + getName(crop.name()));
+            addItem(CoreItems.CROP_SEEDS.get(crop), getName(crop) + " Seeds");
+            addBlock(CoreBlocks.WILD_CROPS.get(crop), "Wild " + getName(crop));
+            addBlock(CoreBlocks.CROPS.get(crop), getName(crop));
+            addBlock(CoreBlocks.DEAD_CROPS.get(crop), "Dead " + getName(crop));
         });
 
         Stream.of(CoreSpreadingBushes.values()).forEach(bush -> {
-            addBlock(CoreBlocks.SPREADING_BUSHES.get(bush), getName(bush.name()) + " Bush");
+            addBlock(CoreBlocks.SPREADING_BUSHES.get(bush), getName(bush) + " Bush");
         });
 
         Stream.of(CoreStationaryBushes.values()).forEach(bush -> {
-            addBlock(CoreBlocks.STATIONARY_BUSHES.get(bush), getName(bush.name()) + " Bush");
+            addBlock(CoreBlocks.STATIONARY_BUSHES.get(bush), getName(bush) + " Bush");
         });
 
         Stream.of(CoreFruitTrees.values()).forEach(tree -> {
-            addBlock(CoreBlocks.FRUIT_TREE_LEAVES.get(tree), getName(tree.name()) + " Leaves");
-            addBlock(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree), getName(tree.name()) + " Branch");
-            addBlock(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(tree), getName(tree.name()) + " Growing Branch");
-            addBlock(CoreBlocks.FRUIT_TREE_SAPLINGS.get(tree), getName(tree.name()) + " Sapling");
-            addBlock(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(tree), getName(tree.name()) + " Potted Sapling");
+            addBlock(CoreBlocks.FRUIT_TREE_LEAVES.get(tree), getName(tree) + " Leaves");
+            addBlock(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree), getName(tree) + " Branch");
+            addBlock(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(tree), getName(tree) + " Growing Branch");
+            addBlock(CoreBlocks.FRUIT_TREE_SAPLINGS.get(tree), getName(tree) + " Sapling");
+            addBlock(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(tree), getName(tree) + " Potted Sapling");
         });
 
         // custom clay types.
@@ -81,14 +82,14 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             Stream.of(CoreClay.ItemType.values()).forEach(type -> {
                 if (type.hasType(clay)){
                     if (type.getType() == CoreClay.ItemPartType.UNFIRED_MOLD){
-                        addItem(CoreItems.CERAMICS.get(clay).get(type),  "Unfired " + getName(clay.name()) + " " + getName(type.name()) + " Mold");
+                        addItem(CoreItems.CERAMICS.get(clay).get(type),  "Unfired " + getName(clay) + " " + getName(type.name()) + " Mold");
                     } else {
-                        addItem(CoreItems.CERAMICS.get(clay).get(type), getName(clay.name()) + " " + getName(type.name()));
+                        addItem(CoreItems.CERAMICS.get(clay).get(type), getName(clay) + " " + getName(type.name()));
                     }
                 }
             });
-            add("item." + AncientGroundCore.MODID + ".ceramic." + clay.getSerializedName() + ".jug.filled", "%s " + getName(clay.name()) + " Jug");
-            add("emi." + TerraFirmaCraft.MOD_ID + ".ceramic." + clay.getSerializedName() + "_knapping", getName(clay.name()) + " Knapping");
+            add("item." + AncientGroundCore.MODID + ".ceramic." + clay.getSerializedName() + ".jug.filled", "%s " + getName(clay) + " Jug");
+            add("emi." + TerraFirmaCraft.MOD_ID + ".ceramic." + clay.getSerializedName() + "_knapping", getName(clay) + " Knapping");
         });
 
         // custom rocks.
@@ -97,72 +98,72 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 if (rock.hasVariant(type)){
                     if (type.hasVariants()){
                         if (isRockTypePrefixed(type)){
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), getName(type.name()) + " " + getName(rock.name()) + " Stairs");
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), getName(type.name()) + " " + getName(rock.name()) + " Slab");
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getName(type.name())+ " " + getName(rock.name()) + " Wall");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), getName(type) + " " + getName(rock) + " Stairs");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), getName(type) + " " + getName(rock) + " Slab");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getName(type)+ " " + getName(rock) + " Wall");
                         } else {
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), getName(rock.name()) + " " + getName(type.name()) + " Stairs");
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), getName(rock.name()) + " " + getName(type.name()) + " Slab");
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getName(rock.name()) + " " + getName(type.name()) + " Wall");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), getName(rock) + " " + getName(type) + " Stairs");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), getName(rock) + " " + getName(type) + " Slab");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getName(rock) + " " + getName(type) + " Wall");
                         }
                     }
 
                     if (isRockTypePrefixed(type)){
-                        addBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(type),  getName(type.name()) + " " + getName(rock.name()));
+                        addBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(type),  getName(type) + " " + getName(rock));
                     } else {
-                        addBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock.name()) + " " + getName(type.name()));
+                        addBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " " + getName(type));
                     }
 
                 }
             });
-            addItem(CoreItems.BRICKS.get(rock), getName(rock.name()) + " Brick");
-            addBlock(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rock), "Mortared " + getName(rock.name()) + " Cobble");
+            addItem(CoreItems.BRICKS.get(rock), getName(rock) + " Brick");
+            addBlock(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rock), "Mortared " + getName(rock) + " Cobble");
         });
 
         // tfc rocks.
         Stream.of(Rock.values()).forEach(rock -> {
-            addBlock(CoreBlocks.MORTARED_TFC_COBBLE.get(rock), "Mortared " + getName(rock.name()) + " Cobble");
+            addBlock(CoreBlocks.MORTARED_TFC_COBBLE.get(rock), "Mortared " + getName(rock) + " Cobble");
         });
 
         Stream.of(CoreDeeperDownWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach(type -> {
                 if (type.needsItem() && wood.hasBlockType(type)){
-                    addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type), getName(wood.name()) + " " + getName(type.name()));
+                    addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type), getName(wood) + " " + getName(type.name()));
                 }
             });
-            addItem(CoreItems.SUPPORTS.get(wood), getName(wood.name()) + " Support");
-            addItem(CoreItems.LUMBER.get(wood), getName(wood.name()) + " Twig");
+            addItem(CoreItems.SUPPORTS.get(wood), getName(wood) + " Support");
+            addItem(CoreItems.LUMBER.get(wood), getName(wood) + " Twig");
         });
 
         // custom metals.
         Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
             Stream.of(Metal.ItemType.values()).forEach(itemType -> {
                 if (itemType.has(metal.getLikeMetal())){
-                    addItem(CoreItems.METAL_ITEMS.get(metal).get(itemType), getName(metal.name()) + " " + getName(itemType.name()));
+                    addItem(CoreItems.METAL_ITEMS.get(metal).get(itemType), getName(metal) + " " + getName(itemType.name()));
                 }
             });
 
             if (!metal.hasOtherFluid()){
-                add(CoreBlocks.METAL_FLUIDS.get(metal).get(), getName(metal.name()));
-                add(CoreItems.METAL_FLUID_BUCKETS.get(metal).get(), getName(metal.name()) + " Bucket");
-                add(CoreFluids.METALS.get(metal).type().get().getDescriptionId(), getName(metal.name()));
+                add(CoreBlocks.METAL_FLUIDS.get(metal).get(), getName(metal));
+                add(CoreItems.METAL_FLUID_BUCKETS.get(metal).get(), getName(metal) + " Bucket");
+                add(CoreFluids.METALS.get(metal).type().get().getDescriptionId(), getName(metal));
             }
 
             Stream.of(Metal.BlockType.values()).forEach(blockType -> {
                 if (blockType.has(metal.getLikeMetal())){
-                    addBlock(CoreBlocks.METALS.get(metal).get(blockType), getName(metal.name()) + " " + getName(blockType.name()));
+                    addBlock(CoreBlocks.METALS.get(metal).get(blockType), getName(metal) + " " + getName(blockType.name()));
                 }
             });
 
-            add("metal." + AncientGroundCore.MODID + "." + metal.getSerializedName(), getName(metal.name()));
+            add("metal." + AncientGroundCore.MODID + "." + metal.getSerializedName(), getName(metal));
         });
 
         // TODO: find out if TFC still wants these as metal definitions don't exist anymore.
         Stream.of(DyeColor.values()).forEach(colour -> {
-            add("metal." + AncientGroundCore.MODID + ".glass." + colour.getSerializedName(), getName(colour.name()) + " Glass");
-            add(CoreBlocks.COLORED_GLASS_FLUIDS.get(colour).get(), getName(colour.name()) + " Glass");
-            add(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(colour).get(), getName(colour.name()) + " Glass Bucket");
-            add(CoreFluids.COLORED_GLASS.get(colour).type().get().getDescriptionId(), getName(colour.name()) + " Glass");
+            add("metal." + AncientGroundCore.MODID + ".glass." + colour.getSerializedName(), getName(colour) + " Glass");
+            add(CoreBlocks.COLORED_GLASS_FLUIDS.get(colour).get(), getName(colour) + " Glass");
+            add(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(colour).get(), getName(colour) + " Glass Bucket");
+            add(CoreFluids.COLORED_GLASS.get(colour).type().get().getDescriptionId(), getName(colour) + " Glass");
         });
         add("metal." + AncientGroundCore.MODID + ".glass.clear", "Clear Glass");
         add(CoreBlocks.CLEAR_GLASS_FLUID.get(), "Clear Glass");
@@ -176,31 +177,31 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 Stream.of(CoreRocks.values()).forEach(rock -> {
                     if (ore.isGraded()){
                         Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                            createOreKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock.name()), getName(ore.name()));
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
                         });
                     } else {
-                        createOreKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), getName(rock.name()), getName(ore.name()));
+                        createOreKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), getName(rock), getName(ore));
                     }
                 });
                 Stream.of(Rock.values()).forEach(rock -> {
                     if (ore.isGraded()){
                         Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                            createOreKey(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock.name()), getName(ore.name()));
+                            createOreKey(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
                         });
                     } else {
-                        createOreKey(CoreBlocks.ORES.get(rock).get(ore), getName(rock.name()), getName(ore.name()));
+                        createOreKey(CoreBlocks.ORES.get(rock).get(ore), getName(rock), getName(ore));
                     }
                 });
 
                 if (ore.isGraded()){
-                    addBlock(CoreBlocks.SMALL_ORES.get(ore),"Small " + getName(ore.name()));
+                    addBlock(CoreBlocks.SMALL_ORES.get(ore),"Small " + getName(ore));
                     Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                        addItem(CoreItems.GRADED_ORES.get(ore).get(grade), getName(grade.name()) + " " + getName(ore.name()));
+                        addItem(CoreItems.GRADED_ORES.get(ore).get(grade), getName(grade.name()) + " " + getName(ore));
                     });
                 }
             } else {
-                createOreKey(CoreBlocks.BASIC_ORES.get(ore), getName(ore.name()));
-                addItem(CoreItems.ORES.get(ore), getName(ore.name()));
+                createOreKey(CoreBlocks.BASIC_ORES.get(ore), getName(ore));
+                addItem(CoreItems.ORES.get(ore), getName(ore));
             }
         });
 
@@ -211,10 +212,10 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 Stream.of(CoreRocks.values()).forEach(rock -> {
                     if (ore.isGraded()){
                         Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock.name()), getName(ore.name()));
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
                         });
                     } else {
-                        createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), getName(rock.name()), getName(ore.name()));
+                        createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(ore.name()));
                     }
                 });
             }
@@ -222,8 +223,8 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
         // glass.
         Stream.of(DyeColor.values()).forEach(color -> {
-            addItem(() -> CoreItems.COLORED_LENS.get(color).get(), getName(color.getSerializedName()) + " Lens");
-            addBlock(() -> CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get(), getName(color.getSerializedName()) + " Molten Glass");
+            addItem(() -> CoreItems.COLORED_LENS.get(color).get(), getName(color) + " Lens");
+            addBlock(() -> CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get(), getName(color) + " Molten Glass");
         });
 
         addBlock(CoreBlocks.CLEAR_MOLTEN_GLASS, "Clear Molten Glass");
@@ -232,11 +233,11 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             Stream.of(CoreClay.BlockType.values()).forEach(type -> {
 
                 if (type.hasClayType(clay)){
-                    addBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), getName(clay.getSerializedName()) + " Clay");
+                    addBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), getName(clay) + " Clay");
                 }
 
                 if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
-                    String baseName = getName(clay.getSerializedName()) + " " + getName(type.getSerializedName()) + " ";
+                    String baseName = getName(clay) + " " + getName(type) + " ";
                     addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair(), baseName + "Stairs");
                     addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab(), baseName + "Slab");
                     addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall(), baseName + "Wall");
@@ -246,12 +247,30 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
             Streams.of(OreDeposit.values()).forEach(ore -> {
-                addBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), getName(rock.getSerializedName()) + " " + getName(ore.name().toLowerCase(Locale.ROOT)) + " Deposit");
+                addBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), getName(rock) + " " + getName(ore.name().toLowerCase(Locale.ROOT)) + " Deposit");
             });
         });
 
         addBlock(CoreBlocks.SLUDGE, "Sludge");
         addBlock(CoreBlocks.PRISMATIC_ICE, "Prismatic Ice");
+
+        Stream.of(CoreGemstones.values()).forEach(gem -> {
+
+            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType -> {
+                if (blockType.isCluster() && blockType != CoreGemstones.GemstoneBlocks.CLUSTER){
+                    final String prefix = blockType.getSerializedName().split("_")[0];
+                    final String suffix = blockType.getSerializedName().split("_")[1];
+
+                    addBlock(() -> CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType).get(), getName(prefix) + " " + getName(gem) + " " + getName(suffix));
+                } else {
+                    addBlock(() -> CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType).get(), getName(gem) + " " + getName(blockType));
+                }
+            });
+
+            Stream.of(CoreGemstones.GemstoneItems.values()).forEach(itemType -> {
+                addItem(() -> CoreItems.GEMSTONE_ITEMS.get(gem).get(itemType).get(), getName(gem) + " " + getName(itemType));
+            });
+        });
 
 
 //        // Adds a translation with the given key and the given value.
@@ -304,5 +323,9 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
     private String getName(String string){
         return TextUtil.getName(string);
+    }
+
+    private String getName(StringRepresentable entry){
+        return TextUtil.getName(entry.getSerializedName());
     }
 }

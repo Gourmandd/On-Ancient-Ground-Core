@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "modpack:block/gemstone/pillar/aquamarine_bottom",
+    "particle": "modpack:block/gemstone/pillar/aquamarine_side",
+    "side": "modpack:block/gemstone/pillar/aquamarine_side",
+    "top": "modpack:block/gemstone/pillar/aquamarine_top"
+  }
+}

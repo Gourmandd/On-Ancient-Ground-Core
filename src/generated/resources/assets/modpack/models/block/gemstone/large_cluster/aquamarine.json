@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "modpack:block/gemstone/large_cluster/aquamarine",
+    "particle": "modpack:block/gemstone/large_cluster/aquamarine"
+  }
+}

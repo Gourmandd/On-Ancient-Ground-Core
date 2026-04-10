@@ -207,6 +207,36 @@ public class BuiltinItemModels extends ItemModelProvider {
 
         simpleBlock(CoreBlocks.PRISMATIC_ICE);
         simpleBlock(CoreBlocks.SLUDGE);
+
+        Stream.of(CoreGemstones.values()).forEach(gem -> {
+
+            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType -> {
+
+                final DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType);
+
+                switch (blockType){
+                    case BLOCK, BUDDING_BLOCK, PILLAR, POWDER_BLOCK -> {
+                        simpleBlock(BLOCK);
+                    }
+                    case CLUSTER -> {
+                        itemModel(BLOCK.get().asItem(), getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/cluster");
+                    }
+                    case LARGE_CLUSTER -> {
+                        itemModel(BLOCK.get().asItem(), getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/large_bud");
+                    }
+                    case MEDIUM_CLUSTER -> {
+                        itemModel(BLOCK.get().asItem(), getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/medium_bud");
+                    }
+                    case SMALL_CLUSTER -> {
+                        itemModel(BLOCK.get().asItem(), getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/small_bud");
+                    }
+                }
+            });
+
+            Stream.of(CoreGemstones.GemstoneItems.values()).forEach(itemType -> {
+                simpleItem(CoreItems.GEMSTONE_ITEMS.get(gem).get(itemType).get(), itemTexture(CoreItems.GEMSTONE_ITEMS.get(gem).get(itemType)));
+            });
+        });
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){
@@ -219,6 +249,18 @@ public class BuiltinItemModels extends ItemModelProvider {
 
     private void simpleItem(Item item, ResourceLocation texture){
         this.getBuilder(getItemModelString(item)).parent(new ModelFile.UncheckedModelFile("item/generated")).texture("layer0", texture);
+    }
+
+    private void itemModel(Item item, ResourceLocation texture, String parent){
+        itemModel(item, texture, "layer0", parent);
+    }
+
+    private void itemModel(Item item, ResourceLocation texture, String texturePath, String parent){
+        this.getBuilder(getItemModelString(item)).parent(new ModelFile.UncheckedModelFile(parent)).texture(texturePath, texture);
+    }
+
+    private ResourceLocation itemTexture(DeferredHolder<Item, Item> item){
+        return  ResourceLocation.fromNamespaceAndPath(item.getId().getNamespace(), "item/" + item.getId().getPath());
     }
 
     private void supportBlockItem(Item item, CoreDeeperDownWood wood){

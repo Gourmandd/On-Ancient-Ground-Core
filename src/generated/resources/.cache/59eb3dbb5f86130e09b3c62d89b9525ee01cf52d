@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-30T09:35:26.821578602	Loot Tables
+// 1.21.1	2026-04-10T10:03:35.288575042	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -99,6 +99,30 @@ c68c2d293dd1477d02e71c74b814274e1f6d31ee data/modpack/loot_table/blocks/deposit/
 948e3fad1383fe7426a6a68ff4b94a7fdde0bda6 data/modpack/loot_table/blocks/deposit/native_silver/soapstone.json
 faaa60354dedf33aa3812dacbf4bbc00e6f7530f data/modpack/loot_table/blocks/deposit/native_silver/suevite.json
 38ffe7201bb591fbc4ffb73eeeae6df5637b16bc data/modpack/loot_table/blocks/deposit/native_silver/travertine.json
+936c01e0ca571a453f54742b700c020d05e92350 data/modpack/loot_table/blocks/gemstone/block/aquamarine.json
+3371c542e2d07fe3266efcc54a960db55fbe15e1 data/modpack/loot_table/blocks/gemstone/block/jade.json
+6da06a86b613ca013e54b81855afa4f832c8031f data/modpack/loot_table/blocks/gemstone/block/spinel.json
+052ee781ab728e4911fa1b2f89594469780f1164 data/modpack/loot_table/blocks/gemstone/budding_block/aquamarine.json
+c35148b73810f45f7eef3ff517999bf02d84aff6 data/modpack/loot_table/blocks/gemstone/budding_block/jade.json
+4434102e50088d6291339bdd8ce9254fa8762d95 data/modpack/loot_table/blocks/gemstone/budding_block/spinel.json
+d20542cecfaebb16b249316b7df863cd8e317ee2 data/modpack/loot_table/blocks/gemstone/cluster/aquamarine.json
+2d6f40a74b122a3419b7f6691af8bcde4f2c50ca data/modpack/loot_table/blocks/gemstone/cluster/jade.json
+3423c4bd5a68a9c90f5c3f44372c99064b175403 data/modpack/loot_table/blocks/gemstone/cluster/spinel.json
+271057bf34ab66ce509f4f39d2022ce19d27bec8 data/modpack/loot_table/blocks/gemstone/large_cluster/aquamarine.json
+557feb328d70e0f9ea267a340e0ab02b8d4483c8 data/modpack/loot_table/blocks/gemstone/large_cluster/jade.json
+5cf75b4a5a662b9bb7d56c90e27bb36db6619b55 data/modpack/loot_table/blocks/gemstone/large_cluster/spinel.json
+e8e0fb64457c0b54cd907a5fa5957e6599dae11a data/modpack/loot_table/blocks/gemstone/medium_cluster/aquamarine.json
+42752e72c893d8bbbba0649cc50afcbf016b6c7c data/modpack/loot_table/blocks/gemstone/medium_cluster/jade.json
+1e273ca7bbaabd6e2dd8a7060708ca6eb7fb0e01 data/modpack/loot_table/blocks/gemstone/medium_cluster/spinel.json
+d0a79f95d681857d83194f76929d87ff4a8e5c76 data/modpack/loot_table/blocks/gemstone/pillar/aquamarine.json
+b5d68429ae5ebabe501d61f208a377fa2203697d data/modpack/loot_table/blocks/gemstone/pillar/jade.json
+5dfe9f5cf603325b67a693074eea4dae0bd1b15b data/modpack/loot_table/blocks/gemstone/pillar/spinel.json
+f7a4264e0c6c1aa0a563a0f35746e5de7d637a7b data/modpack/loot_table/blocks/gemstone/powder_block/aquamarine.json
+ac9c010e0defa7abd16262c3d5b67cd5d0ac4ed1 data/modpack/loot_table/blocks/gemstone/powder_block/jade.json
+c5731f6a079b1dfbb5aeb4ae2d93813bacf6b055 data/modpack/loot_table/blocks/gemstone/powder_block/spinel.json
+99b6c4252dca45adf35ebb625d5ec3f52b9eb70e data/modpack/loot_table/blocks/gemstone/small_cluster/aquamarine.json
+3cb67a4b453ac2b9540fbbd7e187db9ca096f21a data/modpack/loot_table/blocks/gemstone/small_cluster/jade.json
+7d8bdf0d629c65b1295d002c9523e275e0f854aa data/modpack/loot_table/blocks/gemstone/small_cluster/spinel.json
 bd5c27ab30945e2d2c24ce0811cd8e2feb1036dd data/modpack/loot_table/blocks/metal/block/aluminium.json
 e10fc921a208e3c6427fa6679c76024ca8dc11cb data/modpack/loot_table/blocks/metal/block/aluminium_bronze.json
 3487eb85a5582928964f74b4aad24ce812093216 data/modpack/loot_table/blocks/metal/block/aluminium_bronze_slab.json

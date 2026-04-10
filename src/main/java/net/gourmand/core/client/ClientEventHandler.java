@@ -16,6 +16,7 @@ import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreFluids;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
+import net.gourmand.core.registry.category.CoreGemstones;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -139,6 +140,14 @@ public class ClientEventHandler {
         Stream.of(CoreRocks.values()).forEach(rock -> {
             Stream.of(OreDeposit.values()).forEach(ore -> {
                 ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get(), cutoutMipped);
+            });
+        });
+
+        Stream.of(CoreGemstones.values()).forEach(gem -> {
+            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType -> {
+                if (blockType.isCluster()){
+                    ItemBlockRenderTypes.setRenderLayer(CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType).get(), cutoutMipped);
+                }
             });
         });
     }
