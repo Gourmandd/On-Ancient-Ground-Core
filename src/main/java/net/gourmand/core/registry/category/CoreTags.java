@@ -47,14 +47,6 @@ public class CoreTags {
         public static final TagKey<Block> MORTARED_COBBLE = tag("cobblestones/mortared");
 
         public static final TagKey<Block> GEMSTONE_BLOCKS = tag("gemstone_blocks");
-
-        public static final Map<Ore, TagKey<Block>> TFC_ORE_MULTIBLOCK = Helpers.mapOf(Ore.class, ore ->
-                tag("multiblock_showcase/" + ore.name().toLowerCase(Locale.ROOT))
-        );
-
-        public static final Map<CoreOres, TagKey<Block>> CORE_ORE_MULTIBLOCK = Helpers.mapOf(CoreOres.class, ore ->
-                tag("multiblock_showcase/" + ore.getSerializedName())
-        );
     }
 
     public static class Items {
@@ -97,6 +89,16 @@ public class CoreTags {
         public static final Map<CoreDeeperDownWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(CoreDeeperDownWood.class, wood -> (!wood.isNoxfungi() && wood != CoreDeeperDownWood.WEEPING_GALA),color ->
                 tag(SpectrumCommon.MOD_ID , color.getSerializedName() + "_logs")
         );
+
+        public static final Map<Ore, TagKey<Item>> TFC_ORE_MULTIBLOCK = Helpers.mapOf(Ore.class, ore ->
+                tag("do_not_use_in_recipes/ore/" + ore.name().toLowerCase(Locale.ROOT))
+        );
+
+        public static final Map<CoreOres, TagKey<Item>> CORE_ORE_MULTIBLOCK = Helpers.mapOf(CoreOres.class, ore ->
+                tag("do_not_use_in_recipes/ore/" + ore.getSerializedName())
+        );
+
+        public static final TagKey<Item> KAOLIN_CLAYS = tag( AncientGroundCore.MODID,"kaolin_clay_blocks");
 
         public static final TagKey<Item> WEEPING_GALA_LOGS = tag(SpectrumCommon.MOD_ID , "weeping_gala_logs");
 

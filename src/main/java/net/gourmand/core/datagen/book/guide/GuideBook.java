@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.book.guide;
 
 import com.klikli_dev.modonomicon.api.datagen.SingleBookSubProvider;
+import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.book.guide.categories.OresCategory;
 
 import java.util.function.BiConsumer;
@@ -9,8 +10,8 @@ public class GuideBook extends SingleBookSubProvider {
 
     public static final String ID = "guide";
 
-    public GuideBook(String modId, BiConsumer<String, String> defaultLang) {
-        super(ID, modId, defaultLang);
+    public GuideBook(BiConsumer<String, String> defaultLang) {
+        super(ID, AncientGroundCore.MODID, defaultLang);
     }
 
     @Override
@@ -31,5 +32,10 @@ public class GuideBook extends SingleBookSubProvider {
     @Override
     protected String bookTooltip() {
         return "Helping you, one page at a time!";
+    }
+
+    @Override
+    public String bookId() {
+        return super.bookId();
     }
 }

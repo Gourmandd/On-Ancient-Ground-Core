@@ -1,0 +1,25 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "   ",
+      " 0 ",
+      "   "
+    ],
+    [
+      "   ",
+      " S ",
+      "   "
+    ]
+  ],
+  "mapping": {
+    "0":  {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:firepit[lit=true]"
+    },
+    "S": {
+      "type": "modonomicon:block",
+      "block": "tfc:grass/loam"
+    }
+  }
+}

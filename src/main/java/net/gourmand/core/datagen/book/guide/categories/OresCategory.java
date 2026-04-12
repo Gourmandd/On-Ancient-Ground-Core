@@ -1,7 +1,7 @@
 package net.gourmand.core.datagen.book.guide.categories;
 
 import com.klikli_dev.modonomicon.api.datagen.CategoryProvider;
-import com.klikli_dev.modonomicon.api.datagen.ModonomiconProviderBase;
+import com.klikli_dev.modonomicon.api.datagen.SingleBookSubProvider;
 import com.klikli_dev.modonomicon.api.datagen.book.BookCategoryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookEntryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
@@ -9,18 +9,19 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.items.TFCItems;
-import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.book.guide.entries.ores.OreEntry;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreOres;
+import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
 public class OresCategory extends CategoryProvider {
 
     public static final String ID = "ores";
 
-    public OresCategory(ModonomiconProviderBase parent) {
+    public OresCategory(SingleBookSubProvider parent) {
         super(parent);
     }
 
@@ -42,6 +43,7 @@ public class OresCategory extends CategoryProvider {
         // copper
         var nativeCopperEntry = createOreEntry(
                 "native_copper",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.NATIVE_COPPER),
                 TFCItems.GRADED_ORES.get(Ore.NATIVE_COPPER).get(Ore.Grade.RICH).get(),
                 "a",
                 """
@@ -55,6 +57,7 @@ public class OresCategory extends CategoryProvider {
 
         var malachiteEntry = createOreEntry(
                 "malachite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.MALACHITE),
                 TFCItems.GRADED_ORES.get(Ore.MALACHITE).get(Ore.Grade.RICH).get(),
                 "b",
                 """
@@ -67,6 +70,7 @@ public class OresCategory extends CategoryProvider {
 
         var tetrahedriteEntry = createOreEntry(
                 "tetrahedrite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.TETRAHEDRITE),
                 TFCItems.GRADED_ORES.get(Ore.TETRAHEDRITE).get(Ore.Grade.RICH).get(),
                 "c",
                 """
@@ -81,6 +85,7 @@ public class OresCategory extends CategoryProvider {
 
         var nativeGoldEntry = createOreEntry(
                 "native_gold",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.NATIVE_GOLD),
                 TFCItems.GRADED_ORES.get(Ore.NATIVE_GOLD).get(Ore.Grade.RICH).get(),
                 "d",
                 """
@@ -95,6 +100,7 @@ public class OresCategory extends CategoryProvider {
 
         var nativeSilverEntry = createOreEntry(
                 "native_silver",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.NATIVE_SILVER),
                 TFCItems.GRADED_ORES.get(Ore.NATIVE_SILVER).get(Ore.Grade.RICH).get(),
                 "e",
                 """
@@ -108,7 +114,9 @@ public class OresCategory extends CategoryProvider {
         );
 
         var cassiteriteEntry = createOreEntry(
-                "cassiterite", TFCItems.GRADED_ORES.get(Ore.CASSITERITE).get(Ore.Grade.RICH).get(),
+                "cassiterite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.CASSITERITE),
+                TFCItems.GRADED_ORES.get(Ore.CASSITERITE).get(Ore.Grade.RICH).get(),
                 "f",
                 """
                 Cassiterite is an ore of **Tin** metal.\s
@@ -121,6 +129,7 @@ public class OresCategory extends CategoryProvider {
 
         var bismuthiniteEntry = createOreEntry(
                 "bismuthinite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.BISMUTHINITE),
                 TFCItems.GRADED_ORES.get(Ore.BISMUTHINITE).get(Ore.Grade.RICH).get(),
                 "g",
                 """
@@ -132,6 +141,7 @@ public class OresCategory extends CategoryProvider {
 
         var garnieriteEntry = createOreEntry(
                 "garnierite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.GARNIERITE),
                 TFCItems.GRADED_ORES.get(Ore.GARNIERITE).get(Ore.Grade.RICH).get(),
                 "h",
                 """
@@ -145,6 +155,7 @@ public class OresCategory extends CategoryProvider {
 
         var galenaEntry = createOreEntry(
                 "galena",
+                CoreTags.Items.CORE_ORE_MULTIBLOCK.get(CoreOres.GALENA),
                 CoreItems.GRADED_ORES.get(CoreOres.GALENA).get(CoreOres.Grade.RICH).get(),
                 "i",
                 """
@@ -156,6 +167,7 @@ public class OresCategory extends CategoryProvider {
 
         var sphaleriteEntry = createOreEntry(
                 "sphalerite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.SPHALERITE),
                 TFCItems.GRADED_ORES.get(Ore.SPHALERITE).get(Ore.Grade.RICH).get(),
                 "j",
                 """
@@ -168,6 +180,7 @@ public class OresCategory extends CategoryProvider {
         // iron
         var magnetiteEntry = createOreEntry(
                 "magnetite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.MAGNETITE),
                 TFCItems.GRADED_ORES.get(Ore.MAGNETITE).get(Ore.Grade.RICH).get(),
                 "k",
                 """
@@ -179,6 +192,7 @@ public class OresCategory extends CategoryProvider {
 
         var limoniteEntry = createOreEntry(
                 "limonite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.LIMONITE),
                 TFCItems.GRADED_ORES.get(Ore.LIMONITE).get(Ore.Grade.RICH).get(),
                 "l",
                 """
@@ -190,6 +204,7 @@ public class OresCategory extends CategoryProvider {
 
         var hematiteEntry = createOreEntry(
                 "hematite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.HEMATITE),
                 TFCItems.GRADED_ORES.get(Ore.HEMATITE).get(Ore.Grade.RICH).get(),
                 "m",
                 """
@@ -202,6 +217,7 @@ public class OresCategory extends CategoryProvider {
         // gems
         var amethystEntry = createOreEntry(
                 "amethyst",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.AMETHYST),
                 TFCItems.GEMS.get(Ore.AMETHYST).get(),
                 "n",
                 """
@@ -213,6 +229,7 @@ public class OresCategory extends CategoryProvider {
 
         var diamondEntry = createOreEntry(
                 "diamond",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.DIAMOND),
                 TFCItems.GEMS.get(Ore.DIAMOND).get(),
                 "o",
                 """
@@ -225,6 +242,7 @@ public class OresCategory extends CategoryProvider {
 
         var emeraldEntry = createOreEntry(
                 "emerald",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.EMERALD),
                 TFCItems.GEMS.get(Ore.EMERALD).get(),
                 "p",
                 """
@@ -238,6 +256,7 @@ public class OresCategory extends CategoryProvider {
 
         var lapisLazuliEntry = createOreEntry(
                 "lapis_lazuli",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.LAPIS_LAZULI),
                 TFCItems.GEMS.get(Ore.LAPIS_LAZULI).get(),
                 "q",
                 """
@@ -249,6 +268,7 @@ public class OresCategory extends CategoryProvider {
 
         var opalEntry = createOreEntry(
                 "opal",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.OPAL),
                 TFCItems.GEMS.get(Ore.OPAL).get(),
                 "r",
                 """
@@ -260,6 +280,7 @@ public class OresCategory extends CategoryProvider {
 
         var pyriteEntry = createOreEntry(
                 "pyrite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.PYRITE),
                 TFCItems.GEMS.get(Ore.PYRITE).get(),
                 "s",
                 """
@@ -271,6 +292,7 @@ public class OresCategory extends CategoryProvider {
 
         var rubyEntry = createOreEntry(
                 "ruby",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.RUBY),
                 TFCItems.GEMS.get(Ore.RUBY).get(),
                 "t",
                 """
@@ -282,6 +304,7 @@ public class OresCategory extends CategoryProvider {
 
         var sapphireEntry = createOreEntry(
                 "sapphire",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.SAPPHIRE),
                 TFCItems.GEMS.get(Ore.SAPPHIRE).get(),
                 "u",
                 """
@@ -293,6 +316,7 @@ public class OresCategory extends CategoryProvider {
 
         var topazEntry = createOreEntry(
                 "topaz",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.TOPAZ),
                 TFCItems.GEMS.get(Ore.TOPAZ).get(),
                 "v",
                 """
@@ -305,6 +329,7 @@ public class OresCategory extends CategoryProvider {
         // coal
         var ligniteEntry = createOreEntry(
                 "lignite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.LIGNITE),
                 TFCItems.ORES.get(Ore.LIGNITE).get(),
                 "w",
                 """
@@ -315,7 +340,8 @@ public class OresCategory extends CategoryProvider {
         );
 
         var bituminousCoalEntry = createOreEntry(
-                "bituminous",
+                "bituminous_coal",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.BITUMINOUS_COAL),
                 TFCItems.ORES.get(Ore.BITUMINOUS_COAL).get(),
                 "x",
                 """
@@ -327,6 +353,7 @@ public class OresCategory extends CategoryProvider {
 
         var anthraciteEntry = createOreEntry(
                 "anthracite",
+                CoreTags.Items.CORE_ORE_MULTIBLOCK.get(CoreOres.ANTHRACITE),
                 SpectrumItems.PURE_COAL.get(),
                 "y",
                 """
@@ -340,6 +367,7 @@ public class OresCategory extends CategoryProvider {
 
         var kaoliniteEntry = createOreEntry(
                 "kaolinite",
+                CoreTags.Items.KAOLIN_CLAYS,
                 TFCItems.KAOLIN_CLAY.get(),
                 "z",
                 """
@@ -352,6 +380,7 @@ public class OresCategory extends CategoryProvider {
 
         var bauxiteEntry = createOreEntry(
                 "bauxite",
+                CoreTags.Items.CORE_ORE_MULTIBLOCK.get(CoreOres.BAUXITE),
                 CoreItems.ORES.get(CoreOres.BAUXITE).get(),
                 "A",
                 """
@@ -363,17 +392,19 @@ public class OresCategory extends CategoryProvider {
 
         var graphiteEntry = createOreEntry(
                 "graphite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.GRAPHITE),
                 TFCItems.ORES.get(Ore.GRAPHITE).get(),
                 "B",
                 """
                 Graphite is a **Mineral** which is used in the construction of **Fire Clay**. \s
                 \\
-                It can be found in **Gneiss**, **Marble**, **Quartzite**, and **Schist** rocks, in elevations below y=60.
+                It can be found in **Gneiss**, **Marble**, **Quartzite**, **Schist**, **Blueschist**, and **Serpentine** rocks, in elevations below y=60.
                 """
         );
 
         var cinnabarEntry = createOreEntry(
                 "cinnabar",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.CINNABAR),
                 TFCItems.ORES.get(Ore.CINNABAR).get(),
                 "C",
                 """
@@ -385,6 +416,7 @@ public class OresCategory extends CategoryProvider {
 
         var cryoliteEntry = createOreEntry(
                 "cryolite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.CRYOLITE),
                 TFCItems.ORES.get(Ore.CRYOLITE).get(),
                 "D",
                 """
@@ -396,6 +428,7 @@ public class OresCategory extends CategoryProvider {
 
         var saltpeterEntry = createOreEntry(
                 "saltpeter",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.SALTPETER),
                 TFCItems.ORES.get(Ore.SALTPETER).get(),
                 "E",
                 """
@@ -407,6 +440,7 @@ public class OresCategory extends CategoryProvider {
 
         var sulfurEntry = createOreEntry(
                 "sulfur",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.SULFUR),
                 TFCItems.ORES.get(Ore.SULFUR).get(),
                 "F",
                 """
@@ -418,6 +452,7 @@ public class OresCategory extends CategoryProvider {
 
         var sylviteEntry = createOreEntry(
                 "sylvite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.SYLVITE),
                 TFCItems.ORES.get(Ore.SYLVITE).get(),
                 "G",
                 """
@@ -429,6 +464,7 @@ public class OresCategory extends CategoryProvider {
 
         var boraxEntry = createOreEntry(
                 "borax",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.BORAX),
                 TFCItems.ORES.get(Ore.BORAX).get(),
                 "H",
                 """
@@ -440,6 +476,7 @@ public class OresCategory extends CategoryProvider {
 
         var gypsumEntry = createOreEntry(
                 "gypsum",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.GYPSUM),
                 TFCItems.ORES.get(Ore.GYPSUM).get(),
                 "I",
                 """
@@ -451,6 +488,7 @@ public class OresCategory extends CategoryProvider {
 
         var haliteEntry = createOreEntry(
                 "halite",
+                CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.HALITE),
                 TFCItems.ORES.get(Ore.HALITE).get(),
                 "J",
                 """
@@ -476,13 +514,13 @@ public class OresCategory extends CategoryProvider {
         return ID;
     }
 
-    public BookEntryModel createOreEntry(String id, Item item, String symbol, String text){
+    public BookEntryModel createOreEntry(String id, TagKey<Item> tag, Item item, String symbol, String text){
         return this.add(new OreEntry(
                 this,
                 id,
                 item,
                 text,
-                ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "ore_preview/" + id)
+                tag
                 ).generate(symbol)
         );
     }

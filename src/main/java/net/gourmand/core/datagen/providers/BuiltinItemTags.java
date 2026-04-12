@@ -311,6 +311,109 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         Stream.of(DyeColor.values()).forEach(color -> {
             this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_GLAZED_VESSELS.get(color).key());
         });
+
+        // modonomicon book multiblock
+
+        addMultiBlockOre(Ore.NATIVE_COPPER, List.of(Rock.ANDESITE, Rock.BASALT, Rock.RHYOLITE, Rock.DACITE, CoreRocks.PHONOLITE, CoreRocks.KOMATIITE));
+        addMultiBlockOre(Ore.MALACHITE, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.DOLOMITE, Rock.MARBLE));
+        addMultiBlockOre(Ore.TETRAHEDRITE, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, Rock.QUARTZITE, Rock.SCHIST, Rock.PHYLLITE, CoreRocks.BLUESCHIST, CoreRocks.SERPENTINE));
+
+        addMultiBlockOre(CoreOres.GALENA, List.of(Rock.LIMESTONE, Rock.GRANITE, Rock.DIORITE, Rock.GABBRO, CoreRocks.BLUESCHIST, CoreRocks.PERIDOTITE, CoreRocks.PHONOLITE, CoreRocks.KOMATIITE));
+
+        addMultiBlockOre(Ore.NATIVE_GOLD, List.of(Rock.GRANITE, Rock.DIORITE, Rock.GABBRO, CoreRocks.PERIDOTITE, Rock.BASALT, Rock.RHYOLITE, Rock.ANDESITE));
+        addMultiBlockOre(Ore.NATIVE_SILVER, List.of(Rock.GRANITE, Rock.DIORITE, Rock.SCHIST, Rock.GNEISS, CoreRocks.PERIDOTITE, CoreRocks.KOMATIITE));
+
+        addMultiBlockOre(Ore.CASSITERITE, List.of(Rock.GRANITE, Rock.DIORITE, Rock.GABBRO, CoreRocks.PERIDOTITE, CoreRocks.KOMATIITE));
+        addMultiBlockOre(Ore.GARNIERITE, List.of(Rock.GRANITE, Rock.DIORITE, Rock.GABBRO, CoreRocks.PERIDOTITE));
+
+        addMultiBlockOre(Ore.HEMATITE, List.of(Rock.ANDESITE, Rock.BASALT, Rock.RHYOLITE, Rock.DACITE, CoreRocks.PHONOLITE, CoreRocks.KOMATIITE));
+        addMultiBlockOre(Ore.MAGNETITE, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));
+        addMultiBlockOre(Ore.LIMONITE, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));
+
+        addMultiBlockOre(Ore.BISMUTHINITE, List.of(Rock.GRANITE, Rock.DIORITE, Rock.GABBRO, Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE));
+        addMultiBlockOre(Ore.SPHALERITE, List.of(Rock.GRANITE, Rock.DIORITE, Rock.GABBRO, Rock.BASALT, Rock.RHYOLITE, Rock.ANDESITE, CoreRocks.KOMATIITE, CoreRocks.BLUESCHIST, CoreRocks.PERIDOTITE));
+
+        addMultiBlockOre(Ore.LIGNITE, TFCBlocks.LIGNITE.get());
+        addMultiBlockOre(Ore.BITUMINOUS_COAL, TFCBlocks.BITUMINOUS_COAL.get());
+        addMultiBlockOre(CoreOres.ANTHRACITE, CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE).get());
+
+        addMultiBlockOre(CoreOres.BAUXITE, CoreBlocks.BASIC_ORES.get(CoreOres.BAUXITE).get());
+
+        addMultiBlockOre(Ore.SULFUR, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, Rock.QUARTZITE, Rock.SCHIST, Rock.PHYLLITE, CoreRocks.BLUESCHIST, CoreRocks.SERPENTINE));
+        addMultiBlockOre(Ore.SALTPETER, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));
+        addMultiBlockOre(Ore.SYLVITE, List.of(Rock.CHERT, Rock.CLAYSTONE, Rock.SHALE, CoreRocks.ARKOSE, CoreRocks.SANDSTONE, CoreRocks.RED_SANDSTONE, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE));
+        addMultiBlockOre(Ore.BORAX, List.of(Rock.CHERT, Rock.CLAYSTONE, Rock.SHALE, CoreRocks.ARKOSE, CoreRocks.SANDSTONE, CoreRocks.RED_SANDSTONE, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE));
+        addMultiBlockOre(Ore.HALITE, TFCBlocks.HALITE.get());
+
+        addMultiBlockOre(Ore.CINNABAR, List.of(Rock.GNEISS, Rock.SCHIST, Rock.PHYLLITE, Rock.QUARTZITE, CoreRocks.SERPENTINE, CoreRocks.BLUESCHIST));
+        addMultiBlockOre(Ore.CRYOLITE, List.of(Rock.GRANITE, Rock.DIORITE, CoreRocks.BLUESCHIST, CoreRocks.PERIDOTITE));
+        addMultiBlockOre(Ore.GRAPHITE, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, Rock.QUARTZITE, Rock.SCHIST, CoreRocks.BLUESCHIST, CoreRocks.SERPENTINE));
+
+        addMultiBlockOre(Ore.GYPSUM, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));
+
+        addMultiBlockOre(Ore.DIAMOND, List.of(Rock.GABBRO, CoreRocks.SUEVITE));
+        addMultiBlockOre(Ore.AMETHYST, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE, Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, Rock.QUARTZITE));
+        addMultiBlockOre(Ore.TOPAZ, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, CoreRocks.SERPENTINE, Rock.GRANITE, Rock.GABBRO, Rock.BASALT, Rock.RHYOLITE, Rock.ANDESITE, CoreRocks.KOMATIITE));
+        addMultiBlockOre(Ore.PYRITE, List.of(Rock.GRANITE, Rock.GABBRO, Rock.BASALT, Rock.RHYOLITE, Rock.ANDESITE, CoreRocks.KOMATIITE));
+        addMultiBlockOre(Ore.EMERALD, List.of(Rock.GRANITE, Rock.GABBRO, Rock.DIORITE, CoreRocks.PERIDOTITE));
+        addMultiBlockOre(Ore.RUBY, List.of(Rock.GNEISS, Rock.SCHIST));
+        addMultiBlockOre(Ore.SAPPHIRE, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, CoreRocks.SERPENTINE, Rock.GRANITE, Rock.GABBRO, Rock.BASALT, Rock.RHYOLITE, Rock.ANDESITE, CoreRocks.KOMATIITE));
+        addMultiBlockOre(Ore.LAPIS_LAZULI, List.of(Rock.LIMESTONE, Rock.MARBLE, CoreRocks.ARKOSE, CoreRocks.SANDSTONE, CoreRocks.RED_SANDSTONE));
+        addMultiBlockOre(Ore.OPAL, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));
+
+        this.tag(CoreTags.Items.KAOLIN_CLAYS)
+                .add(getKey(TFCBlocks.KAOLIN_CLAY_GRASS.asItem()))
+                .add(getKey(TFCBlocks.WHITE_KAOLIN_CLAY.asItem()))
+                .add(getKey(TFCBlocks.PINK_KAOLIN_CLAY.asItem()))
+                .add(getKey(TFCBlocks.RED_KAOLIN_CLAY.asItem()));
+    }
+
+    protected void addMultiBlockOre(CoreOres ore, Block block){
+        this.tag(CoreTags.Items.CORE_ORE_MULTIBLOCK.get(ore)).add(getKey(block));
+    }
+
+    protected void addMultiBlockOre(Ore ore, Block block){
+        this.tag(CoreTags.Items.TFC_ORE_MULTIBLOCK.get(ore)).add(getKey(block));
+    }
+
+    protected void addMultiBlockOre(CoreOres ore, List<RegistryRock> rocks){
+
+        for (RegistryRock rock : rocks){
+            if (rock instanceof CoreRocks){
+                if (ore.isGraded()){
+                    this.tag(CoreTags.Items.CORE_ORE_MULTIBLOCK.get(ore)).add(getKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(CoreOres.Grade.RICH).get()));
+                } else {
+                    this.tag(CoreTags.Items.CORE_ORE_MULTIBLOCK.get(ore)).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore).get()));
+                }
+            }
+            if (rock instanceof Rock) {
+                if (ore.isGraded()){
+                    this.tag(CoreTags.Items.CORE_ORE_MULTIBLOCK.get(ore)).add(getKey(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(CoreOres.Grade.RICH).get()));
+                } else {
+                    this.tag(CoreTags.Items.CORE_ORE_MULTIBLOCK.get(ore)).add(getKey(CoreBlocks.ORES.get(rock).get(ore)));
+                }
+            }
+        }
+    }
+
+    protected void addMultiBlockOre(Ore ore, List<RegistryRock> rocks){
+
+        for (RegistryRock rock : rocks){
+            if (rock instanceof CoreRocks){
+                if (ore.isGraded()){
+                    this.tag(CoreTags.Items.TFC_ORE_MULTIBLOCK.get(ore)).add(getKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(CoreOres.Grade.RICH).get()));
+                } else {
+                    this.tag(CoreTags.Items.TFC_ORE_MULTIBLOCK.get(ore)).add(getKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get()));
+                }
+            }
+            if (rock instanceof Rock) {
+                if (ore.isGraded()){
+                    this.tag(CoreTags.Items.TFC_ORE_MULTIBLOCK.get(ore)).add(getKey(TFCBlocks.GRADED_ORES.get(rock).get(ore).get(Ore.Grade.RICH).get()));
+                } else {
+                    this.tag(CoreTags.Items.TFC_ORE_MULTIBLOCK.get(ore)).add(getKey(TFCBlocks.ORES.get(rock).get(ore).get()));
+                }
+            }
+        }
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Item>> tags ){

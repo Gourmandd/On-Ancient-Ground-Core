@@ -22,15 +22,16 @@
       "title": "book.modpack.guide.ores.malachite.page1.title"
     },
     {
-      "type": "modonomicon:multiblock",
-      "anchor": "page1",
+      "type": "modonomicon:spotlight",
+      "anchor": "",
       "condition": {
         "type": "modonomicon:none"
       },
-      "multiblock_id": "ore_preview/malachite",
-      "multiblock_name": "book.modpack.guide.ores.malachite.page2.title",
-      "show_visualize_button": false,
-      "text": "book.modpack.guide.ores.malachite.page2.text"
+      "item": {
+        "tag": "c:do_not_use_in_recipes/ore/malachite"
+      },
+      "text": "book.modpack.guide.ores.malachite.page2.text",
+      "title": "book.modpack.guide.ores.malachite.page2.title"
     }
   ],
   "show_when_any_parent_unlocked": false,

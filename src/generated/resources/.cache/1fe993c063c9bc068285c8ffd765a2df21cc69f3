@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-12T09:31:38.975291301	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-04-12T17:11:51.11888118	Tags for minecraft:block mod id modpack
 0f0e87285b9cb3318313154fd78f425ca50a7da7 data/c/tags/block/cobblestones.json
 0ddd863158f5fb454bf35b313a37d957d5ed9cb7 data/c/tags/block/cobblestones/mossy.json
 adedb65a2a966b6157ee808231af42ef18a34528 data/c/tags/block/cobblestones/normal.json
@@ -26,41 +26,6 @@ d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/stone_pressur
 b2516985051666e9ad3bc5fd29e6d1ab914d1e5f data/minecraft/tags/block/walls.json
 16c89ae367b1aacf0dae7ed637f92bff3dd19cad data/modpack/tags/block/cobblestones/mortared.json
 10bc593796795d9886f8935e63f9fb19fabf09d7 data/modpack/tags/block/gemstone_blocks.json
-3e929b1ef50a9c1036d0b06c5c9f5682641736e6 data/modpack/tags/block/multiblock_showcase/amethyst.json
-dde09756b0acf9c82deb0e6de28e3cbbae2ef223 data/modpack/tags/block/multiblock_showcase/anthracite.json
-a54f78686c46c4376c4af8e8d8dbd47757d24abe data/modpack/tags/block/multiblock_showcase/bauxite.json
-a84eddc1ba757bc53d6bb283e41f92cab7a2289d data/modpack/tags/block/multiblock_showcase/bismuthinite.json
-8be1aa5c7383c3cf94bb9bf9ef6e235b3bf5c79f data/modpack/tags/block/multiblock_showcase/bituminous_coal.json
-a7da8ab1fb04f5e9451e5d968de4f3687397fdc0 data/modpack/tags/block/multiblock_showcase/borax.json
-030b6871b73e2fcbd87229da092b3867bb71130a data/modpack/tags/block/multiblock_showcase/cassiterite.json
-4a1d56d968895d29c20d487ecc8b360326bc7a44 data/modpack/tags/block/multiblock_showcase/cinnabar.json
-40162c31d31cfc4a913ad1f52b38946445b3319e data/modpack/tags/block/multiblock_showcase/cryolite.json
-27f9c5b80f4c3eed5e0a8d07a3fdb577504ccf9b data/modpack/tags/block/multiblock_showcase/diamond.json
-db57f9b303295a9d153ac948a26d4ce6b0d376e5 data/modpack/tags/block/multiblock_showcase/emerald.json
-02ea2b70b4de1295aebb7e4a99ba99b6a82314f4 data/modpack/tags/block/multiblock_showcase/galena.json
-0a0695874d8c94818f6489ee9d64979089e7912d data/modpack/tags/block/multiblock_showcase/garnierite.json
-7e640026b4475e94cc6928dacb221f05ded3a4f5 data/modpack/tags/block/multiblock_showcase/graphite.json
-10768ab378c5dd821bd466c5317fc102886fbeec data/modpack/tags/block/multiblock_showcase/gypsum.json
-120f16612bf75b0685bb1798a61a6c57321aa355 data/modpack/tags/block/multiblock_showcase/halite.json
-0c392c15d09ad65382ab81f9c9399bcbca2d9709 data/modpack/tags/block/multiblock_showcase/hematite.json
-4a9fc5efaed50a9742cd1c43a25bcdb54ae32473 data/modpack/tags/block/multiblock_showcase/lapis_lazuli.json
-1db7da7ef01a0d8f9a7755269fb8f025d1082996 data/modpack/tags/block/multiblock_showcase/lignite.json
-22229fd680f853f1161afff36f506714503f5d68 data/modpack/tags/block/multiblock_showcase/limonite.json
-d94eaa9a8006ffa5d1bd914058ee8c8d3f7c4025 data/modpack/tags/block/multiblock_showcase/magnetite.json
-ea18d528e2f646ef98a1f518ef204113a1f1a97b data/modpack/tags/block/multiblock_showcase/malachite.json
-d7e19f51421e5bae0641f9ddfea1dd0e164bdad8 data/modpack/tags/block/multiblock_showcase/native_copper.json
-9f2546e32321d30acaa7ee175da0f4e01977362b data/modpack/tags/block/multiblock_showcase/native_gold.json
-71f75a92f030421a85184a82191b2d2f21f16cef data/modpack/tags/block/multiblock_showcase/native_silver.json
-0e5d7615305b0d498e05030f12d7b463d920e0b5 data/modpack/tags/block/multiblock_showcase/opal.json
-6e95ecc9ea4ce234c39ed809a47ee11f995705df data/modpack/tags/block/multiblock_showcase/pyrite.json
-295e78dccfef870264e83b7bc7eb9b992f34adce data/modpack/tags/block/multiblock_showcase/ruby.json
-e96a0c57ecb58532ebe647994a0af9ea5d6414a4 data/modpack/tags/block/multiblock_showcase/saltpeter.json
-33480cd19dfc22d6e392968e7197795119f19e6e data/modpack/tags/block/multiblock_showcase/sapphire.json
-f6bfc7ac271aa671e5080d1a2eec2aefd0805de8 data/modpack/tags/block/multiblock_showcase/sphalerite.json
-8a092a4debbfeb65a389d717549774550aab3e9e data/modpack/tags/block/multiblock_showcase/sulfur.json
-e8a5fb1cb187f6891a60d1b8d49aa99ec3d2e4f6 data/modpack/tags/block/multiblock_showcase/sylvite.json
-777f9e0c171e55680ba69288d484acf9369248a8 data/modpack/tags/block/multiblock_showcase/tetrahedrite.json
-44cd23c928340332bb6a343e6562d2e2038db69f data/modpack/tags/block/multiblock_showcase/topaz.json
 341d3a8bcca759951f2de06dcbc28ef705e7d73d data/modpack/tags/block/snow_shovel_mineable.json
 4ef81c7d65af5e3969757fe2c2e27f20650c920a data/spectrum/tags/block/azurite_ores.json
 331fe2b78218a2a68777d834b9adaf57316422f2 data/spectrum/tags/block/shimmerstone_ores.json
