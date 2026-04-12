@@ -1,0 +1,10 @@
+{
+  "values": [
+    "tfc:ore/rich_native_silver/granite",
+    "tfc:ore/rich_native_silver/diorite",
+    "tfc:ore/rich_native_silver/schist",
+    "tfc:ore/rich_native_silver/gneiss",
+    "modpack:ore/rich_native_silver/peridotite",
+    "modpack:ore/rich_native_silver/komatiite"
+  ]
+}

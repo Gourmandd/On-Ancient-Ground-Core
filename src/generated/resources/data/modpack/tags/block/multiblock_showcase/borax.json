@@ -1,0 +1,12 @@
+{
+  "values": [
+    "tfc:ore/borax/chert",
+    "tfc:ore/borax/claystone",
+    "tfc:ore/borax/shale",
+    "modpack:ore/borax/arkose",
+    "modpack:ore/borax/sandstone",
+    "modpack:ore/borax/red_sandstone",
+    "modpack:ore/borax/argillite",
+    "modpack:ore/borax/travertine"
+  ]
+}

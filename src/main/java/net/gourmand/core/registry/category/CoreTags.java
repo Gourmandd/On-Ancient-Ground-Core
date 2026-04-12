@@ -1,6 +1,7 @@
 package net.gourmand.core.registry.category;
 
 import de.dafuqs.spectrum.SpectrumCommon;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
@@ -37,11 +38,23 @@ public class CoreTags {
             );
         }
 
-        public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = tag( AncientGroundCore.MODID,"snow_shovel_mineable");
+        private static TagKey<Block> tag(String key){
+            return tag(AncientGroundCore.MODID, key);
+        }
 
-        public static final TagKey<Block> MORTARED_COBBLE = tag( AncientGroundCore.MODID,"cobblestones/mortared");
+        public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = tag("snow_shovel_mineable");
 
-        public static final TagKey<Block> GEMSTONE_BLOCKS = tag( AncientGroundCore.MODID,"gemstone_blocks");
+        public static final TagKey<Block> MORTARED_COBBLE = tag("cobblestones/mortared");
+
+        public static final TagKey<Block> GEMSTONE_BLOCKS = tag("gemstone_blocks");
+
+        public static final Map<Ore, TagKey<Block>> TFC_ORE_MULTIBLOCK = Helpers.mapOf(Ore.class, ore ->
+                tag("multiblock_showcase/" + ore.name().toLowerCase(Locale.ROOT))
+        );
+
+        public static final Map<CoreOres, TagKey<Block>> CORE_ORE_MULTIBLOCK = Helpers.mapOf(CoreOres.class, ore ->
+                tag("multiblock_showcase/" + ore.getSerializedName())
+        );
     }
 
     public static class Items {

@@ -11,6 +11,7 @@ import java.util.function.Function;
 import com.klikli_dev.modonomicon.api.datagen.LanguageProviderCache;
 import com.klikli_dev.modonomicon.api.datagen.NeoBookProvider;
 import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.datagen.book.guide.CoreMultiblockProvider;
 import net.gourmand.core.datagen.book.guide.GuideBook;
 import net.gourmand.core.datagen.providers.*;
 import net.gourmand.core.datagen.recipes.*;
@@ -66,6 +67,7 @@ public final class DataEntryPoint
         // book and lang.
         var enUsCache = new LanguageProviderCache("en_us");
 
+        add(event, new CoreMultiblockProvider(output));
         add(event, NeoBookProvider.of(event, new GuideBook(AncientGroundCore.MODID, enUsCache)));
         add(event, new CoreLanguageProvider(output, enUsCache));
     }

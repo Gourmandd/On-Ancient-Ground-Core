@@ -1,0 +1,16 @@
+{
+  "values": [
+    "tfc:ore/opal/limestone",
+    "tfc:ore/opal/chalk",
+    "tfc:ore/opal/chert",
+    "tfc:ore/opal/tuff",
+    "tfc:ore/opal/claystone",
+    "tfc:ore/opal/conglomerate",
+    "tfc:ore/opal/dolomite",
+    "modpack:ore/opal/argillite",
+    "modpack:ore/opal/breccia",
+    "modpack:ore/opal/argillite",
+    "modpack:ore/opal/travertine",
+    "modpack:ore/opal/sandstone"
+  ]
+}

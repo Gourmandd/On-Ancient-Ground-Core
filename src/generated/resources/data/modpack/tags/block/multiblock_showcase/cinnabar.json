@@ -1,0 +1,10 @@
+{
+  "values": [
+    "tfc:ore/cinnabar/gneiss",
+    "tfc:ore/cinnabar/schist",
+    "tfc:ore/cinnabar/phyllite",
+    "tfc:ore/cinnabar/quartzite",
+    "modpack:ore/cinnabar/serpentine",
+    "modpack:ore/cinnabar/blueschist"
+  ]
+}

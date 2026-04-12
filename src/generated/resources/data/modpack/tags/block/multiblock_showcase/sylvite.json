@@ -1,0 +1,12 @@
+{
+  "values": [
+    "tfc:ore/sylvite/chert",
+    "tfc:ore/sylvite/claystone",
+    "tfc:ore/sylvite/shale",
+    "modpack:ore/sylvite/arkose",
+    "modpack:ore/sylvite/sandstone",
+    "modpack:ore/sylvite/red_sandstone",
+    "modpack:ore/sylvite/argillite",
+    "modpack:ore/sylvite/travertine"
+  ]
+}

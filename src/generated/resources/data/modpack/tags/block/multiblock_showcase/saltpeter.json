@@ -1,0 +1,16 @@
+{
+  "values": [
+    "tfc:ore/saltpeter/limestone",
+    "tfc:ore/saltpeter/chalk",
+    "tfc:ore/saltpeter/chert",
+    "tfc:ore/saltpeter/tuff",
+    "tfc:ore/saltpeter/claystone",
+    "tfc:ore/saltpeter/conglomerate",
+    "tfc:ore/saltpeter/dolomite",
+    "modpack:ore/saltpeter/argillite",
+    "modpack:ore/saltpeter/breccia",
+    "modpack:ore/saltpeter/argillite",
+    "modpack:ore/saltpeter/travertine",
+    "modpack:ore/saltpeter/sandstone"
+  ]
+}

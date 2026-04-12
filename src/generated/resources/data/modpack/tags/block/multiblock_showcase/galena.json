@@ -1,0 +1,12 @@
+{
+  "values": [
+    "modpack:ore/rich_galena/limestone",
+    "modpack:ore/rich_galena/granite",
+    "modpack:ore/rich_galena/diorite",
+    "modpack:ore/rich_galena/gabbro",
+    "modpack:ore/rich_galena/blueschist",
+    "modpack:ore/rich_galena/peridotite",
+    "modpack:ore/rich_galena/phonolite",
+    "modpack:ore/rich_galena/komatiite"
+  ]
+}

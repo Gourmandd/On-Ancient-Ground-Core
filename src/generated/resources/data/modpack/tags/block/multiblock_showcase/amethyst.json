@@ -1,0 +1,16 @@
+{
+  "values": [
+    "tfc:ore/amethyst/limestone",
+    "tfc:ore/amethyst/chalk",
+    "tfc:ore/amethyst/chert",
+    "modpack:ore/amethyst/argillite",
+    "modpack:ore/amethyst/breccia",
+    "modpack:ore/amethyst/argillite",
+    "modpack:ore/amethyst/travertine",
+    "modpack:ore/amethyst/sandstone",
+    "tfc:ore/amethyst/marble",
+    "tfc:ore/amethyst/schist",
+    "tfc:ore/amethyst/gneiss",
+    "tfc:ore/amethyst/quartzite"
+  ]
+}

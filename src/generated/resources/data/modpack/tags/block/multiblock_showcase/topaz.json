@@ -1,0 +1,14 @@
+{
+  "values": [
+    "tfc:ore/topaz/marble",
+    "tfc:ore/topaz/schist",
+    "tfc:ore/topaz/gneiss",
+    "modpack:ore/topaz/serpentine",
+    "tfc:ore/topaz/granite",
+    "tfc:ore/topaz/gabbro",
+    "tfc:ore/topaz/basalt",
+    "tfc:ore/topaz/rhyolite",
+    "tfc:ore/topaz/andesite",
+    "modpack:ore/topaz/komatiite"
+  ]
+}

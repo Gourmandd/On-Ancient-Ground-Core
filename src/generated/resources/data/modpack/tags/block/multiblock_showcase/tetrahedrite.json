@@ -1,0 +1,12 @@
+{
+  "values": [
+    "tfc:ore/rich_tetrahedrite/marble",
+    "tfc:ore/rich_tetrahedrite/schist",
+    "tfc:ore/rich_tetrahedrite/gneiss",
+    "tfc:ore/rich_tetrahedrite/quartzite",
+    "tfc:ore/rich_tetrahedrite/schist",
+    "tfc:ore/rich_tetrahedrite/phyllite",
+    "modpack:ore/rich_tetrahedrite/blueschist",
+    "modpack:ore/rich_tetrahedrite/serpentine"
+  ]
+}

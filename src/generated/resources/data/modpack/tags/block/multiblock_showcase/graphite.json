@@ -1,0 +1,11 @@
+{
+  "values": [
+    "tfc:ore/graphite/marble",
+    "tfc:ore/graphite/schist",
+    "tfc:ore/graphite/gneiss",
+    "tfc:ore/graphite/quartzite",
+    "tfc:ore/graphite/schist",
+    "modpack:ore/graphite/blueschist",
+    "modpack:ore/graphite/serpentine"
+  ]
+}

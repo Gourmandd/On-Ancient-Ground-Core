@@ -1,0 +1,10 @@
+{
+  "values": [
+    "tfc:ore/rich_native_copper/andesite",
+    "tfc:ore/rich_native_copper/basalt",
+    "tfc:ore/rich_native_copper/rhyolite",
+    "tfc:ore/rich_native_copper/dacite",
+    "modpack:ore/rich_native_copper/phonolite",
+    "modpack:ore/rich_native_copper/komatiite"
+  ]
+}

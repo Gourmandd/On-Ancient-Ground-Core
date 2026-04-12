@@ -1,0 +1,11 @@
+{
+  "values": [
+    "tfc:ore/rich_native_gold/granite",
+    "tfc:ore/rich_native_gold/diorite",
+    "tfc:ore/rich_native_gold/gabbro",
+    "modpack:ore/rich_native_gold/peridotite",
+    "tfc:ore/rich_native_gold/basalt",
+    "tfc:ore/rich_native_gold/rhyolite",
+    "tfc:ore/rich_native_gold/andesite"
+  ]
+}

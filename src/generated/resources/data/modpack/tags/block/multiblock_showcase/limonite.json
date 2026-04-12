@@ -1,0 +1,16 @@
+{
+  "values": [
+    "tfc:ore/rich_limonite/limestone",
+    "tfc:ore/rich_limonite/chalk",
+    "tfc:ore/rich_limonite/chert",
+    "tfc:ore/rich_limonite/tuff",
+    "tfc:ore/rich_limonite/claystone",
+    "tfc:ore/rich_limonite/conglomerate",
+    "tfc:ore/rich_limonite/dolomite",
+    "modpack:ore/rich_limonite/argillite",
+    "modpack:ore/rich_limonite/breccia",
+    "modpack:ore/rich_limonite/argillite",
+    "modpack:ore/rich_limonite/travertine",
+    "modpack:ore/rich_limonite/sandstone"
+  ]
+}

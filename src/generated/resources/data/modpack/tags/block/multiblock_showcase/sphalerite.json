@@ -1,0 +1,13 @@
+{
+  "values": [
+    "tfc:ore/rich_sphalerite/granite",
+    "tfc:ore/rich_sphalerite/diorite",
+    "tfc:ore/rich_sphalerite/gabbro",
+    "tfc:ore/rich_sphalerite/basalt",
+    "tfc:ore/rich_sphalerite/rhyolite",
+    "tfc:ore/rich_sphalerite/andesite",
+    "modpack:ore/rich_sphalerite/komatiite",
+    "modpack:ore/rich_sphalerite/blueschist",
+    "modpack:ore/rich_sphalerite/peridotite"
+  ]
+}

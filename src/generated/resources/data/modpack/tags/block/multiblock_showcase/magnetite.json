@@ -1,0 +1,16 @@
+{
+  "values": [
+    "tfc:ore/rich_magnetite/limestone",
+    "tfc:ore/rich_magnetite/chalk",
+    "tfc:ore/rich_magnetite/chert",
+    "tfc:ore/rich_magnetite/tuff",
+    "tfc:ore/rich_magnetite/claystone",
+    "tfc:ore/rich_magnetite/conglomerate",
+    "tfc:ore/rich_magnetite/dolomite",
+    "modpack:ore/rich_magnetite/argillite",
+    "modpack:ore/rich_magnetite/breccia",
+    "modpack:ore/rich_magnetite/argillite",
+    "modpack:ore/rich_magnetite/travertine",
+    "modpack:ore/rich_magnetite/sandstone"
+  ]
+}

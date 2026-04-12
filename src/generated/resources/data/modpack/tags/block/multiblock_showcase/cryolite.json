@@ -1,0 +1,8 @@
+{
+  "values": [
+    "tfc:ore/cryolite/granite",
+    "tfc:ore/cryolite/diorite",
+    "modpack:ore/cryolite/blueschist",
+    "modpack:ore/cryolite/peridotite"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "tfc:ore/rich_bismuthinite/granite",
+    "tfc:ore/rich_bismuthinite/diorite",
+    "tfc:ore/rich_bismuthinite/gabbro",
+    "tfc:ore/rich_bismuthinite/limestone",
+    "tfc:ore/rich_bismuthinite/chalk",
+    "tfc:ore/rich_bismuthinite/chert",
+    "tfc:ore/rich_bismuthinite/tuff",
+    "tfc:ore/rich_bismuthinite/claystone",
+    "tfc:ore/rich_bismuthinite/conglomerate",
+    "tfc:ore/rich_bismuthinite/dolomite"
+  ]
+}

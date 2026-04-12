@@ -1,0 +1,14 @@
+{
+  "values": [
+    "tfc:ore/sapphire/marble",
+    "tfc:ore/sapphire/schist",
+    "tfc:ore/sapphire/gneiss",
+    "modpack:ore/sapphire/serpentine",
+    "tfc:ore/sapphire/granite",
+    "tfc:ore/sapphire/gabbro",
+    "tfc:ore/sapphire/basalt",
+    "tfc:ore/sapphire/rhyolite",
+    "tfc:ore/sapphire/andesite",
+    "modpack:ore/sapphire/komatiite"
+  ]
+}

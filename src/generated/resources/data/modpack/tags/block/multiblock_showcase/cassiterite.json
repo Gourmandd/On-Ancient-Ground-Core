@@ -1,0 +1,9 @@
+{
+  "values": [
+    "tfc:ore/rich_cassiterite/granite",
+    "tfc:ore/rich_cassiterite/diorite",
+    "tfc:ore/rich_cassiterite/gabbro",
+    "modpack:ore/rich_cassiterite/peridotite",
+    "modpack:ore/rich_cassiterite/komatiite"
+  ]
+}

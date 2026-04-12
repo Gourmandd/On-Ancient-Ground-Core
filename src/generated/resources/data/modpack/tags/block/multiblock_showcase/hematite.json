@@ -1,0 +1,10 @@
+{
+  "values": [
+    "tfc:ore/rich_hematite/andesite",
+    "tfc:ore/rich_hematite/basalt",
+    "tfc:ore/rich_hematite/rhyolite",
+    "tfc:ore/rich_hematite/dacite",
+    "modpack:ore/rich_hematite/phonolite",
+    "modpack:ore/rich_hematite/komatiite"
+  ]
+}

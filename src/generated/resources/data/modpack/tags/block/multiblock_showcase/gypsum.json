@@ -1,0 +1,16 @@
+{
+  "values": [
+    "tfc:ore/gypsum/limestone",
+    "tfc:ore/gypsum/chalk",
+    "tfc:ore/gypsum/chert",
+    "tfc:ore/gypsum/tuff",
+    "tfc:ore/gypsum/claystone",
+    "tfc:ore/gypsum/conglomerate",
+    "tfc:ore/gypsum/dolomite",
+    "modpack:ore/gypsum/argillite",
+    "modpack:ore/gypsum/breccia",
+    "modpack:ore/gypsum/argillite",
+    "modpack:ore/gypsum/travertine",
+    "modpack:ore/gypsum/sandstone"
+  ]
+}

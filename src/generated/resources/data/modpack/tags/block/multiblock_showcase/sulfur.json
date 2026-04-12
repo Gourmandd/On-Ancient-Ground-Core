@@ -1,0 +1,12 @@
+{
+  "values": [
+    "tfc:ore/sulfur/marble",
+    "tfc:ore/sulfur/schist",
+    "tfc:ore/sulfur/gneiss",
+    "tfc:ore/sulfur/quartzite",
+    "tfc:ore/sulfur/schist",
+    "tfc:ore/sulfur/phyllite",
+    "modpack:ore/sulfur/blueschist",
+    "modpack:ore/sulfur/serpentine"
+  ]
+}

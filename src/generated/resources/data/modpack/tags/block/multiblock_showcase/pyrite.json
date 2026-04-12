@@ -1,0 +1,10 @@
+{
+  "values": [
+    "tfc:ore/pyrite/granite",
+    "tfc:ore/pyrite/gabbro",
+    "tfc:ore/pyrite/basalt",
+    "tfc:ore/pyrite/rhyolite",
+    "tfc:ore/pyrite/andesite",
+    "modpack:ore/pyrite/komatiite"
+  ]
+}
