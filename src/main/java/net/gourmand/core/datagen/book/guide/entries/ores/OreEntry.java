@@ -4,9 +4,12 @@ import com.klikli_dev.modonomicon.api.datagen.CategoryProvider;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;
 import com.klikli_dev.modonomicon.api.datagen.EntryProvider;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
+import com.klikli_dev.modonomicon.api.datagen.book.page.BookMultiblockPageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
+import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.util.TextUtil;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -34,20 +37,21 @@ public class OreEntry extends EntryProvider {
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(item))
+                .withItem(Ingredient.of(ores))
         );
 
         this.pageTitle(entryName());
         this.pageText(text);
 
-        this.page("page2", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
+        this.page("page2", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(ores))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "ore_preview/" + ID))
+                .withVisualizeButton(false)
         );
 
+
         this.pageTitle(entryName());
-        this.pageText(entryName() + " in rock.");
+        this.pageText(entryName() + " in ground.");
     }
 
     @Override

@@ -16,22 +16,21 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:ore/lignite"
+        "tag": "c:do_not_use_in_recipes/ore/lignite"
       },
       "text": "book.modpack.guide.ores.lignite.page1.text",
       "title": "book.modpack.guide.ores.lignite.page1.title"
     },
     {
-      "type": "modonomicon:spotlight",
+      "type": "modonomicon:multiblock",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
       },
-      "item": {
-        "tag": "c:do_not_use_in_recipes/ore/lignite"
-      },
-      "text": "book.modpack.guide.ores.lignite.page2.text",
-      "title": "book.modpack.guide.ores.lignite.page2.title"
+      "multiblock_id": "ore_preview/lignite",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.ores.lignite.page2.text"
     }
   ],
   "show_when_any_parent_unlocked": false,

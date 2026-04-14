@@ -40,6 +40,8 @@ public class OresCategory extends CategoryProvider {
 
     @Override
     protected void generateEntries() {
+
+
         // copper
         var nativeCopperEntry = createOreEntry(
                 "native_copper",

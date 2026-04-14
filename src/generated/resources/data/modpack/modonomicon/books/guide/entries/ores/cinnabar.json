@@ -16,22 +16,21 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:ore/cinnabar"
+        "tag": "c:do_not_use_in_recipes/ore/cinnabar"
       },
       "text": "book.modpack.guide.ores.cinnabar.page1.text",
       "title": "book.modpack.guide.ores.cinnabar.page1.title"
     },
     {
-      "type": "modonomicon:spotlight",
+      "type": "modonomicon:multiblock",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
       },
-      "item": {
-        "tag": "c:do_not_use_in_recipes/ore/cinnabar"
-      },
-      "text": "book.modpack.guide.ores.cinnabar.page2.text",
-      "title": "book.modpack.guide.ores.cinnabar.page2.title"
+      "multiblock_id": "ore_preview/cinnabar",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.ores.cinnabar.page2.text"
     }
   ],
   "show_when_any_parent_unlocked": false,
