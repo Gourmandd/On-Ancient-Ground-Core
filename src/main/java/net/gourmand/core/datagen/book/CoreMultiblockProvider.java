@@ -7,8 +7,10 @@ import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.category.CategoryUtil;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -16,6 +18,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Locale;
 import java.util.Map;
+import java.util.stream.Stream;
 
 import static net.gourmand.core.registry.category.CoreOres.*;
 import static net.dries007.tfc.common.blocks.rock.Ore.*;
@@ -101,5 +104,27 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                 .block('0', TFCBlocks.PINK_KAOLIN_CLAY)
                 .build(false)
         );
+
+        Stream.of(CoreRocks.values()).forEach(rock -> {
+            this.add(this.modLoc("rock_preview/" + rock.getSerializedName()), new DenseMultiblockBuilder()
+                    .layer("BBB")
+                    .layer("B0B")
+                    .layer("BBB")
+                    .block('B', () -> Blocks.AIR)
+                    .block('0', () -> BuiltInRegistries.BLOCK.get(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key()))
+                    .build(false)
+            );
+        });
+
+        Stream.of(Rock.values()).forEach(rock -> {
+            this.add(this.modLoc("rock_preview/" + rock.getSerializedName()), new DenseMultiblockBuilder()
+                    .layer("BBB")
+                    .layer("B0B")
+                    .layer("BBB")
+                    .block('B', () -> Blocks.AIR)
+                    .block('0', () -> TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get())
+                    .build(false)
+            );
+        });
     }
 }

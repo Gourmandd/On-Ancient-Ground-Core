@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "geology",
+  "description": "book.modpack.guide.geology.andesite.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:rock/loose/andesite"
+  },
+  "name": "book.modpack.guide.geology.andesite.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:rock/loose/andesite"
+      },
+      "text": "book.modpack.guide.geology.andesite.page1.text",
+      "title": "book.modpack.guide.geology.andesite.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "rock_preview/andesite",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 6,
+  "x": -1,
+  "y": -2
+}

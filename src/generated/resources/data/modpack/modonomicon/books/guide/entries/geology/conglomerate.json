@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "geology",
+  "description": "book.modpack.guide.geology.conglomerate.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:rock/loose/conglomerate"
+  },
+  "name": "book.modpack.guide.geology.conglomerate.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:rock/loose/conglomerate"
+      },
+      "text": "book.modpack.guide.geology.conglomerate.page1.text",
+      "title": "book.modpack.guide.geology.conglomerate.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "rock_preview/conglomerate",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 28,
+  "x": 5,
+  "y": -1
+}

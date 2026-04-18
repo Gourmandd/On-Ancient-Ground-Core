@@ -2,14 +2,16 @@ package net.gourmand.core.datagen.book.guide.categories;
 
 import com.klikli_dev.modonomicon.api.datagen.CategoryProvider;
 import com.klikli_dev.modonomicon.api.datagen.ModonomiconProviderBase;
+import com.klikli_dev.modonomicon.api.datagen.book.BookCategoryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookEntryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
+import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.datagen.book.guide.entries.ores.RockEntry;
-import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.CoreRocks;
-import net.minecraft.world.item.Item;
+import net.minecraft.resources.ResourceLocation;
 
 public class GeologyCategory extends CategoryProvider {
 
@@ -19,339 +21,433 @@ public class GeologyCategory extends CategoryProvider {
 
     @Override
     protected String[] generateEntryMap() {
-        return new String[0];
+        return new String[]{
+                "C_ac_efg__uw_E_ID",
+                "i_bd_hlF__v__z_yJ",
+                "j______________BK",
+                "k_GH_mnopqsrt__Ax",
+        };
     }
 
     @Override
     protected void generateEntries() {
 
-        // igneous intrusive
+        //region Igneous Intrusive
         var graniteEntry = createRockEntry(
-                "granite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.GRANITE,
                 "a",
                 """
-                Granite is a Felsic Igneous Intrusive rock.
-                You can find metals such as deep Native Gold, deep Bismuthinite, deep Sphalerite, Native Silver, Cassiterite and small Garnierite veins in Granite.
-                You can find minerals such as Emerald, Cinnabar, Cryolite and deep Sulfur veins in Granite.
-                It is able to be used for rock anvils.
+                **Granite** is a **Felsic** **Igneous Intrusive** rock. It can be found:
+                - In **Uplift Regions**.
+                - Deep in **Land Regions**.
+                - Near the bottom of the world.
+                \\
+                \\
+                It can be used for **Rock Anvils**.
                 """
         );
 
         var dioriteEntry = createRockEntry(
-                "diorite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.DIORITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.DIORITE,
                 "b",
                 """
-                Diorite is a Igneous Intrusive rock.
-                You can find minerals such as Emerald, Cryolite and deep Sulfur veins in Diorite.
-                You can find metals such as deep Native Gold, deep Bismuthinite, deep Sphalerite, Native Silver, Cassiterite and small Garnierite veins in Diorite.
-                It is able to be used for rock anvils.
+                **Diorite** is a **Igneous Intrusive** rock.  It can be found:
+                - In **Uplift Regions**.
+                - Deep in **Land Regions**.
+                - Near the bottom of the world.
+                \\
+                \\
+                It can be used for **Rock Anvils**.
                 """
         );
 
         var gabbroEntry = createRockEntry(
-                "gabbro",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.GABBRO,
                 "c",
                 """
-                Gabbro is a Mafic Igneous Intrusive rock.
-                You can find minerals such as Emerald, and deep Sulfur veins in Gabbro.
-                You can find metals such as deep Native Gold, deep Bismuthinite, deep Sphalerite, Cassiterite, and small Garnierite veins in Gabbro.
-                It is able to be used for rock anvils.
+                **Gabbro** is a **Mafic** **Igneous Intrusive** rock. It can be found:
+                - In **Uplift Regions**.
+                - Deep in **Land Regions**.
+                - Near the bottom of the world.
+                \\
+                \\
+                It can be used for **Rock Anvils**.
                 """
         );
 
         var peridotiteEntry = createRockEntry(
-                "peridotite",
-                CoreBlocks.ROCK_BLOCKS.get(CoreRocks.PERIDOTITE).get(Rock.BlockType.LOOSE).get().asItem(),
+                CoreRocks.PERIDOTITE,
                 "d",
                 """
-                Peridotite is a Mafic Igneous Intrusive rock.
-                In it you can find minerals such as Amethyst, Emerald, and deep Sulfur veins.
-                In Peridotite you can find metals in deep Native Gold, deep Bismuthinite, deep Sphalerite, Native Silver, Cassiterite, and small Garnierite veins.
+                **Peridotite** is a Mafic **Igneous Intrusive** rock. It can be found:
+                - In **Land Regions**.
+                - Near the bottom of the world.
                 """
-                //It is able to be used for rock anvils. // NYI
+                //It can be used for **Rock Anvils**. // NYI
         );
+        //endregion
 
-        // intrusive extrusive
+        //region Igneous Extrusive
         var rhyoliteEntry = createRockEntry(
-                "rhyolite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.RHYOLITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.RHYOLITE,
                 "e",
                 """
-                Rhyolite is a Igneous Extrusive rock.
-                In it you can find minerals such as in Opal, Sapphire, and Topaz veins.
-                In Rhyolite you can find metals in deep Native Gold, Native Copper, Hematite, and poor Sphalerite veins.
-                It is able to be used for rock anvils.
+                **Rhyolite** is a **Igneous Extrusive** rock. It can be found:
+                - In **Land Regions**.
+                - In **Volcanic Regions**.
+                \\
+                \\
+                It can be used for **Rock Anvils**.
                 """
         );
 
         var basaltEntry = createRockEntry(
-                "basalt",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.BASALT,
                 "f",
                 """
-                Basalt is a Igneous Extrusive rock.
-                In it you can find minerals such as in Opal, Sapphire, and Topaz veins.
-                In Basalt you can find metals in deep Native Gold, Native Copper, Hematite, and poor Sphalerite veins.
-                It is able to be used for rock anvils.
+                **Basalt** is a **Igneous Extrusive** rock. It can be found:
+                - In **Land Regions**.
+                - In **Volcanic Regions**.
+                \\
+                \\
+                It can be used for **Rock Anvils**.
                 """
         );
 
         var andesiteEntry = createRockEntry(
-                "andesite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.ANDESITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.ANDESITE,
                 "g",
                 """
-                Andesite is a Igneous Extrusive rock.
-                In it you can find minerals such as in Opal, Sapphire, and Topaz veins.
-                In Andesite you can find metals in deep Native Gold, Native Copper, Hematite, and poor Sphalerite veins.
-                It is able to be used for rock anvils.
+                **Andesite** is a **Igneous Extrusive** rock. It can be found:
+                - In **Land Regions**.
+                - In **Volcanic Regions**.
+                \\
+                \\
+                It can be used for **Rock Anvils**.
                 """
         );
 
         var daciteEntry = createRockEntry(
-                "granite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.DACITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.DACITE,
                 "h",
                 """
-                Dacite is a Igneous Extrusive rock.
-                In it you can find minerals such as in Opal, Sapphire, and Topaz veins.
-                In Dacite you can find metals in deep Native Gold, Native Copper, Hematite, and poor Sphalerite veins.
-                It is able to be used for rock anvils.
+                **Dacite** is a **Igneous Extrusive** rock. It can be found:
+                - In **Land Regions**.
+                - In **Volcanic Regions**.
+                \\
+                \\
+                It can be used for **Rock Anvils**.
                 """
         );
 
         var nepheliniteEntry = createRockEntry(
-                "nephelinite",
-                CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.LOOSE).get().asItem(),
+                CoreRocks.NEPHELINITE,
                 "i",
                 """
-                Nephelinite is a Igneous Extrusive rock.
-                In it you can find minerals such as in Opal, Sapphire, Topaz veins.
-                In Nephelinite you can find metals in deep Native Gold, Native Copper, Hematite, and poor Sphalerite veins.
-                """//It is able to be used for rock anvils. // NYI
+                **Nephelinite** is a **Igneous Extrusive** rock. It can be found:
+                - Deep, deep underground.
+                """//It can be used for **Rock Anvils**. // NYI
         );
 
         var blackslagEntry = createRockEntry(
-                "blackslag",
-                CoreBlocks.ROCK_BLOCKS.get(CoreRocks.BLACKSLAG).get(Rock.BlockType.LOOSE).get().asItem(),
+                CoreRocks.BLACKSLAG,
                 "j",
                 """
-                Blackslag is a Igneous Extrusive rock.
-                In it you can find minerals such as in Opal, Sapphire, and Topaz veins.
-                In Blackslag you can find metals in deep Native Gold, Native Copper, Hematite, and poor Sphalerite veins.
-                """//It is able to be used for rock anvils. // NYI
+                **Blackslag** is a **Igneous Extrusive** rock. It can be found:
+                - Near the bottom of the world.
+                - Deep, deep underground.
+                \\
+                It's formation is a mystery as of now.
+                """//It can be used for **Rock Anvils**. // NYI
         );
 
         var picriteBasaltEntry = createRockEntry(
-                "picrite_basalt",
-                CoreBlocks.ROCK_BLOCKS.get(CoreRocks.PICRITE_BASALT).get(Rock.BlockType.LOOSE).get().asItem(),
+                CoreRocks.PICRITE_BASALT,
                 "k",
                 """
-                Picrite Basalt is a Igneous Extrusive rock.
-                In it you can find minerals such as in Opal, Sapphire, and Topaz veins.
-                In Picrite Basalt you can find metals in deep Native Gold, Native Copper, Hematite, and poor Sphalerite veins.
-                """//It is able to be used for rock anvils. // NYI
+                **Picrite Basalt** is a **Igneous Extrusive** rock. It can be found:
+                - Deep, deep underground.
+                """//It can be used for **Rock Anvils**. // NYI
+        );
+        var phonoliteEntry = createRockEntry(
+                CoreRocks.PHONOLITE,
+                "F",
+                """
+                **Phonolite** is a **Igneous Extrusive** rock. It can be found:
+                - In **Land Regions**.
+                """//It can be used for **Rock Anvils**. // NYI
         );
 
         var komatiiteEntry = createRockEntry(
-                "komatiite",
-                CoreBlocks.ROCK_BLOCKS.get(CoreRocks.KOMATIITE).get(Rock.BlockType.LOOSE).get().asItem(),
+                CoreRocks.KOMATIITE,
                 "l",
                 """
-                Picrite Basalt is a Igneous Extrusive rock.
-                In it you can find minerals such as in Amethyst, Opal, Sapphire, Sulfur, and Topaz veins.
-                In Picrite Basalt you can find metals in deep Native Gold, Bismuthinite, Native Silver, Native Copper, Garnierite, Hematite, poor Cassiterite and poor Sphalerite veins.
-                """//It is able to be used for rock anvils. // NYI
+                **Komatiite** is a **Igneous Extrusive** rock. It can be found:
+                - In **Volcanic Regions**.
+                - In **Land Regions**.
+                """//It can be used for **Rock Anvils**. // NYI
         );
+        //endregion
 
-        // metamorphic
+        //region Metamorphic
         var quartziteEntry = createRockEntry(
-                "quartzite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.QUARTZITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.QUARTZITE,
                 "m",
                 """
-                Quartzite is a Metamorphic rock.
-                In it you can find minerals such as Amethyst, Cinnabar, Graphite, and Sulfur.
-                In Quartzite you can find metals in Tetrahedrite veins.
+                **Quartzite** is a **Metamorphic** rock. It can be found:
+                - In **Uplift Regions**.
+                - Under **Chert**, **Sandstone**, **Red Sandstone** or **Arkose**.
                 """
         );
 
         var slateEntry = createRockEntry(
-                "slate",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SLATE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.SLATE,
                 "n",
                 """
-                Slate is a Metamorphic rock.
-                In it you can find minerals such as Amethyst, and Sulfur.
-                In Slate you can find metals in Tetrahedrite veins.
+                **Slate** is a **Metamorphic** rock. It can be found:
+                - Under **Sedimentary** rocks like **Claystone**, **Conglomerate**, **Shale**, **Argillite**, **Breccia**, and **Travertine**.
+                - In **Uplift Regions** under **Diorite**, **Granite**, **Gabbro**.
+                - In **Land Regions** under **Komatiite** and **Phonolite**.
+                - In **Uplift Regions**.
                 """
         );
 
         var phylliteEntry = createRockEntry(
-                "phyllite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.PHYLLITE,
                 "o",
                 """
-                Phyllite is a Metamorphic rock.
-                In it you can find minerals such as Amethyst, and Sulfur.
-                In Phyllite you can find metals in Tetrahedrite veins.
+                **Phyllite** is a **Metamorphic** rock. It can be found:
+                - Under **Sedimentary** rocks like **Claystone**, **Conglomerate**, **Shale**, **Argillite**, **Breccia**, and **Travertine**.
+                - In **Uplift Regions** under **Diorite**, **Granite**, **Gabbro**.
+                - In **Land Regions** under **Komatiite** and **Phonolite**.
+                - In **Uplift Regions**.
                 """
         );
 
         var schistEntry = createRockEntry(
-                "schist",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.SCHIST,
                 "p",
                 """
-                Schist is a Metamorphic rock.
-                In it you can find minerals such as Amethyst, Cinnabar, Ruby, Graphite and Sulfur.
-                In Schist you can find metals in Tetrahedrite, and deep Native Silver veins.
+                **Schist** is a **Metamorphic** rock. It can be found:
+                - In **Land Regions** under **Peridotite**, **Serpentine**, and **Blueschist**.
+                - Under **Phyllite** or **Slate**.
+                - Near the bottom of the world.
                 """
         );
 
         var gneissEntry = createRockEntry(
-                "gneiss",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GNEISS).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.GNEISS,
                 "q",
                 """
-                Slate is a Metamorphic rock.
-                In it you can find minerals such as in Amethyst, and Sulfur veins.
-                In Slate you can find metals in Tetrahedrite veins.
+                **Gneiss** is a **Metamorphic** rock. It can be found:
+                - In **Land Regions** under **Peridotite**, **Serpentine**, and **Blueschist**.
+                - Under **Phyllite** or **Slate**.
+                - Near the bottom of the world.
                 """
         );
 
         var marbleEntry = createRockEntry(
-                "marble",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.MARBLE,
                 "r",
                 """
-                Slate is a Metamorphic rock.
-                In it you can find minerals such as in Amethyst, and Sulfur veins.
-                In Slate you can find metals in Tetrahedrite veins.
+                **Marble** is a **Metamorphic** rock. It can be found:
+                - In **Uplift Regions**.
+                - Under **Chalk**, **Dolomite** or **Limestone**.
                 """
         );
 
         var blueschistEntry = createRockEntry(
-                "blueschist",
-                CoreBlocks.ROCK_BLOCKS.get(CoreRocks.BLUESCHIST).get(Rock.BlockType.LOOSE).get().asItem(),
+                CoreRocks.BLUESCHIST,
                 "s",
                 """
-                Slate is a Metamorphic rock.
-                In it you can find minerals such as in Amethyst, and Sulfur veins.
-                In Slate you can find metals in Tetrahedrite veins.
+                **Blueschist** is a **Metamorphic** rock. It can be found:
+                - In **Land Regions**.
+                - In **Volcanic Regions**.
+                - Near the bottom of the world.
                 """
         );
 
         var serpentineEntry = createRockEntry(
-                "serpentine",
-                CoreBlocks.ROCK_BLOCKS.get(CoreRocks.SERPENTINE).get(Rock.BlockType.LOOSE).get().asItem(),
+                CoreRocks.SERPENTINE,
                 "t",
                 """
-                Quartzite is a Metamorphic rock.
-                In it you can find minerals such as in veins.
-                In Quartzite you can find metals in Tetrahedrite veins.
+                **Serpentine** is a **Metamorphic** rock. It can be found:
+                - In **Land Regions**.
+                - Near the bottom of the world.
                 """
         );
 
-        //sedimentary carbonic
+        var soapstoneEntry = createRockEntry(
+                CoreRocks.SOAPSTONE,
+                "G",
+                """
+                **Soapstone** is a **Metamorphic** rock found as veins in other **Metamorphic** rocks. \\
+                This can make it relatively rare.
+                """
+        );
+
+        var sueviteEntry = createRockEntry(
+                CoreRocks.SUEVITE,
+                "H",
+                """
+                **Suevite** is a **Metamorphic** rock found as meteors found near the surface. \\
+                This can make it relatively rare.
+                This means it is found alongside **Meteoric Iron**
+                """
+        );
+        //endregion
+
+        //region Carbonic Sedimentary
         var limestoneEntry = createRockEntry(
-                "limestone",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.LIMESTONE,
                 "u",
                 """
+                **Limestone** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
 
         var dolomiteEntry = createRockEntry(
-                "dolomite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.DOLOMITE,
                 "v",
                 """
+                **Dolomite** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
 
         var chalkEntry = createRockEntry(
-                "chalk",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.CHALK,
                 "w",
                 """
+                **Chalk** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
+        //endregion
 
-        //sedimentary other
+        //region Sedimentary
         var shaleEntry = createRockEntry(
-                "shale",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.SHALE,
                 "x",
                 """
+                **Shale** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
 
         var claystoneEntry = createRockEntry(
-                "claystone",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.CLAYSTONE,
                 "y",
                 """
+                **Claystone** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
 
         var conglomerateEntry = createRockEntry(
-                "conglomerate",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.CONGLOMERATE,
                 "z",
                 """
+                **Conglomerate** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
 
         var chertEntry = createRockEntry(
-                "chert",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.CHERT,
                 "A",
                 """
+                **Chert** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
 
         var tuffEntry = createRockEntry(
-                "tuff",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                Rock.TUFF,
                 "B",
                 """
+                **Tuff** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
 
         var argilliteEntry = createRockEntry(
-                "granite",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                CoreRocks.ARGILLITE,
                 "C",
                 """
+                **Argillite** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
+                - Deep, deep underground.
                 """
         );
 
         var travertineEntry = createRockEntry(
-                "travertine",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                CoreRocks.TRAVERTINE,
                 "D",
                 """
+                **Travertine** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
+                - Deep, deep underground.
                 """
         );
 
         var brecciaEntry = createRockEntry(
-                "breccia",
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.LOOSE).asItem(),
+                CoreRocks.BRECCIA,
                 "E",
                 """
+                **Breccia** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
                 """
         );
+
+        var sandstoneEntry = createRockEntry(
+                CoreRocks.SANDSTONE,
+                "I",
+                """
+                **Sandstone** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
+                """
+        );
+
+        var redSandstoneEntry = createRockEntry(
+                CoreRocks.RED_SANDSTONE,
+                "J",
+                """
+                **Red Sandstone** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
+                """
+        );
+
+        var arkoseEntry = createRockEntry(
+                CoreRocks.ARKOSE,
+                "K",
+                """
+                **Arkose** is a **Sedimentary** rock. It can be found:
+                - In **Land Regions**.
+                - In **Uplift Regions**.
+                """
+        );
+        //endregion
     }
 
-    public BookEntryModel createRockEntry(String id, Item item, String symbol, String text){
+    public BookEntryModel createRockEntry( RegistryRock rock, String symbol, String text){
         return this.add(new RockEntry(
                         this,
-                        id,
-                        item,
+                        rock,
                         text
                 ).generate(symbol)
         );
@@ -370,5 +466,11 @@ public class GeologyCategory extends CategoryProvider {
     @Override
     public String categoryId() {
         return "geology";
+    }
+
+    @Override
+    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+        category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
+        return super.additionalSetup(category);
     }
 }

@@ -1,0 +1,24 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/raw/quartzite"
+    },
+    "B": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    }
+  },
+  "pattern": [
+    [
+      "BBB"
+    ],
+    [
+      "B0B"
+    ],
+    [
+      "BBB"
+    ]
+  ]
+}

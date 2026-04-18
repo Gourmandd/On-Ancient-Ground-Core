@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "geology",
+  "description": "book.modpack.guide.geology.quartzite.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:rock/loose/quartzite"
+  },
+  "name": "book.modpack.guide.geology.quartzite.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:rock/loose/quartzite"
+      },
+      "text": "book.modpack.guide.geology.quartzite.page1.text",
+      "title": "book.modpack.guide.geology.quartzite.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "rock_preview/quartzite",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 13,
+  "x": -3,
+  "y": 1
+}
