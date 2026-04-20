@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-12T17:11:51.13019485	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-04-20T19:47:45.514568323	Tags for minecraft:item mod id modpack
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 b640843692bdc4754fb81667ad999ebcee6fc128 data/c/tags/item/clay_bricks.json
@@ -66,7 +66,7 @@ aa52434093064b6b0d04e6e3829f5079e3766b71 data/c/tags/item/ingots/electrum.json
 07435c5f2e06079d489ef62195e4f362ff2fff2b data/c/tags/item/ingots/hardened_steel.json
 7298f242b83bc97a16e46481dab701848374cd6e data/c/tags/item/ingots/lead.json
 e43dd5d410c754631909b23e097406e75a7bf7d2 data/c/tags/item/ingots/nethersteel.json
-1346f329bc89f154ebea26a067f2c0aed54d0a25 data/c/tags/item/ores.json
+2300c0a47eef130c578ae0541b6aa44e032b3868 data/c/tags/item/ores.json
 70154efbdbdd233bd0f7c14a298d868d23c6a1e1 data/c/tags/item/rods.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/c/tags/item/rods/wooden.json
 5a6ec5d759b0b9ba9aa5b5e5be4bfd19e87b547a data/c/tags/item/sheets.json

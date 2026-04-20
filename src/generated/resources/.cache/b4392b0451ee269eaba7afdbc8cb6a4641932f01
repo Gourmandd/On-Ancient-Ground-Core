@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-10T10:55:45.895766084	Block States: modpack
+// 1.21.1	2026-04-20T19:47:45.457661075	Block States: modpack
 28ef1e55551722f68f204d793cc49f3d5e37320d assets/modpack/blockstates/anthracite.json
 916700fca3bb7acd96169872356a8367e8537559 assets/modpack/blockstates/bauxite.json
 64ad5ff574f6381ee7771836d592b3d17de0acb6 assets/modpack/blockstates/ceramic/bricks/earthenware.json
@@ -1297,6 +1297,7 @@ cab6f41f528d1afef321882afa3ff1854269abdd assets/modpack/blockstates/ore/topaz/sa
 16b08fbf527122b655dafb9e8b6d7a5dabda55bb assets/modpack/blockstates/ore/topaz/suevite.json
 543f85d5d4ad042abbe34cb62fdb3212ec096b40 assets/modpack/blockstates/ore/topaz/travertine.json
 bb22f9ec9657983a98022765173159db1d4d08c9 assets/modpack/blockstates/prismatic_ice.json
+d28311db007634fc2d5746de5a3039dfea75b1ac assets/modpack/blockstates/quartz.json
 4b8d36f931a21d416441f7651d755896ac51a1cb assets/modpack/blockstates/rock/aqueduct/argillite.json
 dcf8092fbe132caa71a4fc62cab93bc70419c836 assets/modpack/blockstates/rock/aqueduct/arkose.json
 a1fd4a3214a289523c2b3c1f3d3f1bfb9185e8de assets/modpack/blockstates/rock/aqueduct/blackslag.json
@@ -3213,6 +3214,7 @@ cb998295a57c4aff09197615fd4ed620c4d917cc assets/modpack/models/block/ore/topaz/s
 186c08fc1c357530253edf56064d0be368704b7c assets/modpack/models/block/ore/topaz/suevite.json
 e78e263b7f783116e6b0131064bb0677924dbfee assets/modpack/models/block/ore/topaz/travertine.json
 baf644ff5bada9ec701af3aaa930251d8598eed8 assets/modpack/models/block/prismatic_ice.json
+5491c0ec0965e81d3774b62062c1f56204dd5bda assets/modpack/models/block/quartz.json
 b28bf3f3f1ee828801d348f8a68aa293e877e3e2 assets/modpack/models/block/rock/aqueduct/argillite/base.json
 99ac0d40955730afe374d471c101b0eb0d22c1c0 assets/modpack/models/block/rock/aqueduct/argillite/east.json
 3bf734e0bf8ce50cb50e1e7735c33e61ebfdf28a assets/modpack/models/block/rock/aqueduct/argillite/north.json

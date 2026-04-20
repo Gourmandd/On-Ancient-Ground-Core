@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-10T11:01:20.339796358	Item Models: modpack
+// 1.21.1	2026-04-20T19:47:45.500945858	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -1124,6 +1124,7 @@ b5922ea3e01d69fd5f6ca65fd86e6b2a8f725ec0 assets/modpack/models/item/ore/pyrite/s
 0ab7bf20b8d9b733cafa9a262fb6465aa67a488b assets/modpack/models/item/ore/pyrite/soapstone.json
 25e0d2f9e2780c2498aa33a7d5e9989795626609 assets/modpack/models/item/ore/pyrite/suevite.json
 9b9581140584cc5d488cb2a696b25eb6d0c004b1 assets/modpack/models/item/ore/pyrite/travertine.json
+aac0f615c6c4df55b8b21d572e5a477fb50d44a1 assets/modpack/models/item/ore/quartz.json
 ba17f95896064a0eda2845c7b2c590f9971fd5e5 assets/modpack/models/item/ore/rich_bismuthinite/argillite.json
 1387cc28a8ff17f3e3cd310b859a3bb7eb872505 assets/modpack/models/item/ore/rich_bismuthinite/arkose.json
 515b881d381911ae1574c473ebe538e847da7c22 assets/modpack/models/item/ore/rich_bismuthinite/blackslag.json
@@ -1526,6 +1527,7 @@ bcc56df01ee572b29b7b260851a40d83a9e59d6d assets/modpack/models/item/ore/topaz/so
 fc3f98d45c2a4039e90a3c9f4b38ac3b60bb3fd7 assets/modpack/models/item/ore/topaz/suevite.json
 48c7d6364056d1691e1126e95f1f50310719e3bc assets/modpack/models/item/ore/topaz/travertine.json
 41358c5b81b631a8940c2dd17e02f5bbbd80299b assets/modpack/models/item/prismatic_ice.json
+2f1cc70d237b99ddbeeb4ae11f0bc2c0ae4ac2f5 assets/modpack/models/item/quartz.json
 b8baa01ab63af8c468da6406c916bf89a061de47 assets/modpack/models/item/rock/aqueduct/argillite.json
 9771cc5067582704bd1fc2f033c498d7daa2c503 assets/modpack/models/item/rock/aqueduct/arkose.json
 88409ea99e61cd0a02dbcc6568f526f9e309c533 assets/modpack/models/item/rock/aqueduct/blackslag.json
