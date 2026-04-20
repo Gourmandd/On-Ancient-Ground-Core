@@ -180,7 +180,7 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
         Stream.of(CoreRocks.values()).forEach(rock ->{
 
             Stream.of(Rock.BlockType.values()).forEach(type ->{
-                if (rock.hasVariant(type)){
+                if (rock.hasVariant(type) && type != Rock.BlockType.GRAVEL){
                     if (type.hasVariants()){
                         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().getKey());
                         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().getKey());
