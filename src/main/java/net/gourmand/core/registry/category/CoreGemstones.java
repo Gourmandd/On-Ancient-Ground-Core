@@ -6,7 +6,6 @@ import de.dafuqs.spectrum.api.item.GemstoneColor;
 import de.dafuqs.spectrum.blocks.crystallarieum.SpectrumClusterBlock;
 import de.dafuqs.spectrum.blocks.gemstone.SpectrumBuddingBlock;
 import de.dafuqs.spectrum.blocks.gemstone.SpectrumGemstoneBlock;
-import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import de.dafuqs.spectrum.registries.SpectrumSoundEvents;
 import de.dafuqs.spectrum.registries.SpectrumSoundTypes;
 import net.gourmand.core.registry.CoreBlocks;
@@ -94,12 +93,12 @@ public enum CoreGemstones implements GemstoneColor, StringRepresentable {
 
         BLOCK((gem) -> new SpectrumGemstoneBlock(gemstoneBlockSettings(gem), SpectrumSoundEvents.BLOCK_ONYX_BLOCK_HIT, SpectrumSoundEvents.BLOCK_ONYX_BLOCK_CHIME)),
         PILLAR((gem) -> new Block(gemstoneBlockSettings(gem))),
-        BUDDING_BLOCK((gem) -> new SpectrumBuddingBlock(gemstoneBlockSettings(gem).pushReaction(PushReaction.DESTROY).randomTicks(), SpectrumBlocks.SMALL_ONYX_BUD.get(), SpectrumBlocks.MEDIUM_ONYX_BUD.get(), SpectrumBlocks.LARGE_ONYX_BUD.get(), SpectrumBlocks.ONYX_CLUSTER.get(), SpectrumSoundEvents.BLOCK_ONYX_BLOCK_HIT, SpectrumSoundEvents.BLOCK_ONYX_BLOCK_CHIME)),
         POWDER_BLOCK((gem) -> new ColoredFallingBlock(new ColorRGBA(gem.getDyeColor().getFireworkColor()), BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).mapColor(gem.getMapColor()))),
         CLUSTER((gem) -> new SpectrumClusterBlock(clusterBlockSettings(gem), SpectrumClusterBlock.GrowthStage.CLUSTER), true),
         LARGE_CLUSTER((gem) -> new SpectrumClusterBlock(clusterBlockSettings(gem), SpectrumClusterBlock.GrowthStage.LARGE), true),
         MEDIUM_CLUSTER((gem) -> new SpectrumClusterBlock(clusterBlockSettings(gem), SpectrumClusterBlock.GrowthStage.MEDIUM), true),
-        SMALL_CLUSTER((gem) -> new SpectrumClusterBlock(clusterBlockSettings(gem), SpectrumClusterBlock.GrowthStage.SMALL), true);
+        SMALL_CLUSTER((gem) -> new SpectrumClusterBlock(clusterBlockSettings(gem), SpectrumClusterBlock.GrowthStage.SMALL), true),
+        BUDDING_BLOCK((gem) -> new SpectrumBuddingBlock(gemstoneBlockSettings(gem).pushReaction(PushReaction.DESTROY).randomTicks(), CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(SMALL_CLUSTER).get(), CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(MEDIUM_CLUSTER).get(),CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(LARGE_CLUSTER).get(), CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(CLUSTER).get(), SpectrumSoundEvents.BLOCK_ONYX_BLOCK_HIT, SpectrumSoundEvents.BLOCK_ONYX_BLOCK_CHIME));
 
         private final String serializedName;
         private final Function<CoreGemstones, Block> blockFactory;
