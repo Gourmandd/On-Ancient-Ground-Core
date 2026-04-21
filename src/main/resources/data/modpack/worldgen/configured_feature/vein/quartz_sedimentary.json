@@ -1,0 +1,42 @@
+{
+  "type": "tfc:pipe_vein",
+  "config": {
+    "rarity": 80,
+    "density": 0.1,
+    "min_y": 0,
+    "max_y": 100,
+    "min_skew": 2,
+    "max_skew": 20,
+    "min_slant": 0,
+    "max_slant": 10,
+    "sign": 0,
+    "height": 15,
+    "radius": 6,
+    "random_name": "quartz",
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/limestone",
+          "tfc:rock/raw/dolomite",
+          "tfc:rock/raw/chalk",
+          "tfc:rock/raw/chert",
+          "tfc:rock/raw/claystone",
+          "tfc:rock/raw/conglomerate",
+          "tfc:rock/raw/shale",
+          "tfc:rock/raw/tuff",
+          "caupona:felsic_tuff",
+          "quark:limestone",
+          "quark:jasper",
+          "create:ochrum",
+          "minecraft:dripstone_block",
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      }
+    ]
+  }
+}

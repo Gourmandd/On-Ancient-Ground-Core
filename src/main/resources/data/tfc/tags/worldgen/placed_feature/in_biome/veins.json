@@ -16,6 +16,8 @@
         "modpack:vein/normal_galena",
         "modpack:vein/terracotta",
         "modpack:vein/soapstone",
-        "modpack:vein/meteoric_iron"
+        "modpack:vein/meteoric_iron",
+        "modpack:vein/quartz",
+        "modpack:vein/quartz_sedimentary"
     ]
 }
