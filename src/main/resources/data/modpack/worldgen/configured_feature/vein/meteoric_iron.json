@@ -1,7 +1,7 @@
 {
   "type": "tfc:cluster_vein",
   "config": {
-    "rarity": 40,
+    "rarity": 600,
     "density": 1,
     "min_y": 30,
     "max_y": 200,
