@@ -338,6 +338,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         addMultiBlockOre(CoreOres.ANTHRACITE, CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE).get());
 
         addMultiBlockOre(CoreOres.BAUXITE, CoreBlocks.BASIC_ORES.get(CoreOres.BAUXITE).get());
+        addMultiBlockOre(CoreOres.METEORIC_IRON, CoreBlocks.BASIC_ORES.get(CoreOres.METEORIC_IRON).get());
+        addMultiBlockOre(CoreOres.QUARTZ, CoreBlocks.BASIC_ORES.get(CoreOres.QUARTZ).get());
 
         addMultiBlockOre(Ore.SULFUR, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, Rock.QUARTZITE, Rock.SCHIST, Rock.PHYLLITE, CoreRocks.BLUESCHIST, CoreRocks.SERPENTINE));
         addMultiBlockOre(Ore.SALTPETER, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));

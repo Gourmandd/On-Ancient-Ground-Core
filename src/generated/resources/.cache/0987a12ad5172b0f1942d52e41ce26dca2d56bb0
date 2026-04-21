@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-18T18:52:47.542829786	Multiblocks: modpack
+// 1.21.1	2026-04-21T18:56:27.577480762	Multiblocks: modpack
 d429c34c004e91c1cb842675e091ee5186d15eee data/modpack/modonomicon/multiblocks/ore_preview/amethyst.json
 53ef881586ecc60058cbf32bdd6712b194f0e869 data/modpack/modonomicon/multiblocks/ore_preview/anthracite.json
 ab1e3458bbb9df66c0d5fc7af84164cc31f66346 data/modpack/modonomicon/multiblocks/ore_preview/bauxite.json
@@ -28,6 +28,7 @@ b16eb178cbeaf536c01a5a92e81a23c3355f68ca data/modpack/modonomicon/multiblocks/or
 a725b5bb15e7cbee56dda916e22a8e62a0ac228f data/modpack/modonomicon/multiblocks/ore_preview/native_silver.json
 d86f61a16239b6f7c160e64c373c94070dcfa53a data/modpack/modonomicon/multiblocks/ore_preview/opal.json
 f49256b767a11f03dc30979e41f56304bb0fe32f data/modpack/modonomicon/multiblocks/ore_preview/pyrite.json
+90aec3b72523b84e740b33f00875146fb08fc37a data/modpack/modonomicon/multiblocks/ore_preview/quartz.json
 104d3caaa293e769fb6e36fa473250009c7594bc data/modpack/modonomicon/multiblocks/ore_preview/ruby.json
 d19533d451b667f9ac07d71b2a5b6fc7422af665 data/modpack/modonomicon/multiblocks/ore_preview/saltpeter.json
 d7ea94264171d639ffca644de88d1c0fa0d93fb1 data/modpack/modonomicon/multiblocks/ore_preview/sapphire.json

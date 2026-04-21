@@ -34,6 +34,7 @@ public class CoreMultiblockProvider extends MultiblockProvider {
             .put(METEORIC_IRON, CoreBlocks.BASIC_ORES.get(METEORIC_IRON))
             .put(ANTHRACITE, CoreBlocks.BASIC_ORES.get(ANTHRACITE))
             .put(BAUXITE, CoreBlocks.BASIC_ORES.get(BAUXITE))
+            .put(QUARTZ, CoreBlocks.BASIC_ORES.get(QUARTZ))
             .build();
 
     private static final Map<Ore, DeferredHolder<Block, Block>> TFC_ORES = ImmutableMap.<Ore, DeferredHolder<Block, Block>>builder()

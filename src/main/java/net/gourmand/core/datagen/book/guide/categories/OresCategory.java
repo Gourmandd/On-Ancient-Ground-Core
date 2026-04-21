@@ -16,6 +16,7 @@ import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 
 public class OresCategory extends CategoryProvider {
 
@@ -28,13 +29,12 @@ public class OresCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "w__a__m__dei",
-                "x__b__k__fgh",
-                "y__c__l___j_",
-                "____________",
-                "___nopqrstuv",
-                "z___________",
-                "A__GCDEFBHIJ",
+                "_w__a__m__dei_",
+                "_x__b__k__fgh_",
+                "_y__c__l___j__",
+                "______________",
+                "Kz__nopqrstuvL",
+                "_A__GCDEFBHIJ_",
         };
     }
 
@@ -497,6 +497,32 @@ public class OresCategory extends CategoryProvider {
                 Halite is a **Mineral** which can be ground in the **Quern** to make **Salt**, which is an important **Preservative**.\s
                 \\
                 It can be found in very large flat deposits near the surface in **Sedimentary** rocks.
+               \s"""
+        );
+
+        var meteoricIronEntry = createOreEntry(
+                "meteoric_iron",
+                CoreTags.Items.CORE_ORE_MULTIBLOCK.get(CoreOres.METEORIC_IRON),
+                CoreItems.ORES.get(CoreOres.METEORIC_IRON).get(),
+                "K",
+                """
+                Meteoric Iron is a very rare ore of **Iron** found it meteorites alongside **Suevite** rock. It can be refined into **Wrought Iron** with a **Copper** anvil.\s
+                \\
+                Meteors can generate anywhere near the surface, except for oceans and high up on mountains, they can generate in any rock type,
+               \s"""
+        );
+
+        var quartzEntry = createOreEntry(
+                "quartz",
+                CoreTags.Items.CORE_ORE_MULTIBLOCK.get(CoreOres.QUARTZ),
+                Items.QUARTZ.asItem(),
+                "L",
+                """
+                Quartz is a **Mineral** which can be found in pipe formations, it has various practical and aesthetic purposes.\s
+                \\
+                Poor quartz veins can generate in any **Sedimentary** rock, they are large but sparse.\s
+                \\
+                Richer veins can be found in **Granite**, **Rhyolite**, **Dacite**, **Quartzite** and **Schist**.
                \s"""
         );
     }

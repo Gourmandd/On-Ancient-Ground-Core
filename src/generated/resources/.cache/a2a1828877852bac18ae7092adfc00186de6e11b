@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-20T19:47:45.514568323	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-04-21T18:56:27.581298539	Tags for minecraft:item mod id modpack
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 b640843692bdc4754fb81667ad999ebcee6fc128 data/c/tags/item/clay_bricks.json
@@ -27,11 +27,13 @@ db57f9b303295a9d153ac948a26d4ce6b0d376e5 data/c/tags/item/do_not_use_in_recipes/
 22229fd680f853f1161afff36f506714503f5d68 data/c/tags/item/do_not_use_in_recipes/ore/limonite.json
 d94eaa9a8006ffa5d1bd914058ee8c8d3f7c4025 data/c/tags/item/do_not_use_in_recipes/ore/magnetite.json
 ea18d528e2f646ef98a1f518ef204113a1f1a97b data/c/tags/item/do_not_use_in_recipes/ore/malachite.json
+433fbb8241380a641e4dfd5d1be73681158049fe data/c/tags/item/do_not_use_in_recipes/ore/meteoric_iron.json
 d7e19f51421e5bae0641f9ddfea1dd0e164bdad8 data/c/tags/item/do_not_use_in_recipes/ore/native_copper.json
 9f2546e32321d30acaa7ee175da0f4e01977362b data/c/tags/item/do_not_use_in_recipes/ore/native_gold.json
 71f75a92f030421a85184a82191b2d2f21f16cef data/c/tags/item/do_not_use_in_recipes/ore/native_silver.json
 0e5d7615305b0d498e05030f12d7b463d920e0b5 data/c/tags/item/do_not_use_in_recipes/ore/opal.json
 6e95ecc9ea4ce234c39ed809a47ee11f995705df data/c/tags/item/do_not_use_in_recipes/ore/pyrite.json
+7bf482c99693c77b5d03d2ce21c8a6486102723b data/c/tags/item/do_not_use_in_recipes/ore/quartz.json
 295e78dccfef870264e83b7bc7eb9b992f34adce data/c/tags/item/do_not_use_in_recipes/ore/ruby.json
 e96a0c57ecb58532ebe647994a0af9ea5d6414a4 data/c/tags/item/do_not_use_in_recipes/ore/saltpeter.json
 33480cd19dfc22d6e392968e7197795119f19e6e data/c/tags/item/do_not_use_in_recipes/ore/sapphire.json
