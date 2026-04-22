@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-20T19:47:45.436639641	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-04-22T16:24:15.507658001	Tags for minecraft:block mod id modpack
 0f0e87285b9cb3318313154fd78f425ca50a7da7 data/c/tags/block/cobblestones.json
 0ddd863158f5fb454bf35b313a37d957d5ed9cb7 data/c/tags/block/cobblestones/mossy.json
 adedb65a2a966b6157ee808231af42ef18a34528 data/c/tags/block/cobblestones/normal.json
@@ -41,9 +41,9 @@ a5c2ae79b8f281a1544b571ea0121792b47ca8d7 data/tfc/tags/block/can_trigger_collaps
 37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/fruit_tree_saplings.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/grass_plantable_on.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/halophyte_plantable_on.json
-e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/hoe.json
-e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/knife.json
-e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/scythe.json
+c0f67c5526d39e175618b85fd9239d458a682a86 data/tfc/tags/block/mineable/hoe.json
+c0f67c5526d39e175618b85fd9239d458a682a86 data/tfc/tags/block/mineable/knife.json
+c0f67c5526d39e175618b85fd9239d458a682a86 data/tfc/tags/block/mineable/scythe.json
 2300c0a47eef130c578ae0541b6aa44e032b3868 data/tfc/tags/block/prospectable.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/sea_bush_plantable_on.json
 98548d218f2823032aa12a4a80260591cef9b1ad data/tfc/tags/block/support_beams.json

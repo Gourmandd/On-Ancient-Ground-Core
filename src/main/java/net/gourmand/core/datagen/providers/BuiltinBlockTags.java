@@ -346,6 +346,12 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
                 .add(SpectrumBlocks.CITRINE_POWDER_BLOCK.getKey())
                 .add(SpectrumBlocks.ONYX_POWDER_BLOCK.getKey())
                 .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
+
+        add(CoreBlocks.WILD_CROPS, List.of(
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE)
+        );
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){

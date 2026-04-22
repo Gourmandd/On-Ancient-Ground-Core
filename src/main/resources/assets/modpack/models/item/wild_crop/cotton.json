@@ -1,3 +1,6 @@
 {
-  "parent": "rusticdelight:block/wild_cotton"
+  "parent": "tfc:block/wild_crop/crop",
+  "textures": {
+    "crop": "rusticdelight:block/cotton_stage3"
+  }
 }

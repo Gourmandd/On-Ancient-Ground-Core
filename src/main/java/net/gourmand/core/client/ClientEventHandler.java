@@ -19,6 +19,7 @@ import net.gourmand.core.registry.category.CoreClay;
 import net.gourmand.core.registry.category.CoreGemstones;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
@@ -168,6 +169,10 @@ public class ClientEventHandler {
     }
 
     private static void registerColorHandlerItems(RegisterColorHandlersEvent.Item event) {
+
+        final ItemColor grassColor = (stack, tintIndex) -> TFCColors.getGrassColor(null, tintIndex);
+
+        CoreBlocks.WILD_CROPS.values().forEach((block) -> event.register(grassColor, block.get().asItem()));
 
         for (CoreClay clay : CoreClay.values()){;
             event.register(ContainedFluidModel.COLOR, CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).get());

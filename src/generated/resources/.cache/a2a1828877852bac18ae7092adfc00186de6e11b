@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-21T18:56:27.581298539	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-04-22T16:24:15.513580877	Tags for minecraft:item mod id modpack
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 b640843692bdc4754fb81667ad999ebcee6fc128 data/c/tags/item/clay_bricks.json
@@ -139,3 +139,4 @@ a95eece88a4a48fd1080df8ab87d752b419d1dd1 data/tfc/tags/item/unfired_molds.json
 2eda10c3af5b83fac8185cbc3734f18b0e9749d9 data/tfc/tags/item/unfired_pottery.json
 f33be10308ac957535de398b32edc53435d050df data/tfc/tags/item/unfired_vessels.json
 fa7f97402203e4a26c47673258cdfe8d223abb73 data/tfc/tags/item/vessels.json
+2de41cb57a38779425793b310b39dc1bfa45cbb4 data/tfc/tags/item/wild_crops.json

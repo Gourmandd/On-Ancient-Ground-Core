@@ -368,6 +368,10 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 .add(getKey(TFCBlocks.WHITE_KAOLIN_CLAY.asItem()))
                 .add(getKey(TFCBlocks.PINK_KAOLIN_CLAY.asItem()))
                 .add(getKey(TFCBlocks.RED_KAOLIN_CLAY.asItem()));
+
+        add(CoreBlocks.WILD_CROPS, List.of(
+                TFCTags.Items.WILD_CROPS)
+        );
     }
 
     protected void addMultiBlockOre(CoreOres ore, Block block){
