@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableMap;
 import com.simibubi.create.Create;
 import com.teammoeg.caupona.CPMain;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.items.TFCItems;
@@ -13,6 +14,7 @@ import net.gourmand.core.registry.CoreBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -25,8 +27,10 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Map;
 
+import static net.dries007.tfc.common.blocks.rock.Ore.*;
 import static net.dries007.tfc.common.blocks.rock.Rock.*;
 import static net.gourmand.core.registry.category.CoreCrops.*;
+import static net.gourmand.core.registry.category.CoreOres.*;
 import static net.gourmand.core.registry.category.CoreRocks.*;
 
 public class CategoryUtil {
@@ -433,6 +437,57 @@ public class CategoryUtil {
                 .put(SCHIST, SandBlockType.YELLOW)
                 .put(GNEISS, SandBlockType.YELLOW)
                 .put(MARBLE, SandBlockType.WHITE)
+                .build();
+    }
+
+    public static class Ores {
+
+        public static final Map<CoreOres, TagKey<Block>> CORE_ORE_TO_MINING_TIER_TAG = ImmutableMap.<CoreOres, TagKey<Block>>builder()
+                .put(GALENA, BlockTags.NEEDS_STONE_TOOL)
+                .put(METEORIC_IRON, BlockTags.NEEDS_STONE_TOOL)
+                .put(ANTHRACITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(BAUXITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(QUARTZ, BlockTags.NEEDS_STONE_TOOL)
+                .put(SHIMMERSTONE, BlockTags.NEEDS_STONE_TOOL)
+                .put(AZURITE, BlockTags.NEEDS_DIAMOND_TOOL)
+                .put(PALTAERIA, BlockTags.NEEDS_DIAMOND_TOOL)
+                .put(STRATINE, BlockTags.NEEDS_DIAMOND_TOOL)
+                .put(CoreOres.MALACHITE, Tags.Blocks.NEEDS_NETHERITE_TOOL)
+                .build();
+
+        public static final Map<Ore, TagKey<Block>> TFC_ORES_TO_MINING_TIER_TAG = ImmutableMap.<Ore, TagKey<Block>>builder()
+                .put(NATIVE_COPPER,BlockTags.NEEDS_STONE_TOOL)
+                .put(NATIVE_GOLD, BlockTags.NEEDS_STONE_TOOL)
+                .put(HEMATITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(NATIVE_SILVER, BlockTags.NEEDS_STONE_TOOL)
+                .put(CASSITERITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(BISMUTHINITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(GARNIERITE, BlockTags.NEEDS_IRON_TOOL)
+                .put(Ore.MALACHITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(MAGNETITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(LIMONITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(SPHALERITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(TETRAHEDRITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(GYPSUM, BlockTags.NEEDS_STONE_TOOL)
+                .put(CINNABAR, BlockTags.NEEDS_IRON_TOOL)
+                .put(CRYOLITE, BlockTags.NEEDS_IRON_TOOL)
+                .put(BORAX, BlockTags.NEEDS_STONE_TOOL)
+                .put(GRAPHITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(SALTPETER, BlockTags.NEEDS_STONE_TOOL)
+                .put(SULFUR, BlockTags.NEEDS_STONE_TOOL)
+                .put(SYLVITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(AMETHYST, BlockTags.NEEDS_DIAMOND_TOOL)
+                .put(DIAMOND, Tags.Blocks.NEEDS_NETHERITE_TOOL)
+                .put(EMERALD, BlockTags.NEEDS_DIAMOND_TOOL)
+                .put(LAPIS_LAZULI, BlockTags.NEEDS_IRON_TOOL)
+                .put(OPAL, BlockTags.NEEDS_IRON_TOOL)
+                .put(PYRITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(RUBY, Tags.Blocks.NEEDS_NETHERITE_TOOL)
+                .put(SAPPHIRE, Tags.Blocks.NEEDS_NETHERITE_TOOL)
+                .put(TOPAZ, BlockTags.NEEDS_DIAMOND_TOOL)
+                .put(BITUMINOUS_COAL, BlockTags.NEEDS_STONE_TOOL)
+                .put(LIGNITE, BlockTags.NEEDS_STONE_TOOL)
+                .put(HALITE, BlockTags.NEEDS_STONE_TOOL)
                 .build();
     }
 
