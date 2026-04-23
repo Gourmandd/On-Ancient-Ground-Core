@@ -36,7 +36,7 @@ import static net.gourmand.core.registry.category.CoreRocks.*;
 public class CategoryUtil {
 
     public static ArrayList<String> getCropNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreCrops crop : CoreCrops.values()){
             list.add(crop.getSerializedName());
@@ -46,7 +46,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getFruitTreeNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreFruitTrees tree : CoreFruitTrees.values()){
             list.add(tree.getSerializedName());
@@ -56,7 +56,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getStationaryBushNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreStationaryBushes bush : CoreStationaryBushes.values()){
             list.add(bush.getSerializedName());
@@ -66,7 +66,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getSpreadingBushNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreSpreadingBushes bush : CoreSpreadingBushes.values()){
             list.add(bush.getSerializedName());
@@ -76,7 +76,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getMetalNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreMetals.MetalType metal : CoreMetals.MetalType.values()){
             list.add(metal.getSerializedName());
@@ -86,7 +86,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getAllOreNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreOres ore : CoreOres.values()){
             list.add(ore.name().toLowerCase(Locale.ROOT));
@@ -96,7 +96,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getNonGradedOreNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreOres ore : CoreOres.values()){
             if (!ore.isGraded()){
@@ -108,7 +108,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getGradedOreNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreOres ore : CoreOres.values()){
             if (ore.isGraded()){
@@ -120,7 +120,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> GetGemOreNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreOres ore : CoreOres.values()){
             if (ore.isGem()){
@@ -132,7 +132,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getPastelOreNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreOres ore : CoreOres.values()){
             if (ore.hasSpectrumOreType()){
@@ -144,7 +144,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getAllRockNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreRocks rock : CoreRocks.values()){
             list.add(rock.name().toLowerCase(Locale.ROOT));
@@ -154,7 +154,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getAllVariantRockNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreRocks rock : CoreRocks.values()){
             if (rock.hasVariants()){
@@ -166,7 +166,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getPastelWoodNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreDeeperDownWood wood : CoreDeeperDownWood.values()){
             list.add(wood.getSerializedName());
@@ -176,7 +176,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getClayNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreClay clay : CoreClay.values()){
             list.add(clay.getSerializedName());
@@ -186,7 +186,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getClayItemTypeNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreClay.ItemType type : CoreClay.ItemType.values()){
             list.add(type.getSerializedName());
@@ -196,7 +196,7 @@ public class CategoryUtil {
     }
 
     public static ArrayList<String> getClayMoldNames(){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         for (CoreClay.ItemType type : CoreClay.ItemType.values()){
             if (type.getType() == CoreClay.ItemPartType.UNFIRED_MOLD){
