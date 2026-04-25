@@ -1,0 +1,33 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tfc:pit_kiln"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "D": {
+      "type": "modonomicon:block",
+      "block": "tfc:dirt/entisol"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:grass/entisol"
+    }
+  },
+  "pattern": [
+    [
+      "GGG",
+      "G0G",
+      "GGG"
+    ],
+    [
+      "DDD",
+      "DDD",
+      "DDD"
+    ]
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "getting_started",
+  "description": "book.modpack.guide.getting_started.straw.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:straw"
+  },
+  "name": "book.modpack.guide.getting_started.straw.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:straw"
+      },
+      "text": "book.modpack.guide.getting_started.straw.page1.text",
+      "title": "book.modpack.guide.getting_started.straw.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/thatch",
+      "text": "book.modpack.guide.getting_started.straw.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "getting_started/knife",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 6,
+  "x": 3,
+  "y": 1
+}

@@ -1,0 +1,51 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "getting_started",
+  "description": "book.modpack.guide.getting_started.axe.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:stone/axe/sedimentary"
+  },
+  "name": "book.modpack.guide.getting_started.axe.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:stone/axe/sedimentary"
+      },
+      "text": "book.modpack.guide.getting_started.axe.page1.text",
+      "title": "book.modpack.guide.getting_started.axe.page1.title"
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/knapping_axe.png"
+      ],
+      "text": "book.modpack.guide.getting_started.axe.page2.text",
+      "title": "",
+      "use_legacy_rendering": false
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "getting_started/introduction",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 1,
+  "x": 0,
+  "y": 0
+}

@@ -1,0 +1,128 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "getting_started",
+  "description": "book.modpack.guide.getting_started.clay.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "minecraft:clay_ball"
+  },
+  "name": "book.modpack.guide.getting_started.clay.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:clay_indicators"
+      },
+      "text": "book.modpack.guide.getting_started.clay.page1.text",
+      "title": "book.modpack.guide.getting_started.clay.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "getting_started/clay_indicators",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.getting_started.clay.page2.text"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:clay_ball"
+      },
+      "text": "book.modpack.guide.getting_started.clay.page3.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/clay_knapping.png"
+      ],
+      "text": "book.modpack.guide.getting_started.clay.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:ceramic/unfired_vessel"
+      },
+      "text": "book.modpack.guide.getting_started.clay.page5.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/knapping_vessel.png"
+      ],
+      "text": "book.modpack.guide.getting_started.clay.page6.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/knapping_large_vessel.png"
+      ],
+      "text": "book.modpack.guide.getting_started.clay.page7.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/knapping_jug.png"
+      ],
+      "text": "book.modpack.guide.getting_started.clay.page8.text",
+      "title": "",
+      "use_legacy_rendering": false
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "getting_started/shovels",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 7,
+  "x": 1,
+  "y": -3
+}

@@ -1,0 +1,49 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tfc:plant/goldenrod"
+    },
+    "1": {
+      "type": "modonomicon:block",
+      "block": "tfc:plant/athyrium_fern"
+    },
+    "2": {
+      "type": "modonomicon:block",
+      "block": "tfc:plant/canna"
+    },
+    "4": {
+      "type": "modonomicon:block",
+      "block": "tfc:plant/pampas_grass"
+    },
+    "5": {
+      "type": "modonomicon:block",
+      "block": "tfc:plant/perovskia"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:clay_grass/entisol"
+    }
+  },
+  "pattern": [
+    [
+      "AA1AA",
+      "AA2AA",
+      "AA0AA",
+      "AA4AA",
+      "AA5AA"
+    ],
+    [
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG"
+    ]
+  ]
+}

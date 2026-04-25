@@ -1,0 +1,96 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "getting_started",
+  "description": "book.modpack.guide.getting_started.fire.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:firestarter"
+  },
+  "name": "book.modpack.guide.getting_started.fire.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:firestarter"
+      },
+      "text": "book.modpack.guide.getting_started.fire.page1.text",
+      "title": "book.modpack.guide.getting_started.fire.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/firestarter",
+      "text": "book.modpack.guide.getting_started.fire.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:firepit"
+      },
+      "text": "book.modpack.guide.getting_started.fire.page3.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "getting_started/fire_pit",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.getting_started.fire.page4.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.getting_started.fire.page5.text",
+      "title": "",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/fire_pit_interface.png"
+      ],
+      "text": "book.modpack.guide.getting_started.fire.page6.text",
+      "title": "",
+      "use_legacy_rendering": false
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "getting_started/shovels",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 9,
+  "x": -3,
+  "y": -3
+}

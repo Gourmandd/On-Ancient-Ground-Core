@@ -3,8 +3,11 @@ package net.gourmand.core.datagen.book;
 import com.google.common.collect.ImmutableMap;
 import com.klikli_dev.modonomicon.api.datagen.MultiblockProvider;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.plant.Plant;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.soil.SoilBlockType;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.CategoryUtil;
@@ -127,5 +130,48 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                     .build(false)
             );
         });
+
+        this.add(this.modLoc("getting_started/stick_and_stones" ), new DenseMultiblockBuilder()
+                .layer("CARAC", "ACRAA", "RA0AR", "AACRA", "RAACA")
+                .layer("GGGGG", "GGGGG", "GGGGG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.ENTISOL).get())
+                .block('0', () -> TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.TWIG).get())
+                .block('C', () -> TFCBlocks.WOODS.get(Wood.CHESTNUT).get(Wood.BlockType.TWIG).get())
+                .block('R', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.ANDESITE).get(Rock.BlockType.LOOSE).get())
+                .build(false)
+        );
+
+        this.add(this.modLoc("getting_started/clay_indicators" ), new DenseMultiblockBuilder()
+                .layer("AA1AA", "AA2AA", "AA0AA", "AA4AA", "AA5AA")
+                .layer("GGGGG", "GGGGG", "GGGGG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.CLAY_GRASS).get(SoilBlockType.Variant.ENTISOL).get())
+                .block('1', () -> TFCBlocks.PLANTS.get(Plant.ATHYRIUM_FERN).get())
+                .block('2', () -> TFCBlocks.PLANTS.get(Plant.CANNA).get())
+                .block('0', () -> TFCBlocks.PLANTS.get(Plant.GOLDENROD).get())
+                .block('4', () -> TFCBlocks.PLANTS.get(Plant.PAMPAS_GRASS).get())
+                .block('5', () -> TFCBlocks.PLANTS.get(Plant.PEROVSKIA).get())
+                .build(false)
+        );
+
+        this.add(this.modLoc("getting_started/fire_pit" ), new DenseMultiblockBuilder()
+                .layer("AAA", "A0A", "AAA")
+                .layer("GGG", "GGG", "GGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.ENTISOL).get())
+                .block('0', TFCBlocks.FIREPIT)
+                .build(false)
+        );
+
+        this.add(this.modLoc("getting_started/pit_kiln" ), new DenseMultiblockBuilder()
+                .layer("GGG", "G0G", "GGG")
+                .layer("DDD", "DDD", "DDD")
+                .block('A', () -> Blocks.AIR)
+                .block('D', () -> TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.ENTISOL).get())
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.ENTISOL).get())
+                .block('0', TFCBlocks.PIT_KILN)
+                .build(false)
+        );
     }
 }

@@ -1,0 +1,41 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tfc:wood/twig/ash"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "C": {
+      "type": "modonomicon:block",
+      "block": "tfc:wood/twig/chestnut"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:grass/entisol"
+    },
+    "R": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/loose/andesite"
+    }
+  },
+  "pattern": [
+    [
+      "CARAC",
+      "ACRAA",
+      "RA0AR",
+      "AACRA",
+      "RAACA"
+    ],
+    [
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG"
+    ]
+  ]
+}

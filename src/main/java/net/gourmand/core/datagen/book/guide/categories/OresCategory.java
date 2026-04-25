@@ -9,7 +9,7 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.items.TFCItems;
-import net.gourmand.core.datagen.book.guide.entries.ores.OreEntry;
+import net.gourmand.core.datagen.book.guide.entries.OreEntry;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreTags;

@@ -1,4 +1,4 @@
-package net.gourmand.core.datagen.book.guide.entries.ores;
+package net.gourmand.core.datagen.book.guide.entries;
 
 import com.klikli_dev.modonomicon.api.datagen.CategoryProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;

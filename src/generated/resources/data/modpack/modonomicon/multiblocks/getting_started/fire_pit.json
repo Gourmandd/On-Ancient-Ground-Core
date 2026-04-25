@@ -1,0 +1,29 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tfc:firepit"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:grass/entisol"
+    }
+  },
+  "pattern": [
+    [
+      "AAA",
+      "A0A",
+      "AAA"
+    ],
+    [
+      "GGG",
+      "GGG",
+      "GGG"
+    ]
+  ]
+}

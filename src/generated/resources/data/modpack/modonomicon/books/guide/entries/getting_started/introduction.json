@@ -1,0 +1,115 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "getting_started",
+  "description": "book.modpack.guide.getting_started.introduction.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "minecraft:enchanted_book"
+  },
+  "name": "book.modpack.guide.getting_started.introduction.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:enchanted_book"
+      },
+      "text": "book.modpack.guide.getting_started.introduction.page1.text",
+      "title": "book.modpack.guide.getting_started.introduction.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "getting_started/stick_and_stones",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.getting_started.introduction.page2.text"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "c:stones/loose"
+      },
+      "text": "book.modpack.guide.getting_started.introduction.page3.text",
+      "title": "book.modpack.guide.getting_started.introduction.page3.title"
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/rock_knapping.png"
+      ],
+      "text": "book.modpack.guide.getting_started.introduction.page4.text",
+      "title": "book.modpack.guide.getting_started.introduction.page4.title",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:tools/stone"
+      },
+      "text": "book.modpack.guide.getting_started.introduction.page5.text",
+      "title": "book.modpack.guide.getting_started.introduction.page5.title"
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/knapping_axe.png"
+      ],
+      "text": "book.modpack.guide.getting_started.introduction.page6.text",
+      "title": "book.modpack.guide.getting_started.introduction.page6.title",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.getting_started.introduction.page7.text",
+      "title": "",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/stone/knife/sedimentary",
+      "recipe_id_2": "tfc:crafting/stone/axe/sedimentary",
+      "text": "",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 0,
+  "x": -3,
+  "y": 1
+}

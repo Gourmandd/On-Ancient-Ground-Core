@@ -1,7 +1,8 @@
-// 1.21.1	2026-04-21T18:56:27.5760581	Books: modpack
+// 1.21.1	2026-04-25T21:53:30.293887975	Books: modpack
 559370fe8324adbbcc9a2434efd06c929a90846e data/modpack/modonomicon/books/guide/book.json
-cb949c52fb03658aed197ca0e5fb185fda1994c1 data/modpack/modonomicon/books/guide/categories/geology.json
-22833f2a541a55e4d080ec84bf330cccb299dbd6 data/modpack/modonomicon/books/guide/categories/ores.json
+9aa0e642817eb7ab75fc8a640af2fe77dfe195e4 data/modpack/modonomicon/books/guide/categories/geology.json
+5cf94e4cb9ba9a92960421af8c6d9d0d6df13dc5 data/modpack/modonomicon/books/guide/categories/getting_started.json
+d4e326b2df01e210b38dce0a064d3c3cfe8348ac data/modpack/modonomicon/books/guide/categories/ores.json
 a75c400731d507b9d269479d211f18291e57e64f data/modpack/modonomicon/books/guide/entries/geology/andesite.json
 29733baad6e94b78549ab67cf90980864ae29a5f data/modpack/modonomicon/books/guide/entries/geology/argillite.json
 524eeceda57a57dd09caf7e688b5465d34dbae27 data/modpack/modonomicon/books/guide/entries/geology/arkose.json
@@ -39,6 +40,16 @@ d505d0d0d7dd37cadce75b3635d6b48b53d75555 data/modpack/modonomicon/books/guide/en
 04127e3fee3cfe8e3253f216fd966d27b3386f70 data/modpack/modonomicon/books/guide/entries/geology/suevite.json
 04b102938a5ddcd80b4d6006af3f7da9cf8df61d data/modpack/modonomicon/books/guide/entries/geology/travertine.json
 72de4276806bca63e21e5bc894ac68f107fac636 data/modpack/modonomicon/books/guide/entries/geology/tuff.json
+f6a25ab4ef99b2714f4f81b5432a4796368dc028 data/modpack/modonomicon/books/guide/entries/getting_started/axe.json
+fdafae932018ee2127c2df2cf6ef79ced9224aec data/modpack/modonomicon/books/guide/entries/getting_started/clay.json
+77e948f374c5b4b7e8d052d32073a25f749397f3 data/modpack/modonomicon/books/guide/entries/getting_started/fire.json
+d36bab194fe14b9762e4f6b6eb298c56088a7b39 data/modpack/modonomicon/books/guide/entries/getting_started/hoe.json
+e4f8989e663c4f6ea268dca40ea3aea11d878efc data/modpack/modonomicon/books/guide/entries/getting_started/introduction.json
+e271d883daaa8ac94d9280e3038112c4ba66cba0 data/modpack/modonomicon/books/guide/entries/getting_started/javelin.json
+32b439b85dc5587c482507984e6e3ac640c630a0 data/modpack/modonomicon/books/guide/entries/getting_started/knife.json
+ae4fa14b994550f57ca43135d2aefbff36921b87 data/modpack/modonomicon/books/guide/entries/getting_started/pit_kiln.json
+e2adf338038e008f3f41f744f37a3ed1c005fff1 data/modpack/modonomicon/books/guide/entries/getting_started/shovels.json
+5b073e39b3472b072cd79daac94732074d25c248 data/modpack/modonomicon/books/guide/entries/getting_started/straw.json
 040c27e6b591445af960163dfe2d224f4f9002b5 data/modpack/modonomicon/books/guide/entries/ores/amethyst.json
 943eae7c6a7209d693d6dee1571963b4f105ed9c data/modpack/modonomicon/books/guide/entries/ores/anthracite.json
 c41efc0a8322d9aa2cde98f4419734711cae0449 data/modpack/modonomicon/books/guide/entries/ores/bauxite.json

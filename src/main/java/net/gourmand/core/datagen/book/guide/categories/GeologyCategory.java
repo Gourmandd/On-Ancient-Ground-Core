@@ -9,7 +9,7 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.registry.RegistryRock;
-import net.gourmand.core.datagen.book.guide.entries.ores.RockEntry;
+import net.gourmand.core.datagen.book.guide.entries.RockEntry;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.resources.ResourceLocation;
 

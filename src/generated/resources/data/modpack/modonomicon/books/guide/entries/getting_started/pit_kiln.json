@@ -1,0 +1,55 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "getting_started",
+  "description": "book.modpack.guide.getting_started.pit_kiln.description",
+  "hide_while_locked": false,
+  "icon": {
+    "height": 16,
+    "texture": "tfc:textures/gui/book/icons/pit_kiln.png",
+    "width": 16
+  },
+  "name": "book.modpack.guide.getting_started.pit_kiln.name",
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.getting_started.pit_kiln.page1.text",
+      "title": "book.modpack.guide.getting_started.pit_kiln.page1.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "getting_started/pit_kiln",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.getting_started.pit_kiln.page2.text"
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "getting_started/straw",
+      "line_enabled": true,
+      "line_reversed": false
+    },
+    {
+      "draw_arrow": true,
+      "entry": "getting_started/clay",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 8,
+  "x": 3,
+  "y": -3
+}
