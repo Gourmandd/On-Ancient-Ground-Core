@@ -22,18 +22,15 @@
       "title": "book.modpack.guide.getting_started.knife.page1.title"
     },
     {
-      "type": "modonomicon:image",
+      "type": "modpack:knapping",
       "anchor": "",
-      "border": true,
       "condition": {
         "type": "modonomicon:none"
       },
-      "images": [
-        "modpack:textures/book/getting_started/knapping_knife.png"
-      ],
+      "recipe_id_1": "tfc:knapping/stone/knife_head/metamorphic",
       "text": "book.modpack.guide.getting_started.knife.page2.text",
-      "title": "",
-      "use_legacy_rendering": false
+      "title1": "",
+      "title2": ""
     }
   ],
   "parents": [

@@ -3,9 +3,11 @@ package net.gourmand.core;
 import net.gourmand.core.client.ClientEventHandler;
 import net.gourmand.core.datagen.DataEntryPoint;
 import net.gourmand.core.event.ServerEventHandler;
+import net.gourmand.core.modonomicon.ModonomiconIntegration;
 import net.gourmand.core.registry.*;
 import net.gourmand.core.registry.items.CoreItemCapabilities;
 import net.gourmand.core.registry.CoreGemstoneColors;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
@@ -54,7 +56,10 @@ public class AncientGroundCore {
 
         if (FMLEnvironment.dist == Dist.CLIENT){
             ClientEventHandler.init(modEventBus, modContainer);
+            ModonomiconIntegration.registerPageRenderers();
         }
+
+        ModonomiconIntegration.registerPages();
     }
 
 
@@ -68,5 +73,13 @@ public class AncientGroundCore {
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+
+    public static ResourceLocation location(String path){
+        return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, path);
+    }
+
+    public static ResourceLocation location(String name, String path){
+        return ResourceLocation.fromNamespaceAndPath(name, path);
     }
 }

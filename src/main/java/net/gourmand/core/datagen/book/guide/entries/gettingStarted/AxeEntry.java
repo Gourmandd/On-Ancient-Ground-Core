@@ -4,12 +4,12 @@ import com.klikli_dev.modonomicon.api.datagen.CategoryProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;
 import com.klikli_dev.modonomicon.api.datagen.EntryProvider;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
-import com.klikli_dev.modonomicon.api.datagen.book.page.BookImagePageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
+import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.items.TFCItems;
-import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -35,14 +35,14 @@ public class AxeEntry extends EntryProvider {
                \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookImagePageModel.create()
+        this.page("page2", () -> BookKnappingPageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/getting_started/knapping_axe.png"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/stone/axe_head/metamorphic"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                An axe being knapped out of **Shale** rock. \s
+                An axe being knapped out of **Metamorphic** rock. \s
                \s""");
     }
 

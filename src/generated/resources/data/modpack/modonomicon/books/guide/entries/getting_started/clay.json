@@ -71,46 +71,37 @@
       "title": ""
     },
     {
-      "type": "modonomicon:image",
+      "type": "modpack:knapping",
       "anchor": "",
-      "border": true,
       "condition": {
         "type": "modonomicon:none"
       },
-      "images": [
-        "modpack:textures/book/getting_started/knapping_vessel.png"
-      ],
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_vessel",
       "text": "book.modpack.guide.getting_started.clay.page6.text",
-      "title": "",
-      "use_legacy_rendering": false
+      "title1": "",
+      "title2": ""
     },
     {
-      "type": "modonomicon:image",
+      "type": "modpack:knapping",
       "anchor": "",
-      "border": true,
       "condition": {
         "type": "modonomicon:none"
       },
-      "images": [
-        "modpack:textures/book/getting_started/knapping_large_vessel.png"
-      ],
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_large_vessel",
       "text": "book.modpack.guide.getting_started.clay.page7.text",
-      "title": "",
-      "use_legacy_rendering": false
+      "title1": "",
+      "title2": ""
     },
     {
-      "type": "modonomicon:image",
+      "type": "modpack:knapping",
       "anchor": "",
-      "border": true,
       "condition": {
         "type": "modonomicon:none"
       },
-      "images": [
-        "modpack:textures/book/getting_started/knapping_jug.png"
-      ],
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_jug",
       "text": "book.modpack.guide.getting_started.clay.page8.text",
-      "title": "",
-      "use_legacy_rendering": false
+      "title1": "",
+      "title2": ""
     }
   ],
   "parents": [

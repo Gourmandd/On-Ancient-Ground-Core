@@ -4,12 +4,12 @@ import com.klikli_dev.modonomicon.api.datagen.CategoryProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;
 import com.klikli_dev.modonomicon.api.datagen.EntryProvider;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
-import com.klikli_dev.modonomicon.api.datagen.book.page.BookImagePageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
+import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.items.TFCItems;
-import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -35,14 +35,14 @@ public class ShovelEntry extends EntryProvider {
                \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookImagePageModel.create()
+        this.page("page2", () -> BookKnappingPageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/getting_started/knapping_shovel.png"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/stone/shovel_head/igneous_intrusive"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                This shows a shovel being knapped out of **Andesite** rock. \s
+                A shovel being knapped out of **Igneous Intrusivee** rock. \s
                \s""");
     }
 

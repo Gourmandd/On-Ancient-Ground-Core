@@ -8,9 +8,11 @@ import com.klikli_dev.modonomicon.api.datagen.book.page.BookImagePageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookMultiblockPageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
+import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -91,9 +93,9 @@ public class ClayEntry extends EntryProvider {
                \s""");
 
         // page 6: knapping vessel.
-        this.page("page6", () -> BookImagePageModel.create()
+        this.page("page6", () -> BookKnappingPageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/getting_started/knapping_vessel.png"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_vessel"))
         );
 
         this.pageTitle(entryName());
@@ -102,9 +104,9 @@ public class ClayEntry extends EntryProvider {
                \s""");
 
         // page 7: knapping large vessel.
-        this.page("page7", () -> BookImagePageModel.create()
+        this.page("page7", () -> BookKnappingPageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/getting_started/knapping_large_vessel.png"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_large_vessel"))
         );
 
         this.pageTitle(entryName());
@@ -112,10 +114,10 @@ public class ClayEntry extends EntryProvider {
                 Knapping a **Large Vessel**.\s
                \s""");
 
-        // page 8: knapping vessel.
-        this.page("page8", () -> BookImagePageModel.create()
+        // page 8: knapping jug.
+        this.page("page8", () -> BookKnappingPageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/getting_started/knapping_jug.png"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_jug"))
         );
 
         this.pageTitle(entryName());

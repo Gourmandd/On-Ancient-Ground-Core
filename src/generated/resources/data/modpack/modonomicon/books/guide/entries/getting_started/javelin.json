@@ -22,18 +22,15 @@
       "title": "book.modpack.guide.getting_started.javelin.page1.title"
     },
     {
-      "type": "modonomicon:image",
+      "type": "modpack:knapping",
       "anchor": "",
-      "border": true,
       "condition": {
         "type": "modonomicon:none"
       },
-      "images": [
-        "modpack:textures/book/getting_started/knapping_javelin.png"
-      ],
+      "recipe_id_1": "tfc:knapping/stone/javelin_head/igneous_extrusive",
       "text": "book.modpack.guide.getting_started.javelin.page2.text",
-      "title": "",
-      "use_legacy_rendering": false
+      "title1": "",
+      "title2": ""
     }
   ],
   "parents": [
