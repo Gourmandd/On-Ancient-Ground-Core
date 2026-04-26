@@ -1,0 +1,63 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "pottery",
+  "description": "book.modpack.guide.pottery.kaolin_clay.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:kaolin_clay"
+  },
+  "name": "book.modpack.guide.pottery.kaolin_clay.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:plant/blood_lily"
+      },
+      "text": "book.modpack.guide.pottery.kaolin_clay.page1.text",
+      "title": "book.modpack.guide.pottery.kaolin_clay.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "pottery/kaolin_clay_indicators",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.pottery.kaolin_clay.page2.text"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:fire_clay"
+      },
+      "text": "book.modpack.guide.pottery.kaolin_clay.page3.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/fire_clay",
+      "text": "book.modpack.guide.pottery.kaolin_clay.page4.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 1,
+  "x": 0,
+  "y": 0
+}

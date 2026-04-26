@@ -5,6 +5,7 @@ import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.book.guide.categories.GeologyCategory;
 import net.gourmand.core.datagen.book.guide.categories.GettingStartedCategory;
 import net.gourmand.core.datagen.book.guide.categories.OresCategory;
+import net.gourmand.core.datagen.book.guide.categories.PotteryCategory;
 
 import java.util.function.BiConsumer;
 
@@ -24,6 +25,7 @@ public class GuideBook extends SingleBookSubProvider {
     @Override
     protected void generateCategories() {
         var gettingStartedCategory = this.add(new GettingStartedCategory(this).generate());
+        var potteryCategory = this.add(new PotteryCategory(this).generate());
         var oresCategory = this.add(new OresCategory(this).generate());
         var geologyCategory = this.add(new GeologyCategory(this).generate());
     }

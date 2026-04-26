@@ -1,7 +1,7 @@
-// 1.21.1	2026-04-25T21:36:44.66456958	Multiblocks: modpack
+// 1.21.1	2026-04-26T17:47:46.733807961	Multiblocks: modpack
 dc04a3820367988cd6c92649fdab87069d64ac97 data/modpack/modonomicon/multiblocks/getting_started/clay_indicators.json
-779be7db417d55cba448fcb0b3cf8177bce67db1 data/modpack/modonomicon/multiblocks/getting_started/fire_pit.json
-f7e3bd521f1921569af8df33d5dc0149d9f02ef5 data/modpack/modonomicon/multiblocks/getting_started/pit_kiln.json
+a7a87d1290b8fec7e67a76c4d08b5637378a2e0d data/modpack/modonomicon/multiblocks/getting_started/fire_pit.json
+5d10cd244f7b05a367d4b9e51099cf8e4d5400bc data/modpack/modonomicon/multiblocks/getting_started/pit_kiln.json
 ef340b9838f1045eb718282ba0de5703e3ccf154 data/modpack/modonomicon/multiblocks/getting_started/stick_and_stones.json
 d429c34c004e91c1cb842675e091ee5186d15eee data/modpack/modonomicon/multiblocks/ore_preview/amethyst.json
 53ef881586ecc60058cbf32bdd6712b194f0e869 data/modpack/modonomicon/multiblocks/ore_preview/anthracite.json
@@ -41,6 +41,8 @@ d7ea94264171d639ffca644de88d1c0fa0d93fb1 data/modpack/modonomicon/multiblocks/or
 826c06b3dd80bbe3eab8a9f44ca35142126f7965 data/modpack/modonomicon/multiblocks/ore_preview/sylvite.json
 1edb15d54242a2edee6dec2919799a48b40b3e28 data/modpack/modonomicon/multiblocks/ore_preview/tetrahedrite.json
 83630ac5a2786e78d3afaff42626c6abec909359 data/modpack/modonomicon/multiblocks/ore_preview/topaz.json
+e3d5b8199ee3d6b85078d84aa327d9fc59e3f945 data/modpack/modonomicon/multiblocks/pottery/crucible.json
+c70d23fab7bbcac891a11d35fb08b44ffd7098da data/modpack/modonomicon/multiblocks/pottery/kaolin_clay_indicators.json
 7fa5dfae09698bc8c11e4a677ffca311a50abc27 data/modpack/modonomicon/multiblocks/rock_preview/andesite.json
 0c569bba1beb0033ebc1f491817b887f1b77c164 data/modpack/modonomicon/multiblocks/rock_preview/argillite.json
 b68f45156b62acdc0c6008edfdf1936991e8f41e data/modpack/modonomicon/multiblocks/rock_preview/arkose.json

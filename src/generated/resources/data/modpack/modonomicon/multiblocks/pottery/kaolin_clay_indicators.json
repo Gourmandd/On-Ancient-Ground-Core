@@ -2,25 +2,33 @@
   "type": "modonomicon:dense",
   "mapping": {
     "0": {
-      "type": "modonomicon:blockstate",
-      "block": "tfc:firepit[lit=true]"
+      "type": "modonomicon:block",
+      "block": "tfc:plant/blood_lily"
     },
     "A": {
       "type": "modonomicon:block",
       "block": "minecraft:air"
     },
+    "B": {
+      "type": "modonomicon:block",
+      "block": "tfc:plant/blood_lily"
+    },
     "G": {
       "type": "modonomicon:block",
-      "block": "tfc:grass/entisol"
+      "block": "tfc:kaolin_clay_grass"
     }
   },
   "pattern": [
     [
+      "ABA",
       "AAA",
       "A0A",
-      "AAA"
+      "AAA",
+      "ABA"
     ],
     [
+      "GGG",
+      "GGG",
       "GGG",
       "GGG",
       "GGG"

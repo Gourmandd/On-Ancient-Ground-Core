@@ -2,8 +2,8 @@
   "type": "modonomicon:dense",
   "mapping": {
     "0": {
-      "type": "modonomicon:block",
-      "block": "tfc:pit_kiln"
+      "type": "modonomicon:blockstate",
+      "block": "tfc:pit_kiln[stage=15]"
     },
     "A": {
       "type": "modonomicon:block",

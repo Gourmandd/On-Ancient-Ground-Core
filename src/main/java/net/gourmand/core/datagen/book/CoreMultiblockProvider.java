@@ -160,7 +160,7 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                 .layer("GGG", "GGG", "GGG")
                 .block('A', () -> Blocks.AIR)
                 .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.ENTISOL).get())
-                .block('0', TFCBlocks.FIREPIT)
+                .blockstate('0', TFCBlocks.FIREPIT, "[lit=true]")
                 .build(false)
         );
 
@@ -170,7 +170,28 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                 .block('A', () -> Blocks.AIR)
                 .block('D', () -> TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.ENTISOL).get())
                 .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.ENTISOL).get())
-                .block('0', TFCBlocks.PIT_KILN)
+                .blockstate('0', TFCBlocks.PIT_KILN, "[stage=15]")
+                .build(false)
+        );
+
+        this.add(this.modLoc("pottery/kaolin_clay_indicators" ), new DenseMultiblockBuilder()
+                .layer("ABA", "AAA", "A0A", "AAA", "ABA")
+                .layer("GGG", "GGG", "GGG", "GGG", "GGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', TFCBlocks.KAOLIN_CLAY_GRASS)
+                .block('B', () -> TFCBlocks.PLANTS.get(Plant.BLOOD_LILY).get())
+                .block('0', () -> TFCBlocks.PLANTS.get(Plant.BLOOD_LILY).get())
+                .build(false)
+        );
+
+        this.add(this.modLoc("pottery/crucible" ), new DenseMultiblockBuilder()
+                .layer("AAA", "ACB", "AAA")
+                .layer("GGG", "G0G", "GGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.DACITE).get(Rock.BlockType.BRICKS).get())
+                .block('C', TFCBlocks.CRUCIBLE)
+                .block('B', TFCBlocks.BELLOWS)
+                .blockstate('0', TFCBlocks.CHARCOAL_FORGE, "[heat_level=7]")
                 .build(false)
         );
     }

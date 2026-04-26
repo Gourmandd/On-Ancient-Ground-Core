@@ -3,26 +3,34 @@
   "mapping": {
     "0": {
       "type": "modonomicon:blockstate",
-      "block": "tfc:firepit[lit=true]"
+      "block": "tfc:charcoal_forge[heat_level=7]"
     },
     "A": {
       "type": "modonomicon:block",
       "block": "minecraft:air"
     },
+    "B": {
+      "type": "modonomicon:block",
+      "block": "tfc:bellows"
+    },
+    "C": {
+      "type": "modonomicon:block",
+      "block": "tfc:crucible"
+    },
     "G": {
       "type": "modonomicon:block",
-      "block": "tfc:grass/entisol"
+      "block": "tfc:rock/bricks/dacite"
     }
   },
   "pattern": [
     [
       "AAA",
-      "A0A",
+      "ACB",
       "AAA"
     ],
     [
       "GGG",
-      "GGG",
+      "G0G",
       "GGG"
     ]
   ]

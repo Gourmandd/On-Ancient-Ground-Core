@@ -1,0 +1,111 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "pottery",
+  "description": "book.modpack.guide.pottery.clay.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "minecraft:clay_ball"
+  },
+  "name": "book.modpack.guide.pottery.clay.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:clay_indicators"
+      },
+      "text": "book.modpack.guide.pottery.clay.page1.text",
+      "title": "book.modpack.guide.pottery.clay.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "getting_started/clay_indicators",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.pottery.clay.page2.text"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:clay_ball"
+      },
+      "text": "book.modpack.guide.pottery.clay.page3.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/getting_started/clay_knapping.png"
+      ],
+      "text": "book.modpack.guide.pottery.clay.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:ceramic/unfired_vessel"
+      },
+      "text": "book.modpack.guide.pottery.clay.page5.text",
+      "title": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_vessel",
+      "text": "book.modpack.guide.pottery.clay.page6.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_large_vessel",
+      "text": "book.modpack.guide.pottery.clay.page7.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_jug",
+      "text": "book.modpack.guide.pottery.clay.page8.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 0,
+  "x": -2,
+  "y": 0
+}
