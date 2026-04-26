@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "pottery",
+  "description": "book.modpack.guide.pottery.large_vessel.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:ceramic/large_vessel"
+  },
+  "name": "book.modpack.guide.pottery.large_vessel.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:ceramic/large_vessel"
+      },
+      "text": "book.modpack.guide.pottery.large_vessel.page1.text",
+      "title": "book.modpack.guide.pottery.large_vessel.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_large_vessel",
+      "text": "book.modpack.guide.pottery.large_vessel.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 12,
+  "x": -2,
+  "y": 1
+}

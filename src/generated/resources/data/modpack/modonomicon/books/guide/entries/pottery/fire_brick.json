@@ -1,0 +1,48 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "pottery",
+  "description": "book.modpack.guide.pottery.fire_brick.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:ceramic/fire_brick"
+  },
+  "name": "book.modpack.guide.pottery.fire_brick.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:fire_bricks"
+      },
+      "text": "book.modpack.guide.pottery.fire_brick.page1.text",
+      "title": "book.modpack.guide.pottery.fire_brick.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_fire_brick",
+      "text": "book.modpack.guide.pottery.fire_brick.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "pottery/kaolin_clay",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 4,
+  "x": 6,
+  "y": 0
+}

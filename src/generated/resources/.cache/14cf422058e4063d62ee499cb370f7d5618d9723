@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-26T16:56:13.888955622	Books: modpack
+// 1.21.1	2026-04-26T21:13:19.973253535	Books: modpack
 559370fe8324adbbcc9a2434efd06c929a90846e data/modpack/modonomicon/books/guide/book.json
 60fb6b495bf4b1addd133c18cad97e528f2ed475 data/modpack/modonomicon/books/guide/categories/geology.json
 5cf94e4cb9ba9a92960421af8c6d9d0d6df13dc5 data/modpack/modonomicon/books/guide/categories/getting_started.json
@@ -89,6 +89,20 @@ adc8ab928109802e09a6c18c127bbfcaea23ca4c data/modpack/modonomicon/books/guide/en
 1ccf6c337e5e8a05832c6d9841fb993a08065102 data/modpack/modonomicon/books/guide/entries/ores/sylvite.json
 01ee2bd0b3f4e4c4473dc237a2d9394016e3855d data/modpack/modonomicon/books/guide/entries/ores/tetrahedrite.json
 4cd71400424567b1013f1cc4c93188d52651e4e6 data/modpack/modonomicon/books/guide/entries/ores/topaz.json
-00e5f69b204efafe63dd9b1952b316cbebfab9ce data/modpack/modonomicon/books/guide/entries/pottery/clay.json
-1690c6107008d0a4f827363df4f467dbd80fe4ec data/modpack/modonomicon/books/guide/entries/pottery/crucible.json
-861fa800160fbfafc5d0666bd5a57aa4c9d80763 data/modpack/modonomicon/books/guide/entries/pottery/kaolin_clay.json
+63912fb3470abfed1031fa7c093046915af431c1 data/modpack/modonomicon/books/guide/entries/pottery/brick.json
+732a1fb29882aff5f1ef62c763830ea846f2807a data/modpack/modonomicon/books/guide/entries/pottery/ceramic_blowpipe.json
+a8fbc795d1963b04295f614d1ff51eac9b3c7d41 data/modpack/modonomicon/books/guide/entries/pottery/ceramic_bowl.json
+5970ca910cb1df1ae2b0ac54f993d10f6f76365a data/modpack/modonomicon/books/guide/entries/pottery/ceramic_pan.json
+020ba69ef1ff9a71d072fed76da205f6435b051b data/modpack/modonomicon/books/guide/entries/pottery/ceramic_spindle.json
+7190e117464111875e195a96daba7f4d8855b1db data/modpack/modonomicon/books/guide/entries/pottery/clay.json
+ecd208b7f5c8ae4e9035e6e0df5ba7698af1d6b7 data/modpack/modonomicon/books/guide/entries/pottery/cooking_pot.json
+108d5edf55811a11437ed6dabfb26aeb92cf40b0 data/modpack/modonomicon/books/guide/entries/pottery/crucible.json
+91a97518eab251a38aa50c5891d703f18728bf27 data/modpack/modonomicon/books/guide/entries/pottery/fire_brick.json
+d37ecc65856e578c5767a5456181cdf8ac4cea76 data/modpack/modonomicon/books/guide/entries/pottery/flower_pot.json
+08e245e78239a1218adaad970afeafef64356956 data/modpack/modonomicon/books/guide/entries/pottery/ingot_mold.json
+cfeb353690cef7430d32563f82cb63f52a01745e data/modpack/modonomicon/books/guide/entries/pottery/jug.json
+d4e9d2abdb646f7224d2f4be8254a23e17f5f797 data/modpack/modonomicon/books/guide/entries/pottery/kaolin_clay.json
+de8d3def85e9f5057efcdade3e6186aa758f0754 data/modpack/modonomicon/books/guide/entries/pottery/large_vessel.json
+0f7070200bd7a884fdf27efd9441bc7ca3b45dd0 data/modpack/modonomicon/books/guide/entries/pottery/mold.json
+26b52d782325d7a3b7cd26faf758caf735ee1fbd data/modpack/modonomicon/books/guide/entries/pottery/mold_tables.json
+89eb779d05122489c942e5c1361f7d2dca3ff936 data/modpack/modonomicon/books/guide/entries/pottery/vessel.json

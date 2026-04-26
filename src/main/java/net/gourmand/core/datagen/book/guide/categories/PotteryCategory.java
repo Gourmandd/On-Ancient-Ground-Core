@@ -7,8 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.datagen.book.guide.entries.gettingStarted.*;
-import net.gourmand.core.datagen.book.guide.entries.pottery.CrucibleEntry;
-import net.gourmand.core.datagen.book.guide.entries.pottery.FireClayEntry;
+import net.gourmand.core.datagen.book.guide.entries.pottery.*;
 import net.minecraft.resources.ResourceLocation;
 
 public class PotteryCategory extends CategoryProvider {
@@ -22,11 +21,11 @@ public class PotteryCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "_____",
-                "_____",
-                "a_b_c",
-                "_____",
-                "_____"
+                "__g_h___c____",
+                "__i_l_______d",
+                "j_k_q__a_b__e",
+                "__n_m_______f",
+                "__o_p________"
         };
     }
 
@@ -36,7 +35,38 @@ public class PotteryCategory extends CategoryProvider {
 
         var fire_clay = this.add(new FireClayEntry(this).generate("b"));
 
-        var crucible = this.add(new CrucibleEntry(this).generate("c").withParent(fire_clay));
+        // both
+        var ingot_mold = this.add(new IngotMoldEntry(this).generate("c").withParent(fire_clay).withParent(clay));
+
+        // fire clay
+        var crucible = this.add(new CrucibleEntry(this).generate("d"));
+
+        var fire_bricks = this.add(new FireBricksEntry(this).generate("e").withParent(fire_clay));
+
+        var mold_table = this.add(new MoldTableEntry(this).generate("f"));
+
+        // clay
+        var blowpipe = this.add(new BlowpipeEntry(this).generate("g"));
+
+        var bowl = this.add(new BowlEntry(this).generate("h"));
+
+        var bricks = this.add(new BricksEntry(this).generate("i"));
+
+        var cooking_pot = this.add(new CookingPotEntry(this).generate("j"));
+
+        var flower_pot = this.add(new FlowerPotEntry(this).generate("k"));
+
+        var jug = this.add(new JugEntry(this).generate("l"));
+
+        var large_vessel = this.add(new LargeVesselEntry(this).generate("m"));
+
+        var mold = this.add(new MoldEntry(this).generate("n"));
+
+        var pan = this.add(new PanEntry(this).generate("o"));
+
+        var spindle = this.add(new SpindleEntry(this).generate("p"));
+
+        var vessel = this.add(new VesselEntry(this).generate("q").withParent(clay));
     }
 
     @Override

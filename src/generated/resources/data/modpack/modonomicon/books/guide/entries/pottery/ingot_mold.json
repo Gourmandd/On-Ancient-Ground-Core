@@ -1,0 +1,65 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "pottery",
+  "description": "book.modpack.guide.pottery.ingot_mold.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:ceramic/ingot_mold"
+  },
+  "name": "book.modpack.guide.pottery.ingot_mold.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:ceramic/ingot_mold"
+      },
+      "text": "book.modpack.guide.pottery.ingot_mold.page1.text",
+      "title": "book.modpack.guide.pottery.ingot_mold.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_ingot_mold",
+      "text": "book.modpack.guide.pottery.ingot_mold.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_fire_ingot_mold",
+      "text": "book.modpack.guide.pottery.ingot_mold.page3.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "pottery/kaolin_clay",
+      "line_enabled": true,
+      "line_reversed": false
+    },
+    {
+      "draw_arrow": true,
+      "entry": "pottery/clay",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 2,
+  "x": 2,
+  "y": -2
+}

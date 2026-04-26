@@ -1,0 +1,106 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "pottery",
+  "description": "book.modpack.guide.pottery.mold.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:ceramic/saw_blade_mold"
+  },
+  "name": "book.modpack.guide.pottery.mold.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:molds"
+      },
+      "text": "book.modpack.guide.pottery.mold.page1.text",
+      "title": "book.modpack.guide.pottery.mold.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_saw_blade_mold",
+      "text": "book.modpack.guide.pottery.mold.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_sword_blade_mold",
+      "text": "book.modpack.guide.pottery.mold.page3.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_knife_blade_mold",
+      "text": "book.modpack.guide.pottery.mold.page4.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_scythe_blade_mold",
+      "text": "book.modpack.guide.pottery.mold.page5.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_pickaxe_head_mold",
+      "text": "book.modpack.guide.pottery.mold.page6.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_axe_head_mold",
+      "text": "book.modpack.guide.pottery.mold.page7.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_hammer_head_mold",
+      "text": "book.modpack.guide.pottery.mold.page8.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 13,
+  "x": -4,
+  "y": 1
+}

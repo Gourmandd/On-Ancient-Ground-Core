@@ -34,7 +34,7 @@ public class CrucibleEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Crucibles** are an advanced device for melting, casting and alloying metals. Requiring **Fire Clay** and therefore locating **Kaolin Clay** and **Graphite**.
+                **Crucibles** are an advanced device for melting, casting and alloying metals.
                 \\
                 \\
                 It is much more convenient at scale for this than using small vessels.

@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "pottery",
+  "description": "book.modpack.guide.pottery.ceramic_bowl.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:ceramic/bowl"
+  },
+  "name": "book.modpack.guide.pottery.ceramic_bowl.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:ceramic/bowl"
+      },
+      "text": "book.modpack.guide.pottery.ceramic_bowl.page1.text",
+      "title": "book.modpack.guide.pottery.ceramic_bowl.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_bowl",
+      "text": "book.modpack.guide.pottery.ceramic_bowl.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 7,
+  "x": -2,
+  "y": -2
+}
