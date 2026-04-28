@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.bow.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "minecraft:bow"
+  },
+  "name": "book.modpack.guide.equipment.bow.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:bow"
+      },
+      "text": "book.modpack.guide.equipment.bow.page1.text",
+      "title": "book.modpack.guide.equipment.bow.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "minecraft:crating/bow",
+      "text": "book.modpack.guide.equipment.bow.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 18,
+  "x": -6,
+  "y": -1
+}

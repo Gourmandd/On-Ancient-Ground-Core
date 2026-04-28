@@ -1,0 +1,64 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.hammer.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:stone/hammer/sedimentary"
+  },
+  "name": "book.modpack.guide.equipment.hammer.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "modpack:tool_heads/hammer_head"
+      },
+      "text": "book.modpack.guide.equipment.hammer.page1.text",
+      "title": "book.modpack.guide.equipment.hammer.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/stone/hammer_head/igneous_intrusive",
+      "text": "book.modpack.guide.equipment.hammer.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:casting",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:casting/copper_hammer_head",
+      "recipe_id_2": "tfc:casting/bronze_hammer_head",
+      "text": "book.modpack.guide.equipment.hammer.page3.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/metal/hammer_head/wrought_iron",
+      "recipe_id_2": "tfc:anvil/metal/hammer_head/steel",
+      "text": "book.modpack.guide.equipment.hammer.page4.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 4,
+  "x": -1,
+  "y": 1
+}

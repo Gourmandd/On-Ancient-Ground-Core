@@ -1,0 +1,64 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.glassblowing_tools.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:ceramic_blowpipe"
+  },
+  "name": "book.modpack.guide.equipment.glassblowing_tools.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:ceramic_blowpipe"
+      },
+      "text": "book.modpack.guide.equipment.glassblowing_tools.page1.text",
+      "title": "book.modpack.guide.equipment.glassblowing_tools.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_blowpipe",
+      "text": "book.modpack.guide.equipment.glassblowing_tools.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:jacks"
+      },
+      "text": "book.modpack.guide.equipment.glassblowing_tools.page3.text",
+      "title": "book.modpack.guide.equipment.glassblowing_tools.page3.title"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:paddle"
+      },
+      "text": "book.modpack.guide.equipment.glassblowing_tools.page4.text",
+      "title": "book.modpack.guide.equipment.glassblowing_tools.page4.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 3,
+  "x": 4,
+  "y": -1
+}

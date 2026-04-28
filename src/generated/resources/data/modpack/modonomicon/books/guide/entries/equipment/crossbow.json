@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.crossbow.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "minecraft:crossbow"
+  },
+  "name": "book.modpack.guide.equipment.crossbow.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:crossbow"
+      },
+      "text": "book.modpack.guide.equipment.crossbow.page1.text",
+      "title": "book.modpack.guide.equipment.crossbow.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "minecraft:crating/crossbow",
+      "text": "book.modpack.guide.equipment.crossbow.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 19,
+  "x": -6,
+  "y": 0
+}

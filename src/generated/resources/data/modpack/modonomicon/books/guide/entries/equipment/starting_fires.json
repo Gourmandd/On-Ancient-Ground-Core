@@ -1,0 +1,86 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.starting_fires.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:firestarter"
+  },
+  "name": "book.modpack.guide.equipment.starting_fires.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:firestarter"
+      },
+      "text": "book.modpack.guide.equipment.starting_fires.page1.text",
+      "title": "book.modpack.guide.equipment.starting_fires.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/firestarters",
+      "text": "book.modpack.guide.equipment.starting_fires.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:flint_and_pyrite"
+      },
+      "text": "book.modpack.guide.equipment.starting_fires.page3.text",
+      "title": "book.modpack.guide.equipment.starting_fires.page3.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/flint_and_pyrite",
+      "text": "book.modpack.guide.equipment.starting_fires.page4.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:flint_and_steel"
+      },
+      "text": "book.modpack.guide.equipment.starting_fires.page5.text",
+      "title": "book.modpack.guide.equipment.starting_fires.page5.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "minecraft:crafting/flint_and_steel",
+      "text": "book.modpack.guide.equipment.starting_fires.page6.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 2,
+  "x": 4,
+  "y": 0
+}

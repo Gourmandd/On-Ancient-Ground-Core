@@ -1,0 +1,64 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.axe.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:stone/axe/sedimentary"
+  },
+  "name": "book.modpack.guide.equipment.axe.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "modpack:tool_heads/axe_head"
+      },
+      "text": "book.modpack.guide.equipment.axe.page1.text",
+      "title": "book.modpack.guide.equipment.axe.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/stone/axe_head/metamorphic",
+      "text": "book.modpack.guide.equipment.axe.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:casting",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:casting/copper_axe_head",
+      "recipe_id_2": "tfc:casting/bronze_axe_head",
+      "text": "book.modpack.guide.equipment.axe.page3.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/metal/axe_head/wrought_iron",
+      "recipe_id_2": "tfc:anvil/metal/axe_head/steel",
+      "text": "book.modpack.guide.equipment.axe.page4.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 0,
+  "x": -2,
+  "y": 1
+}
