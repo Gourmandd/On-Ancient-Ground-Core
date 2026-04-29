@@ -1,10 +1,22 @@
-// 1.21.1	2026-04-29T17:14:30.649719545	Books: modpack
+// 1.21.1	2026-04-29T21:40:37.756771634	Books: modpack
 559370fe8324adbbcc9a2434efd06c929a90846e data/modpack/modonomicon/books/guide/book.json
+a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 ef64de69105b0e2831ae4b2a8f614ef81fa7264b data/modpack/modonomicon/books/guide/categories/equipment.json
-78e38bc7d9ab5726b5045c01f14270b7c422543c data/modpack/modonomicon/books/guide/categories/geology.json
+5ddb037dd8eb8c4dc572f2d8220b6a7f681f40f5 data/modpack/modonomicon/books/guide/categories/geology.json
 5cf94e4cb9ba9a92960421af8c6d9d0d6df13dc5 data/modpack/modonomicon/books/guide/categories/getting_started.json
-9e4500f740b4ee7d8d43728c87d658e6be53d63b data/modpack/modonomicon/books/guide/categories/ores.json
+aa606ea2a11cb0d309cc9dd5151960cae128f256 data/modpack/modonomicon/books/guide/categories/ores.json
 324bab86b733c176ed6e327494094ee401cd06ae data/modpack/modonomicon/books/guide/categories/pottery.json
+09193c73bbb285e9f43f4a8bc6e3e0e2c59e7822 data/modpack/modonomicon/books/guide/entries/carpentry/barrel.json
+d733672528ddbf4a36fa416b1fe4f39bd8c472bf data/modpack/modonomicon/books/guide/entries/carpentry/chest.json
+9f9f6ece998c5cff61ba65539e0801aed5e98174 data/modpack/modonomicon/books/guide/entries/carpentry/lectern.json
+090ae8bb8cde3ba3bd7c263610ce3f94051e69c8 data/modpack/modonomicon/books/guide/entries/carpentry/lumber.json
+7b2ab96dbfe8455a5f38d1fdf006b737cc12f6e7 data/modpack/modonomicon/books/guide/entries/carpentry/planks.json
+11fdf3e722bfa37b9fb2504ad2fc2078a5355d93 data/modpack/modonomicon/books/guide/entries/carpentry/saw.json
+d35c222436989f09631150ecc2797a1c8ebaac73 data/modpack/modonomicon/books/guide/entries/carpentry/scribing_table.json
+1be24f0489f2964eba79cc044eb06f41344f3b1b data/modpack/modonomicon/books/guide/entries/carpentry/sewing_table.json
+3d9f19ddd83f7c915a0857f249dc9f6fad96089a data/modpack/modonomicon/books/guide/entries/carpentry/supports.json
+efe7198265d7829c55490ebdf3250af3e153fa96 data/modpack/modonomicon/books/guide/entries/carpentry/tool_rack.json
+ac4e43f3019166f8b1e92d1c4cb87f7b830a7820 data/modpack/modonomicon/books/guide/entries/carpentry/trapped_chest.json
 2847c8e98a1a37fb05d01a3fd8efb36ce602c094 data/modpack/modonomicon/books/guide/entries/equipment/axe.json
 fe3d9a1b9b2ef268c6a68509e260adb73092a154 data/modpack/modonomicon/books/guide/entries/equipment/bow.json
 e77afea9ec12391ea26b030d2d6e2ac1fdd03abd data/modpack/modonomicon/books/guide/entries/equipment/ceramic_pan.json

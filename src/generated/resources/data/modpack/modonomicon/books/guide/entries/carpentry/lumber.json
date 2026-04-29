@@ -1,0 +1,70 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "carpentry",
+  "description": "book.modpack.guide.carpentry.lumber.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:wood/lumber/ash"
+  },
+  "name": "book.modpack.guide.carpentry.lumber.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:lumber"
+      },
+      "text": "book.modpack.guide.carpentry.lumber.page1.text",
+      "title": "book.modpack.guide.carpentry.lumber.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/lumber/ash_from_logs",
+      "text": "book.modpack.guide.carpentry.lumber.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/lumber/birch_from_slabs",
+      "text": "book.modpack.guide.carpentry.lumber.page3.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/lumber/pine_from_planks",
+      "text": "book.modpack.guide.carpentry.lumber.page4.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "carpentry/saw",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 1,
+  "x": 0,
+  "y": 2
+}

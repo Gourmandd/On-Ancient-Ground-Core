@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "carpentry",
+  "description": "book.modpack.guide.carpentry.sewing_table.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:wood/sewing_table/ash"
+  },
+  "name": "book.modpack.guide.carpentry.sewing_table.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:wood/sewing_table/ash"
+      },
+      "text": "book.modpack.guide.carpentry.sewing_table.page1.text",
+      "title": "book.modpack.guide.carpentry.sewing_table.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/sewing_table/ash",
+      "text": "book.modpack.guide.carpentry.sewing_table.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 9,
+  "x": 3,
+  "y": -1
+}

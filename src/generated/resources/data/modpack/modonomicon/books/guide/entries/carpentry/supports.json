@@ -1,0 +1,48 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "carpentry",
+  "description": "book.modpack.guide.carpentry.supports.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:wood/support/ash"
+  },
+  "name": "book.modpack.guide.carpentry.supports.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:wood/support/ash"
+      },
+      "text": "book.modpack.guide.carpentry.supports.page1.text",
+      "title": "book.modpack.guide.carpentry.supports.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/support/ash",
+      "text": "book.modpack.guide.carpentry.supports.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "carpentry/saw",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 3,
+  "x": -3,
+  "y": 0
+}

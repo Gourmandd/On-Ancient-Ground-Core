@@ -1,0 +1,70 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "carpentry",
+  "description": "book.modpack.guide.carpentry.planks.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:wood/planks/ash"
+  },
+  "name": "book.modpack.guide.carpentry.planks.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:wood/planks/ash"
+      },
+      "text": "book.modpack.guide.carpentry.planks.page1.text",
+      "title": "book.modpack.guide.carpentry.planks.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/planks/ash",
+      "text": "book.modpack.guide.carpentry.planks.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/planks/birch_slab",
+      "text": "book.modpack.guide.carpentry.planks.page3.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/planks/pine_stairs",
+      "text": "book.modpack.guide.carpentry.planks.page4.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "carpentry/lumber",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 2,
+  "x": 3,
+  "y": 2
+}

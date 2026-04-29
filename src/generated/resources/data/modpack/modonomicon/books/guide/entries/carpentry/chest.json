@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "carpentry",
+  "description": "book.modpack.guide.carpentry.chest.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:wood/chest/ash"
+  },
+  "name": "book.modpack.guide.carpentry.chest.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:wood/chest/ash"
+      },
+      "text": "book.modpack.guide.carpentry.chest.page1.text",
+      "title": "book.modpack.guide.carpentry.chest.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/chest/ash",
+      "text": "book.modpack.guide.carpentry.chest.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 5,
+  "x": 0,
+  "y": -1
+}
