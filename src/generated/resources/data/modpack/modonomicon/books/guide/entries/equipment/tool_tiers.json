@@ -1,0 +1,29 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.tool_tiers.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/pickaxe/black_steel"
+  },
+  "name": "book.modpack.guide.equipment.tool_tiers.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:tools/black_steel"
+      },
+      "text": "book.modpack.guide.equipment.tool_tiers.page1.text",
+      "title": "book.modpack.guide.equipment.tool_tiers.page1.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 21,
+  "x": -1,
+  "y": -2
+}

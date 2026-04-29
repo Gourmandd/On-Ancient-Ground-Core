@@ -1,0 +1,73 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.damage_types.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/sword/blue_steel"
+  },
+  "name": "book.modpack.guide.equipment.damage_types.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:metal/sword/blue_steel"
+      },
+      "text": "book.modpack.guide.equipment.damage_types.page1.text",
+      "title": "book.modpack.guide.equipment.damage_types.page1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.equipment.damage_types.page2.text",
+      "title": "book.modpack.guide.equipment.damage_types.page2.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.equipment.damage_types.page3.text",
+      "title": "book.modpack.guide.equipment.damage_types.page3.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.equipment.damage_types.page4.text",
+      "title": "book.modpack.guide.equipment.damage_types.page4.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.equipment.damage_types.page5.text",
+      "title": "book.modpack.guide.equipment.damage_types.page5.title",
+      "use_markdown_in_title": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 22,
+  "x": 1,
+  "y": -2
+}

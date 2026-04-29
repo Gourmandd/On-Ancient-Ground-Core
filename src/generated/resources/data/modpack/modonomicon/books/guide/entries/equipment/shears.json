@@ -1,0 +1,41 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.shears.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/shears/copper"
+  },
+  "name": "book.modpack.guide.equipment.shears.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:metal/shears/copper"
+      },
+      "text": "book.modpack.guide.equipment.shears.page1.text",
+      "title": "book.modpack.guide.equipment.shears.page1.title"
+    },
+    {
+      "type": "modpack:welding",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:welding/metal/shears/copper",
+      "recipe_id_2": "tfc:welding/metal/shears/bronze",
+      "text": "book.modpack.guide.equipment.shears.page3.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 15,
+  "x": 0,
+  "y": 0
+}

@@ -20,9 +20,11 @@ public class EquipmentCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "ri__tbjl__do",
-                "sn________cp",
-                "gh__aefm__kq"
+                "_____v_w_____",
+                "_____________",
+                "ri__tbujl__do",
+                "sn_________cp",
+                "gh__ae_fm__kq"
         };
     }
 
@@ -44,6 +46,7 @@ public class EquipmentCategory extends CategoryProvider {
         var shovel = this.add(new ShovelEntry(this).generate("m"));
         var sword = this.add(new SwordEntry(this).generate("n"));
         var scythe = this.add(new ScytheEntry(this).generate("t"));
+        var shears = this.add(new ShearsEntry(this).generate("u"));
 
         var ceramic_pans = this.add(new PanEntry(this).generate("o"));
         var excavating_tools = this.add(new ExcavatingToolsEntry(this).generate("p"));
@@ -51,6 +54,9 @@ public class EquipmentCategory extends CategoryProvider {
 
         var bow = this.add(new BowEntry(this).generate("r"));
         var crossbow = this.add(new CrossbowEntry(this).generate("s"));
+
+        var tool_tiers = this.add(new ToolTiersEntry(this).generate("v"));
+        var damage_types = this.add(new DamageTypesEntry(this).generate("w"));
     }
 
     @Override
