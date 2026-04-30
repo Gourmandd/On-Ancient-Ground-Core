@@ -73,6 +73,14 @@ public class CarpentryCategory extends CategoryProvider {
         // add sluice
         // add fence
         // add fence_gate
+        // add food shelf (same as in homesteading category)
+        // add hanger (same as in homesteading category)
+        // add jarbnet (same as in homesteading category)
+        // add keg (same as in homesteading category)
+        // add stomping barrel (same as in homesteading category)
+        // add wine shelf (same as in homesteading category)
+        // add barrel press (same as in homesteading category)
+
         var lectern = this.add(new LecternEntry(this).generate("i").withParent(planks));
         var sewing_table = this.add(new SewingTableEntry(this).generate("j"));
         var scribing_table = this.add(new ScribingTableEntry(this).generate("k"));

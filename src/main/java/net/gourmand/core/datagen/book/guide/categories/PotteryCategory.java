@@ -31,6 +31,10 @@ public class PotteryCategory extends CategoryProvider {
 
     @Override
     protected void generateEntries() {
+
+        // add pit kiln guide
+        // add kiln (firebox) guide.
+
         var clay = this.add(new ClayEntry(this).generate("a"));
 
         var fire_clay = this.add(new FireClayEntry(this).generate("b"));
