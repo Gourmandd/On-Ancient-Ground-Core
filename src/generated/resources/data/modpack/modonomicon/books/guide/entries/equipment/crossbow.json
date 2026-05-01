@@ -27,7 +27,7 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "minecraft:crating/crossbow",
+      "recipe_id_1": "minecraft:crafting/crossbow",
       "text": "book.modpack.guide.equipment.crossbow.page2.text",
       "title1": "",
       "title2": ""

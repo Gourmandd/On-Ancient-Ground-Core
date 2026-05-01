@@ -31,7 +31,7 @@ public class EquipmentCategory extends CategoryProvider {
     @Override
     protected void generateEntries() {
 
-        // TODO: add buckets, shields, armour, horse armour, bone needle and spindle
+        // TODO: add buckets, shields, armour, sandpaper, horse armour, bone needle and spindle
         var axe = this.add(new AxeEntry(this).generate("a"));
         var chisel = this.add(new ChiselEntry(this).generate("b"));
         var firestarters = this.add(new FirestartersEntry(this).generate("c"));

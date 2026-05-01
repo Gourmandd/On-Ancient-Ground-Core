@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "carpentry",
-  "description": "book.modpack.guide.carpentry.tool_rack.description",
+  "description": "book.modpack.guide.carpentry.fence_gate.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:wood/tool_rack/ash"
+    "item": "tfc:wood/fence_gate/ash"
   },
-  "name": "book.modpack.guide.carpentry.tool_rack.name",
+  "name": "book.modpack.guide.carpentry.fence_gate.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,10 +16,10 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:wood/tool_rack/ash"
+        "item": "tfc:wood/fence_gate/ash"
       },
-      "text": "book.modpack.guide.carpentry.tool_rack.page1.text",
-      "title": "book.modpack.guide.carpentry.tool_rack.page1.title"
+      "text": "book.modpack.guide.carpentry.fence_gate.page1.text",
+      "title": "book.modpack.guide.carpentry.fence_gate.page1.title"
     },
     {
       "type": "modonomicon:crafting_recipe",
@@ -27,14 +27,14 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:crafting/wood/tool_rack/ash",
-      "text": "book.modpack.guide.carpentry.tool_rack.page2.text",
+      "recipe_id_1": "tfc:crafting/wood/fence_gate/ash",
+      "text": "book.modpack.guide.carpentry.fence_gate.page2.text",
       "title1": "",
       "title2": ""
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 7,
-  "x": 0,
+  "sort_number": 20,
+  "x": 4,
   "y": -1
 }

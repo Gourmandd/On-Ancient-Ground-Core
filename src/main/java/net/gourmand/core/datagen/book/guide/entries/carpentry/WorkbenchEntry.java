@@ -13,50 +13,47 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class LecternEntry extends EntryProvider {
+public class WorkbenchEntry extends EntryProvider {
 
-    public LecternEntry(CategoryProviderBase parent) {
+    public WorkbenchEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
     protected void generatePages() {
 
-        // page 1: explain lecterns.
+        // page 1: explain workbenches.
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LECTERN)))
+                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.WORKBENCH)))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Lecterns** are a decorative block which lets you place a book on it by **Right-Clicking** it.
-                \\
-                \\
-                To read the book **Right-Click** it, while to remove the book **Shift + Right-Click** it with an empty hand.
+                **Workbenches** are used to craft items requiring a 3x3 grid.
                \s""");
 
-        // page 2: ash lectern recipe.
+        // page 2: ash workbench recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lectern/ash"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/workbench/ash"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Ash lectern being made out Ash lumber and planks.
+                Ash workbench being made out Ash planks.
                \s""");
     }
 
     @Override
     protected String entryName() {
-        return "Lecterns";
+        return "Workbenches";
     }
 
     @Override
     protected String entryDescription() {
-        return "About Lecterns";
+        return "About Workbenches";
     }
 
     @Override
@@ -66,11 +63,11 @@ public class LecternEntry extends EntryProvider {
 
     @Override
     protected BookIconModel entryIcon() {
-        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LECTERN));
+        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.WORKBENCH));
     }
 
     @Override
     protected String entryId() {
-        return "lectern";
+        return "workbench";
     }
 }

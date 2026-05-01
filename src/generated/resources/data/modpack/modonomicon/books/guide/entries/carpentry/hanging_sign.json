@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "carpentry",
-  "description": "book.modpack.guide.carpentry.scribing_table.description",
+  "description": "book.modpack.guide.carpentry.hanging_sign.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:wood/scribing_table/ash"
+    "item": "tfc:wood/hanging_sign/copper/ash"
   },
-  "name": "book.modpack.guide.carpentry.scribing_table.name",
+  "name": "book.modpack.guide.carpentry.hanging_sign.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,10 +16,10 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:wood/scribing_table/ash"
+        "item": "tfc:wood/hanging_sign/copper/ash"
       },
-      "text": "book.modpack.guide.carpentry.scribing_table.page1.text",
-      "title": "book.modpack.guide.carpentry.scribing_table.page1.title"
+      "text": "book.modpack.guide.carpentry.hanging_sign.page1.text",
+      "title": "book.modpack.guide.carpentry.hanging_sign.page1.title"
     },
     {
       "type": "modonomicon:crafting_recipe",
@@ -27,14 +27,14 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:crafting/wood/scribing_table/ash",
-      "text": "book.modpack.guide.carpentry.scribing_table.page2.text",
+      "recipe_id_1": "tfc:crafting/wood/hanging_sign/copper/ash",
+      "text": "book.modpack.guide.carpentry.hanging_sign.page2.text",
       "title1": "",
       "title2": ""
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 15,
-  "x": 2,
+  "sort_number": 18,
+  "x": 3,
   "y": -2
 }

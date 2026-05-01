@@ -13,50 +13,47 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class LecternEntry extends EntryProvider {
+public class LogFenceEntry extends EntryProvider {
 
-    public LecternEntry(CategoryProviderBase parent) {
+    public LogFenceEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
     protected void generatePages() {
 
-        // page 1: explain lecterns.
+        // page 1: explain log fences.
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LECTERN)))
+                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LOG_FENCE)))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Lecterns** are a decorative block which lets you place a book on it by **Right-Clicking** it.
-                \\
-                \\
-                To read the book **Right-Click** it, while to remove the book **Shift + Right-Click** it with an empty hand.
+                **Log Fences** can be used as a cheap barrier. They are 1.5 blocks tall preventing most creatures from jumping over.
                \s""");
 
-        // page 2: ash lectern recipe.
+        // page 2: ash fence recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lectern/ash"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/log_fence/ash"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Ash lectern being made out Ash lumber and planks.
+                Ash log fence being made out Ash planks and lumber.
                \s""");
     }
 
     @Override
     protected String entryName() {
-        return "Lecterns";
+        return "Log Fences";
     }
 
     @Override
     protected String entryDescription() {
-        return "About Lecterns";
+        return "About Log Fences";
     }
 
     @Override
@@ -66,11 +63,11 @@ public class LecternEntry extends EntryProvider {
 
     @Override
     protected BookIconModel entryIcon() {
-        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LECTERN));
+        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LOG_FENCE));
     }
 
     @Override
     protected String entryId() {
-        return "lectern";
+        return "log_fence";
     }
 }

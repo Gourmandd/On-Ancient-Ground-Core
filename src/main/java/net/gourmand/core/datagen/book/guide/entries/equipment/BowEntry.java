@@ -38,7 +38,7 @@ public class BowEntry extends EntryProvider {
         // page 2: crafting recipe.
         this.page("page2", () -> BookKnappingPageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath("minecraft", "crating/bow"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath("minecraft", "crafting/bow"))
         );
 
 

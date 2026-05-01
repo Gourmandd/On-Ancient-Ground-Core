@@ -22,7 +22,7 @@
       "title": "book.modpack.guide.carpentry.planks.page1.title"
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -33,7 +33,7 @@
       "title2": ""
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -44,7 +44,7 @@
       "title2": ""
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"

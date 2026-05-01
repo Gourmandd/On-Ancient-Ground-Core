@@ -22,7 +22,7 @@
       "title": "book.modpack.guide.carpentry.lectern.page1.title"
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -33,16 +33,8 @@
       "title2": ""
     }
   ],
-  "parents": [
-    {
-      "draw_arrow": true,
-      "entry": "carpentry/planks",
-      "line_enabled": true,
-      "line_reversed": false
-    }
-  ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 8,
-  "x": 3,
+  "sort_number": 13,
+  "x": 2,
   "y": 0
 }

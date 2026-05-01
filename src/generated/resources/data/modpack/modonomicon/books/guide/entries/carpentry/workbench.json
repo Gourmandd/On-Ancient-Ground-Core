@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "carpentry",
-  "description": "book.modpack.guide.carpentry.supports.description",
+  "description": "book.modpack.guide.carpentry.workbench.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:wood/support/ash"
+    "item": "tfc:wood/workbench/ash"
   },
-  "name": "book.modpack.guide.carpentry.supports.name",
+  "name": "book.modpack.guide.carpentry.workbench.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,10 +16,10 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:wood/support/ash"
+        "item": "tfc:wood/workbench/ash"
       },
-      "text": "book.modpack.guide.carpentry.supports.page1.text",
-      "title": "book.modpack.guide.carpentry.supports.page1.title"
+      "text": "book.modpack.guide.carpentry.workbench.page1.text",
+      "title": "book.modpack.guide.carpentry.workbench.page1.title"
     },
     {
       "type": "modonomicon:crafting_recipe",
@@ -27,8 +27,8 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:crafting/wood/support/ash",
-      "text": "book.modpack.guide.carpentry.supports.page2.text",
+      "recipe_id_1": "tfc:crafting/wood/workbench/ash",
+      "text": "book.modpack.guide.carpentry.workbench.page2.text",
       "title1": "",
       "title2": ""
     }
@@ -36,13 +36,13 @@
   "parents": [
     {
       "draw_arrow": true,
-      "entry": "carpentry/saw",
+      "entry": "carpentry/planks",
       "line_enabled": true,
       "line_reversed": false
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 3,
-  "x": -4,
+  "sort_number": 16,
+  "x": 3,
   "y": 0
 }

@@ -13,50 +13,50 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class LecternEntry extends EntryProvider {
+public class ButtonEntry extends EntryProvider {
 
-    public LecternEntry(CategoryProviderBase parent) {
+    public ButtonEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
     protected void generatePages() {
 
-        // page 1: explain lecterns.
+        // page 1: explain buttons.
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LECTERN)))
+                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.BUTTON)))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Lecterns** are a decorative block which lets you place a book on it by **Right-Clicking** it.
+                **Buttons** need to be placed on a solid block.
                 \\
                 \\
-                To read the book **Right-Click** it, while to remove the book **Shift + Right-Click** it with an empty hand.
+                When they are pressed, they emit a strong **Redstone** signal on the block they are on and a weak one to the surrounding blocks.
                \s""");
 
-        // page 2: ash lectern recipe.
+        // page 2: ash button recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lectern/ash"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/button/ash"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Ash lectern being made out Ash lumber and planks.
+                Ash button being made out Ash lumber.
                \s""");
     }
 
     @Override
     protected String entryName() {
-        return "Lecterns";
+        return "Buttons";
     }
 
     @Override
     protected String entryDescription() {
-        return "About Lecterns";
+        return "About Buttons";
     }
 
     @Override
@@ -66,11 +66,11 @@ public class LecternEntry extends EntryProvider {
 
     @Override
     protected BookIconModel entryIcon() {
-        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LECTERN));
+        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.BUTTON));
     }
 
     @Override
     protected String entryId() {
-        return "lectern";
+        return "button";
     }
 }

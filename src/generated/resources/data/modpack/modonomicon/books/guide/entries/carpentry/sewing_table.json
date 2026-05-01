@@ -22,7 +22,7 @@
       "title": "book.modpack.guide.carpentry.sewing_table.page1.title"
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -34,7 +34,7 @@
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 9,
-  "x": 3,
+  "sort_number": 14,
+  "x": 2,
   "y": -1
 }

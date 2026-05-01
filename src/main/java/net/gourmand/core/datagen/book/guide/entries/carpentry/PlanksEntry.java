@@ -4,12 +4,12 @@ import com.klikli_dev.modonomicon.api.datagen.CategoryProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;
 import com.klikli_dev.modonomicon.api.datagen.EntryProvider;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
+import com.klikli_dev.modonomicon.api.datagen.book.page.BookCraftingRecipePageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.wood.Wood;
-import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -35,7 +35,7 @@ public class PlanksEntry extends EntryProvider {
                \s""");
 
         // page 2: ash planks recipe.
-        this.page("page2", () -> BookKnappingPageModel.create()
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/planks/ash"))
         );
@@ -46,7 +46,7 @@ public class PlanksEntry extends EntryProvider {
                \s""");
 
         // page 3: birch plank slab recipe.
-        this.page("page3", () -> BookKnappingPageModel.create()
+        this.page("page3", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/planks/birch_slab"))
         );
@@ -57,7 +57,7 @@ public class PlanksEntry extends EntryProvider {
                \s""");
 
         // page 3: pine plank stairs recipe.
-        this.page("page4", () -> BookKnappingPageModel.create()
+        this.page("page4", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/planks/pine_stairs"))
         );

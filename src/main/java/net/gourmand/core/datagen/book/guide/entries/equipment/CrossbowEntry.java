@@ -38,7 +38,7 @@ public class CrossbowEntry extends EntryProvider {
         // page 2: crafting recipe.
         this.page("page2", () -> BookKnappingPageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath("minecraft", "crating/crossbow"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath("minecraft", "crafting/crossbow"))
         );
 
 

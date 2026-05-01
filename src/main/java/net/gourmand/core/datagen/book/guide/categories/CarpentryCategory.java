@@ -20,12 +20,12 @@ public class CarpentryCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "___h___",
-                "___g__k",
-                "___f__j",
-                "d__e__i",
-                "_______",
-                "a__b__c"
+                "_________",
+                "__ngo_ksv",
+                "__mfh_jru",
+                "d_lep_iqt",
+                "_________",
+                "a__b___c_"
         };
     }
 
@@ -54,25 +54,20 @@ public class CarpentryCategory extends CategoryProvider {
         var support = this.add(new SupportEntry(this).generate("d").withParent(saw));
 
         // lumber
-        // add bookshelf
-        // add door
-        // add trapdoor
-        // add pressure plate
         var barrel = this.add(new BarrelEntry(this).generate("e").withParent(lumber));
         var chest = this.add(new ChestEntry(this).generate("f"));
         var trapped_chest = this.add(new TrappedChestEntry(this).generate("g"));
         var tool_rack = this.add(new ToolRackEntry(this).generate("h"));
+        var bookshelf = this.add(new BookshelfEntry(this).generate("l"));
+        var door = this.add(new DoorEntry(this).generate("m"));
+        var trapdoor = this.add(new TrapdoorEntry(this).generate("n"));
+        var pressure_plate = this.add(new PressurePlateEntry(this).generate("o"));
+        var log_fence = this.add(new LogFenceEntry(this).generate("p"));
 
         // planks
         // add shelf
-        // add workbench
-        // add button
         // add mechanical bits (same entry as devices category)
-        // add signs
-        // add hanging signs
-        // add sluice
-        // add fence
-        // add fence_gate
+        // add sluice (same as mining category entry)
         // add food shelf (same as in homesteading category)
         // add hanger (same as in homesteading category)
         // add jarbnet (same as in homesteading category)
@@ -81,9 +76,15 @@ public class CarpentryCategory extends CategoryProvider {
         // add wine shelf (same as in homesteading category)
         // add barrel press (same as in homesteading category)
 
-        var lectern = this.add(new LecternEntry(this).generate("i").withParent(planks));
+        var lectern = this.add(new LecternEntry(this).generate("i"));
         var sewing_table = this.add(new SewingTableEntry(this).generate("j"));
         var scribing_table = this.add(new ScribingTableEntry(this).generate("k"));
+        var workbench = this.add(new WorkbenchEntry(this).generate("q").withParent(planks));
+        var sign = this.add(new SignEntry(this).generate("r"));
+        var hanging_sign = this.add(new HangingSignEntry(this).generate("s"));
+        var fence = this.add(new FenceEntry(this).generate("t"));
+        var fence_gate = this.add(new FenceGateEntry(this).generate("u"));
+        var button = this.add(new ButtonEntry(this).generate("v"));
     }
 
     @Override
