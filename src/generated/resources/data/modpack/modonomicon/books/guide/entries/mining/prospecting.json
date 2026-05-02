@@ -1,0 +1,147 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "mining",
+  "description": "book.modpack.guide.mining.prospecting.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/propick/bronze"
+  },
+  "name": "book.modpack.guide.mining.prospecting.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:metal/propick/bronze"
+      },
+      "text": "book.modpack.guide.mining.prospecting.page1.text",
+      "title": "book.modpack.guide.mining.prospecting.page1.title"
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/mining/ore_indicator.png"
+      ],
+      "text": "book.modpack.guide.mining.prospecting.page2.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:metal/propick/bronze"
+      },
+      "text": "book.modpack.guide.mining.prospecting.page3.text",
+      "title": "book.modpack.guide.mining.prospecting.page3.title"
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/metal/propick_head/wrought_iron",
+      "recipe_id_2": "tfc:anvil/metal/propick_head/steel",
+      "text": "book.modpack.guide.mining.prospecting.page4.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "precisionprospecting:metal/mineral_prospector/copper"
+      },
+      "text": "book.modpack.guide.mining.prospecting.page5.text",
+      "title": "book.modpack.guide.mining.prospecting.page5.title"
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "precisionprospecting:anvil/metal/mineral_prospector/wrought_iron",
+      "recipe_id_2": "precisionprospecting:anvil/metal/mineral_prospector/steel",
+      "text": "book.modpack.guide.mining.prospecting.page6.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "precisionprospecting:metal/prospector_drill/copper"
+      },
+      "text": "book.modpack.guide.mining.prospecting.page7.text",
+      "title": "book.modpack.guide.mining.prospecting.page7.title"
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "precisionprospecting:anvil/metal/prospector_drill/wrought_iron",
+      "recipe_id_2": "precisionprospecting:anvil/metal/prospector_drill/steel",
+      "text": "book.modpack.guide.mining.prospecting.page8.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "precisionprospecting:metal/prospector_hammer/copper"
+      },
+      "text": "book.modpack.guide.mining.prospecting.page9.text",
+      "title": "book.modpack.guide.mining.prospecting.page9.title"
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "precisionprospecting:anvil/metal/prospector_hammer/wrought_iron",
+      "recipe_id_2": "precisionprospecting:anvil/metal/prospector_hammer/steel",
+      "text": "book.modpack.guide.mining.prospecting.page10.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "mining/ore_indicators",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 5,
+  "x": 1,
+  "y": 2
+}

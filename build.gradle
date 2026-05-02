@@ -174,6 +174,8 @@ dependencies {
     implementation "curse.maven:terrafirmacraft-302973:7875771"
     implementation "curse.maven:patchouli-306770:6842247"
     implementation "curse.maven:firmalife-453394:7876126"
+    implementation "curse.maven:precision-prospecting-700638:7020720"
+    implementation "curse.maven:tfc-hammer-time-unofficial-port-1499600:7978455"
 
     // Pastel Dependencies
     //implementation "curse.maven:pastel-1264556:6847961"

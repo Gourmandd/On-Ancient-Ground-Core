@@ -1,0 +1,43 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "mining",
+  "description": "book.modpack.guide.mining.ore_deposit.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:deposit/native_gold/chalk"
+  },
+  "name": "book.modpack.guide.mining.ore_deposit.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:ore_deposits"
+      },
+      "text": "book.modpack.guide.mining.ore_deposit.page1.text",
+      "title": "book.modpack.guide.mining.ore_deposit.page1.title"
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/mining/ore_deposit.png"
+      ],
+      "text": "book.modpack.guide.mining.ore_deposit.page2.text",
+      "title": "",
+      "use_legacy_rendering": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 0,
+  "x": -2,
+  "y": 0
+}

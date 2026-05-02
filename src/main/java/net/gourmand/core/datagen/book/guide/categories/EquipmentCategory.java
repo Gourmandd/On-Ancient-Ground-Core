@@ -9,6 +9,8 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.book.guide.entries.equipment.*;
 import net.gourmand.core.datagen.book.guide.entries.mining.CeramicPanEntry;
+import net.gourmand.core.datagen.book.guide.entries.mining.ExcavatingToolsEntry;
+import net.gourmand.core.datagen.book.guide.entries.mining.ProspectingEntry;
 import net.minecraft.resources.ResourceLocation;
 
 public class EquipmentCategory extends CategoryProvider {
@@ -51,7 +53,7 @@ public class EquipmentCategory extends CategoryProvider {
 
         var ceramic_pans = this.add(new CeramicPanEntry(this).generate("o"));
         var excavating_tools = this.add(new ExcavatingToolsEntry(this).generate("p"));
-        var prospecting_tools = this.add(new ProspectingToolsEntry(this).generate("q"));
+        var prospecting_tools = this.add(new ProspectingEntry(this).generate("q"));
 
         var bow = this.add(new BowEntry(this).generate("r"));
         var crossbow = this.add(new CrossbowEntry(this).generate("s"));
@@ -67,7 +69,7 @@ public class EquipmentCategory extends CategoryProvider {
 
     @Override
     protected BookIconModel categoryIcon() {
-        return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.BRONZE).get(Metal.ItemType.PICKAXE));
+        return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.BRONZE).get(Metal.ItemType.SWORD));
     }
 
     @Override

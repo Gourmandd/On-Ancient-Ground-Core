@@ -1,0 +1,43 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "mining",
+  "description": "book.modpack.guide.mining.ore_indicators.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:ore/small_native_gold"
+  },
+  "name": "book.modpack.guide.mining.ore_indicators.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:small_ore_pieces"
+      },
+      "text": "book.modpack.guide.mining.ore_indicators.page1.text",
+      "title": "book.modpack.guide.mining.ore_indicators.page1.title"
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/mining/ore_indicator.png"
+      ],
+      "text": "book.modpack.guide.mining.ore_indicators.page2.text",
+      "title": "",
+      "use_legacy_rendering": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 4,
+  "x": -2,
+  "y": 2
+}

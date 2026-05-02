@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-02T09:49:54.550563365	Books: modpack
+// 1.21.1	2026-05-02T12:16:43.743337093	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 ef64de69105b0e2831ae4b2a8f614ef81fa7264b data/modpack/modonomicon/books/guide/categories/equipment.json
@@ -40,7 +40,7 @@ e968022eeb1c798d3f1edb431757f68ebdb88191 data/modpack/modonomicon/books/guide/en
 45ff493ea2bf00ac4baf6696929cdc80bded5ccf data/modpack/modonomicon/books/guide/entries/equipment/chisel.json
 a6f488465a9aafb4e174437ba1428bcc00f1cc5c data/modpack/modonomicon/books/guide/entries/equipment/crossbow.json
 99b269cb24fc175b15877dd8461c5d56c0f1027e data/modpack/modonomicon/books/guide/entries/equipment/damage_types.json
-12920f280c306593182ade800ae03e756ae0c3a9 data/modpack/modonomicon/books/guide/entries/equipment/excavating_tools.json
+2a0813ad94d4ec06ef24db0fc42bb5acb21a57c7 data/modpack/modonomicon/books/guide/entries/equipment/excavating_tools.json
 a5594dfd8eeb4aa1f7de7420cb26629063ed847e data/modpack/modonomicon/books/guide/entries/equipment/glassblowing_tools.json
 3789cdfa211b36f984a85a3b13a1ddebb12fe926 data/modpack/modonomicon/books/guide/entries/equipment/hammer.json
 e4219dc916c93c0a04c9519903a2382fd78d7f3f data/modpack/modonomicon/books/guide/entries/equipment/hoe.json
@@ -48,7 +48,7 @@ e4219dc916c93c0a04c9519903a2382fd78d7f3f data/modpack/modonomicon/books/guide/en
 9883c530236614ef2ea01b8dce0b7a739d31930d data/modpack/modonomicon/books/guide/entries/equipment/knife.json
 463260d1e07e952e1b657ce3d80cd7929a6cfec7 data/modpack/modonomicon/books/guide/entries/equipment/mace.json
 61223c1bcd01dd66123b4c02a6d2ef55c56f0108 data/modpack/modonomicon/books/guide/entries/equipment/pickaxe.json
-4e73d0449abd0f8468a1b6c6e3ef48fbbbd3c1d4 data/modpack/modonomicon/books/guide/entries/equipment/prospecting_tools.json
+6e4b97459bf6b8a1efdad534bcba8e5d02c046f7 data/modpack/modonomicon/books/guide/entries/equipment/prospecting.json
 91b1633a07101eec6c9fb0f1bfdbbf75be83e152 data/modpack/modonomicon/books/guide/entries/equipment/saddles.json
 a47e53a929172e689b0d874b6ce5b686d335a0b3 data/modpack/modonomicon/books/guide/entries/equipment/saw.json
 eeb784f40ca21e62c08416501cbf2a5425f26c3a data/modpack/modonomicon/books/guide/entries/equipment/scythe.json
@@ -104,9 +104,13 @@ ffa4a6105a93c6a50567be47417d88f3cad3f490 data/modpack/modonomicon/books/guide/en
 ae4fa14b994550f57ca43135d2aefbff36921b87 data/modpack/modonomicon/books/guide/entries/getting_started/pit_kiln.json
 e1e0b99a70baed146be6a6e1cee96933203ae7ab data/modpack/modonomicon/books/guide/entries/getting_started/shovels.json
 5b073e39b3472b072cd79daac94732074d25c248 data/modpack/modonomicon/books/guide/entries/getting_started/straw.json
-c15c3a3a3dd762b359a23d8d87279f0d6e8803ef data/modpack/modonomicon/books/guide/entries/mining/ceramic_pan.json
-8de8c82b8bc32785d134d9978bad6809d90b6beb data/modpack/modonomicon/books/guide/entries/mining/sluice.json
-e48df850448b992a01a94bf6cb242bdfa222a562 data/modpack/modonomicon/books/guide/entries/mining/supports.json
+bf5b74e5f875b9ec6f875149e2359d8bfb97e96f data/modpack/modonomicon/books/guide/entries/mining/ceramic_pan.json
+d3beaab456116d637b36aa0c88163edd55840f81 data/modpack/modonomicon/books/guide/entries/mining/excavating_tools.json
+5d972300fe7755e8806fb5488f660ff614395995 data/modpack/modonomicon/books/guide/entries/mining/ore_deposit.json
+88c53f5fb5a2b007d713b2dab657fb27ac1f7635 data/modpack/modonomicon/books/guide/entries/mining/ore_indicators.json
+bcdcd64eeb632d2ca81ed345160f320e6dea5fd9 data/modpack/modonomicon/books/guide/entries/mining/prospecting.json
+81401f428bc28e7a7b628f8ccd9d1e2bb4ea9d4b data/modpack/modonomicon/books/guide/entries/mining/sluice.json
+7fd24aecd4d35ac4de031c50a09f0f8b4d2f7b16 data/modpack/modonomicon/books/guide/entries/mining/supports.json
 040c27e6b591445af960163dfe2d224f4f9002b5 data/modpack/modonomicon/books/guide/entries/ores/amethyst.json
 943eae7c6a7209d693d6dee1571963b4f105ed9c data/modpack/modonomicon/books/guide/entries/ores/anthracite.json
 c41efc0a8322d9aa2cde98f4419734711cae0449 data/modpack/modonomicon/books/guide/entries/ores/bauxite.json
