@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "firmalife:metal/double_sheet/stainless_steel"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:tool/snow_shovel_head"
+  },
+  "rules": [
+    "bend_last",
+    "punch_second_last",
+    "upset_third_last"
+  ],
+  "tier": 4
+}

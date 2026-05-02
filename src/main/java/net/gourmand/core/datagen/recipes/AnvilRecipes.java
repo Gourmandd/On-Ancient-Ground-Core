@@ -1,5 +1,7 @@
 package net.gourmand.core.datagen.recipes;
 
+import com.eerussianguy.firmalife.common.items.FLItems;
+import com.eerussianguy.firmalife.common.util.FLMetal;
 import net.dries007.tfc.common.component.forge.ForgeRule;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.common.recipes.AnvilRecipe;
@@ -50,6 +52,50 @@ public interface AnvilRecipes extends Recipes {
                         ForgeRule.HIT_THIRD_LAST
                 ),
                 TFCItems.METAL_ITEMS.get(Metal.WROUGHT_IRON).get(Metal.ItemType.INGOT).get()
+        );
+
+        anvil(
+                TFCItems.METAL_ITEMS.get(Metal.WROUGHT_IRON).get(Metal.ItemType.SHEET).get(),
+                Metal.WROUGHT_IRON.tier(),
+                List.of(
+                        ForgeRule.BEND_THIRD_LAST,
+                        ForgeRule.BEND_SECOND_LAST,
+                        ForgeRule.HIT_LAST
+                ),
+                ItemStackProvider.of(CoreItems.WROUGHT_IRON_BUCKET.get())
+        );
+
+        anvil(
+                TFCItems.METAL_ITEMS.get(Metal.BRASS).get(Metal.ItemType.DOUBLE_SHEET).get(),
+                Metal.BRONZE.tier(),
+                List.of(
+                        ForgeRule.BEND_LAST,
+                        ForgeRule.BEND_SECOND_LAST,
+                        ForgeRule.HIT_THIRD_LAST
+                ),
+                CoreItems.GLASS_MOLD.get()
+        );
+
+        anvil(
+                TFCItems.METAL_ITEMS.get(Metal.BRASS).get(Metal.ItemType.DOUBLE_SHEET).get(),
+                Metal.BRONZE.tier(),
+                List.of(
+                        ForgeRule.BEND_LAST,
+                        ForgeRule.PUNCH_SECOND_LAST,
+                        ForgeRule.HIT_THIRD_LAST
+                ),
+                CoreItems.GLASS_PANE_MOLD.get()
+        );
+
+        anvil(
+                FLItems.METAL_ITEMS.get(FLMetal.STAINLESS_STEEL).get(FLMetal.ItemType.DOUBLE_SHEET).get(),
+                Metal.STEEL.tier(),
+                List.of(
+                        ForgeRule.BEND_LAST,
+                        ForgeRule.PUNCH_SECOND_LAST,
+                        ForgeRule.UPSET_THIRD_LAST
+                ),
+                CoreItems.SNOW_SHOVEL_HEAD.get()
         );
     }
 

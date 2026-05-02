@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "tfc:metal/double_sheet/brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:glass_pane_mold"
+  },
+  "rules": [
+    "bend_last",
+    "punch_second_last",
+    "hit_third_last"
+  ],
+  "tier": 2
+}

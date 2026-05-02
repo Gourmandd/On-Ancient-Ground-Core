@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": {
+    "item": "tfc:metal/sheet/wrought_iron"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/bucket/wrought_iron"
+  },
+  "rules": [
+    "bend_third_last",
+    "bend_second_last",
+    "hit_last"
+  ],
+  "tier": 3
+}
