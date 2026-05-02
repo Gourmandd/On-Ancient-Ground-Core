@@ -1,0 +1,80 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.welding.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:rock/anvil/basalt"
+  },
+  "name": "book.modpack.guide.metalworking.welding.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:rock/anvil/basalt"
+      },
+      "text": "book.modpack.guide.metalworking.welding.page1.text",
+      "title": "book.modpack.guide.metalworking.welding.page1.title"
+    },
+    {
+      "type": "modpack:welding",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:welding/metal/boots/bronze",
+      "recipe_id_2": "tfc:welding/metal/shears/bronze",
+      "text": "book.modpack.guide.metalworking.welding.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.welding.page3.text",
+      "title": "book.modpack.guide.metalworking.welding.page3.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/metalworking/anvil_interface.png"
+      ],
+      "text": "book.modpack.guide.metalworking.welding.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "metalworking/rock_anvil",
+      "line_enabled": true,
+      "line_reversed": false
+    },
+    {
+      "draw_arrow": true,
+      "entry": "metalworking/anvil",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 3,
+  "x": -2,
+  "y": 2
+}

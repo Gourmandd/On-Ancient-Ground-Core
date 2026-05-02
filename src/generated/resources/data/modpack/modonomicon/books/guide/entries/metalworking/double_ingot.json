@@ -1,0 +1,49 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.double_ingot.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/double_ingot/copper"
+  },
+  "name": "book.modpack.guide.metalworking.double_ingot.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "c:double_ingots"
+      },
+      "text": "book.modpack.guide.metalworking.double_ingot.page1.text",
+      "title": "book.modpack.guide.metalworking.double_ingot.page1.title"
+    },
+    {
+      "type": "modpack:welding",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:welding/metal/double_ingot/bronze",
+      "recipe_id_2": "tfc:welding/metal/double_ingot/copper",
+      "text": "book.modpack.guide.metalworking.double_ingot.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "metalworking/rock_anvil",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 1,
+  "x": 0,
+  "y": -2
+}

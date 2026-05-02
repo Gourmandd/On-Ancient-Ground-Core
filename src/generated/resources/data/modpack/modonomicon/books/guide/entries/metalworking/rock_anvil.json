@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.rock_anvil.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:rock/anvil/basalt"
+  },
+  "name": "book.modpack.guide.metalworking.rock_anvil.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:rock/anvil/basalt"
+      },
+      "text": "book.modpack.guide.metalworking.rock_anvil.page1.text",
+      "title": "book.modpack.guide.metalworking.rock_anvil.page1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.rock_anvil.page2.text",
+      "title": "book.modpack.guide.metalworking.rock_anvil.page2.title",
+      "use_markdown_in_title": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 0,
+  "x": -2,
+  "y": 0
+}

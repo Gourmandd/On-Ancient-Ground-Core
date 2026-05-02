@@ -7,6 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.util.Metal;
+import net.gourmand.core.datagen.book.guide.entries.metalworking.*;
 import net.minecraft.resources.ResourceLocation;
 
 public class MetalworkingCategory extends CategoryProvider {
@@ -18,17 +19,31 @@ public class MetalworkingCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-            ""
+                "efghi",
+                "_____",
+                "c___d",
+                "_____",
+                "a___b"
         };
     }
 
     @Override
     protected void generateEntries() {
-        // add rock anvil
-        // add anvil
-        // add forging
-        // add welding
-        // add info on metal shapes (ingot, d.ingot, sheet, rod etc)
+
+        var rock_anvil = this.add(new RockAnvilEntry(this).generate("c"));
+
+        var double_ingot = this.add(new DoubleIngotEntry(this).generate("g").withParent(rock_anvil));
+
+        var anvil = this.add(new AnvilEntry(this).generate("d").withParent(double_ingot));
+
+        var welding = this.add(new WeldingEntry(this).generate("a").withParent(rock_anvil).withParent(anvil));
+        var anvil_working = this.add(new AnvilWorkingEntry(this).generate("b").withParent(anvil));
+
+        var rod = this.add(new RodEntry(this).generate("e"));
+        var ingot = this.add(new IngotEntry(this).generate("f"));
+        var sheet = this.add(new SheetEntry(this).generate("h"));
+        var double_sheet = this.add(new DoubleSheetEntry(this).generate("i"));
+
         // add bloomery
         // add blast furnace
         // add charcoal pit
@@ -42,7 +57,6 @@ public class MetalworkingCategory extends CategoryProvider {
         // add iron making info (after bloomery)
         // add coloured steel making info
         // add chain
-        // add metal buckets.
     }
 
     @Override

@@ -1,0 +1,41 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.ingot.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/ingot/copper"
+  },
+  "name": "book.modpack.guide.metalworking.ingot.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "c:ingots"
+      },
+      "text": "book.modpack.guide.metalworking.ingot.page1.text",
+      "title": "book.modpack.guide.metalworking.ingot.page1.title"
+    },
+    {
+      "type": "modpack:casting",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:casting/bronze_ingot",
+      "recipe_id_2": "tfc:casting/copper_ingot",
+      "text": "book.modpack.guide.metalworking.ingot.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 6,
+  "x": -1,
+  "y": -2
+}
