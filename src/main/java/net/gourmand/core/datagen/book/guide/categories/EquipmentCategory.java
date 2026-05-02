@@ -11,6 +11,7 @@ import net.gourmand.core.datagen.book.guide.entries.equipment.*;
 import net.gourmand.core.datagen.book.guide.entries.mining.CeramicPanEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.ExcavatingToolsEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.ProspectingEntry;
+import net.gourmand.core.datagen.book.guide.entries.pottery.SpindleEntry;
 import net.minecraft.resources.ResourceLocation;
 
 public class EquipmentCategory extends CategoryProvider {
@@ -22,18 +23,18 @@ public class EquipmentCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "_____v_w_____",
-                "_____________",
-                "ri__tbujl__do",
-                "sn_________cp",
-                "gh__ae_fm__kq"
+                "______v_w______",
+                "_______________",
+                "yri__tbujl__do_",
+                "Asn_________cpB",
+                "Cgh__aexfm__kqz"
         };
     }
 
     @Override
     protected void generateEntries() {
 
-        // TODO: add buckets, shields, armour, sandpaper, horse armour, bone needle and spindle
+        // TODO: add buckets
         var axe = this.add(new AxeEntry(this).generate("a"));
         var chisel = this.add(new ChiselEntry(this).generate("b"));
         var firestarters = this.add(new FirestartersEntry(this).generate("c"));
@@ -60,6 +61,13 @@ public class EquipmentCategory extends CategoryProvider {
 
         var tool_tiers = this.add(new ToolTiersEntry(this).generate("v"));
         var damage_types = this.add(new DamageTypesEntry(this).generate("w"));
+
+        var bone_needle = this.add(new BoneNeedleEntry(this).generate("x"));
+        var shields = this.add(new ShieldEntry(this).generate("y"));
+        var spindle = this.add(new SpindleEntry(this).generate("z"));
+        var horse_armour = this.add(new HorseArmourEntry(this).generate("A"));
+        var sandpaper = this.add(new SandpaperEntry(this).generate("B"));
+        var armour = this.add(new SandpaperEntry(this).generate("C"));
     }
 
     @Override
