@@ -22,12 +22,12 @@
       "title": "book.modpack.guide.equipment.bow.page1.title"
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "minecraft:crafting/bow",
+      "recipe_id_1": "minecraft:bow",
       "text": "book.modpack.guide.equipment.bow.page2.text",
       "title1": "",
       "title2": ""

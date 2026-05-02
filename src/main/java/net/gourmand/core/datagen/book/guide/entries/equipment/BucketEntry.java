@@ -65,7 +65,7 @@ public class BucketEntry extends EntryProvider {
         // page 4: iron bucket recipe.
         this.page("page4", () -> BookForgingPageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "anvil/bucket/wrought_iron"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "anvil/metal/bucket/wrought_iron"))
         );
 
         this.pageTitle(entryName());
@@ -88,7 +88,7 @@ public class BucketEntry extends EntryProvider {
         // page 6: blue steel bucket recipe.
         this.page("page6", () -> BookForgingPageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/bucket/blue_steel"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/bucket/blue_steel"))
         );
 
         this.pageTitle(entryName());

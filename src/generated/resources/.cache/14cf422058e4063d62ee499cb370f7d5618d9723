@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-02T16:48:44.938613263	Books: modpack
+// 1.21.1	2026-05-02T17:35:34.76577029	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 b43e1989b5e4d54d3afb942b4b67768d09dd73e7 data/modpack/modonomicon/books/guide/categories/equipment.json
@@ -37,12 +37,12 @@ e968022eeb1c798d3f1edb431757f68ebdb88191 data/modpack/modonomicon/books/guide/en
 952b63edaf66bacccfd2e6893fc2cb21bda901a3 data/modpack/modonomicon/books/guide/entries/equipment/armour.json
 2847c8e98a1a37fb05d01a3fd8efb36ce602c094 data/modpack/modonomicon/books/guide/entries/equipment/axe.json
 3b47c9327bef85d056369cd8f95b3c9aedc55992 data/modpack/modonomicon/books/guide/entries/equipment/bone_needle.json
-4f695c6021899172da23dde5540b77eb8f35f69c data/modpack/modonomicon/books/guide/entries/equipment/bow.json
-984c476f0125d264b3e16f3e6f1f4903561cae4c data/modpack/modonomicon/books/guide/entries/equipment/bucket.json
+9bbf87e2546b2d10b7735c71cd84f2d7fe4fbd86 data/modpack/modonomicon/books/guide/entries/equipment/bow.json
+abb854e57b706f01b5d2d58b2ce983f38f0441c3 data/modpack/modonomicon/books/guide/entries/equipment/bucket.json
 8156053ac6f0fb3271e3b785a154564da12004ef data/modpack/modonomicon/books/guide/entries/equipment/ceramic_pan.json
 20970f60d432cc1682b1fd594cad9d95b17270be data/modpack/modonomicon/books/guide/entries/equipment/ceramic_spindle.json
 45ff493ea2bf00ac4baf6696929cdc80bded5ccf data/modpack/modonomicon/books/guide/entries/equipment/chisel.json
-a6f488465a9aafb4e174437ba1428bcc00f1cc5c data/modpack/modonomicon/books/guide/entries/equipment/crossbow.json
+d13732e188459d9c32526feb0818e1848539e9ec data/modpack/modonomicon/books/guide/entries/equipment/crossbow.json
 99b269cb24fc175b15877dd8461c5d56c0f1027e data/modpack/modonomicon/books/guide/entries/equipment/damage_types.json
 2a0813ad94d4ec06ef24db0fc42bb5acb21a57c7 data/modpack/modonomicon/books/guide/entries/equipment/excavating_tools.json
 a5594dfd8eeb4aa1f7de7420cb26629063ed847e data/modpack/modonomicon/books/guide/entries/equipment/glassblowing_tools.json
@@ -61,7 +61,7 @@ eeb784f40ca21e62c08416501cbf2a5425f26c3a data/modpack/modonomicon/books/guide/en
 0b93c73dcb2aa80c6d136e33df78a2acf6e431d1 data/modpack/modonomicon/books/guide/entries/equipment/shears.json
 ceca7308517f7004f35345947e4ebc646cde7b3d data/modpack/modonomicon/books/guide/entries/equipment/shield.json
 c375421f57d07d2bc43256f8145fc575a97e548a data/modpack/modonomicon/books/guide/entries/equipment/shovel.json
-6b902873cddb6f23f5cda1c42795ad11d9f488bb data/modpack/modonomicon/books/guide/entries/equipment/starting_fires.json
+cf51329f1914cbee047a6d07a12ac10cc249b1ea data/modpack/modonomicon/books/guide/entries/equipment/starting_fires.json
 f8df589245c5c307eacbce9f4fca9fec036053da data/modpack/modonomicon/books/guide/entries/equipment/sword.json
 8e711d29c6a19886549fd2ad7478ced1ad415248 data/modpack/modonomicon/books/guide/entries/equipment/tool_tiers.json
 a75c400731d507b9d269479d211f18291e57e64f data/modpack/modonomicon/books/guide/entries/geology/andesite.json

@@ -22,7 +22,7 @@
       "title": "book.modpack.guide.equipment.starting_fires.page1.title"
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -45,7 +45,7 @@
       "title": "book.modpack.guide.equipment.starting_fires.page3.title"
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -68,7 +68,7 @@
       "title": "book.modpack.guide.equipment.starting_fires.page5.title"
     },
     {
-      "type": "modpack:knapping",
+      "type": "modonomicon:crafting_recipe",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"

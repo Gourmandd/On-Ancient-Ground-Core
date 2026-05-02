@@ -4,11 +4,11 @@ import com.klikli_dev.modonomicon.api.datagen.CategoryProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;
 import com.klikli_dev.modonomicon.api.datagen.EntryProvider;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
+import com.klikli_dev.modonomicon.api.datagen.book.page.BookCraftingRecipePageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.items.TFCItems;
-import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -38,7 +38,7 @@ public class FirestartersEntry extends EntryProvider {
                \s""");
 
         // page 2: firestarter recipe.
-        this.page("page2", () -> BookKnappingPageModel.create()
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/firestarters"))
         );
@@ -61,7 +61,7 @@ public class FirestartersEntry extends EntryProvider {
                \s""");
 
         // page 4: flint and pyrite recipe.
-        this.page("page4", () -> BookKnappingPageModel.create()
+        this.page("page4", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/flint_and_pyrite"))
         );
@@ -84,7 +84,7 @@ public class FirestartersEntry extends EntryProvider {
                \s""");
 
         // page 6: flint and steel recipe.
-        this.page("page6", () -> BookKnappingPageModel.create()
+        this.page("page6", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath("minecraft", "crafting/flint_and_steel"))
         );

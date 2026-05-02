@@ -84,11 +84,13 @@ public class CeramicPanEntry extends EntryProvider {
 
         this.pageTitle("Products of Panning");
         this.pageText("""
-                Sluicing can give three products:   \s
-                - Ore: 50%
-                - Loose Rock: 25%
-                - Gem: 1%   \s
                 The gem that can drop depends on rock type of the ore deposit.
+                \\
+                \\
+                Sluicing can give three products:   \s
+                - Ore: 50%%
+                - Loose Rock: 25%%
+                - Gem: 1%%
                \s""");
     }
 

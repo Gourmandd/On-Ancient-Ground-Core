@@ -50,7 +50,7 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "modpack:anvil/bucket/wrought_iron",
+      "recipe_id_1": "modpack:anvil/metal/bucket/wrought_iron",
       "text": "book.modpack.guide.equipment.bucket.page4.text",
       "title1": "",
       "title2": ""
@@ -73,7 +73,7 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:anvil/bucket/blue_steel",
+      "recipe_id_1": "tfc:anvil/metal/bucket/blue_steel",
       "text": "book.modpack.guide.equipment.bucket.page6.text",
       "title1": "",
       "title2": ""
