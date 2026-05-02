@@ -67,7 +67,7 @@ public class EquipmentCategory extends CategoryProvider {
         var spindle = this.add(new SpindleEntry(this).generate("z"));
         var horse_armour = this.add(new HorseArmourEntry(this).generate("A"));
         var sandpaper = this.add(new SandpaperEntry(this).generate("B"));
-        var armour = this.add(new SandpaperEntry(this).generate("C"));
+        var armour = this.add(new ArmourEntry(this).generate("C"));
     }
 
     @Override
