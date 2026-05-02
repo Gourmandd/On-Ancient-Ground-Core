@@ -8,11 +8,11 @@
   "display_mode": "node",
   "entry_textures": "modonomicon:textures/gui/entry_textures.png",
   "icon": {
-    "item": "tfc:ore/rich_native_copper"
+    "item": "tfc:metal/chisel/bronze"
   },
   "max_scroll_x": 512,
   "max_scroll_y": 512,
-  "name": "book.modpack.guide.ores.name",
+  "name": "book.modpack.guide.masonry.name",
   "show_category_button": true,
-  "sort_number": 8
+  "sort_number": 4
 }

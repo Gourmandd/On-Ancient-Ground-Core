@@ -31,7 +31,7 @@ public class ShelfEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Shelves** can have items placed on them using **Right-Click** or by pressing **V** while holding an item.
+                **Shelves** can have items placed on them using **Right-Click** or by pressing **V** on or under them while holding an item.
                 To remove an item, do the same but with a empty hand.
 
                \s""");

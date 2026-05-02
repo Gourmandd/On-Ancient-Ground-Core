@@ -8,7 +8,7 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.book.guide.entries.equipment.*;
-import net.gourmand.core.datagen.book.guide.entries.pottery.PanEntry;
+import net.gourmand.core.datagen.book.guide.entries.mining.CeramicPanEntry;
 import net.minecraft.resources.ResourceLocation;
 
 public class EquipmentCategory extends CategoryProvider {
@@ -49,7 +49,7 @@ public class EquipmentCategory extends CategoryProvider {
         var scythe = this.add(new ScytheEntry(this).generate("t"));
         var shears = this.add(new ShearsEntry(this).generate("u"));
 
-        var ceramic_pans = this.add(new PanEntry(this).generate("o"));
+        var ceramic_pans = this.add(new CeramicPanEntry(this).generate("o"));
         var excavating_tools = this.add(new ExcavatingToolsEntry(this).generate("p"));
         var prospecting_tools = this.add(new ProspectingToolsEntry(this).generate("q"));
 

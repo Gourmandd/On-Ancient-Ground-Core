@@ -194,5 +194,26 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                 .blockstate('0', TFCBlocks.CHARCOAL_FORGE, "[heat_level=7]")
                 .build(false)
         );
+
+        this.add(this.modLoc("mining/support_range" ), new DenseMultiblockBuilder()
+                .layer("SAAAAAAAS", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "SAAAAAAAS")
+                .layer("LAAAAAAAL", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "LAAAAAAAL")
+                .layer("SPBPBPBPS", "PAAAPAAAP", "BAAABAAAB", "PAAAPAAAP", "BAA123AAB", "PAAAPAAAP", "BAAABAAAB", "PAAAPAAAP", "SPBPBPBPS")
+                .layer("LAAAAAAAL", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAVAVAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "LAAAAAAAL")
+                .layer("SAAAAAAAS", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAVAVAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "SAAAAAAAS")
+                .layer("GGGGGGGGG", "GGGGGGGGG", "GGGGGGGGG", "GGGGGGGGG", "GGGG0GGGG", "GGGGGGGGG", "GGGGGGGGG", "GGGGGGGGG", "GGGGGGGGG" )
+                .block('A', () -> Blocks.AIR)
+                .blockstate('1', TFCBlocks.WOODS.get(Wood.PINE).get(Wood.BlockType.VERTICAL_SUPPORT), "[south=true]")
+                .blockstate('2', TFCBlocks.WOODS.get(Wood.PINE).get(Wood.BlockType.HORIZONTAL_SUPPORT), "[south=true,north=true]")
+                .blockstate('3', TFCBlocks.WOODS.get(Wood.PINE).get(Wood.BlockType.VERTICAL_SUPPORT), "[north=true]")
+                .block('B', () -> Blocks.RED_STAINED_GLASS)
+                .block('P', () -> Blocks.MAGENTA_STAINED_GLASS)
+                .block('S', () -> Blocks.BLUE_STAINED_GLASS)
+                .block('L', () -> Blocks.LIGHT_BLUE_STAINED_GLASS)
+                .block('G', TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.RAW))
+                .block('V', TFCBlocks.WOODS.get(Wood.PINE).get(Wood.BlockType.VERTICAL_SUPPORT))
+                .block('0', TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.RAW))
+                .build(false)
+        );
     }
 }

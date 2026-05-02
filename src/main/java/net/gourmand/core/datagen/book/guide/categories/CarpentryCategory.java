@@ -9,6 +9,8 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.book.guide.entries.carpentry.*;
 import net.gourmand.core.datagen.book.guide.entries.equipment.*;
+import net.gourmand.core.datagen.book.guide.entries.mining.SluiceEntry;
+import net.gourmand.core.datagen.book.guide.entries.mining.SupportEntry;
 import net.minecraft.resources.ResourceLocation;
 
 public class CarpentryCategory extends CategoryProvider {
@@ -25,7 +27,9 @@ public class CarpentryCategory extends CategoryProvider {
                 "__mfh_jru",
                 "d_lep_iqt",
                 "_________",
-                "a__b___c_"
+                "a__b___c_",
+                "_________",
+                "______xw_"
         };
     }
 
@@ -65,9 +69,7 @@ public class CarpentryCategory extends CategoryProvider {
         var log_fence = this.add(new LogFenceEntry(this).generate("p"));
 
         // planks
-        // add shelf
         // add mechanical bits (same entry as devices category)
-        // add sluice (same as mining category entry)
         // add food shelf (same as in homesteading category)
         // add hanger (same as in homesteading category)
         // add jarbnet (same as in homesteading category)
@@ -76,15 +78,18 @@ public class CarpentryCategory extends CategoryProvider {
         // add wine shelf (same as in homesteading category)
         // add barrel press (same as in homesteading category)
 
+        var workbench = this.add(new WorkbenchEntry(this).generate("q").withParent(planks));
         var lectern = this.add(new LecternEntry(this).generate("i"));
         var sewing_table = this.add(new SewingTableEntry(this).generate("j"));
         var scribing_table = this.add(new ScribingTableEntry(this).generate("k"));
-        var workbench = this.add(new WorkbenchEntry(this).generate("q").withParent(planks));
         var sign = this.add(new SignEntry(this).generate("r"));
         var hanging_sign = this.add(new HangingSignEntry(this).generate("s"));
         var fence = this.add(new FenceEntry(this).generate("t"));
         var fence_gate = this.add(new FenceGateEntry(this).generate("u"));
         var button = this.add(new ButtonEntry(this).generate("v"));
+
+        var shelf = this.add(new ShelfEntry(this).generate("w").withParent(planks));
+        var sluice = this.add(new SluiceEntry(this).generate("x"));
     }
 
     @Override

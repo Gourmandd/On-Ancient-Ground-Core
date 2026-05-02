@@ -7,6 +7,9 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
+import net.gourmand.core.datagen.book.guide.entries.mining.CeramicPanEntry;
+import net.gourmand.core.datagen.book.guide.entries.mining.SluiceEntry;
+import net.gourmand.core.datagen.book.guide.entries.mining.SupportEntry;
 import net.minecraft.resources.ResourceLocation;
 
 public class MiningCategory extends CategoryProvider {
@@ -18,16 +21,19 @@ public class MiningCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-            ""
+            "a_b_c"
         };
     }
 
     @Override
     protected void generateEntries() {
+
+        var sluice = this.add(new SluiceEntry(this).generate("a"));
+        var pan = this.add(new CeramicPanEntry(this).generate("b"));
+        var support = this.add(new SupportEntry(this).generate("c"));
         // add prospecting guide
         // add surface ore guide
         // add river ore deposit guide
-        // add panning/sluicing guide
         // add collapse guide
         // add supports guide
         // add excavators

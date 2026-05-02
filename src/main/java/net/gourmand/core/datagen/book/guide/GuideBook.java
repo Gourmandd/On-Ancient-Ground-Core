@@ -26,8 +26,12 @@ public class GuideBook extends SingleBookSubProvider {
     protected void generateCategories() {
         var gettingStartedCategory = this.add(new GettingStartedCategory(this).generate());
         var equipmentCategory = this.add(new EquipmentCategory(this).generate());
-        var potteryCategory = this.add(new PotteryCategory(this).generate());
+        var miningCategory = this.add(new MiningCategory(this).generate());
         var carpentryCategory = this.add(new CarpentryCategory(this).generate());
+        var masonryCategory = this.add(new MasonryCategory(this).generate());
+        var metalworkingCategory = this.add(new MetalworkingCategory(this).generate());
+        var potteryCategory = this.add(new PotteryCategory(this).generate());
+        var glassworkingCategory = this.add(new GlassworkingCategory(this).generate());
         var oresCategory = this.add(new OresCategory(this).generate());
         var geologyCategory = this.add(new GeologyCategory(this).generate());
     }

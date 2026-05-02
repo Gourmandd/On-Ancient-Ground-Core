@@ -31,6 +31,43 @@
       "text": "book.modpack.guide.pottery.ceramic_pan.page2.text",
       "title1": "",
       "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:pan/empty"
+      },
+      "text": "book.modpack.guide.pottery.ceramic_pan.page3.text",
+      "title": "book.modpack.guide.pottery.ceramic_pan.page3.title"
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/mining/panning.png"
+      ],
+      "text": "book.modpack.guide.pottery.ceramic_pan.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.pottery.ceramic_pan.page5.text",
+      "title": "book.modpack.guide.pottery.ceramic_pan.page5.title",
+      "use_markdown_in_title": false
     }
   ],
   "show_when_any_parent_unlocked": false,

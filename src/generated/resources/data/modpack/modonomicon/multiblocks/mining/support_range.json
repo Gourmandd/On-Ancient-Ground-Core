@@ -1,0 +1,117 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/raw/shale"
+    },
+    "1": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:wood/vertical_support/pine[south=true]"
+    },
+    "2": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:wood/horizontal_support/pine[south=true,north=true]"
+    },
+    "3": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:wood/vertical_support/pine[north=true]"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "B": {
+      "type": "modonomicon:block",
+      "block": "minecraft:red_stained_glass"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/raw/shale"
+    },
+    "L": {
+      "type": "modonomicon:block",
+      "block": "minecraft:light_blue_stained_glass"
+    },
+    "P": {
+      "type": "modonomicon:block",
+      "block": "minecraft:magenta_stained_glass"
+    },
+    "S": {
+      "type": "modonomicon:block",
+      "block": "minecraft:blue_stained_glass"
+    },
+    "V": {
+      "type": "modonomicon:block",
+      "block": "tfc:wood/vertical_support/pine"
+    }
+  },
+  "pattern": [
+    [
+      "SAAAAAAAS",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "SAAAAAAAS"
+    ],
+    [
+      "LAAAAAAAL",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "LAAAAAAAL"
+    ],
+    [
+      "SPBPBPBPS",
+      "PAAAPAAAP",
+      "BAAABAAAB",
+      "PAAAPAAAP",
+      "BAA123AAB",
+      "PAAAPAAAP",
+      "BAAABAAAB",
+      "PAAAPAAAP",
+      "SPBPBPBPS"
+    ],
+    [
+      "LAAAAAAAL",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAVAVAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "LAAAAAAAL"
+    ],
+    [
+      "SAAAAAAAS",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAVAVAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "AAAAAAAAA",
+      "SAAAAAAAS"
+    ],
+    [
+      "GGGGGGGGG",
+      "GGGGGGGGG",
+      "GGGGGGGGG",
+      "GGGGGGGGG",
+      "GGGG0GGGG",
+      "GGGGGGGGG",
+      "GGGGGGGGG",
+      "GGGGGGGGG",
+      "GGGGGGGGG"
+    ]
+  ]
+}

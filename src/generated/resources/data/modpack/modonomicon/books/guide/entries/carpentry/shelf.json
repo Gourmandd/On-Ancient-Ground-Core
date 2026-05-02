@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "carpentry",
-  "description": "book.modpack.guide.carpentry.barrel.description",
+  "description": "book.modpack.guide.carpentry.shelf.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:wood/barrel/ash"
+    "item": "tfc:wood/shelf/ash"
   },
-  "name": "book.modpack.guide.carpentry.barrel.name",
+  "name": "book.modpack.guide.carpentry.shelf.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,10 +16,10 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:wood/barrel/ash"
+        "item": "tfc:wood/shelf/ash"
       },
-      "text": "book.modpack.guide.carpentry.barrel.page1.text",
-      "title": "book.modpack.guide.carpentry.barrel.page1.title"
+      "text": "book.modpack.guide.carpentry.shelf.page1.text",
+      "title": "book.modpack.guide.carpentry.shelf.page1.title"
     },
     {
       "type": "modonomicon:crafting_recipe",
@@ -27,8 +27,8 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:crafting/wood/barrel/ash",
-      "text": "book.modpack.guide.carpentry.barrel.page2.text",
+      "recipe_id_1": "tfc:crafting/wood/shelf/ash",
+      "text": "book.modpack.guide.carpentry.shelf.page2.text",
       "title1": "",
       "title2": ""
     }
@@ -36,13 +36,13 @@
   "parents": [
     {
       "draw_arrow": true,
-      "entry": "carpentry/lumber",
+      "entry": "carpentry/planks",
       "line_enabled": true,
       "line_reversed": false
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 4,
-  "x": -1,
-  "y": -1
+  "sort_number": 22,
+  "x": 3,
+  "y": 3
 }

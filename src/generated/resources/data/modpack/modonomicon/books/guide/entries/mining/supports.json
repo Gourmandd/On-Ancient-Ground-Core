@@ -1,13 +1,13 @@
 {
   "background_u_index": 0,
   "background_v_index": 0,
-  "category": "carpentry",
-  "description": "book.modpack.guide.carpentry.supports.description",
+  "category": "mining",
+  "description": "book.modpack.guide.mining.supports.description",
   "hide_while_locked": false,
   "icon": {
     "item": "tfc:wood/support/ash"
   },
-  "name": "book.modpack.guide.carpentry.supports.name",
+  "name": "book.modpack.guide.mining.supports.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -18,8 +18,8 @@
       "item": {
         "item": "tfc:wood/support/ash"
       },
-      "text": "book.modpack.guide.carpentry.supports.page1.text",
-      "title": "book.modpack.guide.carpentry.supports.page1.title"
+      "text": "book.modpack.guide.mining.supports.page1.text",
+      "title": "book.modpack.guide.mining.supports.page1.title"
     },
     {
       "type": "modonomicon:crafting_recipe",
@@ -28,7 +28,7 @@
         "type": "modonomicon:none"
       },
       "recipe_id_1": "tfc:crafting/wood/support/ash",
-      "text": "book.modpack.guide.carpentry.supports.page2.text",
+      "text": "book.modpack.guide.mining.supports.page2.text",
       "title1": "",
       "title2": ""
     },
@@ -41,8 +41,8 @@
       "item": {
         "tag": "c:stones/raw"
       },
-      "text": "book.modpack.guide.carpentry.supports.page3.text",
-      "title": "book.modpack.guide.carpentry.supports.page3.title"
+      "text": "book.modpack.guide.mining.supports.page3.text",
+      "title": "book.modpack.guide.mining.supports.page3.title"
     },
     {
       "type": "modonomicon:text",
@@ -51,8 +51,8 @@
         "type": "modonomicon:none"
       },
       "show_title_separator": true,
-      "text": "book.modpack.guide.carpentry.supports.page4.text",
-      "title": "book.modpack.guide.carpentry.supports.page4.title",
+      "text": "book.modpack.guide.mining.supports.page4.text",
+      "title": "book.modpack.guide.mining.supports.page4.title",
       "use_markdown_in_title": false
     },
     {
@@ -62,8 +62,8 @@
         "type": "modonomicon:none"
       },
       "show_title_separator": true,
-      "text": "book.modpack.guide.carpentry.supports.page5.text",
-      "title": "book.modpack.guide.carpentry.supports.page5.title",
+      "text": "book.modpack.guide.mining.supports.page5.text",
+      "title": "book.modpack.guide.mining.supports.page5.title",
       "use_markdown_in_title": false
     },
     {
@@ -75,7 +75,7 @@
       "multiblock_id": "mining/support_range",
       "multiblock_name": "",
       "show_visualize_button": false,
-      "text": "book.modpack.guide.carpentry.supports.page6.text"
+      "text": "book.modpack.guide.mining.supports.page6.text"
     },
     {
       "type": "modonomicon:text",
@@ -84,21 +84,13 @@
         "type": "modonomicon:none"
       },
       "show_title_separator": true,
-      "text": "book.modpack.guide.carpentry.supports.page7.text",
-      "title": "book.modpack.guide.carpentry.supports.page7.title",
+      "text": "book.modpack.guide.mining.supports.page7.text",
+      "title": "book.modpack.guide.mining.supports.page7.title",
       "use_markdown_in_title": false
     }
   ],
-  "parents": [
-    {
-      "draw_arrow": true,
-      "entry": "carpentry/saw",
-      "line_enabled": true,
-      "line_reversed": false
-    }
-  ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 3,
-  "x": -4,
-  "y": -1
+  "sort_number": 2,
+  "x": 2,
+  "y": 0
 }

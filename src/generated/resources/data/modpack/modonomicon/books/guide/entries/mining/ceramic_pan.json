@@ -1,13 +1,13 @@
 {
   "background_u_index": 0,
   "background_v_index": 0,
-  "category": "equipment",
-  "description": "book.modpack.guide.equipment.ceramic_pan.description",
+  "category": "mining",
+  "description": "book.modpack.guide.mining.ceramic_pan.description",
   "hide_while_locked": false,
   "icon": {
     "item": "tfc:pan/empty"
   },
-  "name": "book.modpack.guide.equipment.ceramic_pan.name",
+  "name": "book.modpack.guide.mining.ceramic_pan.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -18,8 +18,8 @@
       "item": {
         "item": "tfc:pan/empty"
       },
-      "text": "book.modpack.guide.equipment.ceramic_pan.page1.text",
-      "title": "book.modpack.guide.equipment.ceramic_pan.page1.title"
+      "text": "book.modpack.guide.mining.ceramic_pan.page1.text",
+      "title": "book.modpack.guide.mining.ceramic_pan.page1.title"
     },
     {
       "type": "modpack:knapping",
@@ -28,7 +28,7 @@
         "type": "modonomicon:none"
       },
       "recipe_id_1": "tfc:knapping/ceramic/unfired_pan",
-      "text": "book.modpack.guide.equipment.ceramic_pan.page2.text",
+      "text": "book.modpack.guide.mining.ceramic_pan.page2.text",
       "title1": "",
       "title2": ""
     },
@@ -41,8 +41,8 @@
       "item": {
         "item": "tfc:pan/empty"
       },
-      "text": "book.modpack.guide.equipment.ceramic_pan.page3.text",
-      "title": "book.modpack.guide.equipment.ceramic_pan.page3.title"
+      "text": "book.modpack.guide.mining.ceramic_pan.page3.text",
+      "title": "book.modpack.guide.mining.ceramic_pan.page3.title"
     },
     {
       "type": "modonomicon:image",
@@ -54,7 +54,7 @@
       "images": [
         "modpack:textures/book/mining/panning.png"
       ],
-      "text": "book.modpack.guide.equipment.ceramic_pan.page4.text",
+      "text": "book.modpack.guide.mining.ceramic_pan.page4.text",
       "title": "",
       "use_legacy_rendering": false
     },
@@ -65,13 +65,13 @@
         "type": "modonomicon:none"
       },
       "show_title_separator": true,
-      "text": "book.modpack.guide.equipment.ceramic_pan.page5.text",
-      "title": "book.modpack.guide.equipment.ceramic_pan.page5.title",
+      "text": "book.modpack.guide.mining.ceramic_pan.page5.text",
+      "title": "book.modpack.guide.mining.ceramic_pan.page5.title",
       "use_markdown_in_title": false
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 16,
-  "x": 6,
+  "sort_number": 1,
+  "x": 0,
   "y": 0
 }

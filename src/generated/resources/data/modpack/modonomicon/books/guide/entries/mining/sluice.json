@@ -1,0 +1,101 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "mining",
+  "description": "book.modpack.guide.mining.sluice.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:wood/sluice/ash"
+  },
+  "name": "book.modpack.guide.mining.sluice.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:wood/sluice/ash"
+      },
+      "text": "book.modpack.guide.mining.sluice.page1.text",
+      "title": "book.modpack.guide.mining.sluice.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/sluice/ash",
+      "text": "book.modpack.guide.mining.sluice.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.mining.sluice.page3.text",
+      "title": "",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/mining/sluice_cross.png"
+      ],
+      "text": "book.modpack.guide.mining.sluice.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.mining.sluice.page5.text",
+      "title": "",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/mining/sluice_in_use.png"
+      ],
+      "text": "book.modpack.guide.mining.sluice.page6.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.mining.sluice.page7.text",
+      "title": "book.modpack.guide.mining.sluice.page7.title",
+      "use_markdown_in_title": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 0,
+  "x": -2,
+  "y": 0
+}
