@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.bone_needle.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:bone_needle"
+  },
+  "name": "book.modpack.guide.equipment.bone_needle.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:bone_needle"
+      },
+      "text": "book.modpack.guide.equipment.bone_needle.page1.text",
+      "title": "book.modpack.guide.equipment.bone_needle.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/bone_needle",
+      "text": "book.modpack.guide.equipment.bone_needle.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 23,
+  "x": 0,
+  "y": 2
+}

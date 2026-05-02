@@ -27,7 +27,7 @@ public class HorseArmourEntry extends EntryProvider {
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of())
+                .withItem(Ingredient.of(TFCItems.METAL_ITEMS.get(Metal.COPPER).get(Metal.ItemType.HORSE_ARMOR)))
         );
 
         this.pageTitle(entryName());
@@ -40,15 +40,9 @@ public class HorseArmourEntry extends EntryProvider {
 
         // page 2: crafting recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
-                .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/metal/horse_armor/copper"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/metal/horse_armor/bronze"))
         );
-
-        this.pageTitle(entryName());
-        this.pageText("""
-                Horse armour being crafting out of **Copper** and **Bronze** double sheets, some jute and leather horse armour. \s
-               \s""");
 
         // page 3: leather horse armour knapping.
         this.page("page3", () -> BookKnappingPageModel.create()

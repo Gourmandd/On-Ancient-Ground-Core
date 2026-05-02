@@ -1,0 +1,64 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.shield.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/shield/copper"
+  },
+  "name": "book.modpack.guide.equipment.shield.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "c:tools/shield"
+      },
+      "text": "book.modpack.guide.equipment.shield.page1.text",
+      "title": "book.modpack.guide.equipment.shield.page1.title"
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/metal/shield/copper",
+      "recipe_id_2": "tfc:anvil/metal/shield/bronze",
+      "text": "book.modpack.guide.equipment.shield.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:shield"
+      },
+      "text": "book.modpack.guide.equipment.shield.page3.text",
+      "title": "book.modpack.guide.equipment.shield.page3.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "minecraft:shield",
+      "text": "book.modpack.guide.equipment.shield.page4.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 24,
+  "x": -7,
+  "y": 0
+}

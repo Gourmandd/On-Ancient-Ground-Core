@@ -10,7 +10,7 @@ import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
-import net.gourmand.core.modonomicon.datagen.BookCastingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -42,7 +42,7 @@ public class ShieldEntry extends EntryProvider {
                \s""");
 
         // page 2: forging recipe.
-        this.page("page2", () -> BookCastingPageModel.create()
+        this.page("page2", () -> BookForgingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/shield/copper"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/shield/bronze"))

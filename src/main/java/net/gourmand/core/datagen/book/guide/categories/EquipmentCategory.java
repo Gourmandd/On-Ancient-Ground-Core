@@ -25,7 +25,7 @@ public class EquipmentCategory extends CategoryProvider {
         return new String[]{
                 "______v_w______",
                 "_______________",
-                "yri__tbujl__do_",
+                "yri__tbujl__doD",
                 "Asn_________cpB",
                 "Cgh__aexfm__kqz"
         };
@@ -68,6 +68,7 @@ public class EquipmentCategory extends CategoryProvider {
         var horse_armour = this.add(new HorseArmourEntry(this).generate("A"));
         var sandpaper = this.add(new SandpaperEntry(this).generate("B"));
         var armour = this.add(new ArmourEntry(this).generate("C"));
+        var bucket = this.add(new BucketEntry(this).generate("D"));
     }
 
     @Override

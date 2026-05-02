@@ -1,0 +1,52 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.horse_armour.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/horse_armor/copper"
+  },
+  "name": "book.modpack.guide.equipment.horse_armour.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:metal/horse_armor/copper"
+      },
+      "text": "book.modpack.guide.equipment.horse_armour.page1.text",
+      "title": "book.modpack.guide.equipment.horse_armour.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/metal/horse_armor/copper",
+      "recipe_id_2": "tfc:crafting/metal/horse_armor/bronze",
+      "text": "",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/leather_horse_armor",
+      "text": "book.modpack.guide.equipment.horse_armour.page3.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 26,
+  "x": -7,
+  "y": 1
+}

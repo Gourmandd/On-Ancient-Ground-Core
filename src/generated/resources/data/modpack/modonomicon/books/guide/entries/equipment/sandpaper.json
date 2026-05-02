@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.sandpaper.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "create:sand_paper"
+  },
+  "name": "book.modpack.guide.equipment.sandpaper.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "create:sand_paper"
+      },
+      "text": "book.modpack.guide.equipment.sandpaper.page1.text",
+      "title": "book.modpack.guide.equipment.sandpaper.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "create:crafting/materials/sand_paper",
+      "text": "book.modpack.guide.equipment.sandpaper.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 27,
+  "x": 7,
+  "y": 1
+}

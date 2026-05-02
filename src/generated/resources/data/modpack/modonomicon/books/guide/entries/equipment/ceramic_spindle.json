@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "equipment",
+  "description": "book.modpack.guide.equipment.ceramic_spindle.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:spindle"
+  },
+  "name": "book.modpack.guide.equipment.ceramic_spindle.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:spindle"
+      },
+      "text": "book.modpack.guide.equipment.ceramic_spindle.page1.text",
+      "title": "book.modpack.guide.equipment.ceramic_spindle.page1.title"
+    },
+    {
+      "type": "modpack:knapping",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:knapping/ceramic/unfired_spindle_head",
+      "text": "book.modpack.guide.equipment.ceramic_spindle.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 25,
+  "x": 7,
+  "y": 2
+}
