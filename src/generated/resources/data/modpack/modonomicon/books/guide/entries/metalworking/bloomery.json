@@ -1,0 +1,85 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.bloomery.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:bloomery"
+  },
+  "name": "book.modpack.guide.metalworking.bloomery.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:bloomery"
+      },
+      "text": "book.modpack.guide.metalworking.bloomery.page1.text",
+      "title": "book.modpack.guide.metalworking.bloomery.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/bloomery",
+      "text": "book.modpack.guide.metalworking.bloomery.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.bloomery.page3.text",
+      "title": "book.modpack.guide.metalworking.bloomery.page3.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "metalworking/bloomery",
+      "multiblock_name": "",
+      "show_visualize_button": true,
+      "text": "book.modpack.guide.metalworking.bloomery.page4.text"
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/refined_iron_bloom",
+      "recipe_id_2": "tfc:anvil/metal/ingot/wrought_iron",
+      "text": "book.modpack.guide.metalworking.bloomery.page5.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.bloomery.page6.text",
+      "title": "book.modpack.guide.metalworking.bloomery.page6.title",
+      "use_markdown_in_title": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 9,
+  "x": -1,
+  "y": 3
+}

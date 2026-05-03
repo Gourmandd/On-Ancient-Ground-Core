@@ -1,8 +1,10 @@
-// 1.21.1	2026-05-02T09:57:12.02599634	Multiblocks: modpack
+// 1.21.1	2026-05-03T21:34:44.781705397	Multiblocks: modpack
 dc04a3820367988cd6c92649fdab87069d64ac97 data/modpack/modonomicon/multiblocks/getting_started/clay_indicators.json
 a7a87d1290b8fec7e67a76c4d08b5637378a2e0d data/modpack/modonomicon/multiblocks/getting_started/fire_pit.json
 5d10cd244f7b05a367d4b9e51099cf8e4d5400bc data/modpack/modonomicon/multiblocks/getting_started/pit_kiln.json
 ef340b9838f1045eb718282ba0de5703e3ccf154 data/modpack/modonomicon/multiblocks/getting_started/stick_and_stones.json
+ee137197977511d099c71769ea71552eb9a9ab87 data/modpack/modonomicon/multiblocks/metalworking/blast_furnace.json
+a4515ebad10288bf75d02bdaac0fa070a0c13aa8 data/modpack/modonomicon/multiblocks/metalworking/bloomery.json
 124b9d2af6b2dd9f263fd730a3ef5354008f955f data/modpack/modonomicon/multiblocks/mining/support_range.json
 d429c34c004e91c1cb842675e091ee5186d15eee data/modpack/modonomicon/multiblocks/ore_preview/amethyst.json
 53ef881586ecc60058cbf32bdd6712b194f0e869 data/modpack/modonomicon/multiblocks/ore_preview/anthracite.json

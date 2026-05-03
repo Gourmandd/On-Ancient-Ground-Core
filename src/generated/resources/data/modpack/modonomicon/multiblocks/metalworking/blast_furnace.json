@@ -1,0 +1,55 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:charcoal_forge[heat_level=7]"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "B": {
+      "type": "modonomicon:block",
+      "block": "tfc:bellows"
+    },
+    "C": {
+      "type": "modonomicon:block",
+      "block": "tfc:crucible"
+    },
+    "F": {
+      "type": "modonomicon:block",
+      "block": "tfc:blast_furnace"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/bricks/dacite"
+    },
+    "R": {
+      "type": "modonomicon:block",
+      "block": "tfc:reinforced_fire_bricks"
+    }
+  },
+  "pattern": [
+    [
+      "RRR",
+      "RAR",
+      "RRR"
+    ],
+    [
+      "AAA",
+      "AFB",
+      "AAA"
+    ],
+    [
+      "AAA",
+      "ACA",
+      "AAA"
+    ],
+    [
+      "GGG",
+      "G0G",
+      "GGG"
+    ]
+  ]
+}

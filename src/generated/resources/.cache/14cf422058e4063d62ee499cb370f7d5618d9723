@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-02T20:30:52.176958145	Books: modpack
+// 1.21.1	2026-05-03T21:52:32.397262554	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 b43e1989b5e4d54d3afb942b4b67768d09dd73e7 data/modpack/modonomicon/books/guide/categories/equipment.json
@@ -111,15 +111,17 @@ ffa4a6105a93c6a50567be47417d88f3cad3f490 data/modpack/modonomicon/books/guide/en
 ae4fa14b994550f57ca43135d2aefbff36921b87 data/modpack/modonomicon/books/guide/entries/getting_started/pit_kiln.json
 e1e0b99a70baed146be6a6e1cee96933203ae7ab data/modpack/modonomicon/books/guide/entries/getting_started/shovels.json
 5b073e39b3472b072cd79daac94732074d25c248 data/modpack/modonomicon/books/guide/entries/getting_started/straw.json
-5ad21eb3aff5411484b523914bfcf2fa615dc40a data/modpack/modonomicon/books/guide/entries/metalworking/anvil.json
-6085b6f8a04595883cd5b14736455b7e97db9ba0 data/modpack/modonomicon/books/guide/entries/metalworking/anvil_working.json
-6af4a4f50234a946db48dbce4890a0e28ada46ab data/modpack/modonomicon/books/guide/entries/metalworking/double_ingot.json
-9b522c5c19cc90c661866ce63e0cdf479da3e538 data/modpack/modonomicon/books/guide/entries/metalworking/double_sheet.json
-c02d79c2523cba425548647474e1ecd44edf59f2 data/modpack/modonomicon/books/guide/entries/metalworking/ingot.json
-34d0c5b796503a035c4588d5305efc0c1c0eeb75 data/modpack/modonomicon/books/guide/entries/metalworking/rock_anvil.json
-7defc715ecefba29831ca753ecbe09b56de64a02 data/modpack/modonomicon/books/guide/entries/metalworking/rod.json
-4e9bec8d2b96a891c4987e7a8b3475fc399b1a99 data/modpack/modonomicon/books/guide/entries/metalworking/sheet.json
-26d1b7a9a688f396ea159b64a099915b35ccf976 data/modpack/modonomicon/books/guide/entries/metalworking/welding.json
+fadd26393bbbdf26273b40165e09ca469574aaf0 data/modpack/modonomicon/books/guide/entries/metalworking/anvil.json
+e8638f7f85984339314cc261c6b138cfeab80a7b data/modpack/modonomicon/books/guide/entries/metalworking/anvil_working.json
+b2f3534fbdda51fb091d71fc64f833597d6277bd data/modpack/modonomicon/books/guide/entries/metalworking/blast_furnace.json
+4f91ae336a0797ffdb61cd40b297c5019735e16e data/modpack/modonomicon/books/guide/entries/metalworking/bloomery.json
+730ea57523cbf36cb04089bb346969bacd1d5312 data/modpack/modonomicon/books/guide/entries/metalworking/double_ingot.json
+7e2fa38b8501da14a2f03e0b0da8c447704aeb2f data/modpack/modonomicon/books/guide/entries/metalworking/double_sheet.json
+cb1ce0d854b3653fca697901adc28daf5d176f06 data/modpack/modonomicon/books/guide/entries/metalworking/ingot.json
+805177bbd514b5b9d1ea8d87481df78bde2f077e data/modpack/modonomicon/books/guide/entries/metalworking/rock_anvil.json
+3c1b7481a84c21097ef8dbd463f682d1b0ec9698 data/modpack/modonomicon/books/guide/entries/metalworking/rod.json
+a42feca0fee1f3685db5ea5e74f5420310d88bfc data/modpack/modonomicon/books/guide/entries/metalworking/sheet.json
+fdadd0e826fb4cb5266c107e2b6b9f26955b507c data/modpack/modonomicon/books/guide/entries/metalworking/welding.json
 bf5b74e5f875b9ec6f875149e2359d8bfb97e96f data/modpack/modonomicon/books/guide/entries/mining/ceramic_pan.json
 d3beaab456116d637b36aa0c88163edd55840f81 data/modpack/modonomicon/books/guide/entries/mining/excavating_tools.json
 5d972300fe7755e8806fb5488f660ff614395995 data/modpack/modonomicon/books/guide/entries/mining/ore_deposit.json

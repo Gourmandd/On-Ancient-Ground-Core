@@ -1,0 +1,134 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.blast_furnace.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:blast_furnace"
+  },
+  "name": "book.modpack.guide.metalworking.blast_furnace.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:blast_furnace"
+      },
+      "text": "book.modpack.guide.metalworking.blast_furnace.page1.text",
+      "title": "book.modpack.guide.metalworking.blast_furnace.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/blast_furnace",
+      "text": "book.modpack.guide.metalworking.blast_furnace.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.blast_furnace.page3.text",
+      "title": "book.modpack.guide.metalworking.blast_furnace.page3.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "metalworking/blast_furnace",
+      "multiblock_name": "",
+      "show_visualize_button": true,
+      "text": "book.modpack.guide.metalworking.blast_furnace.page4.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.blast_furnace.page5.text",
+      "title": "book.modpack.guide.metalworking.blast_furnace.page5.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/metalworking/blast_furnace_interface.png"
+      ],
+      "text": "book.modpack.guide.metalworking.blast_furnace.page6.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.blast_furnace.page7.text",
+      "title": "book.modpack.guide.metalworking.blast_furnace.page7.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/metal/tuyere/bronze",
+      "recipe_id_2": "tfc:anvil/metal/tuyere/wrought_iron",
+      "text": "book.modpack.guide.metalworking.blast_furnace.page8.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:metal/ingot/pig_iron"
+      },
+      "text": "book.modpack.guide.metalworking.blast_furnace.page9.text",
+      "title": "book.modpack.guide.metalworking.blast_furnace.page9.title"
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/metal/ingot/high_carbon_steel",
+      "recipe_id_2": "tfc:anvil/metal/ingot/steel",
+      "text": "book.modpack.guide.metalworking.blast_furnace.page10.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 10,
+  "x": 1,
+  "y": 3
+}

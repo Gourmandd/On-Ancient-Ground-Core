@@ -215,5 +215,33 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                 .block('0', TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.RAW))
                 .build(false)
         );
+
+        this.add(this.modLoc("metalworking/bloomery" ), new DenseMultiblockBuilder()
+                .layer("AGA", "GAG", "AGA")
+                .layer("AGA", "GAG", "AGA")
+                .layer("AGA", "GAG", "AGA")
+                .layer("AGA", "GAG", "GBG")
+                .layer("AGA", "G0G", "GGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.DACITE).get(Rock.BlockType.BRICKS).get())
+                .block('0', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.DACITE).get(Rock.BlockType.BRICKS).get())
+                .block('B', TFCBlocks.BELLOWS)
+                .build(false)
+        );
+
+        this.add(this.modLoc("metalworking/blast_furnace" ), new DenseMultiblockBuilder()
+                .layer("RRR", "RAR", "RRR")
+                .layer("AAA", "AFB", "AAA")
+                .layer("AAA", "ACA", "AAA")
+                .layer("GGG", "G0G", "GGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.DACITE).get(Rock.BlockType.BRICKS).get())
+                .block('C', TFCBlocks.CRUCIBLE)
+                .block('B', TFCBlocks.BELLOWS)
+                .block('F', TFCBlocks.BLAST_FURNACE)
+                .block('R', TFCBlocks.REINFORCED_FIRE_BRICKS)
+                .blockstate('0', TFCBlocks.CHARCOAL_FORGE, "[heat_level=7]")
+                .build(false)
+        );
     }
 }

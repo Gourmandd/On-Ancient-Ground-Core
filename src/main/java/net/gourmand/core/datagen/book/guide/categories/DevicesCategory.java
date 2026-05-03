@@ -6,6 +6,8 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookCategoryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.gourmand.core.datagen.book.guide.entries.metalworking.BlastFurnaceEntry;
+import net.gourmand.core.datagen.book.guide.entries.metalworking.BloomeryEntry;
 import net.minecraft.resources.ResourceLocation;
 
 public class DevicesCategory extends CategoryProvider {
@@ -25,6 +27,9 @@ public class DevicesCategory extends CategoryProvider {
     protected void generateEntries() {
 
         // have mechanical automation in entries as needed.
+
+        var bloomery = this.add(new BloomeryEntry(this).generate("a"));
+        var blast_furnace = this.add(new BlastFurnaceEntry(this).generate("b"));
 
         // add tnt
         // add barrel (same as homesteading)

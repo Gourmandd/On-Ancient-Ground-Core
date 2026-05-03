@@ -23,7 +23,9 @@ public class MetalworkingCategory extends CategoryProvider {
                 "_____",
                 "c___d",
                 "_____",
-                "a___b"
+                "a___b",
+                "_____",
+                "_j_k_"
         };
     }
 
@@ -44,8 +46,9 @@ public class MetalworkingCategory extends CategoryProvider {
         var sheet = this.add(new SheetEntry(this).generate("h"));
         var double_sheet = this.add(new DoubleSheetEntry(this).generate("i"));
 
-        // add bloomery
-        // add blast furnace
+        var bloomery = this.add(new BloomeryEntry(this).generate("j"));
+        var blast_furnace = this.add(new BlastFurnaceEntry(this).generate("k"));
+
         // add charcoal pit
         // add charcoal forge
         // add fuel guide
