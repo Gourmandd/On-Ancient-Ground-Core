@@ -192,6 +192,13 @@
         ]
       },
       {
+        "rock": "minecraft:dripstone_block",
+        "blocks": [
+          "modpack:rock/cobble/travertine",
+          "modpack:rock/mossy_cobble/travertine"
+        ]
+      },
+      {
         "rock": "minecraft:deepslate",
         "blocks": [
             "modpack:rock/mossy_cobble/nephelinite",

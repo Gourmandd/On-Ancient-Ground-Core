@@ -129,6 +129,22 @@
       {
         "replace": "spectrum:basal_marble",
         "with": "modpack:deposit/cassiterite/picrite_basalt"
+      },
+      {
+        "replace": "quark:jasper",
+        "with": "modpack:deposit/cassiterite/red_sandstone"
+      },
+      {
+        "replace": "create:ochrum",
+        "with": "modpack:deposit/cassiterite/sandstone"
+      },
+      {
+        "replace": "minecraft:dripstone_block",
+        "with": "modpack:deposit/cassiterite/travertine"
+      },
+      {
+        "replace": "minecraft:stone",
+        "with": "modpack:deposit/cassiterite/argillite"
       }
     ]
   }

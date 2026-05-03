@@ -153,105 +153,112 @@
         "rock": "modpack:rock/raw/peridotite",
         "blocks": [
             "modpack:rock/raw/peridotite",
-            "modpack:rock/gravel/peridotite"
+            "modpack:rock/cobble/peridotite"
         ]
       },
       {
         "rock": "modpack:rock/raw/serpentine",
         "blocks": [
             "modpack:rock/raw/serpentine",
-            "modpack:rock/gravel/serpentine"
+            "modpack:rock/cobble/serpentine"
         ]
       },
       {
         "rock": "modpack:rock/raw/blueschist",
         "blocks": [
             "modpack:rock/raw/blueschist",
-            "modpack:rock/gravel/blueschist"
+            "modpack:rock/cobble/blueschist"
         ]
       },
       {
         "rock": "create:scoria",
         "blocks": [
             "create:scoria",
-            "modpack:rock/gravel/komatiite"
+            "modpack:rock/cobble/komatiite"
         ]
       },
       {
         "rock":  "caupona:felsic_tuff",
         "blocks": [
             "caupona:felsic_tuff",
-            "modpack:rock/gravel/breccia"
+            "modpack:rock/cobble/breccia"
         ]
       },
       {
         "rock": "minecraft:stone",
         "blocks": [
             "minecraft:stone",
-            "modpack:rock/gravel/argillite"
+            "modpack:rock/cobble/argillite"
+        ]
+      },
+      {
+        "rock": "minecraft:dripstone_block",
+        "blocks": [
+          "minecraft:dripstone_block",
+          "modpack:rock/cobble/travertine"
         ]
       },
       {
         "rock": "minecraft:deepslate",
         "blocks": [
             "minecraft:deepslate",
-            "modpack:rock/gravel/nephelinite"
+            "modpack:rock/cobble/nephelinite"
         ]
       },
       {
         "rock": "spectrum:blackslag",
         "blocks": [
             "spectrum:blackslag",
-            "modpack:rock/gravel/blackslag"
+            "modpack:rock/cobble/blackslag"
         ]
       },
       {
         "rock": "spectrum:basal_marble",
         "blocks": [
             "spectrum:basal_marble",
-            "modpack:rock/gravel/picrite_basalt"
+            "modpack:rock/cobble/picrite_basalt"
         ]
       },
       {
         "rock": "create:ochrum",
         "blocks": [
             "create:ochrum",
-            "modpack:rock/gravel/sandstone"
+            "modpack:rock/cobble/sandstone"
         ]
       },
       {
         "rock": "create:limestone",
         "blocks": [
             "create:limestone",
-            "modpack:rock/gravel/soapstone"
+            "modpack:rock/cobble/soapstone"
         ]
       },
       {
         "rock": "create:scorchia",
         "blocks": [
             "create:scorchia",
-            "modpack:rock/gravel/suevite"
+            "modpack:rock/cobble/suevite"
         ]
       },
       {
         "rock": "quark:limestone",
         "blocks": [
             "quark:limestone",
-            "modpack:rock/gravel/arkose"
+            "modpack:rock/cobble/arkose"
         ]
       },
       {
         "rock": "quark:shale",
         "blocks": [
             "quark:shale",
-            "modpack:rock/gravel/phonolite"
+            "modpack:rock/cobble/phonolite"
         ]
       },
       {
         "rock": "quark:jasper",
         "blocks": [
             "quark:jasper",
-            "modpack:rock/gravel/red_sandstone"
+            "modpack:rock/cobble/red_sandstone"
         ]
       }
     ]

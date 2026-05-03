@@ -165,6 +165,12 @@
         ]
       },
       {
+        "rock": "minecraft:dripstone_block",
+        "blocks": [
+          "minecraft:dripstone_block"
+        ]
+      },
+      {
         "rock": "minecraft:deepslate",
         "blocks": [
             "minecraft:deepslate"

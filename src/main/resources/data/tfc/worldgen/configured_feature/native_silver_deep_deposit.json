@@ -129,6 +129,22 @@
       {
         "replace": "spectrum:basal_marble",
         "with": "modpack:deposit/native_silver/picrite_basalt"
+      },
+      {
+        "replace": "quark:jasper",
+        "with": "modpack:deposit/native_silver/red_sandstone"
+      },
+      {
+        "replace": "create:ochrum",
+        "with": "modpack:deposit/native_silver/sandstone"
+      },
+      {
+        "replace": "minecraft:dripstone_block",
+        "with": "modpack:deposit/native_silver/travertine"
+      },
+      {
+        "replace": "minecraft:stone",
+        "with": "modpack:deposit/native_silver/argillite"
       }
     ]
   }
