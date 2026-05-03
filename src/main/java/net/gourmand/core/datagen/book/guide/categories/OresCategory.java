@@ -68,7 +68,7 @@ public class OresCategory extends CategoryProvider {
                 """
                 Malachite is an ore of **Copper** metal.\s
                 \\
-                It can be found primarily in *Marble* or **Limestone**, **Chalk**, and **Dolomite**. \s
+                It can be found in **Marble**, **Limestone**, **Chalk**, **Dolomite**, **Sandstone**, **Red Sandstone**, **Breccia**,  **Travertine**, and **Argillite**. \s
                 It can be found at most elevations, however deeper veins are often larger and richer. \s
                 """
         );
