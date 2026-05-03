@@ -32,6 +32,11 @@ public class GeologyCategory extends CategoryProvider {
     @Override
     protected void generateEntries() {
 
+        // add whether a rock is a fluxstone.
+
+        // add entry for each rock category
+        // add entry about the geology of the world
+
         //region Igneous Intrusive
         var graniteEntry = createRockEntry(
                 Rock.GRANITE,

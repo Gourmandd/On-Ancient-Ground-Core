@@ -41,6 +41,9 @@ public class OresCategory extends CategoryProvider {
     @Override
     protected void generateEntries() {
 
+        // add flux info
+
+        // in the ore entries add their pickaxe tier required to mine.
 
         // copper
         var nativeCopperEntry = createOreEntry(

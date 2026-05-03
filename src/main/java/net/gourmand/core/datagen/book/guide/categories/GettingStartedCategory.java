@@ -35,6 +35,12 @@ public class GettingStartedCategory extends CategoryProvider {
     protected void generateEntries() {
         // about modpack
 
+        // add size and weight guide (somewhere relevant, maybe not here)
+        // add food and water guide (somewhere relevant, maybe not here)
+        // add calendar and climate (somewhere relevant, maybe not here)
+        // add flora guide (somewhere relevant, maybe not here)
+        // add fauna guide (somewhere relevant, maybe not here)
+
         // getting started
         var introduction = this.add(new IntroductionEntry(this).generate("a"));
 

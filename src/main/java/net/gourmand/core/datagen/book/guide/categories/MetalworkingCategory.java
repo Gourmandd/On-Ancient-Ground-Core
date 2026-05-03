@@ -57,6 +57,10 @@ public class MetalworkingCategory extends CategoryProvider {
         // add iron making info (after bloomery)
         // add coloured steel making info
         // add chain
+        // add armour trims
+        // add bellows
+        // add channel casting (maybe the one in pottery category has enough info?)
+        // add heating/temperature guide
     }
 
     @Override

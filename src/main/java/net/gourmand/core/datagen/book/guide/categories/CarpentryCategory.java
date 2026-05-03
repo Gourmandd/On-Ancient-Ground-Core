@@ -72,8 +72,8 @@ public class CarpentryCategory extends CategoryProvider {
         // add mechanical bits (same entry as devices category)
         // add food shelf (same as in homesteading category)
         // add hanger (same as in homesteading category)
-        // add jarbnet (same as in homesteading category)
-        // add keg (same as in homesteading category)
+        // add jarbnet
+        // add keg (also mention it can do barrel recipes, I think it might be able, not mentioned in firmalife guide?)
         // add stomping barrel (same as in homesteading category)
         // add wine shelf (same as in homesteading category)
         // add barrel press (same as in homesteading category)

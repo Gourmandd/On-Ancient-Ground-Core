@@ -6,12 +6,11 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookCategoryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
-import net.dries007.tfc.util.Metal;
 import net.minecraft.resources.ResourceLocation;
 
-public class MasonryCategory extends CategoryProvider {
+public class AgricultureCategory extends CategoryProvider {
 
-    public MasonryCategory(ModonomiconProviderBase parent) {
+    public AgricultureCategory(ModonomiconProviderBase parent) {
         super(parent);
     }
 
@@ -24,33 +23,34 @@ public class MasonryCategory extends CategoryProvider {
 
     @Override
     protected void generateEntries() {
-        // add brick (item)
-        // add mortar
-        // add bricks (block)
-        // add smooth (block)
-        // add chiseled (block)
-        // add pressure plate
-        // add button
-        // add chiseling (mechanic)
-        // add aqueducts
-        // add mortared cobble
-        // add collapse (same as mining category)
-        // add plaster
+        // add composter (same as homesteading)
+        // crop list
+        // fruit tree list
+        // bushes list
+        // add animal husbandry
+        // soil type list
+        // fertiliser list
+        // add hydration guide.
+        // pet guide.
+        // greenhouse guide.
+        // greenhouse irrigation
+        // greenhouse planters
+        // greenhouse automation
     }
 
     @Override
     protected String categoryName() {
-        return "Masonry";
+        return "Homesteading";
     }
 
     @Override
     protected BookIconModel categoryIcon() {
-        return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.BRONZE).get(Metal.ItemType.CHISEL));
+        return BookIconModel.create(TFCItems.JUTE_NET);
     }
 
     @Override
     public String categoryId() {
-        return "masonry";
+        return "homesteading";
     }
 
     @Override
