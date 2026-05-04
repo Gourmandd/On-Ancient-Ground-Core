@@ -12,6 +12,14 @@ It was published under the EUPL.
 Curseforge Link: https://www.curseforge.com/minecraft/texture-packs/terrafirmacraft-vexxed-visuals
 EUPL: https://eupl.eu/
 
+# Decofirmacraft
+
+Contributors for "Decofirmacraft" available in Curseforge, Modrinth and Github.
+It is published under the MIT license.
+
+Curseforge Link: https://www.curseforge.com/minecraft/mc-mods/decofirmacraft
+Github Link: https://github.com/Ankmaniac/decofirmacraft
+
 # Caupona.
 
 Team Moeg and contributors for Caupona, on Modrinth, Curseforge and Github.
