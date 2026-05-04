@@ -232,6 +232,17 @@ public class CoreBlocks {
             register("lead_glass_pane/" + color.getSerializedName(), () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE)))
     );
 
+    public static final Map<CoreMetals.MetalType, Map<CoreMetals.BlockType, DeferredHolder<Block, Block>>> CORE_CUSTOM_METAL_BLOCKS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
+            Helpers.mapOf(CoreMetals.BlockType.class, type -> type.hasMetal(metal), type ->
+                    register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
+            )
+    );
+
+    public static final Map<Metal, Map<CoreMetals.BlockType, DeferredHolder<Block, Block>>> TFC_CUSTOM_METAL_BLOCKS = Helpers.mapOf(Metal.class, metal ->
+            Helpers.mapOf(CoreMetals.BlockType.class, type -> type.hasMetal(metal), type ->
+                    register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
+            )
+    );
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {

@@ -39,6 +39,20 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
             add(CoreBlocks.METALS.get(type).get(Metal.BlockType.BLOCK_STAIRS).get(), CategoryUtil.HeatCapacities.INGOT);
         });
 
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).get(), CategoryUtil.HeatCapacities.INGOT);
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).get(), CategoryUtil.HeatCapacities.INGOT);
+                }
+            });
+        });
+
         Stream.of(CoreClay.values()).forEach(type -> {
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BRICK).get(), 0.4f);
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).get(), 0.6f);

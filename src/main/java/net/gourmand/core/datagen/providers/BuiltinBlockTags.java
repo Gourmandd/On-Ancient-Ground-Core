@@ -333,6 +333,36 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
             }
         });
 
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    if (type.isStair()){
+                        this.tag(BlockTags.STAIRS).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                    }
+
+                    if (type.isSlab()){
+                        this.tag(BlockTags.SLABS).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                    }
+
+                    this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    if (type.isStair()){
+                        this.tag(BlockTags.STAIRS).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                    }
+
+                    if (type.isSlab()){
+                        this.tag(BlockTags.SLABS).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                    }
+
+                    this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                }
+            });
+        });
+
         this.tag(CoreTags.Blocks.GEMSTONE_BLOCKS)
                 .add(Blocks.AMETHYST_BLOCK.builtInRegistryHolder().key())
                 .add(SpectrumBlocks.TOPAZ_BLOCK.getKey())

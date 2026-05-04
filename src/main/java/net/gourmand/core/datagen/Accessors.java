@@ -5,6 +5,7 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
+import net.gourmand.core.registry.category.CategoryUtil;
 import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreTags;
@@ -16,7 +17,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.data.FluidHeat;
 import net.minecraft.world.level.material.Fluid;
@@ -100,9 +100,19 @@ public interface Accessors
         };
     }
 
+    default int units(CoreMetals.BlockType type)
+    {
+        return switch (type)
+        {
+            case CUT_BLOCK, EXPOSED_CUT_BLOCK, WEATHERED_CUT_BLOCK, OXIDIZED_CUT_BLOCK -> 100;
+            case CUT_BLOCK_SLAB, EXPOSED_CUT_BLOCK_SLAB, WEATHERED_CUT_BLOCK_SLAB, OXIDIZED_CUT_BLOCK_SLAB -> 50;
+            case CUT_BLOCK_STAIRS, EXPOSED_CUT_BLOCK_STAIRS, WEATHERED_CUT_BLOCK_STAIRS, OXIDIZED_CUT_BLOCK_STAIRS -> 75;
+        };
+    }
+
     default float temperatureOf(Metal metal)
     {
-        return FluidHeat.MANAGER.getOrThrow(Helpers.identifier(metal.getSerializedName())).meltTemperature();
+        return CategoryUtil.TFC_METAL_TO_TEMPERATURE.get(metal);
     }
 
     default float temperatureOf(CoreMetals.MetalType metal)

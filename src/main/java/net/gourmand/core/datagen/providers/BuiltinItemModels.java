@@ -210,6 +210,20 @@ public class BuiltinItemModels extends ItemModelProvider {
             });
         });
 
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    simpleBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type));
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    simpleBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type));
+                }
+            });
+        });
+
         simpleBlock(CoreBlocks.PRISMATIC_ICE);
         simpleBlock(CoreBlocks.SLUDGE);
 

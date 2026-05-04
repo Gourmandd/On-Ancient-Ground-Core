@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.recipes;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.TFCItems;
@@ -48,6 +49,106 @@ public interface CraftingRecipes extends Recipes {
                         .input('B', ingredientOf(metal, Metal.BlockType.BLOCK))
                         .pattern("B  ", "BB ")
                         .shaped(blocks.get(Metal.BlockType.BLOCK_STAIRS).get(), 4);
+
+                recipe()
+                        .input(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).get())
+                        .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                        .damageInputs()
+                        .shapeless(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK).get());
+
+                recipe()
+                        .input(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB).get())
+                        .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                        .damageInputs()
+                        .shapeless(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK_SLAB).get());
+
+                recipe()
+                        .input(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS).get())
+                        .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                        .damageInputs()
+                        .shapeless(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK_STAIRS).get());
+            }
+        });
+
+        Stream.of(Metal.values()).forEach(metal -> {
+            if (metal.defaultParts())
+            {
+                recipe()
+                        .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).get())
+                        .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                        .damageInputs()
+                        .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK).get());
+
+                recipe()
+                        .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB).get())
+                        .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                        .damageInputs()
+                        .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK_SLAB).get());
+
+                recipe()
+                        .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS).get())
+                        .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                        .damageInputs()
+                        .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK_STAIRS).get());
+
+                if (metal.weatheredParts()){
+                    // exposed
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.EXPOSED_BLOCK).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.EXPOSED_CUT_BLOCK).get());
+
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.EXPOSED_BLOCK_SLAB).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.EXPOSED_CUT_BLOCK_SLAB).get());
+
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.EXPOSED_BLOCK_STAIRS).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.EXPOSED_CUT_BLOCK_STAIRS).get());
+
+                    // weathered
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.WEATHERED_BLOCK).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.WEATHERED_CUT_BLOCK).get());
+
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.WEATHERED_BLOCK_SLAB).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.WEATHERED_CUT_BLOCK_SLAB).get());
+
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.WEATHERED_BLOCK_STAIRS).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.WEATHERED_CUT_BLOCK_STAIRS).get());
+
+                    // oxidized
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.OXIDIZED_BLOCK).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.OXIDIZED_CUT_BLOCK).get());
+
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.OXIDIZED_BLOCK_SLAB).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.OXIDIZED_CUT_BLOCK_SLAB).get());
+
+                    recipe()
+                            .input(TFCBlocks.METALS.get(metal).get(Metal.BlockType.OXIDIZED_BLOCK_STAIRS).get())
+                            .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
+                            .damageInputs()
+                            .shapeless(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.OXIDIZED_CUT_BLOCK_STAIRS).get());
+                }
             }
         });
 

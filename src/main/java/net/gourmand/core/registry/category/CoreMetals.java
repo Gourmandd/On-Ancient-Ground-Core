@@ -2,17 +2,27 @@ package net.gourmand.core.registry.category;
 
 import java.util.Locale;
 import java.util.Objects;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 import net.dries007.tfc.common.TFCTiers;
+import net.dries007.tfc.common.blocks.IWeatheringBlock;
+import net.dries007.tfc.common.blocks.WeatheringBlock;
+import net.dries007.tfc.common.blocks.WeatheringSlabBlock;
+import net.dries007.tfc.common.blocks.WeatheringStairBlock;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreFluids;
 import net.minecraft.core.Holder;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.MapColor;
@@ -21,7 +31,6 @@ import org.jetbrains.annotations.NotNull;
 import net.dries007.tfc.common.LevelTier;
 import net.dries007.tfc.common.TFCArmorMaterials;
 import net.dries007.tfc.util.registry.RegistryMetal;
-import net.dries007.tfc.util.Metal.BlockType;
 import rbasamoyai.createbigcannons.index.CBCFluids;
 
 
@@ -93,7 +102,7 @@ public class CoreMetals {
         }
 
         @Override
-        public Block getBlock(BlockType blockType) {
+        public Block getBlock(Metal.BlockType blockType) {
             return CoreBlocks.METALS.get(this).get(blockType).get();
         }
 
@@ -203,5 +212,125 @@ public class CoreMetals {
         EQUIPMENT, // BASE + tools, armour, anvil, grate, bars, chain, trapdoor, lantern.
         BASE_OXIDIZED,
         EQUIPMENT_OXIDIZED
+    }
+
+    public enum BlockType implements StringRepresentable{
+        CUT_BLOCK(PartType.BASE, block(IWeatheringBlock.Age.NONE)),
+        EXPOSED_CUT_BLOCK(PartType.BASE_OXIDIZED, block(IWeatheringBlock.Age.EXPOSED)),
+        WEATHERED_CUT_BLOCK(PartType.BASE_OXIDIZED, block(IWeatheringBlock.Age.WEATHERED)),
+        OXIDIZED_CUT_BLOCK(PartType.BASE_OXIDIZED, block(IWeatheringBlock.Age.OXIDIZED)),
+        CUT_BLOCK_SLAB(PartType.BASE, slab(IWeatheringBlock.Age.NONE)),
+        EXPOSED_CUT_BLOCK_SLAB(PartType.BASE_OXIDIZED, slab(IWeatheringBlock.Age.EXPOSED)),
+        WEATHERED_CUT_BLOCK_SLAB(PartType.BASE_OXIDIZED, slab(IWeatheringBlock.Age.WEATHERED)),
+        OXIDIZED_CUT_BLOCK_SLAB(PartType.BASE_OXIDIZED, slab(IWeatheringBlock.Age.OXIDIZED)),
+        CUT_BLOCK_STAIRS(PartType.BASE, stairs(Metal.BlockType.BLOCK, IWeatheringBlock.Age.NONE)),
+        EXPOSED_CUT_BLOCK_STAIRS(PartType.BASE_OXIDIZED, stairs(Metal.BlockType.EXPOSED_BLOCK, IWeatheringBlock.Age.EXPOSED)),
+        WEATHERED_CUT_BLOCK_STAIRS(PartType.BASE_OXIDIZED, stairs(Metal.BlockType.WEATHERED_BLOCK, IWeatheringBlock.Age.WEATHERED)),
+        OXIDIZED_CUT_BLOCK_STAIRS(PartType.BASE_OXIDIZED, stairs(Metal.BlockType.OXIDIZED_BLOCK, IWeatheringBlock.Age.OXIDIZED));
+
+        private final Function<RegistryMetal, Block> blockFactory;
+        private final BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory;
+        private final PartType type;
+        private final String serializedName;
+
+        BlockType(PartType type, Function<RegistryMetal, Block> blockFactory) {
+            this(type, blockFactory, BlockItem::new);
+        }
+
+        BlockType(PartType type, Function<RegistryMetal, Block> blockFactory, BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory) {
+            this.type = type;
+            this.blockFactory = blockFactory;
+            this.blockItemFactory = blockItemFactory;
+            this.serializedName = this.name().toLowerCase(Locale.ROOT);
+        }
+
+        public Supplier<Block> create(RegistryMetal metal) {
+            return () -> (Block)this.blockFactory.apply(metal);
+        }
+
+        public Function<Block, BlockItem> createBlockItem(Item.Properties properties) {
+            return (block) -> (BlockItem)this.blockItemFactory.apply(block, properties);
+        }
+
+        public boolean hasMetal(CoreMetals.MetalType metal){
+            switch (this.type){
+                case BASE_OXIDIZED -> {
+                    if (metal.getLikeMetal().weatheredParts()){
+                        return true;
+                    }
+                }
+                case BASE -> {
+                    if (metal.getLikeMetal().defaultParts()){
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public boolean hasMetal(Metal metal){
+            switch (this.type){
+                case BASE_OXIDIZED -> {
+                    if (metal.weatheredParts()){
+                        return true;
+                    }
+                }
+                case BASE -> {
+                    if (metal.defaultParts()){
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public String createName(RegistryMetal metal) {
+            String slab = "_slab";
+            if (this.serializedName.contains(slab)) {
+                String name = this.serializedName.split(slab)[0];
+                return "metal/" + name + "/" + metal.getSerializedName() + slab;
+            } else {
+                String stairs = "_stairs";
+                if (this.serializedName.contains(stairs)) {
+                    String name = this.serializedName.split(stairs)[0];
+                    return "metal/" + name + "/" + metal.getSerializedName() + stairs;
+                } else {
+                    return "metal/" + this.serializedName + "/" + metal.getSerializedName();
+                }
+            }
+        }
+
+        private static BlockBehaviour.Properties blockProperties(RegistryMetal metal) {
+            return BlockBehaviour.Properties.of().mapColor(metal.mapColor()).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL);
+        }
+
+        private static Function<RegistryMetal, Block> block(IWeatheringBlock.Age age) {
+            return (metal) -> (metal.weatheredParts() ? new WeatheringBlock(blockProperties(metal), age, metal.weatheringResistance()) : new Block(blockProperties(metal)));
+        }
+
+        private static Function<RegistryMetal, Block> slab(IWeatheringBlock.Age age) {
+            return (metal) -> (metal.weatheredParts() ? new WeatheringSlabBlock(blockProperties(metal), age, metal.weatheringResistance()) : new SlabBlock(blockProperties(metal)));
+        }
+
+        private static Function<RegistryMetal, Block> stairs(Metal.BlockType block, IWeatheringBlock.Age age) {
+            return (metal) -> (metal.weatheredParts() ? new WeatheringStairBlock(metal.getBlock(block).defaultBlockState(), blockProperties(metal), age, metal.weatheringResistance()) : new StairBlock(metal.getBlock(block).defaultBlockState(), blockProperties(metal)));
+        }
+
+        public boolean isStair(){
+            return getSerializedName().contains("stairs");
+        }
+
+        public boolean isSlab(){
+            return getSerializedName().contains("slab");
+        }
+
+        public boolean isBlock(){
+            return !getSerializedName().contains("stairs") && !getSerializedName().contains("slab");
+        }
+
+        @Override
+        public String getSerializedName() {
+            return serializedName;
+        }
     }
 }

@@ -276,6 +276,24 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             });
         });
 
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+
+            String prefix = getName(type.getSerializedName().split("_cut")[0]).replace("Cut Block ", "");
+            String baseName = getName(type.getSerializedName().replace("weathered_", "").replace("oxidized_", "").replace("exposed_", ""));
+
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    addBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), prefix + " " + getName(metal) + " " + baseName);
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    addBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), prefix + " " + getName(metal) + " " + baseName);
+                }
+            });
+        });
+
 
 //        // Adds a translation with the given key and the given value.
 //        add("translation.key.1", "Translation 1");

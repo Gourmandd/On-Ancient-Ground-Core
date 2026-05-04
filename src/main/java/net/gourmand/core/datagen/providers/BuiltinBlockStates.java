@@ -217,6 +217,50 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 }
             });
         });
+
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(
+                            AncientGroundCore.MODID,
+                            "block/" + type.createName(metal).replace("_stairs", "").replace("_slab", "")
+                    );
+
+                    if (type.isStair()){
+                        stairsBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
+                    }
+
+                    if (type.isBlock()){
+                        cubeAll(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
+                    }
+
+                    if (type.isSlab()){
+                        slabBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture, getBlockModelLocation(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK).getId()));
+                    }
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(
+                            AncientGroundCore.MODID,
+                            "block/" + type.createName(metal).replace("_stairs", "").replace("_slab", "")
+                    );
+
+                    if (type.isStair()){
+                        stairsBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
+                    }
+
+                    if (type.isBlock()){
+                        cubeAll(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
+                    }
+
+                    if (type.isSlab()){
+                        slabBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture, getBlockModelLocation(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK).getId()));
+                    }
+                }
+            });
+        });
     }
 
 

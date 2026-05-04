@@ -247,7 +247,21 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
             Stream.of(Metal.BlockType.values()).forEach(type -> {
                 if (type.has(metal.getLikeMetal())){
-                    this.add(CoreBlocks.METALS.get(metal).get(type).get(), this.createOreDrop(CoreBlocks.METALS.get(metal).get(type).get(), CoreBlocks.METALS.get(metal).get(type).get().asItem()));
+                    this.dropSelf(CoreBlocks.METALS.get(metal).get(type).get());
+                }
+            });
+        });
+
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    this.dropSelf(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).get());
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    this.dropSelf(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).get());
                 }
             });
         });

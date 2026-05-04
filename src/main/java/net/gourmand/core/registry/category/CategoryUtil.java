@@ -491,6 +491,37 @@ public class CategoryUtil {
                 .build();
     }
 
+    public static final Map<Metal, Integer> TFC_METAL_TO_TEMPERATURE = ImmutableMap.<Metal, Integer>builder()
+            .put(Metal.BISMUTH, 270)
+            .put(Metal.BISMUTH_BRONZE, 985)
+            .put(Metal.BLACK_BRONZE, 1070)
+            .put(Metal.BRASS, 930)
+            .put(Metal.COPPER, 1080)
+            .put(Metal.GOLD, 1060)
+            .put(Metal.NICKEL, 1453)
+            .put(Metal.ROSE_GOLD, 960)
+            .put(Metal.SILVER, 961)
+            .put(Metal.TIN,230)
+            .put(Metal.ZINC, 420)
+            .put(Metal.STERLING_SILVER, 950)
+            .put(Metal.WROUGHT_IRON, 1535)
+            .put(Metal.CAST_IRON, 1535)
+            .put(Metal.PIG_IRON, 1535)
+            .put(Metal.STEEL, 1540)
+            .put(Metal.BLACK_STEEL, 1485)
+            .put(Metal.BLUE_STEEL, 1540)
+            .put(Metal.RED_STEEL, 1540)
+            .put(Metal.WEAK_STEEL, 1540)
+            .put(Metal.WEAK_BLUE_STEEL, 1540)
+            .put(Metal.WEAK_RED_STEEL, 1540)
+            .put(Metal.HIGH_CARBON_STEEL, 1540)
+            .put(Metal.HIGH_CARBON_BLACK_STEEL, 1540)
+            .put(Metal.HIGH_CARBON_BLUE_STEEL, 1540)
+            .put(Metal.HIGH_CARBON_RED_STEEL, 1540)
+            .put(Metal.BRONZE, 950)
+            .put(Metal.UNKNOWN, 400)
+            .build();
+
     private static Holder.Reference<Block> getReference(String namespace, String path){
         return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(namespace, path)).builtInRegistryHolder();
     }
