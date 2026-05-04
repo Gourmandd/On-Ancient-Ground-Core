@@ -6,10 +6,7 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
-import net.gourmand.core.registry.category.CategoryUtil;
-import net.gourmand.core.registry.category.CoreClay;
-import net.gourmand.core.registry.category.CoreMetals;
-import net.gourmand.core.registry.category.CoreOres;
+import net.gourmand.core.registry.category.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -63,6 +60,10 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
         });
 
         add(CoreItems.ORES.get(CoreOres.METEORIC_IRON).get(), CategoryUtil.HeatCapacities.INGOT);
+
+        add(Ingredient.of(CoreTags.Items.MOLTEN_GLASS), 0.8f);
+        add(Ingredient.of(CoreTags.Items.LEAD_GLASS), 0.8f);
+        add(Ingredient.of(CoreTags.Items.LEAD_GLASS_PANES), 0.2f);
     }
 
     private void add(ItemLike item, float heatCapacity)

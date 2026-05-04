@@ -308,6 +308,18 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             )
         );
 
+        this.tag(CoreTags.Items.LEAD_GLASS).add(getKey(CoreBlocks.CLEAR_LEAD_GLASS.get()));
+        add(CoreBlocks.COLOURED_LEAD_GLASS, List.of(
+                        CoreTags.Items.LEAD_GLASS
+                )
+        );
+
+        this.tag(CoreTags.Items.LEAD_GLASS_PANES).add(getKey(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get()));
+        add(CoreBlocks.COLOURED_LEAD_GLASS_PANE, List.of(
+                        CoreTags.Items.LEAD_GLASS_PANES
+                )
+        );
+
         Stream.of(DyeColor.values()).forEach(color -> {
             this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_GLAZED_VESSELS.get(color).key());
         });

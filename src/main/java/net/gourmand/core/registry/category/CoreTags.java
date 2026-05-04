@@ -118,5 +118,8 @@ public class CoreTags {
         public static final TagKey<Item> MORTARED_COBBLE = tag( AncientGroundCore.MODID,"cobblestones/mortared");
 
         public static final TagKey<Item> MOLTEN_GLASS = tag( AncientGroundCore.MODID,"molten_glass");
+
+        public static final TagKey<Item> LEAD_GLASS = tag( AncientGroundCore.MODID,"lead_glass");
+        public static final TagKey<Item> LEAD_GLASS_PANES = tag( AncientGroundCore.MODID,"lead_glass_panes");
     }
 }

@@ -168,6 +168,16 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         moltenGlassBlock(CoreBlocks.CLEAR_MOLTEN_GLASS);
 
+        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS,  ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/clear"));
+        Stream.of(DyeColor.values()).forEach(color -> {
+            cubeAll(CoreBlocks.COLOURED_LEAD_GLASS.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/" + color.getSerializedName()));
+        });
+
+        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE,  ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/clear"), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/pane_top"));
+        Stream.of(DyeColor.values()).forEach(color -> {
+            paneBlock(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/" + color.getSerializedName()), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/pane_top"));
+        });
+
         Stream.of(CoreClay.values()).forEach(clay -> {
             Stream.of(CoreClay.BlockType.values()).forEach(type -> {
                 ResourceLocation texture = TextureUtil.getCeramicBlockTexture(type, clay);
@@ -600,6 +610,10 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(SluiceBlock.FACING, Direction.EAST).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(90).addModel()
                 .partialState().with(SluiceBlock.FACING, Direction.SOUTH).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(180).addModel()
                 .partialState().with(SluiceBlock.FACING, Direction.WEST).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(270).addModel();
+    }
+
+    private void paneBlock(DeferredHolder<Block, Block> block, ResourceLocation side, ResourceLocation top){
+        this.paneBlock((IronBarsBlock) block.get(), side, top);
     }
 
     private String getBlockModelString(ResourceLocation block){

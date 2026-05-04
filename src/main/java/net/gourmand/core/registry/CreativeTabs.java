@@ -254,9 +254,13 @@ public class CreativeTabs {
         Stream.of(DyeColor.values()).forEach(color -> {
             out.accept(CoreItems.COLORED_LENS.get(color).get());
             out.accept(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
+            out.accept(CoreBlocks.COLOURED_LEAD_GLASS.get(color).get());
+            out.accept(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get());
         });
 
         out.accept(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
+        out.accept(CoreBlocks.CLEAR_LEAD_GLASS.get());
+        out.accept(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get());
     }
 
     private static void fillMisc(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)

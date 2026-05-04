@@ -1,0 +1,21 @@
+{
+  "values": [
+    "modpack:lead_glass_pane/clear",
+    "modpack:lead_glass_pane/white",
+    "modpack:lead_glass_pane/orange",
+    "modpack:lead_glass_pane/magenta",
+    "modpack:lead_glass_pane/light_blue",
+    "modpack:lead_glass_pane/yellow",
+    "modpack:lead_glass_pane/lime",
+    "modpack:lead_glass_pane/pink",
+    "modpack:lead_glass_pane/gray",
+    "modpack:lead_glass_pane/light_gray",
+    "modpack:lead_glass_pane/cyan",
+    "modpack:lead_glass_pane/purple",
+    "modpack:lead_glass_pane/blue",
+    "modpack:lead_glass_pane/brown",
+    "modpack:lead_glass_pane/green",
+    "modpack:lead_glass_pane/red",
+    "modpack:lead_glass_pane/black"
+  ]
+}

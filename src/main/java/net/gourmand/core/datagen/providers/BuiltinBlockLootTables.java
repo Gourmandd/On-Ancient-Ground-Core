@@ -329,11 +329,22 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
     private void generateMisc(){
 
+        this.dropSelf(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
         Stream.of(DyeColor.values()).forEach(color -> {
             this.dropSelf(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
         });
 
-        this.dropSelf(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
+
+        this.dropSelf(CoreBlocks.CLEAR_LEAD_GLASS.get());
+        Stream.of(DyeColor.values()).forEach(color -> {
+            this.dropSelf(CoreBlocks.COLOURED_LEAD_GLASS.get(color).get());
+        });
+
+        this.dropSelf(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get());
+        Stream.of(DyeColor.values()).forEach(color -> {
+            this.dropSelf(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get());
+        });
+
 
         Stream.of(CoreClay.values()).forEach(clay -> {
             Stream.of(CoreClay.BlockType.values()).forEach(type -> {

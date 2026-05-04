@@ -225,9 +225,13 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
         Stream.of(DyeColor.values()).forEach(color -> {
             addItem(() -> CoreItems.COLORED_LENS.get(color).get(), getName(color) + " Lens");
             addBlock(() -> CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get(), getName(color) + " Molten Glass");
+            addBlock(() -> CoreBlocks.COLOURED_LEAD_GLASS.get(color).get(), getName(color) + " Lead Glass");
+            addBlock(() -> CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get(), getName(color) + " Lead Glass Pane");
         });
 
         addBlock(CoreBlocks.CLEAR_MOLTEN_GLASS, "Clear Molten Glass");
+        addBlock(CoreBlocks.CLEAR_LEAD_GLASS, "Clear Lead Glass");
+        addBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE, "Clear Lead Glass Pane");
 
         Stream.of(CoreClay.values()).forEach(clay -> {
             Stream.of(CoreClay.BlockType.values()).forEach(type -> {

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "modpack:lead_glass_pane/clear"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "modpack:blocks/lead_glass_pane/clear"
+}

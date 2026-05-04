@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-30T11:04:40.429449119	Data Manager (item_heat)
+// 1.21.1	2026-05-04T11:21:48.664506182	Data Manager (item_heat)
 5e15164e9ed2130fc090282cf5f72e89ca5cfcbc data/modpack/tfc/item_heat/ceramic/earthenware/unfired_blowpipe.json
 694ec251572deee1bf12e4df7d8b00a14353d9f2 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_bowl.json
 40fdf255e0432562252a9b9a9e3209764558ad40 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_brick.json
@@ -39,6 +39,8 @@ d867edbff16857ac237f324b4ddacbdac5ceec99 data/modpack/tfc/item_heat/ceramic/yixi
 bcfb4d1a8cefa15a1b215212cb22dca856e84177 data/modpack/tfc/item_heat/ceramic/yixing/unfired_pan.json
 254c060581665ee30e5739cbc197b5f6f77779ca data/modpack/tfc/item_heat/ceramic/yixing/unfired_pot.json
 a631471a192d47afa03a6643deaf7018d5098bfe data/modpack/tfc/item_heat/ceramic/yixing/unfired_spindle_head.json
+06f6fb819862f3892c49a3be696b76f82ad413e6 data/modpack/tfc/item_heat/lead_glass.json
+128d1142f00b47948c907a8595a3533ee79ae7b7 data/modpack/tfc/item_heat/lead_glass_panes.json
 e80ca4ca6a184bb8637c6dbad8ab804514e812df data/modpack/tfc/item_heat/metal/block/aluminium.json
 c77d7ea9c0510c65c2416b08f1d60b361dc9b1ea data/modpack/tfc/item_heat/metal/block/aluminium_bronze.json
 0ac259aa82cddea7d547c98cc3c8046cdeaceadc data/modpack/tfc/item_heat/metal/block/aluminium_bronze_slab.json
@@ -95,6 +97,7 @@ b77ae87a8b98476e40c93dc2de9cff5074591952 data/modpack/tfc/item_heat/metal/sheet/
 342ea83994ecde412c94cda346e1ed9bd1a38491 data/modpack/tfc/item_heat/metal/sheet/hardened_steel.json
 b649f4b07d50e51b4beb165e403d28fd443caf33 data/modpack/tfc/item_heat/metal/sheet/lead.json
 3ce1f902f759bd510695bd7155813bbfec25d604 data/modpack/tfc/item_heat/metal/sheet/nethersteel.json
+9d73b881abb3f034974fffdce99d0a36e1480f2e data/modpack/tfc/item_heat/molten_glass.json
 35f5412b7ddd754802bc90ea22316371157912a9 data/modpack/tfc/item_heat/ore/meteoric_iron.json
 00f6b4d37e104497c1d547b120cbfdcecceb92e6 data/modpack/tfc/item_heat/ore/normal_galena.json
 ef70377b02569e1df69718083faff991d24e6bfd data/modpack/tfc/item_heat/ore/poor_galena.json

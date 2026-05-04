@@ -181,9 +181,14 @@ public class BuiltinItemModels extends ItemModelProvider {
         Stream.of(DyeColor.values()).forEach(color -> {
             simpleItem(CoreItems.COLORED_LENS.get(color).get(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/lens/" + color.getSerializedName()));
             simpleItem(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/molten_glass/" + color.getSerializedName()));
+            simpleBlock(CoreBlocks.COLOURED_LEAD_GLASS.get(color));
+            simpleItem(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":block/lead_glass/" + color.getSerializedName()));
+
         });
 
         simpleItem(CoreBlocks.CLEAR_MOLTEN_GLASS.get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/molten_glass/clear"));
+        simpleBlock(CoreBlocks.CLEAR_LEAD_GLASS);
+        simpleItem(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":block/lead_glass/clear"));
 
         CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(this::simpleBlock);
 

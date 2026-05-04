@@ -151,6 +151,14 @@ public class ClientEventHandler {
                 }
             });
         });
+
+        ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS.get(), translucent);
+        ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get(), translucent);
+        Stream.of(DyeColor.values()).forEach(color -> {
+            ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS.get(color).get(), translucent);
+            ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get(), translucent);
+        });
+
     }
 
     public static void registerColorHandlerBlocks(RegisterColorHandlersEvent.Block event){

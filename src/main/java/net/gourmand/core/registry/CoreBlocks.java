@@ -222,6 +222,17 @@ public class CoreBlocks {
             )
     );
 
+    public static final DeferredHolder<Block, Block> CLEAR_LEAD_GLASS = register("lead_glass/clear" , () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
+    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLOURED_LEAD_GLASS = Helpers.mapOf(DyeColor.class, color ->
+            register("lead_glass/" + color.getSerializedName(), () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)))
+    );
+
+    public static final DeferredHolder<Block, Block> CLEAR_LEAD_GLASS_PANE = register("lead_glass_pane/clear" , () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE)));
+    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLOURED_LEAD_GLASS_PANE = Helpers.mapOf(DyeColor.class, color ->
+            register("lead_glass_pane/" + color.getSerializedName(), () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE)))
+    );
+
+
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {
         return true;

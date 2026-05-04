@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-20T19:47:45.437852546	Loot Tables
+// 1.21.1	2026-05-04T11:15:19.61121877	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -123,6 +123,40 @@ c5731f6a079b1dfbb5aeb4ae2d93813bacf6b055 data/modpack/loot_table/blocks/gemstone
 99b6c4252dca45adf35ebb625d5ec3f52b9eb70e data/modpack/loot_table/blocks/gemstone/small_cluster/aquamarine.json
 3cb67a4b453ac2b9540fbbd7e187db9ca096f21a data/modpack/loot_table/blocks/gemstone/small_cluster/jade.json
 7d8bdf0d629c65b1295d002c9523e275e0f854aa data/modpack/loot_table/blocks/gemstone/small_cluster/spinel.json
+b4ef5210758e16184ad99d470be1075f4d0acf16 data/modpack/loot_table/blocks/lead_glass/black.json
+f92132cd4bcca4ea48fde5808b54bda98516f296 data/modpack/loot_table/blocks/lead_glass/blue.json
+95826a29f142dcf82c67ac4dadd0a63989d79215 data/modpack/loot_table/blocks/lead_glass/brown.json
+4e6c4717da639550b8bbef23759d37431c8eba70 data/modpack/loot_table/blocks/lead_glass/clear.json
+1057154cb12fea0c00e1af9e4d839520c72d7ef7 data/modpack/loot_table/blocks/lead_glass/cyan.json
+26710a81db520cdb185ab63df7833f439b02dff4 data/modpack/loot_table/blocks/lead_glass/gray.json
+e4df802e2e397c713dd82a9879a7afc807f5465d data/modpack/loot_table/blocks/lead_glass/green.json
+dd76a7f65a01d3d6ecdf9d0066cea61e7427efdc data/modpack/loot_table/blocks/lead_glass/light_blue.json
+221747f3987e03ae3f9881b7fd8bd722aa56b68b data/modpack/loot_table/blocks/lead_glass/light_gray.json
+cc891eb1216fe38155c4b3493e4573791a95287b data/modpack/loot_table/blocks/lead_glass/lime.json
+38a4c0fec70bd48a3fe37afa81c7af1c23537990 data/modpack/loot_table/blocks/lead_glass/magenta.json
+837dc09e02bf657099d45bb77a3ecf3d44419698 data/modpack/loot_table/blocks/lead_glass/orange.json
+9ad66c53d7bb291510547a022a7420d9c5289212 data/modpack/loot_table/blocks/lead_glass/pink.json
+37a94493ff3eb0c5a97105dc0d62cb392f52267f data/modpack/loot_table/blocks/lead_glass/purple.json
+2d52423f9d1a6194648110b72bc7fc782cdafd64 data/modpack/loot_table/blocks/lead_glass/red.json
+c55d1390b7a384641556d52f421c5b09f18b1b04 data/modpack/loot_table/blocks/lead_glass/white.json
+3cd9571ba63ae36d0610267ca6466f04f17ce9c1 data/modpack/loot_table/blocks/lead_glass/yellow.json
+bbe4734c418a2b3242d3469ffe84144f0d610462 data/modpack/loot_table/blocks/lead_glass_pane/black.json
+a0d0b461ddb9910e10e3c137245bcee0b8d21fa3 data/modpack/loot_table/blocks/lead_glass_pane/blue.json
+f5f2a5877b3fa6aed05b8b46b1bf5615335e8a8a data/modpack/loot_table/blocks/lead_glass_pane/brown.json
+7c6470eb35cd7e9494dd310debb451cbf06e5d16 data/modpack/loot_table/blocks/lead_glass_pane/clear.json
+4fa8b102e56000217e40b850d29bcf65ca9e3560 data/modpack/loot_table/blocks/lead_glass_pane/cyan.json
+e02d329faf07bc1192ff7c458974f7988383905c data/modpack/loot_table/blocks/lead_glass_pane/gray.json
+b1f31ea9b6a3c6c45869db29ef36d0fca341846f data/modpack/loot_table/blocks/lead_glass_pane/green.json
+a31247288a49c344974df3c23ddc1710b1e0acbf data/modpack/loot_table/blocks/lead_glass_pane/light_blue.json
+cd757670d622c0947efb57623bcfd7da310441eb data/modpack/loot_table/blocks/lead_glass_pane/light_gray.json
+1cdc43cf145cf4291670c55485b4e68ecb4ee5be data/modpack/loot_table/blocks/lead_glass_pane/lime.json
+36fc1beb636707260cb02d3cbc5b4357f4bd1ba4 data/modpack/loot_table/blocks/lead_glass_pane/magenta.json
+a50d70b12d4b4107fa3bdee54153c2e057f94d99 data/modpack/loot_table/blocks/lead_glass_pane/orange.json
+bedc2eef42fff46a16d0b477ce93a2399be484dd data/modpack/loot_table/blocks/lead_glass_pane/pink.json
+01e881f73c6dbeea43a935d94ffa096680bd18b2 data/modpack/loot_table/blocks/lead_glass_pane/purple.json
+94ebf8a6299012e3d60d32d2a6bcdd2a2ac30fe0 data/modpack/loot_table/blocks/lead_glass_pane/red.json
+d246d32773722050f50663a2c2373aa5fe2e9a3f data/modpack/loot_table/blocks/lead_glass_pane/white.json
+bc32aa5b9f6fba12ce1841b5ff1455050d236df9 data/modpack/loot_table/blocks/lead_glass_pane/yellow.json
 bd5c27ab30945e2d2c24ce0811cd8e2feb1036dd data/modpack/loot_table/blocks/metal/block/aluminium.json
 e10fc921a208e3c6427fa6679c76024ca8dc11cb data/modpack/loot_table/blocks/metal/block/aluminium_bronze.json
 3487eb85a5582928964f74b4aad24ce812093216 data/modpack/loot_table/blocks/metal/block/aluminium_bronze_slab.json

@@ -352,6 +352,15 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
                 TFCTags.Blocks.MINEABLE_WITH_SCYTHE,
                 TFCTags.Blocks.MINEABLE_WITH_KNIFE)
         );
+
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(CoreBlocks.CLEAR_MOLTEN_GLASS.getKey())
+                .add(CoreBlocks.CLEAR_LEAD_GLASS.getKey())
+                .add(CoreBlocks.CLEAR_LEAD_GLASS_PANE.getKey());
+
+        add(CoreBlocks.COLOURED_LEAD_GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
+        add(CoreBlocks.COLOURED_LEAD_GLASS_PANE, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
+        add(CoreBlocks.COLORED_MOLTEN_GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){
