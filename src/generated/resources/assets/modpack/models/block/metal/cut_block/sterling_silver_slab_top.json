@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "modpack:block/metal/cut_block/sterling_silver",
+    "side": "modpack:block/metal/cut_block/sterling_silver",
+    "top": "modpack:block/metal/cut_block/sterling_silver"
+  }
+}

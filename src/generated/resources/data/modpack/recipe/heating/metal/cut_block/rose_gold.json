@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:metal/cut_block/rose_gold"
+  },
+  "result_fluid": {
+    "amount": 100,
+    "id": "tfc:metal/rose_gold"
+  },
+  "temperature": 960.0
+}

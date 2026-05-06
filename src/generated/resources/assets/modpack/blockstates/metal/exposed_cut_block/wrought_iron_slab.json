@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/exposed_cut_block/wrought_iron_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/cut_block/wrought_iron"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/exposed_cut_block/wrought_iron_slab_top"
+    }
+  }
+}

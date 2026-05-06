@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "modpack:block/metal/exposed_cut_block/brass",
+    "side": "modpack:block/metal/exposed_cut_block/brass",
+    "top": "modpack:block/metal/exposed_cut_block/brass"
+  }
+}

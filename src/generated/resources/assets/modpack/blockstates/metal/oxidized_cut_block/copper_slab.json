@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/oxidized_cut_block/copper_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/cut_block/copper"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/oxidized_cut_block/copper_slab_top"
+    }
+  }
+}

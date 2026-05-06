@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "modpack:block/metal/weathered_cut_block/copper"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/weathered_cut_block/silver_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/cut_block/silver"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/weathered_cut_block/silver_slab_top"
+    }
+  }
+}

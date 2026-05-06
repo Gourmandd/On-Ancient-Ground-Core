@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "modpack:block/metal/cut_block/hardened_steel",
+    "side": "modpack:block/metal/cut_block/hardened_steel",
+    "top": "modpack:block/metal/cut_block/hardened_steel"
+  }
+}

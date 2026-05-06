@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "modpack:block/metal/cut_block/cast_iron",
+    "side": "modpack:block/metal/cut_block/cast_iron",
+    "top": "modpack:block/metal/cut_block/cast_iron"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "modpack:block/metal/cut_block/electrum",
+    "side": "modpack:block/metal/cut_block/electrum",
+    "top": "modpack:block/metal/cut_block/electrum"
+  }
+}

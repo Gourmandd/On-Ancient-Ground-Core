@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/cut_block/gold_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/cut_block/gold"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/cut_block/gold_slab_top"
+    }
+  }
+}

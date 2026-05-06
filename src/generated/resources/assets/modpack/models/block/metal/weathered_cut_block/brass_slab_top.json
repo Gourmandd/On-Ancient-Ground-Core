@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "modpack:block/metal/weathered_cut_block/brass",
+    "side": "modpack:block/metal/weathered_cut_block/brass",
+    "top": "modpack:block/metal/weathered_cut_block/brass"
+  }
+}

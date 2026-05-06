@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/cut_block/zinc_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/cut_block/zinc"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/cut_block/zinc_slab_top"
+    }
+  }
+}
