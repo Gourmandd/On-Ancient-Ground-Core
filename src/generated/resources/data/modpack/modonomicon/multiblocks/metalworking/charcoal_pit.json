@@ -1,0 +1,37 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:log_pile[count=16]"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:log_pile[count=16]"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:dirt/entisol"
+    }
+  },
+  "pattern": [
+    [
+      "AGGGA",
+      "GCCCG",
+      "GC0CG",
+      "GCCCG",
+      "AGGGA"
+    ],
+    [
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG"
+    ]
+  ]
+}

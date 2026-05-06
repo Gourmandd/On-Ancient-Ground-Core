@@ -243,5 +243,25 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                 .blockstate('0', TFCBlocks.CHARCOAL_FORGE, "[heat_level=7]")
                 .build(false)
         );
+
+        this.add(this.modLoc("metalworking/charcoal_pit" ), new DenseMultiblockBuilder()
+                .layer("AGGGA", "GCCCG", "GC0CG", "GCCCG", "AGGGA")
+                .layer("GGGGG", "GGGGG", "GGGGG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.ENTISOL).get())
+                .blockstate('C', TFCBlocks.LOG_PILE, "[count=16]")
+                .blockstate('0', TFCBlocks.LOG_PILE, "[count=16]")
+                .build(false)
+        );
+        this.add(this.modLoc("metalworking/charcoal_pit_finished" ), new DenseMultiblockBuilder()
+                .layer("AGGGA", "G221G", "G101G", "G221G", "AGGGA")
+                .layer("GGGGG", "GGGGG", "GGGGG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.ENTISOL).get())
+                .blockstate('2', TFCBlocks.CHARCOAL_PILE, "[layers=4]")
+                .blockstate('1', TFCBlocks.CHARCOAL_PILE, "[layers=7]")
+                .blockstate('0', TFCBlocks.CHARCOAL_PILE, "[layers=5]")
+                .build(false)
+        );
     }
 }

@@ -1,0 +1,41 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:charcoal_pile[layers=5]"
+    },
+    "1": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:charcoal_pile[layers=7]"
+    },
+    "2": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:charcoal_pile[layers=4]"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:dirt/entisol"
+    }
+  },
+  "pattern": [
+    [
+      "AGGGA",
+      "G221G",
+      "G101G",
+      "G221G",
+      "AGGGA"
+    ],
+    [
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG"
+    ]
+  ]
+}

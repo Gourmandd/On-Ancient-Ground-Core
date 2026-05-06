@@ -18,13 +18,14 @@ public class MetalworkingCategory extends CategoryProvider {
 
     @Override
     protected String[] generateEntryMap() {
+        // these is a temporary layout. Will be revised when category is finished.
         return new String[]{
                 "efghi",
                 "_____",
                 "c___d",
                 "_____",
                 "a___b",
-                "_____",
+                "__l__",
                 "_j_k_"
         };
     }
@@ -48,6 +49,8 @@ public class MetalworkingCategory extends CategoryProvider {
 
         var bloomery = this.add(new BloomeryEntry(this).generate("j"));
         var blast_furnace = this.add(new BlastFurnaceEntry(this).generate("k"));
+
+        var charcoal_pit = this.add(new CharcoalPitEntry(this).generate("l"));
 
         // add charcoal pit
         // add charcoal forge
