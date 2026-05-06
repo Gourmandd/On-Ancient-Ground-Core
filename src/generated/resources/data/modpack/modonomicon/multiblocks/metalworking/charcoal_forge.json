@@ -1,0 +1,44 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:charcoal_forge[heat_level=5]"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/cobble/andesite"
+    },
+    "S": {
+      "type": "modonomicon:block",
+      "block": "minecraft:blue_stained_glass"
+    }
+  },
+  "pattern": [
+    [
+      "AASAA",
+      "AASAA",
+      "SSSSS",
+      "AASAA",
+      "AASAA"
+    ],
+    [
+      "AAAAA",
+      "AAGAA",
+      "AG0GA",
+      "AAGAA",
+      "AAAAA"
+    ],
+    [
+      "AAAAA",
+      "AGGGA",
+      "AGGGA",
+      "AGGGA",
+      "AAAAA"
+    ]
+  ]
+}
