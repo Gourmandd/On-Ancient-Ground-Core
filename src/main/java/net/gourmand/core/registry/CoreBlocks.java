@@ -244,6 +244,8 @@ public class CoreBlocks {
             )
     );
 
+    public static final DeferredHolder<Block, CopperBulbBlock> LEAD_BULB_BLOCK = register("metal/bulb/lead", () -> new  CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).mapColor(MapColor.COLOR_PURPLE)));
+
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {
         return true;

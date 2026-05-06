@@ -286,6 +286,7 @@ public class CreativeTabs {
 
         out.accept(CoreBlocks.SLUDGE.get());
         out.accept(CoreBlocks.PRISMATIC_ICE.get());
+        out.accept(CoreBlocks.LEAD_BULB_BLOCK.get());
     }
 
     private static <R extends DeferredHolder<?, ?>, K1, K2> void accept(CreativeModeTab.Output out, Map<K1, Map<K2, R>> map, K1 key1, K2 key2)

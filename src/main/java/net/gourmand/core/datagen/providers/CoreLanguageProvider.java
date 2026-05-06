@@ -257,6 +257,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
         addBlock(CoreBlocks.SLUDGE, "Sludge");
         addBlock(CoreBlocks.PRISMATIC_ICE, "Prismatic Ice");
+        addBlock(CoreBlocks.LEAD_BULB_BLOCK, "Lead Bulb");
 
         Stream.of(CoreGemstones.values()).forEach(gem -> {
 

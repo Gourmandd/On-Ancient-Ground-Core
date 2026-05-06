@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false,powered=false": {
+      "model": "modpack:block/metal/bulb/lead"
+    },
+    "lit=false,powered=true": {
+      "model": "modpack:block/metal/bulb/lead_powered"
+    },
+    "lit=true,powered=false": {
+      "model": "modpack:block/metal/bulb/lead_lit"
+    },
+    "lit=true,powered=true": {
+      "model": "modpack:block/metal/bulb/lead_powered_lit"
+    }
+  }
+}

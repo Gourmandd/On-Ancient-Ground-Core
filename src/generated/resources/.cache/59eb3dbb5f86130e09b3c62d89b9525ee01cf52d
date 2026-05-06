@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-04T16:26:59.675575176	Loot Tables
+// 1.21.1	2026-05-07T17:51:34.117802299	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -178,6 +178,7 @@ e316b8ef32cae7013f8bc63857698cb97b62a7bf data/modpack/loot_table/blocks/metal/bl
 af8f18c6d227b9dade53321cab2c8912953e6f5e data/modpack/loot_table/blocks/metal/block/nethersteel.json
 7925e5938ed61b73e362f02079a898e90840a6f5 data/modpack/loot_table/blocks/metal/block/nethersteel_slab.json
 84d221fc27569babf873faa392266e2b24b9e7fb data/modpack/loot_table/blocks/metal/block/nethersteel_stairs.json
+c71e9f83df8f804ee4bdc85dc831bf417415d975 data/modpack/loot_table/blocks/metal/bulb/lead.json
 b57108e2015cc880fc2882e432b8f45b0f7bc9f5 data/modpack/loot_table/blocks/metal/cut_block/aluminium.json
 c2ee23ac85d4ba0f594075accfc5a419b35a1bc7 data/modpack/loot_table/blocks/metal/cut_block/aluminium_bronze.json
 395b3f222c764f33bad4d9afa9b41f09ac54b419 data/modpack/loot_table/blocks/metal/cut_block/aluminium_bronze_slab.json

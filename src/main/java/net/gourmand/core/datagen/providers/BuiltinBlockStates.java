@@ -261,9 +261,10 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 }
             });
         });
+
+
+        bulbBlock(CoreBlocks.LEAD_BULB_BLOCK);
     }
-
-
 
     private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, CoreOres ore){
         String allTexture = TextureUtil.getRawRockTexture(rock);
@@ -764,5 +765,28 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(SpectrumClusterBlock.FACING, Direction.EAST).modelForState().modelFile(MODEL).rotationY(90).rotationX(90).addModel()
                 .partialState().with(SpectrumClusterBlock.FACING, Direction.SOUTH).modelForState().modelFile(MODEL).rotationX(90).rotationY(180).addModel()
                 .partialState().with(SpectrumClusterBlock.FACING, Direction.WEST).modelForState().modelFile(MODEL).rotationX(90).rotationY(270).addModel();
+    }
+
+    private void bulbBlock(DeferredHolder<Block, CopperBulbBlock> block) {
+
+        ResourceLocation blockId = block.getId();
+        String namespace = blockId.getNamespace();
+        String path = blockId.getPath();
+
+        final ResourceLocation baseTexture = ResourceLocation.fromNamespaceAndPath(namespace, "block/" + path);
+        final ResourceLocation baseLitTexture = ResourceLocation.fromNamespaceAndPath(namespace, "block/" + path + "_lit");
+        final ResourceLocation poweredTexture = ResourceLocation.fromNamespaceAndPath(namespace, "block/" + path + "_powered");
+        final ResourceLocation poweredLitTexture = ResourceLocation.fromNamespaceAndPath(namespace, "block/" + path + "_powered_lit");
+
+        ModelFile baseModel = this.models().cubeAll(namespace + ":block/" + path, baseTexture);
+        ModelFile baseLitModel = this.models().cubeAll(namespace + ":block/" + path + "_lit", baseLitTexture);
+        ModelFile poweredModel = this.models().cubeAll(namespace + ":block/" + path + "_powered", poweredTexture);
+        ModelFile poweredLitModel = this.models().cubeAll(namespace + ":block/" + path + "_powered_lit", poweredLitTexture);
+
+        this.getVariantBuilder(block.get())
+                .partialState().with(CopperBulbBlock.LIT, false).with(CopperBulbBlock.POWERED, false).addModels(new ConfiguredModel(baseModel))
+                .partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, false).addModels(new ConfiguredModel(baseLitModel))
+                .partialState().with(CopperBulbBlock.LIT, false).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredModel))
+                .partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredLitModel));
     }
 }

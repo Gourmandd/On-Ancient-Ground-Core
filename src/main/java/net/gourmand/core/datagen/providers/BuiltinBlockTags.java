@@ -386,7 +386,8 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(CoreBlocks.CLEAR_MOLTEN_GLASS.getKey())
                 .add(CoreBlocks.CLEAR_LEAD_GLASS.getKey())
-                .add(CoreBlocks.CLEAR_LEAD_GLASS_PANE.getKey());
+                .add(CoreBlocks.CLEAR_LEAD_GLASS_PANE.getKey())
+                .add(CoreBlocks.LEAD_BULB_BLOCK.getKey());
 
         add(CoreBlocks.COLOURED_LEAD_GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
         add(CoreBlocks.COLOURED_LEAD_GLASS_PANE, List.of(BlockTags.MINEABLE_WITH_PICKAXE));

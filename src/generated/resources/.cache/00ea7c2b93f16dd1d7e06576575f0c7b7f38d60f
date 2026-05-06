@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-04T16:26:59.719193034	Item Models: modpack
+// 1.21.1	2026-05-07T17:51:34.161336313	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -355,6 +355,7 @@ a32f1b081133fff708dfa3e054582b74e056a92b assets/modpack/models/item/metal/block/
 51f02c2eed3370415e1fd72448a553d7bc928b82 assets/modpack/models/item/metal/block/nethersteel.json
 13b846254572f7874eecf0c5aad827c39d155ccd assets/modpack/models/item/metal/block/nethersteel_slab.json
 20c257651cb85ec71713fdacf5649fbc26563ea8 assets/modpack/models/item/metal/block/nethersteel_stairs.json
+8e51002299d5a15d1599b7ee0bac2da1ec307b53 assets/modpack/models/item/metal/bulb/lead.json
 589da9d72c7b607f8717be857377415d7f543261 assets/modpack/models/item/metal/cut_block/aluminium.json
 026fe2fafcb9b76eb3bfcd58c5e785946a6d2704 assets/modpack/models/item/metal/cut_block/aluminium_bronze.json
 ca2e3aae28d412f13b5115118e87306075bf421d assets/modpack/models/item/metal/cut_block/aluminium_bronze_slab.json

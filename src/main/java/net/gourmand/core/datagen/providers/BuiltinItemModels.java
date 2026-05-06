@@ -226,6 +226,7 @@ public class BuiltinItemModels extends ItemModelProvider {
 
         simpleBlock(CoreBlocks.PRISMATIC_ICE);
         simpleBlock(CoreBlocks.SLUDGE);
+        simpleBlock(CoreBlocks.LEAD_BULB_BLOCK);
 
         Stream.of(CoreGemstones.values()).forEach(gem -> {
 

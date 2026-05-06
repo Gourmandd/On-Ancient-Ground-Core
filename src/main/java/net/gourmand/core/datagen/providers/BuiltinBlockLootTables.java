@@ -265,6 +265,8 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                 }
             });
         });
+
+        this.dropSelf(CoreBlocks.LEAD_BULB_BLOCK.get());
     }
 
     private void generateRock(){

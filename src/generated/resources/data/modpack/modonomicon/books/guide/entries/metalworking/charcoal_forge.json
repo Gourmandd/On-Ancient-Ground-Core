@@ -1,0 +1,92 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.charcoal_forge.description",
+  "hide_while_locked": false,
+  "icon": {
+    "height": 16,
+    "texture": "tfc:textures/block/devices/charcoal_forge/lit_static.png",
+    "width": 16
+  },
+  "name": "book.modpack.guide.metalworking.charcoal_forge.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:charcoal"
+      },
+      "text": "book.modpack.guide.metalworking.charcoal_forge.page1.text",
+      "title": "book.modpack.guide.metalworking.charcoal_forge.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "metalworking/charcoal_forge",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.metalworking.charcoal_forge.page2.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.charcoal_forge.page3.text",
+      "title": "book.modpack.guide.metalworking.charcoal_forge.page3.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/metalworking/charcoal_forge_interface.png"
+      ],
+      "text": "book.modpack.guide.metalworking.charcoal_forge.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.metalworking.charcoal_forge.page5.text",
+      "title": "book.modpack.guide.metalworking.charcoal_forge.page5.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/metalworking/charcoal_forge_range.png"
+      ],
+      "text": "book.modpack.guide.metalworking.charcoal_forge.page6.text",
+      "title": "",
+      "use_legacy_rendering": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 12,
+  "x": 0,
+  "y": 0
+}

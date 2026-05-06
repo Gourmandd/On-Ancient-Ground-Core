@@ -51,9 +51,8 @@ public class MetalworkingCategory extends CategoryProvider {
         var blast_furnace = this.add(new BlastFurnaceEntry(this).generate("k"));
 
         var charcoal_pit = this.add(new CharcoalPitEntry(this).generate("l"));
+        var charcoal_forge = this.add(new CharcoalForgeEntry(this).generate("m"));
 
-        // add charcoal pit
-        // add charcoal forge
         // add fuel guide
         // add alloying guide.
         // add bars
@@ -71,7 +70,7 @@ public class MetalworkingCategory extends CategoryProvider {
 
     @Override
     protected String categoryName() {
-        return "Masonry";
+        return "Metalworking";
     }
 
     @Override
