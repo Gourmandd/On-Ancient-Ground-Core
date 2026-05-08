@@ -132,7 +132,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 }
             });
             addItem(CoreItems.SUPPORTS.get(wood), getName(wood) + " Support");
-            addItem(CoreItems.LUMBER.get(wood), getName(wood) + " Twig");
+            addItem(CoreItems.LUMBER.get(wood), getName(wood) + " Lumber");
         });
 
         // custom metals.
