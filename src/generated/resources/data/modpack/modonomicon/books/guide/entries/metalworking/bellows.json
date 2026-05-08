@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.bellows.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:bellows"
+  },
+  "name": "book.modpack.guide.metalworking.bellows.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:bellows"
+      },
+      "text": "book.modpack.guide.metalworking.bellows.page1.text",
+      "title": "book.modpack.guide.metalworking.bellows.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/bellows",
+      "text": "book.modpack.guide.metalworking.bellows.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 14,
+  "x": 2,
+  "y": 3
+}

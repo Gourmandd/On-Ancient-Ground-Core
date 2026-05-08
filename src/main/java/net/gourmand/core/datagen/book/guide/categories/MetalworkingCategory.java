@@ -26,7 +26,7 @@ public class MetalworkingCategory extends CategoryProvider {
                 "_____",
                 "a___b",
                 "__lmn",
-                "_j_k_"
+                "_j_ko"
         };
     }
 
@@ -54,6 +54,8 @@ public class MetalworkingCategory extends CategoryProvider {
         var charcoal_forge = this.add(new CharcoalForgeEntry(this).generate("m"));
 
         var alloying = this.add(new AlloyingEntry(this).generate("n"));
+
+        var bellows = this.add(new BellowsEntry(this).generate("o"));
 
         // add fuel guide
         // add bars
