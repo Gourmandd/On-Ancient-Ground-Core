@@ -25,7 +25,7 @@ public class MetalworkingCategory extends CategoryProvider {
                 "c___d",
                 "_____",
                 "a___b",
-                "__l__",
+                "__lmn",
                 "_j_k_"
         };
     }
@@ -53,8 +53,9 @@ public class MetalworkingCategory extends CategoryProvider {
         var charcoal_pit = this.add(new CharcoalPitEntry(this).generate("l"));
         var charcoal_forge = this.add(new CharcoalForgeEntry(this).generate("m"));
 
+        var alloying = this.add(new AlloyingEntry(this).generate("n"));
+
         // add fuel guide
-        // add alloying guide.
         // add bars
         // add grates
         // add plated blocks

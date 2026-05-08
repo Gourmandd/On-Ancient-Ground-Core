@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-06T19:34:15.153463943	Books: modpack
+// 1.21.1	2026-05-08T16:37:31.382505732	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 b43e1989b5e4d54d3afb942b4b67768d09dd73e7 data/modpack/modonomicon/books/guide/categories/equipment.json
@@ -111,11 +111,12 @@ ffa4a6105a93c6a50567be47417d88f3cad3f490 data/modpack/modonomicon/books/guide/en
 ae4fa14b994550f57ca43135d2aefbff36921b87 data/modpack/modonomicon/books/guide/entries/getting_started/pit_kiln.json
 e1e0b99a70baed146be6a6e1cee96933203ae7ab data/modpack/modonomicon/books/guide/entries/getting_started/shovels.json
 5b073e39b3472b072cd79daac94732074d25c248 data/modpack/modonomicon/books/guide/entries/getting_started/straw.json
+66cade6c41a826c56101dda7eefcfb54e6b05426 data/modpack/modonomicon/books/guide/entries/metalworking/alloying.json
 fadd26393bbbdf26273b40165e09ca469574aaf0 data/modpack/modonomicon/books/guide/entries/metalworking/anvil.json
 e8638f7f85984339314cc261c6b138cfeab80a7b data/modpack/modonomicon/books/guide/entries/metalworking/anvil_working.json
 b2f3534fbdda51fb091d71fc64f833597d6277bd data/modpack/modonomicon/books/guide/entries/metalworking/blast_furnace.json
 4f91ae336a0797ffdb61cd40b297c5019735e16e data/modpack/modonomicon/books/guide/entries/metalworking/bloomery.json
-857a3e345ab8deeb19548cdd283136cec417b0be data/modpack/modonomicon/books/guide/entries/metalworking/charcoal_forge.json
+1cb1df8cc8210cd6a44fea1f6ac41f6c7c158041 data/modpack/modonomicon/books/guide/entries/metalworking/charcoal_forge.json
 fa05de6e11c24e41a11748feecc2dfe78aa0b621 data/modpack/modonomicon/books/guide/entries/metalworking/charcoal_pit.json
 730ea57523cbf36cb04089bb346969bacd1d5312 data/modpack/modonomicon/books/guide/entries/metalworking/double_ingot.json
 7e2fa38b8501da14a2f03e0b0da8c447704aeb2f data/modpack/modonomicon/books/guide/entries/metalworking/double_sheet.json

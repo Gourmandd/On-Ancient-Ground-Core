@@ -1,0 +1,29 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.alloying.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/ingot/copper"
+  },
+  "name": "book.modpack.guide.metalworking.alloying.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:ceramic/vessel"
+      },
+      "text": "book.modpack.guide.metalworking.alloying.page1.text",
+      "title": "book.modpack.guide.metalworking.alloying.page1.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 13,
+  "x": 2,
+  "y": 2
+}
