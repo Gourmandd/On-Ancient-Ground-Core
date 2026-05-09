@@ -224,12 +224,12 @@ public class CoreBlocks {
 
     public static final DeferredHolder<Block, Block> CLEAR_LEAD_GLASS = register("lead_glass/clear" , () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
     public static final Map<DyeColor, DeferredHolder<Block, Block>> COLOURED_LEAD_GLASS = Helpers.mapOf(DyeColor.class, color ->
-            register("lead_glass/" + color.getSerializedName(), () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)))
+            register("lead_glass/" + color.getSerializedName(), () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).requiresCorrectToolForDrops().strength(4.5f)))
     );
 
     public static final DeferredHolder<Block, Block> CLEAR_LEAD_GLASS_PANE = register("lead_glass_pane/clear" , () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE)));
     public static final Map<DyeColor, DeferredHolder<Block, Block>> COLOURED_LEAD_GLASS_PANE = Helpers.mapOf(DyeColor.class, color ->
-            register("lead_glass_pane/" + color.getSerializedName(), () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE)))
+            register("lead_glass_pane/" + color.getSerializedName(), () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).requiresCorrectToolForDrops().strength(4.5f)))
     );
 
     public static final Map<CoreMetals.MetalType, Map<CoreMetals.BlockType, DeferredHolder<Block, Block>>> CORE_CUSTOM_METAL_BLOCKS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
