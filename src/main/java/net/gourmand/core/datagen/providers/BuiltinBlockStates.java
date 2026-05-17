@@ -262,8 +262,18 @@ public class BuiltinBlockStates extends BlockStateProvider {
             });
         });
 
-
         bulbBlock(CoreBlocks.LEAD_BULB_BLOCK);
+
+        Stream.of(CoreMetals.MetalType.values()).forEach(metalType -> {
+            if (!metalType.hasOtherFluid()){
+                fluidBlock(CoreBlocks.METAL_FLUIDS.get(metalType));
+            }
+        });
+
+        fluidBlock(CoreBlocks.CLEAR_GLASS_FLUID);
+        Stream.of(DyeColor.values()).forEach(metalType -> {
+            fluidBlock(CoreBlocks.COLORED_GLASS_FLUIDS.get(metalType));
+        });
     }
 
     private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, CoreOres ore){
@@ -788,5 +798,14 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, false).addModels(new ConfiguredModel(baseLitModel))
                 .partialState().with(CopperBulbBlock.LIT, false).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredModel))
                 .partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredLitModel));
+    }
+
+    private void fluidBlock(DeferredHolder<Block, LiquidBlock> block) {
+
+        ResourceLocation blockId = block.getId();
+        String namespace = blockId.getNamespace();
+        String path = blockId.getPath();
+
+        simpleBlock(block.get(), models().getBuilder(namespace + ":block/" + path ).texture("particle", thickFluidFlowTexture));
     }
 }
