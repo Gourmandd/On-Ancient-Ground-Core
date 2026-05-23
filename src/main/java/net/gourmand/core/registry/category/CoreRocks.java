@@ -14,11 +14,11 @@ import net.dries007.tfc.util.registry.RegistryRock;
 public enum CoreRocks implements RegistryRock
 {
     ARGILLITE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE), //vanilla cobble
-    NEPHELINITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.DEEPSLATE), //deepslate
-    BLACKSLAG(RockDisplayCategory.FELSIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BLACK),
-    PICRITE_BASALT(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY), // Pastel's basal marble
-    TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN),
+    NEPHELINITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.DEEPSLATE), //vanilla deepslate
+    BLACKSLAG(RockDisplayCategory.FELSIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BLACK), // Spectrum's blackslag
+    PICRITE_BASALT(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY), // Spectrum's basal marble
     BRECCIA(RockDisplayCategory.SEDIMENTARY, MapColor.SNOW), // Caupona's felsic tuff
+    TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN), //vanilla dripstone
     KOMATIITE(RockDisplayCategory.MAFIC_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_BROWN), // Create scoria
     SANDSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.SAND), // Create orchum
     RED_SANDSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_RED), // Quark jasper
