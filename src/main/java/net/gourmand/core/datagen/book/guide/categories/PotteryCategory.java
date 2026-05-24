@@ -7,6 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.datagen.book.guide.entries.gettingStarted.*;
+import net.gourmand.core.datagen.book.guide.entries.metalworking.TemperatureEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.CeramicPanEntry;
 import net.gourmand.core.datagen.book.guide.entries.pottery.*;
 import net.minecraft.resources.ResourceLocation;
@@ -26,7 +27,7 @@ public class PotteryCategory extends CategoryProvider {
                 "__i_l_______d",
                 "j_k_q__a_b__e",
                 "__n_m_______f",
-                "__o_p________"
+                "__o_p_s_t_r__"
         };
     }
 
@@ -34,7 +35,6 @@ public class PotteryCategory extends CategoryProvider {
     protected void generateEntries() {
 
         // add pit kiln guide
-        // add kiln (firebox) guide.
 
         var clay = this.add(new ClayEntry(this).generate("a"));
 
@@ -72,6 +72,12 @@ public class PotteryCategory extends CategoryProvider {
         var spindle = this.add(new SpindleEntry(this).generate("p"));
 
         var vessel = this.add(new VesselEntry(this).generate("q").withParent(clay));
+
+        var kiln = this.add(new KilnEntry(this).generate("r"));
+
+        var pitKiln = this.add(new PitKilnEntry(this).generate("s"));
+
+        var heating = this.add(new TemperatureEntry(this).generate("t"));
     }
 
     @Override

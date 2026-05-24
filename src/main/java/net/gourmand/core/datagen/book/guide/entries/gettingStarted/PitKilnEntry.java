@@ -28,7 +28,7 @@ public class PitKilnEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Pit Kilns** create temperatures capable of firing pottery and melting metals.
+                **Pit Kilns** create temperatures capable of firing pottery and melting **Non-Iron** metals like **Copper** and **Bronze**.
                 \\
                 \\
                 To create them, create a pit surrounded by blocks, use **V** to place items in the pit and **Right Click** 8 Straw and 8 Logs on the placed items.
