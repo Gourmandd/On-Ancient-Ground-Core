@@ -1,0 +1,57 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.bronze.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/ingot/bronze"
+  },
+  "name": "book.modpack.guide.metalworking.bronze.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": [
+        {
+          "item": "tfc:metal/ingot/bronze"
+        },
+        {
+          "item": "tfc:metal/ingot/bismuth_bronze"
+        },
+        {
+          "item": "tfc:metal/ingot/black_bronze"
+        }
+      ],
+      "text": "book.modpack.guide.metalworking.bronze.page1.text",
+      "title": "book.modpack.guide.metalworking.bronze.page1.title"
+    },
+    {
+      "type": "modpack:casting",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:casting/bronze_ingot",
+      "recipe_id_2": "tfc:casting/black_bronze_ingot",
+      "text": "book.modpack.guide.metalworking.bronze.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "metalworking/alloying",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 13,
+  "x": 1,
+  "y": 3
+}

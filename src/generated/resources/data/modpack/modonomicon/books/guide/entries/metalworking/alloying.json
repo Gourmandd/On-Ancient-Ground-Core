@@ -5,7 +5,7 @@
   "description": "book.modpack.guide.metalworking.alloying.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:metal/ingot/copper"
+    "item": "tfc:ceramic/ingot_mold"
   },
   "name": "book.modpack.guide.metalworking.alloying.name",
   "pages": [
@@ -16,14 +16,14 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:ceramic/vessel"
+        "tag": "tfc:molds"
       },
       "text": "book.modpack.guide.metalworking.alloying.page1.text",
       "title": "book.modpack.guide.metalworking.alloying.page1.title"
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 13,
-  "x": 2,
-  "y": 2
+  "sort_number": 12,
+  "x": 1,
+  "y": 1
 }

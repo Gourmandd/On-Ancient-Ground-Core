@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.chains.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/chain/copper"
+  },
+  "name": "book.modpack.guide.metalworking.chains.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:metal/chain/copper"
+      },
+      "text": "book.modpack.guide.metalworking.chains.page1.text",
+      "title": "book.modpack.guide.metalworking.chains.page1.title"
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/metal/chain/copper",
+      "text": "book.modpack.guide.metalworking.chains.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 26,
+  "x": -2,
+  "y": -3
+}

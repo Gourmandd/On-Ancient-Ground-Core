@@ -1,0 +1,52 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "metalworking",
+  "description": "book.modpack.guide.metalworking.black_steel.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:metal/ingot/black_steel"
+  },
+  "name": "book.modpack.guide.metalworking.black_steel.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:metal/ingot/black_steel"
+      },
+      "text": "book.modpack.guide.metalworking.black_steel.page1.text",
+      "title": "book.modpack.guide.metalworking.black_steel.page1.title"
+    },
+    {
+      "type": "modpack:casting",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:casting/high_carbon_black_steel_ingot",
+      "recipe_id_2": "tfc:casting/high_carbon_black_steel_ingot_fire_ingot",
+      "text": "book.modpack.guide.metalworking.black_steel.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:forging",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:anvil/metal/ingot/black_steel",
+      "text": "book.modpack.guide.metalworking.black_steel.page3.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 24,
+  "x": 7,
+  "y": 1
+}

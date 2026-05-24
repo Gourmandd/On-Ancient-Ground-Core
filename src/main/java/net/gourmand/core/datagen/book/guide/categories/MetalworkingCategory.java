@@ -8,6 +8,8 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.book.guide.entries.metalworking.*;
+import net.gourmand.core.datagen.book.guide.entries.pottery.CrucibleEntry;
+import net.gourmand.core.datagen.book.guide.entries.pottery.MoldTableEntry;
 import net.minecraft.resources.ResourceLocation;
 
 public class MetalworkingCategory extends CategoryProvider {
@@ -18,15 +20,14 @@ public class MetalworkingCategory extends CategoryProvider {
 
     @Override
     protected String[] generateEntryMap() {
-        // these is a temporary layout. Will be revised when category is finished.
         return new String[]{
-                "efghi",
-                "_____",
-                "c___d",
-                "_____",
-                "a___b",
-                "__lmn",
-                "_j_ko"
+                "____uvAwz___________",
+                "___________________",
+                "____efghi__o_s_t____",
+                "___________________",
+                "p_l_c___d__n_j_k_x_y",
+                "___________________",
+                "__m_a___b__B_q_r____",
         };
     }
 
@@ -39,36 +40,41 @@ public class MetalworkingCategory extends CategoryProvider {
 
         var anvil = this.add(new AnvilEntry(this).generate("d").withParent(double_ingot));
 
-        var welding = this.add(new WeldingEntry(this).generate("a").withParent(rock_anvil).withParent(anvil));
         var anvil_working = this.add(new AnvilWorkingEntry(this).generate("b").withParent(anvil));
+        var welding = this.add(new WeldingEntry(this).generate("a").withParent(rock_anvil).withParent(anvil));
 
         var rod = this.add(new RodEntry(this).generate("e"));
         var ingot = this.add(new IngotEntry(this).generate("f"));
         var sheet = this.add(new SheetEntry(this).generate("h"));
         var double_sheet = this.add(new DoubleSheetEntry(this).generate("i"));
 
-        var bloomery = this.add(new BloomeryEntry(this).generate("j"));
-        var blast_furnace = this.add(new BlastFurnaceEntry(this).generate("k"));
-
-        var charcoal_pit = this.add(new CharcoalPitEntry(this).generate("l"));
-        var charcoal_forge = this.add(new CharcoalForgeEntry(this).generate("m"));
+        var heating = this.add(new TemperatureEntry(this).generate("p"));
+        var charcoal_pit = this.add(new CharcoalPitEntry(this).generate("l").withParent(heating));
+        var charcoal_forge = this.add(new CharcoalForgeEntry(this).generate("m").withParent(charcoal_pit));
 
         var alloying = this.add(new AlloyingEntry(this).generate("n"));
 
+
+        var bronzeMaking = this.add(new BronzeMakingEntry(this).generate("B").withParent(alloying));
+        var bloomery = this.add(new BloomeryEntry(this).generate("j"));
+        var ironMaking = this.add(new IronMakingEntry(this).generate("q").withParent(bloomery));
+        var blast_furnace = this.add(new BlastFurnaceEntry(this).generate("k"));
+        var steelMaking = this.add(new SteelMakingEntry(this).generate("r").withParent(blast_furnace));
+
+        var crucible = this.add(new CrucibleEntry(this).generate("s"));
+        var channelCasting = this.add(new MoldTableEntry(this).generate("t").withParent(crucible));
         var bellows = this.add(new BellowsEntry(this).generate("o"));
 
-        // add fuel guide
-        // add bars
-        // add grates
-        // add plated blocks
-        // add steel making info (after blast furnace)
-        // add iron making info (after bloomery)
-        // add coloured steel making info
-        // add chain
-        // add armour trims
-        // add bellows
-        // add channel casting (maybe the one in pottery category has enough info?)
-        // add heating/temperature guide
+        var bars = this.add(new BarsEntry(this).generate("u"));
+        var grate = this.add(new GrateEntry(this).generate("v"));
+        var blocks = this.add(new PlatedBlocksEntry(this).generate("w"));
+
+        var blackSteelMaking = this.add(new BlackSteelMakingEntry(this).generate("x"));
+        var colouredSteelMaking = this.add(new ColouredSteelMakingEntry(this).generate("y"));
+
+        var chains = this.add(new ChainEntry(this).generate("z"));
+
+        var armor_trim = this.add(new ArmorTrimsEntry(this).generate("A"));
     }
 
     @Override

@@ -56,8 +56,16 @@
       "text": "book.modpack.guide.metalworking.charcoal_pit.page4.text"
     }
   ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "metalworking/heating",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 11,
-  "x": 0,
-  "y": 2
+  "sort_number": 10,
+  "x": -8,
+  "y": 1
 }

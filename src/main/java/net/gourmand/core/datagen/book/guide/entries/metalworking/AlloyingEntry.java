@@ -6,6 +6,7 @@ import com.klikli_dev.modonomicon.api.datagen.EntryProvider;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -23,7 +24,7 @@ public class AlloyingEntry extends EntryProvider {
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCItems.VESSEL.asItem()))
+                .withItem(Ingredient.of(TFCTags.Items.MOLDS))
         );
 
         this.pageTitle(entryName());
@@ -52,7 +53,7 @@ public class AlloyingEntry extends EntryProvider {
 
     @Override
     protected BookIconModel entryIcon() {
-        return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.COPPER).get(Metal.ItemType.INGOT));
+        return BookIconModel.create(TFCItems.MOLDS.get(Metal.ItemType.INGOT));
     }
 
     @Override
