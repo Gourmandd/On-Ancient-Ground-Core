@@ -13,9 +13,9 @@ import net.gourmand.core.AncientGroundCore;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class TemperatureEntry extends EntryProvider {
+public class HeatingEntry extends EntryProvider {
 
-    public TemperatureEntry(CategoryProviderBase parent) {
+    public HeatingEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
@@ -62,8 +62,6 @@ public class TemperatureEntry extends EntryProvider {
         this.pageTitle("Heat ranges");
         this.pageText("""
                 An item temperature is shown on its tooltip.
-                \\
-                \\
                 \\
                 \\
                 The temperature of an item is represented using colors:

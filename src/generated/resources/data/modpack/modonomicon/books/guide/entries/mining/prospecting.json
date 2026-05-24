@@ -48,7 +48,7 @@
       "title": "book.modpack.guide.mining.prospecting.page3.title"
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -72,7 +72,7 @@
       "title": "book.modpack.guide.mining.prospecting.page5.title"
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -96,7 +96,7 @@
       "title": "book.modpack.guide.mining.prospecting.page7.title"
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -120,7 +120,7 @@
       "title": "book.modpack.guide.mining.prospecting.page9.title"
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"

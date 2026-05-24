@@ -76,12 +76,12 @@ public class MoldTableEntry extends EntryProvider {
 
     @Override
     protected String entryName() {
-        return "Mold Tables and Casting Channels";
+        return "Mold Tables";
     }
 
     @Override
     protected String entryDescription() {
-        return "About Mold Tables and Casting Channels";
+        return "About Mold Tables!";
     }
 
     @Override

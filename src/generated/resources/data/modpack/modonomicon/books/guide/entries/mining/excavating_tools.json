@@ -22,7 +22,7 @@
       "title": "book.modpack.guide.mining.excavating_tools.page1.title"
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
@@ -34,7 +34,7 @@
       "title2": ""
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"

@@ -8,7 +8,7 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.recipes.AnvilRecipe;
 import net.dries007.tfc.util.Metal;
-import net.gourmand.core.modonomicon.pages.BookForgingPage;
+import net.gourmand.core.modonomicon.pages.BookAnvilWorkingPage;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.item.Item;
@@ -18,7 +18,7 @@ import net.minecraft.world.level.Level;
 
 import java.util.Map;
 
-public class BookForgingPageRenderer extends BookRecipePageRenderer<AnvilRecipe, BookForgingPage> {
+public class BookAnvilWorkingPageRenderer extends BookRecipePageRenderer<AnvilRecipe, BookAnvilWorkingPage> {
 
     final static Map<Integer, Item> TIER_TO_BLOCK = ImmutableMap.<Integer, Item>builder()
             .put(0, TFCBlocks.ROCK_ANVILS.get(Rock.ANDESITE).asItem())
@@ -30,7 +30,7 @@ public class BookForgingPageRenderer extends BookRecipePageRenderer<AnvilRecipe,
             .put(6, TFCBlocks.METALS.get(Metal.BLUE_STEEL).get(Metal.BlockType.ANVIL).asItem())
             .build();
 
-    public BookForgingPageRenderer(BookForgingPage page) {
+    public BookAnvilWorkingPageRenderer(BookAnvilWorkingPage page) {
         super(page);
     }
 

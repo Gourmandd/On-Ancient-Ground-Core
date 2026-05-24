@@ -33,7 +33,7 @@
       "title2": ""
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"

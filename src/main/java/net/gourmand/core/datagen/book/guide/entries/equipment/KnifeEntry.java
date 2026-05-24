@@ -11,7 +11,7 @@ import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.modonomicon.datagen.BookCastingPageModel;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.resources.ResourceLocation;
@@ -64,7 +64,7 @@ public class KnifeEntry extends EntryProvider {
                \s""");
 
         // page 4: anvil recipe.
-        this.page("page4", () -> BookForgingPageModel.create()
+        this.page("page4", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/knife_blade/wrought_iron"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/knife_blade/steel"))

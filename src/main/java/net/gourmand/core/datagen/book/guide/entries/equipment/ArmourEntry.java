@@ -9,7 +9,7 @@ import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.gourmand.core.modonomicon.datagen.BookWeldingPageModel;
 import net.minecraft.resources.ResourceLocation;
@@ -48,7 +48,7 @@ public class ArmourEntry extends EntryProvider {
                \s""");
 
         // page 3: anvil recipe.
-        this.page("page3", () -> BookForgingPageModel.create()
+        this.page("page3", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/unfinished_chestplate/wrought_iron"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/unfinished_boots/steel"))

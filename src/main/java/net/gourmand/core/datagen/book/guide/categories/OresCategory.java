@@ -29,12 +29,12 @@ public class OresCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "_w__a__m__dei_",
-                "_x__b__k__fgh_",
-                "_y__c__l___j__",
-                "______________",
-                "Kz__nopqrstuvL",
-                "_A__GCDEFBHIJ_",
+                "_w__a__m__dei",
+                "_x__b__k__fgh",
+                "_y__c__l___j_",
+                "_____________",
+                "Kz__nopqrstuv",
+                "LA__GCDEFBHIJ",
         };
     }
 

@@ -12,7 +12,7 @@ import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -86,7 +86,7 @@ public class BloomeryEntry extends EntryProvider {
                \s""");
 
         // page 5: refining blooms
-        this.page("page5", () -> BookForgingPageModel.create()
+        this.page("page5", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/refined_iron_bloom"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/ingot/wrought_iron"))

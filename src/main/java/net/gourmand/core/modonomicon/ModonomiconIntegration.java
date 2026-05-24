@@ -13,14 +13,14 @@ public class ModonomiconIntegration {
     // Page Types
     public static final ResourceLocation KNAPPING_PAGE = AncientGroundCore.location("knapping");
     public static final ResourceLocation CASTING_PAGE = AncientGroundCore.location("casting");
-    public static final ResourceLocation FORGING_PAGE = AncientGroundCore.location("forging");
+    public static final ResourceLocation ANVIL_WORKING_PAGE = AncientGroundCore.location("anvil_working");
     public static final ResourceLocation WELDING_PAGE = AncientGroundCore.location("welding");
     public static final ResourceLocation ALLOYING_PAGE = AncientGroundCore.location("alloying");
 
     public static void registerPages(){
         LoaderRegistry.registerPageLoader(KNAPPING_PAGE, (BookPageJsonLoader<?>) BookKnappingPage::fromJson, BookKnappingPage::fromNetwork);
         LoaderRegistry.registerPageLoader(CASTING_PAGE, (BookPageJsonLoader<?>) BookCastingPage::fromJson, BookCastingPage::fromNetwork);
-        LoaderRegistry.registerPageLoader(FORGING_PAGE, (BookPageJsonLoader<?>) BookForgingPage::fromJson, BookForgingPage::fromNetwork);
+        LoaderRegistry.registerPageLoader(ANVIL_WORKING_PAGE, (BookPageJsonLoader<?>) BookAnvilWorkingPage::fromJson, BookAnvilWorkingPage::fromNetwork);
         LoaderRegistry.registerPageLoader(WELDING_PAGE, (BookPageJsonLoader<?>) BookWeldingPage::fromJson, BookWeldingPage::fromNetwork);
         LoaderRegistry.registerPageLoader(ALLOYING_PAGE, (BookPageJsonLoader<?>) BookAlloyingPage::fromJson, BookAlloyingPage::fromNetwork);
     }
@@ -28,7 +28,7 @@ public class ModonomiconIntegration {
     public static void registerPageRenderers() {
         PageRendererRegistry.registerPageRenderer(KNAPPING_PAGE, p -> new BookKnappingPageRenderer((BookKnappingPage) p));
         PageRendererRegistry.registerPageRenderer(CASTING_PAGE, p -> new BookCastingPageRenderer((BookCastingPage) p));
-        PageRendererRegistry.registerPageRenderer(FORGING_PAGE, p -> new BookForgingPageRenderer((BookForgingPage) p));
+        PageRendererRegistry.registerPageRenderer(ANVIL_WORKING_PAGE, p -> new BookAnvilWorkingPageRenderer((BookAnvilWorkingPage) p));
         PageRendererRegistry.registerPageRenderer(WELDING_PAGE, p -> new BookWeldingPageRenderer((BookWeldingPage) p));
         PageRendererRegistry.registerPageRenderer(ALLOYING_PAGE, p -> new BookAlloyingPageRenderer((BookAlloyingPage) p));
     }

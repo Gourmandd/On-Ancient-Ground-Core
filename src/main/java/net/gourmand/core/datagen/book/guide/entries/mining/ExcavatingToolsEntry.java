@@ -7,7 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.util.Metal;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.rtc.hammertime.HammerTime;
@@ -38,7 +38,7 @@ public class ExcavatingToolsEntry extends EntryProvider {
                \s""");
 
         // page 2: anvil recipe.
-        this.page("page2", () -> BookForgingPageModel.create()
+        this.page("page2", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(HammerTime.MOD_ID, "anvil/metal/sledgehammer_head/wrought_iron"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(HammerTime.MOD_ID, "anvil/metal/sledgehammer_head/steel"))
@@ -50,7 +50,7 @@ public class ExcavatingToolsEntry extends EntryProvider {
                \s""");
 
         // page 3: anvil recipe.
-        this.page("page3", () -> BookForgingPageModel.create()
+        this.page("page3", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(HammerTime.MOD_ID, "anvil/metal/excavator_head/wrought_iron"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(HammerTime.MOD_ID, "anvil/metal/excavator_head/steel"))

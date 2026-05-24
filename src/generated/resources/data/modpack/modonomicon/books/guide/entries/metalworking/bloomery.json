@@ -55,7 +55,7 @@
       "text": "book.modpack.guide.metalworking.bloomery.page4.text"
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"

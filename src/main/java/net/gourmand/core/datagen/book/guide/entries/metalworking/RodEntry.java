@@ -9,7 +9,7 @@ import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
@@ -36,7 +36,7 @@ public class RodEntry extends EntryProvider {
                \s""");
 
         // page 2: anvil working recipes.
-        this.page("page2", () -> BookForgingPageModel.create()
+        this.page("page2", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/rod/bronze"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/rod/copper"))

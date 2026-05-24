@@ -16,9 +16,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 
-public class BookForgingPage extends BookRecipePage<AnvilRecipe> {
+public class BookAnvilWorkingPage extends BookRecipePage<AnvilRecipe> {
 
-    public BookForgingPage(BookTextHolder title1, ResourceLocation recipeId1, BookTextHolder title2, ResourceLocation recipeId2, BookTextHolder text, String anchor, BookCondition condition) {
+    public BookAnvilWorkingPage(BookTextHolder title1, ResourceLocation recipeId1, BookTextHolder title2, ResourceLocation recipeId2, BookTextHolder text, String anchor, BookCondition condition) {
         super(TFCRecipeTypes.ANVIL.get(), title1, recipeId1, title2, recipeId2, text, anchor, condition);
     }
 
@@ -30,26 +30,26 @@ public class BookForgingPage extends BookRecipePage<AnvilRecipe> {
         return recipe.value().getResultItem(level.registryAccess());
     }
 
-    public static BookForgingPage fromJson(ResourceLocation entryId, JsonObject json, HolderLookup.Provider provider) {
+    public static BookAnvilWorkingPage fromJson(ResourceLocation entryId, JsonObject json, HolderLookup.Provider provider) {
         var common = BookRecipePage.commonFromJson(json, provider);
         var anchor = GsonHelper.getAsString(json, "anchor", "");
         var condition = json.has("condition")
                 ? BookCondition.fromJson(entryId, json.getAsJsonObject("condition"), provider)
                 : new BookNoneCondition();
-        return new BookForgingPage(common.title1(), common.recipeId1(), common.title2(), common.recipeId2(), common.text(), anchor, condition);
+        return new BookAnvilWorkingPage(common.title1(), common.recipeId1(), common.title2(), common.recipeId2(), common.text(), anchor, condition);
     }
 
 
 
-    public static BookForgingPage fromNetwork(RegistryFriendlyByteBuf buffer) {
+    public static BookAnvilWorkingPage fromNetwork(RegistryFriendlyByteBuf buffer) {
         var common = BookRecipePage.commonFromNetwork(buffer);
         var anchor = buffer.readUtf();
         var condition = BookCondition.fromNetwork(buffer);
-        return new BookForgingPage(common.title1(), common.recipeId1(), common.title2(), common.recipeId2(), common.text(), anchor, condition);
+        return new BookAnvilWorkingPage(common.title1(), common.recipeId1(), common.title2(), common.recipeId2(), common.text(), anchor, condition);
     }
 
     @Override
     public ResourceLocation getType() {
-        return ModonomiconIntegration.FORGING_PAGE;
+        return ModonomiconIntegration.ANVIL_WORKING_PAGE;
     }
 }

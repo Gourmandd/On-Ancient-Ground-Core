@@ -7,7 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.datagen.book.guide.entries.gettingStarted.*;
-import net.gourmand.core.datagen.book.guide.entries.metalworking.TemperatureEntry;
+import net.gourmand.core.datagen.book.guide.entries.metalworking.HeatingEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.CeramicPanEntry;
 import net.gourmand.core.datagen.book.guide.entries.pottery.*;
 import net.minecraft.resources.ResourceLocation;
@@ -77,7 +77,7 @@ public class PotteryCategory extends CategoryProvider {
 
         var pitKiln = this.add(new PitKilnEntry(this).generate("s"));
 
-        var heating = this.add(new TemperatureEntry(this).generate("t"));
+        var heating = this.add(new HeatingEntry(this).generate("t"));
     }
 
     @Override

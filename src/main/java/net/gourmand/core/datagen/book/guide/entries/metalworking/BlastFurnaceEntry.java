@@ -11,7 +11,7 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -122,7 +122,7 @@ public class BlastFurnaceEntry extends EntryProvider {
                \s""");
 
         // page 8: tuyere recipes.
-        this.page("page8", () -> BookForgingPageModel.create()
+        this.page("page8", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/tuyere/bronze"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/tuyere/wrought_iron"))
@@ -146,7 +146,7 @@ public class BlastFurnaceEntry extends EntryProvider {
                \s""");
 
         // page 10: tuyere recipes.
-        this.page("page10", () -> BookForgingPageModel.create()
+        this.page("page10", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/ingot/high_carbon_steel"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/ingot/steel"))

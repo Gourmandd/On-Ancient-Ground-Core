@@ -22,7 +22,7 @@
       "title": "book.modpack.guide.metalworking.wrought_iron.page1.title"
     },
     {
-      "type": "modpack:forging",
+      "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"

@@ -10,7 +10,7 @@ import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.gourmand.core.registry.CoreItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -63,7 +63,7 @@ public class BucketEntry extends EntryProvider {
                \s""");
 
         // page 4: iron bucket recipe.
-        this.page("page4", () -> BookForgingPageModel.create()
+        this.page("page4", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "anvil/metal/bucket/wrought_iron"))
         );
@@ -86,7 +86,7 @@ public class BucketEntry extends EntryProvider {
                \s""");
 
         // page 6: blue steel bucket recipe.
-        this.page("page6", () -> BookForgingPageModel.create()
+        this.page("page6", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/bucket/blue_steel"))
         );

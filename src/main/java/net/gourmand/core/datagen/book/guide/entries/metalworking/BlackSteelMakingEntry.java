@@ -10,7 +10,7 @@ import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.modonomicon.datagen.BookCastingPageModel;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -48,7 +48,7 @@ public class BlackSteelMakingEntry extends EntryProvider {
                \s""");
 
         // page 3: making it
-        this.page("page3", () -> BookForgingPageModel.create()
+        this.page("page3", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/ingot/black_steel"))
         );

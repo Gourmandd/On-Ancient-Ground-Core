@@ -48,7 +48,7 @@ public class MetalworkingCategory extends CategoryProvider {
         var sheet = this.add(new SheetEntry(this).generate("h"));
         var double_sheet = this.add(new DoubleSheetEntry(this).generate("i"));
 
-        var heating = this.add(new TemperatureEntry(this).generate("p"));
+        var heating = this.add(new HeatingEntry(this).generate("p"));
         var charcoal_pit = this.add(new CharcoalPitEntry(this).generate("l").withParent(heating));
         var charcoal_forge = this.add(new CharcoalForgeEntry(this).generate("m").withParent(charcoal_pit));
 

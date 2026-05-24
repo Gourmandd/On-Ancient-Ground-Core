@@ -14,7 +14,7 @@ import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.modonomicon.datagen.BookForgingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -72,7 +72,7 @@ public class ProspectingEntry extends EntryProvider {
                \s""");
 
         // page 4: anvil recipe.
-        this.page("page4", () -> BookForgingPageModel.create()
+        this.page("page4", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/propick_head/wrought_iron"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/propick_head/steel"))
@@ -102,7 +102,7 @@ public class ProspectingEntry extends EntryProvider {
                \s""");
 
         // page 6: anvil recipe.
-        this.page("page6", () -> BookForgingPageModel.create()
+        this.page("page6", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(PrecisionProspecting.ID, "anvil/metal/mineral_prospector/wrought_iron"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(PrecisionProspecting.ID, "anvil/metal/mineral_prospector/steel"))
@@ -132,7 +132,7 @@ public class ProspectingEntry extends EntryProvider {
                \s""");
 
         // page 8: anvil recipe.
-        this.page("page8", () -> BookForgingPageModel.create()
+        this.page("page8", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(PrecisionProspecting.ID, "anvil/metal/prospector_drill/wrought_iron"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(PrecisionProspecting.ID, "anvil/metal/prospector_drill/steel"))
@@ -162,7 +162,7 @@ public class ProspectingEntry extends EntryProvider {
                \s""");
 
         // page 10: anvil recipe.
-        this.page("page10", () -> BookForgingPageModel.create()
+        this.page("page10", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(PrecisionProspecting.ID, "anvil/metal/prospector_hammer/wrought_iron"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(PrecisionProspecting.ID, "anvil/metal/prospector_hammer/steel"))
