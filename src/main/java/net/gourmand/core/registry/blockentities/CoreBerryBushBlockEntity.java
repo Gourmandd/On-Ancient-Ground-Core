@@ -22,7 +22,7 @@ public class CoreBerryBushBlockEntity extends BerryBushBlockEntity {
     }
 
     // Allows for large bushes without runaway spreading
-    private int growthsRemaining = 24;
+    private int growthsRemaining;
 
     public CoreBerryBushBlockEntity(BlockPos pos, BlockState state)
     {
@@ -32,5 +32,6 @@ public class CoreBerryBushBlockEntity extends BerryBushBlockEntity {
     public CoreBerryBushBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state)
     {
         super(type, pos, state);
+        this.growthsRemaining = 24;
     }
 }

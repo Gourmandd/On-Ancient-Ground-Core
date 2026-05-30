@@ -280,7 +280,7 @@ public class BuiltinItemModels extends ItemModelProvider {
     }
 
     private ResourceLocation itemTexture(DeferredHolder<Item, Item> item){
-        return  ResourceLocation.fromNamespaceAndPath(item.getId().getNamespace(), "item/" + item.getId().getPath());
+        return ResourceLocation.fromNamespaceAndPath(item.getId().getNamespace(), "item/" + item.getId().getPath());
     }
 
     private void supportBlockItem(Item item, CoreDeeperDownWood wood){

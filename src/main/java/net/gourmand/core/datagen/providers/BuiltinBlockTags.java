@@ -12,7 +12,6 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.*;
 import net.minecraft.core.HolderLookup;
@@ -35,7 +34,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
+public class BuiltinBlockTags extends TagsProvider<Block>
 {
     private final ExistingFileHelper.IResourceType resourceType;
 

@@ -13,4 +13,6 @@ public class CoreWorldGen {
     public static final DeferredRegister<MapCodec<? extends BiomeSource>> BIOME_SOURCES = DeferredRegister.create(BuiltInRegistries.BIOME_SOURCE, AncientGroundCore.MODID);
 
     public static final DeferredHolder<MapCodec<? extends BiomeSource>, MapCodec<OthersideBiomeSource>> OTHERSIDE_BIOME_SOURCE = BIOME_SOURCES.register( "otherside", () -> OthersideBiomeSource.CODEC);
+
+
 }
