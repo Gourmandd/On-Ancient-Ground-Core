@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-24T11:24:24.700818167	Books: modpack
+// 1.21.1	2026-05-30T21:06:48.960147718	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 b43e1989b5e4d54d3afb942b4b67768d09dd73e7 data/modpack/modonomicon/books/guide/categories/equipment.json
@@ -117,7 +117,7 @@ dd30447e4239f1186263ce5b7a9e114c2ea16a4b data/modpack/modonomicon/books/guide/en
 cc87bbd129afbb4cc7c4343b0f92df459ea0c09c data/modpack/modonomicon/books/guide/entries/metalworking/armor_trim.json
 0e64ca7d7d596196990133af7351490c69ea2216 data/modpack/modonomicon/books/guide/entries/metalworking/bars.json
 9829b3b6e9f25e85049ef263d3c8da290289e092 data/modpack/modonomicon/books/guide/entries/metalworking/bellows.json
-5b83aa68772f349536b8b6a5584beb57f68bae0b data/modpack/modonomicon/books/guide/entries/metalworking/black_steel.json
+8fb51b57f832d13558d57157f380b65d8822147a data/modpack/modonomicon/books/guide/entries/metalworking/black_steel.json
 fdff263b78deb7f3680dcd6e01087c78082f5caf data/modpack/modonomicon/books/guide/entries/metalworking/blast_furnace.json
 09c0d4374c7315dbd757faab8e8d7f3c6d30f898 data/modpack/modonomicon/books/guide/entries/metalworking/block.json
 db30c829acc02e51002ff226e361c8c20d82aa4b data/modpack/modonomicon/books/guide/entries/metalworking/bloomery.json
@@ -125,7 +125,7 @@ b7207eb75880527b6e5c9f51e99bd3e3ae8f08f8 data/modpack/modonomicon/books/guide/en
 93d817f15b6ca6b9b7456758d890c5f337199a3c data/modpack/modonomicon/books/guide/entries/metalworking/chains.json
 00f1ed3a955c9fbc40348cf3dc75f4f9b6de96b7 data/modpack/modonomicon/books/guide/entries/metalworking/charcoal_forge.json
 4a1493e9d64e5b5c2b9168076e5c6c892dd11ef2 data/modpack/modonomicon/books/guide/entries/metalworking/charcoal_pit.json
-3fbfda1f714f539710567f8fc41d733af355f55d data/modpack/modonomicon/books/guide/entries/metalworking/coloured_steel.json
+e9dae90e8b5189d5678eb45dc45f6a56bb17025d data/modpack/modonomicon/books/guide/entries/metalworking/coloured_steel.json
 ea538802bf16f0a23f4ce084600eae009f522357 data/modpack/modonomicon/books/guide/entries/metalworking/crucible.json
 5872389ba9b1afd16332d4479dd063706d59b7ff data/modpack/modonomicon/books/guide/entries/metalworking/double_ingot.json
 0ccd08cb82670fed9bf5190bab8f33814a40d382 data/modpack/modonomicon/books/guide/entries/metalworking/double_sheet.json

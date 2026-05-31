@@ -34,13 +34,24 @@
       "title2": ""
     },
     {
+      "type": "modpack:welding",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:welding/metal/ingot/high_carbon_black_steel",
+      "text": "book.modpack.guide.metalworking.black_steel.page3.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
       "type": "modpack:anvil_working",
       "anchor": "",
       "condition": {
         "type": "modonomicon:none"
       },
       "recipe_id_1": "tfc:anvil/metal/ingot/black_steel",
-      "text": "book.modpack.guide.metalworking.black_steel.page3.text",
+      "text": "book.modpack.guide.metalworking.black_steel.page4.text",
       "title1": "",
       "title2": ""
     }
