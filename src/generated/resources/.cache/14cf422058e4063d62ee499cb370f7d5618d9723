@@ -1,14 +1,15 @@
-// 1.21.1	2026-05-31T08:38:22.49358082	Books: modpack
+// 1.21.1	2026-05-31T11:43:03.242294628	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
+c909fd21920be1ed20ad0efd7a842635a3f5771e data/modpack/modonomicon/books/guide/categories/devices.json
 b43e1989b5e4d54d3afb942b4b67768d09dd73e7 data/modpack/modonomicon/books/guide/categories/equipment.json
-617eb01d4b70d9a1d6f9692bb9e49e95a42ee3af data/modpack/modonomicon/books/guide/categories/geology.json
+36445e74a10d7d55f60bfe49b749b2d225fa696c data/modpack/modonomicon/books/guide/categories/geology.json
 5cf94e4cb9ba9a92960421af8c6d9d0d6df13dc5 data/modpack/modonomicon/books/guide/categories/getting_started.json
 e84160c932a2a6228487c2b73a79ae6bb08c30a5 data/modpack/modonomicon/books/guide/categories/glassworking.json
 059b7214ef11a7acf715cf2a0cf6db5b6b4fe36d data/modpack/modonomicon/books/guide/categories/masonry.json
 b073263402329517ce0569ab5ea1b73a2c5a04ab data/modpack/modonomicon/books/guide/categories/metalworking.json
 a1f6de2f5dc5c558dec0c1d517ff630776e2d31b data/modpack/modonomicon/books/guide/categories/mining.json
-03b5bafd3a0f3524769bcdf3943f552e4386c336 data/modpack/modonomicon/books/guide/categories/ores.json
+f3394800017ebf2714fa3786b3860180466dc38f data/modpack/modonomicon/books/guide/categories/ores.json
 90b80768cd6a563f021b6dca8479c8c1eafe2954 data/modpack/modonomicon/books/guide/categories/pottery.json
 20ecd3da3214de8627929398a73cd7aaa3c761ec data/modpack/modonomicon/books/guide/entries/carpentry/barrel.json
 167dddd8ea85bf571882b9e8c7275f077cb9e1c9 data/modpack/modonomicon/books/guide/entries/carpentry/bookshelf.json
@@ -34,6 +35,18 @@ a72754d089077b3d5254092fafe25995e123defc data/modpack/modonomicon/books/guide/en
 a2566c933f43a17c9909896bbb6cd3438273c481 data/modpack/modonomicon/books/guide/entries/carpentry/trapdoor.json
 56273e295852d715398503e032619c5f9d056074 data/modpack/modonomicon/books/guide/entries/carpentry/trapped_chest.json
 e968022eeb1c798d3f1edb431757f68ebdb88191 data/modpack/modonomicon/books/guide/entries/carpentry/workbench.json
+a3dcd13cad289a266b08ac297edf81984211041d data/modpack/modonomicon/books/guide/entries/devices/anemometer.json
+0391271ce65c4cec9ebba87b8cbb3600396ab50a data/modpack/modonomicon/books/guide/entries/devices/blast_furnace.json
+159f7d63217c84a39133191b7b03f889ae1786bf data/modpack/modonomicon/books/guide/entries/devices/bloomery.json
+33cbaf529f20a7c13b583a2544ccc10301245e99 data/modpack/modonomicon/books/guide/entries/devices/jukebox.json
+0dace91ba62d4488d0cfa6906e0775734f69fe56 data/modpack/modonomicon/books/guide/entries/devices/note_block.json
+186f0ac67e7df3e1e4643a410d73a27defb407fe data/modpack/modonomicon/books/guide/entries/devices/powderkeg.json
+788f8ecfb2745139930fe03403723806a9848a74 data/modpack/modonomicon/books/guide/entries/devices/precision_clock.json
+bf3e1c1c6d0cef9037fe61dd7a6dcc0e5ed4a292 data/modpack/modonomicon/books/guide/entries/devices/thatch_bed.json
+407753b11d541f9dd91a7297c03cc184bff5f374 data/modpack/modonomicon/books/guide/entries/devices/thermometer.json
+c907b885df9d8e765a9bd2b397e4717c78d942d8 data/modpack/modonomicon/books/guide/entries/devices/tnt.json
+5fe61ddf5e14c2af971288e0341d046187c751aa data/modpack/modonomicon/books/guide/entries/devices/weather_vane.json
+113d7479121244504610d15c1e929b2b687e24be data/modpack/modonomicon/books/guide/entries/devices/wool_bed.json
 8ecab4c63950b3d61abc40724db68d2a4c1fa478 data/modpack/modonomicon/books/guide/entries/equipment/armour.json
 9b21a63463edf742d7a185ab0ae5977d21e6673f data/modpack/modonomicon/books/guide/entries/equipment/axe.json
 3b47c9327bef85d056369cd8f95b3c9aedc55992 data/modpack/modonomicon/books/guide/entries/equipment/bone_needle.json

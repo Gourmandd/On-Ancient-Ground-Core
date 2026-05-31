@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "devices",
+  "description": "book.modpack.guide.devices.jukebox.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "minecraft:jukebox"
+  },
+  "name": "book.modpack.guide.devices.jukebox.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:jukebox"
+      },
+      "text": "book.modpack.guide.devices.jukebox.page1.text",
+      "title": "book.modpack.guide.devices.jukebox.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "minecraft:jukebox",
+      "text": "book.modpack.guide.devices.jukebox.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 4,
+  "x": -1,
+  "y": -1
+}

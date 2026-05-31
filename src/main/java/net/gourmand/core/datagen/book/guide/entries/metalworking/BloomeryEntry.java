@@ -38,9 +38,6 @@ public class BloomeryEntry extends EntryProvider {
                 \\
                 \\
                 An "Iron containing item" is any item that melts into **Cast Iron**, such are ores, ingots, and misc items.
-                \\
-                \\
-                The bloomery block will open and close with Right Click
                \s""");
 
         // page 2: making it
@@ -52,6 +49,9 @@ public class BloomeryEntry extends EntryProvider {
         this.pageTitle(entryName());
         this.pageText("""
                 The bloomery is made from 8 **Double Sheets** of any bronze type.
+                \\
+                \\
+                The bloomery block will open and close with Right Click
                \s""");
 
         // page 3: explain bloomeries.

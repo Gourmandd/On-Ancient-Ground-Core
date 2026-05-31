@@ -1,0 +1,29 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "devices",
+  "description": "book.modpack.guide.devices.thatch_bed.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:thatch_bed"
+  },
+  "name": "book.modpack.guide.devices.thatch_bed.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:thatch_bed"
+      },
+      "text": "book.modpack.guide.devices.thatch_bed.page1.text",
+      "title": "book.modpack.guide.devices.thatch_bed.page1.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 10,
+  "x": 1,
+  "y": -1
+}
