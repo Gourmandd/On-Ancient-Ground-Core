@@ -70,8 +70,10 @@ public class BookWeldingPageRenderer extends BookRecipePageRenderer<WeldingRecip
         this.parentScreen.renderIngredient(guiGraphics, recipeX + 40, recipeY + 4, mouseX, mouseY, weldingRecipe.getSecondInput());
         this.parentScreen.renderItemStack(guiGraphics, recipeX + 76, recipeY + 4, mouseX, mouseY, weldingRecipe.getResultItem(world.registryAccess()));
 
+        ItemStack anvil = new ItemStack(TIER_TO_BLOCK.getOrDefault(weldingRecipe.getTier(), TFCBlocks.ROCK_ANVILS.get(Rock.ANDESITE).asItem()));
+
         // anvil + flux
         this.parentScreen.renderItemStack(guiGraphics, recipeX + 4, recipeY + 4 + 19, mouseX, mouseY, new ItemStack(TFCItems.POWDERS.get(Powder.FLUX).asItem()));
-        this.parentScreen.renderItemStack(guiGraphics, recipeX + 40, recipeY + 4 + 19, mouseX, mouseY, new ItemStack(TIER_TO_BLOCK.get(weldingRecipe.getTier())));
+        this.parentScreen.renderItemStack(guiGraphics, recipeX + 40, recipeY + 4 + 19, mouseX, mouseY, anvil);
     }
 }

@@ -63,8 +63,10 @@ public class BookAnvilWorkingPageRenderer extends BookRecipePageRenderer<AnvilRe
 
         var forging_recipe = recipe.value();
 
+        ItemStack anvil = new ItemStack(TIER_TO_BLOCK.getOrDefault(forging_recipe.getMinTier(), TFCBlocks.ROCK_ANVILS.get(Rock.ANDESITE).asItem()));
+
         this.parentScreen.renderIngredient(guiGraphics, recipeX + 4, recipeY + 4, mouseX, mouseY, forging_recipe.getInput());
-        this.parentScreen.renderItemStack(guiGraphics, recipeX + 40, recipeY + 4, mouseX, mouseY, new ItemStack(TIER_TO_BLOCK.get(forging_recipe.getMinTier())));
+        this.parentScreen.renderItemStack(guiGraphics, recipeX + 40, recipeY + 4, mouseX, mouseY, anvil);
         this.parentScreen.renderItemStack(guiGraphics, recipeX + 76, recipeY + 4, mouseX, mouseY, forging_recipe.getResultItem(world.registryAccess()));
     }
 }

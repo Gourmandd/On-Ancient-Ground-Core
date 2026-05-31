@@ -29,21 +29,20 @@ public class OresCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "_w__a__m__dei",
-                "_x__b__k__fgh",
-                "_y__c__l___j_",
+                "w__a__m__dei",
+                "x__b__k__fgh",
+                "y__c__l___j_",
                 "_____________",
-                "Kz__nopqrstuv",
-                "LA__GCDEFBHIJ",
+                "Kz_nopqrstuv",
+                "LA_GCDEFBHIJ",
         };
     }
 
     @Override
     protected void generateEntries() {
 
-        // add flux info
-
         // in the ore entries add their pickaxe tier required to mine.
+        // Update: the tool mining tier for gems is subject to change in TFC, should wait out until they do it or decide not to do it.
 
         // copper
         var nativeCopperEntry = createOreEntry(
@@ -338,9 +337,9 @@ public class OresCategory extends CategoryProvider {
                 TFCItems.ORES.get(Ore.LIGNITE).get(),
                 "w",
                 """
-                "Lignite is a type of low-grade **Coal** ore. \s
+                Lignite is a type of low-grade **Coal** ore. \s
                 \\
-                It can be found in very large flat deposits near the surface in **Sedimentary** rocks."
+                It can be found in very large flat deposits near the surface in **Sedimentary** rocks.
                 """
         );
 

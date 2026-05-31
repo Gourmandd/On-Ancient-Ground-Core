@@ -39,7 +39,7 @@ public class CarpentryCategory extends CategoryProvider {
         // vanilla barrel
         // powder keg (same entry as devices category)
         // barrel rack
-        // bed
+        // bed (same entry as devices category)
         // ladder
         // composter (same entry as devices & homesteading category)
         // item frame (same entry as devices category)

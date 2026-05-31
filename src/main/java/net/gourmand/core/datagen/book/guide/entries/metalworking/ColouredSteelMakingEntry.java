@@ -36,7 +36,7 @@ public class ColouredSteelMakingEntry extends EntryProvider {
                 **Coloured Steels** are a very strong metal, used largely for tools.
                 \\
                 \\
-                Lamps and bucked made out of them can hold lava and other dangerous fluids.
+                Lamps and buckets made out of them can hold lava and other dangerous fluids.
                \s""");
 
         // page 2: making it
