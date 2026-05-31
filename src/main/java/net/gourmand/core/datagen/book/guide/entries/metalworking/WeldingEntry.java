@@ -34,7 +34,7 @@ public class WeldingEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Welding is a process done using an **Anvil** and **Flux**, to combine two items which are at an appropriate temperature.
+                **Welding** is a process done using an **Anvil** and **Flux**, to combine two items which are at an appropriate temperature.
                 \\
                 \\
                 For welding metal items, the anvil has to be the tier below the tier of the metal.

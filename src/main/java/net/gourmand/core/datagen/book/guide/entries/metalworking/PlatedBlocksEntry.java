@@ -32,7 +32,7 @@ public class PlatedBlocksEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Plated Blockss** are a block worth 100 mb of metal, they have a cut variant and a decorational purpose.
+                **Plated Blocks** are worth 100 mb of metal, they have a cut variant and are decorational.
                 \\
                 \\
                 Brass plated blocks are used for the **Table Pour** glassworking operation.

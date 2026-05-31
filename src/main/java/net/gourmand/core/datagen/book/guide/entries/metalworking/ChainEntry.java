@@ -44,7 +44,7 @@ public class ChainEntry extends EntryProvider {
         );
 
         this.pageTitle(entryName());
-        this.pageText("Foring copper chains");
+        this.pageText("Forging copper chains");
     }
 
     @Override

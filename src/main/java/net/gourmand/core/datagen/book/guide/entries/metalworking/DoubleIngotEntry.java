@@ -46,6 +46,7 @@ public class DoubleIngotEntry extends EntryProvider {
         );
 
         this.pageTitle(entryName());
+        this.pageText("Forging Double Ingots");
     }
 
     @Override

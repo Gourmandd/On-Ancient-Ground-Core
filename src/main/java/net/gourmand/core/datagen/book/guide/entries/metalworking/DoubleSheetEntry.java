@@ -43,6 +43,7 @@ public class DoubleSheetEntry extends EntryProvider {
         );
 
         this.pageTitle(entryName());
+        this.pageText("Getting Double Sheets from Welding");
     }
 
     @Override

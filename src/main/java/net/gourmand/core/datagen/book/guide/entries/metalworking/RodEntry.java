@@ -43,6 +43,7 @@ public class RodEntry extends EntryProvider {
         );
 
         this.pageTitle(entryName());
+        this.pageText("Forging Rods");
     }
 
     @Override

@@ -46,6 +46,7 @@ public class IngotEntry extends EntryProvider {
         );
 
         this.pageTitle(entryName());
+        this.pageText("Casting Ingots");
     }
 
     @Override
