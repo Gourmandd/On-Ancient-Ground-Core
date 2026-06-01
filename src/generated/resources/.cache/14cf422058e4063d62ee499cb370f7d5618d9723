@@ -1,15 +1,16 @@
-// 1.21.1	2026-05-31T11:43:03.242294628	Books: modpack
+// 1.21.1	2026-06-01T09:02:18.005433326	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
-c909fd21920be1ed20ad0efd7a842635a3f5771e data/modpack/modonomicon/books/guide/categories/devices.json
+0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
 b43e1989b5e4d54d3afb942b4b67768d09dd73e7 data/modpack/modonomicon/books/guide/categories/equipment.json
-36445e74a10d7d55f60bfe49b749b2d225fa696c data/modpack/modonomicon/books/guide/categories/geology.json
+6235bb4aeb06e7a2283305cf7bf5ddc4108e4d8e data/modpack/modonomicon/books/guide/categories/geology.json
 5cf94e4cb9ba9a92960421af8c6d9d0d6df13dc5 data/modpack/modonomicon/books/guide/categories/getting_started.json
 e84160c932a2a6228487c2b73a79ae6bb08c30a5 data/modpack/modonomicon/books/guide/categories/glassworking.json
+60f626a7bb7a6f6279512f28e9a17c8c75afb8de data/modpack/modonomicon/books/guide/categories/homesteading.json
 059b7214ef11a7acf715cf2a0cf6db5b6b4fe36d data/modpack/modonomicon/books/guide/categories/masonry.json
 b073263402329517ce0569ab5ea1b73a2c5a04ab data/modpack/modonomicon/books/guide/categories/metalworking.json
 a1f6de2f5dc5c558dec0c1d517ff630776e2d31b data/modpack/modonomicon/books/guide/categories/mining.json
-f3394800017ebf2714fa3786b3860180466dc38f data/modpack/modonomicon/books/guide/categories/ores.json
+0be541ad26ec745f44e3b7a4cfba01903c5d1bfd data/modpack/modonomicon/books/guide/categories/ores.json
 90b80768cd6a563f021b6dca8479c8c1eafe2954 data/modpack/modonomicon/books/guide/categories/pottery.json
 20ecd3da3214de8627929398a73cd7aaa3c761ec data/modpack/modonomicon/books/guide/entries/carpentry/barrel.json
 167dddd8ea85bf571882b9e8c7275f077cb9e1c9 data/modpack/modonomicon/books/guide/entries/carpentry/bookshelf.json
@@ -124,6 +125,7 @@ ffa4a6105a93c6a50567be47417d88f3cad3f490 data/modpack/modonomicon/books/guide/en
 ae4fa14b994550f57ca43135d2aefbff36921b87 data/modpack/modonomicon/books/guide/entries/getting_started/pit_kiln.json
 e1e0b99a70baed146be6a6e1cee96933203ae7ab data/modpack/modonomicon/books/guide/entries/getting_started/shovels.json
 5b073e39b3472b072cd79daac94732074d25c248 data/modpack/modonomicon/books/guide/entries/getting_started/straw.json
+efd16bb751a197b4f87682da33ff6e13a3857d35 data/modpack/modonomicon/books/guide/entries/homesteading/armour.json
 9f20070718cf56dc8579c23ebcb29bb498f39d36 data/modpack/modonomicon/books/guide/entries/metalworking/alloying.json
 dc332b03527e9cd6f965848c18dc23caa0a96659 data/modpack/modonomicon/books/guide/entries/metalworking/anvil.json
 dd30447e4239f1186263ce5b7a9e114c2ea16a4b data/modpack/modonomicon/books/guide/entries/metalworking/anvil_working.json
