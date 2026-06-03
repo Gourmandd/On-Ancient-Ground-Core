@@ -1,0 +1,160 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "homesteading",
+  "description": "book.modpack.guide.homesteading.barrel.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:wood/barrel/oak"
+  },
+  "name": "book.modpack.guide.homesteading.barrel.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:barrels"
+      },
+      "text": "book.modpack.guide.homesteading.barrel.page1.text",
+      "title": "book.modpack.guide.homesteading.barrel.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/barrel/aspen",
+      "text": "book.modpack.guide.homesteading.barrel.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.homesteading.barrel.page3.text",
+      "title": "book.modpack.guide.homesteading.barrel.page3.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/homesteading/barrel_interface.png"
+      ],
+      "text": "book.modpack.guide.homesteading.barrel.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.homesteading.barrel.page5.text",
+      "title": "book.modpack.guide.homesteading.barrel.page5.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.homesteading.barrel.page6.text",
+      "title": "book.modpack.guide.homesteading.barrel.page6.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modpack:barrel_instant",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:barrel/limewater",
+      "recipe_id_2": "tfc:barrel/clay_ball",
+      "text": "book.modpack.guide.homesteading.barrel.page7.text",
+      "title1": "Limewater",
+      "title2": ""
+    },
+    {
+      "type": "modpack:barrel_sealed",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:barrel/jute_fiber",
+      "recipe_id_2": "tfc:barrel/glue",
+      "text": "book.modpack.guide.homesteading.barrel.page8.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "count": 1,
+        "item": "tfc:wooden_bucket"
+      },
+      "text": "book.modpack.guide.homesteading.barrel.page9.text",
+      "title": ""
+    },
+    {
+      "type": "modpack:barrel_fluid_instant",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:barrel/brine",
+      "text": "book.modpack.guide.homesteading.barrel.page10.text",
+      "title1": "book.modpack.guide.homesteading.barrel.page10.title",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.homesteading.barrel.page11.text",
+      "title": "",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/homesteading/barrel_drip.png"
+      ],
+      "text": "book.modpack.guide.homesteading.barrel.page12.text",
+      "title": "",
+      "use_legacy_rendering": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 0,
+  "x": 0,
+  "y": 0
+}
