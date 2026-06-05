@@ -22,6 +22,8 @@ public class ModonomiconIntegration {
     public static final ResourceLocation BARREL_INSTANT_PAGE = AncientGroundCore.location("barrel_instant");
     public static final ResourceLocation BARREL_SEALED_PAGE = AncientGroundCore.location("barrel_sealed");
     public static final ResourceLocation BARREL_FLUID_INSTANT_PAGE = AncientGroundCore.location("barrel_fluid_instant");
+    public static final ResourceLocation QUERN_PAGE = AncientGroundCore.location("quern");
+    public static final ResourceLocation HEATING_PAGE = AncientGroundCore.location("heating");
 
     public static void registerPages(){
         LoaderRegistry.registerPageLoader(KNAPPING_PAGE, (BookPageJsonLoader<?>) BookKnappingPage::fromJson, BookKnappingPage::fromNetwork);
@@ -32,6 +34,8 @@ public class ModonomiconIntegration {
         LoaderRegistry.registerPageLoader(BARREL_INSTANT_PAGE, (BookPageJsonLoader<?>) BookBarrelInstantPage::fromJson, BookBarrelInstantPage::fromNetwork);
         LoaderRegistry.registerPageLoader(BARREL_SEALED_PAGE, (BookPageJsonLoader<?>) BookBarrelSealedPage::fromJson, BookBarrelSealedPage::fromNetwork);
         LoaderRegistry.registerPageLoader(BARREL_FLUID_INSTANT_PAGE, (BookPageJsonLoader<?>) BookBarrelInstantFluidPage::fromJson, BookBarrelInstantFluidPage::fromNetwork);
+        LoaderRegistry.registerPageLoader(QUERN_PAGE, (BookPageJsonLoader<?>) BookQuernPage::fromJson, BookQuernPage::fromNetwork);
+        LoaderRegistry.registerPageLoader(HEATING_PAGE, (BookPageJsonLoader<?>) BookHeatingPage::fromJson, BookHeatingPage::fromNetwork);
     }
 
     public static void registerPageRenderers() {
@@ -43,9 +47,15 @@ public class ModonomiconIntegration {
         PageRendererRegistry.registerPageRenderer(BARREL_INSTANT_PAGE, p -> new BookBarrelInstantPageRenderer((BookBarrelInstantPage) p));
         PageRendererRegistry.registerPageRenderer(BARREL_SEALED_PAGE, p -> new BookBarrelSealedPageRenderer((BookBarrelSealedPage) p));
         PageRendererRegistry.registerPageRenderer(BARREL_FLUID_INSTANT_PAGE, p -> new BookBarrelFluidInstantPageRenderer((BookBarrelInstantFluidPage) p));
+        PageRendererRegistry.registerPageRenderer(QUERN_PAGE, p -> new BookQuernPageRenderer((BookQuernPage) p));
+        PageRendererRegistry.registerPageRenderer(HEATING_PAGE, p -> new BookHeatingPageRenderer((BookHeatingPage) p));
     }
 
     public static NeoFluidHolder getFluidHolder(Fluid fluid, int amount){
         return new NeoFluidHolder(new FluidStack(fluid, amount));
+    }
+
+    public static NeoFluidHolder getFluidHolder(FluidStack fluid){
+        return new NeoFluidHolder(new FluidStack(fluid.getFluid(), fluid.getAmount()));
     }
 }

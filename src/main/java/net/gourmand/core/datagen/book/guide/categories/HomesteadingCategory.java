@@ -7,6 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.datagen.book.guide.entries.homesteading.BarrelEntry;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.QuernEntry;
 import net.minecraft.resources.ResourceLocation;
 
 public class HomesteadingCategory extends CategoryProvider {
@@ -26,8 +27,7 @@ public class HomesteadingCategory extends CategoryProvider {
     protected void generateEntries() {
 
         var barrel = this.add(new BarrelEntry(this).generate("a"));
-        // add barrel
-        // add quern
+        var quern = this.add(new QuernEntry(this).generate("b"));
 
         // add keg
         // add stomping barrel

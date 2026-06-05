@@ -1,0 +1,64 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "homesteading",
+  "description": "book.modpack.guide.homesteading.quern.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:quern"
+  },
+  "name": "book.modpack.guide.homesteading.quern.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:quern"
+      },
+      "text": "book.modpack.guide.homesteading.quern.page1.text",
+      "title": "book.modpack.guide.homesteading.quern.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/wood/barrel/aspen",
+      "text": "book.modpack.guide.homesteading.quern.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:heating",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "firmalife:heating/food/wheat_dough_tfc",
+      "recipe_id_2": "tfc:heating/metal/ingot/steel",
+      "text": "book.modpack.guide.homesteading.quern.page3.text",
+      "title1": "",
+      "title2": "book.modpack.guide.homesteading.quern.page3.title"
+    },
+    {
+      "type": "modpack:quern",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:quern/powder/sylvite",
+      "recipe_id_2": "tfc:quern/olive_paste",
+      "text": "book.modpack.guide.homesteading.quern.page4.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 1,
+  "x": 0,
+  "y": 0
+}
