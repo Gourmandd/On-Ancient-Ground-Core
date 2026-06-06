@@ -50,7 +50,7 @@ public class BarrelEntry extends EntryProvider {
         // page 2: crafting recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/barrel/aspen"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/barrel/ash"))
         );
 
         this.pageTitle(entryName());
@@ -208,7 +208,7 @@ public class BarrelEntry extends EntryProvider {
 
     @Override
     protected BookIconModel entryIcon() {
-        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.OAK).get(Wood.BlockType.BARREL));
+        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.BARREL));
     }
 
     @Override

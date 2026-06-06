@@ -9,6 +9,7 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.book.guide.entries.carpentry.*;
 import net.gourmand.core.datagen.book.guide.entries.equipment.*;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.BarrelEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.SluiceEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.SupportEntry;
 import net.minecraft.resources.ResourceLocation;

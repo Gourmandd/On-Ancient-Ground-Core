@@ -5,7 +5,7 @@
   "description": "book.modpack.guide.homesteading.barrel.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:wood/barrel/oak"
+    "item": "tfc:wood/barrel/ash"
   },
   "name": "book.modpack.guide.homesteading.barrel.name",
   "pages": [
@@ -27,7 +27,7 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:crafting/wood/barrel/aspen",
+      "recipe_id_1": "tfc:crafting/wood/barrel/ash",
       "text": "book.modpack.guide.homesteading.barrel.page2.text",
       "title1": "",
       "title2": ""
@@ -156,5 +156,5 @@
   "show_when_any_parent_unlocked": false,
   "sort_number": 0,
   "x": -1,
-  "y": 0
+  "y": -1
 }

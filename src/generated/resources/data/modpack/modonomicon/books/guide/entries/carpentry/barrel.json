@@ -16,7 +16,7 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:wood/barrel/ash"
+        "tag": "tfc:barrels"
       },
       "text": "book.modpack.guide.carpentry.barrel.page1.text",
       "title": "book.modpack.guide.carpentry.barrel.page1.title"
@@ -31,6 +31,126 @@
       "text": "book.modpack.guide.carpentry.barrel.page2.text",
       "title1": "",
       "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.carpentry.barrel.page3.text",
+      "title": "book.modpack.guide.carpentry.barrel.page3.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/homesteading/barrel_interface.png"
+      ],
+      "text": "book.modpack.guide.carpentry.barrel.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.carpentry.barrel.page5.text",
+      "title": "book.modpack.guide.carpentry.barrel.page5.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.carpentry.barrel.page6.text",
+      "title": "book.modpack.guide.carpentry.barrel.page6.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modpack:barrel_instant",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:barrel/limewater",
+      "recipe_id_2": "tfc:barrel/clay_ball",
+      "text": "book.modpack.guide.carpentry.barrel.page7.text",
+      "title1": "Limewater",
+      "title2": ""
+    },
+    {
+      "type": "modpack:barrel_sealed",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:barrel/jute_fiber",
+      "recipe_id_2": "tfc:barrel/glue",
+      "text": "book.modpack.guide.carpentry.barrel.page8.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "count": 1,
+        "item": "tfc:wooden_bucket"
+      },
+      "text": "book.modpack.guide.carpentry.barrel.page9.text",
+      "title": ""
+    },
+    {
+      "type": "modpack:barrel_fluid_instant",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:barrel/brine",
+      "text": "book.modpack.guide.carpentry.barrel.page10.text",
+      "title1": "book.modpack.guide.carpentry.barrel.page10.title",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.carpentry.barrel.page11.text",
+      "title": "",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/homesteading/barrel_drip.png"
+      ],
+      "text": "book.modpack.guide.carpentry.barrel.page12.text",
+      "title": "",
+      "use_legacy_rendering": false
     }
   ],
   "parents": [

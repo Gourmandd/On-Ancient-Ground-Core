@@ -1,0 +1,134 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "homesteading",
+  "description": "book.modpack.guide.homesteading.composter.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:composter"
+  },
+  "name": "book.modpack.guide.homesteading.composter.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:quern"
+      },
+      "text": "book.modpack.guide.homesteading.composter.page1.text",
+      "title": "book.modpack.guide.homesteading.composter.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/composter",
+      "text": "book.modpack.guide.homesteading.composter.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.homesteading.composter.page3.text",
+      "title": "book.modpack.guide.homesteading.composter.page3.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.homesteading.composter.page4.text",
+      "title": "book.modpack.guide.homesteading.composter.page4.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:compost_greens/low"
+      },
+      "text": "book.modpack.guide.homesteading.composter.page5.text",
+      "title": "book.modpack.guide.homesteading.composter.page5.title"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:compost_browns/low"
+      },
+      "text": "book.modpack.guide.homesteading.composter.page6.text",
+      "title": "book.modpack.guide.homesteading.composter.page6.title"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:compost_greens/medium"
+      },
+      "text": "book.modpack.guide.homesteading.composter.page7.text",
+      "title": "book.modpack.guide.homesteading.composter.page7.title"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:compost_browns/medium"
+      },
+      "text": "book.modpack.guide.homesteading.composter.page8.text",
+      "title": "book.modpack.guide.homesteading.composter.page8.title"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:compost_greens/high"
+      },
+      "text": "book.modpack.guide.homesteading.composter.page9.text",
+      "title": "book.modpack.guide.homesteading.composter.page9.title"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:compost_browns/medium"
+      },
+      "text": "book.modpack.guide.homesteading.composter.page10.text",
+      "title": "book.modpack.guide.homesteading.composter.page10.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 2,
+  "x": 1,
+  "y": -1
+}
