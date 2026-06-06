@@ -19,7 +19,7 @@ public class HomesteadingCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-            "a"
+            "ab"
         };
     }
 
