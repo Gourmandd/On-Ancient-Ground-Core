@@ -36,7 +36,7 @@ public class BucketEntry extends EntryProvider {
                 **Buckets** are able to hold large amounts of fluid by interacting with containers or by collecting source blocks using **Right-Click**, only some types of buckets can place source blocks.
                  \\
                  \\
-                 **Wooden Buckets** are the simplest to make, but cannot place source blocks. They cannot hold molten fluids such as lava.
+                 **Wooden Buckets** are the simplest to make, but cannot place source blocks.
                \s""");
 
         // page 2: wooden bucket recipe.
@@ -47,7 +47,7 @@ public class BucketEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                A wooden bucket being made out of lumber and glue.
+                A wooden bucket being made out of lumber and glue. They cannot hold molten fluids such as lava.
                \s""");
 
         // page 3: explain iron buckets.

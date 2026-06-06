@@ -30,7 +30,10 @@ public class SandpaperEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Sandpaper** can be used to polish items, to do so hold sandpaper in your offhand and the item you wish to polish in your main hand,
+                **Sandpaper** can be used to polish items.
+                \\
+                \\
+                To do so, hold sandpaper in your offhand and the item you wish to polish in your main hand,
                  and hold **Right-Click** until the item is converted.
                \s""");
 

@@ -32,7 +32,7 @@ public class BowEntry extends EntryProvider {
                 **Bows** are a ranged weapon that can fire arrows in a curved arc at opponents. They need to be drawn for a second or two to fire the arrow.
                 \\
                 \\
-                They are decent at defending against predators from a distance. Their damage type is **Piercing**
+                They are decent at defending against predators from a distance.
                \s""");
 
         // page 2: crafting recipe.
@@ -44,7 +44,7 @@ public class BowEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                The crafting recipe for the bow.
+                The crafting recipe for the bow. The arrow's damage type is **Piercing**
                \s""");
     }
 

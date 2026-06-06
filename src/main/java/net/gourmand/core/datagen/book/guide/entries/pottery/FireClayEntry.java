@@ -34,11 +34,11 @@ public class FireClayEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Kaolin Clay** is an uncommon material that can be made into **Fire Clay**, **Pottery** and **Kaolinite**. It can be found in some regions over 18C and 300mm of rain. (See full conditions in the **Ores** Category)
+                **Kaolin Clay** is an uncommon material that can be made into **Fire Clay**, **Pottery** and **Kaolinite**. It's found in regions over 18C and 300mm of rain. (Full conditions in the **Ores** Category)
                 \\
                 \\
-                When it is heated it turns to **Kaolinite Powder**. (with a 20% chance)
-               \s""");
+                When it is heated it turns to **Kaolinite Powder**. (with a 20%% chance)
+               """);
 
         // page 2: .
         this.page("page2", () -> BookMultiblockPageModel.create()

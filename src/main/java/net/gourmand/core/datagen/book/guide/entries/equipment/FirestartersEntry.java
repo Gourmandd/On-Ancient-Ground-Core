@@ -40,7 +40,7 @@ public class FirestartersEntry extends EntryProvider {
         // page 2: firestarter recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/firestarters"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/firestarter"))
         );
 
         this.pageTitle(entryName());
