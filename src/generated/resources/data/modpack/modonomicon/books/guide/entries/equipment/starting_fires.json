@@ -27,7 +27,7 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:crafting/firestarters",
+      "recipe_id_1": "tfc:crafting/firestarter",
       "text": "book.modpack.guide.equipment.starting_fires.page2.text",
       "title1": "",
       "title2": ""

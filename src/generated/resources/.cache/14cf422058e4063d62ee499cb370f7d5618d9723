@@ -1,4 +1,4 @@
-// 1.21.1	2026-06-06T11:05:36.210552317	Books: modpack
+// 1.21.1	2026-06-06T11:36:49.131906108	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
@@ -75,7 +75,7 @@ bc3e2131087f03cb07f2832aa6dc3e64744a5ab3 data/modpack/modonomicon/books/guide/en
 0b93c73dcb2aa80c6d136e33df78a2acf6e431d1 data/modpack/modonomicon/books/guide/entries/equipment/shears.json
 3c9fb02ce9add2aba93b097e1de50d73c3efb129 data/modpack/modonomicon/books/guide/entries/equipment/shield.json
 4e9e50de880404067efaa33952395b5863e24811 data/modpack/modonomicon/books/guide/entries/equipment/shovel.json
-cf51329f1914cbee047a6d07a12ac10cc249b1ea data/modpack/modonomicon/books/guide/entries/equipment/starting_fires.json
+b4a7f40230f1983a929c602de5eaf4e3175ae696 data/modpack/modonomicon/books/guide/entries/equipment/starting_fires.json
 3c4a028d359d3164f16190b2a4de8b650fff4660 data/modpack/modonomicon/books/guide/entries/equipment/sword.json
 8e711d29c6a19886549fd2ad7478ced1ad415248 data/modpack/modonomicon/books/guide/entries/equipment/tool_tiers.json
 a75c400731d507b9d269479d211f18291e57e64f data/modpack/modonomicon/books/guide/entries/geology/andesite.json
