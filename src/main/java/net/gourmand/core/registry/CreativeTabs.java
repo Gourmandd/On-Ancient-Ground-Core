@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -292,7 +293,7 @@ public class CreativeTabs {
 
     private static void fillMisc(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
-
+        out.accept(Items.BUNDLE);
         out.accept(CoreBlocks.SLUDGE.get());
         out.accept(CoreBlocks.PRISMATIC_ICE.get());
         out.accept(CoreBlocks.LEAD_BULB_BLOCK.get());
