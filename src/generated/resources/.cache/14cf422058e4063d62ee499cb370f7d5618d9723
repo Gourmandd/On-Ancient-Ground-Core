@@ -1,4 +1,4 @@
-// 1.21.1	2026-06-06T11:36:49.131906108	Books: modpack
+// 1.21.1	2026-06-07T09:22:03.282595647	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
@@ -129,6 +129,8 @@ e1e0b99a70baed146be6a6e1cee96933203ae7ab data/modpack/modonomicon/books/guide/en
 400b15f7ce1588868961bcf702b8700fcbe67d65 data/modpack/modonomicon/books/guide/entries/homesteading/composter.json
 85d3a6daae38ac324ef04c36bffd74e2ef5dd809 data/modpack/modonomicon/books/guide/entries/homesteading/keg.json
 9e209b03f1580512bdaeee39244cea7728d232fd data/modpack/modonomicon/books/guide/entries/homesteading/quern.json
+ccaa961af921ade5963933f1190f5afbac0c25ba data/modpack/modonomicon/books/guide/entries/homesteading/stomping_barrel.json
+ad01a82b1382caba29a4bdd9c3b4d9f1033f39aa data/modpack/modonomicon/books/guide/entries/homesteading/wine_shelf.json
 9f20070718cf56dc8579c23ebcb29bb498f39d36 data/modpack/modonomicon/books/guide/entries/metalworking/alloying.json
 dc332b03527e9cd6f965848c18dc23caa0a96659 data/modpack/modonomicon/books/guide/entries/metalworking/anvil.json
 dd30447e4239f1186263ce5b7a9e114c2ea16a4b data/modpack/modonomicon/books/guide/entries/metalworking/anvil_working.json

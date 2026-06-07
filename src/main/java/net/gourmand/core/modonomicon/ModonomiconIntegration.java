@@ -24,6 +24,7 @@ public class ModonomiconIntegration {
     public static final ResourceLocation BARREL_FLUID_INSTANT_PAGE = AncientGroundCore.location("barrel_fluid_instant");
     public static final ResourceLocation QUERN_PAGE = AncientGroundCore.location("quern");
     public static final ResourceLocation HEATING_PAGE = AncientGroundCore.location("heating");
+    public static final ResourceLocation STOMPING_BARREL_PAGE = AncientGroundCore.location("stomping_barrel");
 
     public static void registerPages(){
         LoaderRegistry.registerPageLoader(KNAPPING_PAGE, (BookPageJsonLoader<?>) BookKnappingPage::fromJson, BookKnappingPage::fromNetwork);
@@ -36,6 +37,7 @@ public class ModonomiconIntegration {
         LoaderRegistry.registerPageLoader(BARREL_FLUID_INSTANT_PAGE, (BookPageJsonLoader<?>) BookBarrelInstantFluidPage::fromJson, BookBarrelInstantFluidPage::fromNetwork);
         LoaderRegistry.registerPageLoader(QUERN_PAGE, (BookPageJsonLoader<?>) BookQuernPage::fromJson, BookQuernPage::fromNetwork);
         LoaderRegistry.registerPageLoader(HEATING_PAGE, (BookPageJsonLoader<?>) BookHeatingPage::fromJson, BookHeatingPage::fromNetwork);
+        LoaderRegistry.registerPageLoader(STOMPING_BARREL_PAGE, (BookPageJsonLoader<?>) BookStompingBarrelPage::fromJson, BookStompingBarrelPage::fromNetwork);
     }
 
     public static void registerPageRenderers() {
@@ -49,6 +51,7 @@ public class ModonomiconIntegration {
         PageRendererRegistry.registerPageRenderer(BARREL_FLUID_INSTANT_PAGE, p -> new BookBarrelFluidInstantPageRenderer((BookBarrelInstantFluidPage) p));
         PageRendererRegistry.registerPageRenderer(QUERN_PAGE, p -> new BookQuernPageRenderer((BookQuernPage) p));
         PageRendererRegistry.registerPageRenderer(HEATING_PAGE, p -> new BookHeatingPageRenderer((BookHeatingPage) p));
+        PageRendererRegistry.registerPageRenderer(STOMPING_BARREL_PAGE, p -> new BookStompingBarrelPageRenderer((BookStompingBarrelPage) p));
     }
 
     public static NeoFluidHolder getFluidHolder(Fluid fluid, int amount){

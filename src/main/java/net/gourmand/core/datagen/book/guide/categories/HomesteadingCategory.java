@@ -6,10 +6,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookCategoryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
-import net.gourmand.core.datagen.book.guide.entries.homesteading.BarrelEntry;
-import net.gourmand.core.datagen.book.guide.entries.homesteading.ComposterEntry;
-import net.gourmand.core.datagen.book.guide.entries.homesteading.KegEntry;
-import net.gourmand.core.datagen.book.guide.entries.homesteading.QuernEntry;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.*;
 import net.minecraft.resources.ResourceLocation;
 
 public class HomesteadingCategory extends CategoryProvider {
@@ -22,7 +19,7 @@ public class HomesteadingCategory extends CategoryProvider {
     protected String[] generateEntryMap() {
         return new String[]{
             "abc",
-            "d__"
+            "def"
         };
     }
 
@@ -32,11 +29,10 @@ public class HomesteadingCategory extends CategoryProvider {
         var barrel = this.add(new BarrelEntry(this).generate("a"));
         var quern = this.add(new QuernEntry(this).generate("b"));
         var composter = this.add(new ComposterEntry(this).generate("c"));
-        var keg = this.add(new KegEntry(this).generate("d").withParent(barrel));
 
-        // add keg
-        // add stomping barrel
-        // add wine shelf
+        var keg = this.add(new KegEntry(this).generate("d").withParent(barrel));
+        var stomping_barrel = this.add(new StompingBarrelEntry(this).generate("e").withParent(barrel));
+        var wine_shelf = this.add(new WineShelfEntry(this).generate("f").withParent(barrel));
         // add winemaking
         // add barrel press
 
