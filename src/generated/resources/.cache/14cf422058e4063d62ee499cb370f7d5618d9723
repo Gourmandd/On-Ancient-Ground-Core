@@ -1,4 +1,4 @@
-// 1.21.1	2026-06-07T09:22:03.282595647	Books: modpack
+// 1.21.1	2026-06-08T19:40:45.869869008	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
@@ -125,12 +125,30 @@ ffa4a6105a93c6a50567be47417d88f3cad3f490 data/modpack/modonomicon/books/guide/en
 ae4fa14b994550f57ca43135d2aefbff36921b87 data/modpack/modonomicon/books/guide/entries/getting_started/pit_kiln.json
 e1e0b99a70baed146be6a6e1cee96933203ae7ab data/modpack/modonomicon/books/guide/entries/getting_started/shovels.json
 5b073e39b3472b072cd79daac94732074d25c248 data/modpack/modonomicon/books/guide/entries/getting_started/straw.json
-701e4a4e2486f7c7fbe92ba1d276128917717928 data/modpack/modonomicon/books/guide/entries/homesteading/barrel.json
-400b15f7ce1588868961bcf702b8700fcbe67d65 data/modpack/modonomicon/books/guide/entries/homesteading/composter.json
-85d3a6daae38ac324ef04c36bffd74e2ef5dd809 data/modpack/modonomicon/books/guide/entries/homesteading/keg.json
-9e209b03f1580512bdaeee39244cea7728d232fd data/modpack/modonomicon/books/guide/entries/homesteading/quern.json
-ccaa961af921ade5963933f1190f5afbac0c25ba data/modpack/modonomicon/books/guide/entries/homesteading/stomping_barrel.json
-ad01a82b1382caba29a4bdd9c3b4d9f1033f39aa data/modpack/modonomicon/books/guide/entries/homesteading/wine_shelf.json
+06ada2529ae1f7d3d44588295e1056be703ee192 data/modpack/modonomicon/books/guide/entries/homesteading/aging_traits.json
+cf13c9912d3abc45de70e065ab72550c6f055859 data/modpack/modonomicon/books/guide/entries/homesteading/barrel.json
+0e144c9eff1ffe8282715b751e26e570aa8356d1 data/modpack/modonomicon/books/guide/entries/homesteading/brined_trait.json
+5d3b059a7e5ec7b4a756ce1f46bf513a63bda060 data/modpack/modonomicon/books/guide/entries/homesteading/burnt_to_a_crisp_trait.json
+a18388528620407c47f6d8ba19239433ee1f7206 data/modpack/modonomicon/books/guide/entries/homesteading/canned_trait.json
+44c4007b39995365de1022fe10181e486041ab9b data/modpack/modonomicon/books/guide/entries/homesteading/charcoal_grilled_trait.json
+868c9899cb6233223b3ce973470a34aa33711516 data/modpack/modonomicon/books/guide/entries/homesteading/composter.json
+abd0520dd98eb5a1f397de94bb2c09c963706463 data/modpack/modonomicon/books/guide/entries/homesteading/dried_trait.json
+a5137b097cd6748a020c4a9412a139fcd9d93de9 data/modpack/modonomicon/books/guide/entries/homesteading/fermented_trait.json
+ff2865cfb28d15150e67b21804268080b00d5bde data/modpack/modonomicon/books/guide/entries/homesteading/grape_traits.json
+9aa66d917e47ac8571fda86514afb8fef1a84bed data/modpack/modonomicon/books/guide/entries/homesteading/hung_trait.json
+4192829f04f8cc6f712641f6abc51004e32a0f5f data/modpack/modonomicon/books/guide/entries/homesteading/keg.json
+b6c1f4a36298816908925d798e811753567c7341 data/modpack/modonomicon/books/guide/entries/homesteading/oven_baked_trait.json
+c30de9a5e1900c84ea24dc9f740c60b5631f85b6 data/modpack/modonomicon/books/guide/entries/homesteading/pickling_trait.json
+4dbf204184c69908f35a1f726fcd38ac44a241cb data/modpack/modonomicon/books/guide/entries/homesteading/preserved_in_vinegar_trait.json
+556d8b70941082ec40e5a6854df412d9fff85a35 data/modpack/modonomicon/books/guide/entries/homesteading/preserved_trait.json
+a82940a470ce9c1d7c87c7dca864fe4172bee556 data/modpack/modonomicon/books/guide/entries/homesteading/quern.json
+c8db61641fdc8a8c95281f5be514ef52bc9a926e data/modpack/modonomicon/books/guide/entries/homesteading/salted_trait.json
+9f0be21566dc4bf818b3d6f615d948de815fd6c1 data/modpack/modonomicon/books/guide/entries/homesteading/shelved_traits.json
+6b362acce721a355fb4756a1c5c6633b84d92903 data/modpack/modonomicon/books/guide/entries/homesteading/smoked_trait.json
+665f3919fe6a296930e189065c6d8b9520a8c5ed data/modpack/modonomicon/books/guide/entries/homesteading/stomping_barrel.json
+91c780bb18a41fb749cd5f2d2eb6f01045ad1bc6 data/modpack/modonomicon/books/guide/entries/homesteading/wild_trait.json
+89f683cdf3eec43736739c5c8fb40c67a50034e8 data/modpack/modonomicon/books/guide/entries/homesteading/wine_shelf.json
+33b3ea5a84c0e1b3ae7c000c7bf05d7f2ce77605 data/modpack/modonomicon/books/guide/entries/homesteading/wood_grilled_trait.json
 9f20070718cf56dc8579c23ebcb29bb498f39d36 data/modpack/modonomicon/books/guide/entries/metalworking/alloying.json
 dc332b03527e9cd6f965848c18dc23caa0a96659 data/modpack/modonomicon/books/guide/entries/metalworking/anvil.json
 dd30447e4239f1186263ce5b7a9e114c2ea16a4b data/modpack/modonomicon/books/guide/entries/metalworking/anvil_working.json

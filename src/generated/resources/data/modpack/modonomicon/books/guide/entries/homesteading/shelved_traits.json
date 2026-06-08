@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "homesteading",
+  "description": "book.modpack.guide.homesteading.shelved_traits.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "firmalife:wood/food_shelf/oak"
+  },
+  "name": "book.modpack.guide.homesteading.shelved_traits.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "firmalife:shelves"
+      },
+      "text": "book.modpack.guide.homesteading.shelved_traits.page1.text",
+      "title": "book.modpack.guide.homesteading.shelved_traits.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "firmalife:crafting/wood/food_shelf/oak",
+      "text": "book.modpack.guide.homesteading.shelved_traits.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 22,
+  "x": 0,
+  "y": 3
+}

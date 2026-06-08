@@ -7,6 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.datagen.book.guide.entries.homesteading.*;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.traits.*;
 import net.minecraft.resources.ResourceLocation;
 
 public class HomesteadingCategory extends CategoryProvider {
@@ -18,8 +19,14 @@ public class HomesteadingCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-            "abc",
-            "def"
+            "_abc_",
+            "_def_",
+            "_____",
+            "12345",
+            "67890",
+            "_____",
+            "!£$%^",
+            "_&*(_"
         };
     }
 
@@ -31,8 +38,8 @@ public class HomesteadingCategory extends CategoryProvider {
         var composter = this.add(new ComposterEntry(this).generate("c"));
 
         var keg = this.add(new KegEntry(this).generate("d").withParent(barrel));
-        var stomping_barrel = this.add(new StompingBarrelEntry(this).generate("e").withParent(barrel));
-        var wine_shelf = this.add(new WineShelfEntry(this).generate("f").withParent(barrel));
+        var stomping_barrel = this.add(new StompingBarrelEntry(this).generate("e"));
+        var wine_shelf = this.add(new WineShelfEntry(this).generate("f"));
         // add winemaking
         // add barrel press
 
@@ -40,10 +47,29 @@ public class HomesteadingCategory extends CategoryProvider {
         // add hanger
         // add cellar guide
 
+        var salted_trait = this.add(new SaltedTraitEntry(this).generate("1"));
+        var brined_trait = this.add(new BrinedTraitEntry(this).generate("2"));
+        var pickled_trait = this.add(new PickledTraitEntry(this).generate("3"));
+        var preserved_trait = this.add(new PreservedTraitEntry(this).generate("4"));
+        var preserved_in_vinegar_trait = this.add(new PreservedInVinegarTraitEntry(this).generate("5"));
+        var charcoal_grilled_trait = this.add(new CharcoalGrilledTraitEntry(this).generate("6"));
+        var wood_grilled_trait = this.add(new WoodGrilledTraitEntry(this).generate("7"));
+        var burnt_to_a_crisp_trait = this.add(new BurntToACrispTraitEntry(this).generate("8"));
+        var wild_trait = this.add(new WildTraitEntry(this).generate("9"));
+        var canned_trait = this.add(new CannedTraitEntry(this).generate("0"));
+        var aging_traits = this.add(new AgingTraitsEntry(this).generate("!"));
+        var dried_trait = this.add(new DriedTraitEntry(this).generate("£"));
+        var fermented_trait = this.add(new FermentedTraitEntry(this).generate("$"));
+        var grape_traits = this.add(new GrapeTraitEntry(this).generate("%"));
+        var hung_trait = this.add(new HungTraitEntry(this).generate("^"));
+        var oven_baked_trait = this.add(new OvenBakedTraitEntry(this).generate("&"));
+        var shelved_traits = this.add(new ShelvedTraitEntry(this).generate("*"));
+        var smoked_trait = this.add(new SmokedTraitEntry(this).generate("("));
+
         // add cheesemaking
         // jarring guide
-        // preservation methods list. Vessel, cooking, salting, pickled, brining, cellar + bad ones.
         // add drying guide.
+        // add smoking guide.
 
         // fishing guide (here or in agriculture category?)
         // add olive oil making

@@ -1,0 +1,41 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "homesteading",
+  "description": "book.modpack.guide.homesteading.fermented_trait.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "firmalife:food/smashed_white_grapes"
+  },
+  "name": "book.modpack.guide.homesteading.fermented_trait.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "firmalife:foods/smashed_grapes"
+      },
+      "text": "book.modpack.guide.homesteading.fermented_trait.page1.text",
+      "title": "book.modpack.guide.homesteading.fermented_trait.page1.title"
+    },
+    {
+      "type": "modpack:barrel_sealed",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "firmalife:barrel_sealed/ferment_white_grapes",
+      "recipe_id_2": "firmalife:barrel_sealed/ferment_red_grapes",
+      "text": "book.modpack.guide.homesteading.fermented_trait.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 18,
+  "x": 0,
+  "y": 2
+}

@@ -1,0 +1,29 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "homesteading",
+  "description": "book.modpack.guide.homesteading.smoked_trait.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:wool_yarn"
+  },
+  "name": "book.modpack.guide.homesteading.smoked_trait.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "c:foods/raw_meat"
+      },
+      "text": "book.modpack.guide.homesteading.smoked_trait.page1.text",
+      "title": "book.modpack.guide.homesteading.smoked_trait.page1.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 23,
+  "x": 1,
+  "y": 3
+}

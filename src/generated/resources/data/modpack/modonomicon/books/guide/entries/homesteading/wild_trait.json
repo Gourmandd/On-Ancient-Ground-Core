@@ -1,0 +1,29 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "homesteading",
+  "description": "book.modpack.guide.homesteading.wild_trait.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:pumpkin"
+  },
+  "name": "book.modpack.guide.homesteading.wild_trait.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:pumpkin"
+      },
+      "text": "book.modpack.guide.homesteading.wild_trait.page1.text",
+      "title": "book.modpack.guide.homesteading.wild_trait.page1.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 14,
+  "x": 1,
+  "y": 0
+}

@@ -1,0 +1,29 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "homesteading",
+  "description": "book.modpack.guide.homesteading.canned_trait.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:jar/red_apple"
+  },
+  "name": "book.modpack.guide.homesteading.canned_trait.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "tfc:foods/sealed_preserves"
+      },
+      "text": "book.modpack.guide.homesteading.canned_trait.page1.text",
+      "title": "book.modpack.guide.homesteading.canned_trait.page1.title"
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 15,
+  "x": 2,
+  "y": 0
+}

@@ -57,16 +57,8 @@
       "title2": ""
     }
   ],
-  "parents": [
-    {
-      "draw_arrow": true,
-      "entry": "homesteading/barrel",
-      "line_enabled": true,
-      "line_reversed": false
-    }
-  ],
   "show_when_any_parent_unlocked": false,
   "sort_number": 4,
   "x": 0,
-  "y": 0
+  "y": -3
 }

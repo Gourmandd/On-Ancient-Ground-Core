@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "homesteading",
-  "description": "book.modpack.guide.homesteading.wine_shelf.description",
+  "description": "book.modpack.guide.homesteading.dried_trait.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "firmalife:wood/wine_shelf/ash"
+    "item": "firmalife:drying_mat"
   },
-  "name": "book.modpack.guide.homesteading.wine_shelf.name",
+  "name": "book.modpack.guide.homesteading.dried_trait.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,10 +16,10 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "tag": "firmalife:kegs"
+        "tag": "c:foods/fruit"
       },
-      "text": "book.modpack.guide.homesteading.wine_shelf.page1.text",
-      "title": "book.modpack.guide.homesteading.wine_shelf.page1.title"
+      "text": "book.modpack.guide.homesteading.dried_trait.page1.text",
+      "title": "book.modpack.guide.homesteading.dried_trait.page1.title"
     },
     {
       "type": "modonomicon:crafting_recipe",
@@ -27,14 +27,14 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "firmalife:crafting/wood/wine_shelf/ash",
-      "text": "book.modpack.guide.homesteading.wine_shelf.page2.text",
+      "recipe_id_1": "firmalife:crafting/drying_mat",
+      "text": "book.modpack.guide.homesteading.dried_trait.page2.text",
       "title1": "",
       "title2": ""
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 5,
-  "x": 1,
-  "y": -3
+  "sort_number": 17,
+  "x": -1,
+  "y": 2
 }
