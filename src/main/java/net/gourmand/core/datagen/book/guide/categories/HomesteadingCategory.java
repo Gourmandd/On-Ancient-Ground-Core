@@ -19,14 +19,17 @@ public class HomesteadingCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-            "_abc_",
-            "_def_",
-            "_____",
-            "12345",
-            "67890",
-            "_____",
-            "!£$%^",
-            "_&*(_"
+            "_abc_g",
+            "_def_h",
+            "_____i",
+            "______",
+            "______",
+            "______",
+            "12345_",
+            "67890_",
+            "______",
+            "!£$%^_",
+            "_&*(__"
         };
     }
 
@@ -40,12 +43,13 @@ public class HomesteadingCategory extends CategoryProvider {
         var keg = this.add(new KegEntry(this).generate("d").withParent(barrel));
         var stomping_barrel = this.add(new StompingBarrelEntry(this).generate("e"));
         var wine_shelf = this.add(new WineShelfEntry(this).generate("f"));
+
+        var cellar = this.add(new CellarEntry(this).generate("g"));
+        var food_shelf = this.add(new FoodShelfEntry(this).generate("h"));
+        var hanger = this.add(new HangerEntry(this).generate("i"));
+
         // add winemaking
         // add barrel press
-
-        // add food shelf
-        // add hanger
-        // add cellar guide
 
         var salted_trait = this.add(new SaltedTraitEntry(this).generate("1"));
         var brined_trait = this.add(new BrinedTraitEntry(this).generate("2"));

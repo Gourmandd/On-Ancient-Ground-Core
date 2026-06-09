@@ -16,7 +16,7 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "item": "tfc:quern"
+        "item": "tfc:composter"
       },
       "text": "book.modpack.guide.homesteading.composter.page1.text",
       "title": "book.modpack.guide.homesteading.composter.page1.title"
@@ -129,6 +129,6 @@
   ],
   "show_when_any_parent_unlocked": false,
   "sort_number": 2,
-  "x": 1,
-  "y": -4
+  "x": 0,
+  "y": -5
 }

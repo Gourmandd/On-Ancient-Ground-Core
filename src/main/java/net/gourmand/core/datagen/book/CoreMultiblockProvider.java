@@ -1,5 +1,6 @@
 package net.gourmand.core.datagen.book;
 
+import com.eerussianguy.firmalife.common.blocks.FLBlocks;
 import com.google.common.collect.ImmutableMap;
 import com.klikli_dev.modonomicon.api.datagen.MultiblockProvider;
 import net.dries007.tfc.common.blocks.TFCBlocks;
@@ -273,6 +274,21 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                 .block('S', () -> Blocks.BLUE_STAINED_GLASS)
                 .block('G', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.ANDESITE).get(Rock.BlockType.COBBLE).get())
                 .blockstate('0', TFCBlocks.CHARCOAL_FORGE, "[heat_level=5]")
+                .build(false)
+        );
+
+        this.add(this.modLoc("homesteading/cellar" ), new DenseMultiblockBuilder()
+                .layer("GGGGG", "GGGGG", "GGGGG", "GGGGG", "GGGGG")
+                .layer("GGGGG", "GAAAG", "GAAAG", "GAAAG", "GGGGG")
+                .layer("GGGGG", "GAAAG", "GAAAG", "GAAAG", "GGGGG")
+                .layer("GGGGG", "GAAAG", "GS0AG", "GAAAG", "GGGGG")
+                .layer("GGGGG", "GGGGG", "GGGGG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', FLBlocks.SEALED_BRICKS)
+                .block('S', FLBlocks.CLIMATE_STATION)
+                .block('0', () -> Blocks.AIR)
+                .blockstate('D', FLBlocks.SEALED_BRICK_DOOR, "[facing=east,hinge=left,half=upper]")
+                .blockstate('R', FLBlocks.SEALED_BRICK_DOOR, "[facing=east,hinge=left,half=lower]")
                 .build(false)
         );
     }

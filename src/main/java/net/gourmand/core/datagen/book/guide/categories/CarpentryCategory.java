@@ -8,8 +8,8 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.book.guide.entries.carpentry.*;
-import net.gourmand.core.datagen.book.guide.entries.equipment.*;
-import net.gourmand.core.datagen.book.guide.entries.homesteading.BarrelEntry;
+import net.gourmand.core.datagen.book.guide.entries.equipment.SawEntry;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.*;
 import net.gourmand.core.datagen.book.guide.entries.mining.SluiceEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.SupportEntry;
 import net.minecraft.resources.ResourceLocation;
@@ -30,7 +30,8 @@ public class CarpentryCategory extends CategoryProvider {
                 "_________",
                 "a__b___c_",
                 "_________",
-                "______xw_"
+                "__BzA_xwy",
+                "__CD_____"
         };
     }
 
@@ -69,14 +70,14 @@ public class CarpentryCategory extends CategoryProvider {
         var pressure_plate = this.add(new PressurePlateEntry(this).generate("o"));
         var log_fence = this.add(new LogFenceEntry(this).generate("p"));
 
+        var hanger = this.add(new HangerEntry(this).generate("z").withParent(lumber));
+        var wine_shelf = this.add(new WineShelfEntry(this).generate("A"));
+        var keg = this.add(new KegEntry(this).generate("B"));
+        var stomping_barrel = this.add(new StompingBarrelEntry(this).generate("C"));
+        var jarbnet = this.add(new JarbnetEntry(this).generate("D"));
+
         // planks
         // add mechanical bits (same entry as devices category)
-        // add food shelf (same as in homesteading category)
-        // add hanger (same as in homesteading category)
-        // add jarbnet
-        // add keg (also mention it can do barrel recipes, I think it might be able, not mentioned in firmalife guide?)
-        // add stomping barrel (same as in homesteading category)
-        // add wine shelf (same as in homesteading category)
         // add barrel press (same as in homesteading category)
 
         var workbench = this.add(new WorkbenchEntry(this).generate("q").withParent(planks));
@@ -91,6 +92,8 @@ public class CarpentryCategory extends CategoryProvider {
 
         var shelf = this.add(new ShelfEntry(this).generate("w").withParent(planks));
         var sluice = this.add(new SluiceEntry(this).generate("x"));
+
+        var food_shelf = this.add(new FoodShelfEntry(this).generate("y"));
     }
 
     @Override

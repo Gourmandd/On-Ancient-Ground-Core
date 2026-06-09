@@ -27,7 +27,7 @@ public class ComposterEntry extends EntryProvider {
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.QUERN))
+                .withItem(Ingredient.of(TFCBlocks.COMPOSTER))
         );
 
         this.pageTitle(entryName());

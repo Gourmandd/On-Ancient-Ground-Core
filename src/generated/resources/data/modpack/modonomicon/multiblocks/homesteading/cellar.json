@@ -1,0 +1,66 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "D": {
+      "type": "modonomicon:blockstate",
+      "block": "firmalife:sealed_brick_door[facing=east,hinge=left,half=upper]"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "firmalife:sealed_bricks"
+    },
+    "R": {
+      "type": "modonomicon:blockstate",
+      "block": "firmalife:sealed_brick_door[facing=east,hinge=left,half=lower]"
+    },
+    "S": {
+      "type": "modonomicon:block",
+      "block": "firmalife:climate_station"
+    }
+  },
+  "pattern": [
+    [
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG"
+    ],
+    [
+      "GGGGG",
+      "GAAAG",
+      "GAAAG",
+      "GAAAG",
+      "GGGGG"
+    ],
+    [
+      "GGGGG",
+      "GAAAG",
+      "GAAAG",
+      "GAAAG",
+      "GGGGG"
+    ],
+    [
+      "GGGGG",
+      "GAAAG",
+      "GS0AG",
+      "GAAAG",
+      "GGGGG"
+    ],
+    [
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG",
+      "GGGGG"
+    ]
+  ]
+}

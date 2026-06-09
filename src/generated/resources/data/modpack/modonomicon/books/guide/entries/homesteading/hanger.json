@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "homesteading",
-  "description": "book.modpack.guide.homesteading.salted_trait.description",
+  "description": "book.modpack.guide.homesteading.hanger.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:powder/salt"
+    "item": "firmalife:wood/hanger/ash"
   },
-  "name": "book.modpack.guide.homesteading.salted_trait.name",
+  "name": "book.modpack.guide.homesteading.hanger.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,10 +16,10 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "tag": "tfc:foods/can_be_salted"
+        "tag": "firmalife:hangers"
       },
-      "text": "book.modpack.guide.homesteading.salted_trait.page1.text",
-      "title": "book.modpack.guide.homesteading.salted_trait.page1.title"
+      "text": "book.modpack.guide.homesteading.hanger.page1.text",
+      "title": "book.modpack.guide.homesteading.hanger.page1.title"
     },
     {
       "type": "modonomicon:crafting_recipe",
@@ -27,14 +27,14 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:crafting/salting",
-      "text": "book.modpack.guide.homesteading.salted_trait.page2.text",
+      "recipe_id_1": "firmalife:crafting/wood/hanger/ash",
+      "text": "book.modpack.guide.homesteading.hanger.page2.text",
       "title1": "",
       "title2": ""
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 9,
-  "x": -3,
-  "y": 1
+  "sort_number": 8,
+  "x": 2,
+  "y": -3
 }

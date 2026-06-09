@@ -1,13 +1,13 @@
 {
   "background_u_index": 0,
   "background_v_index": 0,
-  "category": "homesteading",
-  "description": "book.modpack.guide.homesteading.stomping_barrel.description",
+  "category": "carpentry",
+  "description": "book.modpack.guide.carpentry.stomping_barrel.description",
   "hide_while_locked": false,
   "icon": {
     "item": "firmalife:wood/stomping_barrel/ash"
   },
-  "name": "book.modpack.guide.homesteading.stomping_barrel.name",
+  "name": "book.modpack.guide.carpentry.stomping_barrel.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -18,8 +18,8 @@
       "item": {
         "tag": "firmalife:stomping_barrels"
       },
-      "text": "book.modpack.guide.homesteading.stomping_barrel.page1.text",
-      "title": "book.modpack.guide.homesteading.stomping_barrel.page1.title"
+      "text": "book.modpack.guide.carpentry.stomping_barrel.page1.text",
+      "title": "book.modpack.guide.carpentry.stomping_barrel.page1.title"
     },
     {
       "type": "modonomicon:crafting_recipe",
@@ -28,7 +28,7 @@
         "type": "modonomicon:none"
       },
       "recipe_id_1": "firmalife:crafting/wood/stomping_barrel/ash",
-      "text": "book.modpack.guide.homesteading.stomping_barrel.page2.text",
+      "text": "book.modpack.guide.carpentry.stomping_barrel.page2.text",
       "title1": "",
       "title2": ""
     },
@@ -40,7 +40,7 @@
       },
       "recipe_id_1": "firmalife:stomping/food/smashed_red_grapes",
       "recipe_id_2": "firmalife:stomping/food/smashed_white_grapes",
-      "text": "book.modpack.guide.homesteading.stomping_barrel.page3.text",
+      "text": "book.modpack.guide.carpentry.stomping_barrel.page3.text",
       "title1": "",
       "title2": ""
     },
@@ -52,13 +52,13 @@
       },
       "recipe_id_1": "firmalife:stomping/food/soybean_paste",
       "recipe_id_2": "firmalife:stomping/powder/charcoal",
-      "text": "book.modpack.guide.homesteading.stomping_barrel.page4.text",
+      "text": "book.modpack.guide.carpentry.stomping_barrel.page4.text",
       "title1": "",
       "title2": ""
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 4,
-  "x": -1,
-  "y": -4
+  "sort_number": 16,
+  "x": -2,
+  "y": 4
 }
