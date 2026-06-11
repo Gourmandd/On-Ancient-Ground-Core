@@ -1,5 +1,7 @@
 package net.gourmand.core.modonomicon;
 
+import com.klikli_dev.modonomicon.client.gui.BookGuiManager;
+import com.klikli_dev.modonomicon.client.gui.book.BookAddress;
 import com.klikli_dev.modonomicon.client.render.page.PageRendererRegistry;
 import com.klikli_dev.modonomicon.data.BookPageJsonLoader;
 import com.klikli_dev.modonomicon.data.LoaderRegistry;
@@ -12,6 +14,10 @@ import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.FluidStack;
 
 public class ModonomiconIntegration {
+
+    public static boolean openBook = false;
+    public static final String ID = "guide";
+    public static final ResourceLocation BOOK_ID = AncientGroundCore.location(ID);
 
     // Page Types
     public static final ResourceLocation KNAPPING_PAGE = AncientGroundCore.location("knapping");
@@ -60,5 +66,12 @@ public class ModonomiconIntegration {
 
     public static NeoFluidHolder getFluidHolder(FluidStack fluid){
         return new NeoFluidHolder(new FluidStack(fluid.getFluid(), fluid.getAmount()));
+    }
+
+    public static void openBook(){
+        if (openBook){
+            BookGuiManager.get().openBook(BookAddress.defaultFor(BOOK_ID));
+            openBook = false;
+        }
     }
 }

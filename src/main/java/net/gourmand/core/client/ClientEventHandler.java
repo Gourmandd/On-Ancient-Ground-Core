@@ -37,7 +37,8 @@ import java.util.stream.Stream;
 
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_FLOW;
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_STILL;
-import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.*;
+import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.SCRIBING_TABLE;
+import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.SEWING_TABLE;
 
 public class ClientEventHandler {
 

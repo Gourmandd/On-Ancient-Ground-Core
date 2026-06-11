@@ -1,26 +1,24 @@
 package net.gourmand.core;
 
+import com.mojang.logging.LogUtils;
 import net.gourmand.core.client.ClientEventHandler;
+import net.gourmand.core.client.ClientForgeEventHandler;
 import net.gourmand.core.datagen.DataEntryPoint;
 import net.gourmand.core.event.ServerEventHandler;
 import net.gourmand.core.modonomicon.ModonomiconIntegration;
 import net.gourmand.core.registry.*;
 import net.gourmand.core.registry.items.CoreItemCapabilities;
-import net.gourmand.core.registry.CoreGemstoneColors;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.loading.FMLEnvironment;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AncientGroundCore.MODID)
@@ -56,6 +54,7 @@ public class AncientGroundCore {
 
         if (FMLEnvironment.dist == Dist.CLIENT){
             ClientEventHandler.init(modEventBus, modContainer);
+            ClientForgeEventHandler.init();
             ModonomiconIntegration.registerPageRenderers();
         }
 
