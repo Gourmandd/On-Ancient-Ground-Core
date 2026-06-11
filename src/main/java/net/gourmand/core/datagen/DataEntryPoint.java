@@ -2,12 +2,6 @@
 
 package net.gourmand.core.datagen;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.CompletableFuture;
-import java.util.function.Function;
-
 import com.klikli_dev.modonomicon.api.datagen.LanguageProviderCache;
 import com.klikli_dev.modonomicon.api.datagen.NeoBookProvider;
 import net.gourmand.core.AncientGroundCore;
@@ -17,6 +11,7 @@ import net.gourmand.core.datagen.providers.*;
 import net.gourmand.core.datagen.recipes.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -27,6 +22,12 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+
 
 
 public final class DataEntryPoint
@@ -36,15 +37,21 @@ public final class DataEntryPoint
     {
         final PackOutput output = event.getGenerator().getPackOutput();
 
+        RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder()
+                .add(Registries.CONFIGURED_FEATURE, BuiltinConfiguredFeatures::bootstrap)
+                .add(Registries.PLACED_FEATURE, BuiltinPlacedFeatures::bootstrap);
+
         final var lookup = add(event, new DatapackBuiltinEntriesProvider(
                 event.getGenerator().getPackOutput(), event.getLookupProvider(),
-                new RegistrySetBuilder()
+                registrySetBuilder
                 , Set.of(AncientGroundCore.MODID, "minecraft"))).getRegistryProvider();
 
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinBlockTags(event, lookup));
         add(event, new BuiltinFluidTags(event, lookup));
         add(event, new BuiltinItemTags(event, lookup));
+        add(event, new BuiltinPlacedFeatureTags(event, lookup));
+
         add(event, new BuiltinSupports(output, lookup));
         add(event, new BuiltinBlockStates(output, event.getExistingFileHelper()));
         add(event, new BuiltinItemModels(output, event.getExistingFileHelper()));

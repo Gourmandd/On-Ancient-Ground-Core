@@ -18,6 +18,7 @@
         "modpack:vein/soapstone",
         "modpack:vein/meteoric_iron",
         "modpack:vein/quartz",
-        "modpack:vein/quartz_sedimentary"
+        "modpack:vein/quartz_sedimentary",
+        "modpack:monster_room"
     ]
 }

@@ -37,6 +37,7 @@ public class AncientGroundCore {
         CoreItems.ITEMS.register(modEventBus);
         CreativeTabs.CREATIVE_TABS.register(modEventBus);
         CoreWorldGen.BIOME_SOURCES.register(modEventBus);
+        CoreWorldGen.CONFIGURED_FEATURE_TYPE.register(modEventBus);
         CoreGemstoneColors.GEMSTONE_COLORS.register(modEventBus);
 
         CoreFluids.FLUIDS.register(modEventBus);
