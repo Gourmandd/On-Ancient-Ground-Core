@@ -3,10 +3,10 @@
   "package": "net.gourmand.core.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "DecayAwayMixin",
     "SwitchInventoryTabPacketMixin"
   ],
   "client": [
-
   ],
   "injectors": {
     "defaultRequire": 1
