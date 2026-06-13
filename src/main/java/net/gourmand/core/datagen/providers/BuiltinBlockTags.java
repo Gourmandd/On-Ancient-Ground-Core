@@ -81,6 +81,27 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                 TFCTags.Blocks.FRUIT_TREE_BRANCH)
         );
 
+        add(CoreBlocks.CROPS, List.of(
+                BlockTags.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
+        );
+
+        add(CoreBlocks.WILD_CROPS, List.of(
+                BlockTags.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
+        );
+
+        add(CoreBlocks.DEAD_CROPS, List.of(
+                BlockTags.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
+        );
+
         add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(
                 BlockTags.MINEABLE_WITH_PICKAXE,
                 TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
@@ -376,12 +397,6 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                 .add(SpectrumBlocks.ONYX_POWDER_BLOCK.getKey())
                 .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
 
-        add(CoreBlocks.WILD_CROPS, List.of(
-                TFCTags.Blocks.MINEABLE_WITH_HOE,
-                TFCTags.Blocks.MINEABLE_WITH_SCYTHE,
-                TFCTags.Blocks.MINEABLE_WITH_KNIFE)
-        );
-
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(CoreBlocks.CLEAR_MOLTEN_GLASS.getKey())
                 .add(CoreBlocks.CLEAR_LEAD_GLASS.getKey())
@@ -397,9 +412,9 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         for (DeferredHolder<Block, Block> block : map.values()){
             for (TagKey<Block> tag : tags){
                 this.tag(tag).add(block.getKey());
-            };
+            }
         }
-    };
+    }
 
     private <T1 extends RegistryRock, T2 extends Enum> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock){
         ResourceKey<Block> key = map.get(rock).get(ore).getKey();
@@ -407,7 +422,7 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         this.tag(Tags.Blocks.ORES).add(key);
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(key);
         this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
-    };
+    }
 
     private <T1 extends RegistryRock, T2 extends Enum, T3 extends CoreOres.Grade> void addGradedOreTags(Map<T1, Map<T2, Map<T3, DeferredHolder<Block, Block>>>> map, T2 ore, T1 rock){
 
@@ -418,7 +433,7 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(key);
             this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
         }
-    };
+    }
 
     private TagKey<Block> getOreTierTag(Enum ore){
 

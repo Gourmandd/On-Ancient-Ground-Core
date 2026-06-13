@@ -5,6 +5,21 @@
     "modpack:plant/walnut_leaves",
     "modpack:plant/wolfberry_sapling",
     "modpack:plant/fig_sapling",
-    "modpack:plant/walnut_sapling"
+    "modpack:plant/walnut_sapling",
+    "modpack:crop/glistering_melon",
+    "modpack:crop/cotton",
+    "modpack:crop/coffee",
+    "modpack:crop/amaranth",
+    "modpack:crop/wart",
+    "modpack:wild_crop/glistering_melon",
+    "modpack:wild_crop/cotton",
+    "modpack:wild_crop/coffee",
+    "modpack:wild_crop/amaranth",
+    "modpack:wild_crop/wart",
+    "modpack:dead_crop/glistering_melon",
+    "modpack:dead_crop/cotton",
+    "modpack:dead_crop/coffee",
+    "modpack:dead_crop/amaranth",
+    "modpack:dead_crop/wart"
   ]
 }

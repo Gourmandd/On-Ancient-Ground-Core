@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-24T09:05:01.04494844	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-06-13T19:00:07.359129425	Tags for minecraft:block mod id modpack
 19ca6d0ece8cedaf81ac939c4be2ca60feb3b821 data/c/tags/block/cobblestones.json
 24dda5799ac5dcfc3f0177ed9f1d915029cd6b30 data/c/tags/block/cobblestones/mossy.json
 5a3ee8cda1044828ea34f6bdd0f0276e4af06dcc data/c/tags/block/cobblestones/normal.json
@@ -14,7 +14,7 @@ d4318b7c1669f905ef550da9c7648625f0433977 data/c/tags/block/stones/pressure_plate
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/block/buttons.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
 efaeb68ba98302552a5fd373e76414707d90bf20 data/minecraft/tags/block/mineable/axe.json
-e0c6895860239ca52d65f80c2e644f1bd9278c3e data/minecraft/tags/block/mineable/hoe.json
+8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/minecraft/tags/block/mineable/hoe.json
 52706eda6fbfd98ccc1095f83303a8a0d1b9cb43 data/minecraft/tags/block/mineable/pickaxe.json
 11f579cf4fcb12bca06c821af3a9b4fdcd1edde1 data/minecraft/tags/block/mineable/shovel.json
 2a67d22570f9f302c44a458dad0843d2003ddf1e data/minecraft/tags/block/needs_diamond_tool.json
@@ -45,9 +45,9 @@ bece3dfbe29c2dceebe51b392110a5a21ffd179f data/tfc/tags/block/can_trigger_collaps
 37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/fruit_tree_saplings.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/grass_plantable_on.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/halophyte_plantable_on.json
-c0f67c5526d39e175618b85fd9239d458a682a86 data/tfc/tags/block/mineable/hoe.json
-c0f67c5526d39e175618b85fd9239d458a682a86 data/tfc/tags/block/mineable/knife.json
-c0f67c5526d39e175618b85fd9239d458a682a86 data/tfc/tags/block/mineable/scythe.json
+8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/tfc/tags/block/mineable/hoe.json
+8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/tfc/tags/block/mineable/knife.json
+8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/tfc/tags/block/mineable/scythe.json
 e36beacda5f511ee96116c88d6d6e8621a11cf1a data/tfc/tags/block/prospectable.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/sea_bush_plantable_on.json
 98548d218f2823032aa12a4a80260591cef9b1ad data/tfc/tags/block/support_beams.json
