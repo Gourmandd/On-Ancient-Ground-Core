@@ -11,6 +11,7 @@ import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.*;
 import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.items.CoreSeedItem;
+import net.gourmand.core.registry.items.InfluenceDebugItem;
 import net.gourmand.core.registry.items.MetalBucketItem;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.*;
@@ -93,6 +94,8 @@ public class CoreItems {
                     register("gemstone/" + itemType.getSerializedName() + "/" + gem.getSerializedName(), () -> itemType.create(gem))
             )
     );
+
+    public static final DeferredHolder<Item, Item> DEBUG_ITEM = register("influence_debug", () -> new InfluenceDebugItem(new Item.Properties()));
 
     private static Item basicItem(){
         return new Item(new Item.Properties());
