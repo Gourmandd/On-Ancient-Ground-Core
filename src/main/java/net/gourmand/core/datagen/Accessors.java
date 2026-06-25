@@ -56,6 +56,20 @@ public interface Accessors
         return metal.getFluid();
     }
 
+    default Fluid fluidFor(CoreMetals.MetalType metal)
+    {
+        return fluidOf(metal);
+    }
+
+    default Fluid fluidFor(Metal metal)
+    {
+        if (metal == Metal.WROUGHT_IRON){
+            return TFCFluids.METALS.get(Metal.CAST_IRON).getSource();
+        } else {
+            return fluidOf(metal);
+        }
+    }
+
     default String nameOf(ItemLike item)
     {
         assert item.asItem() != Items.AIR : "Should never get name of Items.AIR";

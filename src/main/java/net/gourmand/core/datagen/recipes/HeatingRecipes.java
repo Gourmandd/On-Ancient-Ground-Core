@@ -100,7 +100,7 @@ public interface HeatingRecipes extends Recipes {
                 new HeatingRecipe(
                         Ingredient.of(item),
                         ItemStackProvider.empty(),
-                        new FluidStack(metal.getFluid(), units(type)),
+                        new FluidStack(fluidFor(metal), units(type)),
                         temperatureOf(metal), new ItemStack(item).isDamageableItem()
                 )
         );
@@ -114,7 +114,7 @@ public interface HeatingRecipes extends Recipes {
                 new HeatingRecipe(
                         Ingredient.of(item),
                         ItemStackProvider.empty(),
-                        new FluidStack(fluidOf(metal), units(type)),
+                        new FluidStack(fluidFor(metal), units(type)),
                         temperatureOf(metal), new ItemStack(item).isDamageableItem()
                 )
         );
