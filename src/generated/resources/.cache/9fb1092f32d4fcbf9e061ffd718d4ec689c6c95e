@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-04T17:47:09.645711386	Recipes
+// 1.21.1	2026-06-25T09:14:30.54794275	Recipes
 74d08b4749e380fba2d005605c7ebb389e1b8576 data/modpack/recipe/alloy/aluminium_bronze.json
 2b8aaefb8411d25fa8d2563ddf617af092decbd1 data/modpack/recipe/alloy/cast_iron_alloy.json
 ce75347b3aeb00333930a53c795d09ba5de88583 data/modpack/recipe/alloy/electrum.json
@@ -1248,9 +1248,9 @@ f89e7ee5c5e1c9ce988728224c9ed9537dac6e85 data/modpack/recipe/heating/metal/cut_b
 1a6701d8cd2e38529fe0aaf654d3dc1b2efe7378 data/modpack/recipe/heating/metal/cut_block/tin.json
 d4e0cd234632624612ae27f7fa6af7f4fc934fea data/modpack/recipe/heating/metal/cut_block/tin_slab.json
 9b318fc4af6691dce79126bc1180e17ee3b94567 data/modpack/recipe/heating/metal/cut_block/tin_stairs.json
-c2df0d1acff57dec8e501b8273fa70e98945165d data/modpack/recipe/heating/metal/cut_block/wrought_iron.json
-5d36474854776ec2bb4851c871901b1d9e663908 data/modpack/recipe/heating/metal/cut_block/wrought_iron_slab.json
-01edaf45bf137ae577bcb6320f60e26f78e53e65 data/modpack/recipe/heating/metal/cut_block/wrought_iron_stairs.json
+23ec31389d736e071937e80478e30151d90fe0ee data/modpack/recipe/heating/metal/cut_block/wrought_iron.json
+4e4be865582778359595195095268380b53e3c89 data/modpack/recipe/heating/metal/cut_block/wrought_iron_slab.json
+c8740fae859986091f61b04ae22945f5a160d3fb data/modpack/recipe/heating/metal/cut_block/wrought_iron_stairs.json
 9004ad329dc059cf1e73d54e943693002203c162 data/modpack/recipe/heating/metal/cut_block/zinc.json
 393ce516c95f162965e000e3ff9939faa32af759 data/modpack/recipe/heating/metal/cut_block/zinc_slab.json
 1c8f7ffdc767e34f26b5d962683dfb1b49cd22ad data/modpack/recipe/heating/metal/cut_block/zinc_stairs.json
@@ -1286,9 +1286,9 @@ a943487edbab8386361f6ede17df743c41d54b61 data/modpack/recipe/heating/metal/expos
 c1c6d281cb349f3d8d97300397394fc713c1c88b data/modpack/recipe/heating/metal/exposed_cut_block/sterling_silver.json
 a2a1c438148452c63bd0857782aca0d8e2677c27 data/modpack/recipe/heating/metal/exposed_cut_block/sterling_silver_slab.json
 6fe15760cdddf666327c9001107e8e0e94561740 data/modpack/recipe/heating/metal/exposed_cut_block/sterling_silver_stairs.json
-8565b26e3a69e81ef4f7558ca0bebcfce12fc966 data/modpack/recipe/heating/metal/exposed_cut_block/wrought_iron.json
-5dfb3501b17f339b7768981bcca6d04534f4b38f data/modpack/recipe/heating/metal/exposed_cut_block/wrought_iron_slab.json
-1390cc213a357fe0be9137b8915e4abc183828b0 data/modpack/recipe/heating/metal/exposed_cut_block/wrought_iron_stairs.json
+c74dbe68b42339711ea9c2bca8260142cc76683a data/modpack/recipe/heating/metal/exposed_cut_block/wrought_iron.json
+328f695414ff90a1d050b6a0f27027b862c883d4 data/modpack/recipe/heating/metal/exposed_cut_block/wrought_iron_slab.json
+c679bfc8deff6444e38148a57830fd64fd18bb99 data/modpack/recipe/heating/metal/exposed_cut_block/wrought_iron_stairs.json
 fe364a7022db0fdc9e148feee2afdc793787642e data/modpack/recipe/heating/metal/ingot/aluminium.json
 5219131eb4bf0109af36444da8f36a35fc7d3cf6 data/modpack/recipe/heating/metal/ingot/aluminium_bronze.json
 b1c8b6817e62389e2298c616e0be2cad056e90bd data/modpack/recipe/heating/metal/ingot/cast_iron_alloy.json
@@ -1314,9 +1314,9 @@ fb26950758af397f0035ce3d46f59ef38e58bde2 data/modpack/recipe/heating/metal/oxidi
 cdca5594bf2a29def69c4785185180136555afc8 data/modpack/recipe/heating/metal/oxidized_cut_block/sterling_silver.json
 a5750b2ab15b4cd7ef6fecd7aa5bb71608045b6c data/modpack/recipe/heating/metal/oxidized_cut_block/sterling_silver_slab.json
 afb415667868a313c39c79b93416dec170d07e4b data/modpack/recipe/heating/metal/oxidized_cut_block/sterling_silver_stairs.json
-b2763bf20dac3844335f17d92610cfdbeb9a00ac data/modpack/recipe/heating/metal/oxidized_cut_block/wrought_iron.json
-e1087bddd123c8998b007ac9dc66778281e95693 data/modpack/recipe/heating/metal/oxidized_cut_block/wrought_iron_slab.json
-3ad96c26b19c7c8f6bf7dfc655387c7e97bce820 data/modpack/recipe/heating/metal/oxidized_cut_block/wrought_iron_stairs.json
+452062dc79fb1c9df21382363e2268e2219f2f33 data/modpack/recipe/heating/metal/oxidized_cut_block/wrought_iron.json
+1379b74193e86cd6980234ddc479b40024af203b data/modpack/recipe/heating/metal/oxidized_cut_block/wrought_iron_slab.json
+f7cb3cf97e45ee0722247a076b5b5e33368fab25 data/modpack/recipe/heating/metal/oxidized_cut_block/wrought_iron_stairs.json
 709b814776f91e90f6a51932061506043db7cea5 data/modpack/recipe/heating/metal/rod/aluminium.json
 519c1c48b336429c802aa7634c00148ca69bf3fe data/modpack/recipe/heating/metal/rod/aluminium_bronze.json
 d1a69926b0a0174dfe89894ff55dcdd0b42e2d91 data/modpack/recipe/heating/metal/rod/cast_iron_alloy.json
@@ -1349,9 +1349,9 @@ b75d5209c0fa9b613d517fbdab0cba525de34d1f data/modpack/recipe/heating/metal/weath
 02b3713c73d5d278462b92338fb401759ce82ddd data/modpack/recipe/heating/metal/weathered_cut_block/sterling_silver.json
 8d991a63e44aa25b54fae4b47a2341dfa49f482e data/modpack/recipe/heating/metal/weathered_cut_block/sterling_silver_slab.json
 387fb2d6fb34019f656bf5962ec78bdd5d65a3df data/modpack/recipe/heating/metal/weathered_cut_block/sterling_silver_stairs.json
-d50a9d527f4bda02afb2ce1bc0a2b2a2c4f921e1 data/modpack/recipe/heating/metal/weathered_cut_block/wrought_iron.json
-2e23d6219e1c7b4dcc0917a969d9ff9b8361e9da data/modpack/recipe/heating/metal/weathered_cut_block/wrought_iron_slab.json
-da85477f2ec2a3f0a2599ff5bf3d68d0de8f3b3d data/modpack/recipe/heating/metal/weathered_cut_block/wrought_iron_stairs.json
+cc1e434bc82986a0e009c8813ad4c5d923392e02 data/modpack/recipe/heating/metal/weathered_cut_block/wrought_iron.json
+dc5963930bbd5f09b8b9ca36b8e1f02c0f5576c1 data/modpack/recipe/heating/metal/weathered_cut_block/wrought_iron_slab.json
+0e1c933f1987dae627b4759b7c58fd37e01faa9c data/modpack/recipe/heating/metal/weathered_cut_block/wrought_iron_stairs.json
 fead1be453fb646a284d1e065ceb04e35fe3ca0f data/modpack/recipe/heating/ore/normal_galena.json
 aa3c83a316f5f1a95d0669a0c8e280f1dde0ca33 data/modpack/recipe/heating/ore/poor_galena.json
 c488b5e328e8bf829f46f7119e8572c9497cb867 data/modpack/recipe/heating/ore/rich_galena.json
