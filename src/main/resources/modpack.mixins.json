@@ -3,6 +3,7 @@
   "package": "net.gourmand.core.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "CACakeBlockMixin",
     "DecayAwayMixin",
     "SwitchInventoryTabPacketMixin"
   ],
