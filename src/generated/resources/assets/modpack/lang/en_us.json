@@ -5400,5 +5400,7 @@
   "metal.modpack.glass.yellow": "Yellow Glass",
   "metal.modpack.hardened_steel": "Hardened Steel",
   "metal.modpack.lead": "Lead",
-  "metal.modpack.nethersteel": "Nethersteel"
+  "metal.modpack.nethersteel": "Nethersteel",
+  "modpack.key.open_modpack_guide": "Open Modpack Guide",
+  "modpack.key.open_tfc_guide": "Open TFC Field Guide"
 }

@@ -6,6 +6,7 @@ import net.gourmand.core.client.ClientForgeEventHandler;
 import net.gourmand.core.datagen.DataEntryPoint;
 import net.gourmand.core.event.ServerEventHandler;
 import net.gourmand.core.modonomicon.ModonomiconIntegration;
+import net.gourmand.core.network.PacketSetup;
 import net.gourmand.core.registry.*;
 import net.gourmand.core.registry.items.CoreItemCapabilities;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +24,7 @@ import org.slf4j.Logger;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AncientGroundCore.MODID)
 public class AncientGroundCore {
+    public static final String MOD_NAME = "Modpack Core";
     public static final String MODID = "modpack";
     public static final Logger LOGGER = LogUtils.getLogger();
 
@@ -32,6 +34,7 @@ public class AncientGroundCore {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(CoreItemCapabilities::register);
         modEventBus.addListener(DataEntryPoint::gatherData);
+        modEventBus.addListener(PacketSetup::setup);
 
         CoreBlocks.BLOCKS.register(modEventBus);
         CoreItems.ITEMS.register(modEventBus);

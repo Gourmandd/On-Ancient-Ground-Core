@@ -44,6 +44,9 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
         add("item_group.glass.modpack", "Modpack Glass");
         add("item_group.misc.modpack", "Modpack Misc Items");
 
+        add("modpack.key.open_modpack_guide", "Open Modpack Guide");
+        add("modpack.key.open_tfc_guide", "Open TFC Field Guide");
+
         addItem(CoreItems.GLASS_MOLD, "Glass Block Mold");
         addItem(CoreItems.GLASS_PANE_MOLD, "Glass Pane Mold");
 

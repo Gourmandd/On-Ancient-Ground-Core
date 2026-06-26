@@ -15,7 +15,6 @@ import net.neoforged.neoforge.fluids.FluidStack;
 
 public class ModonomiconIntegration {
 
-    public static boolean openBook = false;
     public static final String ID = "guide";
     public static final ResourceLocation BOOK_ID = AncientGroundCore.location(ID);
 
@@ -69,9 +68,6 @@ public class ModonomiconIntegration {
     }
 
     public static void openBook(){
-        if (openBook){
-            BookGuiManager.get().openBook(BookAddress.defaultFor(BOOK_ID));
-            openBook = false;
-        }
+        BookGuiManager.get().openBook(BookAddress.defaultFor(BOOK_ID));
     }
 }

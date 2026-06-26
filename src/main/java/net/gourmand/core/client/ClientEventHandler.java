@@ -18,6 +18,7 @@ import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
 import net.gourmand.core.registry.category.CoreGemstones;
 import net.gourmand.core.registry.category.CoreRocks;
+import net.gourmand.core.util.CoreKeyBindings;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -29,6 +30,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.client.model.DynamicFluidContainerModel;
 
@@ -49,6 +51,7 @@ public class ClientEventHandler {
         modEventBus.addListener(ClientEventHandler::registerColorHandlerItems);
         modEventBus.addListener(ClientEventHandler::registerEntityRenderers);
         modEventBus.addListener(ClientEventHandler::registerExtensions);
+        modEventBus.addListener(ClientEventHandler::registerKeyBindings);
     }
 
     private static void registerExtensions(RegisterClientExtensionsEvent event) {
@@ -80,6 +83,11 @@ public class ClientEventHandler {
         event.registerBlockEntityRenderer(CoreBlockEntities.SLUICE.get(), ctx -> new SluiceBlockEntityRenderer());
         event.registerBlockEntityRenderer(CoreBlockEntities.TOOL_RACK.get(), ctx -> new ToolRackBlockEntityRenderer());
         event.registerBlockEntityRenderer(CoreBlockEntities.SHELF.get(), ctx -> new PlacedItemBlockEntityRenderer<>());
+    }
+
+    public static void registerKeyBindings(RegisterKeyMappingsEvent event) {
+        event.register(CoreKeyBindings.OPEN_MODPACK_GUIDE);
+        event.register(CoreKeyBindings.OPEN_TFC_GUIDE);
     }
 
     @SuppressWarnings("deprecation")
@@ -183,7 +191,7 @@ public class ClientEventHandler {
 
         CoreBlocks.WILD_CROPS.values().forEach((block) -> event.register(grassColor, block.get().asItem()));
 
-        for (CoreClay clay : CoreClay.values()){;
+        for (CoreClay clay : CoreClay.values()){
             event.register(ContainedFluidModel.COLOR, CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).get());
         }
 
