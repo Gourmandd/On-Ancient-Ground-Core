@@ -39,6 +39,7 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
             add(CoreBlocks.METALS.get(type).get(Metal.BlockType.BLOCK_STAIRS).get(), CategoryUtil.HeatCapacities.INGOT);
         });
 
+        /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
             Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
                 if (type.hasMetal(metal)){
@@ -52,6 +53,7 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
                 }
             });
         });
+         */
 
         Stream.of(CoreClay.values()).forEach(type -> {
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BRICK).get(), 0.4f);

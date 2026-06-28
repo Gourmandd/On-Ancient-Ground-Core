@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "modpack:block/metal/cut_block/blue_steel",
-    "side": "modpack:block/metal/cut_block/blue_steel",
-    "top": "modpack:block/metal/cut_block/blue_steel"
-  }
-}

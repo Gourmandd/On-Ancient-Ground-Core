@@ -210,6 +210,7 @@ public class BuiltinItemModels extends ItemModelProvider {
             });
         });
 
+        /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
             Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
                 if (type.hasMetal(metal)){
@@ -223,6 +224,7 @@ public class BuiltinItemModels extends ItemModelProvider {
                 }
             });
         });
+         */
 
         simpleBlock(CoreBlocks.PRISMATIC_ICE);
         simpleBlock(CoreBlocks.SLUDGE);

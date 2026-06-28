@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "modpack:block/metal/cut_block/cast_iron_alloy",
-    "side": "modpack:block/metal/cut_block/cast_iron_alloy",
-    "top": "modpack:block/metal/cut_block/cast_iron_alloy"
-  }
-}

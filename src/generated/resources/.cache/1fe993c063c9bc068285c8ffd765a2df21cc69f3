@@ -1,4 +1,4 @@
-// 1.21.1	2026-06-13T19:00:07.359129425	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-06-28T10:33:05.084966591	Tags for minecraft:block mod id modpack
 19ca6d0ece8cedaf81ac939c4be2ca60feb3b821 data/c/tags/block/cobblestones.json
 24dda5799ac5dcfc3f0177ed9f1d915029cd6b30 data/c/tags/block/cobblestones/mossy.json
 5a3ee8cda1044828ea34f6bdd0f0276e4af06dcc data/c/tags/block/cobblestones/normal.json
@@ -15,14 +15,14 @@ d4318b7c1669f905ef550da9c7648625f0433977 data/c/tags/block/stones/pressure_plate
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
 efaeb68ba98302552a5fd373e76414707d90bf20 data/minecraft/tags/block/mineable/axe.json
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/minecraft/tags/block/mineable/hoe.json
-52706eda6fbfd98ccc1095f83303a8a0d1b9cb43 data/minecraft/tags/block/mineable/pickaxe.json
+3c5465bce1f1a5a8d259c03fe36bbea0fe11769e data/minecraft/tags/block/mineable/pickaxe.json
 11f579cf4fcb12bca06c821af3a9b4fdcd1edde1 data/minecraft/tags/block/mineable/shovel.json
 2a67d22570f9f302c44a458dad0843d2003ddf1e data/minecraft/tags/block/needs_diamond_tool.json
 236d7eb3a6f7f0434f1064a164aec8ded7dc81e1 data/minecraft/tags/block/needs_iron_tool.json
 d5fbc9b08bad9be736a4facebd4e44b096b00e48 data/minecraft/tags/block/needs_stone_tool.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/pressure_plates.json
-3ce5c101854d9add0ebb0d7845d6f9f527b8c403 data/minecraft/tags/block/slabs.json
-83588bfff61ed571efb88568f444fe3c4ccb3347 data/minecraft/tags/block/stairs.json
+6ddb6b4872b2d62d48415d2e7c4bf8992facdd91 data/minecraft/tags/block/slabs.json
+926e987b2cc1d4fddd445234517a9462054beec9 data/minecraft/tags/block/stairs.json
 be0e6e9837e0c89f5c86bfb8db1522bcc779e1f4 data/minecraft/tags/block/stone_bricks.json
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/block/stone_buttons.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/stone_pressure_plates.json

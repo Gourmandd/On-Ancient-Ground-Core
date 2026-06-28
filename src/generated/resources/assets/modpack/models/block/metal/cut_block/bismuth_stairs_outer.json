@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "modpack:block/metal/cut_block/bismuth",
-    "side": "modpack:block/metal/cut_block/bismuth",
-    "top": "modpack:block/metal/cut_block/bismuth"
-  }
-}

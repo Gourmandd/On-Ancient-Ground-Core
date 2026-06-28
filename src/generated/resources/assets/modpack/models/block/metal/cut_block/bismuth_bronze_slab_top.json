@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "modpack:block/metal/cut_block/bismuth_bronze",
-    "side": "modpack:block/metal/cut_block/bismuth_bronze",
-    "top": "modpack:block/metal/cut_block/bismuth_bronze"
-  }
-}

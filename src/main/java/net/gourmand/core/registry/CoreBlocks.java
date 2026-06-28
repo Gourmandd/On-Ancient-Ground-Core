@@ -232,6 +232,7 @@ public class CoreBlocks {
             register("lead_glass_pane/" + color.getSerializedName(), () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).requiresCorrectToolForDrops().strength(4.5f)))
     );
 
+    /*
     public static final Map<CoreMetals.MetalType, Map<CoreMetals.BlockType, DeferredHolder<Block, Block>>> CORE_CUSTOM_METAL_BLOCKS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
             Helpers.mapOf(CoreMetals.BlockType.class, type -> type.hasMetal(metal), type ->
                     register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
@@ -243,6 +244,7 @@ public class CoreBlocks {
                     register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
             )
     );
+    */
 
     public static final DeferredHolder<Block, CopperBulbBlock> LEAD_BULB_BLOCK = register("metal/bulb/lead", () -> new  CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).mapColor(MapColor.COLOR_PURPLE)));
 

@@ -28,7 +28,6 @@
         "type": "modonomicon:none"
       },
       "recipe_id_1": "tfc:crafting/metal/block/copper",
-      "recipe_id_2": "modpack:crafting/metal/cut_block/copper",
       "text": "book.modpack.guide.metalworking.block.page2.text",
       "title1": "",
       "title2": ""

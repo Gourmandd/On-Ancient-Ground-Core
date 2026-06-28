@@ -4,7 +4,6 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.common.recipes.HeatingRecipe;
 import net.dries007.tfc.common.recipes.outputs.ItemStackProvider;
-import net.dries007.tfc.util.Metal;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CategoryUtil;
@@ -52,6 +51,7 @@ public interface HeatingRecipes extends Recipes {
                 )
         ));
 
+        /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
             Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
                 if (type.hasMetal(metal)){
@@ -65,6 +65,7 @@ public interface HeatingRecipes extends Recipes {
                 }
             });
         });
+         */
 
         Stream.of(CoreClay.values()).forEach(clayType -> {
 
@@ -92,6 +93,7 @@ public interface HeatingRecipes extends Recipes {
         });
     }
 
+    /*
     private void addCustomMetalBlock(CoreMetals.MetalType metal, CoreMetals.BlockType type)
     {
         var item = CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).get().asItem();
@@ -119,6 +121,7 @@ public interface HeatingRecipes extends Recipes {
                 )
         );
     }
+     */
 
     private void addOres(CoreOres ore, CoreMetals.MetalType metal)
     {

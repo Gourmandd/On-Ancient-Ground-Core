@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "modpack:block/metal/exposed_cut_block/steel",
-    "side": "modpack:block/metal/exposed_cut_block/steel",
-    "top": "modpack:block/metal/exposed_cut_block/steel"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "modpack:block/metal/oxidized_cut_block/brass",
-    "side": "modpack:block/metal/oxidized_cut_block/brass",
-    "top": "modpack:block/metal/oxidized_cut_block/brass"
-  }
-}

@@ -77,14 +77,16 @@ public class CreativeTabs {
                 accept(out, CoreBlocks.METALS, metal, type);
             }
 
+            /*
             for (CoreMetals.BlockType type : CoreMetals.BlockType.values())
             {
                 if (type.hasMetal(metal)){
                     accept(out, CoreBlocks.CORE_CUSTOM_METAL_BLOCKS, metal, type);
                 }
             }
+            */
         }
-
+        /*
         for(Metal metal : Metal.values())
         {
 
@@ -95,6 +97,7 @@ public class CreativeTabs {
                 }
             }
         }
+         */
     }
 
     private static void fillOres(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)

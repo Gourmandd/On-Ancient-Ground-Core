@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "modpack:block/metal/exposed_cut_block/brass"
-  }
-}

@@ -252,6 +252,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
             });
         });
 
+        /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
             Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
                 if (type.hasMetal(metal)){
@@ -265,6 +266,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                 }
             });
         });
+         */
 
         this.dropSelf(CoreBlocks.LEAD_BULB_BLOCK.get());
     }

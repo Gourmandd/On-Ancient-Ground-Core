@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "modpack:block/metal/weathered_cut_block/bronze",
-    "side": "modpack:block/metal/weathered_cut_block/bronze",
-    "top": "modpack:block/metal/weathered_cut_block/bronze"
-  }
-}

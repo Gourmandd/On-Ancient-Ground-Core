@@ -218,6 +218,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
             });
         });
 
+        /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
             Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
                 if (type.hasMetal(metal)){
@@ -261,6 +262,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 }
             });
         });
+         */
 
         bulbBlock(CoreBlocks.LEAD_BULB_BLOCK);
 

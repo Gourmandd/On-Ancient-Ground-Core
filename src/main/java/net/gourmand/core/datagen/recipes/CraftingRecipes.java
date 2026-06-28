@@ -1,7 +1,6 @@
 package net.gourmand.core.datagen.recipes;
 
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.TFCItems;
@@ -49,7 +48,7 @@ public interface CraftingRecipes extends Recipes {
                         .input('B', ingredientOf(metal, Metal.BlockType.BLOCK))
                         .pattern("B  ", "BB ")
                         .shaped(blocks.get(Metal.BlockType.BLOCK_STAIRS).get(), 4);
-
+                /*
                 recipe()
                         .input(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).get())
                         .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
@@ -67,9 +66,10 @@ public interface CraftingRecipes extends Recipes {
                         .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
                         .damageInputs()
                         .shapeless(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK_STAIRS).get());
+                 */
             }
         });
-
+        /*
         Stream.of(Metal.values()).forEach(metal -> {
             if (metal.defaultParts())
             {
@@ -151,6 +151,7 @@ public interface CraftingRecipes extends Recipes {
                 }
             }
         });
+         */
 
         Stream.of(CoreClay.values()).forEach(clayType -> {
 

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "modpack:block/metal/cut_block/bronze"
-  }
-}

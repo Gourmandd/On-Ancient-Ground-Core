@@ -353,6 +353,7 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             }
         });
 
+        /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
             Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
                 if (type.hasMetal(metal)){
@@ -382,6 +383,7 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                 }
             });
         });
+        */
 
         this.tag(CoreTags.Blocks.GEMSTONE_BLOCKS)
                 .add(Blocks.AMETHYST_BLOCK.builtInRegistryHolder().key())

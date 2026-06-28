@@ -10,7 +10,6 @@ import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.util.Metal;
-import net.gourmand.core.AncientGroundCore;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -32,7 +31,7 @@ public class PlatedBlocksEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Plated Blocks** are worth 100 mb of metal, they have a cut variant and are decorational.
+                **Plated Blocks** are worth 100 mb of metal, they are decorational.
                 \\
                 \\
                 Brass plated blocks are used for the **Table Pour** glassworking operation.
@@ -45,7 +44,6 @@ public class PlatedBlocksEntry extends EntryProvider {
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/metal/block/copper"))
-                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "crafting/metal/cut_block/copper"))
         );
 
         this.pageTitle(entryName());

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "modpack:block/metal/cut_block/zinc",
-    "side": "modpack:block/metal/cut_block/zinc",
-    "top": "modpack:block/metal/cut_block/zinc"
-  }
-}

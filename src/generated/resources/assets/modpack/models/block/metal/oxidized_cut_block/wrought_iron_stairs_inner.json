@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "modpack:block/metal/oxidized_cut_block/wrought_iron",
-    "side": "modpack:block/metal/oxidized_cut_block/wrought_iron",
-    "top": "modpack:block/metal/oxidized_cut_block/wrought_iron"
-  }
-}

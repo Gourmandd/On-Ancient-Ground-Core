@@ -280,6 +280,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             });
         });
 
+        /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
 
             String prefix = getName(type.getSerializedName().split("_cut")[0]).concat(" ").replace("Cut Block ", "").replace("Slab ", "").replace("Stairs ", "");
@@ -297,6 +298,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 }
             });
         });
+         */
 
 
 //        // Adds a translation with the given key and the given value.

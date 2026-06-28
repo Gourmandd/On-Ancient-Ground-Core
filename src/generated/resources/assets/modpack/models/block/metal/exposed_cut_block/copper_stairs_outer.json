@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "modpack:block/metal/exposed_cut_block/copper",
-    "side": "modpack:block/metal/exposed_cut_block/copper",
-    "top": "modpack:block/metal/exposed_cut_block/copper"
-  }
-}

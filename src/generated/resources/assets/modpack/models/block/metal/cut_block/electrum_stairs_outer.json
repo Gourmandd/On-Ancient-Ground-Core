@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "modpack:block/metal/cut_block/electrum",
-    "side": "modpack:block/metal/cut_block/electrum",
-    "top": "modpack:block/metal/cut_block/electrum"
-  }
-}

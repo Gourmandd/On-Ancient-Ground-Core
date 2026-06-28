@@ -1,4 +1,4 @@
-// 1.21.1	2026-06-26T11:53:51.980204799	Books: modpack
+// 1.21.1	2026-06-28T10:39:56.967622245	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
@@ -167,7 +167,7 @@ cc87bbd129afbb4cc7c4343b0f92df459ea0c09c data/modpack/modonomicon/books/guide/en
 9829b3b6e9f25e85049ef263d3c8da290289e092 data/modpack/modonomicon/books/guide/entries/metalworking/bellows.json
 8fb51b57f832d13558d57157f380b65d8822147a data/modpack/modonomicon/books/guide/entries/metalworking/black_steel.json
 fdff263b78deb7f3680dcd6e01087c78082f5caf data/modpack/modonomicon/books/guide/entries/metalworking/blast_furnace.json
-09c0d4374c7315dbd757faab8e8d7f3c6d30f898 data/modpack/modonomicon/books/guide/entries/metalworking/block.json
+17382be1ad46f3a9dc904f47bacb27a4bd4fbdcd data/modpack/modonomicon/books/guide/entries/metalworking/block.json
 db30c829acc02e51002ff226e361c8c20d82aa4b data/modpack/modonomicon/books/guide/entries/metalworking/bloomery.json
 b7207eb75880527b6e5c9f51e99bd3e3ae8f08f8 data/modpack/modonomicon/books/guide/entries/metalworking/bronze.json
 93d817f15b6ca6b9b7456758d890c5f337199a3c data/modpack/modonomicon/books/guide/entries/metalworking/chains.json

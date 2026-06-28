@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "modpack:block/metal/cut_block/rose_gold",
-    "side": "modpack:block/metal/cut_block/rose_gold",
-    "top": "modpack:block/metal/cut_block/rose_gold"
-  }
-}
