@@ -23,7 +23,7 @@ public class GettingStartedCategory extends CategoryProvider {
         return new String[]{
                 "k___h_j",
                 "_______",
-                "__c____",
+                "Z_c____",
                 "___b___",
                 "a___d_g",
                 "___e___",
@@ -65,6 +65,11 @@ public class GettingStartedCategory extends CategoryProvider {
         );
 
         var fire = this.add(new FireEntry(this).generate("k").withParent(shovel));
+
+
+
+
+        var field_guide = this.add(new FieldGuideEntry(this).generate("Z").withParent(introduction));
     }
 
     @Override

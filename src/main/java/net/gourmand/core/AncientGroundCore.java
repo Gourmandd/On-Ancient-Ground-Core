@@ -1,5 +1,7 @@
 package net.gourmand.core;
 
+import com.google.common.collect.ImmutableMap;
+import com.klikli_dev.modonomicon.data.LoaderRegistry;
 import com.mojang.logging.LogUtils;
 import net.gourmand.core.client.ClientEventHandler;
 import net.gourmand.core.client.ClientForgeEventHandler;
@@ -9,6 +11,7 @@ import net.gourmand.core.modonomicon.ModonomiconIntegration;
 import net.gourmand.core.network.PacketSetup;
 import net.gourmand.core.registry.*;
 import net.gourmand.core.registry.items.CoreItemCapabilities;
+import net.gourmand.core.util.CoreKeyBindings;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -20,6 +23,8 @@ import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
+
+import java.util.Map;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AncientGroundCore.MODID)
@@ -67,8 +72,14 @@ public class AncientGroundCore {
 
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
+
+        Map<String, String> textMacros = ImmutableMap.<String, String>builder()
+                .put("macro.modpack.open_modpack_guide_key", CoreKeyBindings.OPEN_MODPACK_GUIDE.getKey().getDisplayName().getString())
+                .put("macro.modpack.open_tfc_guide_key", CoreKeyBindings.OPEN_TFC_GUIDE.getKey().getDisplayName().getString())
+                .build();
+
+        LoaderRegistry.registerDynamicTextMacroLoader(ModonomiconIntegration.BOOK_ID, () -> textMacros);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

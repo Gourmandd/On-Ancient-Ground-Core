@@ -1,0 +1,52 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "getting_started",
+  "description": "book.modpack.guide.getting_started.field_guide.description",
+  "hide_while_locked": false,
+  "icon": {
+    "components": {
+      "patchouli:book": "tfc:field_guide"
+    },
+    "item": "patchouli:guide_book"
+  },
+  "name": "book.modpack.guide.getting_started.field_guide.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "patchouli:guide_book"
+      },
+      "text": "book.modpack.guide.getting_started.field_guide.page1.text",
+      "title": "book.modpack.guide.getting_started.field_guide.page1.title"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "patchouli:guide_book"
+      },
+      "text": "book.modpack.guide.getting_started.field_guide.page2.text",
+      "title": "book.modpack.guide.getting_started.field_guide.page2.title"
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "getting_started/introduction",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 10,
+  "x": -3,
+  "y": -1
+}
