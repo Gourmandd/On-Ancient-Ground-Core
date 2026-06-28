@@ -32,9 +32,9 @@ public class BuiltinPlacedFeatures {
                 new PlacedFeature(
                         registry.getOrThrow(BuiltinConfiguredFeatures.MONSTER_ROOM),
                         List.of(
-                                CountPlacement.of(10),
+                                CountPlacement.of(16),
                                 InSquarePlacement.spread(),
-                                HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.belowTop(0)))
+                                HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(64)))
                         )
                 )
         );
