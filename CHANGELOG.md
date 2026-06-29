@@ -1,31 +1,38 @@
 ## On-Ancient-Ground-Core
 
-# 1.0.3
+# 1.0.5
 
 Disclaimer: this mod is intended for use in a modpack, things may not fully work outside that environment.
 
-The ids of blocks have changed, which will mean disappearing blocks when upgrading, not much I can do as. (see changes section)
-New additions have made it to the modpack, to summarise:
+1.0.4 was published, with a modpack release in mind, and that never was released.
+So this changelog will include 1.0.4 and 1.0.5 updated changes for brevity’s sake about what new additions the modpack (alpha-3) will see.
+
+## Additions
+- Massive amount of entries were added to the custom guide book, still unfinished.
+- The modpack's custom guide book now opens when pressing TFC field guide button.
+- By default, "`" how opens the custom guide book, and "P" opens TFC's field guide.
+- Monster Rooms (AKA dungeons) now generate in the world (using TFC stone bricks)
+
+## Changes and Fixes
+- Added the bundle to the mod's creative menu (so it now shows in EMI).
+- C:C&A cakes now give TFC nutrition.
+- Spectrum's decay away now creates aridisol instead of dirt.
+- Added missing block tags to custom crop blocks.
+- Various item textures were remade. 
+
+# 1.0.4
 
 ## Additions
 
-- New ores - Soapstone, meteoric iron. Both come with decorative rock (Soapstone, and Suevite), meteoric iron can be refined like a iron bloom.
-- New rock types. - Arkose, Sandstone, Red Sandstone, Phonolite, Soapstone and Suevite.
-- Prismatic Ice and Sludge (block) act as bucket-less ways to get liquid crystal and sludge (fluid).
-- Added ore deposits blocks (the ones you pan) and world-gen for custom rocks.
-- Terracotta now spawns as an ore on the surface.
-- Nether wart has been added as a TFC-like crop.
+- Lead bulb block (for future use in structures to replace copper bulb)
+- Work on the custom guide book (still unfinished)
+- Leaded glass and glass panes.
 
-## Changes and Fixes
-
-- The mod now uses Spectrum over Pastel. There will be missing blocks!
-- Supports now appear in recipe viewers.
-- Support item models were fixed.
-- Tints of molten glass blocks and fluids have changed.
-- All TFC world-gen features should now have proper entries for custom rock types.
-- Ores should now generate in every custom rock,
-- Cotton and Coffee's temperature requirement for generation has increased.
-- Amethyst and citrine geodes generate more often.
-- Internally a lot of things moved from the modpack to the mod, like registration of some items, fluids and blocks.
-- The block ids of bricks of custom clay types (yixing, yellowware, etc.) changed.
-- An unobtainable and experimental guide book is in the works.
+## Changes
+- Malachite now generates in more rocks types
+- Fixed various rock type's world gen features.
+- Meteors are less common.
+- Custom ore blocks have proper mining levels.
+- Fixed wild crop item model.
+- Fixed Deeper Down plant's climate ranges to match conditions that they spawn in.
+- Gravel can no longer be mined with a pickaxe.... 
