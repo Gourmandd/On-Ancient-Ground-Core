@@ -9,33 +9,47 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
-import net.minecraft.world.level.levelgen.placement.CountPlacement;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
 public class BuiltinPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> MONSTER_ROOM = ResourceKey.create(
-            Registries.PLACED_FEATURE,
-            ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "monster_room")
-    );
+    public static BootstrapContext<PlacedFeature> CTX;
+    public static HolderGetter<ConfiguredFeature<?, ?>> REGISTRY;
+
+    public static final ResourceKey<PlacedFeature> MONSTER_ROOM = createKey(AncientGroundCore.MODID, "monster_room");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> ctx){
 
-        HolderGetter<ConfiguredFeature<?, ?>> registry = ctx.lookup(Registries.CONFIGURED_FEATURE);
+        CTX = ctx;
+        REGISTRY = ctx.lookup(Registries.CONFIGURED_FEATURE);
 
-        ctx.register(
-                MONSTER_ROOM,
-                new PlacedFeature(
-                        registry.getOrThrow(BuiltinConfiguredFeatures.MONSTER_ROOM),
-                        List.of(
-                                CountPlacement.of(16),
-                                InSquarePlacement.spread(),
-                                HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(64)))
-                        )
+        create(MONSTER_ROOM, BuiltinConfiguredFeatures.MONSTER_ROOM,
+                List.of(
+                        CountPlacement.of(16),
+                        InSquarePlacement.spread(),
+                        createHeight(-48, 64)
+                )
+        );
+    }
+
+    private static ResourceKey<PlacedFeature> createKey(String name, String path){
+        return ResourceKey.create(
+                Registries.PLACED_FEATURE,
+                ResourceLocation.fromNamespaceAndPath(name, path)
+        );
+    }
+
+    private static void create(ResourceKey<PlacedFeature> key, ResourceKey<ConfiguredFeature<?, ?>> keyFeature, List<PlacementModifier> list){
+        CTX.register(key, new PlacedFeature(REGISTRY.getOrThrow(keyFeature), list));
+    }
+
+    private static HeightRangePlacement createHeight(int min, int max){
+        return HeightRangePlacement.of(
+                UniformHeight.of(
+                        VerticalAnchor.absolute(min),
+                        VerticalAnchor.absolute(max)
                 )
         );
     }

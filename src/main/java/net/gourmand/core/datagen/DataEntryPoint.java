@@ -4,6 +4,7 @@ package net.gourmand.core.datagen;
 
 import com.klikli_dev.modonomicon.api.datagen.LanguageProviderCache;
 import com.klikli_dev.modonomicon.api.datagen.NeoBookProvider;
+import net.dries007.tfc.TerraFirmaCraft;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.book.CoreMultiblockProvider;
 import net.gourmand.core.datagen.book.guide.GuideBook;
@@ -44,7 +45,7 @@ public final class DataEntryPoint
         final var lookup = add(event, new DatapackBuiltinEntriesProvider(
                 event.getGenerator().getPackOutput(), event.getLookupProvider(),
                 registrySetBuilder
-                , Set.of(AncientGroundCore.MODID, "minecraft"))).getRegistryProvider();
+                , Set.of(AncientGroundCore.MODID, "minecraft", TerraFirmaCraft.MOD_ID))).getRegistryProvider();
 
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinBlockTags(event, lookup));
