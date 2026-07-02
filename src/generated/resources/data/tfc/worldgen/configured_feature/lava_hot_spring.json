@@ -7,34 +7,6 @@
     "replaces_on_fluid_contact": [
       {
         "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/magma/blackslag"
-          },
-          {
-            "block": "modpack:rock/hardened/blackslag",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/dacite"
-          },
-          {
-            "block": "tfc:rock/hardened/dacite",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "create:scoria"
         ],
         "with": [
@@ -49,6 +21,20 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/gabbro"
+          },
+          {
+            "block": "tfc:rock/hardened/gabbro",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/diorite"
         ],
         "with": [
@@ -57,6 +43,76 @@
           },
           {
             "block": "tfc:rock/hardened/diorite",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/magma/blackslag"
+          },
+          {
+            "block": "modpack:rock/hardened/blackslag",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/granite"
+          },
+          {
+            "block": "tfc:rock/hardened/granite",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/magma/phonolite"
+          },
+          {
+            "block": "modpack:rock/hardened/phonolite",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/magma/picrite_basalt"
+          },
+          {
+            "block": "modpack:rock/hardened/picrite_basalt",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/dacite"
+          },
+          {
+            "block": "tfc:rock/hardened/dacite",
             "weight": 3.0
           }
         ]
@@ -91,14 +147,14 @@
       },
       {
         "replace": [
-          "quark:shale"
+          "tfc:rock/raw/andesite"
         ],
         "with": [
           {
-            "block": "modpack:rock/magma/phonolite"
+            "block": "tfc:rock/magma/andesite"
           },
           {
-            "block": "modpack:rock/hardened/phonolite",
+            "block": "tfc:rock/hardened/andesite",
             "weight": 3.0
           }
         ]
@@ -127,62 +183,6 @@
           },
           {
             "block": "tfc:rock/hardened/rhyolite",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/andesite"
-          },
-          {
-            "block": "tfc:rock/hardened/andesite",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/magma/picrite_basalt"
-          },
-          {
-            "block": "modpack:rock/hardened/picrite_basalt",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/granite"
-          },
-          {
-            "block": "tfc:rock/hardened/granite",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/gabbro"
-          },
-          {
-            "block": "tfc:rock/hardened/gabbro",
             "weight": 3.0
           }
         ]

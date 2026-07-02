@@ -433,7 +433,7 @@ public class BuiltinConfiguredFeatures  {
     }
 
     private static Map<Block, BlockState> createDepositMap(OreDeposit deposit){
-        Map<Block, BlockState> map = new HashMap<Block, BlockState>();
+        Map<Block, BlockState> map = new LinkedHashMap<>();
 
         Stream.of(Rock.values()).forEach(rock -> {
             map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), TFCBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState());
@@ -447,7 +447,7 @@ public class BuiltinConfiguredFeatures  {
     }
 
     private static Optional<Map<Block, IWeighted<BlockState>>> createLavaHotSpringMap(){
-        Map<Block, IWeighted<BlockState>> map = new HashMap<Block, IWeighted<BlockState>>();
+        Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
         Stream.of(Rock.values()).forEach(rock -> {
             RockCategory category = rock.displayCategory().category();
