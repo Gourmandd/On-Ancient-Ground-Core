@@ -1,15 +1,19 @@
 package net.gourmand.core.registry.category;
 
-import java.util.Locale;
-import java.util.function.Supplier;
+import net.dries007.tfc.common.Lore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockDisplayCategory;
+import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.registry.CoreBlocks;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.material.MapColor;
-import net.dries007.tfc.common.Lore;
-import net.dries007.tfc.util.registry.RegistryRock;
+
+import java.util.Locale;
+import java.util.function.Supplier;
 
 public enum CoreRocks implements RegistryRock
 {
@@ -73,6 +77,12 @@ public enum CoreRocks implements RegistryRock
     }
 
     public boolean hasVariant(Rock.BlockType blockType){
+
+        // TODO: ADD THIS BACK
+        if (blockType == Rock.BlockType.ROPE_ANCHOR){
+            return false;
+        }
+
         if (hasVariants){
             return true;
         }
