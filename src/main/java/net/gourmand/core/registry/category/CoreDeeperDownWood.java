@@ -114,6 +114,16 @@ public enum CoreDeeperDownWood implements RegistryWood {
     }
 
     @Override
+    public boolean isConifer() {
+        return false;
+    }
+
+    @Override
+    public float getFlowerOffset() {
+        return 0;
+    }
+
+    @Override
     public String getSerializedName() {
         return serializedName;
     }
