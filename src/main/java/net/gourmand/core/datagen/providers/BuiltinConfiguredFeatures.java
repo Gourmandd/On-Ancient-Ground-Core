@@ -35,7 +35,6 @@ import java.util.stream.Stream;
 
 public class BuiltinConfiguredFeatures  {
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MONSTER_ROOM = createKey(AncientGroundCore.MODID, "monster_room");
     public static BootstrapContext<ConfiguredFeature<?, ?>> CTX;
 
     // TFC non-vein features, but rock related.
@@ -70,6 +69,19 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRATOVOLCANO_RIVULET = createKey(TerraFirmaCraft.MOD_ID, "stratovolcano_rivulet");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SULFUR_RIVULET = createKey(TerraFirmaCraft.MOD_ID, "sulfur_rivulet");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TOPAZ_VOLCANO_FISSURE = createKey(TerraFirmaCraft.MOD_ID, "topaz_volcano_fissure");
+
+
+    // This Mod's features
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MONSTER_ROOM = createKey(AncientGroundCore.MODID, "monster_room");
+
+    // ores
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMETHYST_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/amethyst");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CITRINE_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/citrine");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TOPAZ_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/topaz");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ONYX_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/onyx");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MOONSTONE_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/moonstone");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx){
 
@@ -136,16 +148,16 @@ public class BuiltinConfiguredFeatures  {
 
     private static void createCaveVegetation(){
 
-        Map<Block, IWeighted<BlockState>> map = new HashMap<>();
+        Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
+        for (Rock rock : Rock.values()){
             map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new Weighted<BlockState>(
                     List.of(
                             Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d),
                             Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get().defaultBlockState(), 8d)
                     )
             ));
-        });
+        }
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
             map.put(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<BlockState>(
@@ -166,7 +178,7 @@ public class BuiltinConfiguredFeatures  {
 
     private static void createBoulder(ResourceKey<ConfiguredFeature<?, ?>> key, List<Rock.BlockType> list, boolean isBaby){
 
-        Map<Block, List<BlockState>> map = new HashMap<>();
+        Map<Block, List<BlockState>> map = new LinkedHashMap<>();
 
         list.forEach(blockType -> {
 
@@ -206,7 +218,7 @@ public class BuiltinConfiguredFeatures  {
 
     private static void createFissure(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, BlockState wallState, BlockState fluidState, int count, int radius, int radiusDeco, int countDeco, int rarityDeco){
 
-        Map<Block, IWeighted<BlockState>> map = new HashMap<>();
+        Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
         Stream.of(Rock.values()).forEach(rock -> {
 
@@ -247,7 +259,7 @@ public class BuiltinConfiguredFeatures  {
 
     private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco, boolean allowUnderwater, Optional<Map<Block, IWeighted<BlockState>>> replacement){
 
-        Map<Block, IWeighted<BlockState>> map = new HashMap<>();
+        Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
         if (ore != null){
             Stream.of(Rock.values()).forEach(rock -> {
@@ -314,7 +326,7 @@ public class BuiltinConfiguredFeatures  {
 
     private static void createRivulet(ResourceKey<ConfiguredFeature<?, ?>> key){
 
-        Map<Block, BlockState> map = new HashMap<>();
+        Map<Block, BlockState> map = new LinkedHashMap<>();
 
         Stream.of(Rock.values()).forEach(rock -> {
 
@@ -368,7 +380,7 @@ public class BuiltinConfiguredFeatures  {
 
     private static void createSulfurRivulet(ResourceKey<ConfiguredFeature<?, ?>> key){
 
-        Map<Block, BlockState> map = new HashMap<>();
+        Map<Block, BlockState> map = new LinkedHashMap<>();
 
         Stream.of(Rock.values()).forEach(rock -> {
 

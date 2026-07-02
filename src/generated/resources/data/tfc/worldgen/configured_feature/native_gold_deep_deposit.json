@@ -7,132 +7,20 @@
     "min_radius": 3,
     "states": [
       {
-        "replace": "quark:jasper",
-        "with": "modpack:deposit/native_gold/red_sandstone"
-      },
-      {
-        "replace": "tfc:rock/raw/shale",
-        "with": "tfc:deposit/native_gold/shale"
-      },
-      {
-        "replace": "tfc:rock/raw/dacite",
-        "with": "tfc:deposit/native_gold/dacite"
-      },
-      {
-        "replace": "tfc:rock/raw/gneiss",
-        "with": "tfc:deposit/native_gold/gneiss"
-      },
-      {
-        "replace": "spectrum:blackslag",
-        "with": "modpack:deposit/native_gold/blackslag"
-      },
-      {
-        "replace": "tfc:rock/raw/marble",
-        "with": "tfc:deposit/native_gold/marble"
-      },
-      {
-        "replace": "tfc:rock/raw/quartzite",
-        "with": "tfc:deposit/native_gold/quartzite"
-      },
-      {
-        "replace": "minecraft:dripstone_block",
-        "with": "modpack:deposit/native_gold/travertine"
-      },
-      {
-        "replace": "quark:shale",
-        "with": "modpack:deposit/native_gold/phonolite"
-      },
-      {
-        "replace": "create:scorchia",
-        "with": "modpack:deposit/native_gold/suevite"
-      },
-      {
-        "replace": "tfc:rock/raw/andesite",
-        "with": "tfc:deposit/native_gold/andesite"
-      },
-      {
-        "replace": "minecraft:stone",
-        "with": "modpack:deposit/native_gold/argillite"
+        "replace": "caupona:felsic_tuff",
+        "with": "modpack:deposit/native_gold/breccia"
       },
       {
         "replace": "create:scoria",
         "with": "modpack:deposit/native_gold/komatiite"
       },
       {
-        "replace": "tfc:rock/raw/dolomite",
-        "with": "tfc:deposit/native_gold/dolomite"
-      },
-      {
-        "replace": "tfc:rock/raw/schist",
-        "with": "tfc:deposit/native_gold/schist"
-      },
-      {
-        "replace": "tfc:rock/raw/phyllite",
-        "with": "tfc:deposit/native_gold/phyllite"
-      },
-      {
-        "replace": "tfc:rock/raw/rhyolite",
-        "with": "tfc:deposit/native_gold/rhyolite"
-      },
-      {
-        "replace": "tfc:rock/raw/chalk",
-        "with": "tfc:deposit/native_gold/chalk"
-      },
-      {
-        "replace": "minecraft:deepslate",
-        "with": "modpack:deposit/native_gold/nephelinite"
-      },
-      {
-        "replace": "tfc:rock/raw/gabbro",
-        "with": "tfc:deposit/native_gold/gabbro"
-      },
-      {
-        "replace": "modpack:rock/raw/peridotite",
-        "with": "modpack:deposit/native_gold/peridotite"
-      },
-      {
-        "replace": "tfc:rock/raw/diorite",
-        "with": "tfc:deposit/native_gold/diorite"
-      },
-      {
-        "replace": "tfc:rock/raw/claystone",
-        "with": "tfc:deposit/native_gold/claystone"
-      },
-      {
-        "replace": "tfc:rock/raw/granite",
-        "with": "tfc:deposit/native_gold/granite"
-      },
-      {
-        "replace": "modpack:rock/raw/blueschist",
-        "with": "modpack:deposit/native_gold/blueschist"
-      },
-      {
-        "replace": "tfc:rock/raw/basalt",
-        "with": "tfc:deposit/native_gold/basalt"
-      },
-      {
-        "replace": "spectrum:basal_marble",
-        "with": "modpack:deposit/native_gold/picrite_basalt"
-      },
-      {
-        "replace": "tfc:rock/raw/limestone",
-        "with": "tfc:deposit/native_gold/limestone"
-      },
-      {
-        "replace": "modpack:rock/raw/serpentine",
-        "with": "modpack:deposit/native_gold/serpentine"
-      },
-      {
-        "replace": "tfc:rock/raw/tuff",
-        "with": "tfc:deposit/native_gold/tuff"
-      },
-      {
-        "replace": "tfc:rock/raw/conglomerate",
-        "with": "tfc:deposit/native_gold/conglomerate"
-      },
-      {
         "replace": "tfc:rock/raw/chert",
         "with": "tfc:deposit/native_gold/chert"
+      },
+      {
+        "replace": "tfc:rock/raw/andesite",
+        "with": "tfc:deposit/native_gold/andesite"
       },
       {
         "replace": "create:limestone",
@@ -143,16 +31,128 @@
         "with": "modpack:deposit/native_gold/arkose"
       },
       {
+        "replace": "quark:jasper",
+        "with": "modpack:deposit/native_gold/red_sandstone"
+      },
+      {
+        "replace": "tfc:rock/raw/schist",
+        "with": "tfc:deposit/native_gold/schist"
+      },
+      {
+        "replace": "minecraft:dripstone_block",
+        "with": "modpack:deposit/native_gold/travertine"
+      },
+      {
+        "replace": "tfc:rock/raw/quartzite",
+        "with": "tfc:deposit/native_gold/quartzite"
+      },
+      {
+        "replace": "tfc:rock/raw/granite",
+        "with": "tfc:deposit/native_gold/granite"
+      },
+      {
+        "replace": "tfc:rock/raw/chalk",
+        "with": "tfc:deposit/native_gold/chalk"
+      },
+      {
+        "replace": "minecraft:stone",
+        "with": "modpack:deposit/native_gold/argillite"
+      },
+      {
+        "replace": "create:scorchia",
+        "with": "modpack:deposit/native_gold/suevite"
+      },
+      {
+        "replace": "minecraft:deepslate",
+        "with": "modpack:deposit/native_gold/nephelinite"
+      },
+      {
+        "replace": "tfc:rock/raw/gneiss",
+        "with": "tfc:deposit/native_gold/gneiss"
+      },
+      {
+        "replace": "tfc:rock/raw/limestone",
+        "with": "tfc:deposit/native_gold/limestone"
+      },
+      {
+        "replace": "spectrum:basal_marble",
+        "with": "modpack:deposit/native_gold/picrite_basalt"
+      },
+      {
+        "replace": "tfc:rock/raw/gabbro",
+        "with": "tfc:deposit/native_gold/gabbro"
+      },
+      {
+        "replace": "tfc:rock/raw/marble",
+        "with": "tfc:deposit/native_gold/marble"
+      },
+      {
+        "replace": "tfc:rock/raw/rhyolite",
+        "with": "tfc:deposit/native_gold/rhyolite"
+      },
+      {
+        "replace": "tfc:rock/raw/dacite",
+        "with": "tfc:deposit/native_gold/dacite"
+      },
+      {
+        "replace": "modpack:rock/raw/blueschist",
+        "with": "modpack:deposit/native_gold/blueschist"
+      },
+      {
+        "replace": "tfc:rock/raw/basalt",
+        "with": "tfc:deposit/native_gold/basalt"
+      },
+      {
+        "replace": "spectrum:blackslag",
+        "with": "modpack:deposit/native_gold/blackslag"
+      },
+      {
+        "replace": "tfc:rock/raw/shale",
+        "with": "tfc:deposit/native_gold/shale"
+      },
+      {
+        "replace": "tfc:rock/raw/diorite",
+        "with": "tfc:deposit/native_gold/diorite"
+      },
+      {
+        "replace": "tfc:rock/raw/dolomite",
+        "with": "tfc:deposit/native_gold/dolomite"
+      },
+      {
+        "replace": "tfc:rock/raw/claystone",
+        "with": "tfc:deposit/native_gold/claystone"
+      },
+      {
+        "replace": "tfc:rock/raw/phyllite",
+        "with": "tfc:deposit/native_gold/phyllite"
+      },
+      {
+        "replace": "quark:shale",
+        "with": "modpack:deposit/native_gold/phonolite"
+      },
+      {
         "replace": "create:ochrum",
         "with": "modpack:deposit/native_gold/sandstone"
+      },
+      {
+        "replace": "modpack:rock/raw/peridotite",
+        "with": "modpack:deposit/native_gold/peridotite"
+      },
+      {
+        "replace": "modpack:rock/raw/serpentine",
+        "with": "modpack:deposit/native_gold/serpentine"
+      },
+      {
+        "replace": "tfc:rock/raw/conglomerate",
+        "with": "tfc:deposit/native_gold/conglomerate"
       },
       {
         "replace": "tfc:rock/raw/slate",
         "with": "tfc:deposit/native_gold/slate"
       },
       {
-        "replace": "caupona:felsic_tuff",
-        "with": "modpack:deposit/native_gold/breccia"
+        "replace": "tfc:rock/raw/tuff",
+        "with": "tfc:deposit/native_gold/tuff"
       }
     ]
   }

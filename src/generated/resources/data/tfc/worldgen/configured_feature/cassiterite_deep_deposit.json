@@ -7,132 +7,20 @@
     "min_radius": 3,
     "states": [
       {
-        "replace": "quark:jasper",
-        "with": "modpack:deposit/cassiterite/red_sandstone"
-      },
-      {
-        "replace": "tfc:rock/raw/shale",
-        "with": "tfc:deposit/cassiterite/shale"
-      },
-      {
-        "replace": "tfc:rock/raw/dacite",
-        "with": "tfc:deposit/cassiterite/dacite"
-      },
-      {
-        "replace": "tfc:rock/raw/gneiss",
-        "with": "tfc:deposit/cassiterite/gneiss"
-      },
-      {
-        "replace": "spectrum:blackslag",
-        "with": "modpack:deposit/cassiterite/blackslag"
-      },
-      {
-        "replace": "tfc:rock/raw/marble",
-        "with": "tfc:deposit/cassiterite/marble"
-      },
-      {
-        "replace": "tfc:rock/raw/quartzite",
-        "with": "tfc:deposit/cassiterite/quartzite"
-      },
-      {
-        "replace": "minecraft:dripstone_block",
-        "with": "modpack:deposit/cassiterite/travertine"
-      },
-      {
-        "replace": "quark:shale",
-        "with": "modpack:deposit/cassiterite/phonolite"
-      },
-      {
-        "replace": "create:scorchia",
-        "with": "modpack:deposit/cassiterite/suevite"
-      },
-      {
-        "replace": "tfc:rock/raw/andesite",
-        "with": "tfc:deposit/cassiterite/andesite"
-      },
-      {
-        "replace": "minecraft:stone",
-        "with": "modpack:deposit/cassiterite/argillite"
+        "replace": "caupona:felsic_tuff",
+        "with": "modpack:deposit/cassiterite/breccia"
       },
       {
         "replace": "create:scoria",
         "with": "modpack:deposit/cassiterite/komatiite"
       },
       {
-        "replace": "tfc:rock/raw/dolomite",
-        "with": "tfc:deposit/cassiterite/dolomite"
-      },
-      {
-        "replace": "tfc:rock/raw/schist",
-        "with": "tfc:deposit/cassiterite/schist"
-      },
-      {
-        "replace": "tfc:rock/raw/phyllite",
-        "with": "tfc:deposit/cassiterite/phyllite"
-      },
-      {
-        "replace": "tfc:rock/raw/rhyolite",
-        "with": "tfc:deposit/cassiterite/rhyolite"
-      },
-      {
-        "replace": "tfc:rock/raw/chalk",
-        "with": "tfc:deposit/cassiterite/chalk"
-      },
-      {
-        "replace": "minecraft:deepslate",
-        "with": "modpack:deposit/cassiterite/nephelinite"
-      },
-      {
-        "replace": "tfc:rock/raw/gabbro",
-        "with": "tfc:deposit/cassiterite/gabbro"
-      },
-      {
-        "replace": "modpack:rock/raw/peridotite",
-        "with": "modpack:deposit/cassiterite/peridotite"
-      },
-      {
-        "replace": "tfc:rock/raw/diorite",
-        "with": "tfc:deposit/cassiterite/diorite"
-      },
-      {
-        "replace": "tfc:rock/raw/claystone",
-        "with": "tfc:deposit/cassiterite/claystone"
-      },
-      {
-        "replace": "tfc:rock/raw/granite",
-        "with": "tfc:deposit/cassiterite/granite"
-      },
-      {
-        "replace": "modpack:rock/raw/blueschist",
-        "with": "modpack:deposit/cassiterite/blueschist"
-      },
-      {
-        "replace": "tfc:rock/raw/basalt",
-        "with": "tfc:deposit/cassiterite/basalt"
-      },
-      {
-        "replace": "spectrum:basal_marble",
-        "with": "modpack:deposit/cassiterite/picrite_basalt"
-      },
-      {
-        "replace": "tfc:rock/raw/limestone",
-        "with": "tfc:deposit/cassiterite/limestone"
-      },
-      {
-        "replace": "modpack:rock/raw/serpentine",
-        "with": "modpack:deposit/cassiterite/serpentine"
-      },
-      {
-        "replace": "tfc:rock/raw/tuff",
-        "with": "tfc:deposit/cassiterite/tuff"
-      },
-      {
-        "replace": "tfc:rock/raw/conglomerate",
-        "with": "tfc:deposit/cassiterite/conglomerate"
-      },
-      {
         "replace": "tfc:rock/raw/chert",
         "with": "tfc:deposit/cassiterite/chert"
+      },
+      {
+        "replace": "tfc:rock/raw/andesite",
+        "with": "tfc:deposit/cassiterite/andesite"
       },
       {
         "replace": "create:limestone",
@@ -143,16 +31,128 @@
         "with": "modpack:deposit/cassiterite/arkose"
       },
       {
+        "replace": "quark:jasper",
+        "with": "modpack:deposit/cassiterite/red_sandstone"
+      },
+      {
+        "replace": "tfc:rock/raw/schist",
+        "with": "tfc:deposit/cassiterite/schist"
+      },
+      {
+        "replace": "minecraft:dripstone_block",
+        "with": "modpack:deposit/cassiterite/travertine"
+      },
+      {
+        "replace": "tfc:rock/raw/quartzite",
+        "with": "tfc:deposit/cassiterite/quartzite"
+      },
+      {
+        "replace": "tfc:rock/raw/granite",
+        "with": "tfc:deposit/cassiterite/granite"
+      },
+      {
+        "replace": "tfc:rock/raw/chalk",
+        "with": "tfc:deposit/cassiterite/chalk"
+      },
+      {
+        "replace": "minecraft:stone",
+        "with": "modpack:deposit/cassiterite/argillite"
+      },
+      {
+        "replace": "create:scorchia",
+        "with": "modpack:deposit/cassiterite/suevite"
+      },
+      {
+        "replace": "minecraft:deepslate",
+        "with": "modpack:deposit/cassiterite/nephelinite"
+      },
+      {
+        "replace": "tfc:rock/raw/gneiss",
+        "with": "tfc:deposit/cassiterite/gneiss"
+      },
+      {
+        "replace": "tfc:rock/raw/limestone",
+        "with": "tfc:deposit/cassiterite/limestone"
+      },
+      {
+        "replace": "spectrum:basal_marble",
+        "with": "modpack:deposit/cassiterite/picrite_basalt"
+      },
+      {
+        "replace": "tfc:rock/raw/gabbro",
+        "with": "tfc:deposit/cassiterite/gabbro"
+      },
+      {
+        "replace": "tfc:rock/raw/marble",
+        "with": "tfc:deposit/cassiterite/marble"
+      },
+      {
+        "replace": "tfc:rock/raw/rhyolite",
+        "with": "tfc:deposit/cassiterite/rhyolite"
+      },
+      {
+        "replace": "tfc:rock/raw/dacite",
+        "with": "tfc:deposit/cassiterite/dacite"
+      },
+      {
+        "replace": "modpack:rock/raw/blueschist",
+        "with": "modpack:deposit/cassiterite/blueschist"
+      },
+      {
+        "replace": "tfc:rock/raw/basalt",
+        "with": "tfc:deposit/cassiterite/basalt"
+      },
+      {
+        "replace": "spectrum:blackslag",
+        "with": "modpack:deposit/cassiterite/blackslag"
+      },
+      {
+        "replace": "tfc:rock/raw/shale",
+        "with": "tfc:deposit/cassiterite/shale"
+      },
+      {
+        "replace": "tfc:rock/raw/diorite",
+        "with": "tfc:deposit/cassiterite/diorite"
+      },
+      {
+        "replace": "tfc:rock/raw/dolomite",
+        "with": "tfc:deposit/cassiterite/dolomite"
+      },
+      {
+        "replace": "tfc:rock/raw/claystone",
+        "with": "tfc:deposit/cassiterite/claystone"
+      },
+      {
+        "replace": "tfc:rock/raw/phyllite",
+        "with": "tfc:deposit/cassiterite/phyllite"
+      },
+      {
+        "replace": "quark:shale",
+        "with": "modpack:deposit/cassiterite/phonolite"
+      },
+      {
         "replace": "create:ochrum",
         "with": "modpack:deposit/cassiterite/sandstone"
+      },
+      {
+        "replace": "modpack:rock/raw/peridotite",
+        "with": "modpack:deposit/cassiterite/peridotite"
+      },
+      {
+        "replace": "modpack:rock/raw/serpentine",
+        "with": "modpack:deposit/cassiterite/serpentine"
+      },
+      {
+        "replace": "tfc:rock/raw/conglomerate",
+        "with": "tfc:deposit/cassiterite/conglomerate"
       },
       {
         "replace": "tfc:rock/raw/slate",
         "with": "tfc:deposit/cassiterite/slate"
       },
       {
-        "replace": "caupona:felsic_tuff",
-        "with": "modpack:deposit/cassiterite/breccia"
+        "replace": "tfc:rock/raw/tuff",
+        "with": "tfc:deposit/cassiterite/tuff"
       }
     ]
   }

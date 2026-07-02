@@ -3,6 +3,50 @@
   "config": {
     "states": [
       {
+        "replace": "tfc:rock/raw/granite",
+        "with": "tfc:rock/magma/granite"
+      },
+      {
+        "replace": "tfc:rock/hardened/granite",
+        "with": "tfc:rock/magma/granite"
+      },
+      {
+        "replace": "tfc:rock/raw/diorite",
+        "with": "tfc:rock/magma/diorite"
+      },
+      {
+        "replace": "tfc:rock/hardened/diorite",
+        "with": "tfc:rock/magma/diorite"
+      },
+      {
+        "replace": "tfc:rock/raw/gabbro",
+        "with": "tfc:rock/magma/gabbro"
+      },
+      {
+        "replace": "tfc:rock/hardened/gabbro",
+        "with": "tfc:rock/magma/gabbro"
+      },
+      {
+        "replace": "tfc:rock/raw/rhyolite",
+        "with": "tfc:rock/magma/rhyolite"
+      },
+      {
+        "replace": "tfc:rock/hardened/rhyolite",
+        "with": "tfc:rock/magma/rhyolite"
+      },
+      {
+        "replace": "tfc:rock/raw/basalt",
+        "with": "tfc:rock/magma/basalt"
+      },
+      {
+        "replace": "tfc:rock/hardened/basalt",
+        "with": "tfc:rock/magma/basalt"
+      },
+      {
+        "replace": "tfc:rock/raw/andesite",
+        "with": "tfc:rock/magma/andesite"
+      },
+      {
         "replace": "tfc:rock/hardened/andesite",
         "with": "tfc:rock/magma/andesite"
       },
@@ -11,108 +55,64 @@
         "with": "tfc:rock/magma/dacite"
       },
       {
-        "replace": "spectrum:blackslag",
-        "with": "modpack:rock/magma/blackslag"
-      },
-      {
-        "replace": "quark:shale",
-        "with": "modpack:rock/magma/phonolite"
-      },
-      {
-        "replace": "modpack:rock/hardened/komatiite",
-        "with": "modpack:rock/magma/komatiite"
-      },
-      {
-        "replace": "tfc:rock/raw/andesite",
-        "with": "tfc:rock/magma/andesite"
-      },
-      {
         "replace": "tfc:rock/hardened/dacite",
         "with": "tfc:rock/magma/dacite"
-      },
-      {
-        "replace": "create:scoria",
-        "with": "modpack:rock/magma/komatiite"
-      },
-      {
-        "replace": "tfc:rock/raw/rhyolite",
-        "with": "tfc:rock/magma/rhyolite"
       },
       {
         "replace": "minecraft:deepslate",
         "with": "modpack:rock/magma/nephelinite"
       },
       {
-        "replace": "tfc:rock/raw/gabbro",
-        "with": "tfc:rock/magma/gabbro"
+        "replace": "modpack:rock/hardened/nephelinite",
+        "with": "modpack:rock/magma/nephelinite"
+      },
+      {
+        "replace": "spectrum:blackslag",
+        "with": "modpack:rock/magma/blackslag"
       },
       {
         "replace": "modpack:rock/hardened/blackslag",
         "with": "modpack:rock/magma/blackslag"
       },
       {
-        "replace": "modpack:rock/raw/peridotite",
-        "with": "modpack:rock/magma/peridotite"
-      },
-      {
-        "replace": "tfc:rock/raw/diorite",
-        "with": "tfc:rock/magma/diorite"
-      },
-      {
-        "replace": "tfc:rock/raw/granite",
-        "with": "tfc:rock/magma/granite"
+        "replace": "spectrum:basal_marble",
+        "with": "modpack:rock/magma/picrite_basalt"
       },
       {
         "replace": "modpack:rock/hardened/picrite_basalt",
         "with": "modpack:rock/magma/picrite_basalt"
       },
       {
-        "replace": "modpack:rock/hardened/nephelinite",
-        "with": "modpack:rock/magma/nephelinite"
+        "replace": "create:scoria",
+        "with": "modpack:rock/magma/komatiite"
       },
       {
-        "replace": "tfc:rock/raw/basalt",
-        "with": "tfc:rock/magma/basalt"
+        "replace": "modpack:rock/hardened/komatiite",
+        "with": "modpack:rock/magma/komatiite"
       },
       {
-        "replace": "spectrum:basal_marble",
-        "with": "modpack:rock/magma/picrite_basalt"
-      },
-      {
-        "replace": "tfc:rock/hardened/basalt",
-        "with": "tfc:rock/magma/basalt"
+        "replace": "quark:shale",
+        "with": "modpack:rock/magma/phonolite"
       },
       {
         "replace": "modpack:rock/hardened/phonolite",
         "with": "modpack:rock/magma/phonolite"
       },
       {
-        "replace": "tfc:rock/raw/tuff",
-        "with": "tfc:rock/magma/andesite"
-      },
-      {
-        "replace": "tfc:rock/hardened/rhyolite",
-        "with": "tfc:rock/magma/rhyolite"
-      },
-      {
-        "replace": "tfc:rock/hardened/tuff",
-        "with": "tfc:rock/magma/andesite"
-      },
-      {
-        "replace": "tfc:rock/hardened/diorite",
-        "with": "tfc:rock/magma/diorite"
-      },
-      {
-        "replace": "tfc:rock/hardened/gabbro",
-        "with": "tfc:rock/magma/gabbro"
+        "replace": "modpack:rock/raw/peridotite",
+        "with": "modpack:rock/magma/peridotite"
       },
       {
         "replace": "modpack:rock/hardened/peridotite",
         "with": "modpack:rock/magma/peridotite"
       },
       {
-        "replace": "tfc:rock/hardened/granite",
-        "with": "tfc:rock/magma/granite"
+        "replace": "tfc:rock/raw/tuff",
+        "with": "tfc:rock/magma/andesite"
+      },
+      {
+        "replace": "tfc:rock/hardened/tuff",
+        "with": "tfc:rock/magma/andesite"
       }
     ]
   }

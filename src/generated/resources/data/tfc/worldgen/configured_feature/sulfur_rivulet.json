@@ -3,6 +3,50 @@
   "config": {
     "states": [
       {
+        "replace": "tfc:rock/raw/granite",
+        "with": "tfc:ore/sulfur/granite"
+      },
+      {
+        "replace": "tfc:rock/hardened/granite",
+        "with": "tfc:ore/sulfur/granite"
+      },
+      {
+        "replace": "tfc:rock/raw/diorite",
+        "with": "tfc:ore/sulfur/diorite"
+      },
+      {
+        "replace": "tfc:rock/hardened/diorite",
+        "with": "tfc:ore/sulfur/diorite"
+      },
+      {
+        "replace": "tfc:rock/raw/gabbro",
+        "with": "tfc:ore/sulfur/gabbro"
+      },
+      {
+        "replace": "tfc:rock/hardened/gabbro",
+        "with": "tfc:ore/sulfur/gabbro"
+      },
+      {
+        "replace": "tfc:rock/raw/rhyolite",
+        "with": "tfc:ore/sulfur/rhyolite"
+      },
+      {
+        "replace": "tfc:rock/hardened/rhyolite",
+        "with": "tfc:ore/sulfur/rhyolite"
+      },
+      {
+        "replace": "tfc:rock/raw/basalt",
+        "with": "tfc:ore/sulfur/basalt"
+      },
+      {
+        "replace": "tfc:rock/hardened/basalt",
+        "with": "tfc:ore/sulfur/basalt"
+      },
+      {
+        "replace": "tfc:rock/raw/andesite",
+        "with": "tfc:ore/sulfur/andesite"
+      },
+      {
         "replace": "tfc:rock/hardened/andesite",
         "with": "tfc:ore/sulfur/andesite"
       },
@@ -11,108 +55,64 @@
         "with": "tfc:ore/sulfur/dacite"
       },
       {
-        "replace": "spectrum:blackslag",
-        "with": "modpack:ore/sulfur/blackslag"
-      },
-      {
-        "replace": "quark:shale",
-        "with": "modpack:ore/sulfur/phonolite"
-      },
-      {
-        "replace": "modpack:rock/hardened/komatiite",
-        "with": "modpack:ore/sulfur/komatiite"
-      },
-      {
-        "replace": "tfc:rock/raw/andesite",
-        "with": "tfc:ore/sulfur/andesite"
-      },
-      {
         "replace": "tfc:rock/hardened/dacite",
         "with": "tfc:ore/sulfur/dacite"
-      },
-      {
-        "replace": "create:scoria",
-        "with": "modpack:ore/sulfur/komatiite"
-      },
-      {
-        "replace": "tfc:rock/raw/rhyolite",
-        "with": "tfc:ore/sulfur/rhyolite"
       },
       {
         "replace": "minecraft:deepslate",
         "with": "modpack:ore/sulfur/nephelinite"
       },
       {
-        "replace": "tfc:rock/raw/gabbro",
-        "with": "tfc:ore/sulfur/gabbro"
+        "replace": "modpack:rock/hardened/nephelinite",
+        "with": "modpack:ore/sulfur/nephelinite"
+      },
+      {
+        "replace": "spectrum:blackslag",
+        "with": "modpack:ore/sulfur/blackslag"
       },
       {
         "replace": "modpack:rock/hardened/blackslag",
         "with": "modpack:ore/sulfur/blackslag"
       },
       {
-        "replace": "modpack:rock/raw/peridotite",
-        "with": "modpack:ore/sulfur/peridotite"
-      },
-      {
-        "replace": "tfc:rock/raw/diorite",
-        "with": "tfc:ore/sulfur/diorite"
-      },
-      {
-        "replace": "tfc:rock/raw/granite",
-        "with": "tfc:ore/sulfur/granite"
+        "replace": "spectrum:basal_marble",
+        "with": "modpack:ore/sulfur/picrite_basalt"
       },
       {
         "replace": "modpack:rock/hardened/picrite_basalt",
         "with": "modpack:ore/sulfur/picrite_basalt"
       },
       {
-        "replace": "modpack:rock/hardened/nephelinite",
-        "with": "modpack:ore/sulfur/nephelinite"
+        "replace": "create:scoria",
+        "with": "modpack:ore/sulfur/komatiite"
       },
       {
-        "replace": "tfc:rock/raw/basalt",
-        "with": "tfc:ore/sulfur/basalt"
+        "replace": "modpack:rock/hardened/komatiite",
+        "with": "modpack:ore/sulfur/komatiite"
       },
       {
-        "replace": "spectrum:basal_marble",
-        "with": "modpack:ore/sulfur/picrite_basalt"
-      },
-      {
-        "replace": "tfc:rock/hardened/basalt",
-        "with": "tfc:ore/sulfur/basalt"
+        "replace": "quark:shale",
+        "with": "modpack:ore/sulfur/phonolite"
       },
       {
         "replace": "modpack:rock/hardened/phonolite",
         "with": "modpack:ore/sulfur/phonolite"
       },
       {
-        "replace": "tfc:rock/raw/tuff",
-        "with": "tfc:ore/sulfur/tuff"
-      },
-      {
-        "replace": "tfc:rock/hardened/rhyolite",
-        "with": "tfc:ore/sulfur/rhyolite"
-      },
-      {
-        "replace": "tfc:rock/hardened/tuff",
-        "with": "tfc:ore/sulfur/tuff"
-      },
-      {
-        "replace": "tfc:rock/hardened/diorite",
-        "with": "tfc:ore/sulfur/diorite"
-      },
-      {
-        "replace": "tfc:rock/hardened/gabbro",
-        "with": "tfc:ore/sulfur/gabbro"
+        "replace": "modpack:rock/raw/peridotite",
+        "with": "modpack:ore/sulfur/peridotite"
       },
       {
         "replace": "modpack:rock/hardened/peridotite",
         "with": "modpack:ore/sulfur/peridotite"
       },
       {
-        "replace": "tfc:rock/hardened/granite",
-        "with": "tfc:ore/sulfur/granite"
+        "replace": "tfc:rock/raw/tuff",
+        "with": "tfc:ore/sulfur/tuff"
+      },
+      {
+        "replace": "tfc:rock/hardened/tuff",
+        "with": "tfc:ore/sulfur/tuff"
       }
     ]
   }

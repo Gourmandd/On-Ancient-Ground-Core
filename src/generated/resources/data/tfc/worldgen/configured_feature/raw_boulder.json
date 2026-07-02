@@ -4,129 +4,9 @@
     "states": [
       {
         "blocks": [
-          "quark:jasper"
+          "tfc:rock/raw/granite"
         ],
-        "rock": "quark:jasper"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/shale"
-        ],
-        "rock": "tfc:rock/raw/shale"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/dacite"
-        ],
-        "rock": "tfc:rock/raw/dacite"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "rock": "tfc:rock/raw/gneiss"
-      },
-      {
-        "blocks": [
-          "spectrum:blackslag"
-        ],
-        "rock": "spectrum:blackslag"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/marble"
-        ],
-        "rock": "tfc:rock/raw/marble"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "rock": "tfc:rock/raw/quartzite"
-      },
-      {
-        "blocks": [
-          "minecraft:dripstone_block"
-        ],
-        "rock": "minecraft:dripstone_block"
-      },
-      {
-        "blocks": [
-          "quark:shale"
-        ],
-        "rock": "quark:shale"
-      },
-      {
-        "blocks": [
-          "create:scorchia"
-        ],
-        "rock": "create:scorchia"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/andesite"
-        ],
-        "rock": "tfc:rock/raw/andesite"
-      },
-      {
-        "blocks": [
-          "minecraft:stone"
-        ],
-        "rock": "minecraft:stone"
-      },
-      {
-        "blocks": [
-          "create:scoria"
-        ],
-        "rock": "create:scoria"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "rock": "tfc:rock/raw/dolomite"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/schist"
-        ],
-        "rock": "tfc:rock/raw/schist"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/phyllite"
-        ],
-        "rock": "tfc:rock/raw/phyllite"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "rock": "tfc:rock/raw/rhyolite"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/chalk"
-        ],
-        "rock": "tfc:rock/raw/chalk"
-      },
-      {
-        "blocks": [
-          "minecraft:deepslate"
-        ],
-        "rock": "minecraft:deepslate"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "rock": "tfc:rock/raw/gabbro"
-      },
-      {
-        "blocks": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "rock": "modpack:rock/raw/peridotite"
+        "rock": "tfc:rock/raw/granite"
       },
       {
         "blocks": [
@@ -136,33 +16,21 @@
       },
       {
         "blocks": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "rock": "tfc:rock/raw/gabbro"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/shale"
+        ],
+        "rock": "tfc:rock/raw/shale"
+      },
+      {
+        "blocks": [
           "tfc:rock/raw/claystone"
         ],
         "rock": "tfc:rock/raw/claystone"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/granite"
-        ],
-        "rock": "tfc:rock/raw/granite"
-      },
-      {
-        "blocks": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "rock": "modpack:rock/raw/blueschist"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/basalt"
-        ],
-        "rock": "tfc:rock/raw/basalt"
-      },
-      {
-        "blocks": [
-          "spectrum:basal_marble"
-        ],
-        "rock": "spectrum:basal_marble"
       },
       {
         "blocks": [
@@ -172,21 +40,15 @@
       },
       {
         "blocks": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "rock": "modpack:rock/raw/serpentine"
-      },
-      {
-        "blocks": [
-          "tfc:rock/raw/tuff"
-        ],
-        "rock": "tfc:rock/raw/tuff"
-      },
-      {
-        "blocks": [
           "tfc:rock/raw/conglomerate"
         ],
         "rock": "tfc:rock/raw/conglomerate"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "rock": "tfc:rock/raw/dolomite"
       },
       {
         "blocks": [
@@ -196,21 +58,45 @@
       },
       {
         "blocks": [
-          "create:limestone"
+          "tfc:rock/raw/chalk"
         ],
-        "rock": "create:limestone"
+        "rock": "tfc:rock/raw/chalk"
       },
       {
         "blocks": [
-          "quark:limestone"
+          "tfc:rock/raw/tuff"
         ],
-        "rock": "quark:limestone"
+        "rock": "tfc:rock/raw/tuff"
       },
       {
         "blocks": [
-          "create:ochrum"
+          "tfc:rock/raw/rhyolite"
         ],
-        "rock": "create:ochrum"
+        "rock": "tfc:rock/raw/rhyolite"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/basalt"
+        ],
+        "rock": "tfc:rock/raw/basalt"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/andesite"
+        ],
+        "rock": "tfc:rock/raw/andesite"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/dacite"
+        ],
+        "rock": "tfc:rock/raw/dacite"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "rock": "tfc:rock/raw/quartzite"
       },
       {
         "blocks": [
@@ -220,9 +106,123 @@
       },
       {
         "blocks": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "rock": "tfc:rock/raw/phyllite"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/schist"
+        ],
+        "rock": "tfc:rock/raw/schist"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "rock": "tfc:rock/raw/gneiss"
+      },
+      {
+        "blocks": [
+          "tfc:rock/raw/marble"
+        ],
+        "rock": "tfc:rock/raw/marble"
+      },
+      {
+        "blocks": [
+          "minecraft:stone"
+        ],
+        "rock": "minecraft:stone"
+      },
+      {
+        "blocks": [
+          "minecraft:deepslate"
+        ],
+        "rock": "minecraft:deepslate"
+      },
+      {
+        "blocks": [
+          "spectrum:blackslag"
+        ],
+        "rock": "spectrum:blackslag"
+      },
+      {
+        "blocks": [
+          "spectrum:basal_marble"
+        ],
+        "rock": "spectrum:basal_marble"
+      },
+      {
+        "blocks": [
           "caupona:felsic_tuff"
         ],
         "rock": "caupona:felsic_tuff"
+      },
+      {
+        "blocks": [
+          "minecraft:dripstone_block"
+        ],
+        "rock": "minecraft:dripstone_block"
+      },
+      {
+        "blocks": [
+          "create:scoria"
+        ],
+        "rock": "create:scoria"
+      },
+      {
+        "blocks": [
+          "create:ochrum"
+        ],
+        "rock": "create:ochrum"
+      },
+      {
+        "blocks": [
+          "quark:jasper"
+        ],
+        "rock": "quark:jasper"
+      },
+      {
+        "blocks": [
+          "create:scorchia"
+        ],
+        "rock": "create:scorchia"
+      },
+      {
+        "blocks": [
+          "quark:shale"
+        ],
+        "rock": "quark:shale"
+      },
+      {
+        "blocks": [
+          "quark:limestone"
+        ],
+        "rock": "quark:limestone"
+      },
+      {
+        "blocks": [
+          "create:limestone"
+        ],
+        "rock": "create:limestone"
+      },
+      {
+        "blocks": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "rock": "modpack:rock/raw/blueschist"
+      },
+      {
+        "blocks": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "rock": "modpack:rock/raw/peridotite"
+      },
+      {
+        "blocks": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "rock": "modpack:rock/raw/serpentine"
       }
     ]
   }
