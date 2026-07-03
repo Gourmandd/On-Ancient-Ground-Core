@@ -184,6 +184,7 @@ dependencies {
     implementation "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
     implementation "dev.emi:emi-neoforge:${emi_version}"
+    implementation "curse.maven:exclusions-lib-1108052:7502579"
 
     // local runtime
     localRuntime "curse.maven:yeetusexperimentus-635427:5444189"

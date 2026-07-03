@@ -7,28 +7,14 @@
     "replaces_on_fluid_contact": [
       {
         "replace": [
-          "create:scoria"
+          "quark:shale"
         ],
         "with": [
           {
-            "block": "modpack:rock/magma/komatiite"
+            "block": "modpack:rock/magma/phonolite"
           },
           {
-            "block": "modpack:rock/hardened/komatiite",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/gabbro"
-          },
-          {
-            "block": "tfc:rock/hardened/gabbro",
+            "block": "modpack:rock/hardened/phonolite",
             "weight": 3.0
           }
         ]
@@ -49,48 +35,6 @@
       },
       {
         "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/magma/blackslag"
-          },
-          {
-            "block": "modpack:rock/hardened/blackslag",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/granite"
-          },
-          {
-            "block": "tfc:rock/hardened/granite",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/magma/phonolite"
-          },
-          {
-            "block": "modpack:rock/hardened/phonolite",
-            "weight": 3.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "spectrum:basal_marble"
         ],
         "with": [
@@ -105,14 +49,14 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/dacite"
+          "spectrum:blackslag"
         ],
         "with": [
           {
-            "block": "tfc:rock/magma/dacite"
+            "block": "modpack:rock/magma/blackslag"
           },
           {
-            "block": "tfc:rock/hardened/dacite",
+            "block": "modpack:rock/hardened/blackslag",
             "weight": 3.0
           }
         ]
@@ -133,6 +77,34 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/granite"
+          },
+          {
+            "block": "tfc:rock/hardened/granite",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/gabbro"
+          },
+          {
+            "block": "tfc:rock/hardened/gabbro",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "minecraft:deepslate"
         ],
         "with": [
@@ -141,6 +113,34 @@
           },
           {
             "block": "modpack:rock/hardened/nephelinite",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/dacite"
+          },
+          {
+            "block": "tfc:rock/hardened/dacite",
+            "weight": 3.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/magma/komatiite"
+          },
+          {
+            "block": "modpack:rock/hardened/komatiite",
             "weight": 3.0
           }
         ]

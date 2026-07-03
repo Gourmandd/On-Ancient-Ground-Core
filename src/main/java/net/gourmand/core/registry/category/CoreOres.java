@@ -9,6 +9,7 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.registry.RegistryRock;
+import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.util.RegistryOre;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.Item;
@@ -18,6 +19,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
 
@@ -150,6 +152,47 @@ public enum CoreOres implements RegistryOre {
                 return Ore.Grade.NORMAL;
             }
         }
+    }
+
+    @Override
+    public Block getOreBlock(RegistryRock rock, @Nullable CoreOres.Grade grade) {
+
+        if (this.type == Type.ITEM_ONLY){
+            switch (this){
+                case QUARTZ -> {
+                    return CoreBlocks.BASIC_ORES.get(QUARTZ).get();
+                }
+                case METEORIC_IRON -> {
+                    return CoreBlocks.BASIC_ORES.get(METEORIC_IRON).get();
+                }
+                case ANTHRACITE -> {
+                    return CoreBlocks.BASIC_ORES.get(ANTHRACITE).get();
+                }
+                case BAUXITE -> {
+                    return CoreBlocks.BASIC_ORES.get(BAUXITE).get();
+                }
+            }
+        }
+
+        assert rock instanceof Rock || rock instanceof CoreRocks;
+
+        if (rock instanceof Rock){
+            if (grade == null){
+                return CoreBlocks.ORES.get(rock).get(this).get();
+            } else {
+                return CoreBlocks.GRADED_ORES.get(rock).get(this).get(grade).get();
+            }
+        }
+
+        if (rock instanceof CoreRocks){
+            if (grade == null){
+                return CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(this).get();
+            } else {
+                return CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(this).get(grade).get();
+            }
+        }
+
+        return Blocks.DIRT; //nicer than a null?
     }
 
     @Override

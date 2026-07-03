@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 import com.mojang.datafixers.util.Pair;
+import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.TFCBlocks;
@@ -9,23 +10,37 @@ import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.util.collections.IWeighted;
 import net.dries007.tfc.util.collections.Weighted;
+import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.world.feature.*;
 import net.dries007.tfc.world.feature.cave.CaveVegetationConfig;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreWorldGen;
+import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
+import net.gourmand.core.registry.category.TFCOres;
+import net.gourmand.core.util.RegistryOre;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.random.SimpleWeightedRandomList;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.GeodeBlockSettings;
+import net.minecraft.world.level.levelgen.GeodeCrackSettings;
+import net.minecraft.world.level.levelgen.GeodeLayerSettings;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.common.Tags;
@@ -83,16 +98,330 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ONYX_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/onyx");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONSTONE_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/moonstone");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BISMUTH_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/bismuth");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BORAX_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/borax");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CASSITERITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/cassiterite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CINNABAR_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/cinnabar");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYOLITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/cryolite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/diamond");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EMERALD_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/emerald");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GARNIERITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/garnierite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GRAPHITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/graphite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GYPSUM_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/gypsum");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HALITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/halite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HEMATITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/hematite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> KAOLINITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/kaolinite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LAPIS_LAZULI_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/lapis_lazuli");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIGNITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/lignite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIMONITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/limonite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MALACHITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/malachite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_COPPER_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/native_copper");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_GOLD_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/native_gold");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_SILVER_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/native_silver");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OPAL_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/opal");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PALTAERIA_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/paltaeria");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/ruby");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SALTPETER_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/saltpeter");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sapphite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMERSTONE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/shimmerstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SPHALERITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sphalerite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/stratine");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SULFUR_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sulfur");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SYLVITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sylvite");
+
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx){
 
         CTX = ctx;
 
+        bootstrapModpackFeatures();
+        bootstrapTFCFeatures();
+    }
+
+    private static void bootstrapModpackFeatures(){
         CTX.register(
-            MONSTER_ROOM,
-            new ConfiguredFeature<>(CoreWorldGen.MONSTER_ROOM.get(),
-                new NoneFeatureConfiguration()
-            )
+                MONSTER_ROOM,
+                new ConfiguredFeature<>(CoreWorldGen.MONSTER_ROOM.get(),
+                        new NoneFeatureConfiguration()
+                )
         );
+
+        createGeode(AMETHYST_GEODE, Blocks.AMETHYST_BLOCK, Blocks.CALCITE, Blocks.SMOOTH_BASALT, Blocks.BUDDING_AMETHYST, 0.1);
+        createGeode(CITRINE_GEODE, SpectrumBlocks.CITRINE_BLOCK.get(), Blocks.CALCITE, Blocks.SMOOTH_BASALT, SpectrumBlocks.BUDDING_CITRINE.get(), 0.1);
+        createGeode(TOPAZ_GEODE, SpectrumBlocks.TOPAZ_BLOCK.get(), Blocks.CALCITE, Blocks.SMOOTH_BASALT, SpectrumBlocks.BUDDING_TOPAZ.get(), 0.1);
+        createGeode(ONYX_GEODE, SpectrumBlocks.ONYX_BLOCK.get(), Blocks.CALCITE, Blocks.SMOOTH_BASALT, SpectrumBlocks.BUDDING_ONYX.get(), 0.1);
+        createGeode(MOONSTONE_GEODE, SpectrumBlocks.MOONSTONE_BLOCK.get(), Blocks.CALCITE, Blocks.SMOOTH_BASALT, SpectrumBlocks.BUDDING_MOONSTONE.get(), 0.1);
+
+        createOreGeode(BISMUTH_DEEPER_DOWN, CoreRocks.ARGILLITE, TFCOres.BISMUTHINITE,
+                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.ARGILLITE).get(Ore.BISMUTHINITE).get(CoreOres.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(BORAX_DEEPER_DOWN, Rock.SHALE, TFCOres.BORAX,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(CASSITERITE_DEEPER_DOWN, Rock.DIORITE, TFCOres.CASSITERITE,
+                TFCBlocks.GRADED_ORES.get(Rock.DIORITE).get(Ore.CASSITERITE).get(Ore.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(CINNABAR_DEEPER_DOWN, Rock.GNEISS, TFCOres.CINNABAR,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.GNEISS).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(CRYOLITE_DEEPER_DOWN, Rock.GRANITE, TFCOres.CRYOLITE,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(DIAMOND_DEEPER_DOWN, Rock.GABBRO, TFCOres.DIAMOND,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(EMERALD_DEEPER_DOWN, Rock.DIORITE, TFCOres.EMERALD,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.DIORITE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(GARNIERITE_DEEPER_DOWN, Rock.GABBRO, TFCOres.GARNIERITE,
+                TFCBlocks.GRADED_ORES.get(Rock.GABBRO).get(Ore.GARNIERITE).get(Ore.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(GRAPHITE_DEEPER_DOWN, Rock.MARBLE, TFCOres.GRAPHITE,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(GYPSUM_DEEPER_DOWN, Rock.CLAYSTONE, TFCOres.GYPSUM,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.CLAYSTONE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(HALITE_DEEPER_DOWN, Rock.CLAYSTONE, TFCOres.HALITE,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.CLAYSTONE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(HEMATITE_DEEPER_DOWN, Rock.ANDESITE, TFCOres.HEMATITE,
+                TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.HEMATITE).get(Ore.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.GNEISS).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createGeode(KAOLINITE_DEEPER_DOWN,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(),
+                CoreBlocks.BASIC_ORES.get(CoreOres.BAUXITE).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get(),
+                CoreBlocks.BASIC_ORES.get(CoreOres.BAUXITE).get(),
+                0.25
+        );
+
+        createOreGeode(LAPIS_LAZULI_DEEPER_DOWN, Rock.LIMESTONE, TFCOres.LAPIS_LAZULI,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.LIMESTONE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(LIGNITE_DEEPER_DOWN, Rock.DOLOMITE, TFCOres.LIGNITE,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.DOLOMITE).get(Rock.BlockType.HARDENED).get(),
+                CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE).get()
+        );
+
+        createOreGeode(LIMONITE_DEEPER_DOWN, CoreRocks.ARKOSE, TFCOres.LIMONITE,
+                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.ARKOSE).get(Ore.LIMONITE).get(CoreOres.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(MALACHITE_DEEPER_DOWN, CoreRocks.PICRITE_BASALT, CoreOres.MALACHITE,
+                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.ARKOSE).get(CoreOres.MALACHITE).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(NATIVE_COPPER_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_COPPER,
+                TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_COPPER).get(Ore.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(NATIVE_GOLD_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_GOLD,
+                TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_GOLD).get(Ore.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(NATIVE_SILVER_DEEPER_DOWN, Rock.GRANITE, TFCOres.NATIVE_SILVER,
+                TFCBlocks.GRADED_ORES.get(Rock.GRANITE).get(Ore.NATIVE_SILVER).get(Ore.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(OPAL_DEEPER_DOWN, Rock.DOLOMITE, TFCOres.OPAL,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.DOLOMITE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(PALTAERIA_DEEPER_DOWN, CoreRocks.TRAVERTINE, CoreOres.PALTAERIA,
+                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.TRAVERTINE).get(CoreOres.PALTAERIA).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(RUBY_DEEPER_DOWN, Rock.CHERT, TFCOres.RUBY,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(SALTPETER_DEEPER_DOWN, Rock.SHALE, TFCOres.SALTPETER,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SLATE).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(SAPPHIRE_DEEPER_DOWN, Rock.MARBLE, TFCOres.SAPPHIRE,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(SHIMERSTONE_DEEPER_DOWN, CoreRocks.KOMATIITE, CoreOres.SHIMMERSTONE,
+                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.KOMATIITE).get(CoreOres.SHIMMERSTONE).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(SULFUR_DEEPER_DOWN, Rock.GABBRO, TFCOres.SULFUR,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(SPHALERITE_DEEPER_DOWN, CoreRocks.BLACKSLAG, TFCOres.SPHALERITE,
+                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.BLACKSLAG).get(Ore.SPHALERITE).get(CoreOres.Grade.POOR).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(STRATINE_DEEPER_DOWN, CoreRocks.ARGILLITE, CoreOres.STRATINE,
+                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.ARGILLITE).get(CoreOres.STRATINE).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get()
+        );
+
+        createOreGeode(SYLVITE_DEEPER_DOWN, Rock.CHERT, TFCOres.SYLVITE,
+                TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(),
+                TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get()
+        );
+    }
+
+    private static void createGeode(ResourceKey<ConfiguredFeature<?, ?>> key, Block inner, Block middle, Block outer, Block alt, double altChance){
+
+        new WeightedStateProvider(
+                SimpleWeightedRandomList.<BlockState>builder()
+                        .add(alt.defaultBlockState(), 1)
+                        .add(alt.defaultBlockState(), 2)
+                        .add(alt.defaultBlockState(), 1)
+                        .add(inner.defaultBlockState(), 2)
+                        .build()
+        );
+
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(Feature.GEODE,
+                        new GeodeConfiguration(
+                                new GeodeBlockSettings(
+                                        SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
+                                        SimpleStateProvider.simple(inner), //inner
+                                        SimpleStateProvider.simple(alt), //alt inner
+                                        SimpleStateProvider.simple(middle), //middle
+                                        SimpleStateProvider.simple(outer), //outer
+                                        List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
+                                        BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
+                                        BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
+                                ),
+                                new GeodeLayerSettings(
+                                        1.7, //default
+                                        2.2, //default
+                                        3.2, //default
+                                        4.2 //default
+                                ),
+                                new GeodeCrackSettings(
+                                        1, //default
+                                        2, //default
+                                        2 //default
+                                ),
+                                0.35, //default
+                                altChance, // arg
+                                true, //default
+                                UniformInt.of(4, 5), //default
+                                UniformInt.of(3, 4), //default
+                                UniformInt.of(1, 2), //default
+                                -16,  //default
+                                16, //default
+                                0.05,  //default
+                                1  //default
+                        )
+                )
+        );
+    }
+
+    private static void createOreGeode(ResourceKey<ConfiguredFeature<?, ?>> key, RegistryRock rock, RegistryOre ore, Block middle, Block outer){
+
+        WeightedStateProvider altInner;
+
+        if (ore.isGraded()){
+            altInner = new WeightedStateProvider(
+                SimpleWeightedRandomList.<BlockState>builder()
+                        .add(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), 1)
+                        .add(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), 2)
+                        .add(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), 1)
+                        .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
+                        .build()
+                 );
+        } else {
+            altInner = new WeightedStateProvider(
+                    SimpleWeightedRandomList.<BlockState>builder()
+                            .add(ore.getOreBlock(rock, null).defaultBlockState(), 2)
+                            .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
+                            .build()
+            );
+        }
+
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(Feature.GEODE,
+                        new GeodeConfiguration(
+                                new GeodeBlockSettings(
+                                        SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
+                                        SimpleStateProvider.simple(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState()), //inner
+                                        altInner, //alt inner
+                                        SimpleStateProvider.simple(middle), //middle
+                                        SimpleStateProvider.simple(outer), //outer
+                                        List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
+                                        BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
+                                        BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
+                                ),
+                                new GeodeLayerSettings(
+                                        1.7, //default
+                                        2.2, //default
+                                        3.2, //default
+                                        4.2 //default
+                                ),
+                                new GeodeCrackSettings(
+                                        1, //default
+                                        2, //default
+                                        2 //default
+                                ),
+                                0.35, //default
+                                1,
+                                true, //default
+                                UniformInt.of(4, 5), //default
+                                UniformInt.of(3, 4), //default
+                                UniformInt.of(1, 2), //default
+                                -16,  //default
+                                16, //default
+                                0.05,  //default
+                                1  //default
+                        )
+                )
+        );
+    }
+
+    //region TFC features
+
+    private static void bootstrapTFCFeatures(){
 
         createSoilDisc(CASSITERITE_DEEP_DEPOSIT, createDepositMap(OreDeposit.CASSITERITE), 3, 10, 3, 0.9f);
         createSoilDisc(CASSITERITE_DEPOSIT, createDepositMap(OreDeposit.CASSITERITE), 1, 3, 2, 0.9f);
@@ -137,6 +466,7 @@ public class BuiltinConfiguredFeatures  {
         createSulfurRivulet(SULFUR_RIVULET);
     }
 
+    //region TFC non-vein features
     private static void createSoilDisc(ResourceKey<ConfiguredFeature<?, ?>> key, Map<Block, BlockState> map, int minRadius, int maxRadius, int height, float integrity){
         CTX.register(
                 key,
@@ -148,10 +478,10 @@ public class BuiltinConfiguredFeatures  {
 
     private static void createCaveVegetation(){
 
-        Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
+        LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
         for (Rock rock : Rock.values()){
-            map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new Weighted<BlockState>(
+            map.putLast(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new Weighted<>(
                     List.of(
                             Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d),
                             Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get().defaultBlockState(), 8d)
@@ -159,14 +489,14 @@ public class BuiltinConfiguredFeatures  {
             ));
         }
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            map.put(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<BlockState>(
+        for (CoreRocks rock : CoreRocks.values()){
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
                     List.of(
                             Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d),
                             Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get().defaultBlockState(), 8d)
                     )
             ));
-        });
+        }
 
         CTX.register(
                 CAVE_VEGETATION,
@@ -220,8 +550,7 @@ public class BuiltinConfiguredFeatures  {
 
         Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
-
+        for (Rock rock : Rock.values()){
             RockCategory category = rock.displayCategory().category();
             if (category != RockCategory.SEDIMENTARY){
                 map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new Weighted<BlockState>(
@@ -230,9 +559,9 @@ public class BuiltinConfiguredFeatures  {
                         )
                 ));
             }
-        });
+        }
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
+        for (CoreRocks rock : CoreRocks.values()){
             RockCategory category = rock.displayCategory().category();
             if (category != RockCategory.SEDIMENTARY){
                 map.put(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<BlockState>(
@@ -241,7 +570,7 @@ public class BuiltinConfiguredFeatures  {
                         )
                 ));
             }
-        });
+        }
 
         FissureConfig.Decoration deco = new FissureConfig.Decoration(map, rarityDeco, radiusDeco, countDeco);
 
@@ -475,6 +804,8 @@ public class BuiltinConfiguredFeatures  {
 
         return Optional.of(map);
     }
+    //endregion
+    //endregion
 
     private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name, String path){
         return ResourceKey.create(

@@ -1,14 +1,20 @@
 package net.gourmand.core.util;
 
+import net.dries007.tfc.util.registry.RegistryRock;
+import net.gourmand.core.registry.category.CoreOres;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.Nullable;
 
 public interface RegistryOre extends StringRepresentable {
 
-    public boolean isGem();
+    boolean isGem();
 
-    public boolean isGraded();
+    boolean isGraded();
 
-    public boolean hasPowder();
+    boolean hasPowder();
 
-    public boolean hasBlock();
+    boolean hasBlock();
+
+    Block getOreBlock(RegistryRock rock, @Nullable CoreOres.Grade grade);
 }
