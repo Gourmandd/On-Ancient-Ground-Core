@@ -1,17 +1,10 @@
 {
-    "type": "tfc:disc_vein",
-    "config": {
-      "rarity": 80,
-      "density": 0.9,
-      "min_y": -64,
-      "max_y": 80,
-      "size": 30,
-      "height": 3,
-    "random_name": "soapstone",
+  "type": "tfc:disc_vein",
+  "config": {
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/gneiss"
+          "modpack:rock/raw/serpentine"
         ],
         "with": [
           {
@@ -31,47 +24,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "create:limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "create:limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "create:limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "create:limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:limestone"
+          "tfc:rock/raw/slate"
         ],
         "with": [
           {
@@ -91,7 +44,47 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/slate"
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "create:limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "create:limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "create:limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "create:limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
         ],
         "with": [
           {
@@ -109,6 +102,13 @@
           }
         ]
       }
-    ]
+    ],
+    "density": 0.9,
+    "height": 3,
+    "max_y": 80,
+    "min_y": -64,
+    "random_name": -3859355887769728277,
+    "rarity": 80,
+    "size": 30
   }
 }

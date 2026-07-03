@@ -1,0 +1,103 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/phonolite"
+          }
+        ]
+      }
+    ],
+    "density": 0.1,
+    "max_y": 100,
+    "min_y": 0,
+    "random_name": 686683180370832817,
+    "rarity": 50,
+    "size": 10
+  }
+}

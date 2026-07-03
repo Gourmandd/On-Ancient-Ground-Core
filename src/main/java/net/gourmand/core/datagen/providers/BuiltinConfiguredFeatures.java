@@ -13,6 +13,7 @@ import net.dries007.tfc.util.collections.Weighted;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.world.feature.*;
 import net.dries007.tfc.world.feature.cave.CaveVegetationConfig;
+import net.dries007.tfc.world.feature.vein.*;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreWorldGen;
@@ -30,10 +31,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.GeodeBlockSettings;
-import net.minecraft.world.level.levelgen.GeodeCrackSettings;
-import net.minecraft.world.level.levelgen.GeodeLayerSettings;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.*;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration;
@@ -128,6 +126,22 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/stratine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SULFUR_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sulfur");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SYLVITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sylvite");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ANTHRACITE = createKey(AncientGroundCore.MODID, "vein/anthracite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE = createKey(AncientGroundCore.MODID, "vein/azurite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE_VOLCANIC = createKey(AncientGroundCore.MODID, "vein/azurite_volcanic");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BAUXITE = createKey(AncientGroundCore.MODID, "vein/bauxite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> METEORIC_IRON = createKey(AncientGroundCore.MODID, "vein/meteoric_iron");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NORMAL_GALENA = createKey(AncientGroundCore.MODID, "vein/normal_galena");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PALTAERIA = createKey(AncientGroundCore.MODID, "vein/paltaeria");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ = createKey(AncientGroundCore.MODID, "vein/quartz");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_SEDIMENTARY = createKey(AncientGroundCore.MODID, "vein/quartz_sedimentary");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE = createKey(AncientGroundCore.MODID, "vein/shimmerstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE_VOLCANIC = createKey(AncientGroundCore.MODID, "vein/shimmerstone_volcanic");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SOAPSTONE = createKey(AncientGroundCore.MODID, "vein/soapstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE = createKey(AncientGroundCore.MODID, "vein/stratine");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_GALENA = createKey(AncientGroundCore.MODID, "vein/surface_galena");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TERRACOTTA = createKey(AncientGroundCore.MODID, "vein/terracotta");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx){
@@ -304,6 +318,214 @@ public class BuiltinConfiguredFeatures  {
                 TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(),
                 TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get()
         );
+
+
+
+        createDiscVein(ANTHRACITE, 30, 3, new VeinConfig(
+                createOreVeinMap(List.of(RockCategory.METAMORPHIC), List.of(), CoreOres.ANTHRACITE),
+                Optional.empty(),
+                80,
+                0.9f,
+                -64,
+                0,
+                false,
+                false,
+                hash("anthracite"),
+                false
+        ));
+
+        createPipeVein(AZURITE, 10, 5, 2, 20, 2, 20, 1, new VeinConfig(
+                createOreVeinMap(List.of(RockCategory.IGNEOUS_INTRUSIVE), List.of(), CoreOres.AZURITE),
+                Optional.empty(),
+                50,
+                0.1f,
+                -64,
+                70,
+                false,
+                false,
+                hash("azurite_ore"),
+                false
+        ));
+
+        createClusterVein(AZURITE_VOLCANIC, 10, new VeinConfig(
+                createOreVeinMap(List.of(RockCategory.IGNEOUS_EXTRUSIVE), List.of(), CoreOres.AZURITE),
+                Optional.empty(),
+                50,
+                0.1f,
+                0,
+                100,
+                false,
+                false,
+                hash("azurite_ore_volcanic"),
+                false
+        ));
+
+        createDiscVein(BAUXITE, 50, 1, new VeinConfig(
+                createOreVeinMap(List.of(), List.of(
+                        Rock.DOLOMITE, Rock.CHALK, Rock.LIMESTONE,
+                        Rock.BASALT, Rock.RHYOLITE, Rock.GRANITE,
+                        Rock.GNEISS, CoreRocks.SERPENTINE, CoreRocks.BLUESCHIST),
+                        CoreOres.ANTHRACITE
+                ),
+                Optional.of(new Indicator(35, 12, 1, 0,
+                        new Weighted<>(List.of(Pair.of(Rock.GRANITE.getBlock(Rock.BlockType.LOOSE).get().defaultBlockState(), 1d)))
+                )),
+                600,
+                0.8f,
+                0,
+                120,
+                false,
+                false,
+                hash("bauxite"),
+                false
+        ));
+
+        createClusterVein(METEORIC_IRON, 14, new VeinConfig(
+                createMeteorOreVeinMap(),
+                Optional.of(new Indicator(35, 12, 1, 0,
+                        new Weighted<>(List.of(Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.LOOSE).get().defaultBlockState(), 1d)))
+                )),
+                800,
+                1f,
+                30,
+                200,
+                false,
+                false,
+                hash("meteoric_iron"),
+                false
+        ));
+
+        createClusterVein(NORMAL_GALENA, 40, new VeinConfig(
+                createGradedOreVeinMap(List.of(RockCategory.IGNEOUS_INTRUSIVE), List.of(), CoreOres.GALENA, 15, 25, 60),
+                Optional.of(new Indicator(35, 12, 1, 5,
+                        new Weighted<>(List.of(Pair.of(CoreBlocks.SMALL_ORES.get(CoreOres.GALENA).get().defaultBlockState(), 1d)))
+                )),
+                300,
+                0.6f,
+                -30,
+                20,
+                false,
+                false,
+                hash("normal_galena"),
+                false
+        ));
+
+        createClusterVein(PALTAERIA, 20, new VeinConfig(
+                createOreVeinMap(List.of(RockCategory.IGNEOUS_EXTRUSIVE, RockCategory.IGNEOUS_INTRUSIVE), List.of(), CoreOres.PALTAERIA),
+                Optional.empty(),
+                80,
+                0.3f,
+                60,
+                200,
+                false,
+                false,
+                hash("paltaeria_ore"),
+                false
+        ));
+
+        createPipeVein(QUARTZ, 30, 2, 6, 16, 0, 2, 0, new VeinConfig(
+                createOreVeinMap(List.of(), List.of(Rock.GRANITE, Rock.RHYOLITE, Rock.DACITE, Rock.SCHIST, Rock.QUARTZITE), CoreOres.QUARTZ),
+                Optional.empty(),
+                40,
+                0.5f,
+                -64,
+                100,
+                false,
+                false,
+                hash("quartz_ore"),
+                false
+        ));
+
+        createPipeVein(QUARTZ_SEDIMENTARY, 15, 6, 2, 20, 0, 10, 0, new VeinConfig(
+                createOreVeinMap(List.of(RockCategory.SEDIMENTARY), List.of(), CoreOres.QUARTZ),
+                Optional.empty(),
+                80,
+                0.1f,
+                0,
+                100,
+                false,
+                false,
+                hash("quartz_sedimentary"),
+                false
+        ));
+
+        createDiscVein(SHIMMERSTONE, 50, 3, new VeinConfig(
+                createOreVeinMap(List.of(RockCategory.SEDIMENTARY), List.of(), CoreOres.SHIMMERSTONE),
+                Optional.empty(),
+                180,
+                0.1f,
+                -35,
+                -12,
+                true,
+                true,
+                hash("shimmerstone_ore"),
+                false
+        ));
+
+        createClusterVein(SHIMMERSTONE_VOLCANIC, 20, new VeinConfig(
+                createOreVeinMap(List.of(RockCategory.IGNEOUS_EXTRUSIVE), List.of(), CoreOres.SHIMMERSTONE),
+                Optional.empty(),
+                50,
+                0.3f,
+                0,
+                100,
+                false,
+                false,
+                hash("shimmerstone_volcanic_ore"),
+                false
+        ));
+
+        createDiscVein(SOAPSTONE, 30, 3, new VeinConfig(
+                createSoapstoneOreVeinMap(),
+                Optional.empty(),
+                80,
+                0.9f,
+                -64,
+                80,
+                false,
+                false,
+                hash("soapstone_ore"),
+                false
+        ));
+
+        createClusterVein(STRATINE, 27, new VeinConfig(
+                createOreVeinMap(List.of(RockCategory.METAMORPHIC), List.of(), CoreOres.SHIMMERSTONE),
+                Optional.empty(),
+                80,
+                0.1f,
+                -60,
+                30,
+                false,
+                false,
+                hash("stratine_ore"),
+                false
+        ));
+
+        createClusterVein(SURFACE_GALENA, 20, new VeinConfig(
+                createGradedOreVeinMap(List.of(RockCategory.IGNEOUS_EXTRUSIVE), List.of(Rock.LIMESTONE, Rock.DOLOMITE), CoreOres.GALENA, 70, 25, 5),
+                Optional.empty(),
+                200,
+                0.3f,
+                40,
+                130,
+                false,
+                false,
+                hash("surface_galena"),
+                false
+        ));
+
+        createClusterVein(TERRACOTTA, 20, new VeinConfig(
+                createTerracottaOreVeinMap(),
+                Optional.empty(),
+                80,
+                0.9f,
+                0,
+                128,
+                false,
+                false,
+                hash("terracotta_ore"),
+                false
+        ));
     }
 
     private static void createGeode(ResourceKey<ConfiguredFeature<?, ?>> key, Block inner, Block middle, Block outer, Block alt, double altChance){
@@ -807,10 +1029,228 @@ public class BuiltinConfiguredFeatures  {
     //endregion
     //endregion
 
+    private static void createDiscVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, int height, VeinConfig config){
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(TFCFeatures.DISC_VEIN.get(),
+                        new DiscVeinConfig(config, size, height)
+                )
+        );
+    }
+
+    private static void createPipeVein(ResourceKey<ConfiguredFeature<?, ?>> key, int height, int radius, int minSkew, int maxSkew, int minSlant, int maxSlant, float sign, VeinConfig config){
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(TFCFeatures.PIPE_VEIN.get(),
+                        new PipeVeinConfig(config, height, radius, minSkew, maxSkew, minSlant, maxSlant, sign)
+                )
+        );
+    }
+
+    private static void createClusterVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, VeinConfig config){
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(TFCFeatures.CLUSTER_VEIN.get(),
+                        new ClusterVeinConfig(config, size)
+                )
+        );
+    }
+
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore){
+
+        LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
+
+        for (Rock rock : Rock.values()){
+            if (categoryList.contains(rock.displayCategory().category())){
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                        List.of(
+                                Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d)
+                        )
+                ));
+            }
+        }
+
+        for (CoreRocks rock : CoreRocks.values()){
+            if (categoryList.contains(rock.displayCategory().category())){
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                        List.of(
+                                Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d)
+                        )
+                ));
+            }
+        }
+
+        for (RegistryRock rock : rockList){
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                    List.of(
+                            Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d)
+                    )
+            ));
+        }
+
+        return map;
+    }
+
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createGradedOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore, double poorChance, double normalChance, double richChance){
+
+        LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
+
+        for (Rock rock : Rock.values()){
+            if (categoryList.contains(rock.displayCategory().category())){
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                        List.of(
+                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
+                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance),
+                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance)
+                        )
+                ));
+            }
+        }
+
+        for (CoreRocks rock : CoreRocks.values()){
+            if (categoryList.contains(rock.displayCategory().category())){
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                        List.of(
+                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
+                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance),
+                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance)
+                        )
+                ));
+            }
+        }
+
+        for (RegistryRock rock : rockList){
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                    List.of(
+                            Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
+                            Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance),
+                            Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance)
+                    )
+            ));
+        }
+
+        return map;
+    }
+
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createMeteorOreVeinMap(){
+
+        LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
+
+        for (Rock rock : Rock.values()){
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                    List.of(
+                            Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 65d),
+                            Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 5d),
+                            Pair.of(CoreBlocks.BASIC_ORES.get(CoreOres.METEORIC_IRON).get().defaultBlockState(), 5d),
+                            Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 25d)
+                    )
+            ));
+        }
+
+        for (CoreRocks rock : CoreRocks.values()){
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                    List.of(
+                            Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 65d),
+                            Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 5d),
+                            Pair.of(CoreBlocks.BASIC_ORES.get(CoreOres.METEORIC_IRON).get().defaultBlockState(), 5d),
+                            Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 25d)
+                    )
+            ));
+        }
+
+        return map;
+    }
+
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createSoapstoneOreVeinMap(){
+
+        LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
+
+        for (Rock rock : Rock.values()){
+            if (rock.displayCategory().category() == RockCategory.METAMORPHIC){
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                        List.of(
+                                Pair.of(CoreRocks.SOAPSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
+                        )
+                ));
+            }
+        }
+
+        for (CoreRocks rock : CoreRocks.values()){
+            if (rock.displayCategory().category() == RockCategory.METAMORPHIC){
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new Weighted<>(
+                        List.of(
+                                Pair.of(CoreRocks.SOAPSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
+                        )
+                ));
+            }
+        }
+
+        return map;
+    }
+
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createTerracottaOreVeinMap(){
+
+        LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
+
+        map.put(Rock.GRANITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.PINK_TERRACOTTA));
+        map.put(Rock.DIORITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.WHITE_TERRACOTTA));
+        map.put(Rock.GABBRO.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.GRAY_TERRACOTTA));
+        map.put(Rock.SHALE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.LIGHT_GRAY_TERRACOTTA));
+        map.put(Rock.CLAYSTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.TERRACOTTA));
+        map.put(Rock.LIMESTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.YELLOW_TERRACOTTA));
+        map.put(Rock.CONGLOMERATE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BROWN_TERRACOTTA));
+        map.put(Rock.DOLOMITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.MAGENTA_TERRACOTTA));
+        map.put(Rock.CHERT.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.ORANGE_TERRACOTTA));
+        map.put(Rock.CHALK.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.WHITE_TERRACOTTA));
+        map.put(Rock.RHYOLITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.GRAY_TERRACOTTA));
+        map.put(Rock.BASALT.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BLACK_TERRACOTTA));
+        map.put(Rock.ANDESITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.LIGHT_GRAY_TERRACOTTA));
+        map.put(Rock.DACITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.LIGHT_GRAY_TERRACOTTA));
+        map.put(Rock.QUARTZITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.PINK_TERRACOTTA));
+        map.put(Rock.SLATE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.LIGHT_GRAY_TERRACOTTA));
+        map.put(Rock.PHYLLITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.GREEN_TERRACOTTA));
+        map.put(Rock.SCHIST.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.GREEN_TERRACOTTA));
+        map.put(Rock.GNEISS.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BROWN_TERRACOTTA));
+        map.put(Rock.MARBLE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.WHITE_TERRACOTTA));
+        map.put(Rock.TUFF.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.YELLOW_TERRACOTTA));
+        map.put(CoreRocks.ARGILLITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.TERRACOTTA));
+        map.put(CoreRocks.NEPHELINITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BLACK_TERRACOTTA));
+        map.put(CoreRocks.PICRITE_BASALT.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.PURPLE_TERRACOTTA));
+        map.put(CoreRocks.BLACKSLAG.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BLACK_TERRACOTTA));
+        map.put(CoreRocks.TRAVERTINE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BROWN_TERRACOTTA));
+        map.put(CoreRocks.BRECCIA.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.WHITE_TERRACOTTA));
+        map.put(CoreRocks.SUEVITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BLACK_TERRACOTTA));
+        map.put(CoreRocks.PERIDOTITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.LIME_TERRACOTTA));
+        map.put(CoreRocks.SERPENTINE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.GREEN_TERRACOTTA));
+        map.put(CoreRocks.BLUESCHIST.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BLUE_TERRACOTTA));
+        map.put(CoreRocks.ARKOSE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BROWN_TERRACOTTA));
+        map.put(CoreRocks.KOMATIITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.ORANGE_TERRACOTTA));
+        map.put(CoreRocks.SOAPSTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.WHITE_TERRACOTTA));
+        map.put(CoreRocks.SANDSTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.YELLOW_TERRACOTTA));
+        map.put(CoreRocks.RED_SANDSTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.RED_TERRACOTTA));
+        map.put(CoreRocks.PHONOLITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.LIGHT_BLUE_TERRACOTTA));
+
+        return map;
+    }
+
+
+    private static Weighted<BlockState> singleWeighted(Block block){
+        return new Weighted<>(List.of(Pair.of(block.defaultBlockState(), 1d)));
+    }
+
+
+
     private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name, String path){
         return ResourceKey.create(
                 Registries.CONFIGURED_FEATURE,
                 ResourceLocation.fromNamespaceAndPath(name, path)
         );
+    }
+
+
+    private static long hash(String name)
+    {
+        final RandomSupport.Seed128bit seed128 = RandomSupport.seedFromHashOf(name);
+        return seed128.seedLo() ^ seed128.seedHi();
     }
 }

@@ -1,0 +1,143 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/gabbro"
+          }
+        ]
+      }
+    ],
+    "density": 0.3,
+    "max_y": 200,
+    "min_y": 60,
+    "random_name": 519303398383709431,
+    "rarity": 80,
+    "size": 20
+  }
+}

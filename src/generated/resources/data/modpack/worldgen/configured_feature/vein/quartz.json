@@ -1,0 +1,69 @@
+{
+  "type": "tfc:pipe_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      }
+    ],
+    "density": 0.5,
+    "height": 2,
+    "max_skew": 16,
+    "max_slant": 2,
+    "max_y": 100,
+    "min_skew": 6,
+    "min_slant": 0,
+    "min_y": -64,
+    "radius": 2,
+    "random_name": 8715505374477623016,
+    "rarity": 40,
+    "sign": 0.0
+  }
+}

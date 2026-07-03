@@ -1,0 +1,159 @@
+{
+  "type": "tfc:pipe_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      }
+    ],
+    "density": 0.1,
+    "height": 6,
+    "max_skew": 20,
+    "max_slant": 10,
+    "max_y": 100,
+    "min_skew": 2,
+    "min_slant": 0,
+    "min_y": 0,
+    "radius": 6,
+    "random_name": -2283958542099001146,
+    "rarity": 80,
+    "sign": 0.0
+  }
+}

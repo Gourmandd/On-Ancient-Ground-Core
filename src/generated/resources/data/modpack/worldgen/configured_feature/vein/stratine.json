@@ -1,0 +1,113 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/suevite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/slate"
+          }
+        ]
+      }
+    ],
+    "density": 0.1,
+    "max_y": 30,
+    "min_y": -60,
+    "random_name": 1771700443761956729,
+    "rarity": 80,
+    "size": 27
+  }
+}

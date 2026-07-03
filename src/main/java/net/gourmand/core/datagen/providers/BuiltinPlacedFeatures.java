@@ -63,6 +63,22 @@ public class BuiltinPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SULFUR_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sulfur");
     public static final ResourceKey<PlacedFeature> SYLVITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sylvite");
 
+    public static final ResourceKey<PlacedFeature> ANTHRACITE = createKey(AncientGroundCore.MODID, "vein/anthracite");
+    public static final ResourceKey<PlacedFeature> AZURITE = createKey(AncientGroundCore.MODID, "vein/azurite");
+    public static final ResourceKey<PlacedFeature> AZURITE_VOLCANIC = createKey(AncientGroundCore.MODID, "vein/azurite_volcanic");
+    public static final ResourceKey<PlacedFeature> BAUXITE = createKey(AncientGroundCore.MODID, "vein/bauxite");
+    public static final ResourceKey<PlacedFeature> METEORIC_IRON = createKey(AncientGroundCore.MODID, "vein/meteoric_iron");
+    public static final ResourceKey<PlacedFeature> NORMAL_GALENA = createKey(AncientGroundCore.MODID, "vein/normal_galena");
+    public static final ResourceKey<PlacedFeature> PALTAERIA = createKey(AncientGroundCore.MODID, "vein/paltaeria");
+    public static final ResourceKey<PlacedFeature> QUARTZ = createKey(AncientGroundCore.MODID, "vein/quartz");
+    public static final ResourceKey<PlacedFeature> QUARTZ_SEDIMENTARY = createKey(AncientGroundCore.MODID, "vein/quartz_sedimentary");
+    public static final ResourceKey<PlacedFeature> SHIMMERSTONE = createKey(AncientGroundCore.MODID, "vein/shimmerstone");
+    public static final ResourceKey<PlacedFeature> SHIMMERSTONE_VOLCANIC = createKey(AncientGroundCore.MODID, "vein/shimmerstone_volcanic");
+    public static final ResourceKey<PlacedFeature> SOAPSTONE = createKey(AncientGroundCore.MODID, "vein/soapstone");
+    public static final ResourceKey<PlacedFeature> STRATINE = createKey(AncientGroundCore.MODID, "vein/stratine");
+    public static final ResourceKey<PlacedFeature> SURFACE_GALENA = createKey(AncientGroundCore.MODID, "vein/surface_galena");
+    public static final ResourceKey<PlacedFeature> TERRACOTTA = createKey(AncientGroundCore.MODID, "vein/terracotta");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> ctx){
 
         CTX = ctx;
@@ -146,6 +162,22 @@ public class BuiltinPlacedFeatures {
                 ),
                 24
         );
+
+        createBlank(ANTHRACITE, BuiltinConfiguredFeatures.ANTHRACITE);
+        createBlank(AZURITE, BuiltinConfiguredFeatures.AZURITE);
+        createBlank(AZURITE_VOLCANIC, BuiltinConfiguredFeatures.AZURITE_VOLCANIC);
+        createBlank(BAUXITE, BuiltinConfiguredFeatures.BAUXITE);
+        createBlank(METEORIC_IRON, BuiltinConfiguredFeatures.METEORIC_IRON);
+        createBlank(NORMAL_GALENA, BuiltinConfiguredFeatures.NORMAL_GALENA);
+        createBlank(PALTAERIA, BuiltinConfiguredFeatures.PALTAERIA);
+        createBlank(QUARTZ, BuiltinConfiguredFeatures.QUARTZ);
+        createBlank(QUARTZ_SEDIMENTARY, BuiltinConfiguredFeatures.QUARTZ_SEDIMENTARY);
+        createBlank(SHIMMERSTONE, BuiltinConfiguredFeatures.SHIMMERSTONE);
+        createBlank(SHIMMERSTONE_VOLCANIC, BuiltinConfiguredFeatures.SHIMMERSTONE_VOLCANIC);
+        createBlank(SOAPSTONE, BuiltinConfiguredFeatures.SOAPSTONE);
+        createBlank(STRATINE, BuiltinConfiguredFeatures.STRATINE);
+        createBlank(SURFACE_GALENA, BuiltinConfiguredFeatures.SURFACE_GALENA);
+        createBlank(TERRACOTTA, BuiltinConfiguredFeatures.TERRACOTTA);
     }
 
     private static void createDeeperDownGeode(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured){
@@ -168,6 +200,10 @@ public class BuiltinPlacedFeatures {
                         BlockPredicateFilter.forPredicate(BlockPredicate.not(new OverlapsStructureBlockPredicate(Vec3i.ZERO, HolderSet.empty(), 7)))
                 )
         );
+    }
+
+    private static void createBlank(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured){
+        create(keyPlaced, keyConfigured, List.of());
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name, String path){

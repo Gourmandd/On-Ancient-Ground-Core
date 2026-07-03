@@ -1,0 +1,115 @@
+{
+  "type": "tfc:disc_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      }
+    ],
+    "density": 0.8,
+    "height": 1,
+    "indicator": {
+      "blocks": [
+        {
+          "block": "tfc:rock/loose/granite"
+        }
+      ],
+      "depth": 35,
+      "rarity": 12,
+      "underground_count": 0,
+      "underground_rarity": 1
+    },
+    "max_y": 120,
+    "min_y": 0,
+    "random_name": 1461199555999566593,
+    "rarity": 600,
+    "size": 50
+  }
+}

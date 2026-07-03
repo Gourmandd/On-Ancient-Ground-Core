@@ -1,0 +1,103 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/picrite_basalt"
+          }
+        ]
+      }
+    ],
+    "density": 0.3,
+    "max_y": 100,
+    "min_y": 0,
+    "random_name": -7462496776277887036,
+    "rarity": 50,
+    "size": 20
+  }
+}
