@@ -4,11 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/diorite"
+          "modpack:rock/raw/peridotite"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/diorite"
+            "block": "modpack:ore/azurite/peridotite"
           }
         ]
       },
@@ -34,11 +34,11 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
+          "tfc:rock/raw/diorite"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/peridotite"
+            "block": "modpack:ore/azurite/diorite"
           }
         ]
       }

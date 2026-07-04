@@ -4,191 +4,20 @@
     "blocks": [
       {
         "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/komatiite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/komatiite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/komatiite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/andesite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/andesite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/andesite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/phonolite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/phonolite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/phonolite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:deepslate"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/nephelinite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/nephelinite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/nephelinite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/blackslag",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/blackslag",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/blackslag",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/rhyolite"
         ],
         "with": [
           {
-            "block": "modpack:ore/poor_galena/rhyolite",
-            "weight": 70.0
+            "block": "modpack:ore/rich_galena/rhyolite",
+            "weight": 5.0
           },
           {
             "block": "modpack:ore/normal_galena/rhyolite",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/rich_galena/rhyolite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/picrite_basalt",
+            "block": "modpack:ore/poor_galena/rhyolite",
             "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/picrite_basalt",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/picrite_basalt",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/dolomite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/dolomite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/dolomite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/basalt",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/basalt",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/basalt",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/limestone",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/limestone",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/limestone",
-            "weight": 5.0
           }
         ]
       },
@@ -198,16 +27,187 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/poor_galena/dacite",
-            "weight": 70.0
+            "block": "modpack:ore/rich_galena/dacite",
+            "weight": 5.0
           },
           {
             "block": "modpack:ore/normal_galena/dacite",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/rich_galena/dacite",
+            "block": "modpack:ore/poor_galena/dacite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/limestone",
             "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/limestone",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/limestone",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/phonolite",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/phonolite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/phonolite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/dolomite",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/dolomite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/dolomite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/nephelinite",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/nephelinite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/nephelinite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/picrite_basalt",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/picrite_basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/picrite_basalt",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/komatiite",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/komatiite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/komatiite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/blackslag",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/blackslag",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/blackslag",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/andesite",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/andesite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/andesite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_galena/basalt",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_galena/basalt",
+            "weight": 70.0
           }
         ]
       }

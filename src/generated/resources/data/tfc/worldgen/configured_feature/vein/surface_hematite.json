@@ -4,39 +4,20 @@
     "blocks": [
       {
         "replace": [
-          "create:scoria"
+          "tfc:rock/raw/basalt"
         ],
         "with": [
           {
-            "block": "modpack:ore/poor_hematite/komatiite",
+            "block": "tfc:ore/rich_hematite/basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_hematite/basalt",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_hematite/komatiite",
+            "block": "tfc:ore/normal_hematite/basalt",
             "weight": 40.0
-          },
-          {
-            "block": "modpack:ore/rich_hematite/komatiite",
-            "weight": 25.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_hematite/rhyolite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_hematite/rhyolite",
-            "weight": 40.0
-          },
-          {
-            "block": "tfc:ore/rich_hematite/rhyolite",
-            "weight": 25.0
           }
         ]
       },
@@ -46,16 +27,16 @@
         ],
         "with": [
           {
+            "block": "modpack:ore/rich_hematite/nephelinite",
+            "weight": 25.0
+          },
+          {
             "block": "modpack:ore/poor_hematite/nephelinite",
             "weight": 35.0
           },
           {
             "block": "modpack:ore/normal_hematite/nephelinite",
             "weight": 40.0
-          },
-          {
-            "block": "modpack:ore/rich_hematite/nephelinite",
-            "weight": 25.0
           }
         ]
       },
@@ -65,16 +46,35 @@
         ],
         "with": [
           {
+            "block": "modpack:ore/rich_hematite/picrite_basalt",
+            "weight": 25.0
+          },
+          {
             "block": "modpack:ore/poor_hematite/picrite_basalt",
             "weight": 35.0
           },
           {
             "block": "modpack:ore/normal_hematite/picrite_basalt",
             "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_hematite/komatiite",
+            "weight": 25.0
           },
           {
-            "block": "modpack:ore/rich_hematite/picrite_basalt",
-            "weight": 25.0
+            "block": "modpack:ore/poor_hematite/komatiite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_hematite/komatiite",
+            "weight": 40.0
           }
         ]
       },
@@ -84,54 +84,16 @@
         ],
         "with": [
           {
+            "block": "modpack:ore/rich_hematite/phonolite",
+            "weight": 25.0
+          },
+          {
             "block": "modpack:ore/poor_hematite/phonolite",
             "weight": 35.0
           },
           {
             "block": "modpack:ore/normal_hematite/phonolite",
             "weight": 40.0
-          },
-          {
-            "block": "modpack:ore/rich_hematite/phonolite",
-            "weight": 25.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_hematite/blackslag",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_hematite/blackslag",
-            "weight": 40.0
-          },
-          {
-            "block": "modpack:ore/rich_hematite/blackslag",
-            "weight": 25.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_hematite/dacite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_hematite/dacite",
-            "weight": 40.0
-          },
-          {
-            "block": "tfc:ore/rich_hematite/dacite",
-            "weight": 25.0
           }
         ]
       },
@@ -141,35 +103,73 @@
         ],
         "with": [
           {
+            "block": "tfc:ore/rich_hematite/andesite",
+            "weight": 25.0
+          },
+          {
             "block": "tfc:ore/poor_hematite/andesite",
             "weight": 35.0
           },
           {
             "block": "tfc:ore/normal_hematite/andesite",
             "weight": 40.0
-          },
-          {
-            "block": "tfc:ore/rich_hematite/andesite",
-            "weight": 25.0
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/basalt"
+          "tfc:rock/raw/rhyolite"
         ],
         "with": [
           {
-            "block": "tfc:ore/poor_hematite/basalt",
+            "block": "tfc:ore/rich_hematite/rhyolite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_hematite/rhyolite",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_hematite/basalt",
+            "block": "tfc:ore/normal_hematite/rhyolite",
             "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_hematite/blackslag",
+            "weight": 25.0
           },
           {
-            "block": "tfc:ore/rich_hematite/basalt",
+            "block": "modpack:ore/poor_hematite/blackslag",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_hematite/blackslag",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_hematite/dacite",
             "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_hematite/dacite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_hematite/dacite",
+            "weight": 40.0
           }
         ]
       }

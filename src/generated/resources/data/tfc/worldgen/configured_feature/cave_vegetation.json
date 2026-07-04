@@ -4,240 +4,15 @@
     "blocks": [
       {
         "replace": [
-          "spectrum:blackslag"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
-            "block": "modpack:rock/cobble/blackslag",
+            "block": "modpack:rock/cobble/breccia",
             "weight": 2.0
           },
           {
-            "block": "modpack:rock/mossy_cobble/blackslag",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/gneiss",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/gneiss",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/granite",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/granite",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/sandstone",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/sandstone",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/marble",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/marble",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/blueschist",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/blueschist",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/soapstone",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/soapstone",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/andesite",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/andesite",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/gabbro",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/gabbro",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/chert",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/chert",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scorchia"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/suevite",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/suevite",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/claystone"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/claystone",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/claystone",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/phyllite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/phyllite",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/phyllite",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/arkose",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/arkose",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/limestone",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/limestone",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/travertine",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/travertine",
+            "block": "modpack:rock/mossy_cobble/breccia",
             "weight": 8.0
           }
         ]
@@ -259,105 +34,60 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/basalt"
+          "create:scorchia"
         ],
         "with": [
           {
-            "block": "tfc:rock/cobble/basalt",
+            "block": "modpack:rock/cobble/suevite",
             "weight": 2.0
           },
           {
-            "block": "tfc:rock/mossy_cobble/basalt",
+            "block": "modpack:rock/mossy_cobble/suevite",
             "weight": 8.0
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/dolomite"
+          "tfc:rock/raw/slate"
         ],
         "with": [
           {
-            "block": "tfc:rock/cobble/dolomite",
+            "block": "tfc:rock/cobble/slate",
             "weight": 2.0
           },
           {
-            "block": "tfc:rock/mossy_cobble/dolomite",
+            "block": "tfc:rock/mossy_cobble/slate",
             "weight": 8.0
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/schist"
+          "tfc:rock/raw/granite"
         ],
         "with": [
           {
-            "block": "tfc:rock/cobble/schist",
+            "block": "tfc:rock/cobble/granite",
             "weight": 2.0
           },
           {
-            "block": "tfc:rock/mossy_cobble/schist",
+            "block": "tfc:rock/mossy_cobble/granite",
             "weight": 8.0
           }
         ]
       },
       {
         "replace": [
-          "quark:shale"
+          "tfc:rock/raw/claystone"
         ],
         "with": [
           {
-            "block": "modpack:rock/cobble/phonolite",
+            "block": "tfc:rock/cobble/claystone",
             "weight": 2.0
           },
           {
-            "block": "modpack:rock/mossy_cobble/phonolite",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/rhyolite",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/rhyolite",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/peridotite",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/peridotite",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/picrite_basalt",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/picrite_basalt",
+            "block": "tfc:rock/mossy_cobble/claystone",
             "weight": 8.0
           }
         ]
@@ -379,6 +109,66 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/tuff",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/tuff",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/red_sandstone",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/red_sandstone",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/chert",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/chert",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/rhyolite",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/rhyolite",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "create:scoria"
         ],
         "with": [
@@ -388,6 +178,156 @@
           },
           {
             "block": "modpack:rock/mossy_cobble/komatiite",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/gabbro",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/gabbro",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/arkose",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/arkose",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/chalk",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/chalk",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/limestone",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/limestone",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/peridotite",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/peridotite",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/diorite",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/diorite",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/travertine",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/travertine",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/andesite",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/andesite",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/soapstone",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/soapstone",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/gneiss",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/gneiss",
             "weight": 8.0
           }
         ]
@@ -424,6 +364,51 @@
       },
       {
         "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/phonolite",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/phonolite",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/marble",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/marble",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/blueschist",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/blueschist",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "modpack:rock/raw/serpentine"
         ],
         "with": [
@@ -433,6 +418,36 @@
           },
           {
             "block": "modpack:rock/mossy_cobble/serpentine",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/blackslag",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/blackslag",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/cobble/dolomite",
+            "weight": 2.0
+          },
+          {
+            "block": "tfc:rock/mossy_cobble/dolomite",
             "weight": 8.0
           }
         ]
@@ -454,90 +469,60 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/slate"
+          "tfc:rock/raw/schist"
         ],
         "with": [
           {
-            "block": "tfc:rock/cobble/slate",
+            "block": "tfc:rock/cobble/schist",
             "weight": 2.0
           },
           {
-            "block": "tfc:rock/mossy_cobble/slate",
+            "block": "tfc:rock/mossy_cobble/schist",
             "weight": 8.0
           }
         ]
       },
       {
         "replace": [
-          "caupona:felsic_tuff"
+          "create:ochrum"
         ],
         "with": [
           {
-            "block": "modpack:rock/cobble/breccia",
+            "block": "modpack:rock/cobble/sandstone",
             "weight": 2.0
           },
           {
-            "block": "modpack:rock/mossy_cobble/breccia",
+            "block": "modpack:rock/mossy_cobble/sandstone",
             "weight": 8.0
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/tuff"
+          "tfc:rock/raw/basalt"
         ],
         "with": [
           {
-            "block": "tfc:rock/cobble/tuff",
+            "block": "tfc:rock/cobble/basalt",
             "weight": 2.0
           },
           {
-            "block": "tfc:rock/mossy_cobble/tuff",
+            "block": "tfc:rock/mossy_cobble/basalt",
             "weight": 8.0
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/chalk"
+          "tfc:rock/raw/phyllite"
         ],
         "with": [
           {
-            "block": "tfc:rock/cobble/chalk",
+            "block": "tfc:rock/cobble/phyllite",
             "weight": 2.0
           },
           {
-            "block": "tfc:rock/mossy_cobble/chalk",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/diorite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/cobble/diorite",
-            "weight": 2.0
-          },
-          {
-            "block": "tfc:rock/mossy_cobble/diorite",
-            "weight": 8.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/cobble/red_sandstone",
-            "weight": 2.0
-          },
-          {
-            "block": "modpack:rock/mossy_cobble/red_sandstone",
+            "block": "tfc:rock/mossy_cobble/phyllite",
             "weight": 8.0
           }
         ]
@@ -553,6 +538,21 @@
           },
           {
             "block": "tfc:rock/mossy_cobble/shale",
+            "weight": 8.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/cobble/picrite_basalt",
+            "weight": 2.0
+          },
+          {
+            "block": "modpack:rock/mossy_cobble/picrite_basalt",
             "weight": 8.0
           }
         ]

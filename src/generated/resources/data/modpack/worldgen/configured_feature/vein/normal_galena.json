@@ -4,19 +4,19 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/granite"
+          "tfc:rock/raw/gabbro"
         ],
         "with": [
           {
-            "block": "modpack:ore/poor_galena/granite",
+            "block": "modpack:ore/poor_galena/gabbro",
             "weight": 15.0
           },
           {
-            "block": "modpack:ore/normal_galena/granite",
+            "block": "modpack:ore/normal_galena/gabbro",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/rich_galena/granite",
+            "block": "modpack:ore/rich_galena/gabbro",
             "weight": 60.0
           }
         ]
@@ -42,6 +42,25 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_galena/granite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_galena/granite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_galena/granite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "modpack:rock/raw/peridotite"
         ],
         "with": [
@@ -55,25 +74,6 @@
           },
           {
             "block": "modpack:ore/rich_galena/peridotite",
-            "weight": 60.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_galena/gabbro",
-            "weight": 15.0
-          },
-          {
-            "block": "modpack:ore/normal_galena/gabbro",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_galena/gabbro",
             "weight": 60.0
           }
         ]

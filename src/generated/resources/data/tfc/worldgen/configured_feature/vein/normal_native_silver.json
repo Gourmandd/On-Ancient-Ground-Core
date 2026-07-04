@@ -4,25 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_native_silver/granite",
-            "weight": 15.0
-          },
-          {
-            "block": "tfc:ore/normal_native_silver/granite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/rich_native_silver/granite",
-            "weight": 60.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/diorite"
         ],
         "with": [
@@ -61,19 +42,19 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/schist"
+          "tfc:rock/raw/granite"
         ],
         "with": [
           {
-            "block": "tfc:ore/poor_native_silver/schist",
+            "block": "tfc:ore/poor_native_silver/granite",
             "weight": 15.0
           },
           {
-            "block": "tfc:ore/normal_native_silver/schist",
+            "block": "tfc:ore/normal_native_silver/granite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/rich_native_silver/schist",
+            "block": "tfc:ore/rich_native_silver/granite",
             "weight": 60.0
           }
         ]
@@ -93,6 +74,25 @@
           },
           {
             "block": "modpack:ore/rich_native_silver/peridotite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/schist",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/schist",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/schist",
             "weight": 60.0
           }
         ]

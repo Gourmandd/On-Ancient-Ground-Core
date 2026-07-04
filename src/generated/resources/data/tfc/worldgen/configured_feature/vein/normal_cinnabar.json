@@ -4,31 +4,21 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/cinnabar/quartzite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/cinnabar/gneiss"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/phyllite"
         ],
         "with": [
           {
             "block": "tfc:ore/cinnabar/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/quartzite"
           }
         ]
       },
@@ -44,21 +34,31 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/cinnabar/blueschist"
-          }
-        ]
-      },
-      {
-        "replace": [
           "modpack:rock/raw/serpentine"
         ],
         "with": [
           {
             "block": "modpack:ore/cinnabar/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/cinnabar/blueschist"
           }
         ]
       }

@@ -4,96 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/sulfur/serpentine"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/slate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/slate"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/gabbro"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/sulfur/blueschist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/gneiss"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/phyllite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/phyllite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/marble"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/sulfur/peridotite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/diorite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/diorite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/schist"
         ],
         "with": [
@@ -114,11 +24,51 @@
       },
       {
         "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/sulfur/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/sulfur/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
           "create:limestone"
         ],
         "with": [
           {
             "block": "modpack:ore/sulfur/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/granite"
           }
         ]
       },
@@ -134,11 +84,61 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/granite"
+          "tfc:rock/raw/slate"
         ],
         "with": [
           {
-            "block": "tfc:ore/sulfur/granite"
+            "block": "tfc:ore/sulfur/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/sulfur/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/gabbro"
           }
         ]
       }

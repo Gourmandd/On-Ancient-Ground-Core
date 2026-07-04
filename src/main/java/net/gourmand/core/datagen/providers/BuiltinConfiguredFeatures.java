@@ -52,6 +52,7 @@ public class BuiltinConfiguredFeatures  {
 
     // TFC non-vein features, but rock related.
 
+    //region Rock related feature ResourceKeys
     public static final ResourceKey<ConfiguredFeature<?, ?>> CASSITERITE_DEEP_DEPOSIT = createKey(TerraFirmaCraft.MOD_ID, "cassiterite_deep_deposit");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CASSITERITE_DEPOSIT = createKey(TerraFirmaCraft.MOD_ID, "cassiterite_deposit");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CAVE_VEGETATION = createKey(TerraFirmaCraft.MOD_ID, "cave_vegetation");
@@ -82,7 +83,9 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRATOVOLCANO_RIVULET = createKey(TerraFirmaCraft.MOD_ID, "stratovolcano_rivulet");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SULFUR_RIVULET = createKey(TerraFirmaCraft.MOD_ID, "sulfur_rivulet");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TOPAZ_VOLCANO_FISSURE = createKey(TerraFirmaCraft.MOD_ID, "topaz_volcano_fissure");
+    //endregion
 
+    //region Ore Vein ResourceKeys
     public static final ResourceKey<ConfiguredFeature<?, ?>> AMETHYST = createKey(TerraFirmaCraft.MOD_ID, "vein/amethyst");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BITUMINOUS_COAL = createKey(TerraFirmaCraft.MOD_ID, "vein/bituminous_coal");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BORAX = createKey(TerraFirmaCraft.MOD_ID, "vein/borax");
@@ -130,14 +133,13 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_NATIVE_COPPER = createKey(TerraFirmaCraft.MOD_ID, "vein/surface_native_copper");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_SPHALERITE = createKey(TerraFirmaCraft.MOD_ID, "vein/surface_sphalerite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SYLVITE = createKey(TerraFirmaCraft.MOD_ID, "vein/sylvite");
-
+    //endregion
 
     // This Mod's features
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> MONSTER_ROOM = createKey(AncientGroundCore.MODID, "monster_room");
 
-    // ores
-
+    //region Geode ResourceKeys
     public static final ResourceKey<ConfiguredFeature<?, ?>> AMETHYST_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/amethyst");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CITRINE_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/citrine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TOPAZ_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/topaz");
@@ -174,7 +176,9 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/stratine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SULFUR_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sulfur");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SYLVITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sylvite");
+    //endregion
 
+    //region Ore Vein ResourceKeys
     public static final ResourceKey<ConfiguredFeature<?, ?>> ANTHRACITE = createKey(AncientGroundCore.MODID, "vein/anthracite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE = createKey(AncientGroundCore.MODID, "vein/azurite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE_VOLCANIC = createKey(AncientGroundCore.MODID, "vein/azurite_volcanic");
@@ -190,7 +194,7 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE = createKey(AncientGroundCore.MODID, "vein/stratine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_GALENA = createKey(AncientGroundCore.MODID, "vein/surface_galena");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TERRACOTTA = createKey(AncientGroundCore.MODID, "vein/terracotta");
-
+    //endregion
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx){
 
@@ -299,7 +303,7 @@ public class BuiltinConfiguredFeatures  {
         );
 
         createOreGeode(MALACHITE_DEEPER_DOWN, CoreRocks.PICRITE_BASALT, CoreOres.MALACHITE,
-                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.ARKOSE).get(CoreOres.MALACHITE).get(),
+                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.PICRITE_BASALT).get(CoreOres.MALACHITE).get(),
                 TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
         );
 
@@ -414,7 +418,7 @@ public class BuiltinConfiguredFeatures  {
                         Rock.DOLOMITE, Rock.CHALK, Rock.LIMESTONE,
                         Rock.BASALT, Rock.RHYOLITE, Rock.GRANITE,
                         Rock.GNEISS, CoreRocks.SERPENTINE, CoreRocks.BLUESCHIST),
-                        CoreOres.ANTHRACITE
+                        CoreOres.BAUXITE
                 ),
                 Optional.of(new Indicator(35, 12, 1, 0,
                         new DataWeighted<>(List.of(Pair.of(Rock.GRANITE.getBlock(Rock.BlockType.LOOSE).get().defaultBlockState(), 1d)))
@@ -538,7 +542,7 @@ public class BuiltinConfiguredFeatures  {
         ));
 
         createClusterVein(STRATINE, 27, new VeinConfig(
-                createOreVeinMap(List.of(RockCategory.METAMORPHIC), List.of(), CoreOres.SHIMMERSTONE),
+                createOreVeinMap(List.of(RockCategory.METAMORPHIC), List.of(), CoreOres.STRATINE),
                 Optional.empty(),
                 80,
                 0.1f,
@@ -576,119 +580,6 @@ public class BuiltinConfiguredFeatures  {
                 false
         ));
         //endregion
-    }
-
-    private static void createGeode(ResourceKey<ConfiguredFeature<?, ?>> key, Block inner, Block middle, Block outer, Block alt, double altChance){
-
-        new WeightedStateProvider(
-                SimpleWeightedRandomList.<BlockState>builder()
-                        .add(alt.defaultBlockState(), 1)
-                        .add(alt.defaultBlockState(), 2)
-                        .add(alt.defaultBlockState(), 1)
-                        .add(inner.defaultBlockState(), 2)
-                        .build()
-        );
-
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(Feature.GEODE,
-                        new GeodeConfiguration(
-                                new GeodeBlockSettings(
-                                        SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
-                                        SimpleStateProvider.simple(inner), //inner
-                                        SimpleStateProvider.simple(alt), //alt inner
-                                        SimpleStateProvider.simple(middle), //middle
-                                        SimpleStateProvider.simple(outer), //outer
-                                        List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
-                                        BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
-                                        BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
-                                ),
-                                new GeodeLayerSettings(
-                                        1.7, //default
-                                        2.2, //default
-                                        3.2, //default
-                                        4.2 //default
-                                ),
-                                new GeodeCrackSettings(
-                                        1, //default
-                                        2, //default
-                                        2 //default
-                                ),
-                                0.35, //default
-                                altChance, // arg
-                                true, //default
-                                UniformInt.of(4, 5), //default
-                                UniformInt.of(3, 4), //default
-                                UniformInt.of(1, 2), //default
-                                -16,  //default
-                                16, //default
-                                0.05,  //default
-                                1  //default
-                        )
-                )
-        );
-    }
-
-    private static void createOreGeode(ResourceKey<ConfiguredFeature<?, ?>> key, RegistryRock rock, RegistryOre ore, Block middle, Block outer){
-
-        WeightedStateProvider altInner;
-
-        if (ore.isGraded()){
-            altInner = new WeightedStateProvider(
-                SimpleWeightedRandomList.<BlockState>builder()
-                        .add(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), 1)
-                        .add(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), 2)
-                        .add(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), 1)
-                        .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
-                        .build()
-                 );
-        } else {
-            altInner = new WeightedStateProvider(
-                    SimpleWeightedRandomList.<BlockState>builder()
-                            .add(ore.getOreBlock(rock, null).defaultBlockState(), 2)
-                            .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
-                            .build()
-            );
-        }
-
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(Feature.GEODE,
-                        new GeodeConfiguration(
-                                new GeodeBlockSettings(
-                                        SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
-                                        SimpleStateProvider.simple(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState()), //inner
-                                        altInner, //alt inner
-                                        SimpleStateProvider.simple(middle), //middle
-                                        SimpleStateProvider.simple(outer), //outer
-                                        List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
-                                        BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
-                                        BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
-                                ),
-                                new GeodeLayerSettings(
-                                        1.7, //default
-                                        2.2, //default
-                                        3.2, //default
-                                        4.2 //default
-                                ),
-                                new GeodeCrackSettings(
-                                        1, //default
-                                        2, //default
-                                        2 //default
-                                ),
-                                0.35, //default
-                                1,
-                                true, //default
-                                UniformInt.of(4, 5), //default
-                                UniformInt.of(3, 4), //default
-                                UniformInt.of(1, 2), //default
-                                -16,  //default
-                                16, //default
-                                0.05,  //default
-                                1  //default
-                        )
-                )
-        );
     }
 
     private static void bootstrapTFCFeatures(){
@@ -735,10 +626,11 @@ public class BuiltinConfiguredFeatures  {
         createRivulet(OCEAN_RIDGE_RIVULET);
         createRivulet(STRATOVOLCANO_RIVULET);
         createSulfurRivulet(SULFUR_RIVULET);
-        //endregion
+        //endregion Features
 
         List<RegistryRock> malachiteFoundIn = List.of(Rock.MARBLE, Rock.LIMESTONE, Rock.DOLOMITE, Rock.CHALK, CoreRocks.SANDSTONE, CoreRocks.RED_SANDSTONE, CoreRocks.ARKOSE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE);
 
+        //region Ore Vein Features
         createDiscVein(AMETHYST, 8, 4, new VeinConfig(
                 createOreVeinMap(List.of(RockCategory.SEDIMENTARY, RockCategory.METAMORPHIC), List.of(), TFCOres.AMETHYST),
                 Optional.empty(),
@@ -779,7 +671,7 @@ public class BuiltinConfiguredFeatures  {
         ));
 
         createClusterVein(CRYOLITE, 18, new VeinConfig(
-                createOreVeinMap(List.of(), List.of(Rock.GRANITE, Rock.DIORITE, CoreRocks.PERIDOTITE), CoreOres.AZURITE),
+                createOreVeinMap(List.of(), List.of(Rock.GRANITE, Rock.DIORITE, CoreRocks.PERIDOTITE), TFCOres.CRYOLITE),
                 Optional.empty(),
                 16,
                 0.7f,
@@ -978,7 +870,7 @@ public class BuiltinConfiguredFeatures  {
         ));
 
         createClusterVein(MONTANE_HEMATITE, 25, new VeinConfig(
-                createGradedOreVeinMap(List.of(RockCategory.IGNEOUS_EXTRUSIVE), List.of(), TFCOres.HEMATITE, 35, 40, 25),
+                createGradedOreVeinMap(List.of(RockCategory.IGNEOUS_INTRUSIVE), List.of(), TFCOres.HEMATITE, 35, 40, 25),
                 Optional.of(new Indicator(35, 24, 1, 0,
                         new DataWeighted<>(List.of(Pair.of(TFCBlocks.SMALL_ORES.get(Ore.HEMATITE).get().defaultBlockState(), 1d)))
                 )),
@@ -1186,7 +1078,7 @@ public class BuiltinConfiguredFeatures  {
         ));
 
         createClusterVein(NORMAL_SPHALERITE, 40, new VeinConfig(
-                createGradedOreVeinMap(List.of(RockCategory.IGNEOUS_INTRUSIVE), List.of(), TFCOres.NATIVE_SILVER, 15, 25, 60),
+                createGradedOreVeinMap(List.of(RockCategory.IGNEOUS_INTRUSIVE), List.of(), TFCOres.SPHALERITE, 15, 25, 60),
                 Optional.of(new Indicator(35, 0, 1, 5,
                         new DataWeighted<>(List.of(Pair.of(TFCBlocks.SMALL_ORES.get(Ore.SPHALERITE).get().defaultBlockState(), 1d)))
                 )),
@@ -1387,7 +1279,6 @@ public class BuiltinConfiguredFeatures  {
                 false
         ));
 
-        //**Shale**, **Claystone**, **Chert**, **Sandstone**, **Red Sandstone**, **Arkose**, **Travertine** and **Argillite**.
         createDiscVein(SYLVITE, 35, 5, new VeinConfig(
                 createOreVeinMap(List.of(), List.of(Rock.SHALE, Rock.CLAYSTONE, Rock.CHERT, CoreRocks.SANDSTONE, CoreRocks.RED_SANDSTONE, CoreRocks.ARGILLITE, CoreRocks.ARKOSE, CoreRocks.TRAVERTINE), TFCOres.SYLVITE),
                 Optional.empty(),
@@ -1400,9 +1291,10 @@ public class BuiltinConfiguredFeatures  {
                 hash("sylvite"),
                 false
         ));
+        //endregion
     }
 
-    //region TFC non-vein features
+    //region Functions to create features
     private static void createSoilDisc(ResourceKey<ConfiguredFeature<?, ?>> key, Map<Block, BlockState> map, int minRadius, int maxRadius, int height, float integrity){
         CTX.register(
                 key,
@@ -1697,6 +1589,148 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
+    private static void createDiscVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, int height, VeinConfig config){
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(TFCFeatures.DISC_VEIN.get(),
+                        new DiscVeinConfig(config, size, height)
+                )
+        );
+    }
+
+    private static void createPipeVein(ResourceKey<ConfiguredFeature<?, ?>> key, int height, int radius, int minSkew, int maxSkew, int minSlant, int maxSlant, float sign, VeinConfig config){
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(TFCFeatures.PIPE_VEIN.get(),
+                        new PipeVeinConfig(config, height, radius, minSkew, maxSkew, minSlant, maxSlant, sign)
+                )
+        );
+    }
+
+    private static void createClusterVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, VeinConfig config){
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(TFCFeatures.CLUSTER_VEIN.get(),
+                        new ClusterVeinConfig(config, size)
+                )
+        );
+    }
+
+    private static void createGeode(ResourceKey<ConfiguredFeature<?, ?>> key, Block inner, Block middle, Block outer, Block alt, double altChance){
+
+        new WeightedStateProvider(
+                SimpleWeightedRandomList.<BlockState>builder()
+                        .add(alt.defaultBlockState(), 1)
+                        .add(alt.defaultBlockState(), 2)
+                        .add(alt.defaultBlockState(), 1)
+                        .add(inner.defaultBlockState(), 2)
+                        .build()
+        );
+
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(Feature.GEODE,
+                        new GeodeConfiguration(
+                                new GeodeBlockSettings(
+                                        SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
+                                        SimpleStateProvider.simple(inner), //inner
+                                        SimpleStateProvider.simple(alt), //alt inner
+                                        SimpleStateProvider.simple(middle), //middle
+                                        SimpleStateProvider.simple(outer), //outer
+                                        List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
+                                        BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
+                                        BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
+                                ),
+                                new GeodeLayerSettings(
+                                        1.7, //default
+                                        2.2, //default
+                                        3.2, //default
+                                        4.2 //default
+                                ),
+                                new GeodeCrackSettings(
+                                        1, //default
+                                        2, //default
+                                        2 //default
+                                ),
+                                0.35, //default
+                                altChance, // arg
+                                true, //default
+                                UniformInt.of(4, 5), //default
+                                UniformInt.of(3, 4), //default
+                                UniformInt.of(1, 2), //default
+                                -16,  //default
+                                16, //default
+                                0.05,  //default
+                                1  //default
+                        )
+                )
+        );
+    }
+
+    private static void createOreGeode(ResourceKey<ConfiguredFeature<?, ?>> key, RegistryRock rock, RegistryOre ore, Block middle, Block outer){
+
+        WeightedStateProvider altInner;
+
+        if (ore.isGraded()){
+            altInner = new WeightedStateProvider(
+                    SimpleWeightedRandomList.<BlockState>builder()
+                            .add(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), 1)
+                            .add(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), 2)
+                            .add(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), 1)
+                            .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
+                            .build()
+            );
+        } else {
+            altInner = new WeightedStateProvider(
+                    SimpleWeightedRandomList.<BlockState>builder()
+                            .add(ore.getOreBlock(rock, null).defaultBlockState(), 2)
+                            .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
+                            .build()
+            );
+        }
+
+        CTX.register(
+                key,
+                new ConfiguredFeature<>(Feature.GEODE,
+                        new GeodeConfiguration(
+                                new GeodeBlockSettings(
+                                        SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
+                                        SimpleStateProvider.simple(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState()), //inner
+                                        altInner, //alt inner
+                                        SimpleStateProvider.simple(middle), //middle
+                                        SimpleStateProvider.simple(outer), //outer
+                                        List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
+                                        BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
+                                        BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
+                                ),
+                                new GeodeLayerSettings(
+                                        1.7, //default
+                                        2.2, //default
+                                        3.2, //default
+                                        4.2 //default
+                                ),
+                                new GeodeCrackSettings(
+                                        1, //default
+                                        2, //default
+                                        2 //default
+                                ),
+                                0.35, //default
+                                1,
+                                true, //default
+                                UniformInt.of(4, 5), //default
+                                UniformInt.of(3, 4), //default
+                                UniformInt.of(1, 2), //default
+                                -16,  //default
+                                16, //default
+                                0.05,  //default
+                                1  //default
+                        )
+                )
+        );
+    }
+    //endregion
+
+    //region Functions to create block maps for features.
     private static Map<Block, BlockState> createDepositMap(OreDeposit deposit){
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
@@ -1739,35 +1773,6 @@ public class BuiltinConfiguredFeatures  {
         });
 
         return Optional.of(map);
-    }
-    //endregion
-    //endregion
-
-    private static void createDiscVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, int height, VeinConfig config){
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.DISC_VEIN.get(),
-                        new DiscVeinConfig(config, size, height)
-                )
-        );
-    }
-
-    private static void createPipeVein(ResourceKey<ConfiguredFeature<?, ?>> key, int height, int radius, int minSkew, int maxSkew, int minSlant, int maxSlant, float sign, VeinConfig config){
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.PIPE_VEIN.get(),
-                        new PipeVeinConfig(config, height, radius, minSkew, maxSkew, minSlant, maxSlant, sign)
-                )
-        );
-    }
-
-    private static void createClusterVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, VeinConfig config){
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.CLUSTER_VEIN.get(),
-                        new ClusterVeinConfig(config, size)
-                )
-        );
     }
 
     private static LinkedHashMap<Block, IWeighted<BlockState>> createOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore){
@@ -2063,8 +2068,9 @@ public class BuiltinConfiguredFeatures  {
 
         return map;
     }
+    //endregion
 
-
+    //region Util
     private static DataWeighted<BlockState> singleWeighted(Block block){
         return new DataWeighted<>(List.of(Pair.of(block.defaultBlockState(), 1d)));
     }
@@ -2076,13 +2082,8 @@ public class BuiltinConfiguredFeatures  {
         weighted.add(normalChance, ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState());
         weighted.add(richChance, ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState());
 
-        System.out.println(ore);
-        System.out.println(weighted.weightedValues());
-
         return weighted;
     }
-
-
 
     private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name, String path){
         return ResourceKey.create(
@@ -2091,10 +2092,10 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-
     private static long hash(String name)
     {
         final RandomSupport.Seed128bit seed128 = RandomSupport.seedFromHashOf(name);
         return seed128.seedLo() ^ seed128.seedHi();
     }
+    //endregion
 }

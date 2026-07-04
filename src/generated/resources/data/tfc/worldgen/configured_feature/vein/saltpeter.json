@@ -4,31 +4,21 @@
     "blocks": [
       {
         "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
           "create:ochrum"
         ],
         "with": [
           {
             "block": "modpack:ore/saltpeter/sandstone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/saltpeter/arkose"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/saltpeter/argillite"
           }
         ]
       },
@@ -44,11 +34,11 @@
       },
       {
         "replace": [
-          "quark:jasper"
+          "quark:limestone"
         ],
         "with": [
           {
-            "block": "modpack:ore/saltpeter/red_sandstone"
+            "block": "modpack:ore/saltpeter/arkose"
           }
         ]
       },
@@ -74,21 +64,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/claystone"
+          "tfc:rock/raw/tuff"
         ],
         "with": [
           {
-            "block": "tfc:ore/saltpeter/claystone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/saltpeter/breccia"
+            "block": "tfc:ore/saltpeter/tuff"
           }
         ]
       },
@@ -114,21 +94,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/tuff"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
-            "block": "tfc:ore/saltpeter/tuff"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/saltpeter/chalk"
+            "block": "modpack:ore/saltpeter/breccia"
           }
         ]
       },
@@ -139,6 +109,36 @@
         "with": [
           {
             "block": "tfc:ore/saltpeter/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/saltpeter/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/saltpeter/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/chalk"
           }
         ]
       }

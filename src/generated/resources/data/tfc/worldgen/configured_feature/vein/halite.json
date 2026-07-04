@@ -4,37 +4,17 @@
     "blocks": [
       {
         "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
         ],
         "with": [
           {
@@ -64,27 +44,7 @@
       },
       {
         "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
@@ -104,7 +64,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/conglomerate"
+          "tfc:rock/raw/tuff"
         ],
         "with": [
           {
@@ -114,7 +74,27 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/tuff"
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
         ],
         "with": [
           {
@@ -134,7 +114,27 @@
       },
       {
         "replace": [
-          "caupona:felsic_tuff"
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
         ],
         "with": [
           {

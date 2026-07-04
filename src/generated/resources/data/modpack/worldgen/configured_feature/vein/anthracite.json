@@ -4,47 +4,7 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/phyllite"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/slate"
+          "tfc:rock/raw/gneiss"
         ],
         "with": [
           {
@@ -64,16 +24,6 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "create:scorchia"
         ],
         "with": [
@@ -84,7 +34,17 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/schist"
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
         ],
         "with": [
           {
@@ -95,6 +55,46 @@
       {
         "replace": [
           "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
         ],
         "with": [
           {

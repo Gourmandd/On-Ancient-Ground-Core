@@ -14,21 +14,11 @@
       },
       {
         "replace": [
-          "create:scoria"
+          "minecraft:deepslate"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/komatiite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/basalt"
+            "block": "modpack:ore/shimmerstone/nephelinite"
           }
         ]
       },
@@ -44,21 +34,11 @@
       },
       {
         "replace": [
-          "minecraft:deepslate"
+          "create:scoria"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/nephelinite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/phonolite"
+            "block": "modpack:ore/shimmerstone/komatiite"
           }
         ]
       },
@@ -74,6 +54,16 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/dacite"
         ],
         "with": [
@@ -84,11 +74,21 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/andesite"
+          "tfc:rock/raw/basalt"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/andesite"
+            "block": "modpack:ore/shimmerstone/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/phonolite"
           }
         ]
       }

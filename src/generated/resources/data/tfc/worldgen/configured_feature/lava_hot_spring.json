@@ -21,98 +21,14 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gabbro"
+          "tfc:rock/raw/granite"
         ],
         "with": [
           {
-            "block": "tfc:rock/magma/gabbro"
+            "block": "tfc:rock/magma/granite"
           },
           {
-            "block": "tfc:rock/hardened/gabbro",
-            "weight": 2.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/magma/phonolite"
-          },
-          {
-            "block": "modpack:rock/hardened/phonolite",
-            "weight": 2.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/andesite"
-          },
-          {
-            "block": "tfc:rock/hardened/andesite",
-            "weight": 2.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/dacite"
-          },
-          {
-            "block": "tfc:rock/hardened/dacite",
-            "weight": 2.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/magma/rhyolite"
-          },
-          {
-            "block": "tfc:rock/hardened/rhyolite",
-            "weight": 2.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/magma/blackslag"
-          },
-          {
-            "block": "modpack:rock/hardened/blackslag",
-            "weight": 2.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/magma/peridotite"
-          },
-          {
-            "block": "modpack:rock/hardened/peridotite",
+            "block": "tfc:rock/hardened/granite",
             "weight": 2.0
           }
         ]
@@ -133,14 +49,56 @@
       },
       {
         "replace": [
-          "minecraft:deepslate"
+          "spectrum:blackslag"
         ],
         "with": [
           {
-            "block": "modpack:rock/magma/nephelinite"
+            "block": "modpack:rock/magma/blackslag"
           },
           {
-            "block": "modpack:rock/hardened/nephelinite",
+            "block": "modpack:rock/hardened/blackslag",
+            "weight": 2.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/dacite"
+          },
+          {
+            "block": "tfc:rock/hardened/dacite",
+            "weight": 2.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/andesite"
+          },
+          {
+            "block": "tfc:rock/hardened/andesite",
+            "weight": 2.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/gabbro"
+          },
+          {
+            "block": "tfc:rock/hardened/gabbro",
             "weight": 2.0
           }
         ]
@@ -175,14 +133,56 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/granite"
+          "minecraft:deepslate"
         ],
         "with": [
           {
-            "block": "tfc:rock/magma/granite"
+            "block": "modpack:rock/magma/nephelinite"
           },
           {
-            "block": "tfc:rock/hardened/granite",
+            "block": "modpack:rock/hardened/nephelinite",
+            "weight": 2.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/magma/peridotite"
+          },
+          {
+            "block": "modpack:rock/hardened/peridotite",
+            "weight": 2.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/magma/phonolite"
+          },
+          {
+            "block": "modpack:rock/hardened/phonolite",
+            "weight": 2.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/magma/rhyolite"
+          },
+          {
+            "block": "tfc:rock/hardened/rhyolite",
             "weight": 2.0
           }
         ]

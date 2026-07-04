@@ -6,31 +6,11 @@
       "blocks": [
         {
           "replace": [
-            "tfc:rock/raw/schist"
+            "tfc:rock/raw/granite"
           ],
           "with": [
             {
-              "block": "tfc:ore/topaz/schist"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/diorite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/topaz/diorite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "create:scoria"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/topaz/komatiite"
+              "block": "tfc:ore/topaz/granite"
             }
           ]
         },
@@ -41,26 +21,6 @@
           "with": [
             {
               "block": "modpack:ore/topaz/soapstone"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "quark:shale"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/topaz/phonolite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/andesite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/topaz/andesite"
             }
           ]
         },
@@ -86,61 +46,41 @@
         },
         {
           "replace": [
-            "spectrum:basal_marble"
+            "tfc:rock/raw/gneiss"
           ],
           "with": [
             {
-              "block": "modpack:ore/topaz/picrite_basalt"
+              "block": "tfc:ore/topaz/gneiss"
             }
           ]
         },
         {
           "replace": [
-            "tfc:rock/raw/rhyolite"
+            "tfc:rock/raw/schist"
           ],
           "with": [
             {
-              "block": "tfc:ore/topaz/rhyolite"
+              "block": "tfc:ore/topaz/schist"
             }
           ]
         },
         {
           "replace": [
-            "create:scorchia"
+            "tfc:rock/raw/diorite"
           ],
           "with": [
             {
-              "block": "modpack:ore/topaz/suevite"
+              "block": "tfc:ore/topaz/diorite"
             }
           ]
         },
         {
           "replace": [
-            "modpack:rock/raw/serpentine"
+            "minecraft:deepslate"
           ],
           "with": [
             {
-              "block": "modpack:ore/topaz/serpentine"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "spectrum:blackslag"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/topaz/blackslag"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/marble"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/topaz/marble"
+              "block": "modpack:ore/topaz/nephelinite"
             }
           ]
         },
@@ -151,16 +91,6 @@
           "with": [
             {
               "block": "tfc:ore/topaz/quartzite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/basalt"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/topaz/basalt"
             }
           ]
         },
@@ -186,11 +116,71 @@
         },
         {
           "replace": [
-            "minecraft:deepslate"
+            "spectrum:basal_marble"
           ],
           "with": [
             {
-              "block": "modpack:ore/topaz/nephelinite"
+              "block": "modpack:ore/topaz/picrite_basalt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/andesite"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/topaz/andesite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/marble"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/topaz/marble"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:scorchia"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/topaz/suevite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/rhyolite"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/topaz/rhyolite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:blackslag"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/topaz/blackslag"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/basalt"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/topaz/basalt"
             }
           ]
         },
@@ -206,31 +196,41 @@
         },
         {
           "replace": [
+            "modpack:rock/raw/serpentine"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/topaz/serpentine"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:scoria"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/topaz/komatiite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "quark:shale"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/topaz/phonolite"
+            }
+          ]
+        },
+        {
+          "replace": [
             "tfc:rock/raw/gabbro"
           ],
           "with": [
             {
               "block": "tfc:ore/topaz/gabbro"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/granite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/topaz/granite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/gneiss"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/topaz/gneiss"
             }
           ]
         }

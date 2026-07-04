@@ -4,11 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
+          "tfc:rock/raw/marble"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/blueschist"
+            "block": "modpack:ore/stratine/marble"
           }
         ]
       },
@@ -18,37 +18,7 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/slate"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/serpentine"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/soapstone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scorchia"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/suevite"
+            "block": "modpack:ore/stratine/slate"
           }
         ]
       },
@@ -58,17 +28,17 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/gneiss"
+            "block": "modpack:ore/stratine/gneiss"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/marble"
+          "create:scorchia"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/marble"
+            "block": "modpack:ore/stratine/suevite"
           }
         ]
       },
@@ -78,7 +48,37 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/phyllite"
+            "block": "modpack:ore/stratine/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/serpentine"
           }
         ]
       },
@@ -88,7 +88,7 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/quartzite"
+            "block": "modpack:ore/stratine/quartzite"
           }
         ]
       },
@@ -98,7 +98,7 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/schist"
+            "block": "modpack:ore/stratine/schist"
           }
         ]
       }

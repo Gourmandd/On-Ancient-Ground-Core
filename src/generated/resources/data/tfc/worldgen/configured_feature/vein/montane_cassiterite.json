@@ -4,32 +4,17 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_cassiterite/granite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_cassiterite/granite",
-            "weight": 40.0
-          },
-          {
-            "block": "tfc:ore/rich_cassiterite/granite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:deposit/cassiterite/granite",
-            "weight": 10.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/diorite"
         ],
         "with": [
+          {
+            "block": "tfc:deposit/cassiterite/diorite",
+            "weight": 10.0
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/diorite",
+            "weight": 25.0
+          },
           {
             "block": "tfc:ore/poor_cassiterite/diorite",
             "weight": 35.0
@@ -37,37 +22,6 @@
           {
             "block": "tfc:ore/normal_cassiterite/diorite",
             "weight": 40.0
-          },
-          {
-            "block": "tfc:ore/rich_cassiterite/diorite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:deposit/cassiterite/diorite",
-            "weight": 10.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_cassiterite/gabbro",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_cassiterite/gabbro",
-            "weight": 40.0
-          },
-          {
-            "block": "tfc:ore/rich_cassiterite/gabbro",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:deposit/cassiterite/gabbro",
-            "weight": 10.0
           }
         ]
       },
@@ -77,20 +31,66 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/poor_cassiterite/peridotite",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_cassiterite/peridotite",
-            "weight": 40.0
+            "block": "modpack:deposit/cassiterite/peridotite",
+            "weight": 10.0
           },
           {
             "block": "modpack:ore/rich_cassiterite/peridotite",
             "weight": 25.0
           },
           {
-            "block": "modpack:deposit/cassiterite/peridotite",
+            "block": "modpack:ore/poor_cassiterite/peridotite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_cassiterite/peridotite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:deposit/cassiterite/granite",
             "weight": 10.0
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/granite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_cassiterite/granite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/granite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:deposit/cassiterite/gabbro",
+            "weight": 10.0
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/gabbro",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_cassiterite/gabbro",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/gabbro",
+            "weight": 40.0
           }
         ]
       }

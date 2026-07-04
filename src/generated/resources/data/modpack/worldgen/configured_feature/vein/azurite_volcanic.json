@@ -4,31 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "quark:shale"
+          "tfc:rock/raw/dacite"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/phonolite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/azurite/komatiite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/azurite/blackslag"
+            "block": "modpack:ore/azurite/dacite"
           }
         ]
       },
@@ -44,11 +24,31 @@
       },
       {
         "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/basalt"
         ],
         "with": [
           {
             "block": "modpack:ore/azurite/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/blackslag"
           }
         ]
       },
@@ -64,21 +64,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/dacite"
+          "create:scoria"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/dacite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/azurite/rhyolite"
+            "block": "modpack:ore/azurite/komatiite"
           }
         ]
       },
@@ -89,6 +79,16 @@
         "with": [
           {
             "block": "modpack:ore/azurite/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/rhyolite"
           }
         ]
       }

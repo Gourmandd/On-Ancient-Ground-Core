@@ -4,41 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/claystone"
+          "tfc:rock/raw/gneiss"
         ],
         "with": [
           {
-            "block": "tfc:rock/gravel/claystone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/peridotite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/picrite_basalt"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/sandstone"
+            "block": "tfc:rock/gravel/gneiss"
           }
         ]
       },
@@ -54,221 +24,11 @@
       },
       {
         "replace": [
-          "minecraft:deepslate"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/nephelinite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/schist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/andesite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/phyllite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/phyllite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/granite"
         ],
         "with": [
           {
             "block": "tfc:rock/gravel/granite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/phonolite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/dolomite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scorchia"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/suevite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/argillite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/breccia"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/blackslag"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/chert"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/komatiite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/marble"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/basalt"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/gabbro"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/shale"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/slate"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/slate"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/arkose"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "tfc:rock/gravel/dacite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:rock/gravel/soapstone"
           }
         ]
       },
@@ -284,31 +44,31 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
-            "block": "tfc:rock/gravel/rhyolite"
+            "block": "modpack:rock/gravel/breccia"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/conglomerate"
+          "modpack:rock/raw/peridotite"
         ],
         "with": [
           {
-            "block": "tfc:rock/gravel/conglomerate"
+            "block": "modpack:rock/gravel/peridotite"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
+          "tfc:rock/raw/chert"
         ],
         "with": [
           {
-            "block": "tfc:rock/gravel/quartzite"
+            "block": "tfc:rock/gravel/chert"
           }
         ]
       },
@@ -324,21 +84,51 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
+          "tfc:rock/raw/diorite"
         ],
         "with": [
           {
-            "block": "modpack:rock/gravel/serpentine"
+            "block": "tfc:rock/gravel/diorite"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/chalk"
+          "tfc:rock/raw/gabbro"
         ],
         "with": [
           {
-            "block": "tfc:rock/gravel/chalk"
+            "block": "tfc:rock/gravel/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/suevite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/andesite"
           }
         ]
       },
@@ -354,21 +144,231 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gneiss"
+          "tfc:rock/raw/chalk"
         ],
         "with": [
           {
-            "block": "tfc:rock/gravel/gneiss"
+            "block": "tfc:rock/gravel/chalk"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/diorite"
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
-            "block": "tfc:rock/gravel/diorite"
+            "block": "tfc:rock/gravel/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/gravel/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:rock/gravel/sandstone"
           }
         ]
       }

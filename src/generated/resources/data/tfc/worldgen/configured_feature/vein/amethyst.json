@@ -4,31 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "caupona:felsic_tuff"
+          "tfc:rock/raw/marble"
         ],
         "with": [
           {
-            "block": "modpack:ore/amethyst/breccia"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/chalk"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/amethyst/arkose"
+            "block": "tfc:ore/amethyst/marble"
           }
         ]
       },
@@ -44,41 +24,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/phyllite"
+          "modpack:rock/raw/serpentine"
         ],
         "with": [
           {
-            "block": "tfc:ore/amethyst/phyllite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/dolomite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/conglomerate"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/amethyst/sandstone"
+            "block": "modpack:ore/amethyst/serpentine"
           }
         ]
       },
@@ -94,21 +44,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/tuff"
+          "create:limestone"
         ],
         "with": [
           {
-            "block": "tfc:ore/amethyst/tuff"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/claystone"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/claystone"
+            "block": "modpack:ore/amethyst/soapstone"
           }
         ]
       },
@@ -124,76 +64,6 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/amethyst/blueschist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/gneiss"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/amethyst/serpentine"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/marble"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/schist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/slate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/slate"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/amethyst/limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/shale"
         ],
         "with": [
@@ -204,21 +74,61 @@
       },
       {
         "replace": [
-          "create:limestone"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
-            "block": "modpack:ore/amethyst/soapstone"
+            "block": "modpack:ore/amethyst/breccia"
           }
         ]
       },
       {
         "replace": [
-          "create:scorchia"
+          "tfc:rock/raw/phyllite"
         ],
         "with": [
           {
-            "block": "modpack:ore/amethyst/suevite"
+            "block": "tfc:ore/amethyst/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/gneiss"
           }
         ]
       },
@@ -239,6 +149,96 @@
         "with": [
           {
             "block": "tfc:ore/amethyst/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/suevite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/amethyst/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/amethyst/tuff"
           }
         ]
       }

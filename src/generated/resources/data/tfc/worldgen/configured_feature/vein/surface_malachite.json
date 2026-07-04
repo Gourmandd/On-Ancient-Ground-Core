@@ -4,153 +4,20 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_malachite/limestone",
-            "weight": 70.0
-          },
-          {
-            "block": "tfc:ore/normal_malachite/limestone",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/rich_malachite/limestone",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_malachite/argillite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_malachite/argillite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_malachite/argillite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_malachite/dolomite",
-            "weight": 70.0
-          },
-          {
-            "block": "tfc:ore/normal_malachite/dolomite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/rich_malachite/dolomite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_malachite/marble",
-            "weight": 70.0
-          },
-          {
-            "block": "tfc:ore/normal_malachite/marble",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/rich_malachite/marble",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_malachite/travertine",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_malachite/travertine",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_malachite/travertine",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "quark:limestone"
         ],
         "with": [
           {
-            "block": "modpack:ore/poor_malachite/arkose",
-            "weight": 70.0
+            "block": "modpack:ore/rich_malachite/arkose",
+            "weight": 5.0
           },
           {
             "block": "modpack:ore/normal_malachite/arkose",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/rich_malachite/arkose",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_malachite/sandstone",
+            "block": "modpack:ore/poor_malachite/arkose",
             "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_malachite/sandstone",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_malachite/sandstone",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_malachite/red_sandstone",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_malachite/red_sandstone",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_malachite/red_sandstone",
-            "weight": 5.0
           }
         ]
       },
@@ -160,16 +27,73 @@
         ],
         "with": [
           {
-            "block": "tfc:ore/poor_malachite/chalk",
-            "weight": 70.0
+            "block": "tfc:ore/rich_malachite/chalk",
+            "weight": 5.0
           },
           {
             "block": "tfc:ore/normal_malachite/chalk",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/rich_malachite/chalk",
+            "block": "tfc:ore/poor_malachite/chalk",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_malachite/marble",
             "weight": 5.0
+          },
+          {
+            "block": "tfc:ore/normal_malachite/marble",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_malachite/marble",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_malachite/red_sandstone",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/red_sandstone",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_malachite/red_sandstone",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_malachite/travertine",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/travertine",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_malachite/travertine",
+            "weight": 70.0
           }
         ]
       },
@@ -179,16 +103,92 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/poor_malachite/breccia",
-            "weight": 70.0
+            "block": "modpack:ore/rich_malachite/breccia",
+            "weight": 5.0
           },
           {
             "block": "modpack:ore/normal_malachite/breccia",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/rich_malachite/breccia",
+            "block": "modpack:ore/poor_malachite/breccia",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_malachite/dolomite",
             "weight": 5.0
+          },
+          {
+            "block": "tfc:ore/normal_malachite/dolomite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_malachite/dolomite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_malachite/limestone",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:ore/normal_malachite/limestone",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_malachite/limestone",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_malachite/sandstone",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/sandstone",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_malachite/sandstone",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_malachite/argillite",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/argillite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_malachite/argillite",
+            "weight": 70.0
           }
         ]
       }

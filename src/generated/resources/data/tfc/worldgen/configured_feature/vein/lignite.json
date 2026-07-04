@@ -4,7 +4,7 @@
     "blocks": [
       {
         "replace": [
-          "quark:limestone"
+          "minecraft:stone"
         ],
         "with": [
           {
@@ -24,17 +24,7 @@
       },
       {
         "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "tfc:lignite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/tuff"
+          "tfc:rock/raw/claystone"
         ],
         "with": [
           {
@@ -54,7 +44,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/limestone"
+          "tfc:rock/raw/chalk"
         ],
         "with": [
           {
@@ -64,7 +54,27 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/claystone"
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "tfc:lignite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "tfc:lignite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/tuff"
         ],
         "with": [
           {
@@ -94,7 +104,7 @@
       },
       {
         "replace": [
-          "caupona:felsic_tuff"
+          "quark:limestone"
         ],
         "with": [
           {
@@ -104,7 +114,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/chalk"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
@@ -124,17 +134,7 @@
       },
       {
         "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "tfc:lignite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {

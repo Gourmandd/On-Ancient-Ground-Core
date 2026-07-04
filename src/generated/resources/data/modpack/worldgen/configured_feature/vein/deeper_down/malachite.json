@@ -47,7 +47,7 @@
       "middle_layer_provider": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "modpack:ore/malachite/arkose"
+          "Name": "modpack:ore/malachite/picrite_basalt"
         }
       },
       "outer_layer_provider": {

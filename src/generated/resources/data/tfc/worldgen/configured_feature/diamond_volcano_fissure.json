@@ -6,31 +6,11 @@
       "blocks": [
         {
           "replace": [
-            "modpack:rock/raw/serpentine"
+            "modpack:rock/raw/blueschist"
           ],
           "with": [
             {
-              "block": "modpack:ore/diamond/serpentine"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/slate"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/diamond/slate"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "spectrum:basal_marble"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/diamond/picrite_basalt"
+              "block": "modpack:ore/diamond/blueschist"
             }
           ]
         },
@@ -46,41 +26,81 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/gneiss"
+            "create:scoria"
           ],
           "with": [
             {
-              "block": "tfc:ore/diamond/gneiss"
+              "block": "modpack:ore/diamond/komatiite"
             }
           ]
         },
         {
           "replace": [
-            "modpack:rock/raw/blueschist"
+            "tfc:rock/raw/slate"
           ],
           "with": [
             {
-              "block": "modpack:ore/diamond/blueschist"
+              "block": "tfc:ore/diamond/slate"
             }
           ]
         },
         {
           "replace": [
-            "create:limestone"
+            "tfc:rock/raw/dacite"
           ],
           "with": [
             {
-              "block": "modpack:ore/diamond/soapstone"
+              "block": "tfc:ore/diamond/dacite"
             }
           ]
         },
         {
           "replace": [
-            "tfc:rock/raw/schist"
+            "tfc:rock/raw/gabbro"
           ],
           "with": [
             {
-              "block": "tfc:ore/diamond/schist"
+              "block": "tfc:ore/diamond/gabbro"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:basal_marble"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/diamond/picrite_basalt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "quark:shale"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/diamond/phonolite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/andesite"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/diamond/andesite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/rhyolite"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/diamond/rhyolite"
             }
           ]
         },
@@ -96,6 +116,16 @@
         },
         {
           "replace": [
+            "tfc:rock/raw/schist"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/diamond/schist"
+            }
+          ]
+        },
+        {
+          "replace": [
             "minecraft:deepslate"
           ],
           "with": [
@@ -106,21 +136,21 @@
         },
         {
           "replace": [
-            "modpack:rock/raw/peridotite"
+            "spectrum:blackslag"
           ],
           "with": [
             {
-              "block": "modpack:ore/diamond/peridotite"
+              "block": "modpack:ore/diamond/blackslag"
             }
           ]
         },
         {
           "replace": [
-            "tfc:rock/raw/rhyolite"
+            "tfc:rock/raw/phyllite"
           ],
           "with": [
             {
-              "block": "tfc:ore/diamond/rhyolite"
+              "block": "tfc:ore/diamond/phyllite"
             }
           ]
         },
@@ -146,76 +176,6 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/andesite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/diamond/andesite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/gabbro"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/diamond/gabbro"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/dacite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/diamond/dacite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "create:scoria"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/diamond/komatiite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "spectrum:blackslag"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/diamond/blackslag"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "quark:shale"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/diamond/phonolite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/phyllite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/diamond/phyllite"
-            }
-          ]
-        },
-        {
-          "replace": [
             "tfc:rock/raw/marble"
           ],
           "with": [
@@ -231,6 +191,46 @@
           "with": [
             {
               "block": "modpack:ore/diamond/suevite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "modpack:rock/raw/peridotite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/diamond/peridotite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:limestone"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/diamond/soapstone"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/gneiss"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/diamond/gneiss"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "modpack:rock/raw/serpentine"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/diamond/serpentine"
             }
           ]
         }

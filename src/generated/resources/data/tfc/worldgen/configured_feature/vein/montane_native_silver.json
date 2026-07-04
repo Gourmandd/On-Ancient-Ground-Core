@@ -4,39 +4,20 @@
     "blocks": [
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_native_silver/peridotite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:ore/normal_native_silver/peridotite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_native_silver/peridotite",
-            "weight": 5.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/diorite"
         ],
         "with": [
           {
-            "block": "tfc:ore/poor_native_silver/diorite",
-            "weight": 70.0
+            "block": "tfc:ore/rich_native_silver/diorite",
+            "weight": 5.0
           },
           {
             "block": "tfc:ore/normal_native_silver/diorite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/rich_native_silver/diorite",
-            "weight": 5.0
+            "block": "tfc:ore/poor_native_silver/diorite",
+            "weight": 70.0
           }
         ]
       },
@@ -46,16 +27,35 @@
         ],
         "with": [
           {
-            "block": "tfc:ore/poor_native_silver/granite",
-            "weight": 70.0
+            "block": "tfc:ore/rich_native_silver/granite",
+            "weight": 5.0
           },
           {
             "block": "tfc:ore/normal_native_silver/granite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/rich_native_silver/granite",
+            "block": "tfc:ore/poor_native_silver/granite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_native_silver/peridotite",
             "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_native_silver/peridotite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_native_silver/peridotite",
+            "weight": 70.0
           }
         ]
       }

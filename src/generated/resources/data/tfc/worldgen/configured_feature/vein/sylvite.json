@@ -4,11 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "quark:jasper"
+          "minecraft:stone"
         ],
         "with": [
           {
-            "block": "modpack:ore/sylvite/red_sandstone"
+            "block": "modpack:ore/sylvite/argillite"
           }
         ]
       },
@@ -19,16 +19,6 @@
         "with": [
           {
             "block": "tfc:ore/sylvite/chert"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/sylvite/arkose"
           }
         ]
       },
@@ -54,11 +44,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/shale"
+          "quark:limestone"
         ],
         "with": [
           {
-            "block": "tfc:ore/sylvite/shale"
+            "block": "modpack:ore/sylvite/arkose"
           }
         ]
       },
@@ -74,11 +64,21 @@
       },
       {
         "replace": [
-          "minecraft:stone"
+          "quark:jasper"
         ],
         "with": [
           {
-            "block": "modpack:ore/sylvite/argillite"
+            "block": "modpack:ore/sylvite/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sylvite/shale"
           }
         ]
       }

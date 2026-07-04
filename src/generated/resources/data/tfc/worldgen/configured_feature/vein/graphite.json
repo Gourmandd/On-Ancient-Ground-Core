@@ -14,16 +14,6 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/graphite/schist"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/gneiss"
         ],
         "with": [
@@ -44,11 +34,11 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
+          "tfc:rock/raw/schist"
         ],
         "with": [
           {
-            "block": "modpack:ore/graphite/blueschist"
+            "block": "tfc:ore/graphite/schist"
           }
         ]
       },
@@ -59,6 +49,16 @@
         "with": [
           {
             "block": "modpack:ore/graphite/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/graphite/blueschist"
           }
         ]
       }

@@ -4,46 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/diorite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/pyrite/diorite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/pyrite/andesite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/pyrite/basalt"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/pyrite/phonolite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "spectrum:blackslag"
         ],
         "with": [
@@ -54,31 +14,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
+          "tfc:rock/raw/basalt"
         ],
         "with": [
           {
-            "block": "tfc:ore/pyrite/rhyolite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/pyrite/picrite_basalt"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/pyrite/peridotite"
+            "block": "tfc:ore/pyrite/basalt"
           }
         ]
       },
@@ -104,11 +44,71 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "create:scoria"
         ],
         "with": [
           {
             "block": "modpack:ore/pyrite/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/phonolite"
           }
         ]
       },
@@ -124,11 +124,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/granite"
+          "modpack:rock/raw/peridotite"
         ],
         "with": [
           {
-            "block": "tfc:ore/pyrite/granite"
+            "block": "modpack:ore/pyrite/peridotite"
           }
         ]
       }
