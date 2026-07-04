@@ -1,0 +1,154 @@
+{
+  "type": "tfc:disc_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/gypsum/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/gypsum/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/gypsum/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/gypsum/breccia"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/tuff"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/gypsum/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/gypsum/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/dolomite"
+          }
+        ]
+      }
+    ],
+    "density": 0.3,
+    "height": 5,
+    "max_y": 100,
+    "min_y": 40,
+    "random_name": -5149920971313775778,
+    "rarity": 70,
+    "size": 25
+  }
+}

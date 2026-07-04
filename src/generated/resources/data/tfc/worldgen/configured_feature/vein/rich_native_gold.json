@@ -1,0 +1,100 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_native_gold/peridotite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_native_gold/peridotite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/rich_native_gold/peridotite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/granite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/granite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/granite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/gabbro",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/gabbro",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/gabbro",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/diorite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/diorite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/diorite",
+            "weight": 60.0
+          }
+        ]
+      }
+    ],
+    "density": 0.5,
+    "indicator": {
+      "blocks": [
+        {
+          "block": "tfc:ore/small_native_gold"
+        }
+      ],
+      "depth": 35,
+      "rarity": 0,
+      "underground_count": 4,
+      "underground_rarity": 1
+    },
+    "max_y": 20,
+    "min_y": -80,
+    "random_name": 4846502635945908675,
+    "rarity": 50,
+    "size": 40
+  }
+}

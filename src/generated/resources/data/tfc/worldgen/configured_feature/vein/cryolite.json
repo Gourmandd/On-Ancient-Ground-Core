@@ -1,0 +1,43 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/peridotite"
+          }
+        ]
+      }
+    ],
+    "density": 0.7,
+    "max_y": -10,
+    "min_y": -70,
+    "random_name": 1007124230160234141,
+    "rarity": 16,
+    "size": 18
+  }
+}

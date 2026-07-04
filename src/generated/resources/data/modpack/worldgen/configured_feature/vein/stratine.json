@@ -14,61 +14,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/phyllite"
+          "tfc:rock/raw/slate"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/phyllite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/schist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/quartzite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/gneiss"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scorchia"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/suevite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/marble"
+            "block": "modpack:ore/shimmerstone/slate"
           }
         ]
       },
@@ -94,11 +44,61 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/slate"
+          "create:scorchia"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/slate"
+            "block": "modpack:ore/shimmerstone/suevite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/schist"
           }
         ]
       }

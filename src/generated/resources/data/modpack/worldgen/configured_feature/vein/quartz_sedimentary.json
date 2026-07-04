@@ -4,67 +4,7 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/claystone"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
+          "quark:limestone"
         ],
         "with": [
           {
@@ -84,7 +24,17 @@
       },
       {
         "replace": [
-          "quark:limestone"
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
         ],
         "with": [
           {
@@ -114,6 +64,16 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
           "caupona:felsic_tuff"
         ],
         "with": [
@@ -124,7 +84,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/chalk"
+          "tfc:rock/raw/conglomerate"
         ],
         "with": [
           {
@@ -134,7 +94,47 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/tuff"
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
         ],
         "with": [
           {

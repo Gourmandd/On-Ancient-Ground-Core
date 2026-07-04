@@ -1,0 +1,100 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_garnierite/diorite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_garnierite/diorite",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_garnierite/diorite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_garnierite/granite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_garnierite/granite",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_garnierite/granite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_garnierite/peridotite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_garnierite/peridotite",
+            "weight": 40.0
+          },
+          {
+            "block": "modpack:ore/rich_garnierite/peridotite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_garnierite/gabbro",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_garnierite/gabbro",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_garnierite/gabbro",
+            "weight": 25.0
+          }
+        ]
+      }
+    ],
+    "density": 0.3,
+    "indicator": {
+      "blocks": [
+        {
+          "block": "tfc:ore/small_garnierite"
+        }
+      ],
+      "depth": 35,
+      "rarity": 12,
+      "underground_count": 0,
+      "underground_rarity": 1
+    },
+    "max_y": 0,
+    "min_y": -80,
+    "random_name": 316551294360410003,
+    "rarity": 25,
+    "size": 18
+  }
+}

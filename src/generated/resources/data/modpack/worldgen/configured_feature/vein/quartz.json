@@ -4,16 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/quartzite"
         ],
         "with": [
@@ -35,6 +25,16 @@
       {
         "replace": [
           "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
         ],
         "with": [
           {

@@ -4,36 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/chalk"
         ],
         "with": [
@@ -54,7 +24,7 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
@@ -64,7 +34,37 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/limestone"
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
         ],
         "with": [
           {

@@ -1,0 +1,143 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/granite"
+          }
+        ]
+      }
+    ],
+    "density": 0.35,
+    "max_y": 70,
+    "min_y": -50,
+    "random_name": 5838151174449547,
+    "rarity": 16,
+    "size": 15
+  }
+}

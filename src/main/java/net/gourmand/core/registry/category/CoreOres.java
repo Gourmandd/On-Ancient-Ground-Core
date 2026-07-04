@@ -158,20 +158,7 @@ public enum CoreOres implements RegistryOre {
     public Block getOreBlock(RegistryRock rock, @Nullable CoreOres.Grade grade) {
 
         if (this.type == Type.ITEM_ONLY){
-            switch (this){
-                case QUARTZ -> {
-                    return CoreBlocks.BASIC_ORES.get(QUARTZ).get();
-                }
-                case METEORIC_IRON -> {
-                    return CoreBlocks.BASIC_ORES.get(METEORIC_IRON).get();
-                }
-                case ANTHRACITE -> {
-                    return CoreBlocks.BASIC_ORES.get(ANTHRACITE).get();
-                }
-                case BAUXITE -> {
-                    return CoreBlocks.BASIC_ORES.get(BAUXITE).get();
-                }
-            }
+            return CoreBlocks.BASIC_ORES.get(this).get();
         }
 
         assert rock instanceof Rock || rock instanceof CoreRocks;

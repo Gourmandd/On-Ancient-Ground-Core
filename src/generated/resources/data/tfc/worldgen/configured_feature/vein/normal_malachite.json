@@ -1,0 +1,214 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_malachite/marble",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_malachite/marble",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_malachite/marble",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_malachite/dolomite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_malachite/dolomite",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_malachite/dolomite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_malachite/breccia",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/breccia",
+            "weight": 40.0
+          },
+          {
+            "block": "modpack:ore/rich_malachite/breccia",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_malachite/limestone",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_malachite/limestone",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_malachite/limestone",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_malachite/argillite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/argillite",
+            "weight": 40.0
+          },
+          {
+            "block": "modpack:ore/rich_malachite/argillite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_malachite/arkose",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/arkose",
+            "weight": 40.0
+          },
+          {
+            "block": "modpack:ore/rich_malachite/arkose",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_malachite/red_sandstone",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/red_sandstone",
+            "weight": 40.0
+          },
+          {
+            "block": "modpack:ore/rich_malachite/red_sandstone",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_malachite/travertine",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/travertine",
+            "weight": 40.0
+          },
+          {
+            "block": "modpack:ore/rich_malachite/travertine",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_malachite/chalk",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_malachite/chalk",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_malachite/chalk",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_malachite/sandstone",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/sandstone",
+            "weight": 40.0
+          },
+          {
+            "block": "modpack:ore/rich_malachite/sandstone",
+            "weight": 25.0
+          }
+        ]
+      }
+    ],
+    "density": 0.5,
+    "indicator": {
+      "blocks": [
+        {
+          "block": "tfc:ore/small_malachite"
+        }
+      ],
+      "depth": 35,
+      "rarity": 25,
+      "underground_count": 0,
+      "underground_rarity": 1
+    },
+    "max_y": 70,
+    "min_y": -30,
+    "random_name": -1960671398592249157,
+    "rarity": 45,
+    "size": 30
+  }
+}

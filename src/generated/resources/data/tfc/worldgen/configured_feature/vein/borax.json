@@ -1,0 +1,94 @@
+{
+  "type": "tfc:disc_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/borax/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/borax/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/borax/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/borax/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/borax/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/borax/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/borax/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/borax/chert"
+          }
+        ]
+      }
+    ],
+    "density": 0.2,
+    "height": 3,
+    "max_y": 100,
+    "min_y": 40,
+    "random_name": 2267272844763000749,
+    "rarity": 40,
+    "size": 23
+  }
+}

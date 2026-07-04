@@ -1,0 +1,63 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/lapis_lazuli/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/lapis_lazuli/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/lapis_lazuli/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/lapis_lazuli/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/lapis_lazuli/limestone"
+          }
+        ]
+      }
+    ],
+    "density": 0.12,
+    "max_y": 80,
+    "min_y": -20,
+    "random_name": -3812252315456802163,
+    "rarity": 30,
+    "size": 30
+  }
+}

@@ -4,71 +4,21 @@
     "blocks": [
       {
         "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/komatiite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:deepslate"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/nephelinite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/dacite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/andesite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/rhyolite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/phonolite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "spectrum:blackslag"
         ],
         "with": [
           {
             "block": "modpack:ore/shimmerstone/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/komatiite"
           }
         ]
       },
@@ -89,6 +39,56 @@
         "with": [
           {
             "block": "modpack:ore/shimmerstone/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/nephelinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/andesite"
           }
         ]
       }

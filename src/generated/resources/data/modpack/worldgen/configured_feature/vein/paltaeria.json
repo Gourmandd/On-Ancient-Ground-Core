@@ -4,6 +4,26 @@
     "blocks": [
       {
         "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "minecraft:deepslate"
         ],
         "with": [
@@ -19,6 +39,36 @@
         "with": [
           {
             "block": "modpack:ore/paltaeria/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/paltaeria/komatiite"
           }
         ]
       },
@@ -54,36 +104,6 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/paltaeria/granite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/paltaeria/komatiite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/paltaeria/basalt"
-          }
-        ]
-      },
-      {
-        "replace": [
           "spectrum:blackslag"
         ],
         "with": [
@@ -94,31 +114,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/dacite"
+          "tfc:rock/raw/basalt"
         ],
         "with": [
           {
-            "block": "modpack:ore/paltaeria/dacite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/paltaeria/peridotite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/paltaeria/rhyolite"
+            "block": "modpack:ore/paltaeria/basalt"
           }
         ]
       },

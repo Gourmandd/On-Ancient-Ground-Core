@@ -1,0 +1,59 @@
+{
+  "type": "tfc:pipe_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/emerald/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/emerald/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/emerald/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/emerald/gabbro"
+          }
+        ]
+      }
+    ],
+    "density": 0.15,
+    "height": 5,
+    "max_skew": 13,
+    "max_slant": 2,
+    "max_y": 100,
+    "min_skew": 5,
+    "min_slant": 0,
+    "min_y": -64,
+    "radius": 5,
+    "random_name": 3218627236084056165,
+    "rarity": 80,
+    "sign": 0.0
+  }
+}

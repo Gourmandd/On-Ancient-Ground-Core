@@ -1,0 +1,361 @@
+{
+  "type": "tfc:disc_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/marble",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/rhyolite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/phyllite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/granite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/serpentine",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/dacite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/peridotite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/suevite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/andesite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/nephelinite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/schist",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/gneiss",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/blueschist",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/komatiite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/phonolite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/slate",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/quartzite",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/blackslag",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/soapstone",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/basalt",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "modpack:ore/ruby/picrite_basalt",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/gabbro",
+            "weight": 6.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:rock/raw/marble",
+            "weight": 94.0
+          },
+          {
+            "block": "tfc:ore/ruby/diorite",
+            "weight": 6.0
+          }
+        ]
+      }
+    ],
+    "density": 1.0,
+    "height": 5,
+    "max_y": -4,
+    "min_y": -40,
+    "project": true,
+    "project_offset": true,
+    "random_name": 5608628875141964894,
+    "rarity": 16,
+    "size": 50
+  }
+}

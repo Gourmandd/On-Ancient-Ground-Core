@@ -1,0 +1,116 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_cassiterite/granite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/granite",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/granite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:deposit/cassiterite/granite",
+            "weight": 10.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_cassiterite/diorite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/diorite",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/diorite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:deposit/cassiterite/diorite",
+            "weight": 10.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_cassiterite/gabbro",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/gabbro",
+            "weight": 40.0
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/gabbro",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:deposit/cassiterite/gabbro",
+            "weight": 10.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_cassiterite/peridotite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_cassiterite/peridotite",
+            "weight": 40.0
+          },
+          {
+            "block": "modpack:ore/rich_cassiterite/peridotite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:deposit/cassiterite/peridotite",
+            "weight": 10.0
+          }
+        ]
+      }
+    ],
+    "density": 0.4,
+    "indicator": {
+      "blocks": [
+        {
+          "block": "tfc:ore/small_cassiterite"
+        }
+      ],
+      "depth": 35,
+      "rarity": 12,
+      "underground_count": 0,
+      "underground_rarity": 1
+    },
+    "max_y": 300,
+    "min_y": 80,
+    "random_name": -1256602107024324149,
+    "rarity": 2,
+    "size": 15
+  }
+}

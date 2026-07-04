@@ -1,0 +1,100 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/gabbro",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/gabbro",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/gabbro",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/diorite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/diorite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/diorite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/granite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/granite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/granite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_native_silver/peridotite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_native_silver/peridotite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_native_silver/peridotite",
+            "weight": 60.0
+          }
+        ]
+      }
+    ],
+    "density": 0.6,
+    "indicator": {
+      "blocks": [
+        {
+          "block": "tfc:ore/small_sphalerite"
+        }
+      ],
+      "depth": 35,
+      "rarity": 0,
+      "underground_count": 5,
+      "underground_rarity": 1
+    },
+    "max_y": 20,
+    "min_y": -80,
+    "random_name": -2643754510653610130,
+    "rarity": 45,
+    "size": 40
+  }
+}

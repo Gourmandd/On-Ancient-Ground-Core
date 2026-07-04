@@ -4,16 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "create:limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/marble"
         ],
         "with": [
@@ -24,7 +14,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/slate"
+          "modpack:rock/raw/serpentine"
         ],
         "with": [
           {
@@ -44,7 +34,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/schist"
+          "tfc:rock/raw/gneiss"
         ],
         "with": [
           {
@@ -55,6 +45,36 @@
       {
         "replace": [
           "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "create:limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "create:limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "create:limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
         ],
         "with": [
           {
@@ -75,26 +95,6 @@
       {
         "replace": [
           "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "create:limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "create:limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/phyllite"
         ],
         "with": [
           {

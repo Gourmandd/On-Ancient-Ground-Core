@@ -6,11 +6,21 @@
       "blocks": [
         {
           "replace": [
-            "modpack:rock/raw/serpentine"
+            "minecraft:deepslate"
           ],
           "with": [
             {
-              "block": "modpack:ore/emerald/serpentine"
+              "block": "modpack:ore/emerald/nephelinite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/rhyolite"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/emerald/rhyolite"
             }
           ]
         },
@@ -26,21 +36,11 @@
         },
         {
           "replace": [
-            "create:scorchia"
+            "modpack:rock/raw/blueschist"
           ],
           "with": [
             {
-              "block": "modpack:ore/emerald/suevite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "create:limestone"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/emerald/soapstone"
+              "block": "modpack:ore/emerald/blueschist"
             }
           ]
         },
@@ -51,6 +51,46 @@
           "with": [
             {
               "block": "tfc:ore/emerald/slate"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/gabbro"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/emerald/gabbro"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/marble"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/emerald/marble"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/gneiss"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/emerald/gneiss"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/dacite"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/emerald/dacite"
             }
           ]
         },
@@ -76,21 +116,61 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/andesite"
+            "tfc:rock/raw/quartzite"
           ],
           "with": [
             {
-              "block": "tfc:ore/emerald/andesite"
+              "block": "tfc:ore/emerald/quartzite"
             }
           ]
         },
         {
           "replace": [
-            "tfc:rock/raw/basalt"
+            "modpack:rock/raw/serpentine"
           ],
           "with": [
             {
-              "block": "tfc:ore/emerald/basalt"
+              "block": "modpack:ore/emerald/serpentine"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:scorchia"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/emerald/suevite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:limestone"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/emerald/soapstone"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/diorite"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/emerald/diorite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "quark:shale"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/emerald/phonolite"
             }
           ]
         },
@@ -126,56 +206,6 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/gabbro"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/emerald/gabbro"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/dacite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/emerald/dacite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/rhyolite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/emerald/rhyolite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "minecraft:deepslate"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/emerald/nephelinite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/marble"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/emerald/marble"
-            }
-          ]
-        },
-        {
-          "replace": [
             "tfc:rock/raw/phyllite"
           ],
           "with": [
@@ -186,51 +216,21 @@
         },
         {
           "replace": [
-            "modpack:rock/raw/blueschist"
+            "tfc:rock/raw/andesite"
           ],
           "with": [
             {
-              "block": "modpack:ore/emerald/blueschist"
+              "block": "tfc:ore/emerald/andesite"
             }
           ]
         },
         {
           "replace": [
-            "tfc:rock/raw/diorite"
+            "tfc:rock/raw/basalt"
           ],
           "with": [
             {
-              "block": "tfc:ore/emerald/diorite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "quark:shale"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/emerald/phonolite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/quartzite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/emerald/quartzite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/gneiss"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/emerald/gneiss"
+              "block": "tfc:ore/emerald/basalt"
             }
           ]
         }

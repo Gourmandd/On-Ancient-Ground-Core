@@ -4,7 +4,7 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:dripstone_block"
+          "modpack:rock/raw/serpentine"
         ],
         "with": [
           {
@@ -12,384 +12,12 @@
             "weight": 65.0
           },
           {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
             "block": "modpack:meteoric_iron",
-            "weight": 75.0
+            "weight": 5.0
           },
           {
-            "block": "modpack:rock/gravel/travertine",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/blackslag",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/blueschist",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scorchia"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/sandstone",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/dolomite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/arkose",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/argillite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/claystone"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/claystone",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/granite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:deepslate"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/nephelinite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/dacite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/schist",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/limestone",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/quartzite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/gneiss",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/chert",
-            "weight": 100.0
+            "block": "modpack:rock/gravel/serpentine",
+            "weight": 25.0
           }
         ]
       },
@@ -403,223 +31,12 @@
             "weight": 65.0
           },
           {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
             "block": "modpack:meteoric_iron",
-            "weight": 75.0
+            "weight": 5.0
           },
           {
             "block": "modpack:rock/gravel/peridotite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/phyllite"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/phyllite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/conglomerate",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/diorite"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/diorite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/komatiite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/picrite_basalt",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/andesite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/basalt",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/phonolite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/red_sandstone",
-            "weight": 100.0
+            "weight": 25.0
           }
         ]
       },
@@ -633,16 +50,69 @@
             "weight": 65.0
           },
           {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
             "block": "modpack:meteoric_iron",
-            "weight": 75.0
+            "weight": 5.0
           },
           {
             "block": "tfc:rock/gravel/marble",
-            "weight": 100.0
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/phyllite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/blackslag",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/argillite",
+            "weight": 25.0
           }
         ]
       },
@@ -656,22 +126,18 @@
             "weight": 65.0
           },
           {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
             "block": "modpack:meteoric_iron",
-            "weight": 75.0
+            "weight": 5.0
           },
           {
             "block": "tfc:rock/gravel/gabbro",
-            "weight": 100.0
+            "weight": 25.0
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
+          "tfc:rock/raw/diorite"
         ],
         "with": [
           {
@@ -679,154 +145,12 @@
             "weight": 65.0
           },
           {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
             "block": "modpack:meteoric_iron",
-            "weight": 75.0
+            "weight": 5.0
           },
           {
-            "block": "tfc:rock/gravel/rhyolite",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/serpentine",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/breccia",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/slate"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/slate",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/tuff"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/tuff",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:limestone"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "modpack:rock/gravel/soapstone",
-            "weight": 100.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
-        ],
-        "with": [
-          {
-            "block": "create:scorchia",
-            "weight": 65.0
-          },
-          {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
-            "block": "modpack:meteoric_iron",
-            "weight": 75.0
-          },
-          {
-            "block": "tfc:rock/gravel/chalk",
-            "weight": 100.0
+            "block": "tfc:rock/gravel/diorite",
+            "weight": 25.0
           }
         ]
       },
@@ -840,16 +164,544 @@
             "weight": 65.0
           },
           {
-            "block": "modpack:rock/gravel/suevite",
-            "weight": 70.0
-          },
-          {
             "block": "modpack:meteoric_iron",
-            "weight": 75.0
+            "weight": 5.0
           },
           {
             "block": "tfc:rock/gravel/shale",
-            "weight": 100.0
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/gneiss",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/nephelinite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/slate",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/andesite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/claystone",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/dacite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/chalk",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/phonolite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/quartzite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/dolomite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/soapstone",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/basalt",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/arkose",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/schist",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/rhyolite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/granite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/komatiite",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/travertine",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/conglomerate",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/chert",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/blueschist",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/sandstone",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/limestone",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/breccia",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/picrite_basalt",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/red_sandstone",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:rock/gravel/tuff",
+            "weight": 25.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
+        ],
+        "with": [
+          {
+            "block": "create:scorchia",
+            "weight": 65.0
+          },
+          {
+            "block": "modpack:meteoric_iron",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:rock/gravel/suevite",
+            "weight": 25.0
           }
         ]
       }

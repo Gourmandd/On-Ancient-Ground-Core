@@ -1,0 +1,73 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/cinnabar/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/cinnabar/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/quartzite"
+          }
+        ]
+      }
+    ],
+    "density": 0.6,
+    "max_y": 280,
+    "min_y": 120,
+    "random_name": 3506303399986452764,
+    "rarity": 14,
+    "size": 14
+  }
+}

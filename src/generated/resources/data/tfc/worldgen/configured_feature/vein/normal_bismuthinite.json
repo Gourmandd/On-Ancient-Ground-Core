@@ -1,0 +1,195 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_bismuthinite/komatiite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_bismuthinite/komatiite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_bismuthinite/komatiite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/andesite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/andesite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/andesite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/basalt",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/basalt",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_bismuthinite/phonolite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_bismuthinite/phonolite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_bismuthinite/phonolite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_bismuthinite/blackslag",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_bismuthinite/blackslag",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_bismuthinite/blackslag",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/rhyolite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/rhyolite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/rhyolite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_bismuthinite/picrite_basalt",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_bismuthinite/picrite_basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_bismuthinite/picrite_basalt",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/dacite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/dacite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/dacite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_bismuthinite/nephelinite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_bismuthinite/nephelinite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_bismuthinite/nephelinite",
+            "weight": 60.0
+          }
+        ]
+      }
+    ],
+    "density": 0.6,
+    "indicator": {
+      "blocks": [
+        {
+          "block": "tfc:ore/small_bismuthinite"
+        }
+      ],
+      "depth": 35,
+      "rarity": 0,
+      "underground_count": 4,
+      "underground_rarity": 1
+    },
+    "max_y": 20,
+    "min_y": -80,
+    "random_name": 8007334944407248781,
+    "rarity": 45,
+    "size": 40
+  }
+}

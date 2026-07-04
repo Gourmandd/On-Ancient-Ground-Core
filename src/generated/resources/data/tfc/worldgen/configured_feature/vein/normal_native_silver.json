@@ -1,0 +1,119 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/granite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/granite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/granite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/diorite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/diorite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/diorite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/gneiss",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/gneiss",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/gneiss",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/schist",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/schist",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/schist",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_native_silver/peridotite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_native_silver/peridotite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_native_silver/peridotite",
+            "weight": 60.0
+          }
+        ]
+      }
+    ],
+    "density": 0.6,
+    "indicator": {
+      "blocks": [
+        {
+          "block": "tfc:ore/small_native_silver"
+        }
+      ],
+      "depth": 35,
+      "rarity": 0,
+      "underground_count": 9,
+      "underground_rarity": 1
+    },
+    "max_y": 20,
+    "min_y": -80,
+    "random_name": 3210842245469444243,
+    "rarity": 25,
+    "size": 25
+  }
+}

@@ -4,21 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/chert"
+          "minecraft:deepslate"
         ],
         "with": [
           {
-            "block": "minecraft:orange_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "minecraft:brown_terracotta"
+            "block": "minecraft:black_terracotta"
           }
         ]
       },
@@ -34,111 +24,11 @@
       },
       {
         "replace": [
-          "quark:limestone"
+          "tfc:rock/raw/gneiss"
         ],
         "with": [
           {
             "block": "minecraft:brown_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "minecraft:white_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "minecraft:blue_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "minecraft:red_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "minecraft:purple_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:gray_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "minecraft:black_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/diorite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:white_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
-        ],
-        "with": [
-          {
-            "block": "minecraft:white_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:magenta_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:pink_terracotta"
           }
         ]
       },
@@ -154,21 +44,31 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gneiss"
+          "tfc:rock/raw/tuff"
         ],
         "with": [
           {
-            "block": "minecraft:brown_terracotta"
+            "block": "minecraft:yellow_terracotta"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/limestone"
+          "create:scorchia"
         ],
         "with": [
           {
-            "block": "minecraft:yellow_terracotta"
+            "block": "minecraft:black_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "minecraft:brown_terracotta"
           }
         ]
       },
@@ -184,57 +84,7 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "minecraft:green_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:lime_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/tuff"
-        ],
-        "with": [
-          {
-            "block": "minecraft:yellow_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:light_gray_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "minecraft:yellow_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:limestone"
+          "tfc:rock/raw/marble"
         ],
         "with": [
           {
@@ -244,7 +94,57 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/conglomerate"
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "minecraft:gray_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "minecraft:red_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:green_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:light_gray_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:gray_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
         ],
         "with": [
           {
@@ -264,17 +164,97 @@
       },
       {
         "replace": [
-          "minecraft:deepslate"
+          "create:scoria"
         ],
         "with": [
           {
-            "block": "minecraft:black_terracotta"
+            "block": "minecraft:orange_terracotta"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/dacite"
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:pink_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:light_gray_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "minecraft:orange_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "minecraft:yellow_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "minecraft:brown_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "minecraft:green_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:lime_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:magenta_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
         ],
         "with": [
           {
@@ -294,47 +274,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:pink_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "minecraft:gray_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "minecraft:green_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "minecraft:orange_terracotta"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scorchia"
+          "spectrum:blackslag"
         ],
         "with": [
           {
@@ -344,17 +284,17 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/phyllite"
+          "tfc:rock/raw/granite"
         ],
         "with": [
           {
-            "block": "minecraft:green_terracotta"
+            "block": "minecraft:pink_terracotta"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/marble"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
@@ -364,11 +304,71 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/slate"
+          "tfc:rock/raw/diorite"
         ],
         "with": [
           {
-            "block": "minecraft:light_gray_terracotta"
+            "block": "minecraft:white_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "minecraft:yellow_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "minecraft:green_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "minecraft:white_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "minecraft:blue_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "minecraft:white_terracotta"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "minecraft:purple_terracotta"
           }
         ]
       }
