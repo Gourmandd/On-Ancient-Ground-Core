@@ -47,6 +47,8 @@ import java.util.*;
 import java.util.stream.Stream;
 
 public class BuiltinConfiguredFeatures  {
+    // Some features are commented out, and their generated jsons are moved to the non-datagenned data directories.
+    // Each time they generate, the order of the maps is different, this is so that git doesn't bother with them each time data gen is run.
 
     public static BootstrapContext<ConfiguredFeature<?, ?>> CTX;
 
@@ -373,6 +375,8 @@ public class BuiltinConfiguredFeatures  {
         );
         //endregion
 
+        // See notice at the top of the class.
+        /*
         //region Ore Veins
         createDiscVein(ANTHRACITE, 30, 3, new VeinConfig(
                 createOreVeinMap(List.of(RockCategory.METAMORPHIC), List.of(), CoreOres.ANTHRACITE),
@@ -580,6 +584,7 @@ public class BuiltinConfiguredFeatures  {
                 false
         ));
         //endregion
+         */
     }
 
     private static void bootstrapTFCFeatures(){
@@ -597,7 +602,7 @@ public class BuiltinConfiguredFeatures  {
         createSoilDisc(NATIVE_SILVER_DEEP_DEPOSIT, createDepositMap(OreDeposit.NATIVE_SILVER), 3, 10, 3, 0.9f);
         createSoilDisc(NATIVE_SILVER_DEPOSIT, createDepositMap(OreDeposit.NATIVE_SILVER), 1, 3, 2, 0.9f);
 
-        createCaveVegetation();
+        //createCaveVegetation(); // See notice at the top of the class.
 
         createBoulder(COBBLE_BOULDER, List.of(Rock.BlockType.RAW, Rock.BlockType.COBBLE), false);
         createBoulder(COBBLE_BOULDER_SMALL, List.of(Rock.BlockType.RAW, Rock.BlockType.COBBLE), true);
@@ -608,16 +613,17 @@ public class BuiltinConfiguredFeatures  {
         createBoulder(RAW_BOULDER, List.of(Rock.BlockType.RAW), false);
         createBoulder(RAW_BOULDER_SMALL, List.of(Rock.BlockType.RAW), true);
 
-        createFissure(DIAMOND_VOLCANO_FISSURE, Ore.DIAMOND, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), Blocks.LAVA.defaultBlockState(), 3, 6, 3, 6, 3);
-        createFissure(TOPAZ_VOLCANO_FISSURE, Ore.TOPAZ, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), Blocks.LAVA.defaultBlockState(), 3, 6, 3, 6, 3);
-        createFissure(EMERALD_VOLCANO_SPRING_WATER_FISSURE, Ore.EMERALD, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 3, 6, 3, 6, 3);
-        createFissure(SAPPHIRE_VOLCANO_SPRING_WATER_FISSURE, Ore.SAPPHIRE, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 3, 6, 3, 6, 3);
+        // See notice at the top of the class.
+        //createFissure(DIAMOND_VOLCANO_FISSURE, Ore.DIAMOND, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), Blocks.LAVA.defaultBlockState(), 3, 6, 3, 6, 3);
+        //createFissure(TOPAZ_VOLCANO_FISSURE, Ore.TOPAZ, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), Blocks.LAVA.defaultBlockState(), 3, 6, 3, 6, 3);
+        //createFissure(EMERALD_VOLCANO_SPRING_WATER_FISSURE, Ore.EMERALD, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 3, 6, 3, 6, 3);
+        //createFissure(SAPPHIRE_VOLCANO_SPRING_WATER_FISSURE, Ore.SAPPHIRE, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 3, 6, 3, 6, 3);
 
-        createHotSpring(EMERALD_EMPTY_HOT_SPRING, Ore.EMERALD, Optional.empty(), Blocks.AIR.defaultBlockState(), 14, 5, 2, 3);
-        createHotSpring(EMERALD_HOT_SPRING, Ore.EMERALD, Optional.empty(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 14, 5, 5, 3);
-        createHotSpring(LAVA_HOT_SPRING, null, Optional.empty(), Blocks.LAVA.defaultBlockState(), 10, 0, 0, 0, true, createLavaHotSpringMap());
-        createHotSpring(SAPPHIRE_EMPTY_HOT_SPRING, Ore.SAPPHIRE, Optional.empty(), Blocks.AIR.defaultBlockState(), 14, 5, 5, 3);
-        createHotSpring(SAPPHIRE_HOT_SPRING, Ore.SAPPHIRE, Optional.empty(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 14, 5, 2, 3);
+        //createHotSpring(EMERALD_EMPTY_HOT_SPRING, Ore.EMERALD, Optional.empty(), Blocks.AIR.defaultBlockState(), 14, 5, 2, 3);
+        //createHotSpring(EMERALD_HOT_SPRING, Ore.EMERALD, Optional.empty(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 14, 5, 5, 3);
+        //createHotSpring(LAVA_HOT_SPRING, null, Optional.empty(), Blocks.LAVA.defaultBlockState(), 10, 0, 0, 0, true, createLavaHotSpringMap());
+        //createHotSpring(SAPPHIRE_EMPTY_HOT_SPRING, Ore.SAPPHIRE, Optional.empty(), Blocks.AIR.defaultBlockState(), 14, 5, 5, 3);
+        //createHotSpring(SAPPHIRE_HOT_SPRING, Ore.SAPPHIRE, Optional.empty(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 14, 5, 2, 3);
 
         createSpring(EXTRA_WATER_SURFACE_SPRING, Fluids.WATER.defaultFluidState());
         createSpring(LAVA_SPRING, Fluids.LAVA.defaultFluidState());
@@ -630,6 +636,8 @@ public class BuiltinConfiguredFeatures  {
 
         List<RegistryRock> malachiteFoundIn = List.of(Rock.MARBLE, Rock.LIMESTONE, Rock.DOLOMITE, Rock.CHALK, CoreRocks.SANDSTONE, CoreRocks.RED_SANDSTONE, CoreRocks.ARKOSE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE);
 
+        // See notice at the top of the class.
+        /*
         //region Ore Vein Features
         createDiscVein(AMETHYST, 8, 4, new VeinConfig(
                 createOreVeinMap(List.of(RockCategory.SEDIMENTARY, RockCategory.METAMORPHIC), List.of(), TFCOres.AMETHYST),
@@ -1292,6 +1300,7 @@ public class BuiltinConfiguredFeatures  {
                 false
         ));
         //endregion
+         */
     }
 
     //region Functions to create features
