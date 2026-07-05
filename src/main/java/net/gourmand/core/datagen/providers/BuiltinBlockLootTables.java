@@ -105,6 +105,9 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
           case SPIKE -> {
               this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1, 2));
           }
+          case ROPE_ANCHOR -> {
+              this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1));
+          }
           case RAW, HARDENED -> {
               this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRawRockDropTable(
                       CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).value(),

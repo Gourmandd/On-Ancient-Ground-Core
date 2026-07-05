@@ -296,6 +296,14 @@ public class LootTableBuilders {
                 );
     }
 
+    protected static LootTable.Builder createRockDropTable(Block block, int number){
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
+                        .add(LootItem.lootTableItem(block))
+                        .apply(SetItemCountFunction.setCount(new ConstantValue(number)))
+                );
+    }
+
     protected static LootTable.Builder createRawRockDropTable(Block block, Block item){
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())

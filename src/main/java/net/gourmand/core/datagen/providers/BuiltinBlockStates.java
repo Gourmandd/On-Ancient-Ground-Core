@@ -2,6 +2,7 @@ package net.gourmand.core.datagen.providers;
 
 import de.dafuqs.spectrum.blocks.crystallarieum.SpectrumClusterBlock;
 import net.dries007.tfc.common.blocks.OreDeposit;
+import net.dries007.tfc.common.blocks.RockRopeAnchorBlock;
 import net.dries007.tfc.common.blocks.ShelfBlock;
 import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.rock.*;
@@ -127,6 +128,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
             looseRockBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE), TextureUtil.getRockTexture(rock, Rock.BlockType.LOOSE), rock);
             looseRockBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE), TextureUtil.getRockTexture(rock, Rock.BlockType.MOSSY_LOOSE), rock);
             rockSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE),  TextureUtil.getRockTexture(rock, Rock.BlockType.SPIKE));
+            ropeAnchorSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.ROPE_ANCHOR),  TextureUtil.getRockTexture(rock, Rock.BlockType.SPIKE));
 
             if (rock.hasVariants()){
                 cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CHISELED), TextureUtil.getRockTexture(rock ,Rock.BlockType.CHISELED));
@@ -446,6 +448,18 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.BASE).modelForState().modelFile(modelBase).addModel()
                 .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.MIDDLE).modelForState().modelFile(modelMiddle).addModel()
                 .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.TIP).modelForState().modelFile(modelTip).addModel();
+    }
+
+    private void ropeAnchorSpikeBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){
+        ModelFile modelBase = createModel(getBlockModelString(block.getId()), "tfc:block/horizontal_rope_anchored").texture("texture", texture).texture("particle", texture);
+
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(RockRopeAnchorBlock.FACING, Direction.EAST).modelForState().rotationY(90).modelFile(modelBase).addModel()
+                .partialState().with(RockRopeAnchorBlock.FACING, Direction.NORTH).modelForState().modelFile(modelBase).addModel()
+                .partialState().with(RockRopeAnchorBlock.FACING, Direction.SOUTH).modelForState().rotationY(180).modelFile(modelBase).addModel()
+                .partialState().with(RockRopeAnchorBlock.FACING, Direction.WEST).modelForState().rotationY(270).modelFile(modelBase).addModel();
     }
 
     private void looseRockBlock(DeferredHolder<Block, Block> block, ResourceLocation texture, CoreRocks rock){

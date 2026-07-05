@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/horizontal_rope_anchored",
+  "textures": {
+    "particle": "minecraft:block/dripstone_block",
+    "texture": "minecraft:block/dripstone_block"
+  }
+}

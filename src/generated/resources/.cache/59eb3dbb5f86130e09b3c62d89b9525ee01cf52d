@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-02T10:54:38.912049755	Loot Tables
+// 1.21.1	2026-07-05T09:51:48.212121468	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -1721,6 +1721,22 @@ edb665771c114af7e9b2b316d6a1c042389f2a9f data/modpack/loot_table/blocks/rock/raw
 f56576c0f3f2e916795c9dcf8749530499114e14 data/modpack/loot_table/blocks/rock/raw/serpentine_slab.json
 936ab97f77a3156a5bdf6503bc40e944e3f77dd9 data/modpack/loot_table/blocks/rock/raw/serpentine_stairs.json
 a7864f92010e2e4afa07cb95dfb6b558a8aabb5e data/modpack/loot_table/blocks/rock/raw/serpentine_wall.json
+5545bb2f7907c03b79349c26905eac1e20654e4c data/modpack/loot_table/blocks/rock/rope_anchor/argillite.json
+5a5cb1a06684516136519c71735081bf27b603c5 data/modpack/loot_table/blocks/rock/rope_anchor/arkose.json
+5c06ac443b5408d173b64817508458d49f254953 data/modpack/loot_table/blocks/rock/rope_anchor/blackslag.json
+c62b45949fdf2e1ab6d18447ac2c2bce1e30cf53 data/modpack/loot_table/blocks/rock/rope_anchor/blueschist.json
+5432055ae707d197f3505dc4ced3ade82694303a data/modpack/loot_table/blocks/rock/rope_anchor/breccia.json
+91194bfa53b75eb10462a85bc34da27c6fcaadde data/modpack/loot_table/blocks/rock/rope_anchor/komatiite.json
+96e75f58d837f2eae4574b56d55410c09cac9c5e data/modpack/loot_table/blocks/rock/rope_anchor/nephelinite.json
+22c488926abdc80a45164c03064f7b38894e936c data/modpack/loot_table/blocks/rock/rope_anchor/peridotite.json
+102a5859618e37a18e5c9c406c5d3da0ee0085db data/modpack/loot_table/blocks/rock/rope_anchor/phonolite.json
+8f9252b38c68b865c927252ac5809a90827b9b44 data/modpack/loot_table/blocks/rock/rope_anchor/picrite_basalt.json
+948ccad6fdca3de330730cc862dda547c48e6be2 data/modpack/loot_table/blocks/rock/rope_anchor/red_sandstone.json
+32cc2181a4f7430d820a9ffeb0d6e68527263daf data/modpack/loot_table/blocks/rock/rope_anchor/sandstone.json
+268d077ed9e6a774e65c2fda62b3df5c916e3f4f data/modpack/loot_table/blocks/rock/rope_anchor/serpentine.json
+970c6439288fa84a06fd7086d16c9e4f1868fe32 data/modpack/loot_table/blocks/rock/rope_anchor/soapstone.json
+4f3a685a5900a886d2ea8cb280ac5ca6c3d32c2e data/modpack/loot_table/blocks/rock/rope_anchor/suevite.json
+e1073615b8bd75199690aa949f8a7d8aebc901f4 data/modpack/loot_table/blocks/rock/rope_anchor/travertine.json
 4b1b6d285cd2eacefda6bd9599e08a04ee7fefc3 data/modpack/loot_table/blocks/rock/smooth/blueschist.json
 77d8212ddf69e9e2bda05abe14abd6008856b225 data/modpack/loot_table/blocks/rock/smooth/blueschist_slab.json
 f1db547e603ffde152872e27496b75b4aeba3b9d data/modpack/loot_table/blocks/rock/smooth/blueschist_stairs.json

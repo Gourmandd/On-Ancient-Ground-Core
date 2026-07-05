@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/horizontal_rope_anchored",
+  "textures": {
+    "particle": "quark:block/shale",
+    "texture": "quark:block/shale"
+  }
+}

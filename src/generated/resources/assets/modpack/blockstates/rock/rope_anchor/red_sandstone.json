@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/rock/rope_anchor/red_sandstone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/rock/rope_anchor/red_sandstone"
+    },
+    "facing=south": {
+      "model": "modpack:block/rock/rope_anchor/red_sandstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modpack:block/rock/rope_anchor/red_sandstone",
+      "y": 270
+    }
+  }
+}

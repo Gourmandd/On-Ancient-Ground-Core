@@ -78,11 +78,6 @@ public enum CoreRocks implements RegistryRock
 
     public boolean hasVariant(Rock.BlockType blockType){
 
-        // TODO: ADD THIS BACK
-        if (blockType == Rock.BlockType.ROPE_ANCHOR){
-            return false;
-        }
-
         if (hasVariants){
             return true;
         }
@@ -91,7 +86,7 @@ public enum CoreRocks implements RegistryRock
             case RAW, BRICKS, SMOOTH, CRACKED_BRICKS, CHISELED, PRESSURE_PLATE, BUTTON  -> {
                 return false;
             }
-            case HARDENED, GRAVEL, SPIKE, MOSSY_BRICKS, COBBLE, MOSSY_COBBLE, MOSSY_LOOSE, LOOSE, AQUEDUCT -> {
+            case HARDENED, GRAVEL, SPIKE, MOSSY_BRICKS, COBBLE, MOSSY_COBBLE, MOSSY_LOOSE, LOOSE, AQUEDUCT, ROPE_ANCHOR -> {
                 return true;
             }
         }

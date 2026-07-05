@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/horizontal_rope_anchored",
+  "textures": {
+    "particle": "create:block/palettes/stone_types/natural/ochrum_0",
+    "texture": "create:block/palettes/stone_types/natural/ochrum_0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/rock/rope_anchor/soapstone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/rock/rope_anchor/soapstone"
+    },
+    "facing=south": {
+      "model": "modpack:block/rock/rope_anchor/soapstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modpack:block/rock/rope_anchor/soapstone",
+      "y": 270
+    }
+  }
+}

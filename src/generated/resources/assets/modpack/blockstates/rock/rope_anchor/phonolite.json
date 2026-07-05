@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/rock/rope_anchor/phonolite",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/rock/rope_anchor/phonolite"
+    },
+    "facing=south": {
+      "model": "modpack:block/rock/rope_anchor/phonolite",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modpack:block/rock/rope_anchor/phonolite",
+      "y": 270
+    }
+  }
+}

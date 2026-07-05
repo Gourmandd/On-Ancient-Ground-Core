@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/horizontal_rope_anchored",
+  "textures": {
+    "particle": "modpack:block/rock/raw/peridotite",
+    "texture": "modpack:block/rock/raw/peridotite"
+  }
+}
