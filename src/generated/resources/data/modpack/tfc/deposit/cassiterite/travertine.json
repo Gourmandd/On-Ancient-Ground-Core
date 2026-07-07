@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/travertine"
+  },
+  "loot_table": "modpack:deposit/cassiterite/travertine",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/travertine_full",
+    "modpack:item/pan/cassiterite/travertine_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

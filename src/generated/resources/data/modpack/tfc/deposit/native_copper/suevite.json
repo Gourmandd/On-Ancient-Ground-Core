@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_copper/suevite"
+  },
+  "loot_table": "modpack:deposit/native_copper/suevite",
+  "model_stages": [
+    "modpack:item/pan/native_copper/suevite_full",
+    "modpack:item/pan/native_copper/suevite_half",
+    "tfc:item/pan/native_copper/result"
+  ]
+}

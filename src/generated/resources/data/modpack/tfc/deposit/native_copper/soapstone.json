@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_copper/soapstone"
+  },
+  "loot_table": "modpack:deposit/native_copper/soapstone",
+  "model_stages": [
+    "modpack:item/pan/native_copper/soapstone_full",
+    "modpack:item/pan/native_copper/soapstone_half",
+    "tfc:item/pan/native_copper/result"
+  ]
+}

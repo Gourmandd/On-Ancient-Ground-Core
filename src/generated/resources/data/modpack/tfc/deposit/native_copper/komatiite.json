@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_copper/komatiite"
+  },
+  "loot_table": "modpack:deposit/native_copper/komatiite",
+  "model_stages": [
+    "modpack:item/pan/native_copper/komatiite_full",
+    "modpack:item/pan/native_copper/komatiite_half",
+    "tfc:item/pan/native_copper/result"
+  ]
+}

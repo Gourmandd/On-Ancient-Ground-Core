@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_copper/serpentine"
+  },
+  "loot_table": "modpack:deposit/native_copper/serpentine",
+  "model_stages": [
+    "modpack:item/pan/native_copper/serpentine_full",
+    "modpack:item/pan/native_copper/serpentine_half",
+    "tfc:item/pan/native_copper/result"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_gold/komatiite"
+  },
+  "loot_table": "modpack:deposit/native_gold/komatiite",
+  "model_stages": [
+    "modpack:item/pan/native_gold/komatiite_full",
+    "modpack:item/pan/native_gold/komatiite_half",
+    "tfc:item/pan/native_gold/result"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/sandstone"
+  },
+  "loot_table": "modpack:deposit/cassiterite/sandstone",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/sandstone_full",
+    "modpack:item/pan/cassiterite/sandstone_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

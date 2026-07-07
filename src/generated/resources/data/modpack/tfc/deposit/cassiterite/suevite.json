@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/suevite"
+  },
+  "loot_table": "modpack:deposit/cassiterite/suevite",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/suevite_full",
+    "modpack:item/pan/cassiterite/suevite_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

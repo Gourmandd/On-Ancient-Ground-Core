@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/phonolite"
+  },
+  "loot_table": "modpack:deposit/cassiterite/phonolite",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/phonolite_full",
+    "modpack:item/pan/cassiterite/phonolite_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

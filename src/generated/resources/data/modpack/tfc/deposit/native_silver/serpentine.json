@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_silver/serpentine"
+  },
+  "loot_table": "modpack:deposit/native_silver/serpentine",
+  "model_stages": [
+    "modpack:item/pan/native_silver/serpentine_full",
+    "modpack:item/pan/native_silver/serpentine_half",
+    "tfc:item/pan/native_silver/result"
+  ]
+}

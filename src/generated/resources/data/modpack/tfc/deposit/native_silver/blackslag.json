@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_silver/blackslag"
+  },
+  "loot_table": "modpack:deposit/native_silver/blackslag",
+  "model_stages": [
+    "modpack:item/pan/native_silver/blackslag_full",
+    "modpack:item/pan/native_silver/blackslag_half",
+    "tfc:item/pan/native_silver/result"
+  ]
+}

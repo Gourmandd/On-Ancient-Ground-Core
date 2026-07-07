@@ -1,0 +1,75 @@
+{
+  "type": "minecraft:empty",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "chance": 0.5,
+                  "condition": "minecraft:random_chance"
+                }
+              ],
+              "name": "tfc:ore/small_cassiterite"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:all_of",
+                  "terms": [
+                    {
+                      "chance": 0.1,
+                      "condition": "minecraft:random_chance"
+                    },
+                    {
+                      "condition": "tfc:is_sluice"
+                    }
+                  ]
+                }
+              ],
+              "name": "tfc:ore/small_cassiterite"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "chance": 0.5,
+                  "condition": "minecraft:random_chance"
+                }
+              ],
+              "name": "modpack:rock/loose/travertine"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "chance": 0.25,
+                  "condition": "minecraft:random_chance"
+                }
+              ],
+              "name": "modpack:rock/loose/travertine"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "chance": 0.0533,
+                  "condition": "minecraft:random_chance"
+                }
+              ],
+              "name": "tfc:ore/borax"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "modpack:deposit/cassiterite/travertine"
+}

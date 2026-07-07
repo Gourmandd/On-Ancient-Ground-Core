@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/arkose"
+  },
+  "loot_table": "modpack:deposit/cassiterite/arkose",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/arkose_full",
+    "modpack:item/pan/cassiterite/arkose_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

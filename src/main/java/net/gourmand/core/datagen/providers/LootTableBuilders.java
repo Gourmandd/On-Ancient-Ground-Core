@@ -1,7 +1,11 @@
 package net.gourmand.core.datagen.providers;
 
+import com.google.common.collect.ImmutableMap;
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.GroundcoverBlockType;
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.crop.DeadCropBlock;
 import net.dries007.tfc.common.blocks.crop.DeadDoubleCropBlock;
 import net.dries007.tfc.common.blocks.crop.WildCropBlock;
@@ -9,16 +13,18 @@ import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeBranchBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.SpreadingBushBlock;
 import net.dries007.tfc.common.blocks.rock.LooseRockBlock;
+import net.dries007.tfc.common.blocks.rock.Ore;
+import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.loot.CropYieldProvider;
 import net.dries007.tfc.util.loot.IsIsolatedCondition;
+import net.dries007.tfc.util.loot.IsSluiceCondition;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.blocks.CoreDefaultCropBlock;
 import net.gourmand.core.registry.blocks.CoreDoubleCropBlock;
-import net.gourmand.core.registry.category.CoreCrops;
-import net.gourmand.core.registry.category.CoreFruitTrees;
-import net.gourmand.core.registry.category.CoreSpreadingBushes;
-import net.gourmand.core.registry.category.CoreStationaryBushes;
+import net.gourmand.core.registry.category.*;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.tags.ItemTags;
@@ -33,6 +39,26 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+
+import java.util.Map;
+import java.util.Objects;
+
+import static net.dries007.tfc.common.blocks.rock.Ore.*;
+import static net.dries007.tfc.common.blocks.rock.Ore.AMETHYST;
+import static net.dries007.tfc.common.blocks.rock.Ore.BISMUTHINITE;
+import static net.dries007.tfc.common.blocks.rock.Ore.BORAX;
+import static net.dries007.tfc.common.blocks.rock.Ore.DIAMOND;
+import static net.dries007.tfc.common.blocks.rock.Ore.GYPSUM;
+import static net.dries007.tfc.common.blocks.rock.Ore.HEMATITE;
+import static net.dries007.tfc.common.blocks.rock.Ore.LAPIS_LAZULI;
+import static net.dries007.tfc.common.blocks.rock.Ore.PYRITE;
+import static net.dries007.tfc.common.blocks.rock.Ore.SPHALERITE;
+import static net.dries007.tfc.common.blocks.rock.Ore.SULFUR;
+import static net.dries007.tfc.common.blocks.rock.Ore.SYLVITE;
+import static net.dries007.tfc.common.blocks.rock.Ore.TOPAZ;
+import static net.gourmand.core.registry.category.CoreOres.BAUXITE;
+import static net.gourmand.core.registry.category.CoreRocks.*;
+import static net.gourmand.core.registry.category.CoreRocks.BRECCIA;
 
 public class LootTableBuilders {
 
@@ -345,6 +371,67 @@ public class LootTableBuilders {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(item)).apply(SetItemCountFunction.setCount(new UniformGenerator(ConstantValue.exactly(2), ConstantValue.exactly(4))))
+                );
+    }
+
+    protected static LootTable.Builder createDepositPanningTable(OreDeposit ore, CoreRocks rock){
+
+        Map<CoreRocks, Item> PANNING_ALT = ImmutableMap.<CoreRocks, Item>builder()
+                .put(SERPENTINE, TFCItems.ORES.get(GRAPHITE).asItem())
+                .put(PERIDOTITE, TFCItems.ORES.get(CRYOLITE).asItem())
+                .put(BLUESCHIST, CoreItems.ORES.get(BAUXITE).get())
+                .put(SOAPSTONE, TFCItems.GEMS.get(SAPPHIRE).asItem())
+                .put(SANDSTONE, TFCItems.GEMS.get(LAPIS_LAZULI).asItem())
+                .put(SUEVITE, TFCItems.GEMS.get(DIAMOND).asItem())
+                .put(KOMATIITE, TFCItems.ORES.get(SULFUR).asItem())
+                .put(RED_SANDSTONE, TFCItems.GEMS.get(AMETHYST).asItem())
+                .put(PHONOLITE, TFCItems.GEMS.get(PYRITE).asItem())
+                .put(ARKOSE, TFCItems.ORES.get(GYPSUM).asItem())
+                .put(BLACKSLAG, TFCItems.GRADED_ORES.get(HEMATITE).get(Ore.Grade.RICH).asItem())
+                .put(PICRITE_BASALT, TFCItems.GRADED_ORES.get(SPHALERITE).get(Ore.Grade.RICH).asItem())
+                .put(TRAVERTINE, TFCItems.ORES.get(BORAX).asItem())
+                .put(ARGILLITE, TFCItems.ORES.get(SYLVITE).asItem())
+                .put(NEPHELINITE, TFCItems.GEMS.get(TOPAZ).asItem())
+                .put(BRECCIA, TFCItems.GRADED_ORES.get(BISMUTHINITE).get(Ore.Grade.RICH).asItem())
+                .build();
+
+        Item mainResult = null;
+
+        switch (ore){
+            case CASSITERITE -> mainResult = TFCBlocks.SMALL_ORES.get(Ore.CASSITERITE).asItem();
+            case NATIVE_COPPER -> mainResult = TFCBlocks.SMALL_ORES.get(Ore.NATIVE_COPPER).asItem();
+            case NATIVE_GOLD -> mainResult = TFCBlocks.SMALL_ORES.get(Ore.NATIVE_GOLD).asItem();
+            case NATIVE_SILVER -> mainResult = TFCBlocks.SMALL_ORES.get(Ore.NATIVE_SILVER).asItem();
+        }
+
+        Item altItem = CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get().asItem();
+
+        if (rock.displayCategory().category() == RockCategory.IGNEOUS_EXTRUSIVE){
+            altItem = TFCBlocks.GROUNDCOVER.get(GroundcoverBlockType.PUMICE).asItem();
+        }
+
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool().add(
+                                AlternativesEntry.alternatives(
+                                        LootItem.lootTableItem(mainResult).when(
+                                                LootItemRandomChanceCondition.randomChance(0.5f)
+                                        ),
+                                        LootItem.lootTableItem(mainResult).when(
+                                                LootItemRandomChanceCondition.randomChance(0.1f).and(
+                                                        IsSluiceCondition.isSluice()
+                                                )
+                                        ),
+                                        LootItem.lootTableItem(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get().asItem()).when(
+                                                LootItemRandomChanceCondition.randomChance(0.5f)
+                                        ),
+                                        LootItem.lootTableItem(altItem).when(
+                                                LootItemRandomChanceCondition.randomChance(0.25f)
+                                        ),
+                                        LootItem.lootTableItem(Objects.requireNonNull(PANNING_ALT.get(rock))).when(
+                                                LootItemRandomChanceCondition.randomChance(0.0533f)
+                                        )
+                                )
+                        )
                 );
     }
 }

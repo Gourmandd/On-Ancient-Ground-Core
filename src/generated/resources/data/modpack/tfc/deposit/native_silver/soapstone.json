@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_silver/soapstone"
+  },
+  "loot_table": "modpack:deposit/native_silver/soapstone",
+  "model_stages": [
+    "modpack:item/pan/native_silver/soapstone_full",
+    "modpack:item/pan/native_silver/soapstone_half",
+    "tfc:item/pan/native_silver/result"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_silver/argillite"
+  },
+  "loot_table": "modpack:deposit/native_silver/argillite",
+  "model_stages": [
+    "modpack:item/pan/native_silver/argillite_full",
+    "modpack:item/pan/native_silver/argillite_half",
+    "tfc:item/pan/native_silver/result"
+  ]
+}

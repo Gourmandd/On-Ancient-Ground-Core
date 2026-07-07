@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_gold/nephelinite"
+  },
+  "loot_table": "modpack:deposit/native_gold/nephelinite",
+  "model_stages": [
+    "modpack:item/pan/native_gold/nephelinite_full",
+    "modpack:item/pan/native_gold/nephelinite_half",
+    "tfc:item/pan/native_gold/result"
+  ]
+}

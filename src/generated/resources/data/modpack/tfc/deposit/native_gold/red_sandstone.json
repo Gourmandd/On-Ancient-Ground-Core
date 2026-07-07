@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_gold/red_sandstone"
+  },
+  "loot_table": "modpack:deposit/native_gold/red_sandstone",
+  "model_stages": [
+    "modpack:item/pan/native_gold/red_sandstone_full",
+    "modpack:item/pan/native_gold/red_sandstone_half",
+    "tfc:item/pan/native_gold/result"
+  ]
+}

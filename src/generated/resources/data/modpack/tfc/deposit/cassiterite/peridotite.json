@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/peridotite"
+  },
+  "loot_table": "modpack:deposit/cassiterite/peridotite",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/peridotite_full",
+    "modpack:item/pan/cassiterite/peridotite_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

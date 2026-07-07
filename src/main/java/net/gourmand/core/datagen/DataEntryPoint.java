@@ -48,6 +48,7 @@ public final class DataEntryPoint
                 , Set.of(AncientGroundCore.MODID, "minecraft", TerraFirmaCraft.MOD_ID))).getRegistryProvider();
 
         add(event, new BuiltinClimateRanges(output, lookup));
+        add(event, new BuiltinDepositData(output, lookup));
         add(event, new BuiltinBlockTags(event, lookup));
         add(event, new BuiltinFluidTags(event, lookup));
         add(event, new BuiltinItemTags(event, lookup));
@@ -92,7 +93,11 @@ public final class DataEntryPoint
                         output,
                         Collections.emptySet(),
                         List.of(
-                                new LootTableProvider.SubProviderEntry(provider, set)
+                                new LootTableProvider.SubProviderEntry(provider, set),
+                                new LootTableProvider.SubProviderEntry(
+                                        BuiltinDepositLootTables::new,
+                                        LootContextParamSets.EMPTY
+                                )
                         ),
                         lookup
                 )

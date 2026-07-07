@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/nephelinite"
+  },
+  "loot_table": "modpack:deposit/cassiterite/nephelinite",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/nephelinite_full",
+    "modpack:item/pan/cassiterite/nephelinite_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

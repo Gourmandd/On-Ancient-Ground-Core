@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/blackslag"
+  },
+  "loot_table": "modpack:deposit/cassiterite/blackslag",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/blackslag_full",
+    "modpack:item/pan/cassiterite/blackslag_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

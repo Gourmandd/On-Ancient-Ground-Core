@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/breccia"
+  },
+  "loot_table": "modpack:deposit/cassiterite/breccia",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/breccia_full",
+    "modpack:item/pan/cassiterite/breccia_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

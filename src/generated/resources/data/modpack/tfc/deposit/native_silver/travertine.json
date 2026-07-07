@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_silver/travertine"
+  },
+  "loot_table": "modpack:deposit/native_silver/travertine",
+  "model_stages": [
+    "modpack:item/pan/native_silver/travertine_full",
+    "modpack:item/pan/native_silver/travertine_half",
+    "tfc:item/pan/native_silver/result"
+  ]
+}

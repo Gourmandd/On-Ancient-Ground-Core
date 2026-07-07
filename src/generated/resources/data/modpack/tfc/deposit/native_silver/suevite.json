@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_silver/suevite"
+  },
+  "loot_table": "modpack:deposit/native_silver/suevite",
+  "model_stages": [
+    "modpack:item/pan/native_silver/suevite_full",
+    "modpack:item/pan/native_silver/suevite_half",
+    "tfc:item/pan/native_silver/result"
+  ]
+}

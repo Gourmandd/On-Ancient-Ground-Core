@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/blueschist"
+  },
+  "loot_table": "modpack:deposit/cassiterite/blueschist",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/blueschist_full",
+    "modpack:item/pan/cassiterite/blueschist_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

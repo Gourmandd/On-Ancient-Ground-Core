@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/argillite"
+  },
+  "loot_table": "modpack:deposit/cassiterite/argillite",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/argillite_full",
+    "modpack:item/pan/cassiterite/argillite_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

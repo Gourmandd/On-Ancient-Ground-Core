@@ -25,6 +25,7 @@ import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Locale;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 public class BuiltinItemModels extends ItemModelProvider {
@@ -259,6 +260,25 @@ public class BuiltinItemModels extends ItemModelProvider {
                 simpleItem(CoreItems.GEMSTONE_ITEMS.get(gem).get(itemType).get(), itemTexture(CoreItems.GEMSTONE_ITEMS.get(gem).get(itemType)));
             });
         });
+
+
+        // not tied to the item itself, it's referenced in the deposit data definition.
+        for (OreDeposit ore : OreDeposit.values()){
+            for (CoreRocks rock : CoreRocks.values()){
+
+                ResourceLocation texture = Objects.requireNonNull(TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL));
+                String oreId = ore.name().toLowerCase(Locale.ROOT);
+                String rockId = rock.getSerializedName();
+
+                this.getBuilder("%s:item/pan/%s/%s_full".formatted(AncientGroundCore.MODID, oreId, rockId))
+                        .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/full"))
+                        .texture("material", texture);
+
+                this.getBuilder("%s:item/pan/%s/%s_half".formatted(AncientGroundCore.MODID, oreId, rockId))
+                        .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/half"))
+                        .texture("material", texture);
+            }
+        }
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){
@@ -283,6 +303,10 @@ public class BuiltinItemModels extends ItemModelProvider {
 
     private ResourceLocation itemTexture(DeferredHolder<Item, Item> item){
         return ResourceLocation.fromNamespaceAndPath(item.getId().getNamespace(), "item/" + item.getId().getPath());
+    }
+
+    private ResourceLocation blockTexture(DeferredHolder<Block, Block> block){
+        return ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), "block/" + block.getId().getPath());
     }
 
     private void supportBlockItem(Item item, CoreDeeperDownWood wood){

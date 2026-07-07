@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/picrite_basalt"
+  },
+  "loot_table": "modpack:deposit/cassiterite/picrite_basalt",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/picrite_basalt_full",
+    "modpack:item/pan/cassiterite/picrite_basalt_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

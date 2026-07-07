@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_copper/breccia"
+  },
+  "loot_table": "modpack:deposit/native_copper/breccia",
+  "model_stages": [
+    "modpack:item/pan/native_copper/breccia_full",
+    "modpack:item/pan/native_copper/breccia_half",
+    "tfc:item/pan/native_copper/result"
+  ]
+}

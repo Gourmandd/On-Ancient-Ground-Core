@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/native_gold/blueschist"
+  },
+  "loot_table": "modpack:deposit/native_gold/blueschist",
+  "model_stages": [
+    "modpack:item/pan/native_gold/blueschist_full",
+    "modpack:item/pan/native_gold/blueschist_half",
+    "tfc:item/pan/native_gold/result"
+  ]
+}

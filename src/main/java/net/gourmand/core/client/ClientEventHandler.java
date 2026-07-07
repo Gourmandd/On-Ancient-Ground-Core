@@ -11,6 +11,7 @@ import net.dries007.tfc.client.render.blockentity.ToolRackBlockEntityRenderer;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.fluids.TFCFluids;
+import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlockEntities;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreFluids;
@@ -24,16 +25,19 @@ import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.ModelEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.client.model.DynamicFluidContainerModel;
 
+import java.util.Locale;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
@@ -52,6 +56,7 @@ public class ClientEventHandler {
         modEventBus.addListener(ClientEventHandler::registerEntityRenderers);
         modEventBus.addListener(ClientEventHandler::registerExtensions);
         modEventBus.addListener(ClientEventHandler::registerKeyBindings);
+        modEventBus.addListener(ClientEventHandler::registerSpecialModels);
     }
 
     private static void registerExtensions(RegisterClientExtensionsEvent event) {
@@ -211,6 +216,19 @@ public class ClientEventHandler {
         });
 
         event.register(new DynamicFluidContainerModel.Colors(), CoreFluids.CLEAR_GLASS.getSource().getBucket());
+    }
+
+    public static void registerSpecialModels(ModelEvent.RegisterAdditional event){
+        for (OreDeposit ore : OreDeposit.values()){
+            for (CoreRocks rock : CoreRocks.values()){
+
+                String oreId = ore.name().toLowerCase(Locale.ROOT);
+                String rockId = rock.getSerializedName();
+
+                event.register(ModelResourceLocation.standalone(AncientGroundCore.location("item/pan/%s/%s_full".formatted(oreId, rockId))));
+                event.register(ModelResourceLocation.standalone(AncientGroundCore.location("item/pan/%s/%s_half".formatted(oreId, rockId))));
+            }
+        }
     }
 
     private static boolean makeMossyVariantCutout(Rock.BlockType type, CoreRocks rock){
