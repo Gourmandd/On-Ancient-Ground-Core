@@ -280,6 +280,10 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             });
         });
 
+        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
+        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
+        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
+
         /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
 

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/light_gray"
+      },
+      {
+        "model": "modpack:block/wood/boards/light_gray_alt"
+      }
+    ]
+  }
+}

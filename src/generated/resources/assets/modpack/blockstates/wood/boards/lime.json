@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/lime"
+      },
+      {
+        "model": "modpack:block/wood/boards/lime_alt"
+      }
+    ]
+  }
+}

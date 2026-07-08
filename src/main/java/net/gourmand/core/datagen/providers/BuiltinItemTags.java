@@ -1,12 +1,13 @@
 package net.gourmand.core.datagen.providers;
 
+import architectspalette.core.registry.APTags;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
-import net.dries007.tfc.common.items.*;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
@@ -22,7 +23,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
@@ -384,6 +386,10 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         add(CoreBlocks.WILD_CROPS, List.of(
                 TFCTags.Items.WILD_CROPS)
         );
+
+        add(CoreBlocks.SPECTRUM_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
+        add(CoreBlocks.TFC_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
+        add(CoreBlocks.AFC_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
     }
 
     protected void addMultiBlockOre(CoreOres ore, Block block){

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:wood/boards/willow"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "tfc:wood/lumber/willow"
+  }
+}

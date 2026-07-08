@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/aspen"
+      },
+      {
+        "model": "modpack:block/wood/boards/aspen_alt"
+      }
+    ]
+  }
+}

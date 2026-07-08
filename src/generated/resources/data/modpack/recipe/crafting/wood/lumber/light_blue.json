@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:wood/boards/light_blue"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "modpack:wood/lumber/light_blue"
+  }
+}

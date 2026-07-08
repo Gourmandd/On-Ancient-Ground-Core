@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/ivory_noxwood"
+      },
+      {
+        "model": "modpack:block/wood/boards/ivory_noxwood_alt"
+      }
+    ]
+  }
+}

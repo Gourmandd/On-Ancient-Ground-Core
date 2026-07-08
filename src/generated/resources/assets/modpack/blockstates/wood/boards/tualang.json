@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/tualang"
+      },
+      {
+        "model": "modpack:block/wood/boards/tualang_alt"
+      }
+    ]
+  }
+}

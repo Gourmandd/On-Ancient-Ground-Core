@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:wood/boards/weeping_gala"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "modpack:wood/lumber/weeping_gala"
+  }
+}

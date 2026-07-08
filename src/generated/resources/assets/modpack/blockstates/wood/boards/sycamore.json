@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/sycamore"
+      },
+      {
+        "model": "modpack:block/wood/boards/sycamore_alt"
+      }
+    ]
+  }
+}

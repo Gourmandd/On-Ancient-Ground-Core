@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/beech"
+      },
+      {
+        "model": "modpack:block/wood/boards/beech_alt"
+      }
+    ]
+  }
+}

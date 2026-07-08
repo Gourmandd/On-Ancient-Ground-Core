@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/araucaria"
+      },
+      {
+        "model": "modpack:block/wood/boards/araucaria_alt"
+      }
+    ]
+  }
+}

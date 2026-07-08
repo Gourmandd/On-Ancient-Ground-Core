@@ -18,7 +18,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.AttachFace;
+import net.minecraft.world.level.block.state.properties.Half;
+import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -163,6 +166,10 @@ public class BuiltinBlockStates extends BlockStateProvider {
             toolRackBlock(map.get(Wood.BlockType.TOOL_RACK), woodType);
             sluiceBlock(map.get(Wood.BlockType.SLUICE), woodType);
         });
+
+        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
+        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
+        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
 
         Stream.of(DyeColor.values()).forEach(color -> {
             moltenGlassBlock(CoreBlocks.COLORED_MOLTEN_GLASS.get(color));
@@ -823,5 +830,17 @@ public class BuiltinBlockStates extends BlockStateProvider {
         String path = blockId.getPath();
 
         simpleBlock(block.get(), models().getBuilder(namespace + ":block/" + path ).texture("particle", thickFluidFlowTexture));
+    }
+
+    private void cubeAllWithAlternate(DeferredHolder<Block, Block> block, ResourceLocation texture, ResourceLocation altTexture){
+
+        ResourceLocation blockId = block.getId();
+        String namespace = blockId.getNamespace();
+        String path = blockId.getPath();
+
+        ConfiguredModel model = new ConfiguredModel(this.models().cubeAll(namespace + ":block/" + path, texture));
+        ConfiguredModel altModel = new ConfiguredModel(this.models().cubeAll(namespace + ":block/" + path + "_alt", altTexture));
+
+        this.getVariantBuilder(block.get()).partialState().addModels(model, altModel);
     }
 }

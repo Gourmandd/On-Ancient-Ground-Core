@@ -1,5 +1,6 @@
 package net.gourmand.core.registry;
 
+import com.therighthon.afc.common.blocks.AFCWood;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.Ore;
@@ -247,6 +248,18 @@ public class CoreBlocks {
     */
 
     public static final DeferredHolder<Block, CopperBulbBlock> LEAD_BULB_BLOCK = register("metal/bulb/lead", () -> new  CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).mapColor(MapColor.COLOR_PURPLE)));
+
+    public static final Map<CoreDeeperDownWood, DeferredHolder<Block, Block>> SPECTRUM_WOOD_BOARDS = Helpers.mapOf(CoreDeeperDownWood.class, wood ->
+                    register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
+
+    public static final Map<Wood, DeferredHolder<Block, Block>> TFC_WOOD_BOARDS = Helpers.mapOf(Wood.class, wood ->
+            register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
+
+    public static final Map<AFCWood, DeferredHolder<Block, Block>> AFC_WOOD_BOARDS = Helpers.mapOf(AFCWood.class, wood ->
+            register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {

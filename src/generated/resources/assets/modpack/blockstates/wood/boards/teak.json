@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/teak"
+      },
+      {
+        "model": "modpack:block/wood/boards/teak_alt"
+      }
+    ]
+  }
+}

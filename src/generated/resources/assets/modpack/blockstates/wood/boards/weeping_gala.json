@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/weeping_gala"
+      },
+      {
+        "model": "modpack:block/wood/boards/weeping_gala_alt"
+      }
+    ]
+  }
+}

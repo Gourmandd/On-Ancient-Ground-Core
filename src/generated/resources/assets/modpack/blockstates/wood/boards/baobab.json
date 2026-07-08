@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/baobab"
+      },
+      {
+        "model": "modpack:block/wood/boards/baobab_alt"
+      }
+    ]
+  }
+}

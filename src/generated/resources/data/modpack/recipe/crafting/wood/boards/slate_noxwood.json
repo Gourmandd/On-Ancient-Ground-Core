@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "modpack:wood/lumber/slate_noxwood"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/boards/slate_noxwood"
+  }
+}

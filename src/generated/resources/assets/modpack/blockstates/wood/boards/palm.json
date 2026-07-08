@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/palm"
+      },
+      {
+        "model": "modpack:block/wood/boards/palm_alt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/mahogany"
+      },
+      {
+        "model": "modpack:block/wood/boards/mahogany_alt"
+      }
+    ]
+  }
+}

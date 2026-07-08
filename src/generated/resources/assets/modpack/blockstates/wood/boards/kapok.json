@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/kapok"
+      },
+      {
+        "model": "modpack:block/wood/boards/kapok_alt"
+      }
+    ]
+  }
+}

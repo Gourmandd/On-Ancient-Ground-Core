@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/spruce"
+      },
+      {
+        "model": "modpack:block/wood/boards/spruce_alt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/sequoia"
+      },
+      {
+        "model": "modpack:block/wood/boards/sequoia_alt"
+      }
+    ]
+  }
+}

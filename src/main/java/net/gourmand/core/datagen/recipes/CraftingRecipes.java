@@ -1,5 +1,6 @@
 package net.gourmand.core.datagen.recipes;
 
+import com.therighthon.afc.common.items.AFCItems;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -11,6 +12,7 @@ import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.core.registry.category.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -420,6 +422,34 @@ public interface CraftingRecipes extends Recipes {
                         .source(0, 1)
                         .shaped(MAP.get(Rock.BlockType.PRESSURE_PLATE).get());
             }
+        });
+
+        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> {
+            recipe()
+                    .input('X', CoreItems.LUMBER.get(wood).get())
+                    .pattern("XXX", "XXX", "XXX")
+                    .shaped(block.get(), 1);
+            recipe()
+                    .input(Ingredient.of(block.get()))
+                    .shapeless(new ItemStack(CoreItems.LUMBER.get(wood).get(), 9));
+        });
+        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> {
+            recipe()
+                    .input('X', TFCItems.LUMBER.get(wood).get())
+                    .pattern("XXX", "XXX", "XXX")
+                    .shaped(block.get(), 1);
+            recipe()
+                    .input(Ingredient.of(block.get()))
+                    .shapeless(new ItemStack(TFCItems.LUMBER.get(wood).get(), 9));
+        });
+        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> {
+            recipe()
+                    .input('X', AFCItems.LUMBER.get(wood).get())
+                    .pattern("XXX", "XXX", "XXX")
+                    .shaped(block.get(), 1);
+            recipe()
+                    .input(Ingredient.of(block.get()))
+                    .shapeless(new ItemStack(AFCItems.LUMBER.get(wood).get(), 9));
         });
     }
 

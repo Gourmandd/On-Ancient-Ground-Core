@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/willow"
+      },
+      {
+        "model": "modpack:block/wood/boards/willow_alt"
+      }
+    ]
+  }
+}

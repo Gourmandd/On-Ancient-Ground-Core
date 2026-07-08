@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/cypress"
+      },
+      {
+        "model": "modpack:block/wood/boards/cypress_alt"
+      }
+    ]
+  }
+}

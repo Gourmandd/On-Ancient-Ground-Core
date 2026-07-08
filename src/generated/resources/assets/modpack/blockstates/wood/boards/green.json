@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/green"
+      },
+      {
+        "model": "modpack:block/wood/boards/green_alt"
+      }
+    ]
+  }
+}

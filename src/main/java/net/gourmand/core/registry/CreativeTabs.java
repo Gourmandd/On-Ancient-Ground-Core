@@ -269,6 +269,10 @@ public class CreativeTabs {
             out.accept(CoreItems.SUPPORTS.get(wood).get());
             out.accept(CoreItems.LUMBER.get(wood).get());
         }
+
+        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> out.accept(block.get()));
+        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> out.accept(block.get()));
+        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> out.accept(block.get()));
     }
 
     private static void fillGlass(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)

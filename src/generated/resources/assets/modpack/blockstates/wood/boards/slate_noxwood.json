@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/slate_noxwood"
+      },
+      {
+        "model": "modpack:block/wood/boards/slate_noxwood_alt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/hickory"
+      },
+      {
+        "model": "modpack:block/wood/boards/hickory_alt"
+      }
+    ]
+  }
+}

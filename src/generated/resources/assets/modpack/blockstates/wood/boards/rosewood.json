@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/rosewood"
+      },
+      {
+        "model": "modpack:block/wood/boards/rosewood_alt"
+      }
+    ]
+  }
+}

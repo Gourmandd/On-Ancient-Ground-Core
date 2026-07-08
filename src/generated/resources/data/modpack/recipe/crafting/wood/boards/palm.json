@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/palm"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/boards/palm"
+  }
+}

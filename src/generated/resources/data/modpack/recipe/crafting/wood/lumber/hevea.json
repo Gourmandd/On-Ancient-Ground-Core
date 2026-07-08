@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:wood/boards/hevea"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "afc:wood/lumber/hevea"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/acacia"
+      },
+      {
+        "model": "modpack:block/wood/boards/acacia_alt"
+      }
+    ]
+  }
+}

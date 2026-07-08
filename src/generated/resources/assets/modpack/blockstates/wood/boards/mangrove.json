@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/mangrove"
+      },
+      {
+        "model": "modpack:block/wood/boards/mangrove_alt"
+      }
+    ]
+  }
+}

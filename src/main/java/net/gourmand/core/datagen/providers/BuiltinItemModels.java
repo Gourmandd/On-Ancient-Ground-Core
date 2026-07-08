@@ -279,6 +279,10 @@ public class BuiltinItemModels extends ItemModelProvider {
                         .texture("material", texture);
             }
         }
+
+        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
+        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
+        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){

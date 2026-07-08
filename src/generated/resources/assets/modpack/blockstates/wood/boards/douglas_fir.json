@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/douglas_fir"
+      },
+      {
+        "model": "modpack:block/wood/boards/douglas_fir_alt"
+      }
+    ]
+  }
+}

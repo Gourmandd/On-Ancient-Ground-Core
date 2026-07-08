@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "modpack:wood/boards/pink"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "modpack:wood/lumber/pink"
+  }
+}

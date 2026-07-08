@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/chestnut_noxwood"
+      },
+      {
+        "model": "modpack:block/wood/boards/chestnut_noxwood_alt"
+      }
+    ]
+  }
+}

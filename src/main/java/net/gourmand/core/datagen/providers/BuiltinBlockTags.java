@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 
+import architectspalette.core.registry.APTags;
 import de.dafuqs.spectrum.SpectrumCommon;
 import de.dafuqs.spectrum.registries.SpectrumBlockTags;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
@@ -408,6 +409,10 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         add(CoreBlocks.COLOURED_LEAD_GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
         add(CoreBlocks.COLOURED_LEAD_GLASS_PANE, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
         add(CoreBlocks.COLORED_MOLTEN_GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
+
+        add(CoreBlocks.SPECTRUM_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
+        add(CoreBlocks.TFC_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
+        add(CoreBlocks.AFC_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/boards/white_cedar"
+      },
+      {
+        "model": "modpack:block/wood/boards/white_cedar_alt"
+      }
+    ]
+  }
+}
