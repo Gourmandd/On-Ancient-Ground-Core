@@ -18,6 +18,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
@@ -37,6 +38,7 @@ public class AncientGroundCore {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public AncientGroundCore(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(CoreItemCapabilities::register);
         modEventBus.addListener(DataEntryPoint::gatherData);
         modEventBus.addListener(PacketSetup::setup);
@@ -73,6 +75,10 @@ public class AncientGroundCore {
 
     private void commonSetup(FMLCommonSetupEvent event) {
         LOGGER.info("HELLO FROM COMMON SETUP");
+    }
+
+    private void clientSetup(FMLClientSetupEvent event) {
+        LOGGER.info("HELLO FROM CLIENT SETUP");
 
         Map<String, String> textMacros = ImmutableMap.<String, String>builder()
                 .put("macro.modpack.open_modpack_guide_key", CoreKeyBindings.OPEN_MODPACK_GUIDE.getKey().getDisplayName().getString())
