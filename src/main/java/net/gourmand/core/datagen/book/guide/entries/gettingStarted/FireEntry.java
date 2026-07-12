@@ -61,7 +61,7 @@ public class FireEntry extends EntryProvider {
         // page 4: multiblock.
         this.page("page4", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "getting_started/fire_pit"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "getting_started/fire_pit"))
                 .withVisualizeButton(false)
         );
 
@@ -86,7 +86,7 @@ public class FireEntry extends EntryProvider {
         // page 6: multiblock.
         this.page("page6", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/getting_started/fire_pit_interface.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/getting_started/fire_pit_interface.png"))
         );
 
         this.pageTitle(entryName());

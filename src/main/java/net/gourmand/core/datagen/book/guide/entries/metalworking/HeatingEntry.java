@@ -45,7 +45,7 @@ public class HeatingEntry extends EntryProvider {
         // page 2: crucible interface
         this.page("page2", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/metalworking/charcoal_forge_interface.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/metalworking/charcoal_forge_interface.png"))
         );
 
         this.pageTitle(entryName());

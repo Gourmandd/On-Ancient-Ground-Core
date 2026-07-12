@@ -37,7 +37,7 @@ public class IntroductionEntry extends EntryProvider {
 
         // page 2: multiblock showing sticks and stones.
         this.page("page2", () -> BookMultiblockPageModel.create()
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "getting_started/stick_and_stones"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "getting_started/stick_and_stones"))
                 .withText(this.context().pageText())
                 .withVisualizeButton(false)
         );
@@ -65,7 +65,7 @@ public class IntroductionEntry extends EntryProvider {
         this.page("page4", () -> BookImagePageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/getting_started/rock_knapping.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/getting_started/rock_knapping.png"))
         );
 
         this.pageTitle(entryName());

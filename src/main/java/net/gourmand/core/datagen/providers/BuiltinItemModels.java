@@ -31,7 +31,7 @@ import java.util.stream.Stream;
 public class BuiltinItemModels extends ItemModelProvider {
 
     public BuiltinItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, AncientGroundCore.MODID, existingFileHelper);
+        super(output, AncientGroundCore.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class BuiltinItemModels extends ItemModelProvider {
         Stream.of(CoreOres.values()).forEach(ore -> {
             if (!ore.hasBlock()){
                 simpleBlock(CoreBlocks.BASIC_ORES.get(ore));
-                simpleItem(CoreItems.ORES.get(ore).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "item/ore/" + ore.getSerializedName()));
+                simpleItem(CoreItems.ORES.get(ore).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item/ore/" + ore.getSerializedName()));
             }
         });
 
@@ -54,12 +54,12 @@ public class BuiltinItemModels extends ItemModelProvider {
                     if (ore.isGraded()){
                         simpleBlock(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(grade));
 
-                        simpleItem(CoreItems.GRADED_ORES.get(ore).get(grade).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "item/ore/" + grade.toString().toLowerCase(Locale.ROOT) + "_" + ore.getSerializedName()));
+                        simpleItem(CoreItems.GRADED_ORES.get(ore).get(grade).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item/ore/" + grade.toString().toLowerCase(Locale.ROOT) + "_" + ore.getSerializedName()));
                     }
                 });
 
                 if (ore.isGraded()){
-                    simpleItem(CoreBlocks.SMALL_ORES.get(ore).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "item/ore/small_" + ore.getSerializedName()));
+                    simpleItem(CoreBlocks.SMALL_ORES.get(ore).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item/ore/small_" + ore.getSerializedName()));
                 }
             });
 
@@ -157,14 +157,14 @@ public class BuiltinItemModels extends ItemModelProvider {
             supportBlockItem(CoreItems.SUPPORTS.get(woodType).get(), woodType);
             // do support
 
-            simpleItem(CoreItems.LUMBER.get(woodType).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/wood/lumber/" + woodType.getSerializedName()));
-            simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TWIG).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/wood/twig/" + woodType.getSerializedName()));
+            simpleItem(CoreItems.LUMBER.get(woodType).get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/lumber/" + woodType.getSerializedName()));
+            simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TWIG).get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/twig/" + woodType.getSerializedName()));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SCRIBING_TABLE));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SEWING_TABLE));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.LOOM));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SHELF));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TOOL_RACK));
-            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE), getBlockModelLocation(AncientGroundCore.MODID,CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE).getId().getPath() + "_lower"));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE), getBlockModelLocation(AncientGroundCore.MOD_ID,CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE).getId().getPath() + "_lower"));
             simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SAPLING).get().asItem(), TextureUtil.getSaplingTexture(woodType));
         });
 
@@ -181,16 +181,16 @@ public class BuiltinItemModels extends ItemModelProvider {
 
 
         Stream.of(DyeColor.values()).forEach(color -> {
-            simpleItem(CoreItems.COLORED_LENS.get(color).get(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/lens/" + color.getSerializedName()));
-            simpleItem(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/molten_glass/" + color.getSerializedName()));
+            simpleItem(CoreItems.COLORED_LENS.get(color).get(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/lens/" + color.getSerializedName()));
+            simpleItem(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/molten_glass/" + color.getSerializedName()));
             simpleBlock(CoreBlocks.COLOURED_LEAD_GLASS.get(color));
-            simpleItem(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":block/lead_glass/" + color.getSerializedName()));
+            simpleItem(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":block/lead_glass/" + color.getSerializedName()));
 
         });
 
-        simpleItem(CoreBlocks.CLEAR_MOLTEN_GLASS.get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/molten_glass/clear"));
+        simpleItem(CoreBlocks.CLEAR_MOLTEN_GLASS.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/molten_glass/clear"));
         simpleBlock(CoreBlocks.CLEAR_LEAD_GLASS);
-        simpleItem(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":block/lead_glass/clear"));
+        simpleItem(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":block/lead_glass/clear"));
 
         CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(this::simpleBlock);
 
@@ -271,11 +271,11 @@ public class BuiltinItemModels extends ItemModelProvider {
                 String oreId = ore.name().toLowerCase(Locale.ROOT);
                 String rockId = rock.getSerializedName();
 
-                this.getBuilder("%s:item/pan/%s/%s_full".formatted(AncientGroundCore.MODID, oreId, rockId))
+                this.getBuilder("%s:item/pan/%s/%s_full".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
                         .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/full"))
                         .texture("material", texture);
 
-                this.getBuilder("%s:item/pan/%s/%s_half".formatted(AncientGroundCore.MODID, oreId, rockId))
+                this.getBuilder("%s:item/pan/%s/%s_half".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
                         .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/half"))
                         .texture("material", texture);
             }

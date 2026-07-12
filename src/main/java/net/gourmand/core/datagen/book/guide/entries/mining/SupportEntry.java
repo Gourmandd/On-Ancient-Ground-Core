@@ -95,7 +95,7 @@ public class SupportEntry extends EntryProvider {
         // page 6: support multiblock.
         this.page("page6", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "mining/support_range"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "mining/support_range"))
                 .withVisualizeButton(false)
         );
 

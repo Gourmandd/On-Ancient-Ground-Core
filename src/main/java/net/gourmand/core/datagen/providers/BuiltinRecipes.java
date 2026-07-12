@@ -91,7 +91,7 @@ public class BuiltinRecipes extends RecipeProvider implements
 
     @Override
     public void add(String prefix, String name, Recipe<?> recipe) {
-        output.accept(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, (prefix + "/" + name).toLowerCase(Locale.ROOT)), recipe, null);
+        output.accept(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, (prefix + "/" + name).toLowerCase(Locale.ROOT)), recipe, null);
     }
 
     @Override

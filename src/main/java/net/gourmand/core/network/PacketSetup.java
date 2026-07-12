@@ -15,7 +15,7 @@ public class PacketSetup {
 
     public static void setup(RegisterPayloadHandlersEvent event){
 
-        final PayloadRegistrar register = event.registrar(ModList.get().getModFileById(AncientGroundCore.MODID).versionString());
+        final PayloadRegistrar register = event.registrar(ModList.get().getModFileById(AncientGroundCore.MOD_ID).versionString());
 
         register.playToClient(OpenModpackGuidePacket.TYPE, OpenModpackGuidePacket.CODEC, onClient(OpenModpackGuidePacket::handle));
         register.playToServer(OpenFieldGuidePacket.TYPE, OpenFieldGuidePacket.CODEC, onServer(OpenFieldGuidePacket::handle));

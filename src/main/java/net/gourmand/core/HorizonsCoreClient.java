@@ -10,9 +10,9 @@ import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
 // This class will not load on dedicated servers. Accessing client side code from here is safe.
-@Mod(value = AncientGroundCore.MODID, dist = Dist.CLIENT)
+@Mod(value = AncientGroundCore.MOD_ID, dist = Dist.CLIENT)
 // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-@EventBusSubscriber(modid = AncientGroundCore.MODID, value = Dist.CLIENT)
+@EventBusSubscriber(modid = AncientGroundCore.MOD_ID, value = Dist.CLIENT)
 public class HorizonsCoreClient {
     public HorizonsCoreClient(ModContainer container) {
         // Allows NeoForge to create a config screen for this mod's configs.

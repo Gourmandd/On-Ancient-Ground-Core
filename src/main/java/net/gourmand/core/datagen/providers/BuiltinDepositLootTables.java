@@ -38,7 +38,7 @@ public class BuiltinDepositLootTables implements LootTableSubProvider {
     private static ResourceKey<LootTable> createKey(String path){
         return ResourceKey.create(
                 Registries.LOOT_TABLE,
-                ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, path)
+                ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, path)
         );
     }
 }

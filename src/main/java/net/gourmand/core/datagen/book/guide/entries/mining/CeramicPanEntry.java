@@ -68,7 +68,7 @@ public class CeramicPanEntry extends EntryProvider {
         // page 4: image of that.
         this.page("page4", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/mining/panning.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/mining/panning.png"))
         );
 
         this.pageTitle(entryName());

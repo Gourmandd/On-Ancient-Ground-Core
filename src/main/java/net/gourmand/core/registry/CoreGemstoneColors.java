@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class CoreGemstoneColors {
 
-    public static final DeferredRegister<GemstoneColor> GEMSTONE_COLORS = DeferredRegister.create(SpectrumRegistries.GEMSTONE_COLOR, AncientGroundCore.MODID);
+    public static final DeferredRegister<GemstoneColor> GEMSTONE_COLORS = DeferredRegister.create(SpectrumRegistries.GEMSTONE_COLOR, AncientGroundCore.MOD_ID);
 
     public static final Map<CoreGemstones, DeferredHolder<GemstoneColor, CoreGemstones>> GEMSTONES = Helpers.mapOf(CoreGemstones.class, gem ->
         register(gem.getSerializedName(), gem)

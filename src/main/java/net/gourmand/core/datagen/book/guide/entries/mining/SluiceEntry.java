@@ -66,7 +66,7 @@ public class SluiceEntry extends EntryProvider {
         // page 4: image of the setup.
         this.page("page4", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/mining/sluice_cross.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/mining/sluice_cross.png"))
         );
 
         this.pageTitle("How to set up the sluice");
@@ -88,7 +88,7 @@ public class SluiceEntry extends EntryProvider {
         // page 6: image of that.
         this.page("page6", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/mining/sluice_in_use.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/mining/sluice_in_use.png"))
         );
 
         this.pageTitle(entryName());

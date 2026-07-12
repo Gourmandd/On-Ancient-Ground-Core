@@ -65,7 +65,7 @@ public abstract class DataManagerProvider<T> implements DataProvider
 
     protected final void add(String name, T value)
     {
-        add(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, name.toLowerCase(Locale.ROOT)), value);
+        add(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name.toLowerCase(Locale.ROOT)), value);
     }
 
     protected final void add(ResourceLocation name, T value)

@@ -76,7 +76,7 @@ public class BarrelEntry extends EntryProvider {
         // page 4: interface.
         this.page("page4", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/homesteading/barrel_interface.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/homesteading/barrel_interface.png"))
         );
 
         this.pageTitle(entryName());
@@ -182,7 +182,7 @@ public class BarrelEntry extends EntryProvider {
         // page 12: sideways barrels.
         this.page("page12", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/homesteading/barrel_drip.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/homesteading/barrel_drip.png"))
         );
 
         this.pageTitle(entryName());

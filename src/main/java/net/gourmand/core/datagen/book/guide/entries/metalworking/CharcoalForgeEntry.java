@@ -45,7 +45,7 @@ public class CharcoalForgeEntry extends EntryProvider {
         // page 2: making it
         this.page("page2", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "metalworking/charcoal_forge"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "metalworking/charcoal_forge"))
                 .withVisualizeButton(false)
         );
 
@@ -71,7 +71,7 @@ public class CharcoalForgeEntry extends EntryProvider {
         // page 4: making it
         this.page("page4", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/metalworking/charcoal_forge_interface.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/metalworking/charcoal_forge_interface.png"))
         );
 
         this.pageTitle(entryName());
@@ -96,7 +96,7 @@ public class CharcoalForgeEntry extends EntryProvider {
         // page 6: fire spread range
         this.page("page6", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/metalworking/charcoal_forge_range.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/metalworking/charcoal_forge_range.png"))
         );
 
         this.pageTitle(entryName());

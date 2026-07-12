@@ -28,10 +28,10 @@ import org.slf4j.Logger;
 import java.util.Map;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(AncientGroundCore.MODID)
+@Mod(AncientGroundCore.MOD_ID)
 public class AncientGroundCore {
     public static final String MOD_NAME = "Modpack Core";
-    public static final String MODID = "modpack";
+    public static final String MOD_ID = "modpack";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -96,7 +96,7 @@ public class AncientGroundCore {
     }
 
     public static ResourceLocation location(String path){
-        return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, path);
+        return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, path);
     }
 
     public static ResourceLocation location(String name, String path){

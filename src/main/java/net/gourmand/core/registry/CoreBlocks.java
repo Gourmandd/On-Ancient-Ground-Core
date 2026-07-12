@@ -36,7 +36,7 @@ import java.util.function.Supplier;
 
 public class CoreBlocks {
 
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AncientGroundCore.MODID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AncientGroundCore.MOD_ID);
 
     public static final Map<CoreMetals.MetalType, Map<Metal.BlockType, DeferredHolder<Block, Block>>> METALS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
             Helpers.mapOf(Metal.BlockType.class, type -> type.has(metal.getLikeMetal()), type ->

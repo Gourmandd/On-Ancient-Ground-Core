@@ -41,7 +41,7 @@ public class ClayEntry extends EntryProvider {
         // page 2: .
         this.page("page2", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "getting_started/clay_indicators"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "getting_started/clay_indicators"))
                 .withVisualizeButton(false)
         );
 
@@ -67,7 +67,7 @@ public class ClayEntry extends EntryProvider {
         // page 4: knapping GUI.
         this.page("page4", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/getting_started/clay_knapping.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/getting_started/clay_knapping.png"))
         );
 
         this.pageTitle(entryName());

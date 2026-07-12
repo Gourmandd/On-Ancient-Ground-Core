@@ -13,8 +13,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class CoreWorldGen {
 
-    public static final DeferredRegister<MapCodec<? extends BiomeSource>> BIOME_SOURCES = DeferredRegister.create(BuiltInRegistries.BIOME_SOURCE, AncientGroundCore.MODID);
-    public static final DeferredRegister<Feature<?>> CONFIGURED_FEATURE_TYPE = DeferredRegister.create(BuiltInRegistries.FEATURE, AncientGroundCore.MODID);
+    public static final DeferredRegister<MapCodec<? extends BiomeSource>> BIOME_SOURCES = DeferredRegister.create(BuiltInRegistries.BIOME_SOURCE, AncientGroundCore.MOD_ID);
+    public static final DeferredRegister<Feature<?>> CONFIGURED_FEATURE_TYPE = DeferredRegister.create(BuiltInRegistries.FEATURE, AncientGroundCore.MOD_ID);
 
     public static final DeferredHolder<MapCodec<? extends BiomeSource>, MapCodec<OthersideBiomeSource>> OTHERSIDE_BIOME_SOURCE = BIOME_SOURCES.register( "otherside", () -> OthersideBiomeSource.CODEC);
 

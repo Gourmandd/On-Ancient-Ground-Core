@@ -24,7 +24,7 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class CreativeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AncientGroundCore.MODID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AncientGroundCore.MOD_ID);
 
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> METAL = register("metal", () -> new ItemStack(CoreItems.METAL_ITEMS.get(CoreMetals.MetalType.ALUMINIUM).get(Metal.ItemType.INGOT)), CreativeTabs::fillMetal);
@@ -332,7 +332,7 @@ public class CreativeTabs {
     {
         return CREATIVE_TABS.register(id, () -> CreativeModeTab.builder()
                 .icon(icon)
-                .title(Component.translatable("item_group." + id + "." + AncientGroundCore.MODID))
+                .title(Component.translatable("item_group." + id + "." + AncientGroundCore.MOD_ID))
                 .displayItems(gen)
                 .build()
         );

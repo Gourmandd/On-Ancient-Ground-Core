@@ -45,7 +45,7 @@ public final class DataEntryPoint
         final var lookup = add(event, new DatapackBuiltinEntriesProvider(
                 event.getGenerator().getPackOutput(), event.getLookupProvider(),
                 registrySetBuilder
-                , Set.of(AncientGroundCore.MODID, "minecraft", TerraFirmaCraft.MOD_ID))).getRegistryProvider();
+                , Set.of(AncientGroundCore.MOD_ID, "minecraft", TerraFirmaCraft.MOD_ID))).getRegistryProvider();
 
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinDepositData(output, lookup));

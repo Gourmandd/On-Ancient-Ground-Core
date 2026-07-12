@@ -20,7 +20,7 @@ public class BuiltinPlacedFeatureTags extends TagsProvider<PlacedFeature> {
 
     public BuiltinPlacedFeatureTags(GatherDataEvent event, CompletableFuture<HolderLookup.Provider> lookup)
     {
-        super(event.getGenerator().getPackOutput(), Registries.PLACED_FEATURE, lookup, AncientGroundCore.MODID, event.getExistingFileHelper());
+        super(event.getGenerator().getPackOutput(), Registries.PLACED_FEATURE, lookup, AncientGroundCore.MOD_ID, event.getExistingFileHelper());
         this.resourceType = new ExistingFileHelper.ResourceType(PackType.SERVER_DATA, ".json", Registries.tagsDirPath(registryKey));
     }
 

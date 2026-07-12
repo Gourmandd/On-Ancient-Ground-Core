@@ -22,7 +22,7 @@ public class CoreTags {
     private static TagKey<Fluid> createFluidTag(String name){
         return TagKey.create(
                 Registries.FLUID,
-                ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, name)
+                ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name)
         );
     }
 
@@ -39,7 +39,7 @@ public class CoreTags {
         }
 
         private static TagKey<Block> tag(String key){
-            return tag(AncientGroundCore.MODID, key);
+            return tag(AncientGroundCore.MOD_ID, key);
         }
 
         public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = tag("snow_shovel_mineable");
@@ -75,15 +75,15 @@ public class CoreTags {
         );
 
         public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_5 = Helpers.mapOf(CoreClay.class, clay ->
-                tag(AncientGroundCore.MODID ,"clay/" + clay.getSerializedName() + "/recycling_5")
+                tag(AncientGroundCore.MOD_ID,"clay/" + clay.getSerializedName() + "/recycling_5")
         );
 
         public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_1 = Helpers.mapOf(CoreClay.class, clay ->
-                tag(AncientGroundCore.MODID ,"clay/" + clay.getSerializedName() + "/recycling_1")
+                tag(AncientGroundCore.MOD_ID,"clay/" + clay.getSerializedName() + "/recycling_1")
         );
 
         public static final Map<Metal.ItemType, TagKey<Item>> TOOL_HEADS = Helpers.mapOf(Metal.ItemType.class, tool -> (tool.hasMold() && tool != Metal.ItemType.INGOT), tool ->
-                tag(AncientGroundCore.MODID ,"tool_heads/" + tool.name().toLowerCase(Locale.ROOT))
+                tag(AncientGroundCore.MOD_ID,"tool_heads/" + tool.name().toLowerCase(Locale.ROOT))
         );
 
         public static final Map<SpectrumWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(SpectrumWood.class, wood -> (!wood.isNoxfungi() && wood != SpectrumWood.WEEPING_GALA), color ->
@@ -98,7 +98,7 @@ public class CoreTags {
                 tag("do_not_use_in_recipes/ore/" + ore.getSerializedName())
         );
 
-        public static final TagKey<Item> KAOLIN_CLAYS = tag( AncientGroundCore.MODID,"kaolin_clay_blocks");
+        public static final TagKey<Item> KAOLIN_CLAYS = tag( AncientGroundCore.MOD_ID,"kaolin_clay_blocks");
 
         public static final TagKey<Item> WEEPING_GALA_LOGS = tag(SpectrumCommon.MOD_ID , "weeping_gala_logs");
 
@@ -107,19 +107,19 @@ public class CoreTags {
         public static final TagKey<Item> CHESTNUT_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "chestnut_noxcap_stems");
         public static final TagKey<Item> EBONY_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "ebony_noxcap_stems");
 
-        public static final TagKey<Item> BELLS = tag(AncientGroundCore.MODID ,"bells");
+        public static final TagKey<Item> BELLS = tag(AncientGroundCore.MOD_ID,"bells");
 
-        public static final TagKey<Item> UNFIRED_VESSELS = tag(AncientGroundCore.MODID ,"unfired_vessels");
+        public static final TagKey<Item> UNFIRED_VESSELS = tag(AncientGroundCore.MOD_ID,"unfired_vessels");
 
         public static final TagKey<Item> CLAY_BALLS = tag("clay_balls");
 
         public static final TagKey<Item> CLAY_BRICKS = tag("clay_bricks");
 
-        public static final TagKey<Item> MORTARED_COBBLE = tag( AncientGroundCore.MODID,"cobblestones/mortared");
+        public static final TagKey<Item> MORTARED_COBBLE = tag( AncientGroundCore.MOD_ID,"cobblestones/mortared");
 
-        public static final TagKey<Item> MOLTEN_GLASS = tag( AncientGroundCore.MODID,"molten_glass");
+        public static final TagKey<Item> MOLTEN_GLASS = tag( AncientGroundCore.MOD_ID,"molten_glass");
 
-        public static final TagKey<Item> LEAD_GLASS = tag( AncientGroundCore.MODID,"lead_glass");
-        public static final TagKey<Item> LEAD_GLASS_PANES = tag( AncientGroundCore.MODID,"lead_glass_panes");
+        public static final TagKey<Item> LEAD_GLASS = tag( AncientGroundCore.MOD_ID,"lead_glass");
+        public static final TagKey<Item> LEAD_GLASS_PANES = tag( AncientGroundCore.MOD_ID,"lead_glass_panes");
     }
 }

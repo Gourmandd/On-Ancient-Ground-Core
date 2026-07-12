@@ -45,7 +45,7 @@ public class OreEntry extends EntryProvider {
 
         this.page("page2", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "ore_preview/" + ID))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "ore_preview/" + ID))
                 .withVisualizeButton(false)
         );
 

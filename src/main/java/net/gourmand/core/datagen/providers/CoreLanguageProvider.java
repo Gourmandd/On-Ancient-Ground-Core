@@ -27,7 +27,7 @@ import java.util.stream.Stream;
 public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
     public CoreLanguageProvider(PackOutput packOutput, ModonomiconLanguageProvider cachedProvider) {
-        super(packOutput, AncientGroundCore.MODID, "en_us", cachedProvider);
+        super(packOutput, AncientGroundCore.MOD_ID, "en_us", cachedProvider);
     }
 
     @Override
@@ -91,7 +91,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                     }
                 }
             });
-            add("item." + AncientGroundCore.MODID + ".ceramic." + clay.getSerializedName() + ".jug.filled", "%s " + getName(clay) + " Jug");
+            add("item." + AncientGroundCore.MOD_ID + ".ceramic." + clay.getSerializedName() + ".jug.filled", "%s " + getName(clay) + " Jug");
             add("emi." + TerraFirmaCraft.MOD_ID + ".ceramic." + clay.getSerializedName() + "_knapping", getName(clay) + " Knapping");
         });
 
@@ -163,17 +163,17 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
                 }
             });
 
-            add("metal." + AncientGroundCore.MODID + "." + metal.getSerializedName(), getName(metal));
+            add("metal." + AncientGroundCore.MOD_ID + "." + metal.getSerializedName(), getName(metal));
         });
 
         // TODO: find out if TFC still wants these as metal definitions don't exist anymore.
         Stream.of(DyeColor.values()).forEach(colour -> {
-            add("metal." + AncientGroundCore.MODID + ".glass." + colour.getSerializedName(), getName(colour) + " Glass");
+            add("metal." + AncientGroundCore.MOD_ID + ".glass." + colour.getSerializedName(), getName(colour) + " Glass");
             add(CoreBlocks.COLORED_GLASS_FLUIDS.get(colour).get(), getName(colour) + " Glass");
             add(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(colour).get(), getName(colour) + " Glass Bucket");
             add(CoreFluids.COLORED_GLASS.get(colour).type().get().getDescriptionId(), getName(colour) + " Glass");
         });
-        add("metal." + AncientGroundCore.MODID + ".glass.clear", "Clear Glass");
+        add("metal." + AncientGroundCore.MOD_ID + ".glass.clear", "Clear Glass");
         add(CoreBlocks.CLEAR_GLASS_FLUID.get(), "Clear Glass");
         add(CoreItems.CLEAR_GLASS_FLUID_BUCKET.get(), "Clear Glass Bucket");
         add(CoreFluids.CLEAR_GLASS.type().get().getDescriptionId(), "Clear Glass");

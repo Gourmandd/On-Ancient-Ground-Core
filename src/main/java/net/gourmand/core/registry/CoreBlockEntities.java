@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 
 public class CoreBlockEntities {
 
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, AncientGroundCore.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, AncientGroundCore.MOD_ID);
 
     public static final TFCBlockEntities.Id<CoreCropBlockEntity> CROP = register("crop", CoreCropBlockEntity::new, CoreBlocks.CROPS.values().stream());
 

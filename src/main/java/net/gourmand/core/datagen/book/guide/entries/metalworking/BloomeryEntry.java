@@ -77,7 +77,7 @@ public class BloomeryEntry extends EntryProvider {
         // page 4: building and using it
         this.page("page4", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "metalworking/bloomery"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "metalworking/bloomery"))
         );
 
         this.pageTitle(entryName());

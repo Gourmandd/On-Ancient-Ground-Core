@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 public class CompactingRecipes extends CompactingRecipeGen {
 
     public CompactingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, AncientGroundCore.MODID);
+        super(output, registries, AncientGroundCore.MOD_ID);
         compactingRecipes();
     }
 

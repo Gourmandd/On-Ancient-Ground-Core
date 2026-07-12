@@ -24,7 +24,7 @@ import java.util.function.Supplier;
 
 public class CoreItems {
 
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientGroundCore.MODID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientGroundCore.MOD_ID);
 
     public static final Map<CoreMetals.MetalType, Map<Metal.ItemType, DeferredHolder<Item, Item>>> METAL_ITEMS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
             Helpers.mapOf(Metal.ItemType.class, type -> type.has(metal.getLikeMetal()), type ->

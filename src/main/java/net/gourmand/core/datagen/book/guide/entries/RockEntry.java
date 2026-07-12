@@ -48,7 +48,7 @@ public class RockEntry extends EntryProvider {
         this.pageText(text);
 
         this.page("page2", () -> BookMultiblockPageModel.create()
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "rock_preview/" + ID))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "rock_preview/" + ID))
                 .withVisualizeButton(false)
         );
 

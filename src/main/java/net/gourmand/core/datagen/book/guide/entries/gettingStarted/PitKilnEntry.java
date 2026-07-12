@@ -37,7 +37,7 @@ public class PitKilnEntry extends EntryProvider {
         // page 2: multiblock.
         this.page("page2", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "getting_started/pit_kiln"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "getting_started/pit_kiln"))
                 .withVisualizeButton(false)
         );
 

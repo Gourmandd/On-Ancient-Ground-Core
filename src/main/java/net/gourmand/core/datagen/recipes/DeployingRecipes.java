@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 public class DeployingRecipes extends DeployingRecipeGen {
 
     public DeployingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, AncientGroundCore.MODID);
+        super(output, registries, AncientGroundCore.MOD_ID);
         compactingRecipes();
     }
 

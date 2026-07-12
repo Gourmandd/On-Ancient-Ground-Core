@@ -41,7 +41,7 @@ public class BuiltinBlockTags extends TagsProvider<Block>
 
     public BuiltinBlockTags(GatherDataEvent event, CompletableFuture<HolderLookup.Provider> lookup)
     {
-        super(event.getGenerator().getPackOutput(), Registries.BLOCK, lookup, AncientGroundCore.MODID, event.getExistingFileHelper());
+        super(event.getGenerator().getPackOutput(), Registries.BLOCK, lookup, AncientGroundCore.MOD_ID, event.getExistingFileHelper());
         this.resourceType = new ExistingFileHelper.ResourceType(PackType.SERVER_DATA, ".json", Registries.tagsDirPath(registryKey));
     }
 

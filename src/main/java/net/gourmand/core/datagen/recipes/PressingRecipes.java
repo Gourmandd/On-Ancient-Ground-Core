@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 public class PressingRecipes extends PressingRecipeGen {
 
     public PressingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, AncientGroundCore.MODID);
+        super(output, registries, AncientGroundCore.MOD_ID);
         rollingRecipes();
     }
 

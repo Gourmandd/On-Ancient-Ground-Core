@@ -71,7 +71,7 @@ public class BlastFurnaceEntry extends EntryProvider {
         // page 4: multiblock
         this.page("page4", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "metalworking/blast_furnace"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "metalworking/blast_furnace"))
         );
 
         this.pageTitle(entryName());
@@ -98,7 +98,7 @@ public class BlastFurnaceEntry extends EntryProvider {
         // page 6: building and using it
         this.page("page6", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/metalworking/blast_furnace_interface.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/metalworking/blast_furnace_interface.png"))
         );
 
         this.pageTitle(entryName());

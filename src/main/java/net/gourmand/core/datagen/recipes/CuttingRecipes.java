@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 public class CuttingRecipes extends CuttingRecipeGen {
 
     public CuttingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, AncientGroundCore.MODID);
+        super(output, registries, AncientGroundCore.MOD_ID);
         cuttingRecipes();
     }
 

@@ -14,7 +14,7 @@ public class GuideBook extends SingleBookSubProvider {
     public static final String ID = "guide";
 
     public GuideBook(BiConsumer<String, String> defaultLang) {
-        super(ID, AncientGroundCore.MODID, defaultLang);
+        super(ID, AncientGroundCore.MOD_ID, defaultLang);
     }
 
     @Override

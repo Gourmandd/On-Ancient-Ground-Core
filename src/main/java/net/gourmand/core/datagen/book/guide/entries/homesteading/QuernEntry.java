@@ -56,7 +56,7 @@ public class QuernEntry extends EntryProvider {
         // page 3: put the handstone
         this.page("page3", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/homesteading/quern_1.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/homesteading/quern_1.png"))
         );
 
         this.pageText("""
@@ -66,7 +66,7 @@ public class QuernEntry extends EntryProvider {
         // page 4: put the ingredient
         this.page("page4", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/homesteading/quern_2.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/homesteading/quern_2.png"))
         );
 
         this.pageText("""
@@ -76,7 +76,7 @@ public class QuernEntry extends EntryProvider {
         // page 5: use the handstone
         this.page("page5", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/homesteading/quern_3.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/homesteading/quern_3.png"))
         );
 
         this.pageText("""
@@ -86,7 +86,7 @@ public class QuernEntry extends EntryProvider {
         // page 6: your result
         this.page("page6", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/homesteading/quern_4.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/homesteading/quern_4.png"))
         );
 
         this.pageText("""

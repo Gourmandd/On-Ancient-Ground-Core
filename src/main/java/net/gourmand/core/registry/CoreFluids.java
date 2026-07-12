@@ -26,8 +26,8 @@ import java.util.function.Function;
 
 public class CoreFluids {
 
-    public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, AncientGroundCore.MODID);
-    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(Registries.FLUID, AncientGroundCore.MODID);
+    public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, AncientGroundCore.MOD_ID);
+    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(Registries.FLUID, AncientGroundCore.MOD_ID);
 
     public static final Map<CoreMetals.MetalType, FluidHolder<BaseFlowingFluid>> METALS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal -> register(
             "metal/" + metal.getSerializedName(),
@@ -36,7 +36,7 @@ public class CoreFluids {
                     .bucket(CoreItems.METAL_FLUID_BUCKETS.get(metal))
                     .explosionResistance(100),
             lavaLike()
-                    .descriptionId("fluid." + AncientGroundCore.MODID + ".metal." + metal.getSerializedName())
+                    .descriptionId("fluid." + AncientGroundCore.MOD_ID + ".metal." + metal.getSerializedName())
                     .rarity(metal.rarity()),
             MoltenFluid.Source::new,
             MoltenFluid.Flowing::new
@@ -49,7 +49,7 @@ public class CoreFluids {
                     .bucket(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(color))
                     .explosionResistance(100),
             lavaLike()
-                    .descriptionId("fluid." + AncientGroundCore.MODID + ".glass." + color.getSerializedName())
+                    .descriptionId("fluid." + AncientGroundCore.MOD_ID + ".glass." + color.getSerializedName())
                      .rarity(Rarity.COMMON),
             MoltenFluid.Source::new,
             MoltenFluid.Flowing::new
@@ -62,7 +62,7 @@ public class CoreFluids {
                 .bucket(CoreItems.CLEAR_GLASS_FLUID_BUCKET)
                 .explosionResistance(100),
             lavaLike()
-                    .descriptionId("fluid." + AncientGroundCore.MODID + ".glass.clear")
+                    .descriptionId("fluid." + AncientGroundCore.MOD_ID + ".glass.clear")
                     .rarity(Rarity.COMMON),
         MoltenFluid.Source::new,
         MoltenFluid.Flowing::new

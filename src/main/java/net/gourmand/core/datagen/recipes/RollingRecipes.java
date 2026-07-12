@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 public class RollingRecipes extends RollingRecipeGen {
 
     public RollingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, AncientGroundCore.MODID);
+        super(output, registries, AncientGroundCore.MOD_ID);
         rollingRecipes();
     }
 

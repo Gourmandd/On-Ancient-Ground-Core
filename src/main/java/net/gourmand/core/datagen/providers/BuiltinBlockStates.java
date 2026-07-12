@@ -37,12 +37,12 @@ public class BuiltinBlockStates extends BlockStateProvider {
     private final static ResourceLocation aqueductSouthParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/south");
     private final static ResourceLocation aqueductEastParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/east");
     private final static ResourceLocation aqueductWestParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/west");
-    private final static ResourceLocation mossOverlay = ResourceLocation.parse(AncientGroundCore.MODID + ":block/moss_brick_overlay");
+    private final static ResourceLocation mossOverlay = ResourceLocation.parse(AncientGroundCore.MOD_ID + ":block/moss_brick_overlay");
 
-    private final static ResourceLocation thickFluidFlowTexture = ResourceLocation.parse(AncientGroundCore.MODID + ":block/thick_fluid_flow");
+    private final static ResourceLocation thickFluidFlowTexture = ResourceLocation.parse(AncientGroundCore.MOD_ID + ":block/thick_fluid_flow");
 
     public BuiltinBlockStates(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, AncientGroundCore.MODID, exFileHelper);
+        super(output, AncientGroundCore.MOD_ID, exFileHelper);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         Stream.of(CoreOres.values()).forEach(ore -> {
             if (!ore.hasBlock()){
-                cubeAll(CoreBlocks.BASIC_ORES.get(ore), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/ore/" + ore.getSerializedName() ));
+                cubeAll(CoreBlocks.BASIC_ORES.get(ore), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/ore/" + ore.getSerializedName() ));
             }
         });
 
@@ -178,14 +178,14 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         moltenGlassBlock(CoreBlocks.CLEAR_MOLTEN_GLASS);
 
-        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS,  ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/clear"));
+        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS,  ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"));
         Stream.of(DyeColor.values()).forEach(color -> {
-            cubeAll(CoreBlocks.COLOURED_LEAD_GLASS.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/" + color.getSerializedName()));
+            cubeAll(CoreBlocks.COLOURED_LEAD_GLASS.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/" + color.getSerializedName()));
         });
 
-        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE,  ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/clear"), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/pane_top"));
+        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE,  ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
         Stream.of(DyeColor.values()).forEach(color -> {
-            paneBlock(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/" + color.getSerializedName()), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/lead_glass/pane_top"));
+            paneBlock(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/" + color.getSerializedName()), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
         });
 
         Stream.of(CoreClay.values()).forEach(clay -> {
@@ -204,8 +204,8 @@ public class BuiltinBlockStates extends BlockStateProvider {
             });
         });
 
-        cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/prismatic_ice" ));
-        cubeAll(CoreBlocks.SLUDGE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/sludge" ));
+        cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/prismatic_ice" ));
+        cubeAll(CoreBlocks.SLUDGE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/sludge" ));
 
         Stream.of(CoreGemstones.values()).forEach(gem -> {
 
@@ -754,7 +754,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState()
                 .setModels(
                         new ConfiguredModel(
-                                createModel(block.getId().getNamespace() + ":block/" + block.getId().getPath(), AncientGroundCore.MODID + ":block/colored_cube_all")
+                                createModel(block.getId().getNamespace() + ":block/" + block.getId().getPath(), AncientGroundCore.MOD_ID + ":block/colored_cube_all")
                                         .texture("all", thickFluidFlowTexture)
                         )
                 );

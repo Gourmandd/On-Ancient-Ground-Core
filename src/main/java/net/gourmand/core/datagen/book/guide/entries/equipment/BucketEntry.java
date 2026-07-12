@@ -65,7 +65,7 @@ public class BucketEntry extends EntryProvider {
         // page 4: iron bucket recipe.
         this.page("page4", () -> BookAnvilWorkingPageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "anvil/metal/bucket/wrought_iron"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "anvil/metal/bucket/wrought_iron"))
         );
 
         this.pageTitle(entryName());

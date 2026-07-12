@@ -131,7 +131,7 @@ public interface Accessors
 
     default float temperatureOf(CoreMetals.MetalType metal)
     {
-        return FluidHeat.MANAGER.getOrThrow(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, metal.getSerializedName())).meltTemperature();
+        return FluidHeat.MANAGER.getOrThrow(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, metal.getSerializedName())).meltTemperature();
     }
 
     default TagKey<Item> logsTagOf(SpectrumWood woodType){

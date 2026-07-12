@@ -29,7 +29,7 @@ public class BuiltinFluidTags extends TagsProvider<Fluid> implements Accessors
 
     public BuiltinFluidTags(GatherDataEvent event, CompletableFuture<HolderLookup.Provider> lookup)
     {
-        super(event.getGenerator().getPackOutput(), Registries.FLUID, lookup, AncientGroundCore.MODID, event.getExistingFileHelper());
+        super(event.getGenerator().getPackOutput(), Registries.FLUID, lookup, AncientGroundCore.MOD_ID, event.getExistingFileHelper());
         this.resourceType = new ExistingFileHelper.ResourceType(PackType.SERVER_DATA, ".json", Registries.tagsDirPath(registryKey));
     }
 

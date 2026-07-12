@@ -46,7 +46,7 @@ public class OreDepositEntry extends EntryProvider {
         // page 2: image of an ore deposit.
         this.page("page2", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/mining/ore_deposit.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/mining/ore_deposit.png"))
         );
 
         this.pageTitle("How to set up the sluice");

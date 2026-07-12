@@ -139,63 +139,63 @@ public class BuiltinConfiguredFeatures  {
 
     // This Mod's features
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MONSTER_ROOM = createKey(AncientGroundCore.MODID, "monster_room");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MONSTER_ROOM = createKey(AncientGroundCore.MOD_ID, "monster_room");
 
     //region Geode ResourceKeys
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AMETHYST_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/amethyst");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CITRINE_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/citrine");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TOPAZ_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/topaz");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ONYX_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/onyx");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MOONSTONE_GEODE = createKey(AncientGroundCore.MODID, "vein/geode/moonstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMETHYST_GEODE = createKey(AncientGroundCore.MOD_ID, "vein/geode/amethyst");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CITRINE_GEODE = createKey(AncientGroundCore.MOD_ID, "vein/geode/citrine");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TOPAZ_GEODE = createKey(AncientGroundCore.MOD_ID, "vein/geode/topaz");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ONYX_GEODE = createKey(AncientGroundCore.MOD_ID, "vein/geode/onyx");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MOONSTONE_GEODE = createKey(AncientGroundCore.MOD_ID, "vein/geode/moonstone");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> BISMUTH_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/bismuth");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> BORAX_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/borax");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CASSITERITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/cassiterite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CINNABAR_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/cinnabar");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYOLITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/cryolite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/diamond");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> EMERALD_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/emerald");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GARNIERITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/garnierite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GRAPHITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/graphite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GYPSUM_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/gypsum");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HALITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/halite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HEMATITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/hematite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> KAOLINITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/kaolinite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LAPIS_LAZULI_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/lapis_lazuli");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LIGNITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/lignite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LIMONITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/limonite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MALACHITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/malachite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_COPPER_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/native_copper");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_GOLD_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/native_gold");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_SILVER_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/native_silver");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> OPAL_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/opal");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> PALTAERIA_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/paltaeria");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/ruby");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SALTPETER_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/saltpeter");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sapphite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMERSTONE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/shimmerstone");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SPHALERITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sphalerite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/stratine");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SULFUR_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sulfur");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SYLVITE_DEEPER_DOWN = createKey(AncientGroundCore.MODID, "vein/deeper_down/sylvite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BISMUTH_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/bismuth");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BORAX_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/borax");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CASSITERITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cassiterite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CINNABAR_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cinnabar");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYOLITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cryolite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/diamond");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EMERALD_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/emerald");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GARNIERITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/garnierite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GRAPHITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/graphite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GYPSUM_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/gypsum");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HALITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/halite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HEMATITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/hematite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> KAOLINITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/kaolinite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LAPIS_LAZULI_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/lapis_lazuli");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIGNITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/lignite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIMONITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/limonite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MALACHITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/malachite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_COPPER_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_copper");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_GOLD_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_gold");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_SILVER_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_silver");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OPAL_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/opal");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PALTAERIA_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/paltaeria");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/ruby");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SALTPETER_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/saltpeter");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/sapphite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMERSTONE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/shimmerstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SPHALERITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/sphalerite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/stratine");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SULFUR_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/sulfur");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SYLVITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/sylvite");
     //endregion
 
     //region Ore Vein ResourceKeys
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ANTHRACITE = createKey(AncientGroundCore.MODID, "vein/anthracite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE = createKey(AncientGroundCore.MODID, "vein/azurite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE_VOLCANIC = createKey(AncientGroundCore.MODID, "vein/azurite_volcanic");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> BAUXITE = createKey(AncientGroundCore.MODID, "vein/bauxite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> METEORIC_IRON = createKey(AncientGroundCore.MODID, "vein/meteoric_iron");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NORMAL_GALENA = createKey(AncientGroundCore.MODID, "vein/normal_galena");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> PALTAERIA = createKey(AncientGroundCore.MODID, "vein/paltaeria");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ = createKey(AncientGroundCore.MODID, "vein/quartz");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_SEDIMENTARY = createKey(AncientGroundCore.MODID, "vein/quartz_sedimentary");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE = createKey(AncientGroundCore.MODID, "vein/shimmerstone");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE_VOLCANIC = createKey(AncientGroundCore.MODID, "vein/shimmerstone_volcanic");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SOAPSTONE = createKey(AncientGroundCore.MODID, "vein/soapstone");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE = createKey(AncientGroundCore.MODID, "vein/stratine");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_GALENA = createKey(AncientGroundCore.MODID, "vein/surface_galena");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TERRACOTTA = createKey(AncientGroundCore.MODID, "vein/terracotta");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ANTHRACITE = createKey(AncientGroundCore.MOD_ID, "vein/anthracite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE = createKey(AncientGroundCore.MOD_ID, "vein/azurite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE_VOLCANIC = createKey(AncientGroundCore.MOD_ID, "vein/azurite_volcanic");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BAUXITE = createKey(AncientGroundCore.MOD_ID, "vein/bauxite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> METEORIC_IRON = createKey(AncientGroundCore.MOD_ID, "vein/meteoric_iron");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NORMAL_GALENA = createKey(AncientGroundCore.MOD_ID, "vein/normal_galena");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PALTAERIA = createKey(AncientGroundCore.MOD_ID, "vein/paltaeria");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ = createKey(AncientGroundCore.MOD_ID, "vein/quartz");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_SEDIMENTARY = createKey(AncientGroundCore.MOD_ID, "vein/quartz_sedimentary");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE = createKey(AncientGroundCore.MOD_ID, "vein/shimmerstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE_VOLCANIC = createKey(AncientGroundCore.MOD_ID, "vein/shimmerstone_volcanic");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SOAPSTONE = createKey(AncientGroundCore.MOD_ID, "vein/soapstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE = createKey(AncientGroundCore.MOD_ID, "vein/stratine");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_GALENA = createKey(AncientGroundCore.MOD_ID, "vein/surface_galena");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TERRACOTTA = createKey(AncientGroundCore.MOD_ID, "vein/terracotta");
     //endregion
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx){

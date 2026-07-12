@@ -42,7 +42,7 @@ public class CharcoalPitEntry extends EntryProvider {
         // page 2: making it
         this.page("page2", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "metalworking/charcoal_pit"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "metalworking/charcoal_pit"))
         );
 
         this.pageTitle(entryName());
@@ -71,7 +71,7 @@ public class CharcoalPitEntry extends EntryProvider {
         // page 4: making it
         this.page("page4", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "metalworking/charcoal_pit_finished"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "metalworking/charcoal_pit_finished"))
         );
 
         this.pageTitle(entryName());

@@ -69,7 +69,7 @@ public class CellarEntry extends EntryProvider {
         this.page("page4", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
                 .withVisualizeButton(false)
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "homesteading/cellar"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "homesteading/cellar"))
         );
 
         this.pageTitle(entryName());

@@ -43,7 +43,7 @@ public class FireClayEntry extends EntryProvider {
         // page 2: .
         this.page("page2", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "pottery/kaolin_clay_indicators"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "pottery/kaolin_clay_indicators"))
                 .withVisualizeButton(false)
         );
 

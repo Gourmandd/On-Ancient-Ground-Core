@@ -77,7 +77,7 @@ public class AnvilWorkingEntry extends EntryProvider {
         // page 4: anvil interface
         this.page("page4", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/metalworking/anvil_interface.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/metalworking/anvil_interface.png"))
         );
 
         this.pageTitle(entryName());

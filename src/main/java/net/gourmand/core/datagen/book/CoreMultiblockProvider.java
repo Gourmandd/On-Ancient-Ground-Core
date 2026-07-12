@@ -30,7 +30,7 @@ import static net.dries007.tfc.common.blocks.rock.Ore.*;
 public class CoreMultiblockProvider extends MultiblockProvider {
 
     public CoreMultiblockProvider(PackOutput packOutput) {
-        super(packOutput, AncientGroundCore.MODID);
+        super(packOutput, AncientGroundCore.MOD_ID);
     }
 
     private static final Map<CoreOres, DeferredHolder<Block, Block>> CORE_ORES = ImmutableMap.<CoreOres, DeferredHolder<Block, Block>>builder()

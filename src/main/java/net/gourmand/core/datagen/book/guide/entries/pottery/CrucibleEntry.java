@@ -68,7 +68,7 @@ public class CrucibleEntry extends EntryProvider {
         // page 4: multiblock.
         this.page("page4", () -> BookMultiblockPageModel.create()
                 .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "pottery/crucible"))
+                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "pottery/crucible"))
                 .withVisualizeButton(false)
         );
 
@@ -95,7 +95,7 @@ public class CrucibleEntry extends EntryProvider {
         // page 6: crucible interface.
         this.page("page6", () -> BookImagePageModel.create()
                 .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "textures/book/pottery/crucible_interface.png"))
+                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/pottery/crucible_interface.png"))
         );
 
         this.pageTitle(entryName());

@@ -21,6 +21,6 @@ public class CoreClimateRanges {
 
     private static DataManager.Reference<ClimateRange> register(String name)
     {
-        return ClimateRange.MANAGER.getReference(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, name.toLowerCase(Locale.ROOT)));
+        return ClimateRange.MANAGER.getReference(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name.toLowerCase(Locale.ROOT)));
     }
 }
