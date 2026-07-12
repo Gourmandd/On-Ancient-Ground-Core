@@ -9,7 +9,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
+import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.registry.items.CoreSeedItem;
 import net.gourmand.core.registry.items.InfluenceDebugItem;
 import net.gourmand.core.registry.items.MetalBucketItem;
@@ -55,9 +55,9 @@ public class CoreItems {
     );
 
 
-    public static final Map<CoreDeeperDownWood, DeferredHolder<Item, Item>> LUMBER = Helpers.mapOf(CoreDeeperDownWood.class, wood -> register("wood/lumber/" + wood.name()));
+    public static final Map<SpectrumWood, DeferredHolder<Item, Item>> LUMBER = Helpers.mapOf(SpectrumWood.class, wood -> register("wood/lumber/" + wood.name()));
 
-    public static final Map<CoreDeeperDownWood, DeferredHolder<Item, Item>> SUPPORTS = Helpers.mapOf(CoreDeeperDownWood.class, wood ->
+    public static final Map<SpectrumWood, DeferredHolder<Item, Item>> SUPPORTS = Helpers.mapOf(SpectrumWood.class, wood ->
             register("wood/support/" + wood.name(), () -> new StandingAndWallBlockItem(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).get(), CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get(), new Item.Properties(), Direction.DOWN))
     );
 

@@ -8,7 +8,7 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
+import net.gourmand.core.registry.category.SpectrumWood;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -31,7 +31,7 @@ public class CreativeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NATURE = register("nature", () -> new ItemStack(CoreItems.CROP_SEEDS.get(CoreCrops.AMARANTH)), CreativeTabs::fillNature);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ORES = register("ores", () -> new ItemStack(CoreBlocks.ORES.get(Rock.ANDESITE).get(CoreOres.AZURITE).get()), CreativeTabs::fillOres);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ROCKS = register("rocks", () -> new ItemStack(CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get()), CreativeTabs::fillRocks);
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WOOD = register("wood", () -> new ItemStack(CoreBlocks.DEEPER_DOWN_WOODS.get(CoreDeeperDownWood.GREEN).get(Wood.BlockType.LOOM).get()), CreativeTabs::fillWood);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WOOD = register("wood", () -> new ItemStack(CoreBlocks.DEEPER_DOWN_WOODS.get(SpectrumWood.GREEN).get(Wood.BlockType.LOOM).get()), CreativeTabs::fillWood);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS = register("tools", () -> new ItemStack(CoreItems.SNOW_SHOVEL), CreativeTabs::fillTools);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CERAMICS = register("ceramics", () -> new ItemStack(CoreItems.CERAMICS.get(CoreClay.YIXING).get(CoreClay.ItemType.VESSEL)), CreativeTabs::fillCeramics);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GLASS = register("glass", () -> new ItemStack(CoreBlocks.CLEAR_MOLTEN_GLASS.get()), CreativeTabs::fillGlass);
@@ -256,7 +256,7 @@ public class CreativeTabs {
 
     private static void fillWood(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
-        for (CoreDeeperDownWood wood : CoreDeeperDownWood.values())
+        for (SpectrumWood wood : SpectrumWood.values())
         {
             CoreBlocks.DEEPER_DOWN_WOODS.get(wood).forEach((type,reg) ->
             {

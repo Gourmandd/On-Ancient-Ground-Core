@@ -32,7 +32,7 @@ import java.util.Locale;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-public enum CoreDeeperDownWood implements RegistryWood {
+public enum SpectrumWood implements RegistryWood {
     CHESTNUT_NOXWOOD(SpectrumWoodType.NOXWOOD, MapColor.CRIMSON_NYLIUM, MapColor.CRIMSON_NYLIUM, SpectrumConfiguredFeatureKeys.CHESTNUT_NOXFUNGUS),
     SLATE_NOXWOOD(SpectrumWoodType.NOXWOOD, MapColor.COLOR_GRAY, MapColor.COLOR_GRAY, SpectrumConfiguredFeatureKeys.SLATE_NOXFUNGUS),
     EBONY_NOXWOOD(SpectrumWoodType.NOXWOOD, MapColor.TERRACOTTA_BLACK, MapColor.TERRACOTTA_BLACK, SpectrumConfiguredFeatureKeys.EBONY_NOXFUNGUS),
@@ -65,11 +65,11 @@ public enum CoreDeeperDownWood implements RegistryWood {
     private final TreeGrower tree;
     private final int daysToGrow;
 
-    CoreDeeperDownWood(SpectrumWoodType spectrumWoodType, MapColor woodColor, MapColor barkColor, ResourceKey<ConfiguredFeature<?, ?>> feature){
+    SpectrumWood(SpectrumWoodType spectrumWoodType, MapColor woodColor, MapColor barkColor, ResourceKey<ConfiguredFeature<?, ?>> feature){
         this(spectrumWoodType, woodColor, barkColor, new TreeGrower(feature.toString().replace("spectrum:", "/"), Optional.empty(), Optional.of(feature), Optional.empty()));
     }
 
-    CoreDeeperDownWood(SpectrumWoodType spectrumWoodType, MapColor woodColor, MapColor barkColor, TreeGrower tree){
+    SpectrumWood(SpectrumWoodType spectrumWoodType, MapColor woodColor, MapColor barkColor, TreeGrower tree){
         this.spectrumWoodType = spectrumWoodType;
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.woodColor = woodColor;
@@ -151,7 +151,7 @@ public enum CoreDeeperDownWood implements RegistryWood {
         return planksTextures;
     }
 
-    public static Supplier<Block> create(Wood.BlockType type, CoreDeeperDownWood wood) {
+    public static Supplier<Block> create(Wood.BlockType type, SpectrumWood wood) {
 
         switch (type){
             case TOOL_RACK -> {

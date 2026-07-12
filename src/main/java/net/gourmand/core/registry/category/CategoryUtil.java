@@ -168,7 +168,7 @@ public class CategoryUtil {
     public static ArrayList<String> getPastelWoodNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreDeeperDownWood wood : CoreDeeperDownWood.values()){
+        for (SpectrumWood wood : SpectrumWood.values()){
             list.add(wood.getSerializedName());
         }
 

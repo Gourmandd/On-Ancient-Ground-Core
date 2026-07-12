@@ -86,7 +86,7 @@ public class CoreTags {
                 tag(AncientGroundCore.MODID ,"tool_heads/" + tool.name().toLowerCase(Locale.ROOT))
         );
 
-        public static final Map<CoreDeeperDownWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(CoreDeeperDownWood.class, wood -> (!wood.isNoxfungi() && wood != CoreDeeperDownWood.WEEPING_GALA),color ->
+        public static final Map<SpectrumWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(SpectrumWood.class, wood -> (!wood.isNoxfungi() && wood != SpectrumWood.WEEPING_GALA), color ->
                 tag(SpectrumCommon.MOD_ID , color.getSerializedName() + "_logs")
         );
 

@@ -304,7 +304,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
     private void generateWood(){
 
-        Stream.of(CoreDeeperDownWood.values()).forEach(wood -> {
+        Stream.of(SpectrumWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach( type -> {
                 if (wood.hasBlockType(type)){
                     if (type == Wood.BlockType.SLUICE){

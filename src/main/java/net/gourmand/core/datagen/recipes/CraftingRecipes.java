@@ -195,7 +195,7 @@ public interface CraftingRecipes extends Recipes {
             }
         });
 
-        Stream.of(CoreDeeperDownWood.values()).forEach(woodType -> {
+        Stream.of(SpectrumWood.values()).forEach(woodType -> {
 
             final var blocks = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
             final var lumber = CoreItems.LUMBER.get(woodType).get();
@@ -312,7 +312,7 @@ public interface CraftingRecipes extends Recipes {
                     .shaped(blocks.get(Wood.BlockType.TOOL_RACK).get());
             //recipe().to2x2(planks, blocks.get(Wood.BlockType.WORKBENCH), 1);
 
-            if (woodType.isNoxfungi() || woodType == CoreDeeperDownWood.WEEPING_GALA){
+            if (woodType.isNoxfungi() || woodType == SpectrumWood.WEEPING_GALA){
                 recipe()
                         .input('L', lumber)
                         .pattern("LL", "LL", "LL")
@@ -323,7 +323,7 @@ public interface CraftingRecipes extends Recipes {
                         .shaped(woodType.getTrapdoor(), 2);
             }
 
-            if (woodType.isNoxfungi() && woodType != CoreDeeperDownWood.WEEPING_GALA){
+            if (woodType.isNoxfungi() && woodType != SpectrumWood.WEEPING_GALA){
                 final String name = woodType.getSerializedName().replace("_noxwood", "");
                 remove("spectrum:crafting_table/noxwood/" + name + "_planks");
                 remove("spectrum:crafting_table/noxwood/" + name + "_stairs");
@@ -335,7 +335,7 @@ public interface CraftingRecipes extends Recipes {
                 remove("spectrum:crafting_table/noxwood/" + name + "_pressure_plate");
             }
 
-            if (woodType == CoreDeeperDownWood.WEEPING_GALA){
+            if (woodType == SpectrumWood.WEEPING_GALA){
                 remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/planks");
                 remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/stairs");
                 remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/slab");

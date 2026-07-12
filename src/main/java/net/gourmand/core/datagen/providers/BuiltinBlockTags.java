@@ -300,7 +300,7 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             }
         });
 
-        Stream.of(CoreDeeperDownWood.values()).forEach(wood ->{
+        Stream.of(SpectrumWood.values()).forEach(wood ->{
             this.tag(BlockTags.MINEABLE_WITH_AXE)
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG).getKey())
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).getKey())

@@ -17,7 +17,7 @@ import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreFluids;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
+import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.registry.category.CoreGemstones;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.gourmand.core.util.CoreKeyBindings;
@@ -166,7 +166,7 @@ public class ClientEventHandler {
             });
         });
 
-        for (CoreDeeperDownWood wood : CoreDeeperDownWood.values()){
+        for (SpectrumWood wood : SpectrumWood.values()){
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(SAPLING).get(), cutoutMipped);
         }
 

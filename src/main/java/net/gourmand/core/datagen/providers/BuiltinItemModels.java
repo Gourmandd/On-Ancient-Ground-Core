@@ -152,7 +152,7 @@ public class BuiltinItemModels extends ItemModelProvider {
         });
 
         // spectrum wood types.
-        Stream.of(CoreDeeperDownWood.values()).forEach(woodType -> {
+        Stream.of(SpectrumWood.values()).forEach(woodType -> {
 
             supportBlockItem(CoreItems.SUPPORTS.get(woodType).get(), woodType);
             // do support
@@ -314,7 +314,7 @@ public class BuiltinItemModels extends ItemModelProvider {
         return ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), "block/" + block.getId().getPath());
     }
 
-    private void supportBlockItem(Item item, CoreDeeperDownWood wood){
+    private void supportBlockItem(Item item, SpectrumWood wood){
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
         ResourceLocation textureTop = TextureUtil.getStrippedLogTopTexture(wood);
 

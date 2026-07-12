@@ -278,7 +278,7 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             }
         });
 
-        Stream.of(CoreDeeperDownWood.values()).forEach(wood ->{
+        Stream.of(SpectrumWood.values()).forEach(wood ->{
 
             this.tag(TFCTags.Items.LUMBER).add(getKey(CoreItems.LUMBER.get(wood).get()));
 

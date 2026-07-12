@@ -155,7 +155,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
         });
 
         // spectrum wood types.
-        Stream.of(CoreDeeperDownWood.values()).forEach(woodType -> {
+        Stream.of(SpectrumWood.values()).forEach(woodType -> {
             Map<Wood.BlockType, DeferredHolder<Block, Block>> map = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
             supportBlock(map.get(Wood.BlockType.HORIZONTAL_SUPPORT), map.get(Wood.BlockType.VERTICAL_SUPPORT), woodType);
             twigBlock(map.get(Wood.BlockType.TWIG), woodType);
@@ -543,7 +543,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
         );
     }
 
-    private void supportBlock(DeferredHolder<Block, Block> Hblock, DeferredHolder<Block, Block> Vblock, CoreDeeperDownWood wood){
+    private void supportBlock(DeferredHolder<Block, Block> Hblock, DeferredHolder<Block, Block> Vblock, SpectrumWood wood){
 
         ResourceLocation textureTop = TextureUtil.getStrippedLogTopTexture(wood);
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
@@ -574,7 +574,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
         Vbuilder.part().modelFile(modelConnection).rotationY(180).addModel().condition(AqueductBlock.WEST, true);
     }
 
-    private void twigBlock(DeferredHolder<Block, Block> block, CoreDeeperDownWood wood){
+    private void twigBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
 
         ResourceLocation textureTop = TextureUtil.getLogTopTexture(wood);
         ResourceLocation texture = TextureUtil.getLogTexture(wood);
@@ -595,7 +595,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .modelFile(model45).rotationY(270).addModel();
     }
 
-    private void scribingTableBlock(DeferredHolder<Block, Block> block, CoreDeeperDownWood wood){
+    private void scribingTableBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
         ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
@@ -611,7 +611,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(ScribingTableBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
     }
 
-    private void sewingTableBlock(DeferredHolder<Block, Block> block, CoreDeeperDownWood wood){
+    private void sewingTableBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
         ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
@@ -627,7 +627,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(SewingTableBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
     }
 
-    private void shelfBlock(DeferredHolder<Block, Block> block, CoreDeeperDownWood wood){
+    private void shelfBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
 
@@ -642,7 +642,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(ShelfBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
     }
 
-    private void loomBlock(DeferredHolder<Block, Block> block, CoreDeeperDownWood wood){
+    private void loomBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
 
@@ -657,7 +657,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(TFCLoomBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(90).addModel();
     }
 
-    private void toolRackBlock(DeferredHolder<Block, Block> block, CoreDeeperDownWood wood){
+    private void toolRackBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
 
         ResourceLocation texturePlank = TextureUtil.getStrippedLogTexture(wood); // some of the plank textures don't look great, the stripped logs look a bit better.
 
@@ -672,7 +672,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(ToolRackBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(90).addModel();
     }
 
-    private void sluiceBlock(DeferredHolder<Block, Block> block, CoreDeeperDownWood wood){
+    private void sluiceBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
 
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
 

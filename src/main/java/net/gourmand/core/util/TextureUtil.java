@@ -414,31 +414,31 @@ public class TextureUtil {
         }
     }
 
-    public static ResourceLocation getPlanksTexture(CoreDeeperDownWood wood){
+    public static ResourceLocation getPlanksTexture(SpectrumWood wood){
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName() + "_planks");
     }
 
-    public static ResourceLocation getLogTexture(CoreDeeperDownWood wood){
+    public static ResourceLocation getLogTexture(SpectrumWood wood){
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getLogTopTexture(CoreDeeperDownWood wood){
+    public static ResourceLocation getLogTopTexture(SpectrumWood wood){
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getStrippedLogTexture(CoreDeeperDownWood wood){
+    public static ResourceLocation getStrippedLogTexture(SpectrumWood wood){
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getStrippedLogTopTexture(CoreDeeperDownWood wood){
+    public static ResourceLocation getStrippedLogTopTexture(SpectrumWood wood){
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getSaplingTexture(CoreDeeperDownWood wood){
-        if (wood.getSpectrumWoodType() == CoreDeeperDownWood.SpectrumWoodType.WEEPING_GALA){
+    public static ResourceLocation getSaplingTexture(SpectrumWood wood){
+        if (wood.getSpectrumWoodType() == SpectrumWood.SpectrumWoodType.WEEPING_GALA){
             return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/weeping_gala_sprig");
         }
-        if (wood.getSpectrumWoodType() == CoreDeeperDownWood.SpectrumWoodType.NOXWOOD){
+        if (wood.getSpectrumWoodType() == SpectrumWood.SpectrumWoodType.NOXWOOD){
             return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName().replace("wood", "shroom") + "_type_1");
         }
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName() + "_sapling");

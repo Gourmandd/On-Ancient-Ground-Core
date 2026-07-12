@@ -14,7 +14,7 @@ import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.core.registry.blocks.MeltableBlock;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
+import net.gourmand.core.registry.category.SpectrumWood;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -172,9 +172,9 @@ public class CoreBlocks {
     public static final DeferredHolder<Block, Block> CLEAR_MOLTEN_GLASS =  register("molten_glass/clear", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
 
 
-    public static final Map<CoreDeeperDownWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(CoreDeeperDownWood.class, wood ->
+    public static final Map<SpectrumWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(SpectrumWood.class, wood ->
             Helpers.mapOf(Wood.BlockType.class, wood::hasBlockType, type ->
-                    register(type.nameFor(wood), CoreDeeperDownWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))
+                    register(type.nameFor(wood), SpectrumWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))
             )
     );
 
@@ -249,7 +249,7 @@ public class CoreBlocks {
 
     public static final DeferredHolder<Block, CopperBulbBlock> LEAD_BULB_BLOCK = register("metal/bulb/lead", () -> new  CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).mapColor(MapColor.COLOR_PURPLE)));
 
-    public static final Map<CoreDeeperDownWood, DeferredHolder<Block, Block>> SPECTRUM_WOOD_BOARDS = Helpers.mapOf(CoreDeeperDownWood.class, wood ->
+    public static final Map<SpectrumWood, DeferredHolder<Block, Block>> SPECTRUM_WOOD_BOARDS = Helpers.mapOf(SpectrumWood.class, wood ->
                     register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
     );
 

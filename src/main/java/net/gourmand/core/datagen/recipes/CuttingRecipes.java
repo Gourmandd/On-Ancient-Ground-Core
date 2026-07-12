@@ -4,7 +4,7 @@ import com.simibubi.create.api.data.recipe.CuttingRecipeGen;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreItems;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
+import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -39,7 +39,7 @@ public class CuttingRecipes extends CuttingRecipeGen {
         });
 
 
-        Stream.of(CoreDeeperDownWood.values()).forEach(woodType -> {
+        Stream.of(SpectrumWood.values()).forEach(woodType -> {
             create(CoreItems.LUMBER.get(woodType).getId().getPath(), b -> b.duration(50)
                     .require(woodType.getPlanks())
                     .output(CoreItems.LUMBER.get(woodType).get(), 4)

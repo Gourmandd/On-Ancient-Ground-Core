@@ -6,7 +6,7 @@ import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CategoryUtil;
-import net.gourmand.core.registry.category.CoreDeeperDownWood;
+import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -134,8 +134,8 @@ public interface Accessors
         return FluidHeat.MANAGER.getOrThrow(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, metal.getSerializedName())).meltTemperature();
     }
 
-    default TagKey<Item> logsTagOf(CoreDeeperDownWood woodType){
-        if (!woodType.isNoxfungi() && woodType != CoreDeeperDownWood.WEEPING_GALA){
+    default TagKey<Item> logsTagOf(SpectrumWood woodType){
+        if (!woodType.isNoxfungi() && woodType != SpectrumWood.WEEPING_GALA){
             return CoreTags.Items.SPECTRUM_COLORED_LOGS.get(woodType);
         } else {
             switch (woodType){
