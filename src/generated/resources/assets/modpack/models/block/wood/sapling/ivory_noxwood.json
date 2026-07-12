@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "spectrum:block/ivory_noxshroom_type_1",
+    "particle": "spectrum:block/ivory_noxshroom_type_1"
+  }
+}

@@ -434,6 +434,16 @@ public class TextureUtil {
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
     }
 
+    public static ResourceLocation getSaplingTexture(CoreDeeperDownWood wood){
+        if (wood.getSpectrumWoodType() == CoreDeeperDownWood.SpectrumWoodType.WEEPING_GALA){
+            return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/weeping_gala_sprig");
+        }
+        if (wood.getSpectrumWoodType() == CoreDeeperDownWood.SpectrumWoodType.NOXWOOD){
+            return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName().replace("wood", "shroom") + "_type_1");
+        }
+        return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName() + "_sapling");
+    }
+
     public static ResourceLocation getCeramicBlockTexture(CoreClay.BlockType type, CoreClay clay){
 
         return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/ceramic/" + type.getSerializedName() + "/" + clay.getSerializedName());

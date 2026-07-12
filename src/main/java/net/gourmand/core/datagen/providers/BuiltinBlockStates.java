@@ -165,6 +165,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
             shelfBlock(map.get(Wood.BlockType.SHELF), woodType);
             toolRackBlock(map.get(Wood.BlockType.TOOL_RACK), woodType);
             sluiceBlock(map.get(Wood.BlockType.SLUICE), woodType);
+            cross(map.get(Wood.BlockType.SAPLING), TextureUtil.getSaplingTexture(woodType));
         });
 
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
@@ -287,6 +288,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
         });
     }
 
+    //region Generation Methods
     private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, CoreOres ore){
         String allTexture = TextureUtil.getRawRockTexture(rock);
         String oreTexture = TextureUtil.getOreTexture(ore);
@@ -843,4 +845,5 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         this.getVariantBuilder(block.get()).partialState().addModels(model, altModel);
     }
+    //endregion
 }

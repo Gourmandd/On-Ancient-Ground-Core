@@ -35,6 +35,11 @@ public class CoreBlockEntities {
             ).flatMap(e -> e)
     );
 
+    public static final TFCBlockEntities.Id<CoreTickCounterBlockEntity> TICK_COUNTING = register("tick_counting", CoreTickCounterBlockEntity::new, Stream.of(
+                    deeperDownWoodBlocks(Wood.BlockType.SAPLING)
+            ).flatMap(e -> e)
+    );
+
     public static final TFCBlockEntities.Id<CoreToolRackBlockEntity> TOOL_RACK = register("tool_rack", CoreToolRackBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.TOOL_RACK));
     public static final TFCBlockEntities.Id<CoreLoomBlockEntity> LOOM = register("loom", CoreLoomBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.LOOM));
     public static final TFCBlockEntities.Id<CoreSluiceBlockEntity> SLUICE = register("sluice", CoreSluiceBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.SLUICE));

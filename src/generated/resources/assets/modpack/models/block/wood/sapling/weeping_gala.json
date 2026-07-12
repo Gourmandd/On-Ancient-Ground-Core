@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "spectrum:block/weeping_gala_sprig",
+    "particle": "spectrum:block/weeping_gala_sprig"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "spectrum:block/light_gray_sapling",
+    "particle": "spectrum:block/light_gray_sapling"
+  }
+}

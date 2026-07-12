@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-08T11:01:51.852640285	Loot Tables
+// 1.21.1	2026-07-09T10:19:28.930516271	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -1868,6 +1868,27 @@ ca98a40535e7c4363533c5015ec1f5b568b9fd1a data/modpack/loot_table/blocks/wood/loo
 e19d4d13bda33e3c52513900d762ef2ee8faf8d4 data/modpack/loot_table/blocks/wood/loom/weeping_gala.json
 59c4d9d76d8e68dfce3986f37f7b07baf7738185 data/modpack/loot_table/blocks/wood/loom/white.json
 d386d8dd21dce2ebb70e53f53a3d15ff93bfd41c data/modpack/loot_table/blocks/wood/loom/yellow.json
+b2f5b3527601e711702dde2dca543b388b8820a0 data/modpack/loot_table/blocks/wood/sapling/black.json
+4214857a37ef0ea2f7ff0689f1e05f8b3d7a3822 data/modpack/loot_table/blocks/wood/sapling/blue.json
+5cee0e6d196c77560f3113d7f4015a9dad3fdb66 data/modpack/loot_table/blocks/wood/sapling/brown.json
+924df30459de4c2683d9a49d52d2719c257dbd77 data/modpack/loot_table/blocks/wood/sapling/chestnut_noxwood.json
+15d4a69699f4baa785fdae7fec14d1a9d77f6ac8 data/modpack/loot_table/blocks/wood/sapling/cyan.json
+df85f8c226744884648c93c2db6a12b7d8c38da2 data/modpack/loot_table/blocks/wood/sapling/ebony_noxwood.json
+ea33926ee83bc756630706ddcc9486fc051b640d data/modpack/loot_table/blocks/wood/sapling/gray.json
+383f02331ce76b80c0530c5390e16908d10a4bae data/modpack/loot_table/blocks/wood/sapling/green.json
+908a1dce6fdf183590207ed7f5d9a40966464f43 data/modpack/loot_table/blocks/wood/sapling/ivory_noxwood.json
+6fcc6a02d3b88da9b34f7fef2f4fb1c1d873e74c data/modpack/loot_table/blocks/wood/sapling/light_blue.json
+52318e869e3afde9d4efa18061c0d2873cbf61ab data/modpack/loot_table/blocks/wood/sapling/light_gray.json
+0b681728e02d2dfa76d4904035deade64dda514b data/modpack/loot_table/blocks/wood/sapling/lime.json
+5c63ed1aa404e7e7bd0d9cba57b22c9ff1ed7c98 data/modpack/loot_table/blocks/wood/sapling/magenta.json
+63712bdb5585436b0b3221a694903ac7587bd8e0 data/modpack/loot_table/blocks/wood/sapling/orange.json
+30d4432796cf8829dae1177064958c8e22c662db data/modpack/loot_table/blocks/wood/sapling/pink.json
+1afbaedf59d71deca31e82ae3887ba2852f0ec7a data/modpack/loot_table/blocks/wood/sapling/purple.json
+4bdf78757734d5f9ee60da77160a47a867cfd74c data/modpack/loot_table/blocks/wood/sapling/red.json
+dea0564085be2956879d8a654b021c05231f49f4 data/modpack/loot_table/blocks/wood/sapling/slate_noxwood.json
+fb8b13bee0f61bc624efcadd16d51283766fbad2 data/modpack/loot_table/blocks/wood/sapling/weeping_gala.json
+a0be004fd65b4f3dc4326c9b5a0625f9598e5b0d data/modpack/loot_table/blocks/wood/sapling/white.json
+39184c6d82ffa9d0f56bca87dda69fd5914aac43 data/modpack/loot_table/blocks/wood/sapling/yellow.json
 3d5214716c2d2fe3a66760192637aadbf77c09ed data/modpack/loot_table/blocks/wood/scribing_table/black.json
 3e6713deccbf54bc30497b0ba721b25c77aa37c0 data/modpack/loot_table/blocks/wood/scribing_table/blue.json
 004ac868a5f2b28c1d18dea79456183e6b0aa2da data/modpack/loot_table/blocks/wood/scribing_table/brown.json

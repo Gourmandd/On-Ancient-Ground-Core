@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-08T11:01:51.896827508	Item Models: modpack
+// 1.21.1	2026-07-09T10:30:16.31739785	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -2139,6 +2139,27 @@ c23f85861cf787e7051aba9d4a17d4ecf60fe20a assets/modpack/models/item/wood/lumber/
 d50b599a63548380f896be147926dfe3f7918fc3 assets/modpack/models/item/wood/lumber/weeping_gala.json
 a367e4b2600dea18522c4340ae9aaf4b34a6d7bf assets/modpack/models/item/wood/lumber/white.json
 7ea610ce0d9e518b36804310a7d2f50fe7cf8668 assets/modpack/models/item/wood/lumber/yellow.json
+c93c724a823a6ca4e4afb3aca2e6c648b61b8508 assets/modpack/models/item/wood/sapling/black.json
+f84aae2507c6e8d7a443b1bdd23e197e3fe13151 assets/modpack/models/item/wood/sapling/blue.json
+a23e7b81fb002efc7003c03c0d8a435302bf676e assets/modpack/models/item/wood/sapling/brown.json
+252612f142f788033799eb82930533bc26e45548 assets/modpack/models/item/wood/sapling/chestnut_noxwood.json
+73523d8ffbd4d66f60463bf7756f66ddd9321b41 assets/modpack/models/item/wood/sapling/cyan.json
+89e978cf31690e1ff238e0f587f8936f4691c962 assets/modpack/models/item/wood/sapling/ebony_noxwood.json
+9117ca68d38d42b8364a7d28a443ab77ddbb3b6c assets/modpack/models/item/wood/sapling/gray.json
+9f705ae216d66915089d4983db4dd869f8f9310f assets/modpack/models/item/wood/sapling/green.json
+9d4552527bd1fef79e275f78cce9f245f2e40519 assets/modpack/models/item/wood/sapling/ivory_noxwood.json
+f57d0e2e0cc6b1ab4e6bfd1d232b9c0809ff90f5 assets/modpack/models/item/wood/sapling/light_blue.json
+6bff590ee8b9501ba58b7094eb023acf4bcb0c93 assets/modpack/models/item/wood/sapling/light_gray.json
+4e9d16807ae549f94cd353bb7047e94c424c097c assets/modpack/models/item/wood/sapling/lime.json
+b6f89fc3ee4ddfc0e4909dc866ad1266199811f2 assets/modpack/models/item/wood/sapling/magenta.json
+37dcd4cc23278a5ee55c6498507b555710649e9f assets/modpack/models/item/wood/sapling/orange.json
+27f94abd2acd4fa7e11d61117849ddad92d30a78 assets/modpack/models/item/wood/sapling/pink.json
+31905c15c2c0694d9a7691e3e157137fc672ecca assets/modpack/models/item/wood/sapling/purple.json
+daf865c9ec72f36d692cfae65df4f71c61cb42f0 assets/modpack/models/item/wood/sapling/red.json
+b748822d7d26eed0577d1b0ca4e270d3ea4d1672 assets/modpack/models/item/wood/sapling/slate_noxwood.json
+63a654354caf5e01c4fbca620bf3e29fccf1d229 assets/modpack/models/item/wood/sapling/weeping_gala.json
+0ff8ca5872fc8a53aa441058dcdbe94ea19e260c assets/modpack/models/item/wood/sapling/white.json
+807350333dc350f1fb7c2abaccbfc78433ae6383 assets/modpack/models/item/wood/sapling/yellow.json
 2072688644b2cdb9d7ada434448182842c1e1e36 assets/modpack/models/item/wood/scribing_table/black.json
 0c3948fe5f0fb4d245fbbb1184687ea509d71e7e assets/modpack/models/item/wood/scribing_table/blue.json
 2eafbfa428039eab68d7ac19b6ec08ac221bf5ce assets/modpack/models/item/wood/scribing_table/brown.json

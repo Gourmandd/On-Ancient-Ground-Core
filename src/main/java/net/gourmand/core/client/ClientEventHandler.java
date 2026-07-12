@@ -17,6 +17,7 @@ import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreFluids;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
+import net.gourmand.core.registry.category.CoreDeeperDownWood;
 import net.gourmand.core.registry.category.CoreGemstones;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.gourmand.core.util.CoreKeyBindings;
@@ -43,8 +44,7 @@ import java.util.stream.Stream;
 
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_FLOW;
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_STILL;
-import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.SCRIBING_TABLE;
-import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.SEWING_TABLE;
+import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.*;
 
 public class ClientEventHandler {
 
@@ -165,6 +165,10 @@ public class ClientEventHandler {
                 }
             });
         });
+
+        for (CoreDeeperDownWood wood : CoreDeeperDownWood.values()){
+            ItemBlockRenderTypes.setRenderLayer(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(SAPLING).get(), cutoutMipped);
+        }
 
         ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS.get(), translucent);
         ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get(), translucent);

@@ -130,10 +130,15 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
         Stream.of(CoreDeeperDownWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach(type -> {
-                if (type.needsItem() && wood.hasBlockType(type)){
+                if (type.needsItem() && wood.hasBlockType(type) && type != Wood.BlockType.SAPLING){
                     addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type), getName(wood) + " " + getName(type.name()));
                 }
             });
+            if (wood.getSpectrumWoodType() == CoreDeeperDownWood.SpectrumWoodType.WEEPING_GALA){
+                addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SAPLING), getName(wood) + " Sprig");
+            } else {
+                addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SAPLING), getName(wood) + " " + getName(Wood.BlockType.SAPLING.name()));
+            }
             addItem(CoreItems.SUPPORTS.get(wood), getName(wood) + " Support");
             addItem(CoreItems.LUMBER.get(wood), getName(wood) + " Lumber");
         });
