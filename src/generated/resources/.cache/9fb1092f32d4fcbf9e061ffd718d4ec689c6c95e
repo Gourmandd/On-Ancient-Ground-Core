@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-13T09:42:58.574209316	Recipes
+// 1.21.1	2026-07-13T12:16:47.481645586	Recipes
 74d08b4749e380fba2d005605c7ebb389e1b8576 data/modpack/recipe/alloy/aluminium_bronze.json
 2b8aaefb8411d25fa8d2563ddf617af092decbd1 data/modpack/recipe/alloy/cast_iron_alloy.json
 ce75347b3aeb00333930a53c795d09ba5de88583 data/modpack/recipe/alloy/electrum.json
@@ -712,6 +712,27 @@ d631e78e46074d5fc1180d07bbf5da90ad9203e1 data/modpack/recipe/crafting/wood/board
 4568dc5212a58f23776b3d970473012241a3e831 data/modpack/recipe/crafting/wood/boards/white_cedar.json
 3b6038f685c36be010f9b097f88af38a7ae21991 data/modpack/recipe/crafting/wood/boards/willow.json
 d1492395ed113408b80ff89207d0ea96e8a3c7c2 data/modpack/recipe/crafting/wood/boards/yellow.json
+caf8dc3ba89522ef69c72e5ece62e6d01f2a9d58 data/modpack/recipe/crafting/wood/crate/black.json
+c0fb3a14962c2b0201ebd7935ec10eb20afaa43c data/modpack/recipe/crafting/wood/crate/blue.json
+b7831fa50ac0381ea1349437479982a41fc1df9c data/modpack/recipe/crafting/wood/crate/brown.json
+5a6fd983038bd4233bad553697d568391ae80059 data/modpack/recipe/crafting/wood/crate/chestnut_noxwood.json
+9938801b3a6f56feb4ba90f0fa907c1ce09e19d6 data/modpack/recipe/crafting/wood/crate/cyan.json
+2ced93053a797192674d14883759b098683d70b6 data/modpack/recipe/crafting/wood/crate/ebony_noxwood.json
+4c91079f154af6d2c0f49b59f5e8e66f77b05d8b data/modpack/recipe/crafting/wood/crate/gray.json
+2549dcd01bd7793ac8b776cb2109de575ed6bcdb data/modpack/recipe/crafting/wood/crate/green.json
+ebc96db79d4d81b20431e0b36bc9929171f50842 data/modpack/recipe/crafting/wood/crate/ivory_noxwood.json
+55a3bf6e5315aabf1598b754a689be5e0d3ae70c data/modpack/recipe/crafting/wood/crate/light_blue.json
+ec739d41e66465d29e96f3fd08ab8a965a59aa1a data/modpack/recipe/crafting/wood/crate/light_gray.json
+c4866d24a0766c87deee25f6c6664df2ab917e97 data/modpack/recipe/crafting/wood/crate/lime.json
+794b9f829565b1dee8e368b1d5063d33cd5de42c data/modpack/recipe/crafting/wood/crate/magenta.json
+6645167e39e82d59da5a53b3e59c2df2467878e0 data/modpack/recipe/crafting/wood/crate/orange.json
+df229268d025df5eb70194370dddae151dfa4138 data/modpack/recipe/crafting/wood/crate/pink.json
+97ad4d51baf94e20cf64e55936f8a80d68c04f50 data/modpack/recipe/crafting/wood/crate/purple.json
+3a1a8ba5683e55d17fdc9860824859ad973d190b data/modpack/recipe/crafting/wood/crate/red.json
+a1a725dbadd7d2ce59feaecd466480c1af9567ce data/modpack/recipe/crafting/wood/crate/slate_noxwood.json
+d4ecf1cfb25b9ff3783686552113e4513a283af7 data/modpack/recipe/crafting/wood/crate/weeping_gala.json
+8def6fa67317c677527294563c6b0eaab3b890de data/modpack/recipe/crafting/wood/crate/white.json
+78f44c76b3fbb9c32afeec9eaea59c89606425f3 data/modpack/recipe/crafting/wood/crate/yellow.json
 688ed33843fa656b021ebde523db7a2d322b7559 data/modpack/recipe/crafting/wood/loom/black.json
 d019ccfb45a55d0c396d56999f84c79ff35f23ae data/modpack/recipe/crafting/wood/loom/blue.json
 2799256dae0dd4a25445d25e50db85be6d156e8c data/modpack/recipe/crafting/wood/loom/brown.json

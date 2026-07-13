@@ -3,6 +3,7 @@ package net.gourmand.core.registry.category;
 import de.dafuqs.spectrum.SpectrumCommon;
 import de.dafuqs.spectrum.registries.SpectrumConfiguredFeatureKeys;
 import de.dafuqs.spectrum.registries.SpectrumTreeGrowers;
+import net.dries007.tfc.common.blocks.CrateBlock;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -25,6 +26,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.material.MapColor;
@@ -100,7 +102,7 @@ public enum SpectrumWood implements RegistryWood {
 
     public boolean hasBlockType(Wood.BlockType type){
         return switch (type) {
-            case TWIG, SEWING_TABLE, SCRIBING_TABLE, VERTICAL_SUPPORT, HORIZONTAL_SUPPORT, LOOM, TOOL_RACK, SLUICE, SHELF, SAPLING -> true;
+            case TWIG, SEWING_TABLE, SCRIBING_TABLE, VERTICAL_SUPPORT, HORIZONTAL_SUPPORT, LOOM, TOOL_RACK, SLUICE, SHELF, SAPLING, CRATE -> true;
             default -> false;
         };
     }
@@ -158,29 +160,35 @@ public enum SpectrumWood implements RegistryWood {
 
         switch (type){
             case TOOL_RACK -> {
-                return () -> new CoreToolRackBlock(ExtendedProperties.of().mapColor(wood.woodColor).sound(SoundType.WOOD).strength(2.0F).noOcclusion().blockEntity(CoreBlockEntities.TOOL_RACK));
+                return () -> new CoreToolRackBlock(properties(wood).strength(2.0F).noOcclusion().blockEntity(CoreBlockEntities.TOOL_RACK));
             }
             case LOOM -> {
-                return () -> new CoreLoomBlock(ExtendedProperties.of().mapColor(wood.woodColor).sound(SoundType.WOOD).strength(2.5F).noOcclusion().flammableLikePlanks().blockEntity(CoreBlockEntities.LOOM).ticks(CoreLoomBlockEntity::tick), wood.getPlanksTexture());
+                return () -> new CoreLoomBlock(properties(wood).strength(2.5F).noOcclusion().flammableLikePlanks().blockEntity(CoreBlockEntities.LOOM).ticks(CoreLoomBlockEntity::tick), wood.getPlanksTexture());
             }
             case SLUICE -> {
-                return () -> new SluiceBlock(ExtendedProperties.of().mapColor(wood.woodColor).sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(CoreBlockEntities.SLUICE).serverTicks(CoreSluiceBlockEntity::serverTick));
+                return () -> new SluiceBlock(properties(wood).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(CoreBlockEntities.SLUICE).serverTicks(CoreSluiceBlockEntity::serverTick));
             }
             case SHELF -> {
-                return () -> new CoreShelfBlock(ExtendedProperties.of().mapColor(wood.woodColor).sound(SoundType.WOOD).noOcclusion().strength(2.5f).flammableLikePlanks().blockEntity(CoreBlockEntities.SHELF), false);
+                return () -> new CoreShelfBlock(properties(wood).noOcclusion().strength(2.5f).flammableLikePlanks().blockEntity(CoreBlockEntities.SHELF), false);
             }
             case SAPLING -> {
                 return () -> new CoreSaplingBlock(wood.tree(), ExtendedProperties.of(MapColor.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(CoreBlockEntities.TICK_COUNTING), wood.ticksToGrow(), false);
             }
+            case CRATE -> {
+                return () -> new CrateBlock(properties(wood).strength(9.0F).noOcclusion().blockEntity(CoreBlockEntities.CRATE));
+            }
             default -> {
                 return type.create(wood);
             }
-
         }
     }
 
     public static Supplier<Block> createShutter(RegistryWood wood){
         return () -> new Shutter(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_WOOD).mapColor(wood.woodColor()).noOcclusion());
+    }
+
+    private static ExtendedProperties properties(RegistryWood wood) {
+        return ExtendedProperties.of(wood.woodColor()).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS);
     }
 
     public Block getPlanks(){
@@ -229,9 +237,9 @@ public enum SpectrumWood implements RegistryWood {
 
     public Block getStrippedLog(){
         if (spectrumWoodType == SpectrumWoodType.NOXWOOD){
-            return getSpectrumWoodBlock("stripped_stem", "noxwood", "noxcap");
+            return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "stripped_" + this.getSerializedName().replace("noxwood", "noxcap") + "_stem"));
         } else {
-            return getSpectrumWoodBlock("stripped_log");
+            return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "stripped_" + this.getSerializedName() + "_log"));
         }
     }
 

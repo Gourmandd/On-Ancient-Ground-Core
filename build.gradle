@@ -183,7 +183,7 @@ configurations {
 dependencies {
 
     // TFC Dependencies & addons
-    implementation "curse.maven:terrafirmacraft-302973:8333098"
+    implementation "curse.maven:terrafirmacraft-302973:8365958"
     implementation "curse.maven:patchouli-306770:6842247"
     implementation "curse.maven:firmalife-453394:8028300"
     implementation "curse.maven:precision-prospecting-700638:7020720"

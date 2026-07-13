@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/chestnut_noxwood"
+    },
+    "S": {
+      "item": "spectrum:stripped_chestnut_noxcap_stem"
+    }
+  },
+  "pattern": [
+    "SLS",
+    "L L",
+    "SLS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/crate/chestnut_noxwood"
+  }
+}

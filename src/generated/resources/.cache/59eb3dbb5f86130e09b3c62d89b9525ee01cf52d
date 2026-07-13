@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-12T17:08:22.760044803	Loot Tables
+// 1.21.1	2026-07-13T12:06:54.931097949	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -1826,6 +1826,27 @@ ae6db36466219e8f32d0302c0349a5353e32a0fc data/modpack/loot_table/blocks/wood/boa
 5a09f2b4c136688cb2da58cc5da949df84dcaf35 data/modpack/loot_table/blocks/wood/boards/white_cedar.json
 a7fc5e7c809af07aa6d764745f4464ffbe3abb4d data/modpack/loot_table/blocks/wood/boards/willow.json
 982cee8d3e4ad468c5b9b9e9760ae7df1ab3ec38 data/modpack/loot_table/blocks/wood/boards/yellow.json
+d69368eed94ce39e1117bd8067d3ee10681b5256 data/modpack/loot_table/blocks/wood/crate/black.json
+f2dc5c71d77d07ff87e7c5bc1e2d5616b076c6bc data/modpack/loot_table/blocks/wood/crate/blue.json
+02abb249d3376bbba227f49e78fa7b7abbe3ecc9 data/modpack/loot_table/blocks/wood/crate/brown.json
+ca633c434bf59c87b2a7b9365f1e921a0a9b77d9 data/modpack/loot_table/blocks/wood/crate/chestnut_noxwood.json
+ccb0e0de420faf393cf4ca9145b7e2b449a928d9 data/modpack/loot_table/blocks/wood/crate/cyan.json
+32fbc911bff4743f88eac8efbf91c0abdda387a2 data/modpack/loot_table/blocks/wood/crate/ebony_noxwood.json
+c634114b8e763e1f014522be1fe8e60dcef00adc data/modpack/loot_table/blocks/wood/crate/gray.json
+1eed23f3594d56a610e2af1b1f4d730a29b33964 data/modpack/loot_table/blocks/wood/crate/green.json
+fce0a9bea36e02a014f1d09ceb9e6527adef77b2 data/modpack/loot_table/blocks/wood/crate/ivory_noxwood.json
+ab57daf693fd9d68d91f9b7569b9baecdd91ebe6 data/modpack/loot_table/blocks/wood/crate/light_blue.json
+bfa19a813352bd51ac38a846df554664aca1507f data/modpack/loot_table/blocks/wood/crate/light_gray.json
+5e5b1c19d162b11a284cff39e4692a6f8647ee3f data/modpack/loot_table/blocks/wood/crate/lime.json
+161b10911c7350f7407cb42dbfd7fd93c172153e data/modpack/loot_table/blocks/wood/crate/magenta.json
+1ba3e8f111eef4528acd88e09588c3609c9e1e5f data/modpack/loot_table/blocks/wood/crate/orange.json
+a673058f7b082d4dce805d943c02f94c77c50760 data/modpack/loot_table/blocks/wood/crate/pink.json
+66522d6580900b0b39732787fa5fc63adeede84b data/modpack/loot_table/blocks/wood/crate/purple.json
+50d89a2248dbcf0b7627878e884a00097a3899fb data/modpack/loot_table/blocks/wood/crate/red.json
+3bc8d740f031aaae4f1f7fd403304e4693d9b4b7 data/modpack/loot_table/blocks/wood/crate/slate_noxwood.json
+3915fadac1d7a94792c43f410d92d492230910bc data/modpack/loot_table/blocks/wood/crate/weeping_gala.json
+e7c2700d11bb38f4e462a3974966d63e8585755d data/modpack/loot_table/blocks/wood/crate/white.json
+07dd2e5c32a2e83de905e5ab43e95fae8903cbc6 data/modpack/loot_table/blocks/wood/crate/yellow.json
 48273de9175aaf55e7694c49cd687a4f0d1893a9 data/modpack/loot_table/blocks/wood/horizontal_support/black.json
 baf513bae804fb5daab60fa67cded93e1e3318ca data/modpack/loot_table/blocks/wood/horizontal_support/blue.json
 fd152a96d28d013748db5b1d10af1018694d6e26 data/modpack/loot_table/blocks/wood/horizontal_support/brown.json

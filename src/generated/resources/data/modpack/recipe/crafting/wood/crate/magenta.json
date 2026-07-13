@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/magenta"
+    },
+    "S": {
+      "item": "spectrum:stripped_magenta_log"
+    }
+  },
+  "pattern": [
+    "SLS",
+    "L L",
+    "SLS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/crate/magenta"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "modpack:wood/lumber/light_blue"
+    },
+    "S": {
+      "item": "spectrum:stripped_light_blue_log"
+    }
+  },
+  "pattern": [
+    "SLS",
+    "L L",
+    "SLS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:wood/crate/light_blue"
+  }
+}

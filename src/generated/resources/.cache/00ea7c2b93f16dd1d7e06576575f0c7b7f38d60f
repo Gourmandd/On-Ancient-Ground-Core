@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-12T17:08:22.777481998	Item Models: modpack
+// 1.21.1	2026-07-13T12:06:54.975156924	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -2097,6 +2097,27 @@ e3aa6b9f3cad4b050cbce7e6c5124f1034058436 assets/modpack/models/item/wood/boards/
 0fb0744843a714318db5a01e8f82bed759ea9656 assets/modpack/models/item/wood/boards/white_cedar.json
 898e1cc21f181bbb4cb5c5b7b2723e0cea8c91b7 assets/modpack/models/item/wood/boards/willow.json
 00456862e161f966ce069a1d481bd1574011e780 assets/modpack/models/item/wood/boards/yellow.json
+7e2b292ce65082ea21e56ebe1a365af2ee891bb2 assets/modpack/models/item/wood/crate/black.json
+febadbee642f6ddd0ec664a40f55a0497700d6ac assets/modpack/models/item/wood/crate/blue.json
+5af3f7903ef7c2a9c7db74fba95c5f644157063f assets/modpack/models/item/wood/crate/brown.json
+3266e6d66cfc71a948ca73f6a1ee1ad49597151e assets/modpack/models/item/wood/crate/chestnut_noxwood.json
+de78e4b1cbfb33abeda1b97ebe4e0f3707325dc1 assets/modpack/models/item/wood/crate/cyan.json
+3b65bd6ecff2084b4d26470c2f2e1ada81a01045 assets/modpack/models/item/wood/crate/ebony_noxwood.json
+f5af6eb00772472a2437f7770fe3b06e4717fbee assets/modpack/models/item/wood/crate/gray.json
+b1c912a4f021da33c8a0e33b3bea8ba14469c0b7 assets/modpack/models/item/wood/crate/green.json
+90261d7fa139e692e5437d8dba0c8b0c4901bd72 assets/modpack/models/item/wood/crate/ivory_noxwood.json
+3ad9ff23bd6dcf4179031f831c16d13815db3b8c assets/modpack/models/item/wood/crate/light_blue.json
+f412cfdfcfbefd3cf3f293e8155f5139ea05eb65 assets/modpack/models/item/wood/crate/light_gray.json
+a1ff65306251b03508e3564a69deb56216478134 assets/modpack/models/item/wood/crate/lime.json
+7069c714aa361c2b6e7a69e830c782b7984c8d99 assets/modpack/models/item/wood/crate/magenta.json
+bd70f71993fb4b9a2f6affb5973bd1c9b9fdea7e assets/modpack/models/item/wood/crate/orange.json
+4cffef4f250ea4f72a0a260fc0b8b19bcc15b2a8 assets/modpack/models/item/wood/crate/pink.json
+4bee9b4545fdb842b1ccda5af1c7a2b1965dfe09 assets/modpack/models/item/wood/crate/purple.json
+141924753f1b616d214719f3a1701baa43c24c1b assets/modpack/models/item/wood/crate/red.json
+1d8ae1274eba3c136a37d29453277322873b7185 assets/modpack/models/item/wood/crate/slate_noxwood.json
+6ff8dd68edcbee596b58f289a6a3dccde33c2252 assets/modpack/models/item/wood/crate/weeping_gala.json
+b4a21d04dcaf736319b5c385c4cfd04da4d449f9 assets/modpack/models/item/wood/crate/white.json
+f24384d777625313ef067b4c761f5697a02f9e1a assets/modpack/models/item/wood/crate/yellow.json
 96b941dbd4d7596037e308a6739395b739812c41 assets/modpack/models/item/wood/loom/black.json
 a86894b425f2f0c9ad766d680d321f9fe63617fc assets/modpack/models/item/wood/loom/blue.json
 b17902bc6913cde2971861defce054de2d1cf55e assets/modpack/models/item/wood/loom/brown.json

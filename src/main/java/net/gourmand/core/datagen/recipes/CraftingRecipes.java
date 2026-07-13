@@ -201,6 +201,7 @@ public interface CraftingRecipes extends Recipes {
             final var blocks = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
             final var lumber = CoreItems.LUMBER.get(woodType).get();
             final var planks = woodType.getPlanks();
+            final var strippedLog = woodType.getStrippedLog();
 
             /*
             recipe()
@@ -307,6 +308,11 @@ public interface CraftingRecipes extends Recipes {
                     .damageInputs()
                     .source(0, 1)
                     .shaped(CoreItems.SUPPORTS.get(woodType).get(), 8);
+            recipe()
+                    .input('S', strippedLog)
+                    .input('L', lumber)
+                    .pattern("SLS", "L L", "SLS")
+                    .shaped(blocks.get(Wood.BlockType.CRATE).get(), 1);
             recipe()
                     .input('L', lumber)
                     .pattern("LLL", "   ", "LLL")

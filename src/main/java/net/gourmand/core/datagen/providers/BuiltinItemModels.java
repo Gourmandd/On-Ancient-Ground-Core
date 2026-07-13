@@ -164,6 +164,7 @@ public class BuiltinItemModels extends ItemModelProvider {
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.LOOM));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SHELF));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TOOL_RACK));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.CRATE));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE), getBlockModelLocation(AncientGroundCore.MOD_ID,CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE).getId().getPath() + "_lower"));
             simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SAPLING).get().asItem(), TextureUtil.getSaplingTexture(woodType));
         });

@@ -44,6 +44,7 @@ public class CoreBlockEntities {
     public static final TFCBlockEntities.Id<CoreLoomBlockEntity> LOOM = register("loom", CoreLoomBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.LOOM));
     public static final TFCBlockEntities.Id<CoreSluiceBlockEntity> SLUICE = register("sluice", CoreSluiceBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.SLUICE));
     public static final TFCBlockEntities.Id<CoreShelfBlockEntity> SHELF = register("shelf", CoreShelfBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.SHELF));
+    public static final TFCBlockEntities.Id<CoreCrateBlockEntity> CRATE = register("crate", CoreCrateBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.CRATE));
 
     private static <T extends BlockEntity> TFCBlockEntities.Id<T> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Supplier<? extends Block> block)
     {

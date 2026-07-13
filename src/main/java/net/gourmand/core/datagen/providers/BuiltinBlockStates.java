@@ -166,6 +166,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
             toolRackBlock(map.get(Wood.BlockType.TOOL_RACK), woodType);
             sluiceBlock(map.get(Wood.BlockType.SLUICE), woodType);
             cross(map.get(Wood.BlockType.SAPLING), TextureUtil.getSaplingTexture(woodType));
+            cubeAll(map.get(Wood.BlockType.CRATE), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/wood/crate/" + woodType.getSerializedName()));
         });
 
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
