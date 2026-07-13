@@ -47,6 +47,13 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
         add("modpack.key.open_modpack_guide", "Open Modpack Guide");
         add("modpack.key.open_tfc_guide", "Open TFC Field Guide");
 
+        // shutters doesn't do this.
+        add("block.shutter.interaction_shutter_wood", "Shutter Interaction");
+        add("block.shutter.interaction_shutter_iron", "Shutter Interaction");
+        add("block.shutter.interaction_shutter_netherite", "Shutter Interaction");
+        add("block.shutter.interaction_shutter_copper", "Shutter Interaction");
+        add("block.shutter.interaction_shutter_glass", "Shutter Interaction");
+
         addItem(CoreItems.GLASS_MOLD, "Glass Block Mold");
         addItem(CoreItems.GLASS_PANE_MOLD, "Glass Pane Mold");
 
@@ -288,6 +295,10 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
         CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
         CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
+
+        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) -> addBlock(block, getName(wood) + " Shutters"));
+        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) -> addBlock(block, getName(wood) + " Shutters"));
+        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) -> addBlock(block, getName(wood) + " Shutters"));
 
         /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {

@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_1",
+  "textures": {
+    "particle": "afc:block/wood/planks/cypress",
+    "texture": "modpack:block/wood/shutter/cypress_shutter_normal"
+  }
+}

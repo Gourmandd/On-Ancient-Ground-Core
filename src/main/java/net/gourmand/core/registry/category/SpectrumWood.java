@@ -20,12 +20,15 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.grower.TreeGrower;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.material.MapColor;
+import net.stehschnitzel.shutter.common.blocks.Shutter;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
@@ -155,16 +158,16 @@ public enum SpectrumWood implements RegistryWood {
 
         switch (type){
             case TOOL_RACK -> {
-                return () -> new CoreToolRackBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(2.0F).noOcclusion().blockEntity(CoreBlockEntities.TOOL_RACK));
+                return () -> new CoreToolRackBlock(ExtendedProperties.of().mapColor(wood.woodColor).sound(SoundType.WOOD).strength(2.0F).noOcclusion().blockEntity(CoreBlockEntities.TOOL_RACK));
             }
             case LOOM -> {
-                return () -> new CoreLoomBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(2.5F).noOcclusion().flammableLikePlanks().blockEntity(CoreBlockEntities.LOOM).ticks(CoreLoomBlockEntity::tick), wood.getPlanksTexture());
+                return () -> new CoreLoomBlock(ExtendedProperties.of().mapColor(wood.woodColor).sound(SoundType.WOOD).strength(2.5F).noOcclusion().flammableLikePlanks().blockEntity(CoreBlockEntities.LOOM).ticks(CoreLoomBlockEntity::tick), wood.getPlanksTexture());
             }
             case SLUICE -> {
-                return () -> new SluiceBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(CoreBlockEntities.SLUICE).serverTicks(CoreSluiceBlockEntity::serverTick));
+                return () -> new SluiceBlock(ExtendedProperties.of().mapColor(wood.woodColor).sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(CoreBlockEntities.SLUICE).serverTicks(CoreSluiceBlockEntity::serverTick));
             }
             case SHELF -> {
-                return () -> new CoreShelfBlock(ExtendedProperties.of().sound(SoundType.WOOD).noOcclusion().strength(2.5f).flammableLikePlanks().blockEntity(CoreBlockEntities.SHELF), false);
+                return () -> new CoreShelfBlock(ExtendedProperties.of().mapColor(wood.woodColor).sound(SoundType.WOOD).noOcclusion().strength(2.5f).flammableLikePlanks().blockEntity(CoreBlockEntities.SHELF), false);
             }
             case SAPLING -> {
                 return () -> new CoreSaplingBlock(wood.tree(), ExtendedProperties.of(MapColor.PLANT).noCollission().randomTicks().strength(0.0F).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(CoreBlockEntities.TICK_COUNTING), wood.ticksToGrow(), false);
@@ -174,6 +177,10 @@ public enum SpectrumWood implements RegistryWood {
             }
 
         }
+    }
+
+    public static Supplier<Block> createShutter(RegistryWood wood){
+        return () -> new Shutter(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_WOOD).mapColor(wood.woodColor()).noOcclusion());
     }
 
     public Block getPlanks(){

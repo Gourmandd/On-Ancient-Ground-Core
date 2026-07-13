@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_0_big_left",
+  "textures": {
+    "particle": "afc:block/wood/planks/ginkgo",
+    "texture": "modpack:block/wood/shutter/ginkgo_shutter_middle_big"
+  }
+}

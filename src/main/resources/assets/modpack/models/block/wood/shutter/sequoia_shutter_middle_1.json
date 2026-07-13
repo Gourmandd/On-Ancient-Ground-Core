@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_1",
+  "textures": {
+    "particle": "tfc:block/wood/planks/sequoia",
+    "texture": "modpack:block/wood/shutter/sequoia_shutter_middle"
+  }
+}

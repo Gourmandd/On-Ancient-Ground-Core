@@ -261,6 +261,19 @@ public class CoreBlocks {
             register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
     );
 
+    public static final Map<SpectrumWood, DeferredHolder<Block, Block>> SPECTRUM_WOOD_SHUTTERS = Helpers.mapOf(SpectrumWood.class, wood ->
+            register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
+
+    public static final Map<Wood, DeferredHolder<Block, Block>> TFC_WOOD_SHUTTERS = Helpers.mapOf(Wood.class, wood ->
+            register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
+
+    public static final Map<AFCWood, DeferredHolder<Block, Block>> AFC_WOOD_SHUTTERS = Helpers.mapOf(AFCWood.class, wood ->
+            register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
+
+
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {
         return true;

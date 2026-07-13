@@ -284,6 +284,10 @@ public class BuiltinItemModels extends ItemModelProvider {
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
         CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
         CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
+
+        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
+        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
+        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){

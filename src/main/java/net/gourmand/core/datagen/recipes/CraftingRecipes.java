@@ -13,6 +13,7 @@ import net.gourmand.core.registry.category.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -450,6 +451,31 @@ public interface CraftingRecipes extends Recipes {
             recipe()
                     .input(Ingredient.of(block.get()))
                     .shapeless(new ItemStack(AFCItems.LUMBER.get(wood).get(), 9));
+        });
+
+        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) -> {
+            recipe()
+                    .input('X', CoreItems.LUMBER.get(wood).get())
+                    .input('S', Items.STICK)
+                    .input('B', TFCItems.BRASS_MECHANISMS)
+                    .pattern("XSX", "XSX", "XBX")
+                    .shaped(block.get(), 16);
+        });
+        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) -> {
+            recipe()
+                    .input('X', TFCItems.LUMBER.get(wood).get())
+                    .input('S', Items.STICK)
+                    .input('B', TFCItems.BRASS_MECHANISMS)
+                    .pattern("XSX", "XSX", "XBX")
+                    .shaped(block.get(), 16);
+        });
+        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) -> {
+            recipe()
+                    .input('X', AFCItems.LUMBER.get(wood).get())
+                    .input('S', Items.STICK)
+                    .input('B', TFCItems.BRASS_MECHANISMS)
+                    .pattern("XSX", "XSX", "XBX")
+                    .shaped(block.get(), 16);
         });
     }
 

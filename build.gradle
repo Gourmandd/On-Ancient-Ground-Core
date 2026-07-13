@@ -72,6 +72,18 @@ repositories {
             includeGroup "top.theillusivec4.curios"
         }
     }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        // forRepositories(fg.repository) // Uncomment when using ForgeGradle
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
     maven { url = "https://maven.createmod.net" } // Create, Flywheel, Ponder
     maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
     maven { url = "https://maven.realrobotix.me/master" } // Registrate
@@ -128,7 +140,7 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/extra/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'spectrum', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette', '--existing-mod', 'quark'
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/extra/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'spectrum', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette', '--existing-mod', 'quark', '--existing-mod', 'shutter'
         }
 
         // applies to all the run configs above
@@ -199,6 +211,7 @@ dependencies {
     implementation "curse.maven:quark-243121:7640331"
     implementation "curse.maven:zeta-968868:7640154"
     implementation "curse.maven:createaddition-439890:7518252"
+    implementation "maven.modrinth:NjHNA0vG:ZIK2Nmq2"
 
     // Create Big Cannons
     implementation "curse.maven:create-big-cannons-646668:7689060"

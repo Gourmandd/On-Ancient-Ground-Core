@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_0_big_right",
+  "textures": {
+    "particle": "tfc:block/wood/planks/palm",
+    "texture": "modpack:block/wood/shutter/palm_shutter_normal_big"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_1_big_left",
+  "textures": {
+    "particle": "tfc:block/wood/planks/sycamore",
+    "texture": "modpack:block/wood/shutter/sycamore_shutter_normal_big"
+  }
+}

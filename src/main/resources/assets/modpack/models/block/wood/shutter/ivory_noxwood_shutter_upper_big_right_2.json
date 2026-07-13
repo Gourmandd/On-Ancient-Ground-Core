@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_2_big_right",
+  "textures": {
+    "particle": "spectrum:block/ivory_noxwood_planks",
+    "texture": "modpack:block/wood/shutter/ivory_noxwood_shutter_upper_big"
+  }
+}

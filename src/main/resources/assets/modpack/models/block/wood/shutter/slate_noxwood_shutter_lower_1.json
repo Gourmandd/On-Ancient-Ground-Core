@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_1",
+  "textures": {
+    "particle": "spectrum:block/slate_noxwood_planks",
+    "texture": "modpack:block/wood/shutter/slate_noxwood_shutter_lower"
+  }
+}

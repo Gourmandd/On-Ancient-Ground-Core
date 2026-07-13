@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_2_big_right",
+  "textures": {
+    "particle": "spectrum:block/orange_planks",
+    "texture": "modpack:block/wood/shutter/orange_shutter_lower_big"
+  }
+}

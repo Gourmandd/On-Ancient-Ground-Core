@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_0_big_right",
+  "textures": {
+    "particle": "tfc:block/wood/planks/kapok",
+    "texture": "modpack:block/wood/shutter/kapok_shutter_normal_big"
+  }
+}

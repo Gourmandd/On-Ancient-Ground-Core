@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_1_big_left",
+  "textures": {
+    "particle": "afc:block/wood/planks/baobab",
+    "texture": "modpack:block/wood/shutter/baobab_shutter_lower_big"
+  }
+}

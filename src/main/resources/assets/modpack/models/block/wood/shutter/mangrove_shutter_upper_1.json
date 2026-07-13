@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_1",
+  "textures": {
+    "particle": "tfc:block/wood/planks/mangrove",
+    "texture": "modpack:block/wood/shutter/mangrove_shutter_upper"
+  }
+}

@@ -319,6 +319,10 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> this.dropSelf(block.get()));
         CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> this.dropSelf(block.get()));
         CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> this.dropSelf(block.get()));
+
+        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) -> this.dropSelf(block.get()));
+        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) -> this.dropSelf(block.get()));
+        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) -> this.dropSelf(block.get()));
     }
 
     private void generateGemstones(){

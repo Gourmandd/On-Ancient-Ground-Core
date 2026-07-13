@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_1",
+  "textures": {
+    "particle": "afc:block/wood/planks/araucaria",
+    "texture": "modpack:block/wood/shutter/araucaria_shutter_normal"
+  }
+}

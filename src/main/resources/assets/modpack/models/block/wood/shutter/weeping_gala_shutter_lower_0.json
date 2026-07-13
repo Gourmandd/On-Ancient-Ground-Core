@@ -1,0 +1,7 @@
+{
+  "parent": "shutter:block/template_shutter_0",
+  "textures": {
+    "particle": "spectrum:block/weeping_gala_planks",
+    "texture": "modpack:block/wood/shutter/weeping_gala_shutter_lower"
+  }
+}
