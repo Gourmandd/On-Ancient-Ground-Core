@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-08T11:01:51.851045084	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-07-15T09:22:36.629334145	Tags for minecraft:block mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/block/boards.json
 19ca6d0ece8cedaf81ac939c4be2ca60feb3b821 data/c/tags/block/cobblestones.json
 24dda5799ac5dcfc3f0177ed9f1d915029cd6b30 data/c/tags/block/cobblestones/mossy.json
@@ -41,6 +41,7 @@ a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/block/can_be_snow_piled.j
 213a02af9b121b1b6c812f5a798a48372896a2ba data/tfc/tags/block/can_landslide.json
 6b72dd4986f3ad318b010d1a360f61123b96bc03 data/tfc/tags/block/can_start_collapse.json
 bece3dfbe29c2dceebe51b392110a5a21ffd179f data/tfc/tags/block/can_trigger_collapse.json
+95c7102fb3c0ecb6d4c60a3ea9abaea8ce44ace9 data/tfc/tags/block/charcoal_forge_invisible.json
 25a1a97177a06510355cad081a3ec15029c150f9 data/tfc/tags/block/fruit_tree_branches.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/tfc/tags/block/fruit_tree_leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/fruit_tree_saplings.json

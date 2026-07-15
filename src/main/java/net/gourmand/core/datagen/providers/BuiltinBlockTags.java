@@ -2,6 +2,7 @@ package net.gourmand.core.datagen.providers;
 
 
 import architectspalette.core.registry.APTags;
+import com.simibubi.create.AllBlocks;
 import de.dafuqs.spectrum.SpectrumCommon;
 import de.dafuqs.spectrum.registries.SpectrumBlockTags;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
@@ -413,6 +414,8 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         add(CoreBlocks.SPECTRUM_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
         add(CoreBlocks.TFC_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
         add(CoreBlocks.AFC_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
+
+        this.tag(TFCTags.Blocks.CHARCOAL_FORGE_INVISIBLE).add(AllBlocks.BASIN.getKey());
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){

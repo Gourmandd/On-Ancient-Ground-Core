@@ -5,6 +5,7 @@ import com.klikli_dev.modonomicon.data.LoaderRegistry;
 import com.mojang.logging.LogUtils;
 import net.gourmand.core.client.ClientEventHandler;
 import net.gourmand.core.client.ClientForgeEventHandler;
+import net.gourmand.core.common.create.CoreBoilerHeaters;
 import net.gourmand.core.datagen.DataEntryPoint;
 import net.gourmand.core.event.ServerEventHandler;
 import net.gourmand.core.modonomicon.ModonomiconIntegration;
@@ -75,6 +76,7 @@ public class AncientGroundCore {
 
     private void commonSetup(FMLCommonSetupEvent event) {
         LOGGER.info("HELLO FROM COMMON SETUP");
+        CoreBoilerHeaters.register();
     }
 
     private void clientSetup(FMLClientSetupEvent event) {
