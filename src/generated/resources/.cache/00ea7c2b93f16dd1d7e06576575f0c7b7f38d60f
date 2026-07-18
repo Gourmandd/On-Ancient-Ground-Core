@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-18T11:52:03.042078804	Item Models: modpack
+// 1.21.1	2026-07-18T13:27:20.300771667	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -2197,6 +2197,24 @@ a32c2d453478caa5257c71d4dd5ba00cb6cddbbf assets/modpack/models/item/rock/raw/ser
 6adcef4065f44f4bb23b5be74ea4b76281887cb3 assets/modpack/models/item/rock/raw/serpentine_slab.json
 b8b1480a60aa1686c0c4bd5d6d95c82054bf3376 assets/modpack/models/item/rock/raw/serpentine_stairs.json
 e0ffaa2ef0c0bff73bff97685dd25b873532d1bf assets/modpack/models/item/rock/raw/serpentine_wall.json
+b57acb9b68ef53986b7182179910a4e83889f3bd assets/modpack/models/item/rock/rope_anchor/argillite.json
+11353c86fa8726463d5f8cffa52b89e9ad94076e assets/modpack/models/item/rock/rope_anchor/arkose.json
+3b3f462f34b3b0ff800377a34768f4a2bb5bbb33 assets/modpack/models/item/rock/rope_anchor/blackslag.json
+c2971a6fcff0916d63c5196134c7d9152820681f assets/modpack/models/item/rock/rope_anchor/blueschist.json
+b46e36658c43ad856154b68c0786e37285f6d83f assets/modpack/models/item/rock/rope_anchor/breccia.json
+c1535131f3b825367b97aae73baa641e76216642 assets/modpack/models/item/rock/rope_anchor/greywacke.json
+e755ac890e260d4f139f844a7071f22599ffa23a assets/modpack/models/item/rock/rope_anchor/komatiite.json
+425dbf7c07f5922f323ffc3a8a6ac5bf714bda9a assets/modpack/models/item/rock/rope_anchor/marlstone.json
+eb01bd3b38c3e6aa847e6ec0be604ddb425fa46e assets/modpack/models/item/rock/rope_anchor/nephelinite.json
+537ffe9e68d72aa627a285467f22ac5a9e6ffac7 assets/modpack/models/item/rock/rope_anchor/peridotite.json
+51364d0f4ac2f2c0582501a3057fb4bc4270111a assets/modpack/models/item/rock/rope_anchor/phonolite.json
+0b8591af36c3433207d8837f75a94396f27d4acd assets/modpack/models/item/rock/rope_anchor/picrite_basalt.json
+010ef3fe3e894e2c15d7389f3982419d13023d0a assets/modpack/models/item/rock/rope_anchor/red_sandstone.json
+d209c8edd18f8d88679037140dbe7af4e9bfbc5b assets/modpack/models/item/rock/rope_anchor/sandstone.json
+634654ca950fd8accd65fa9b193693c0694406bd assets/modpack/models/item/rock/rope_anchor/serpentine.json
+4a9fffb87aef3f5e36881649f075d7f4da2071c6 assets/modpack/models/item/rock/rope_anchor/soapstone.json
+650e41d699ddc8caeb32d6ad608353c9c0d541da assets/modpack/models/item/rock/rope_anchor/suevite.json
+823a2286e9d3ee693a5c598f2341123f789ea355 assets/modpack/models/item/rock/rope_anchor/travertine.json
 51c4e0357fa9d814f56731fa84ea4e240c531808 assets/modpack/models/item/rock/smooth/blueschist.json
 685e3d7700240afb409ce641988b1bcfadad244f assets/modpack/models/item/rock/smooth/blueschist_slab.json
 90b3c69573e66d34167401ed472f9b1f897ff016 assets/modpack/models/item/rock/smooth/blueschist_stairs.json

@@ -114,6 +114,7 @@ public class BuiltinItemModels extends ItemModelProvider {
             simpleItem(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get().asItem(), getItemModelLocation(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).getId()));
             mossyLooseItem(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE), rock);
             simpleBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE), ResourceLocation.parse(getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE).getId()) + "_base"));
+            simpleBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.ROPE_ANCHOR));
 
             if (rock.hasVariants()){
                 simpleBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CHISELED));
