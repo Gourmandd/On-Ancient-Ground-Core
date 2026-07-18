@@ -139,8 +139,16 @@
         "with": "modpack:deposit/cassiterite/arkose"
       },
       {
-        "replace": "create:limestone",
+        "replace": "minecraft:calcite",
         "with": "modpack:deposit/cassiterite/soapstone"
+      },
+      {
+        "replace": "minecraft:smooth_basalt",
+        "with": "modpack:deposit/cassiterite/greywacke"
+      },
+      {
+        "replace": "create:limestone",
+        "with": "modpack:deposit/cassiterite/marlstone"
       },
       {
         "replace": "modpack:rock/raw/blueschist",

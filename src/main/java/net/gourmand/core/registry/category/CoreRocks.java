@@ -29,7 +29,9 @@ public enum CoreRocks implements RegistryRock
     SUEVITE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_BLACK), // Create scorchia
     PHONOLITE(RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_LIGHT_GRAY), // Quark shale
     ARKOSE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE), // Quark limestone
-    SOAPSTONE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_WHITE), // Create limestone
+    SOAPSTONE(RockDisplayCategory.METAMORPHIC, MapColor.SNOW), // vanilla calcite
+    GREYWACKE(RockDisplayCategory.SEDIMENTARY, MapColor.COLOR_GRAY), // vanilla basalt
+    MARLSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_WHITE), // Create limestone
     BLUESCHIST(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_BLUE, true),
     PERIDOTITE(RockDisplayCategory.MAFIC_IGNEOUS_INTRUSIVE, MapColor.TERRACOTTA_LIGHT_GREEN, true),
     SERPENTINE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_GREEN, true);

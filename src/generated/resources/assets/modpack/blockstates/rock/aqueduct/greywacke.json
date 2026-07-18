@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/greywacke/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/greywacke/north"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/greywacke/south"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/greywacke/east"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/greywacke/west"
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

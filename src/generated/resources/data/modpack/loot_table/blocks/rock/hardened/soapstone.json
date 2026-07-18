@@ -19,7 +19,7 @@
                   "condition": "tfc:is_isolated"
                 }
               ],
-              "name": "create:limestone"
+              "name": "minecraft:calcite"
             },
             {
               "type": "minecraft:item",

@@ -2,7 +2,7 @@
   "parent": "modpack:block/overlay_template_wall_side_tall",
   "textures": {
     "overlay": "modpack:block/moss_brick_overlay",
-    "particle": "create:block/palettes/stone_types/brick/limestone_cut_brick",
-    "wall": "create:block/palettes/stone_types/brick/limestone_cut_brick"
+    "particle": "spectrum:block/calcite_bricks",
+    "wall": "spectrum:block/calcite_bricks"
   }
 }

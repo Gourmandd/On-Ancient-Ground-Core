@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "create:block/palettes/stone_types/brick/limestone_cut_brick",
+    "all": "spectrum:block/calcite_bricks",
     "overlay": "modpack:block/moss_brick_overlay"
   }
 }

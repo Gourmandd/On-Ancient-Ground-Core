@@ -1,10 +1,12 @@
-// 1.21.1	2026-04-07T08:43:04.547747096	modpack's processing recipes: crushing
+// 1.21.1	2026-07-18T11:52:02.970899353	modpack's processing recipes: crushing
 2bf545727601d80b408c6d0617fcca78c3a00c1f data/modpack/recipe/crushing/rock/cobble/argillite.json
 6cc950568f19e9c05972c3143be4323313ba3eb3 data/modpack/recipe/crushing/rock/cobble/arkose.json
 72482fd69c328be65367f9d01be07551ff191ccf data/modpack/recipe/crushing/rock/cobble/blackslag.json
 23e0a19ebe260d973ce480bb64b9c00d5f537d0b data/modpack/recipe/crushing/rock/cobble/blueschist.json
 b13b3327d4bcac8efa94b71b2ad3a262202c3d1e data/modpack/recipe/crushing/rock/cobble/breccia.json
+d371fcc264052a1da02693fd1a3a6fd3a4030002 data/modpack/recipe/crushing/rock/cobble/greywacke.json
 576bbf5fbd53d1ab53cabf61eff4cc3da471c9a1 data/modpack/recipe/crushing/rock/cobble/komatiite.json
+2f18799959ec6fe1e0d640e4f23fbf91d9053653 data/modpack/recipe/crushing/rock/cobble/marlstone.json
 49cfec87d6657f3dcc0d5dce995ef777ddcaddc6 data/modpack/recipe/crushing/rock/cobble/nephelinite.json
 ab031aeea3ba2e493926f4b4b25785a5d3f7334b data/modpack/recipe/crushing/rock/cobble/peridotite.json
 11be93574a2a4b5b4b869f9420f2fee603137682 data/modpack/recipe/crushing/rock/cobble/phonolite.json
@@ -20,7 +22,9 @@ cb17aef92df0b07a95affec541fc22282033301b data/modpack/recipe/crushing/rock/cobbl
 cd0698e714597506720a9cb500aea099efa3a0f7 data/modpack/recipe/crushing/rock/gravel/blackslag.json
 13a50f129ba3a081fef56305899bd0ab49708982 data/modpack/recipe/crushing/rock/gravel/blueschist.json
 005b29f6eabb29edff2d2e1951e3bff81a9a6851 data/modpack/recipe/crushing/rock/gravel/breccia.json
+a4f57e7dd30b9655c24714745ba625dc1c3c13af data/modpack/recipe/crushing/rock/gravel/greywacke.json
 7ac92b516f1c4564e863a53de16d74afa514c609 data/modpack/recipe/crushing/rock/gravel/komatiite.json
+94057a3dd00d8348ebf68b987ab311d0bc3b28df data/modpack/recipe/crushing/rock/gravel/marlstone.json
 9d6aa3dcc76279d9be75aa18fd5043a939b696eb data/modpack/recipe/crushing/rock/gravel/nephelinite.json
 4e8558c5ba3d93e8790730f06803376948ed9a94 data/modpack/recipe/crushing/rock/gravel/peridotite.json
 01a984cd8662945fa770a8e26ad6ffffc8e149bf data/modpack/recipe/crushing/rock/gravel/phonolite.json
@@ -36,7 +40,9 @@ f4a8c92e1d969d0cc077b50b27c19b4b4306236c data/modpack/recipe/crushing/rock/mossy
 53d48f952a9350117003430df8adaa2df087819c data/modpack/recipe/crushing/rock/mossy_cobble/blackslag.json
 d22762350309c5a9f6c01f725fb691d7ed94abbd data/modpack/recipe/crushing/rock/mossy_cobble/blueschist.json
 817e48f1181518da6503acb675faee0ccb3a9fd2 data/modpack/recipe/crushing/rock/mossy_cobble/breccia.json
+c949a9000c31422278d59c4356789365a48a0c5b data/modpack/recipe/crushing/rock/mossy_cobble/greywacke.json
 19f7fb7c1a2250b62ffaf95254ed3ac82702a058 data/modpack/recipe/crushing/rock/mossy_cobble/komatiite.json
+485f965c6034e90d84b3eacdd3fd8bddcb2ac803 data/modpack/recipe/crushing/rock/mossy_cobble/marlstone.json
 f40d22c43ef7cd9cf5a6ecf454f6893ac844906d data/modpack/recipe/crushing/rock/mossy_cobble/nephelinite.json
 363455a9545642529557cd5f7bfcb8c70ea9c9ba data/modpack/recipe/crushing/rock/mossy_cobble/peridotite.json
 f758398a5d0a94483a8f01300e07745d3b4f3f8b data/modpack/recipe/crushing/rock/mossy_cobble/phonolite.json

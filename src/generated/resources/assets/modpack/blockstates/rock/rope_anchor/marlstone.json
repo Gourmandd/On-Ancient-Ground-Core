@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/rock/rope_anchor/marlstone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/rock/rope_anchor/marlstone"
+    },
+    "facing=south": {
+      "model": "modpack:block/rock/rope_anchor/marlstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modpack:block/rock/rope_anchor/marlstone",
+      "y": 270
+    }
+  }
+}

@@ -139,8 +139,16 @@
         "with": "modpack:deposit/native_copper/arkose"
       },
       {
-        "replace": "create:limestone",
+        "replace": "minecraft:calcite",
         "with": "modpack:deposit/native_copper/soapstone"
+      },
+      {
+        "replace": "minecraft:smooth_basalt",
+        "with": "modpack:deposit/native_copper/greywacke"
+      },
+      {
+        "replace": "create:limestone",
+        "with": "modpack:deposit/native_copper/marlstone"
       },
       {
         "replace": "modpack:rock/raw/blueschist",

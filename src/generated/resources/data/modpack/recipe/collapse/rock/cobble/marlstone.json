@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "create:limestone",
+    "modpack:rock/hardened/marlstone"
+  ],
+  "result": "modpack:rock/cobble/marlstone"
+}

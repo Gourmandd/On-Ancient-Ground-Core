@@ -1,0 +1,8 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "minecraft:smooth_basalt",
+    "modpack:rock/hardened/greywacke"
+  ],
+  "result": "modpack:rock/cobble/greywacke"
+}

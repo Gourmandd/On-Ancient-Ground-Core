@@ -20,7 +20,6 @@ import static net.gourmand.core.registry.category.CoreRocks.*;
 
 public class TextureUtil {
 
-    //by converting the rock to a string we can determine which Enum it belongs to...
     public static String getRawRockTexture(RegistryRock rock){
 
         if (rock instanceof Rock){
@@ -38,7 +37,7 @@ public class TextureUtil {
             .put(SERPENTINE, AncientGroundCore.MOD_ID + ":block/rock/raw/" + SERPENTINE.getSerializedName())
             .put(PERIDOTITE, AncientGroundCore.MOD_ID + ":block/rock/raw/" + PERIDOTITE.getSerializedName())
             .put(BLUESCHIST, AncientGroundCore.MOD_ID + ":block/rock/raw/" + BLUESCHIST.getSerializedName())
-            .put(SOAPSTONE, Create.ID + ":block/palettes/stone_types/limestone")
+            .put(SOAPSTONE, "minecraft:block/calcite")
             .put(SANDSTONE, Create.ID + ":block/palettes/stone_types/natural/ochrum_0")
             .put(SUEVITE, Create.ID + ":block/palettes/stone_types/scorchia")
             .put(KOMATIITE, Create.ID + ":block/palettes/stone_types/scoria")
@@ -51,6 +50,8 @@ public class TextureUtil {
             .put(ARGILLITE, "minecraft:block/stone")
             .put(NEPHELINITE, "minecraft:block/deepslate")
             .put(BRECCIA, "caupona:block/felsic_tuff")
+            .put(MARLSTONE, Create.ID + ":block/palettes/stone_types/limestone")
+            .put(GREYWACKE, "minecraft:block/smooth_basalt")
             .build();
 
     private static String getCobbleTexture(CoreRocks rock){
@@ -64,7 +65,7 @@ public class TextureUtil {
                 case NEPHELINITE -> {
                     return "minecraft:block/cobbled_deepslate";
                 }
-                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE, ARKOSE, SOAPSTONE -> {
+                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE, ARKOSE, SOAPSTONE, GREYWACKE, MARLSTONE -> {
                     return (AncientGroundCore.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
                 }
                 case BLACKSLAG -> {
@@ -86,7 +87,7 @@ public class TextureUtil {
                 case NEPHELINITE -> {
                     return "minecraft:block/cobbled_deepslate";
                 }
-                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE, ARKOSE, SOAPSTONE -> {
+                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE, ARKOSE, SOAPSTONE, GREYWACKE, MARLSTONE -> {
                     return (AncientGroundCore.MOD_ID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
                 }
                 case BLACKSLAG -> {
@@ -139,7 +140,13 @@ public class TextureUtil {
                     return Quark.MOD_ID + ":block/limestone_bricks";
                 }
                 case SOAPSTONE -> {
+                    return "spectrum:block/calcite_bricks";
+                }
+                case MARLSTONE -> {
                     return "create:block/palettes/stone_types/brick/limestone_cut_brick";
+                }
+                case GREYWACKE -> {
+                    return "spectrum:block/basalt_bricks";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
             }
@@ -188,7 +195,13 @@ public class TextureUtil {
                     return Quark.MOD_ID + ":block/limestone_bricks";
                 }
                 case SOAPSTONE -> {
+                    return "spectrum:block/calcite_bricks";
+                }
+                case MARLSTONE -> {
                     return "create:block/palettes/stone_types/brick/limestone_cut_brick";
+                }
+                case GREYWACKE -> {
+                    return "spectrum:block/basalt_bricks";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
             }
@@ -237,7 +250,13 @@ public class TextureUtil {
                     return Quark.MOD_ID + ":block/limestone_bricks";
                 }
                 case SOAPSTONE -> {
+                    return "spectrum:block/calcite_bricks";
+                }
+                case MARLSTONE -> {
                     return "create:block/palettes/stone_types/brick/limestone_cut_brick";
+                }
+                case GREYWACKE -> {
+                    return "spectrum:block/basalt_bricks";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
             }

@@ -328,13 +328,15 @@ public class CategoryUtil {
                 .put(BRECCIA, SandBlockType.YELLOW)
                 .put(SANDSTONE, SandBlockType.YELLOW)
                 .put(ARKOSE, SandBlockType.YELLOW)
+                .put(MARLSTONE, SandBlockType.YELLOW)
+                .put(GREYWACKE, SandBlockType.RED)
                 .build();
 
         public static final Map<CoreRocks, Holder.Reference<Block>> TO_RAW_BLOCK = ImmutableMap.<CoreRocks, Holder.Reference<Block>>builder()
                 .put(SERPENTINE, getReference(CoreBlocks.ROCK_BLOCKS.get(SERPENTINE).get(BlockType.RAW).get()))
                 .put(PERIDOTITE, getReference(CoreBlocks.ROCK_BLOCKS.get(PERIDOTITE).get(BlockType.RAW).get()))
                 .put(BLUESCHIST, getReference(CoreBlocks.ROCK_BLOCKS.get(BLUESCHIST).get(BlockType.RAW).get()))
-                .put(SOAPSTONE, getReference(getRawRockId(SOAPSTONE).getNamespace(), getRawRockId(SOAPSTONE).getPath()))
+                .put(SOAPSTONE, getReference(Blocks.CALCITE))
                 .put(SANDSTONE, getReference(getRawRockId(SANDSTONE).getNamespace(), getRawRockId(SANDSTONE).getPath()))
                 .put(SUEVITE, getReference(getRawRockId(SUEVITE).getNamespace(), getRawRockId(SUEVITE).getPath()))
                 .put(KOMATIITE, getReference(getRawRockId(KOMATIITE).getNamespace(), getRawRockId(KOMATIITE).getPath()))
@@ -347,13 +349,15 @@ public class CategoryUtil {
                 .put(ARGILLITE, getReference(Blocks.STONE))
                 .put(NEPHELINITE, getReference(Blocks.DEEPSLATE))
                 .put(BRECCIA, getReference(getRawRockId(BRECCIA).getNamespace(), getRawRockId(BRECCIA).getPath()))
+                .put(MARLSTONE, getReference(getRawRockId(MARLSTONE).getNamespace(), getRawRockId(MARLSTONE).getPath()))
+                .put(GREYWACKE, getReference(Blocks.SMOOTH_BASALT))
                 .build();
 
         public static final Map<CoreRocks, Holder.Reference<Block>> TO_BRICK_BLOCK = ImmutableMap.<CoreRocks, Holder.Reference<Block>>builder()
                 .put(SERPENTINE, getReference(CoreBlocks.ROCK_BLOCKS.get(SERPENTINE).get(BlockType.BRICKS).get()))
                 .put(PERIDOTITE, getReference(CoreBlocks.ROCK_BLOCKS.get(PERIDOTITE).get(BlockType.BRICKS).get()))
                 .put(BLUESCHIST, getReference(CoreBlocks.ROCK_BLOCKS.get(BLUESCHIST).get(BlockType.BRICKS).get()))
-                .put(SOAPSTONE, getReference(Create.ID, "cut_" + getRawRockId(SOAPSTONE).getPath() + "_bricks"))
+                .put(SOAPSTONE, getReference(SpectrumBlocks.CALCITE_BRICKS.get()))
                 .put(SANDSTONE, getReference(Create.ID, "cut_" + getRawRockId(SANDSTONE).getPath() + "_bricks"))
                 .put(SUEVITE, getReference(Create.ID, "cut_" + getRawRockId(SUEVITE).getPath() + "_bricks"))
                 .put(KOMATIITE, getReference(Create.ID, "cut_" + getRawRockId(KOMATIITE).getPath() + "_bricks"))
@@ -366,6 +370,8 @@ public class CategoryUtil {
                 .put(ARGILLITE, getReference(Blocks.STONE_BRICKS))
                 .put(NEPHELINITE, getReference(Blocks.DEEPSLATE_BRICKS))
                 .put(BRECCIA, getReference(CPMain.MODID, getRawRockId(BRECCIA).getPath() + "_bricks"))
+                .put(MARLSTONE, getReference(Create.ID, "cut_" + getRawRockId(MARLSTONE).getPath() + "_bricks"))
+                .put(GREYWACKE, getReference(SpectrumBlocks.BASALT_BRICKS.get()))
                 .build();
 
         public static ResourceLocation getRawRockId(CoreRocks rock)
@@ -404,8 +410,14 @@ public class CategoryUtil {
                     case ARKOSE -> {
                         return ResourceLocation.fromNamespaceAndPath(Quark.MOD_ID, "limestone");
                     }
-                    case SOAPSTONE -> {
+                    case MARLSTONE -> {
                         return ResourceLocation.fromNamespaceAndPath(Create.ID, "limestone");
+                    }
+                    case SOAPSTONE -> {
+                        return ResourceLocation.fromNamespaceAndPath("minecraft", "calcite");
+                    }
+                    case GREYWACKE -> {
+                        return ResourceLocation.fromNamespaceAndPath("minecraft", "smooth_basalt");
                     }
                     case null, default -> throw new AssertionError("no raw rock for this rock type");
                 }

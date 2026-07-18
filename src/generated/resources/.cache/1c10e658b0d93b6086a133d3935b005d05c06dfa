@@ -1,10 +1,12 @@
-// 1.21.1	2026-07-07T09:48:47.9358149	Data Manager (deposit)
+// 1.21.1	2026-07-18T11:52:02.974126261	Data Manager (deposit)
 e2fdcbbecdd64d70769b6cab45d3c4e2f290a911 data/modpack/tfc/deposit/cassiterite/argillite.json
 67d43163fcfa51a9a4caa5087f0dd489e5365f3d data/modpack/tfc/deposit/cassiterite/arkose.json
 8f527d63e01d95caa9581924660aece32dd299a1 data/modpack/tfc/deposit/cassiterite/blackslag.json
 7a6971700c80accc66e7bdf0d4f5d5ef7d267e0b data/modpack/tfc/deposit/cassiterite/blueschist.json
 fbc389266d978bbac46ec4a9b7e3d94784a1a657 data/modpack/tfc/deposit/cassiterite/breccia.json
+c4c75222c7575c21550850e3b476eb76f21ca74e data/modpack/tfc/deposit/cassiterite/greywacke.json
 652048f1c180902ee2d3fe2e2a9949449dc84508 data/modpack/tfc/deposit/cassiterite/komatiite.json
+47d4d0f2f3625087ac00d76aa175af383ab5646d data/modpack/tfc/deposit/cassiterite/marlstone.json
 32ac4fa33abeb44460f2b953c71945320c135526 data/modpack/tfc/deposit/cassiterite/nephelinite.json
 295799c0ab59f9c3445333e852aad6949fe32718 data/modpack/tfc/deposit/cassiterite/peridotite.json
 ed403ca0484eb9da69d9ba21cf429fcce5ef9207 data/modpack/tfc/deposit/cassiterite/phonolite.json
@@ -20,7 +22,9 @@ d74c043475ad0d59c01b14567f01d8a285778b98 data/modpack/tfc/deposit/native_copper/
 0e244fbe084124264ee010ad04b38e344ffe498b data/modpack/tfc/deposit/native_copper/blackslag.json
 33c9b41294e9fe9bc2663e0d1ed89b6906671f2f data/modpack/tfc/deposit/native_copper/blueschist.json
 4e27f7b52c315ed3666698758d25b0e6bf84d9d9 data/modpack/tfc/deposit/native_copper/breccia.json
+057202ad5e874fdc8182f3b3f738c05aecc563cb data/modpack/tfc/deposit/native_copper/greywacke.json
 24dd7992bf6cf1ad5383a6ddcc4ce660be51ee0e data/modpack/tfc/deposit/native_copper/komatiite.json
+7593be0627bd26500538d81ceed0f568f7185cdb data/modpack/tfc/deposit/native_copper/marlstone.json
 72daaf1d48afbf66bfa46f1af258a6ad04410848 data/modpack/tfc/deposit/native_copper/nephelinite.json
 3421bf28771fb4041f6511391651560e5184af70 data/modpack/tfc/deposit/native_copper/peridotite.json
 b5fded34995910dee844398c3d190d70cf5adbe4 data/modpack/tfc/deposit/native_copper/phonolite.json
@@ -36,7 +40,9 @@ a2404fd98cad52f98cbc056255de6843b35b9cb0 data/modpack/tfc/deposit/native_copper/
 df6d16564e385bd6a349dfde3cc3c600465aa38e data/modpack/tfc/deposit/native_gold/blackslag.json
 7988f5e352618ab7153c880f6a9ba4b860b12c38 data/modpack/tfc/deposit/native_gold/blueschist.json
 fb4605bed48765877b82da98fe40eb10585047fb data/modpack/tfc/deposit/native_gold/breccia.json
+1be180448484c75517fbae29eb9c98454c879217 data/modpack/tfc/deposit/native_gold/greywacke.json
 7d385713489aa8c7d9a3603490a8c19c2699f7cb data/modpack/tfc/deposit/native_gold/komatiite.json
+e4aa55f9511f4fb13fca42704cab0a62189956d9 data/modpack/tfc/deposit/native_gold/marlstone.json
 b6cd664ea5a93724b2d134f07718729cc4daa400 data/modpack/tfc/deposit/native_gold/nephelinite.json
 d4e765dae27e9ad8d7cd1f02c286f8bb5fb07f2d data/modpack/tfc/deposit/native_gold/peridotite.json
 cccb0bcf5993f1ee699867d3d27d911b79ae1bc6 data/modpack/tfc/deposit/native_gold/phonolite.json
@@ -52,7 +58,9 @@ c8c3ffbb7bcc996badf3cb49092e79680726f598 data/modpack/tfc/deposit/native_gold/tr
 77bf9d9cb6d4d4f380bf87066af553c5eb37affc data/modpack/tfc/deposit/native_silver/blackslag.json
 77fe40356d1c37d3cdeae3952193c0bc953dfb23 data/modpack/tfc/deposit/native_silver/blueschist.json
 4ecc3c36dae9beb77a5e0a269a5cd52e4f29c040 data/modpack/tfc/deposit/native_silver/breccia.json
+d67b9fdee30e56fffa3f4a7bfaea7e3e52ff1d8f data/modpack/tfc/deposit/native_silver/greywacke.json
 182fae810323d7c6bd16b1ba1fb6c2991b76e328 data/modpack/tfc/deposit/native_silver/komatiite.json
+600b0f6d9765fdd56a6084aa719bade0e10e5fd9 data/modpack/tfc/deposit/native_silver/marlstone.json
 6604228895f205bb06b0c9b820bf297b56f0b4b7 data/modpack/tfc/deposit/native_silver/nephelinite.json
 e4870a61b87ce2fb869a94fbb7c94466bbcf02eb data/modpack/tfc/deposit/native_silver/peridotite.json
 9ac81f4ff88f97d6191324bcefc4256e6e20c71b data/modpack/tfc/deposit/native_silver/phonolite.json

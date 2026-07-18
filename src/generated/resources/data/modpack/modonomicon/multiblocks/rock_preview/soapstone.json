@@ -3,7 +3,7 @@
   "mapping": {
     "0": {
       "type": "modonomicon:block",
-      "block": "create:limestone"
+      "block": "minecraft:calcite"
     },
     "B": {
       "type": "modonomicon:block",

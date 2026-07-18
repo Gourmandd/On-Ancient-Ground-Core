@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "minecraft:block/smooth_basalt",
+    "overlay": "tfc:block/ore/normal_magnetite"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/marlstone"
+  },
+  "loot_table": "modpack:deposit/cassiterite/marlstone",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/marlstone_full",
+    "modpack:item/pan/cassiterite/marlstone_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

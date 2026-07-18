@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_bricks/greywacke_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_bricks/greywacke"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_bricks/greywacke_slab_top"
+    }
+  }
+}

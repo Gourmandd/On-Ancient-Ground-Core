@@ -393,6 +393,8 @@ public class LootTableBuilders {
                 .put(ARGILLITE, TFCItems.ORES.get(SYLVITE).asItem())
                 .put(NEPHELINITE, TFCItems.GEMS.get(TOPAZ).asItem())
                 .put(BRECCIA, TFCItems.GRADED_ORES.get(BISMUTHINITE).get(Ore.Grade.RICH).asItem())
+                .put(MARLSTONE, TFCItems.ORES.get(SYLVITE).asItem())
+                .put(GREYWACKE, TFCItems.GRADED_ORES.get(MALACHITE).get(Ore.Grade.RICH).asItem())
                 .build();
 
         Item mainResult = null;

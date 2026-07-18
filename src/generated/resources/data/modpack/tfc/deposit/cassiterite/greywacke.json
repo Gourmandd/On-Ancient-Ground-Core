@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "modpack:deposit/cassiterite/greywacke"
+  },
+  "loot_table": "modpack:deposit/cassiterite/greywacke",
+  "model_stages": [
+    "modpack:item/pan/cassiterite/greywacke_full",
+    "modpack:item/pan/cassiterite/greywacke_half",
+    "tfc:item/pan/cassiterite/result"
+  ]
+}

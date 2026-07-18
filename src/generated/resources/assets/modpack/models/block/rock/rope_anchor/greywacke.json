@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/horizontal_rope_anchored",
+  "textures": {
+    "particle": "minecraft:block/smooth_basalt",
+    "texture": "minecraft:block/smooth_basalt"
+  }
+}

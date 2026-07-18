@@ -1,4 +1,4 @@
-// 1.21.1	2026-06-09T09:06:18.817225592	Multiblocks: modpack
+// 1.21.1	2026-07-18T11:52:03.041182307	Multiblocks: modpack
 dc04a3820367988cd6c92649fdab87069d64ac97 data/modpack/modonomicon/multiblocks/getting_started/clay_indicators.json
 a7a87d1290b8fec7e67a76c4d08b5637378a2e0d data/modpack/modonomicon/multiblocks/getting_started/fire_pit.json
 5d10cd244f7b05a367d4b9e51099cf8e4d5400bc data/modpack/modonomicon/multiblocks/getting_started/pit_kiln.json
@@ -67,9 +67,11 @@ a2644f2ea96cc077df6a2d467198b2ac27a12586 data/modpack/modonomicon/multiblocks/ro
 0353260fe356d57a0d72e24ce41c2c0098013dad data/modpack/modonomicon/multiblocks/rock_preview/gabbro.json
 f4fb8560201070609eca2c240a26657c76a2732b data/modpack/modonomicon/multiblocks/rock_preview/gneiss.json
 4ae13d0449ada98ba6ea6319fa2646e8abf314c3 data/modpack/modonomicon/multiblocks/rock_preview/granite.json
+f572aa70823c92f35006ded2a67e234e03d890ef data/modpack/modonomicon/multiblocks/rock_preview/greywacke.json
 f18bd72f4ba500a391fa0b8f31e46f6f8eb09a6f data/modpack/modonomicon/multiblocks/rock_preview/komatiite.json
 7b1c1da7a2d978a112b05527cad4215c0634bb08 data/modpack/modonomicon/multiblocks/rock_preview/limestone.json
 6a5e36be79d10844b4956f6e298dae075366cc1d data/modpack/modonomicon/multiblocks/rock_preview/marble.json
+c2b1487566ba4513e031936b7d3e55a3ccdeb7c9 data/modpack/modonomicon/multiblocks/rock_preview/marlstone.json
 f0bd0960573d0019b0cc49994b9e2258deee075a data/modpack/modonomicon/multiblocks/rock_preview/nephelinite.json
 053649b3758cb8893e579c27fbb9e229c2cd402f data/modpack/modonomicon/multiblocks/rock_preview/peridotite.json
 b88d5e0408ccee571753b7a3184a52a8e3cb7ae7 data/modpack/modonomicon/multiblocks/rock_preview/phonolite.json
@@ -83,7 +85,7 @@ cddb60ec05c943285cba7e204919e3119a7949c5 data/modpack/modonomicon/multiblocks/ro
 9229db46d94422c4b999232d7eade1647bb976c1 data/modpack/modonomicon/multiblocks/rock_preview/serpentine.json
 006477660869d0bb4268288766846ca4812858e4 data/modpack/modonomicon/multiblocks/rock_preview/shale.json
 5078ce270ea852ae1480af6d480cc5c2772e20f5 data/modpack/modonomicon/multiblocks/rock_preview/slate.json
-c2b1487566ba4513e031936b7d3e55a3ccdeb7c9 data/modpack/modonomicon/multiblocks/rock_preview/soapstone.json
+eb9c865c70de6499810e1b982e1d516adc9090d0 data/modpack/modonomicon/multiblocks/rock_preview/soapstone.json
 6e8f76a99e961531e83fd44cd5dccb5d3f40b5d6 data/modpack/modonomicon/multiblocks/rock_preview/suevite.json
 0688b9bfbd97026e9f20be2ec60a83822ba2acde data/modpack/modonomicon/multiblocks/rock_preview/travertine.json
 4a7aff7539972b7a3f273e14f0db965cd3834466 data/modpack/modonomicon/multiblocks/rock_preview/tuff.json

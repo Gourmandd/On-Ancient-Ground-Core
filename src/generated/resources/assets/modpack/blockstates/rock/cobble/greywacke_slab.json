@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/cobble/greywacke_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/cobble/greywacke"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/cobble/greywacke_slab_top"
+    }
+  }
+}

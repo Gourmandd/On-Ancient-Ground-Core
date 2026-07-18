@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/horizontal_rope_anchored",
   "textures": {
-    "particle": "create:block/palettes/stone_types/limestone",
-    "texture": "create:block/palettes/stone_types/limestone"
+    "particle": "minecraft:block/calcite",
+    "texture": "minecraft:block/calcite"
   }
 }

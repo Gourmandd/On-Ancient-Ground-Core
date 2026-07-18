@@ -204,6 +204,18 @@
         "blocks": [
           "modpack:rock/cobble/soapstone"
         ],
+        "rock": "minecraft:calcite"
+      },
+      {
+        "blocks": [
+          "modpack:rock/cobble/greywacke"
+        ],
+        "rock": "minecraft:smooth_basalt"
+      },
+      {
+        "blocks": [
+          "modpack:rock/cobble/marlstone"
+        ],
         "rock": "create:limestone"
       },
       {

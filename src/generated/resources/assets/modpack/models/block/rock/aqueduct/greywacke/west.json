@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/west",
+  "textures": {
+    "particle": "spectrum:block/basalt_bricks",
+    "texture": "spectrum:block/basalt_bricks"
+  }
+}

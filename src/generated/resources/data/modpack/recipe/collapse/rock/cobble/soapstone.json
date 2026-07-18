@@ -1,7 +1,7 @@
 {
   "type": "tfc:collapse",
   "ingredient": [
-    "create:limestone",
+    "minecraft:calcite",
     "modpack:rock/hardened/soapstone"
   ],
   "result": "modpack:rock/cobble/soapstone"

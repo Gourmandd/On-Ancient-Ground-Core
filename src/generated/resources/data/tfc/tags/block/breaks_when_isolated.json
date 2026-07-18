@@ -13,6 +13,8 @@
     "create:scorchia",
     "quark:shale",
     "quark:limestone",
+    "minecraft:calcite",
+    "minecraft:smooth_basalt",
     "create:limestone",
     "modpack:rock/raw/blueschist",
     "modpack:rock/raw/peridotite",
