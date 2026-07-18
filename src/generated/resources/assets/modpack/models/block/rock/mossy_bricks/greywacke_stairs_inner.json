@@ -1,7 +1,9 @@
 {
-  "parent": "minecraft:block/inner_stairs",
+  "parent": "modpack:block/overlay_inner_stairs",
   "textures": {
     "bottom": "spectrum:block/basalt_bricks",
+    "overlay": "modpack:block/moss_brick_overlay",
+    "particle": "spectrum:block/basalt_bricks",
     "side": "spectrum:block/basalt_bricks",
     "top": "spectrum:block/basalt_bricks"
   }

@@ -1,7 +1,9 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "modpack:block/overlay_slab_top",
   "textures": {
     "bottom": "spectrum:block/basalt_bricks",
+    "overlay": "modpack:block/moss_brick_overlay",
+    "particle": "spectrum:block/basalt_bricks",
     "side": "spectrum:block/basalt_bricks",
     "top": "spectrum:block/basalt_bricks"
   }

@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "tfc:block/ore",
   "textures": {
-    "all": "spectrum:block/basalt_bricks"
+    "all": "spectrum:block/basalt_bricks",
+    "overlay": "modpack:block/moss_brick_overlay"
   }
 }

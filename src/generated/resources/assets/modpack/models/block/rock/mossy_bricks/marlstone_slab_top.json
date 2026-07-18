@@ -1,7 +1,9 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "modpack:block/overlay_slab_top",
   "textures": {
     "bottom": "create:block/palettes/stone_types/brick/limestone_cut_brick",
+    "overlay": "modpack:block/moss_brick_overlay",
+    "particle": "create:block/palettes/stone_types/brick/limestone_cut_brick",
     "side": "create:block/palettes/stone_types/brick/limestone_cut_brick",
     "top": "create:block/palettes/stone_types/brick/limestone_cut_brick"
   }

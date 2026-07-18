@@ -737,7 +737,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
     private boolean generateMossyVariant(Rock.BlockType type, CoreRocks rock){
         if (type == Rock.BlockType.MOSSY_BRICKS){
             switch (rock){
-                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE, ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE -> {return false;}
+                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE, ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE, MARLSTONE, GREYWACKE -> {return false;}
                 default -> {return true;}
             }
         }
