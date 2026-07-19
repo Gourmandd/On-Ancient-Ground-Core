@@ -1,2 +1,3 @@
-// 1.21.1	2026-04-05T19:38:06.109375153	Tags for minecraft:fluid mod id modpack
-3c73f92a62909f8ae8d132d402f68f39f6420aae data/tfc/tags/fluid/molten_metals.json
+// 1.21.1	2026-07-19T09:15:12.890190001	Tags for minecraft:fluid mod id modpack
+0f657e24f802ae56aea7c38368e6382b5321bf67 data/modpack/tags/fluid/molten_glass.json
+962f8b1a80c6995580b0aaea2371ea06bf058d1b data/tfc/tags/fluid/molten_metals.json

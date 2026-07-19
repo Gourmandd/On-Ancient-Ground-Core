@@ -6,6 +6,7 @@ import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreFluids;
 import net.gourmand.core.registry.category.CoreMetals;
+import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
@@ -41,9 +42,9 @@ public class BuiltinFluidTags extends TagsProvider<Fluid> implements Accessors
         });
 
         Stream.of(DyeColor.values()).forEach(color -> {
-            this.tag(TFCTags.Fluids.MOLTEN_METALS).add(CoreFluids.COLORED_GLASS.get(color).source().getKey());
+            this.tag(CoreTags.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.COLORED_GLASS.get(color).source().getKey());
         });
-        this.tag(TFCTags.Fluids.MOLTEN_METALS).add(CoreFluids.CLEAR_GLASS.source().getKey());
+        this.tag(CoreTags.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.CLEAR_GLASS.source().getKey());
     }
 
     protected void add(Map<?, DeferredHolder<Fluid, Fluid>> map, List<TagKey<Fluid>> tags ){
