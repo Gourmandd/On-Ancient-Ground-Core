@@ -11,5 +11,16 @@
     "block.architects_palette.deepslate_nub": "Nephelinite Nub",
     "block.architects_palette.heavy_stone_bricks": "Heavy Argillite Bricks",
     "block.architects_palette.heavy_mossy_stone_bricks": "Heavy Mossy Argillite Bricks",
-    "block.architects_palette.heavy_cracked_stone_bricks": "Heavy Cracked Argillite Bricks"
+    "block.architects_palette.heavy_cracked_stone_bricks": "Heavy Cracked Argillite Bricks",
+    "block.architects_palette.heavy_calcite_bricks": "Heavy Soapstone Bricks",
+    "block.architects_palette.chiseled_calcite": "Chiseled Soapstone",
+    "block.architects_palette.calcite_bricks": "Chiseled Soapstone Bricks",
+    "block.architects_palette.calcite_brick_slab": "Chiseled Soapstone Brick Slab",
+    "block.architects_palette.calcite_brick_stairs": "Chiseled Soapstone Brick Stairs",
+    "block.architects_palette.calcite_brick_wall": "Chiseled Soapstone Wall",
+    "block.architects_palette.calcite_pillar": "Chiseled Soapstone Pillar",
+    "block.architects_palette.basalt_tiles": "Rough Greywacke Tiles",
+    "block.architects_palette.basalt_tile_slab": "Rough Greywacke Tile Slab",
+    "block.architects_palette.basalt_tile_stairs": "Rough Greywacke Tile Stairs",
+    "block.architects_palette.basalt_tile_wall": "Rough Greywacke Tile Wall"
 }

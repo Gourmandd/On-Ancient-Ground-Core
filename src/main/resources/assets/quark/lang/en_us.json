@@ -73,5 +73,15 @@
     "block.quark.jasper_bricks_wall": "Red Sandstone Brick Wall",
     "block.quark.jasper_pillar": "Red Sandstone Pillar",
 
+    "block.quark.chiseled_calcite": "Smooth Chiseled Soapstone",
+    "block.quark.polished_calcite": "Smooth Soapstone",
+    "block.quark.polished_calcite_slab": "Smooth Soapstone Slab",
+    "block.quark.polished_calcite_stairs": "Smooth Soapstone Stairs",
+
+    "block.quark.calcite_bricks": "Smooth Soapstone Bricks",
+    "block.quark.calcite_bricks_slab": "Smooth Soapstone Brick Slab",
+    "block.quark.calcite_bricks_stairs": "Smooth Soapstone Brick Stairs",
+    "block.quark.calcite_bricks_wall": "Smooth Soapstone Brick Wall",
+
 	"advancements.quark.instamine_deepslate.description": "Mine Nephelinite instantly using Efficiency VI and Haste II"
 }

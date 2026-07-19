@@ -22,5 +22,14 @@
 	"block.caupona.felsic_tuff_road": "Breccia Road",
 	"block.caupona.felsic_tuff_road_side": "Breccia Road with Kerb",
 	"block.caupona.felsic_tuff_lacunar_tile": "Breccia Lacunar Tile",
-	"block.caupona.felsic_tuff_spoked_fence": "Breccia Spoked Fence"
+	"block.caupona.felsic_tuff_spoked_fence": "Breccia Spoked Fence",
+	"block.caupona.calcite_column_fluted_plinth": "Fluted Soapstone Column Plinth",
+	"block.caupona.calcite_column_fluted_shaft": "Fluted Soapstone Column Shaft",
+	"block.caupona.calcite_column_shaft": "Soapstone Column Shaft",
+	"block.caupona.calcite_column_plinth": "Soapstone Column Plinth",
+	"block.caupona.calcite_ionic_column_capital": "Ionic Soapstone Column Capital",
+	"block.caupona.calcite_tuscan_column_capital": "Tuscan Soapstone Column Capital",
+	"block.caupona.calcite_acanthine_column_capital": "Acanthine Soapstone Column Capital",
+	"block.caupona.calcite_lacunar_tile": "Soapstone Lacunar Tile",
+	"block.caupona.calcite_spoked_fence": "Soapstone Spoked Fence"
 }
