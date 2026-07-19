@@ -64,6 +64,7 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).get(), 0.8f);
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_PAN).get(), 0.8f);
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).get(), 0.6f);
+            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.INGOT).get(), 0.6f);
         });
 
         Stream.of(CoreOres.values()).forEach(ore -> {
