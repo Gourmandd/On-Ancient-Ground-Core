@@ -192,7 +192,7 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_SEDIMENTARY = createKey(AncientGroundCore.MOD_ID, "vein/quartz_sedimentary");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE = createKey(AncientGroundCore.MOD_ID, "vein/shimmerstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE_VOLCANIC = createKey(AncientGroundCore.MOD_ID, "vein/shimmerstone_volcanic");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SOAPSTONE = createKey(AncientGroundCore.MOD_ID, "vein/soapstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MARLSTONE = createKey(AncientGroundCore.MOD_ID, "vein/marlstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE = createKey(AncientGroundCore.MOD_ID, "vein/stratine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_GALENA = createKey(AncientGroundCore.MOD_ID, "vein/surface_galena");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TERRACOTTA = createKey(AncientGroundCore.MOD_ID, "vein/terracotta");
@@ -531,9 +531,8 @@ public class BuiltinConfiguredFeatures  {
                 hash("shimmerstone_volcanic_ore"),
                 false
         ));
-
-        createDiscVein(SOAPSTONE, 30, 3, new VeinConfig(
-                createSoapstoneOreVeinMap(),
+        createDiscVein(MARLSTONE, 30, 3, new VeinConfig(
+                createMarlstoneOreVeinMap(),
                 Optional.empty(),
                 80,
                 0.9f,
@@ -541,10 +540,9 @@ public class BuiltinConfiguredFeatures  {
                 80,
                 false,
                 false,
-                hash("soapstone_ore"),
+                hash("marlstone_ore"),
                 false
         ));
-
         createClusterVein(STRATINE, 27, new VeinConfig(
                 createOreVeinMap(List.of(RockCategory.METAMORPHIC), List.of(), CoreOres.STRATINE),
                 Optional.empty(),
@@ -1946,25 +1944,25 @@ public class BuiltinConfiguredFeatures  {
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createSoapstoneOreVeinMap(){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createMarlstoneOreVeinMap(){
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
         for (Rock rock : Rock.values()){
-            if (rock.displayCategory().category() == RockCategory.METAMORPHIC){
+            if (rock.displayCategory().category() == RockCategory.SEDIMENTARY){
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
-                                Pair.of(CoreRocks.SOAPSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
+                                Pair.of(CoreRocks.MARLSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
                         )
                 ));
             }
         }
 
         for (CoreRocks rock : CoreRocks.values()){
-            if (rock.displayCategory().category() == RockCategory.METAMORPHIC){
+            if (rock.displayCategory().category() == RockCategory.SEDIMENTARY){
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
-                                Pair.of(CoreRocks.SOAPSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
+                                Pair.of(CoreRocks.MARLSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
                         )
                 ));
             }
@@ -2010,7 +2008,7 @@ public class BuiltinConfiguredFeatures  {
         map.put(CoreRocks.BLUESCHIST.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BLUE_TERRACOTTA));
         map.put(CoreRocks.ARKOSE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.BROWN_TERRACOTTA));
         map.put(CoreRocks.KOMATIITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.ORANGE_TERRACOTTA));
-        map.put(CoreRocks.SOAPSTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.WHITE_TERRACOTTA));
+        map.put(CoreRocks.MARLSTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.WHITE_TERRACOTTA));
         map.put(CoreRocks.SANDSTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.YELLOW_TERRACOTTA));
         map.put(CoreRocks.RED_SANDSTONE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.RED_TERRACOTTA));
         map.put(CoreRocks.PHONOLITE.getBlock(Rock.BlockType.RAW).get(), singleWeighted(Blocks.LIGHT_BLUE_TERRACOTTA));

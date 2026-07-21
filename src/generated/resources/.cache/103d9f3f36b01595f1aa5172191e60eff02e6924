@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-18T11:52:03.100657183	Registries
+// 1.21.1	2026-07-19T20:57:29.179134083	Registries
 f3d518a90908b698da60a781cf1655549c2bdf03 data/modpack/worldgen/configured_feature/monster_room.json
 89edeb375c890fd941d38e691dcaef27b8f14de6 data/modpack/worldgen/configured_feature/vein/deeper_down/bismuth.json
 694fd739f4479ddbaa34dbe09e6aa80fa090b6f8 data/modpack/worldgen/configured_feature/vein/deeper_down/borax.json
@@ -75,6 +75,7 @@ a55d035d7bffb664faf6e562418dfdc69bf46606 data/modpack/worldgen/placed_feature/ve
 8b62a253e385ab920bd960c583c24dcab1d077e2 data/modpack/worldgen/placed_feature/vein/geode/moonstone.json
 02fbbd5d6e0198bc9b9bce122eb3a6a5383887c6 data/modpack/worldgen/placed_feature/vein/geode/onyx.json
 8d4b37f83e75e5e89b7059d2a9ccd527347e5fd2 data/modpack/worldgen/placed_feature/vein/geode/topaz.json
+59f9771e169f2208bc7e17083d9c3b5720826b5c data/modpack/worldgen/placed_feature/vein/marlstone.json
 9f357b82009cfa1474e942d4172f0ed4fff863ee data/modpack/worldgen/placed_feature/vein/meteoric_iron.json
 f206009bd6cf207811ea8013968907bf2fd50232 data/modpack/worldgen/placed_feature/vein/normal_galena.json
 7c97f8d5cd3e13c41be8ca64cb9343eae209cc8f data/modpack/worldgen/placed_feature/vein/paltaeria.json
@@ -82,7 +83,6 @@ e6bfadf1b2afa8e55ff6ee065b5e2188cdaee1d5 data/modpack/worldgen/placed_feature/ve
 3416cfb121257046a8be51d125902f4e2d2e643e data/modpack/worldgen/placed_feature/vein/quartz_sedimentary.json
 e3ed0368e1eb37f47021359e6e4ae57c2007e667 data/modpack/worldgen/placed_feature/vein/shimmerstone.json
 f7a2afbd1c498de34122ab8360e884df3b21c428 data/modpack/worldgen/placed_feature/vein/shimmerstone_volcanic.json
-1f442b47c8405a83856db22195565c34926e719c data/modpack/worldgen/placed_feature/vein/soapstone.json
 d4238421d1abd806d5596e39338013f87c241868 data/modpack/worldgen/placed_feature/vein/stratine.json
 3781296698fa46a6dabcd024ef8ed217a836fdab data/modpack/worldgen/placed_feature/vein/surface_galena.json
 0e808e6623112889e3f3f7dfaba1622f2d1619be data/modpack/worldgen/placed_feature/vein/terracotta.json

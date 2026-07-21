@@ -22,10 +22,10 @@ public class GeologyCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "C_ac_efg__uw_E_ID",
-                "i_bd_hlF__v__z_yJ",
-                "j______________BK",
-                "k_GH_mnopqsrt__Ax",
+                "jC_ac_efg__uw_E_ID",
+                "ki_bd_hlF__v__z_yJ",
+                "LM______________BK",
+                "GH___mqsrpnot___Ax",
         };
     }
 
@@ -282,11 +282,11 @@ public class GeologyCategory extends CategoryProvider {
                 """
         );
 
-        var soapstoneEntry = createRockEntry(
-                CoreRocks.SOAPSTONE,
+        var marlstoneEntry = createRockEntry(
+                CoreRocks.MARLSTONE,
                 "G",
                 """
-                **Soapstone** is a **Metamorphic** rock found as veins in other **Metamorphic** rocks. \\
+                **Marlstone** is a **Sedimentary** rock found as veins in other **Sedimentary** rocks. \\
                 This can make it relatively rare.
                 """
         );
@@ -444,6 +444,24 @@ public class GeologyCategory extends CategoryProvider {
                 **Arkose** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
                 - In **Uplift Regions**.
+                """
+        );
+
+        var soapstoneEntry = createRockEntry(
+                CoreRocks.SOAPSTONE,
+                "L",
+                """
+                **Soapstone** is a **Metamorphic** rock found in a shell around geodes with peculiar properties. \\
+                This can make it relatively rare.
+                """
+        );
+
+        var greywackeEntry = createRockEntry(
+                CoreRocks.GREYWACKE,
+                "M",
+                """
+                **Greywacke** is a **Sedimentary** rock found in a shell around certain geodes with peculiar properties. \\
+                This can make it relatively rare.
                 """
         );
         //endregion
