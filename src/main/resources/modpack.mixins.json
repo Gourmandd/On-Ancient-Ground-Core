@@ -5,6 +5,7 @@
   "mixins": [
     "BasinBlockEntityMixin",
     "CACakeBlockMixin",
+    "CloakedOreBlockMixin",
     "DecayAwayMixin",
     "SwitchInventoryTabPacketMixin"
   ],
