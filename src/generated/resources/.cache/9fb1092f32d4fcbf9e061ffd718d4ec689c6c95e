@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-18T11:52:03.101390688	Recipes
+// 1.21.1	2026-07-27T21:15:05.123833976	Recipes
 74d08b4749e380fba2d005605c7ebb389e1b8576 data/modpack/recipe/alloy/aluminium_bronze.json
 2b8aaefb8411d25fa8d2563ddf617af092decbd1 data/modpack/recipe/alloy/cast_iron_alloy.json
 ce75347b3aeb00333930a53c795d09ba5de88583 data/modpack/recipe/alloy/electrum.json
@@ -1141,6 +1141,7 @@ af4ae556cd7e8a5f70251da408e5e52490201707 data/modpack/recipe/heating/ceramic/ear
 36ac062613204b4be1b4d257c173eea4bb2ededb data/modpack/recipe/heating/ceramic/earthenware/unfired_javelin_head_mold.json
 e647772ed8c558c4873937520f8852fb89ad4c55 data/modpack/recipe/heating/ceramic/earthenware/unfired_jug.json
 cc9e5e44e8a1accc79f32d1f139bdab355945344 data/modpack/recipe/heating/ceramic/earthenware/unfired_knife_blade_mold.json
+6ccfaabe3b5cb629724aca111b34d3a361f64304 data/modpack/recipe/heating/ceramic/earthenware/unfired_large_vessel.json
 e0b249e65f051119f661366d6dc099480045baa8 data/modpack/recipe/heating/ceramic/earthenware/unfired_mace_head_mold.json
 e836b16b4d1e2a25f8812279ad6323f574cd00c5 data/modpack/recipe/heating/ceramic/earthenware/unfired_pan.json
 d00063e6e354b7f3ec6acb24ec39676a9b1f38f1 data/modpack/recipe/heating/ceramic/earthenware/unfired_pickaxe_head_mold.json
@@ -1165,6 +1166,7 @@ e87b5bbe9e7a62edd22050d8945b475e3ca1473f data/modpack/recipe/heating/ceramic/kao
 b1b53ffba5b164ebee91002f7344d2d23d72ddae data/modpack/recipe/heating/ceramic/kaolinite/unfired_javelin_head_mold.json
 c04cf72250885c045a21ec3df34e130407aabea3 data/modpack/recipe/heating/ceramic/kaolinite/unfired_jug.json
 81478e5307e963d5e171ee4e55ab37a7ea73dacc data/modpack/recipe/heating/ceramic/kaolinite/unfired_knife_blade_mold.json
+190896ca8e7ac6d15d26fd2e900c5eba89a1b683 data/modpack/recipe/heating/ceramic/kaolinite/unfired_large_vessel.json
 e73e2900e4316794ba3c36003914cbcbbfac0130 data/modpack/recipe/heating/ceramic/kaolinite/unfired_mace_head_mold.json
 3059fd0eae44d5a9622ca369918a16e5b1b08309 data/modpack/recipe/heating/ceramic/kaolinite/unfired_pan.json
 904f6eefaff2320e2ec7f0ceac8a2722d69eb151 data/modpack/recipe/heating/ceramic/kaolinite/unfired_pickaxe_head_mold.json
@@ -1189,6 +1191,7 @@ c14c7e7fc7f7dcb3a378b6939c8b07fe82f6f41c data/modpack/recipe/heating/ceramic/por
 8db9c1eae050801eccdedb580288d25e87e5ef90 data/modpack/recipe/heating/ceramic/porcelain/unfired_javelin_head_mold.json
 f52d0c4cbb8ad4beb3127c412707187280feea49 data/modpack/recipe/heating/ceramic/porcelain/unfired_jug.json
 c5d2d364af1c2a138c2e1b8616725c5d6da4d5ce data/modpack/recipe/heating/ceramic/porcelain/unfired_knife_blade_mold.json
+89c7674024c3f8724ab84ceb8ae000678aa122d5 data/modpack/recipe/heating/ceramic/porcelain/unfired_large_vessel.json
 6f77eadf422c7d01b82afced52f2c399b46929d0 data/modpack/recipe/heating/ceramic/porcelain/unfired_mace_head_mold.json
 a9a0b6c91016c2bcd1fed165c7d674c22af4ff06 data/modpack/recipe/heating/ceramic/porcelain/unfired_pan.json
 252b1f68c9c6eac7e6ade56bcbe64e98b1ab8b39 data/modpack/recipe/heating/ceramic/porcelain/unfired_pickaxe_head_mold.json
@@ -1213,6 +1216,7 @@ d83482ae8367bca1d4dba3af0292854566c83f0c data/modpack/recipe/heating/ceramic/yel
 9379b554119044ef3004f34dadb529d4fb2d5ea0 data/modpack/recipe/heating/ceramic/yellowware/unfired_javelin_head_mold.json
 b901a871bfe9161cd2263b728b440cbae992dc7d data/modpack/recipe/heating/ceramic/yellowware/unfired_jug.json
 7e767c03cf887795b08f3069bb9a9f5cc24d30e1 data/modpack/recipe/heating/ceramic/yellowware/unfired_knife_blade_mold.json
+bfe0c44bd4abac748173dceb2a338f4e57f726c8 data/modpack/recipe/heating/ceramic/yellowware/unfired_large_vessel.json
 9611e2554d3b6ea8c11f2d111f3825b0a036d26e data/modpack/recipe/heating/ceramic/yellowware/unfired_mace_head_mold.json
 f0e391be6a5c2f06f9f60747bccc4fd99979ed00 data/modpack/recipe/heating/ceramic/yellowware/unfired_pan.json
 50ffc896d16547b4a8ac7c523aaa60b7c4258c06 data/modpack/recipe/heating/ceramic/yellowware/unfired_pickaxe_head_mold.json
@@ -1237,6 +1241,7 @@ ef57bcbfb11a971a15f7d2e0e7d774dde184f293 data/modpack/recipe/heating/ceramic/yix
 7c26cb153695316e076075aca4069e67312b0a62 data/modpack/recipe/heating/ceramic/yixing/unfired_javelin_head_mold.json
 13c54ac2d260e170030eaf0fa746e9df2ffe77cd data/modpack/recipe/heating/ceramic/yixing/unfired_jug.json
 d5b1b18fddaba42503eeb6eeed4816861fac0165 data/modpack/recipe/heating/ceramic/yixing/unfired_knife_blade_mold.json
+1008a78b9b89784c7c82a1eb0b860bc846d7a563 data/modpack/recipe/heating/ceramic/yixing/unfired_large_vessel.json
 91be3c82c0ed8bfb1ef63a620800140fd75841e6 data/modpack/recipe/heating/ceramic/yixing/unfired_mace_head_mold.json
 07dd0072dd9a74f78d4706e81643cdf38d86e741 data/modpack/recipe/heating/ceramic/yixing/unfired_pan.json
 553a9cd53673445dd132f3c550ce7ef454519a08 data/modpack/recipe/heating/ceramic/yixing/unfired_pickaxe_head_mold.json
@@ -1322,6 +1327,7 @@ e176690e1b97401c110c1cead5ac1f6345dc9556 data/modpack/recipe/knapping/ceramic/ea
 7657c0ef8e6be336ce3008cc7f71d272ea332b31 data/modpack/recipe/knapping/ceramic/earthenware/unfired_javelin_head_mold.json
 b104b6f8d3d79a2bfbaa7452c4af48c1356d93ec data/modpack/recipe/knapping/ceramic/earthenware/unfired_jug.json
 4934ac9d2758660174c79bbc238891a31350fefc data/modpack/recipe/knapping/ceramic/earthenware/unfired_knife_blade_mold.json
+5e96ee56fffa1327829a1a9f0b885de75880c92f data/modpack/recipe/knapping/ceramic/earthenware/unfired_large_vessel.json
 b57d53d3e090f0fcea5a362eb81376e1caeccd53 data/modpack/recipe/knapping/ceramic/earthenware/unfired_mace_head_mold.json
 0b95754348f204777037f42709fa027490a489f3 data/modpack/recipe/knapping/ceramic/earthenware/unfired_pan.json
 483662d91f5672037dc3b05c2cb96fa359f296f8 data/modpack/recipe/knapping/ceramic/earthenware/unfired_pickaxe_head_mold.json
@@ -1347,6 +1353,7 @@ ebd9a76ae7bea361409f2a1d1ce4f65d2edf83c3 data/modpack/recipe/knapping/ceramic/ka
 6568acc9eafc144f6abaa6e52c0d6364ec98482a data/modpack/recipe/knapping/ceramic/kaolinite/unfired_javelin_head_mold.json
 73056c27d83a7066d99358b6be8ae878e88c1214 data/modpack/recipe/knapping/ceramic/kaolinite/unfired_jug.json
 0cad1a112a7e8d9acbaa0e304afc886c7c2c8ae4 data/modpack/recipe/knapping/ceramic/kaolinite/unfired_knife_blade_mold.json
+4793e5c722599a18fb93505bac8ead024d3cd23f data/modpack/recipe/knapping/ceramic/kaolinite/unfired_large_vessel.json
 2f8b1b7c04025f2c07545ef818560a48a07dbb25 data/modpack/recipe/knapping/ceramic/kaolinite/unfired_mace_head_mold.json
 67cb02edc4aebc5bfca1fa0dd1083904c577337a data/modpack/recipe/knapping/ceramic/kaolinite/unfired_pan.json
 706515236153fc4b61c945344b01dd468b189497 data/modpack/recipe/knapping/ceramic/kaolinite/unfired_pickaxe_head_mold.json
@@ -1372,6 +1379,7 @@ be21e897d5cbc46755202b629203db0f9f910553 data/modpack/recipe/knapping/ceramic/po
 005c45b2593e768d569f621d4cafbd00f3a1ba17 data/modpack/recipe/knapping/ceramic/porcelain/unfired_javelin_head_mold.json
 0a986297b634ef690c70576f87617e2c037a828d data/modpack/recipe/knapping/ceramic/porcelain/unfired_jug.json
 2a71e5032ed86f615e372b65701c4e2463ba5ec2 data/modpack/recipe/knapping/ceramic/porcelain/unfired_knife_blade_mold.json
+b3bc8446f073286a10577dd9ba76fe5793184232 data/modpack/recipe/knapping/ceramic/porcelain/unfired_large_vessel.json
 8b6bf09e45481f91160504e990727432fd3eedf5 data/modpack/recipe/knapping/ceramic/porcelain/unfired_mace_head_mold.json
 21e1e726d7bcdb63c57585506af8e5deda62fce0 data/modpack/recipe/knapping/ceramic/porcelain/unfired_pan.json
 98a1f9085ad42a05d586d98bc435ab87489dd3e9 data/modpack/recipe/knapping/ceramic/porcelain/unfired_pickaxe_head_mold.json
@@ -1397,6 +1405,7 @@ a7f15b7482f1407e68c7a0845723f0b94a1b7897 data/modpack/recipe/knapping/ceramic/ye
 0a1c08d73fb60c8f5ec59b3f4c616338211acbea data/modpack/recipe/knapping/ceramic/yellowware/unfired_javelin_head_mold.json
 6acbe3a842334fe214ebd50d4806220c3f1361cc data/modpack/recipe/knapping/ceramic/yellowware/unfired_jug.json
 e47b24816dc986aec79451682a545d8f3f66a9f2 data/modpack/recipe/knapping/ceramic/yellowware/unfired_knife_blade_mold.json
+f5a1b449bfc650ba9d62ff9e3d661bf1b9a2ed17 data/modpack/recipe/knapping/ceramic/yellowware/unfired_large_vessel.json
 b9f8e2efbe09ae9c1c3849a2059b48dbf9c92751 data/modpack/recipe/knapping/ceramic/yellowware/unfired_mace_head_mold.json
 f15b621cec46fdb72d5a24766cb50f44671de308 data/modpack/recipe/knapping/ceramic/yellowware/unfired_pan.json
 63c156ea3df931fef70675c627523f1751b33004 data/modpack/recipe/knapping/ceramic/yellowware/unfired_pickaxe_head_mold.json
@@ -1422,6 +1431,7 @@ d89716485accda92a563f53754123014ae47367f data/modpack/recipe/knapping/ceramic/yi
 f4d17b7fcd8acb22bcc41c4b7f72a460cd87b65c data/modpack/recipe/knapping/ceramic/yixing/unfired_javelin_head_mold.json
 8b4c7e02707d9839a1eec9ec62b390c6ab316289 data/modpack/recipe/knapping/ceramic/yixing/unfired_jug.json
 78122157942d7658ba590020b36db5b4950f1586 data/modpack/recipe/knapping/ceramic/yixing/unfired_knife_blade_mold.json
+805230c7982fe0a5b79cf46c2ef3bc6d50b5b132 data/modpack/recipe/knapping/ceramic/yixing/unfired_large_vessel.json
 daa769e30fd5ddf37a39920391a1fb8b6febc3ab data/modpack/recipe/knapping/ceramic/yixing/unfired_mace_head_mold.json
 a135a64e6245f326ebda69e78deed435306170f1 data/modpack/recipe/knapping/ceramic/yixing/unfired_pan.json
 b512121ca655d5276f2a0966f7b4ca590ea254ce data/modpack/recipe/knapping/ceramic/yixing/unfired_pickaxe_head_mold.json

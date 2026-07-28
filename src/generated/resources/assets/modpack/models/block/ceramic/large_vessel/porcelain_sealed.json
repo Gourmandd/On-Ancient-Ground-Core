@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/ceramic/large_vessel_sealed",
+  "textures": {
+    "bottom": "modpack:block/ceramic/large_vessel/porcelain/bottom",
+    "particle": "modpack:block/ceramic/large_vessel/porcelain/side",
+    "side": "modpack:block/ceramic/large_vessel/porcelain/side",
+    "top": "modpack:block/ceramic/large_vessel/porcelain/top"
+  }
+}

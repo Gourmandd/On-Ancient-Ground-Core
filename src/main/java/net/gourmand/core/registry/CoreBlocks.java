@@ -2,7 +2,10 @@ package net.gourmand.core.registry;
 
 import com.therighthon.afc.common.blocks.AFCWood;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
-import net.dries007.tfc.common.blocks.*;
+import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.GroundcoverBlock;
+import net.dries007.tfc.common.blocks.OreDeposit;
+import net.dries007.tfc.common.blocks.TFCMagmaBlock;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
@@ -14,7 +17,6 @@ import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.core.registry.blocks.MeltableBlock;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.SpectrumWood;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -188,7 +190,7 @@ public class CoreBlocks {
 
     public static final Map<CoreClay, Map<CoreClay.BlockType, DeferredHolder<Block, Block>>> CERAMIC_BLOCKS = Helpers.mapOf(CoreClay.class, clay ->
             Helpers.mapOf(CoreClay.BlockType.class, type -> type.hasClayType(clay), type ->
-                    register("ceramic/" + type.getSerializedName() + "/" + clay.getSerializedName(), () -> type.getBlock(clay))
+                    register("ceramic/" + type.getSerializedName() + "/" + clay.getSerializedName(), () -> type.getBlock(clay), type.getItemFactory())
             )
     );
 
@@ -272,7 +274,6 @@ public class CoreBlocks {
     public static final Map<AFCWood, DeferredHolder<Block, Block>> AFC_WOOD_SHUTTERS = Helpers.mapOf(AFCWood.class, wood ->
             register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
     );
-
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {

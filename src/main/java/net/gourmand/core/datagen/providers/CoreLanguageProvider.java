@@ -252,7 +252,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
             Stream.of(CoreClay.BlockType.values()).forEach(type -> {
 
                 if (type.hasClayType(clay)){
-                    addBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), getName(clay) + " Clay");
+                    addBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), getName(clay) + " " + getName(type));
                 }
 
                 if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){

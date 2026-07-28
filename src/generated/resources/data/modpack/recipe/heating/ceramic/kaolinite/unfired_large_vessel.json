@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:ceramic/kaolinite/unfired_large_vessel"
+  },
+  "result_item": {
+    "count": 1,
+    "id": "modpack:ceramic/large_vessel/kaolinite"
+  },
+  "temperature": 1399.0
+}

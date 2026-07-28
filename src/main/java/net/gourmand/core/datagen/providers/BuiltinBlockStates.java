@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 import de.dafuqs.spectrum.blocks.crystallarieum.SpectrumClusterBlock;
+import net.dries007.tfc.common.blocks.LargeVesselBlock;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.RockRopeAnchorBlock;
 import net.dries007.tfc.common.blocks.ShelfBlock;
@@ -191,9 +192,10 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         Stream.of(CoreClay.values()).forEach(clay -> {
             Stream.of(CoreClay.BlockType.values()).forEach(type -> {
+
                 ResourceLocation texture = TextureUtil.getCeramicBlockTexture(type, clay);
 
-                if (type.hasClayType(clay)){
+                if (type.hasClayType(clay) && type.getType() != CoreClay.BlockPartType.VESSEL){
                     cubeAll(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), texture);
                 }
 
@@ -201,6 +203,10 @@ public class BuiltinBlockStates extends BlockStateProvider {
                     stairsBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair(), texture);
                     slabBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).getId()));
                     wallBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall(), getBlockModelString(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).getId()), texture);
+                }
+
+                if (type.getType() == CoreClay.BlockPartType.VESSEL){
+                    largeVesselBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), texture);
                 }
             });
         });
@@ -695,6 +701,46 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
     private void paneBlock(DeferredHolder<Block, Block> block, ResourceLocation side, ResourceLocation top){
         this.paneBlock((IronBarsBlock) block.get(), side, top);
+    }
+
+    private void largeVesselBlock(DeferredHolder<Block, Block> block, ResourceLocation textureRoot){
+
+        ResourceLocation textureTop = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/top");
+        ResourceLocation textureSide = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/side");
+        ResourceLocation textureBottom = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/bottom");
+
+        ModelFile modelOpened = createModel(getBlockModelString(block.getId()) + "_opened", "tfc:block/ceramic/large_vessel_opened")
+                .texture("side", textureSide)
+                .texture("bottom", textureBottom)
+                .texture("particle", textureSide);
+
+        ModelFile modelSealed = createModel(getBlockModelString(block.getId()) + "_sealed", "tfc:block/ceramic/large_vessel_sealed")
+                .texture("top", textureTop)
+                .texture("side", textureSide)
+                .texture("bottom", textureBottom)
+                .texture("particle", textureSide);
+
+        ResourceLocation textureClayTop = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_top");
+        ResourceLocation textureClaySide = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_side");
+        ResourceLocation textureClayBottom = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_bottom");
+
+        ModelFile modelItem = createModel(getBlockModelString(block.getId()) + "_item", "tfc:block/ceramic/large_vessel_sealed")
+                .texture("top", textureClayTop)
+                .texture("side", textureClaySide)
+                .texture("bottom", textureClayBottom)
+                .texture("particle", textureClaySide);
+
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.NORTH).modelForState().modelFile(modelOpened).rotationY(180).addModel()
+                .partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.EAST).modelForState().modelFile(modelOpened).rotationY(270).addModel()
+                .partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.SOUTH).modelForState().modelFile(modelOpened).rotationY(0).addModel()
+                .partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.WEST).modelForState().modelFile(modelOpened).rotationY(90).addModel()
+                .partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.NORTH).modelForState().modelFile(modelSealed).rotationY(180).addModel()
+                .partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.EAST).modelForState().modelFile(modelSealed).rotationY(270).addModel()
+                .partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.SOUTH).modelForState().modelFile(modelSealed).rotationY(0).addModel()
+                .partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.WEST).modelForState().modelFile(modelSealed).rotationY(90).addModel();
     }
 
     private String getBlockModelString(ResourceLocation block){

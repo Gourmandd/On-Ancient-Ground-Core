@@ -10,24 +10,30 @@ import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.ToolRackBlockEntityRenderer;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.component.TFCComponents;
 import net.dries007.tfc.common.fluids.TFCFluids;
+import net.dries007.tfc.util.Helpers;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlockEntities;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreFluids;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
-import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.registry.category.CoreGemstones;
 import net.gourmand.core.registry.category.CoreRocks;
+import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.util.CoreKeyBindings;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -40,6 +46,7 @@ import net.neoforged.neoforge.client.model.DynamicFluidContainerModel;
 
 import java.util.Locale;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_FLOW;
@@ -177,6 +184,9 @@ public class ClientEventHandler {
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get(), translucent);
         });
 
+        for (CoreClay clayType : CoreClay.values()){
+            registerSealedProperty(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL).get(), TFCComponents.CONTENTS);
+        }
     }
 
     public static void registerColorHandlerBlocks(RegisterColorHandlersEvent.Block event){
@@ -249,5 +259,17 @@ public class ClientEventHandler {
             }
         }
         return false;
+    }
+
+    private static final ResourceLocation SEALED = Helpers.identifier("sealed");
+
+    private static <T> void registerSealedProperty(ItemLike item, Supplier<? extends DataComponentType<T>> type)
+    {
+        registerSealedProperty(item, type, t -> true);
+    }
+
+    private static <T> void registerSealedProperty(ItemLike item, Supplier<? extends DataComponentType<T>> type, Predicate<T> predicate)
+    {
+        ItemProperties.register(item.asItem(), SEALED, (stack, level, entity, unused) -> stack.has(type) && predicate.test(stack.get(type)) ? 1.0f : 0f);
     }
 }

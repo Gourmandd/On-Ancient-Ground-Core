@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-18T11:52:02.978728331	Loot Tables
+// 1.21.1	2026-07-27T21:56:18.583703117	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -25,6 +25,11 @@ f806f26ec2493b2fa6243b703b95f4f6772d8264 data/modpack/loot_table/blocks/ceramic/
 6039ab6768a6026126808ec30f41e4f679a31329 data/modpack/loot_table/blocks/ceramic/clay_block/porcelain.json
 728d410f86e3459b208175f33498c0c86c52a48f data/modpack/loot_table/blocks/ceramic/clay_block/yellowware.json
 8b7405c8c1361e93d85a9dbd0dbc57bedb5bc546 data/modpack/loot_table/blocks/ceramic/clay_block/yixing.json
+2b81c9b8202a8f2e0828bc28e828eb0c3867dbe8 data/modpack/loot_table/blocks/ceramic/large_vessel/earthenware.json
+65c853c3fdad03d4a91e502ef52a1f23500d5838 data/modpack/loot_table/blocks/ceramic/large_vessel/kaolinite.json
+b034554edf9f2bc7c382719d4f3d0853d4e2b7b8 data/modpack/loot_table/blocks/ceramic/large_vessel/porcelain.json
+fbb2786993a2cf8ec5ae1f87a0ae658fd7e895a3 data/modpack/loot_table/blocks/ceramic/large_vessel/yellowware.json
+ce891222ec5377012067c0dde5748f19aa7815be data/modpack/loot_table/blocks/ceramic/large_vessel/yixing.json
 42e110bf604b9132e4fc4a58f42a8229b080bf02 data/modpack/loot_table/blocks/crop/amaranth.json
 31047b9922b12c6d981fc07f6022da30f382aacb data/modpack/loot_table/blocks/crop/coffee.json
 fae2013bf934f04ea037a03788c27766ed190fec data/modpack/loot_table/blocks/crop/cotton.json

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "modpack:ceramic/yixing/unfired_large_vessel",
+    "modpack:ceramic/large_vessel/yixing",
+    "modpack:ceramic/yellowware/unfired_large_vessel",
+    "modpack:ceramic/large_vessel/yellowware",
+    "modpack:ceramic/porcelain/unfired_large_vessel",
+    "modpack:ceramic/large_vessel/porcelain",
+    "modpack:ceramic/kaolinite/unfired_large_vessel",
+    "modpack:ceramic/large_vessel/kaolinite",
+    "modpack:ceramic/earthenware/unfired_large_vessel",
+    "modpack:ceramic/large_vessel/earthenware"
+  ]
+}

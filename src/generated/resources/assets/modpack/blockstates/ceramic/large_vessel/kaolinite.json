@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,sealed=false": {
+      "model": "modpack:block/ceramic/large_vessel/kaolinite_opened",
+      "y": 270
+    },
+    "facing=east,sealed=true": {
+      "model": "modpack:block/ceramic/large_vessel/kaolinite_sealed",
+      "y": 270
+    },
+    "facing=north,sealed=false": {
+      "model": "modpack:block/ceramic/large_vessel/kaolinite_opened",
+      "y": 180
+    },
+    "facing=north,sealed=true": {
+      "model": "modpack:block/ceramic/large_vessel/kaolinite_sealed",
+      "y": 180
+    },
+    "facing=south,sealed=false": {
+      "model": "modpack:block/ceramic/large_vessel/kaolinite_opened"
+    },
+    "facing=south,sealed=true": {
+      "model": "modpack:block/ceramic/large_vessel/kaolinite_sealed"
+    },
+    "facing=west,sealed=false": {
+      "model": "modpack:block/ceramic/large_vessel/kaolinite_opened",
+      "y": 90
+    },
+    "facing=west,sealed=true": {
+      "model": "modpack:block/ceramic/large_vessel/kaolinite_sealed",
+      "y": 90
+    }
+  }
+}

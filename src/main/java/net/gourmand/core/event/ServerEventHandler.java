@@ -3,6 +3,9 @@ package net.gourmand.core.event;
 import de.dafuqs.spectrum.particle.SpectrumParticleTypes;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import de.dafuqs.spectrum.registries.SpectrumItems;
+import net.dries007.tfc.common.blockentities.TFCBlockEntities;
+import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.category.CoreClay;
 import net.gourmand.core.registry.category.CoreTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
@@ -19,6 +22,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 
 import java.util.ArrayList;
@@ -31,13 +35,18 @@ public class ServerEventHandler {
 
     public static void init(IEventBus modEventBus, ModContainer modContainer)
     {
-        modEventBus.addListener(ServerEventHandler::onUseItemOnBlock);
+        //modEventBus.addListener(ServerEventHandler::onUseItemOnBlock);
     }
 
     public static void onUseItemOnBlock(UseItemOnBlockEvent event){
         //liquidCrystalConversion(event);
     }
 
+    public static void addToBlockEntities(BlockEntityTypeAddBlocksEvent event){
+        for (CoreClay clay : CoreClay.values()) {
+            event.modify(TFCBlockEntities.LARGE_VESSEL.get(), CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL).get());
+        }
+    }
 
     public static void liquidCrystalConversion(UseItemOnBlockEvent event){
         Level level = event.getLevel();

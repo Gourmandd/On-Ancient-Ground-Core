@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-18T11:52:03.099480551	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-07-28T12:23:48.679754243	Tags for minecraft:item mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/item/boards.json
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
@@ -128,7 +128,9 @@ e61065746a3f695534c29455001f21b7fad47afa data/modpack/tags/item/unfired_vessels.
 74f54973095d6dcf2f17901d14fcfa01ddaf5aed data/spectrum/tags/item/shimmerstone_ores.json
 2860e2b2596b19e1464dfcf80309f988a742c446 data/tfc/tags/item/aqueducts.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/can_be_lit_on_torch.json
+74acf2b5358515978fa3e2f17f2637288648a99d data/tfc/tags/item/fired_vessels.json
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/tfc/tags/item/fluid_item_ingredient_empty_containers.json
+8c25f32bef63cf1012afdc19d0ba893bab2b9a74 data/tfc/tags/item/large_vessels.json
 df0a75d46911aae0147d30a3849d1a2dbf21c508 data/tfc/tags/item/looms.json
 62e6e1ed83fa606df559dd925f5cfe552f64afba data/tfc/tags/item/lumber.json
 9b42d69576354582feaa42e2b11e5983ebee9f3e data/tfc/tags/item/ore_deposits.json
@@ -138,8 +140,9 @@ d0cd34c4f53db7339b1630cccf4780ca8209550f data/tfc/tags/item/sluices.json
 d6d3564aa1f14eb6c3c3df74fd4ad163bdfa205e data/tfc/tags/item/support_beams.json
 71e013112fd9d6c8ddf41f7a9946bdc5beb2ef41 data/tfc/tags/item/tool_racks.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/twigs.json
+f1956e90ba3c1266837c3954ba36433f9a83ffa5 data/tfc/tags/item/unfired_large_vessels.json
 a95eece88a4a48fd1080df8ab87d752b419d1dd1 data/tfc/tags/item/unfired_molds.json
-2eda10c3af5b83fac8185cbc3734f18b0e9749d9 data/tfc/tags/item/unfired_pottery.json
+73bb053313faee7aad71050b62cd5befcbcf485d data/tfc/tags/item/unfired_pottery.json
 f33be10308ac957535de398b32edc53435d050df data/tfc/tags/item/unfired_vessels.json
 fa7f97402203e4a26c47673258cdfe8d223abb73 data/tfc/tags/item/vessels.json
 2de41cb57a38779425793b310b39dc1bfa45cbb4 data/tfc/tags/item/wild_crops.json

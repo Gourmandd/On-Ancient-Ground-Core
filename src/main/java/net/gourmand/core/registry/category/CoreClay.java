@@ -1,15 +1,20 @@
 package net.gourmand.core.registry.category;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blockentities.TFCBlockEntities;
+import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.LargeVesselBlock;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.items.JugItem;
 import net.dries007.tfc.common.items.TFCItems;
+import net.dries007.tfc.common.items.TooltipBlockItem;
 import net.dries007.tfc.common.items.VesselItem;
 import net.dries007.tfc.config.TFCConfig;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.util.RegistryClay;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.*;
@@ -116,6 +121,7 @@ public enum CoreClay implements RegistryClay {
         UNFIRED_BOWL(),
         UNFIRED_FLOWER_POT(),
         UNFIRED_PAN(),
+        UNFIRED_LARGE_VESSEL(),
 
         JUG(ItemPartType.ITEM, clayType -> new JugItem(new Item.Properties().rarity(clayType.getRarity()).stacksTo(1), TFCConfig.SERVER.jugCapacity, TFCTags.Fluids.USABLE_IN_JUG)),
         VESSEL(ItemPartType.ITEM, clayType -> new VesselItem(new Item.Properties().rarity(clayType.getRarity()).stacksTo(1)));
@@ -173,24 +179,27 @@ public enum CoreClay implements RegistryClay {
     public enum BlockType implements StringRepresentable {
 
         CLAY_BLOCK(BlockPartType.REDUCED_BLOCK, Blocks.CLAY),
-        BRICKS(BlockPartType.BLOCK_SET, Blocks.BRICKS);
+        BRICKS(BlockPartType.BLOCK_SET, Blocks.BRICKS),
+        LARGE_VESSEL(BlockPartType.VESSEL, (coreClay) -> new LargeVesselBlock(ExtendedProperties.of().mapColor(MapColor.CLAY).strength(2.5F).noOcclusion().blockEntity(TFCBlockEntities.LARGE_VESSEL)), (block) -> new TooltipBlockItem(block, new Item.Properties()), BlockBehaviour.Properties.of());
 
         private final BlockPartType type;
         private final Function<CoreClay, Block> blockFactory;
+        private final Function<Block, BlockItem> itemFactory;
         private final BlockBehaviour.Properties blockProperties;
         private final String serializedName;
 
         BlockType(BlockPartType type, Block copyBlock){
-            this(type, BlockBehaviour.Properties.ofFullCopy(copyBlock));
+            this(type, BlockBehaviour.Properties.ofFullCopy(copyBlock), (block) -> new BlockItem(block, new Item.Properties()));
         }
 
-        BlockType(BlockPartType type, BlockBehaviour.Properties blockProperties){
-            this(type, clay -> new Block(blockProperties), blockProperties);
+        BlockType(BlockPartType type, BlockBehaviour.Properties blockProperties, Function<Block, BlockItem> itemFactory){
+            this(type, clay -> new Block(blockProperties), itemFactory, blockProperties);
         }
 
-        BlockType(BlockPartType type, Function<CoreClay, Block> blockFactory, BlockBehaviour.Properties blockProperties){
+        BlockType(BlockPartType type, Function<CoreClay, Block> blockFactory, Function<Block, BlockItem> itemFactory, BlockBehaviour.Properties blockProperties){
             this.type = type;
             this.blockFactory = blockFactory;
+            this.itemFactory = itemFactory;
             this.blockProperties = blockProperties;
             this.serializedName = name().toLowerCase(Locale.ROOT);
         }
@@ -200,7 +209,7 @@ public enum CoreClay implements RegistryClay {
         }
 
         public StairBlock createStairs(CoreClay clay){
-            return new StairBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(this).get().defaultBlockState() ,this.blockProperties.mapColor(clay.mapColor()));
+            return new StairBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(this).get().defaultBlockState(), this.blockProperties.mapColor(clay.mapColor()));
         }
 
         public WallBlock createWall(CoreClay clay){
@@ -210,6 +219,11 @@ public enum CoreClay implements RegistryClay {
         public Block getBlock(CoreClay clay){
             return this.blockFactory.apply(clay);
         }
+
+        public Function<Block, BlockItem> getItemFactory(){
+            return this.itemFactory;
+        }
+
 
         public boolean hasClayType(CoreClay clay)
         {
@@ -235,6 +249,6 @@ public enum CoreClay implements RegistryClay {
     public enum BlockPartType
     {
         // reduced block means that clay types with reducedSet: true won't have this block.
-        BLOCK, BLOCK_SET, REDUCED_BLOCK
+        VESSEL, BLOCK, BLOCK_SET, REDUCED_BLOCK
     }
 }

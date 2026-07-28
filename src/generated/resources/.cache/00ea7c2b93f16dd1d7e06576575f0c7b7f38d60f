@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-18T13:27:20.300771667	Item Models: modpack
+// 1.21.1	2026-07-28T12:11:18.575842336	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -78,6 +78,7 @@ c696fcbfe7d48dc992f82f31707af98bf9acfffa assets/modpack/models/item/ceramic/eart
 0cee3c23b8cec3475ab57f9aea0ce51f635eba81 assets/modpack/models/item/ceramic/earthenware/unfired_javelin_head_mold.json
 684ce43af2c293ccb2469f95a481873b853500c4 assets/modpack/models/item/ceramic/earthenware/unfired_jug.json
 1a765e75699bd60f1cc38e471d73f2109c306484 assets/modpack/models/item/ceramic/earthenware/unfired_knife_blade_mold.json
+afffe3b85720935bc782e37b8384102f824a61c0 assets/modpack/models/item/ceramic/earthenware/unfired_large_vessel.json
 8f03cc837df8beb026e12236bf23811bd79268f4 assets/modpack/models/item/ceramic/earthenware/unfired_mace_head_mold.json
 c754f89655cf4b4dc8153e0515cb54e3f6ac4865 assets/modpack/models/item/ceramic/earthenware/unfired_pickaxe_head_mold.json
 6f0cc2f0718af2987876168c0bcef51c12584fd2 assets/modpack/models/item/ceramic/earthenware/unfired_pot.json
@@ -103,6 +104,7 @@ aeb0ce88c5a9ad3a3b684a05391f1e1e68fd202c assets/modpack/models/item/ceramic/kaol
 7604fb951bf995a422ea3977726ceced455a1480 assets/modpack/models/item/ceramic/kaolinite/unfired_javelin_head_mold.json
 19c48caf87a559a237a4bae2abbc4508994e68c4 assets/modpack/models/item/ceramic/kaolinite/unfired_jug.json
 a086d079a2ee3bb19599a62a9895c7fce45382b8 assets/modpack/models/item/ceramic/kaolinite/unfired_knife_blade_mold.json
+be20a0af9bbc3a0d8075ec5d6c8b43f25e8ee829 assets/modpack/models/item/ceramic/kaolinite/unfired_large_vessel.json
 2637c218615a5883a5459831c0d6ad257f55af8f assets/modpack/models/item/ceramic/kaolinite/unfired_mace_head_mold.json
 d546911d9f97928548e2a6ca2e5e9bc6a96e9cda assets/modpack/models/item/ceramic/kaolinite/unfired_pickaxe_head_mold.json
 05fd03b26bf7d095f1eda4996d5916e32509ab8d assets/modpack/models/item/ceramic/kaolinite/unfired_pot.json
@@ -114,6 +116,11 @@ d303647d44a6bf2d68bdab498621ec959aa3edc6 assets/modpack/models/item/ceramic/kaol
 87ddf1d231b3887b2b5e96393b12c19881b48876 assets/modpack/models/item/ceramic/kaolinite/unfired_sword_blade_mold.json
 4823f93ae268dc2263626ac73cf9c1be174b62ea assets/modpack/models/item/ceramic/kaolinite/unfired_vessel.json
 d228f0a6b3f3194562a606d12ba8e1b63e0e2e19 assets/modpack/models/item/ceramic/kaolinite/vessel.json
+15c01b1a23d98d17b17a793135a14a314167c223 assets/modpack/models/item/ceramic/large_vessel/earthenware.json
+4ac8f2f2aeb2b42c28fffb24fc9117c06a673be9 assets/modpack/models/item/ceramic/large_vessel/kaolinite.json
+768db845870d985c9ecd7cb5707e0d5d9fe328a7 assets/modpack/models/item/ceramic/large_vessel/porcelain.json
+152d6e76f962eebed29f15535e8bc9994990e63a assets/modpack/models/item/ceramic/large_vessel/yellowware.json
+ed7c56d63c872a98a09939190c2584a250e2370f assets/modpack/models/item/ceramic/large_vessel/yixing.json
 2ac7d0a7362c75f416fde91c46097b9ed8d5965e assets/modpack/models/item/ceramic/porcelain/brick.json
 68c44d754fd3ee262c31ac30c14ad92cb3c14b3a assets/modpack/models/item/ceramic/porcelain/clay_ball.json
 5532b1ed744a086db382b388e85a4adef1243b5e assets/modpack/models/item/ceramic/porcelain/unfired_axe_head_mold.json
@@ -129,6 +136,7 @@ d62e4662031bfc5c72b84b7e8655855b01c25de3 assets/modpack/models/item/ceramic/porc
 1608bc3f547ca9ae8b9ade43f7d6e47644361119 assets/modpack/models/item/ceramic/porcelain/unfired_javelin_head_mold.json
 6ad01f901b4a307f204fa6f42be94eca32df6e38 assets/modpack/models/item/ceramic/porcelain/unfired_jug.json
 9c2a053ce9a01d8c8f4da743aa106d292c66f422 assets/modpack/models/item/ceramic/porcelain/unfired_knife_blade_mold.json
+7757eccbf95b5b0b94e6341faa55caba3fd3c589 assets/modpack/models/item/ceramic/porcelain/unfired_large_vessel.json
 1495cbefd7883f002876da17ad59410ce6029ebd assets/modpack/models/item/ceramic/porcelain/unfired_mace_head_mold.json
 15d93561d4a11498b6fffcfe9cf20d420680a264 assets/modpack/models/item/ceramic/porcelain/unfired_pickaxe_head_mold.json
 3b88d4c176756b6a67318b7f193b68ad56238929 assets/modpack/models/item/ceramic/porcelain/unfired_pot.json
@@ -155,6 +163,7 @@ a3dca120d6cee160f2abe14bb2f72c6bb3c02f58 assets/modpack/models/item/ceramic/yell
 e47bee4be9c0e84a82d104f3cfd2ca686de3363d assets/modpack/models/item/ceramic/yellowware/unfired_javelin_head_mold.json
 f671def7c6228284f6d62c6fa8f38d97d9c8df91 assets/modpack/models/item/ceramic/yellowware/unfired_jug.json
 2f6a7b25ae6ea0563677f87551419873e25596b6 assets/modpack/models/item/ceramic/yellowware/unfired_knife_blade_mold.json
+81ae387fa32c0a10263affd1e47e4922ec69ba9c assets/modpack/models/item/ceramic/yellowware/unfired_large_vessel.json
 d57b3b20b5d84dbe647020cf2c7e71a09b5b4b30 assets/modpack/models/item/ceramic/yellowware/unfired_mace_head_mold.json
 2ddadcf06bb9ed31b99ccd282d277c85b157af2a assets/modpack/models/item/ceramic/yellowware/unfired_pickaxe_head_mold.json
 78a53516d133a36af96c4077b0624638b02255d8 assets/modpack/models/item/ceramic/yellowware/unfired_pot.json
@@ -181,6 +190,7 @@ a20d8dca521ffbde24f0e4dbdbe12c91853a22fc assets/modpack/models/item/ceramic/yixi
 34639fe59cebdfce6921c5c710d9ff83af86a949 assets/modpack/models/item/ceramic/yixing/unfired_javelin_head_mold.json
 80e443a0bb56e49e622d28ff918fae8817727fd1 assets/modpack/models/item/ceramic/yixing/unfired_jug.json
 1eb5785c30ca853a0641cfdb213c308f536b4625 assets/modpack/models/item/ceramic/yixing/unfired_knife_blade_mold.json
+5c185aaff43ff6f79ff94d89c24d8f795e2c1aa4 assets/modpack/models/item/ceramic/yixing/unfired_large_vessel.json
 ee83f813b49d8fb768db04701c712ea6f107e2cf assets/modpack/models/item/ceramic/yixing/unfired_mace_head_mold.json
 186d279dabd98acaf468f4cf8a7e4429595dc3be assets/modpack/models/item/ceramic/yixing/unfired_pickaxe_head_mold.json
 6becf458511e7523ed556ead7e62169a01502f4f assets/modpack/models/item/ceramic/yixing/unfired_pot.json

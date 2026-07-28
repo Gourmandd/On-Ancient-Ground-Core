@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-18T11:52:02.977713069	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-07-28T12:31:58.818619468	Tags for minecraft:block mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/block/boards.json
 ff9b997efca1803dd84c8edf5041c872552abec4 data/c/tags/block/cobblestones.json
 8ab0167fc08d0663346e6a1b8aa95ba1787c8da5 data/c/tags/block/cobblestones/mossy.json
@@ -16,7 +16,7 @@ cd61a20ef02541d9d2d3257324508326d4407777 data/c/tags/block/stones/spike.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
 1a007c2a72795a317b151d75841ee9e61b5e039f data/minecraft/tags/block/mineable/axe.json
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/minecraft/tags/block/mineable/hoe.json
-beb6405aeb8c191fdb63c5b708f50ea614352c78 data/minecraft/tags/block/mineable/pickaxe.json
+d35f302f537a08b26606811f6a56665d5de004e2 data/minecraft/tags/block/mineable/pickaxe.json
 0625838a8cf05ab70beecc9d7d990e1c634110f7 data/minecraft/tags/block/mineable/shovel.json
 5a224960f8e52d528d1ea86d885c5a850db3b1e2 data/minecraft/tags/block/needs_diamond_tool.json
 ceda0be95830e7a7e6f4e9c9726d12706e8c5ca0 data/minecraft/tags/block/needs_iron_tool.json
@@ -50,6 +50,7 @@ b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/halophyte_plantable
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/tfc/tags/block/mineable/hoe.json
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/tfc/tags/block/mineable/knife.json
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/tfc/tags/block/mineable/scythe.json
+74acf2b5358515978fa3e2f17f2637288648a99d data/tfc/tags/block/pet_sits_on.json
 9e6242da30b96a109feb152eb9ff658c24059b2d data/tfc/tags/block/prospectable.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/sea_bush_plantable_on.json
 98548d218f2823032aa12a4a80260591cef9b1ad data/tfc/tags/block/support_beams.json

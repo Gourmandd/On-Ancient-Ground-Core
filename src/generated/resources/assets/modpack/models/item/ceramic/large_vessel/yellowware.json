@@ -1,0 +1,11 @@
+{
+  "parent": "modpack:block/ceramic/large_vessel/yellowware_opened",
+  "overrides": [
+    {
+      "model": "modpack:block/ceramic/large_vessel/yellowware_sealed",
+      "predicate": {
+        "tfc:sealed": 1.0
+      }
+    }
+  ]
+}

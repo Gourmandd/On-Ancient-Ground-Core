@@ -43,6 +43,7 @@ public class AncientGroundCore {
         modEventBus.addListener(CoreItemCapabilities::register);
         modEventBus.addListener(DataEntryPoint::gatherData);
         modEventBus.addListener(PacketSetup::setup);
+        modEventBus.addListener(ServerEventHandler::addToBlockEntities);
 
         CoreBlocks.BLOCKS.register(modEventBus);
         CoreItems.ITEMS.register(modEventBus);

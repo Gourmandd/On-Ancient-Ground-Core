@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/ceramic/large_vessel_opened",
+  "textures": {
+    "bottom": "modpack:block/ceramic/large_vessel/yixing/bottom",
+    "particle": "modpack:block/ceramic/large_vessel/yixing/side",
+    "side": "modpack:block/ceramic/large_vessel/yixing/side"
+  }
+}

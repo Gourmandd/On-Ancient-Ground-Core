@@ -379,11 +379,15 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
             Stream.of(CoreClay.BlockType.values()).forEach(type -> {
 
                 if (type.hasClayType(clay)){
+
                     if (type == CoreClay.BlockType.CLAY_BLOCK){
                         this.add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), LootTableBuilders.createClayBlockTable(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.CLAY_BALL).get()));
+                    } else if (type == CoreClay.BlockType.LARGE_VESSEL) {
+                        this.add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), LootTableBuilders.createLargeVesselBlockTable(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get()));
                     } else {
                         this.dropSelf(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get());
                     }
+
                 }
 
                 if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){

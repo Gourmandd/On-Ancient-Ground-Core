@@ -2,10 +2,7 @@ package net.gourmand.core.datagen.providers;
 
 import com.google.common.collect.ImmutableMap;
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blocks.GroundcoverBlockType;
-import net.dries007.tfc.common.blocks.OreDeposit;
-import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
-import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.crop.DeadCropBlock;
 import net.dries007.tfc.common.blocks.crop.DeadDoubleCropBlock;
 import net.dries007.tfc.common.blocks.crop.WildCropBlock;
@@ -16,6 +13,7 @@ import net.dries007.tfc.common.blocks.rock.LooseRockBlock;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.component.TFCComponents;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.loot.CropYieldProvider;
 import net.dries007.tfc.util.loot.IsIsolatedCondition;
@@ -27,6 +25,7 @@ import net.gourmand.core.registry.blocks.CoreDoubleCropBlock;
 import net.gourmand.core.registry.category.*;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -35,6 +34,7 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
@@ -371,6 +371,19 @@ public class LootTableBuilders {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(item)).apply(SetItemCountFunction.setCount(new UniformGenerator(ConstantValue.exactly(2), ConstantValue.exactly(4))))
+                );
+    }
+
+    protected static LootTable.Builder createLargeVesselBlockTable(Block block){
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
+                        .add(AlternativesEntry.alternatives(
+                                LootItem.lootTableItem(block)
+                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LargeVesselBlock.SEALED, true))
+                                        ).apply(CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY).include(DataComponents.CUSTOM_NAME).include(TFCComponents.CONTENTS.get())),
+                                LootItem.lootTableItem(block.asItem())
+                        ))
                 );
     }
 

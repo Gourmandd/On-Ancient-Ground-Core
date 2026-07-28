@@ -165,6 +165,11 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             this.tag(TFCTags.Items.FLUID_ITEM_INGREDIENT_EMPTY_CONTAINERS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).getKey());
             this.tag(UPRIGHT_ON_BELT).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).getKey());
 
+            this.tag(TFCTags.Items.LARGE_VESSELS)
+                    .add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey())
+                    .add(getKey(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL)));
+            this.tag(TFCTags.Items.FIRED_VESSELS).add(getKey(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL)));
+            this.tag(TFCTags.Items.UNFIRED_LARGE_VESSELS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey());
 
             this.tag(CoreTags.Items.CLAY_RECYCLING_5.get(clay)).add(
                     CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey(),
@@ -191,7 +196,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                     CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_POT).getKey(),
                     CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).getKey(),
                     CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_PAN).getKey(),
-                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).getKey()
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).getKey(),
+                    CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey()
             );
 
             if (!clay.hasReducedSet()){
@@ -444,7 +450,7 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         for (DeferredHolder<Block, ?> block : map.values()){
             for (TagKey<Item> tag : tags){
                 this.tag(tag).add(getKey(block));
-            };
+            }
         }
     }
 
@@ -454,11 +460,11 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 
     protected ResourceKey<Item> getKey(Block block){
         return block.asItem().builtInRegistryHolder().key();
-    };
+    }
 
     protected ResourceKey<Item> getKey(Item item){
         return item.builtInRegistryHolder().key();
-    };
+    }
 
     private <T1 extends RegistryRock, T2> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock){
         DeferredHolder<Block, Block> block = map.get(rock).get(ore);

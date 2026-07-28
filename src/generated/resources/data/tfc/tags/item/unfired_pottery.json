@@ -9,6 +9,7 @@
     "modpack:ceramic/yixing/unfired_spindle_head",
     "modpack:ceramic/yixing/unfired_pan",
     "modpack:ceramic/yixing/unfired_blowpipe",
+    "modpack:ceramic/yixing/unfired_large_vessel",
     "modpack:ceramic/yellowware/unfired_brick",
     "modpack:ceramic/yellowware/unfired_bowl",
     "modpack:ceramic/yellowware/unfired_flower_pot",
@@ -18,6 +19,7 @@
     "modpack:ceramic/yellowware/unfired_spindle_head",
     "modpack:ceramic/yellowware/unfired_pan",
     "modpack:ceramic/yellowware/unfired_blowpipe",
+    "modpack:ceramic/yellowware/unfired_large_vessel",
     "modpack:ceramic/porcelain/unfired_brick",
     "modpack:ceramic/porcelain/unfired_bowl",
     "modpack:ceramic/porcelain/unfired_flower_pot",
@@ -27,6 +29,7 @@
     "modpack:ceramic/porcelain/unfired_spindle_head",
     "modpack:ceramic/porcelain/unfired_pan",
     "modpack:ceramic/porcelain/unfired_blowpipe",
+    "modpack:ceramic/porcelain/unfired_large_vessel",
     "modpack:ceramic/kaolinite/unfired_brick",
     "modpack:ceramic/kaolinite/unfired_bowl",
     "modpack:ceramic/kaolinite/unfired_flower_pot",
@@ -36,6 +39,7 @@
     "modpack:ceramic/kaolinite/unfired_spindle_head",
     "modpack:ceramic/kaolinite/unfired_pan",
     "modpack:ceramic/kaolinite/unfired_blowpipe",
+    "modpack:ceramic/kaolinite/unfired_large_vessel",
     "modpack:ceramic/earthenware/unfired_brick",
     "modpack:ceramic/earthenware/unfired_bowl",
     "modpack:ceramic/earthenware/unfired_flower_pot",
@@ -44,6 +48,7 @@
     "modpack:ceramic/earthenware/unfired_pot",
     "modpack:ceramic/earthenware/unfired_spindle_head",
     "modpack:ceramic/earthenware/unfired_pan",
-    "modpack:ceramic/earthenware/unfired_blowpipe"
+    "modpack:ceramic/earthenware/unfired_blowpipe",
+    "modpack:ceramic/earthenware/unfired_large_vessel"
   ]
 }

@@ -353,6 +353,11 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                 this.tag(BlockTags.STAIRS)
                         .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).stair().getKey());
             }
+
+            if (CoreClay.BlockType.LARGE_VESSEL.hasClayType(clay)){
+                this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL).getKey());
+                this.tag(TFCTags.Blocks.PET_SITS_ON).add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL).getKey());
+            }
         });
 
         /*

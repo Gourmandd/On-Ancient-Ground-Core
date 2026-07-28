@@ -81,6 +81,7 @@ public interface HeatingRecipes extends Recipes {
             add(MAP.get(CoreClay.ItemType.UNFIRED_BRICK).get(), MAP.get(CoreClay.ItemType.BRICK).get(), 1399);
             add(MAP.get(CoreClay.ItemType.UNFIRED_VESSEL).get(), MAP.get(CoreClay.ItemType.VESSEL).get(), 1399);
             add(MAP.get(CoreClay.ItemType.UNFIRED_JUG).get(), MAP.get(CoreClay.ItemType.JUG).get(), 1399);
+            add(MAP.get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).get(), CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL).get().asItem(), 1399);
 
             Stream.of(CoreClay.ItemType.values()).forEach(itemType -> {
 

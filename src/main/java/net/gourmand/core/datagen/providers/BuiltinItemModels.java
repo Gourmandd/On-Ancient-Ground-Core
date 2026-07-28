@@ -147,7 +147,12 @@ public class BuiltinItemModels extends ItemModelProvider {
                     simpleItem(CoreItems.CERAMICS.get(clay).get(type).get(), getItemModelLocation(CoreItems.CERAMICS.get(clay).get(type).getId()));
                 }
                 if (!(type == CoreClay.ItemType.UNFIRED_PAN || type == CoreClay.ItemType.JUG || type == CoreClay.ItemType.CLAY_BALL)) {
-                    simpleItem(CoreItems.CERAMICS.get(clay).get(type).get(), getItemModelLocation(CoreItems.CERAMICS.get(clay).get(type).getId()));
+                    if (type == CoreClay.ItemType.UNFIRED_LARGE_VESSEL){
+                        DeferredHolder<Block, Block> block = CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL);
+                        withExistingParent(getItemModelString(CoreItems.CERAMICS.get(clay).get(type).getId()), getBlockModelString(block.getId()) + "_item");
+                    } else {
+                        simpleItem(CoreItems.CERAMICS.get(clay).get(type).get(), getItemModelLocation(CoreItems.CERAMICS.get(clay).get(type).getId()));
+                    }
                 }
             });
         });
@@ -198,18 +203,30 @@ public class BuiltinItemModels extends ItemModelProvider {
 
         CoreBlocks.MORTARED_CUSTOM_COBBLE.values().forEach(this::simpleBlock);
 
-
         Stream.of(CoreClay.values()).forEach(clay -> {
             Stream.of(CoreClay.BlockType.values()).forEach(type -> {
 
-                if (type.hasClayType(clay)){
+                if (type.hasClayType(clay) && type.getType() != CoreClay.BlockPartType.VESSEL) {
                     simpleBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type));
                 }
 
-                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
+                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET) {
                     simpleBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair());
                     simpleBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab());
                     wallInventory(getItemModelString(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall().getId()), TextureUtil.getCeramicBlockTexture(type, clay));
+                }
+
+                if (type.getType() == CoreClay.BlockPartType.VESSEL) {
+                    DeferredHolder<Block, Block> block = CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type);
+
+                    ResourceLocation locationOpened = ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), block.getId().getPath() + "_opened");
+                    ResourceLocation locationSealed = ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), block.getId().getPath() + "_sealed");
+
+                    ModelFile modelSealed = new ModelFile.ExistingModelFile(getBlockModelLocation(locationSealed), existingFileHelper);
+
+                    withExistingParent(getItemModelString(block.getId()), getBlockModelLocation(locationOpened)).override()
+                            .predicate(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "sealed"), 1.0f)
+                            .model(modelSealed);
                 }
             });
         });

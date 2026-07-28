@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/ceramic/large_vessel_sealed",
+  "textures": {
+    "bottom": "modpack:block/ceramic/large_vessel/kaolinite/bottom",
+    "particle": "modpack:block/ceramic/large_vessel/kaolinite/side",
+    "side": "modpack:block/ceramic/large_vessel/kaolinite/side",
+    "top": "modpack:block/ceramic/large_vessel/kaolinite/top"
+  }
+}

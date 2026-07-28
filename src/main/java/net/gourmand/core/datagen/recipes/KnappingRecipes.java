@@ -35,6 +35,7 @@ public interface KnappingRecipes extends Recipes {
             clayKnapping(clayType, CoreClay.ItemType.UNFIRED_PAN, 1, "X   X", "XXXXX", " XXX ");
             clayKnapping(clayType, CoreClay.ItemType.UNFIRED_BLOWPIPE, 1, " X X ", " X X ", " XXX ", " XXX ", " XXX ");
             clayKnapping(clayType, CoreClay.ItemType.UNFIRED_BRICK, 3, "XXXXX", "     ", "XXXXX", "     ", "XXXXX");
+            clayKnapping(clayType, CoreClay.ItemType.UNFIRED_LARGE_VESSEL, 1, "X   X", "X   X", "X   X", "X   X", "XXXXX");
 
             clayKnapping(clayType, CoreClay.ItemType.INGOT, "XXXX", "X  X", "X  X", "X  X", "XXXX");
             clayKnapping(clayType, CoreClay.ItemType.AXE_HEAD, "X XXX", "    X", "     ", "    X", "X XXX");
