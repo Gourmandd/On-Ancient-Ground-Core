@@ -14,11 +14,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gabbro"
+          "tfc:rock/raw/diorite"
         ],
         "with": [
           {
-            "block": "tfc:ore/emerald/gabbro"
+            "block": "tfc:ore/emerald/diorite"
           }
         ]
       },
@@ -34,11 +34,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/diorite"
+          "tfc:rock/raw/gabbro"
         ],
         "with": [
           {
-            "block": "tfc:ore/emerald/diorite"
+            "block": "tfc:ore/emerald/gabbro"
           }
         ]
       }

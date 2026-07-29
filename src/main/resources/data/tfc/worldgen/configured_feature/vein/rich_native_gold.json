@@ -4,25 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_native_gold/peridotite",
-            "weight": 15.0
-          },
-          {
-            "block": "modpack:ore/normal_native_gold/peridotite",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/rich_native_gold/peridotite",
-            "weight": 60.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/diorite"
         ],
         "with": [
@@ -55,6 +36,25 @@
           },
           {
             "block": "tfc:ore/rich_native_gold/gabbro",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_native_gold/peridotite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_native_gold/peridotite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/rich_native_gold/peridotite",
             "weight": 60.0
           }
         ]

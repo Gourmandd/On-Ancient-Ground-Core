@@ -4,31 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/claystone"
+          "tfc:rock/raw/chalk"
         ],
         "with": [
           {
-            "block": "tfc:ore/saltpeter/claystone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/saltpeter/sandstone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/saltpeter/chert"
+            "block": "tfc:ore/saltpeter/chalk"
           }
         ]
       },
@@ -44,61 +24,21 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/conglomerate"
+          "minecraft:smooth_basalt"
         ],
         "with": [
           {
-            "block": "tfc:ore/saltpeter/conglomerate"
+            "block": "minecraft:dirt"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/limestone"
+          "tfc:rock/raw/chert"
         ],
         "with": [
           {
-            "block": "tfc:ore/saltpeter/limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/tuff"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/saltpeter/tuff"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/saltpeter/shale"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/saltpeter/travertine"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/saltpeter/breccia"
+            "block": "tfc:ore/saltpeter/chert"
           }
         ]
       },
@@ -114,11 +54,71 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/tuff"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/saltpeter/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
           "minecraft:stone"
         ],
         "with": [
           {
             "block": "modpack:ore/saltpeter/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/saltpeter/breccia"
           }
         ]
       },
@@ -134,11 +134,31 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/chalk"
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
-            "block": "tfc:ore/saltpeter/chalk"
+            "block": "tfc:ore/saltpeter/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/saltpeter/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/shale"
           }
         ]
       }

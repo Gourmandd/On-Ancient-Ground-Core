@@ -4,21 +4,21 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/stratine/marble"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/slate"
         ],
         "with": [
           {
             "block": "modpack:ore/stratine/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/blueschist"
           }
         ]
       },
@@ -34,16 +34,6 @@
       },
       {
         "replace": [
-          "create:scorchia"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/stratine/suevite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/phyllite"
         ],
         "with": [
@@ -54,21 +44,41 @@
       },
       {
         "replace": [
-          "create:limestone"
+          "tfc:rock/raw/marble"
         ],
         "with": [
           {
-            "block": "modpack:ore/stratine/soapstone"
+            "block": "modpack:ore/stratine/marble"
           }
         ]
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
+          "create:scorchia"
         ],
         "with": [
           {
-            "block": "modpack:ore/stratine/blueschist"
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:calcite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/schist"
           }
         ]
       },
@@ -89,16 +99,6 @@
         "with": [
           {
             "block": "modpack:ore/stratine/quartzite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/stratine/schist"
           }
         ]
       }

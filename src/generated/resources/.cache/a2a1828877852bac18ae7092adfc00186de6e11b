@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-29T09:36:55.36614236	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-07-29T10:51:40.194606561	Tags for minecraft:item mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/item/boards.json
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
@@ -15,12 +15,12 @@ a7da8ab1fb04f5e9451e5d968de4f3687397fdc0 data/c/tags/item/do_not_use_in_recipes/
 030b6871b73e2fcbd87229da092b3867bb71130a data/c/tags/item/do_not_use_in_recipes/ore/cassiterite.json
 4a1d56d968895d29c20d487ecc8b360326bc7a44 data/c/tags/item/do_not_use_in_recipes/ore/cinnabar.json
 40162c31d31cfc4a913ad1f52b38946445b3319e data/c/tags/item/do_not_use_in_recipes/ore/cryolite.json
-27f9c5b80f4c3eed5e0a8d07a3fdb577504ccf9b data/c/tags/item/do_not_use_in_recipes/ore/diamond.json
+65db766e3d99477260f10b5c574b49895175c34b data/c/tags/item/do_not_use_in_recipes/ore/diamond.json
 db57f9b303295a9d153ac948a26d4ce6b0d376e5 data/c/tags/item/do_not_use_in_recipes/ore/emerald.json
 02ea2b70b4de1295aebb7e4a99ba99b6a82314f4 data/c/tags/item/do_not_use_in_recipes/ore/galena.json
 0a0695874d8c94818f6489ee9d64979089e7912d data/c/tags/item/do_not_use_in_recipes/ore/garnierite.json
 7e640026b4475e94cc6928dacb221f05ded3a4f5 data/c/tags/item/do_not_use_in_recipes/ore/graphite.json
-10768ab378c5dd821bd466c5317fc102886fbeec data/c/tags/item/do_not_use_in_recipes/ore/gypsum.json
+9c5fb5b033d0a790a9ee0489ba08d4ba4f94bb30 data/c/tags/item/do_not_use_in_recipes/ore/gypsum.json
 120f16612bf75b0685bb1798a61a6c57321aa355 data/c/tags/item/do_not_use_in_recipes/ore/halite.json
 0c392c15d09ad65382ab81f9c9399bcbca2d9709 data/c/tags/item/do_not_use_in_recipes/ore/hematite.json
 4a9fc5efaed50a9742cd1c43a25bcdb54ae32473 data/c/tags/item/do_not_use_in_recipes/ore/lapis_lazuli.json
@@ -69,7 +69,7 @@ aa52434093064b6b0d04e6e3829f5079e3766b71 data/c/tags/item/ingots/electrum.json
 07435c5f2e06079d489ef62195e4f362ff2fff2b data/c/tags/item/ingots/hardened_steel.json
 7298f242b83bc97a16e46481dab701848374cd6e data/c/tags/item/ingots/lead.json
 e43dd5d410c754631909b23e097406e75a7bf7d2 data/c/tags/item/ingots/nethersteel.json
-9e6242da30b96a109feb152eb9ff658c24059b2d data/c/tags/item/ores.json
+6bae25d2aaa860af78ecc329f41ad7adc1dca303 data/c/tags/item/ores.json
 70154efbdbdd233bd0f7c14a298d868d23c6a1e1 data/c/tags/item/rods.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/c/tags/item/rods/wooden.json
 5a6ec5d759b0b9ba9aa5b5e5be4bfd19e87b547a data/c/tags/item/sheets.json
@@ -124,8 +124,8 @@ d8aeb7183a6c0a6a35c9e9e0395d7b82468257d1 data/modpack/tags/item/tool_heads/scyth
 2803108596765aa3ad89f7db097cd48c774490b0 data/modpack/tags/item/tool_heads/shovel_head.json
 f64dbebaf0f360a39de6bc8ccee6d98df1898296 data/modpack/tags/item/tool_heads/sword_blade.json
 e61065746a3f695534c29455001f21b7fad47afa data/modpack/tags/item/unfired_vessels.json
-01088407841a5237bfb19ad8f6212a3ceb45da4f data/spectrum/tags/item/azurite_ores.json
-74f54973095d6dcf2f17901d14fcfa01ddaf5aed data/spectrum/tags/item/shimmerstone_ores.json
+c7fdbdafdb5cb139aa15f6d41ab6d943067c8403 data/spectrum/tags/item/azurite_ores.json
+3fecf3f816e05e08ac0e9c9bfadabcd64fe10f61 data/spectrum/tags/item/shimmerstone_ores.json
 2860e2b2596b19e1464dfcf80309f988a742c446 data/tfc/tags/item/aqueducts.json
 18b8d6b626aba278d978db614ff8382409de1209 data/tfc/tags/item/barrels.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/can_be_lit_on_torch.json
@@ -135,7 +135,7 @@ a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/can_be_lit_on_torch.
 df0a75d46911aae0147d30a3849d1a2dbf21c508 data/tfc/tags/item/looms.json
 62e6e1ed83fa606df559dd925f5cfe552f64afba data/tfc/tags/item/lumber.json
 18b8d6b626aba278d978db614ff8382409de1209 data/tfc/tags/item/minecart_holdable.json
-9b42d69576354582feaa42e2b11e5983ebee9f3e data/tfc/tags/item/ore_deposits.json
+0eb787d66df8525776894c27eb5e481a364dccde data/tfc/tags/item/ore_deposits.json
 19794141ae28f9266f50b60c1ce235367edde4fa data/tfc/tags/item/scribing_tables.json
 c5dac1fb2f237e8f98f11087d4b608c891623734 data/tfc/tags/item/sewing_tables.json
 d0cd34c4f53db7339b1630cccf4780ca8209550f data/tfc/tags/item/sluices.json

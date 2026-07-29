@@ -4,6 +4,120 @@
     "blocks": [
       {
         "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_native_gold/gabbro",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_native_gold/gabbro",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/gabbro",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_native_gold/phonolite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_native_gold/phonolite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_native_gold/phonolite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_native_gold/granite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_native_gold/granite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/granite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_native_gold/picrite_basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_native_gold/picrite_basalt",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_native_gold/picrite_basalt",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_native_gold/rhyolite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_native_gold/rhyolite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/rhyolite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_native_gold/diorite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_native_gold/diorite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/diorite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "modpack:rock/raw/peridotite"
         ],
         "with": [
@@ -42,152 +156,19 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
+          "minecraft:deepslate"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_native_gold/rhyolite",
+            "block": "modpack:ore/rich_native_gold/nephelinite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_native_gold/rhyolite",
+            "block": "modpack:ore/poor_native_gold/nephelinite",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_native_gold/rhyolite",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_native_gold/blackslag",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_native_gold/blackslag",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_native_gold/blackslag",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_native_gold/basalt",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_native_gold/basalt",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_native_gold/basalt",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_native_gold/dacite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_native_gold/dacite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_native_gold/dacite",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_native_gold/phonolite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_native_gold/phonolite",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_native_gold/phonolite",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/diorite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_native_gold/diorite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_native_gold/diorite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_native_gold/diorite",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_native_gold/picrite_basalt",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_native_gold/picrite_basalt",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_native_gold/picrite_basalt",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_native_gold/gabbro",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_native_gold/gabbro",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_native_gold/gabbro",
+            "block": "modpack:ore/normal_native_gold/nephelinite",
             "weight": 40.0
           }
         ]
@@ -213,38 +194,57 @@
       },
       {
         "replace": [
-          "minecraft:deepslate"
+          "tfc:rock/raw/dacite"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_native_gold/nephelinite",
+            "block": "tfc:ore/rich_native_gold/dacite",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_native_gold/nephelinite",
+            "block": "tfc:ore/poor_native_gold/dacite",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_native_gold/nephelinite",
+            "block": "tfc:ore/normal_native_gold/dacite",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/granite"
+          "tfc:rock/raw/basalt"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_native_gold/granite",
+            "block": "tfc:ore/rich_native_gold/basalt",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_native_gold/granite",
+            "block": "tfc:ore/poor_native_gold/basalt",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_native_gold/granite",
+            "block": "tfc:ore/normal_native_gold/basalt",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_native_gold/blackslag",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_native_gold/blackslag",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_native_gold/blackslag",
             "weight": 40.0
           }
         ]

@@ -127,28 +127,12 @@
         "with": "modpack:deposit/native_copper/red_sandstone"
       },
       {
-        "replace": "create:scorchia",
-        "with": "modpack:deposit/native_copper/suevite"
-      },
-      {
         "replace": "quark:shale",
         "with": "modpack:deposit/native_copper/phonolite"
       },
       {
         "replace": "quark:limestone",
         "with": "modpack:deposit/native_copper/arkose"
-      },
-      {
-        "replace": "minecraft:calcite",
-        "with": "modpack:deposit/native_copper/soapstone"
-      },
-      {
-        "replace": "minecraft:smooth_basalt",
-        "with": "modpack:deposit/native_copper/greywacke"
-      },
-      {
-        "replace": "create:limestone",
-        "with": "modpack:deposit/native_copper/marlstone"
       },
       {
         "replace": "modpack:rock/raw/blueschist",

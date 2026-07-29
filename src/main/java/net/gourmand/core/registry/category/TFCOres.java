@@ -105,10 +105,12 @@ public enum TFCOres implements RegistryOre {
         }
 
         if (rock instanceof CoreRocks){
-            if (grade == null){
-                return CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(this.TFCOre).get();
-            } else {
-                return CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(this.TFCOre).get(grade).get();
+            if (((CoreRocks) rock).hasOres()){
+                if (grade == null){
+                    return CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(this.TFCOre).get();
+                } else {
+                    return CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(this.TFCOre).get(grade).get();
+                }
             }
         }
 

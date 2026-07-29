@@ -4,25 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_magnetite/conglomerate",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_magnetite/conglomerate",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_magnetite/conglomerate",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/tuff"
         ],
         "with": [
@@ -36,6 +17,25 @@
           },
           {
             "block": "tfc:ore/normal_magnetite/tuff",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_magnetite/shale",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_magnetite/shale",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/shale",
             "weight": 40.0
           }
         ]
@@ -61,25 +61,6 @@
       },
       {
         "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_magnetite/arkose",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_magnetite/arkose",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_magnetite/arkose",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/dolomite"
         ],
         "with": [
@@ -99,19 +80,57 @@
       },
       {
         "replace": [
-          "minecraft:stone"
+          "quark:limestone"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_magnetite/argillite",
+            "block": "modpack:ore/rich_magnetite/arkose",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_magnetite/argillite",
+            "block": "modpack:ore/poor_magnetite/arkose",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_magnetite/argillite",
+            "block": "modpack:ore/normal_magnetite/arkose",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_magnetite/chalk",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_magnetite/chalk",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/chalk",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_magnetite/sandstone",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_magnetite/sandstone",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_magnetite/sandstone",
             "weight": 40.0
           }
         ]
@@ -175,38 +194,76 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/chalk"
+          "minecraft:stone"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_magnetite/chalk",
+            "block": "modpack:ore/rich_magnetite/argillite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_magnetite/chalk",
+            "block": "modpack:ore/poor_magnetite/argillite",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_magnetite/chalk",
+            "block": "modpack:ore/normal_magnetite/argillite",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/shale"
+          "create:limestone"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_magnetite/shale",
+            "block": "minecraft:dirt",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_magnetite/shale",
+            "block": "minecraft:dirt",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_magnetite/shale",
+            "block": "minecraft:dirt",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_magnetite/conglomerate",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_magnetite/conglomerate",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/conglomerate",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:smooth_basalt"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt",
+            "weight": 25.0
+          },
+          {
+            "block": "minecraft:dirt",
+            "weight": 35.0
+          },
+          {
+            "block": "minecraft:dirt",
             "weight": 40.0
           }
         ]
@@ -226,25 +283,6 @@
           },
           {
             "block": "modpack:ore/normal_magnetite/red_sandstone",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_magnetite/sandstone",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_magnetite/sandstone",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_magnetite/sandstone",
             "weight": 40.0
           }
         ]

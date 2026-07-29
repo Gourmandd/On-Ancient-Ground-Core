@@ -4,6 +4,36 @@
     "blocks": [
       {
         "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/pyrite/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/pyrite/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "spectrum:blackslag"
         ],
         "with": [
@@ -14,41 +44,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/pyrite/basalt"
-          }
-        ]
-      },
-      {
-        "replace": [
           "minecraft:deepslate"
         ],
         "with": [
           {
             "block": "modpack:ore/pyrite/nephelinite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/pyrite/gabbro"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/pyrite/andesite"
           }
         ]
       },
@@ -74,11 +74,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/diorite"
+          "tfc:rock/raw/gabbro"
         ],
         "with": [
           {
-            "block": "tfc:ore/pyrite/diorite"
+            "block": "tfc:ore/pyrite/gabbro"
           }
         ]
       },
@@ -94,21 +94,21 @@
       },
       {
         "replace": [
-          "create:scoria"
+          "tfc:rock/raw/andesite"
         ],
         "with": [
           {
-            "block": "modpack:ore/pyrite/komatiite"
+            "block": "tfc:ore/pyrite/andesite"
           }
         ]
       },
       {
         "replace": [
-          "quark:shale"
+          "tfc:rock/raw/basalt"
         ],
         "with": [
           {
-            "block": "modpack:ore/pyrite/phonolite"
+            "block": "tfc:ore/pyrite/basalt"
           }
         ]
       },
@@ -124,11 +124,11 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
+          "create:scoria"
         ],
         "with": [
           {
-            "block": "modpack:ore/pyrite/peridotite"
+            "block": "modpack:ore/pyrite/komatiite"
           }
         ]
       }

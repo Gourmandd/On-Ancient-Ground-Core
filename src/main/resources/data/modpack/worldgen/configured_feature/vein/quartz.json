@@ -4,16 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/dacite"
         ],
         "with": [
@@ -35,6 +25,16 @@
       {
         "replace": [
           "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
         ],
         "with": [
           {

@@ -4,36 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/blackslag"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:deepslate"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/nephelinite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/picrite_basalt"
-          }
-        ]
-      },
-      {
-        "replace": [
           "create:scoria"
         ],
         "with": [
@@ -54,21 +24,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/andesite"
+          "spectrum:blackslag"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/andesite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/dacite"
+            "block": "modpack:ore/shimmerstone/blackslag"
           }
         ]
       },
@@ -84,11 +44,51 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "quark:shale"
         ],
         "with": [
           {
             "block": "modpack:ore/shimmerstone/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/picrite_basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/nephelinite"
           }
         ]
       }

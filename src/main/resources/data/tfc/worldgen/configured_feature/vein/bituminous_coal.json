@@ -4,7 +4,7 @@
     "blocks": [
       {
         "replace": [
-          "caupona:felsic_tuff"
+          "create:ochrum"
         ],
         "with": [
           {
@@ -14,7 +14,7 @@
       },
       {
         "replace": [
-          "minecraft:stone"
+          "tfc:rock/raw/claystone"
         ],
         "with": [
           {
@@ -24,7 +24,27 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/conglomerate"
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:bituminous_coal"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:bituminous_coal"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
         ],
         "with": [
           {
@@ -54,7 +74,37 @@
       },
       {
         "replace": [
-          "create:ochrum"
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "tfc:bituminous_coal"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:bituminous_coal"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:bituminous_coal"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:smooth_basalt"
         ],
         "with": [
           {
@@ -74,47 +124,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/claystone"
-        ],
-        "with": [
-          {
-            "block": "tfc:bituminous_coal"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:bituminous_coal"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "tfc:bituminous_coal"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
-        ],
-        "with": [
-          {
-            "block": "tfc:bituminous_coal"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
+          "minecraft:stone"
         ],
         "with": [
           {
@@ -125,6 +135,16 @@
       {
         "replace": [
           "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:bituminous_coal"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
         ],
         "with": [
           {

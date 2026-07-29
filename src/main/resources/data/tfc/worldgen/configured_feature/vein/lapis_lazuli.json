@@ -14,11 +14,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/marble"
+          "quark:jasper"
         ],
         "with": [
           {
-            "block": "tfc:ore/lapis_lazuli/marble"
+            "block": "modpack:ore/lapis_lazuli/red_sandstone"
           }
         ]
       },
@@ -44,11 +44,11 @@
       },
       {
         "replace": [
-          "quark:jasper"
+          "tfc:rock/raw/marble"
         ],
         "with": [
           {
-            "block": "modpack:ore/lapis_lazuli/red_sandstone"
+            "block": "tfc:ore/lapis_lazuli/marble"
           }
         ]
       }

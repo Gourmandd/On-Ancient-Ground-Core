@@ -4,25 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_hematite/granite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_hematite/granite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_hematite/granite",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/gabbro"
         ],
         "with": [
@@ -42,19 +23,19 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
+          "tfc:rock/raw/granite"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_hematite/peridotite",
+            "block": "tfc:ore/rich_hematite/granite",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_hematite/peridotite",
+            "block": "tfc:ore/poor_hematite/granite",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_hematite/peridotite",
+            "block": "tfc:ore/normal_hematite/granite",
             "weight": 40.0
           }
         ]
@@ -74,6 +55,25 @@
           },
           {
             "block": "tfc:ore/normal_hematite/diorite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_hematite/peridotite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_hematite/peridotite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_hematite/peridotite",
             "weight": 40.0
           }
         ]

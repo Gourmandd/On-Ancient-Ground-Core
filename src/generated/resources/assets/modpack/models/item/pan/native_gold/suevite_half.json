@@ -1,6 +1,0 @@
-{
-  "parent": "tfc:item/pan/half",
-  "textures": {
-    "material": "modpack:block/rock/gravel/suevite"
-  }
-}

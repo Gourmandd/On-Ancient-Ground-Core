@@ -26,7 +26,9 @@ public class BuiltinDepositLootTables implements LootTableSubProvider {
     public void generate(@NotNull BiConsumer<ResourceKey<LootTable>, LootTable.Builder> output) {
         for (OreDeposit ore : OreDeposit.values()){
             for (CoreRocks rock : CoreRocks.values()){
-                add(rock, ore, LootTableBuilders.createDepositPanningTable(ore, rock), output);
+                if (rock.hasOres()) {
+                    add(rock, ore, LootTableBuilders.createDepositPanningTable(ore, rock), output);
+                }
             }
         }
     }

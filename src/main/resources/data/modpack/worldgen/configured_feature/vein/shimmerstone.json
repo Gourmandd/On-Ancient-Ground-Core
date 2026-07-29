@@ -4,91 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/arkose"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/shale"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/conglomerate"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/red_sandstone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/breccia"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/argillite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/chert"
         ],
         "with": [
           {
             "block": "modpack:ore/shimmerstone/chert"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/chalk"
           }
         ]
       },
@@ -104,6 +24,86 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/tuff"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:smooth_basalt"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/argillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
           "minecraft:dripstone_block"
         ],
         "with": [
@@ -114,11 +114,21 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/tuff"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/tuff"
+            "block": "modpack:ore/shimmerstone/breccia"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
           }
         ]
       },
@@ -134,11 +144,21 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/dolomite"
+          "tfc:rock/raw/conglomerate"
         ],
         "with": [
           {
-            "block": "modpack:ore/shimmerstone/dolomite"
+            "block": "modpack:ore/shimmerstone/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/shale"
           }
         ]
       }

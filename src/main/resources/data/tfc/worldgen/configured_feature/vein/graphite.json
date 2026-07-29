@@ -4,31 +4,21 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/graphite/quartzite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/graphite/gneiss"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/marble"
         ],
         "with": [
           {
             "block": "tfc:ore/graphite/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/graphite/serpentine"
           }
         ]
       },
@@ -44,11 +34,21 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
+          "tfc:rock/raw/gneiss"
         ],
         "with": [
           {
-            "block": "modpack:ore/graphite/serpentine"
+            "block": "tfc:ore/graphite/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/graphite/quartzite"
           }
         ]
       },

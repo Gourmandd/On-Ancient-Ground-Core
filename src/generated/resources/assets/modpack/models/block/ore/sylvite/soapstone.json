@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/ore",
-  "textures": {
-    "all": "minecraft:block/calcite",
-    "overlay": "tfc:block/ore/sylvite"
-  }
-}

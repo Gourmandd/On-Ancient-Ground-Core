@@ -161,9 +161,11 @@ public class ClientEventHandler {
         }
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            Stream.of(OreDeposit.values()).forEach(ore -> {
-                ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get(), cutoutMipped);
-            });
+            if (rock.hasOres()){
+                Stream.of(OreDeposit.values()).forEach(ore -> {
+                    ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get(), cutoutMipped);
+                });
+            }
         });
 
         Stream.of(CoreGemstones.values()).forEach(gem -> {

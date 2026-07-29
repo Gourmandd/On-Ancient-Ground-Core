@@ -4,57 +4,57 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/chert"
+          "quark:jasper"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_limonite/chert",
+            "block": "modpack:ore/rich_limonite/red_sandstone",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_limonite/chert",
+            "block": "modpack:ore/poor_limonite/red_sandstone",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_limonite/chert",
+            "block": "modpack:ore/normal_limonite/red_sandstone",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "quark:limestone"
+          "create:limestone"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_limonite/arkose",
+            "block": "minecraft:dirt",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_limonite/arkose",
+            "block": "minecraft:dirt",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_limonite/arkose",
+            "block": "minecraft:dirt",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "create:ochrum"
+          "minecraft:smooth_basalt"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_limonite/sandstone",
+            "block": "minecraft:dirt",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_limonite/sandstone",
+            "block": "minecraft:dirt",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_limonite/sandstone",
+            "block": "minecraft:dirt",
             "weight": 40.0
           }
         ]
@@ -80,44 +80,6 @@
       },
       {
         "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_limonite/travertine",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_limonite/travertine",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_limonite/travertine",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_limonite/red_sandstone",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_limonite/red_sandstone",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_limonite/red_sandstone",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "minecraft:stone"
         ],
         "with": [
@@ -137,19 +99,95 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/chalk"
+          "create:ochrum"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_limonite/chalk",
+            "block": "modpack:ore/rich_limonite/sandstone",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_limonite/chalk",
+            "block": "modpack:ore/poor_limonite/sandstone",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_limonite/chalk",
+            "block": "modpack:ore/normal_limonite/sandstone",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_limonite/travertine",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_limonite/travertine",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_limonite/travertine",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_limonite/dolomite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_limonite/dolomite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_limonite/dolomite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_limonite/conglomerate",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_limonite/conglomerate",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_limonite/conglomerate",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_limonite/arkose",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_limonite/arkose",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_limonite/arkose",
             "weight": 40.0
           }
         ]
@@ -175,38 +213,19 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/claystone"
+          "tfc:rock/raw/chalk"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_limonite/claystone",
+            "block": "tfc:ore/rich_limonite/chalk",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_limonite/claystone",
+            "block": "tfc:ore/poor_limonite/chalk",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_limonite/claystone",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_limonite/dolomite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_limonite/dolomite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_limonite/dolomite",
+            "block": "tfc:ore/normal_limonite/chalk",
             "weight": 40.0
           }
         ]
@@ -251,19 +270,38 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/conglomerate"
+          "tfc:rock/raw/chert"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_limonite/conglomerate",
+            "block": "tfc:ore/rich_limonite/chert",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_limonite/conglomerate",
+            "block": "tfc:ore/poor_limonite/chert",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_limonite/conglomerate",
+            "block": "tfc:ore/normal_limonite/chert",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_limonite/claystone",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_limonite/claystone",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_limonite/claystone",
             "weight": 40.0
           }
         ]

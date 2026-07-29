@@ -172,10 +172,12 @@ public enum CoreOres implements RegistryOre {
         }
 
         if (rock instanceof CoreRocks){
-            if (grade == null){
-                return CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(this).get();
-            } else {
-                return CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(this).get(grade).get();
+            if (((CoreRocks) rock).hasOres()){
+                if (grade == null){
+                    return CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(this).get();
+                } else {
+                    return CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(this).get(grade).get();
+                }
             }
         }
 

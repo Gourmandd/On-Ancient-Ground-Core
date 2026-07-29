@@ -27,23 +27,23 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
+          "tfc:rock/raw/gabbro"
         ],
         "with": [
           {
-            "block": "modpack:deposit/cassiterite/peridotite",
+            "block": "tfc:deposit/cassiterite/gabbro",
             "weight": 10.0
           },
           {
-            "block": "modpack:ore/rich_cassiterite/peridotite",
+            "block": "tfc:ore/rich_cassiterite/gabbro",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_cassiterite/peridotite",
+            "block": "tfc:ore/poor_cassiterite/gabbro",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_cassiterite/peridotite",
+            "block": "tfc:ore/normal_cassiterite/gabbro",
             "weight": 40.0
           }
         ]
@@ -73,23 +73,23 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gabbro"
+          "modpack:rock/raw/peridotite"
         ],
         "with": [
           {
-            "block": "tfc:deposit/cassiterite/gabbro",
+            "block": "modpack:deposit/cassiterite/peridotite",
             "weight": 10.0
           },
           {
-            "block": "tfc:ore/rich_cassiterite/gabbro",
+            "block": "modpack:ore/rich_cassiterite/peridotite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_cassiterite/gabbro",
+            "block": "modpack:ore/poor_cassiterite/peridotite",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_cassiterite/gabbro",
+            "block": "modpack:ore/normal_cassiterite/peridotite",
             "weight": 40.0
           }
         ]

@@ -4,44 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_hematite/basalt",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_hematite/basalt",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_hematite/basalt",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:deepslate"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_hematite/nephelinite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_hematite/nephelinite",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_hematite/nephelinite",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "spectrum:basal_marble"
         ],
         "with": [
@@ -55,44 +17,6 @@
           },
           {
             "block": "modpack:ore/normal_hematite/picrite_basalt",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_hematite/komatiite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_hematite/komatiite",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_hematite/komatiite",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_hematite/phonolite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_hematite/phonolite",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_hematite/phonolite",
             "weight": 40.0
           }
         ]
@@ -118,38 +42,57 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
+          "quark:shale"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_hematite/rhyolite",
+            "block": "modpack:ore/rich_hematite/phonolite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_hematite/rhyolite",
+            "block": "modpack:ore/poor_hematite/phonolite",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_hematite/rhyolite",
+            "block": "modpack:ore/normal_hematite/phonolite",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "spectrum:blackslag"
+          "create:scoria"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_hematite/blackslag",
+            "block": "modpack:ore/rich_hematite/komatiite",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_hematite/blackslag",
+            "block": "modpack:ore/poor_hematite/komatiite",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_hematite/blackslag",
+            "block": "modpack:ore/normal_hematite/komatiite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:deepslate"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_hematite/nephelinite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_hematite/nephelinite",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_hematite/nephelinite",
             "weight": 40.0
           }
         ]
@@ -169,6 +112,63 @@
           },
           {
             "block": "tfc:ore/normal_hematite/dacite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_hematite/rhyolite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_hematite/rhyolite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_hematite/rhyolite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_hematite/basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_hematite/basalt",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_hematite/basalt",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_hematite/blackslag",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_hematite/blackslag",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_hematite/blackslag",
             "weight": 40.0
           }
         ]

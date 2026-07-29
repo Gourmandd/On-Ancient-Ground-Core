@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/ore",
-  "textures": {
-    "all": "modpack:block/rock/gravel/marlstone",
-    "overlay": "tfc:block/ore/normal_native_gold"
-  }
-}

@@ -168,8 +168,10 @@ public class CreativeTabs {
         }
 
         for (CoreRocks rock : CoreRocks.values()){
-            for (OreDeposit ore : OreDeposit.values()){
-                out.accept(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get());
+            if (rock.hasOres()){
+                for (OreDeposit ore : OreDeposit.values()){
+                    out.accept(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get());
+                }
             }
         }
     }

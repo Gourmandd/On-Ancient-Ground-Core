@@ -4,61 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/schist"
+          "tfc:rock/raw/gabbro"
         ],
         "with": [
           {
-            "block": "tfc:ore/sulfur/schist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/quartzite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/sulfur/serpentine"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/sulfur/peridotite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/gneiss"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/sulfur/soapstone"
+            "block": "tfc:ore/sulfur/gabbro"
           }
         ]
       },
@@ -74,21 +24,11 @@
       },
       {
         "replace": [
-          "create:scorchia"
+          "modpack:rock/raw/peridotite"
         ],
         "with": [
           {
-            "block": "modpack:ore/sulfur/suevite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/slate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sulfur/slate"
+            "block": "modpack:ore/sulfur/peridotite"
           }
         ]
       },
@@ -104,11 +44,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/phyllite"
+          "tfc:rock/raw/quartzite"
         ],
         "with": [
           {
-            "block": "tfc:ore/sulfur/phyllite"
+            "block": "tfc:ore/sulfur/quartzite"
           }
         ]
       },
@@ -124,21 +64,81 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/diorite"
+          "create:scorchia"
         ],
         "with": [
           {
-            "block": "tfc:ore/sulfur/diorite"
+            "block": "minecraft:dirt"
           }
         ]
       },
       {
         "replace": [
-          "tfc:rock/raw/gabbro"
+          "tfc:rock/raw/phyllite"
         ],
         "with": [
           {
-            "block": "tfc:ore/sulfur/gabbro"
+            "block": "tfc:ore/sulfur/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:calcite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/sulfur/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/diorite"
           }
         ]
       }

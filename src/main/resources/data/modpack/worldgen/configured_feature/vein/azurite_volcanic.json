@@ -14,31 +14,21 @@
       },
       {
         "replace": [
-          "spectrum:basal_marble"
+          "tfc:rock/raw/rhyolite"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/picrite_basalt"
+            "block": "modpack:ore/azurite/rhyolite"
           }
         ]
       },
       {
         "replace": [
-          "quark:shale"
+          "create:scoria"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/phonolite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/azurite/basalt"
+            "block": "modpack:ore/azurite/komatiite"
           }
         ]
       },
@@ -64,11 +54,21 @@
       },
       {
         "replace": [
-          "create:scoria"
+          "quark:shale"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/komatiite"
+            "block": "modpack:ore/azurite/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/basalt"
           }
         ]
       },
@@ -84,11 +84,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
+          "spectrum:basal_marble"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/rhyolite"
+            "block": "modpack:ore/azurite/picrite_basalt"
           }
         ]
       }

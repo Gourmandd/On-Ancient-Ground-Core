@@ -4,11 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/phyllite"
+          "tfc:rock/raw/gneiss"
         ],
         "with": [
           {
-            "block": "tfc:ore/cinnabar/phyllite"
+            "block": "tfc:ore/cinnabar/gneiss"
           }
         ]
       },
@@ -24,11 +24,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/schist"
+          "tfc:rock/raw/phyllite"
         ],
         "with": [
           {
-            "block": "tfc:ore/cinnabar/schist"
+            "block": "tfc:ore/cinnabar/phyllite"
           }
         ]
       },
@@ -44,21 +44,21 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/cinnabar/gneiss"
-          }
-        ]
-      },
-      {
-        "replace": [
           "modpack:rock/raw/blueschist"
         ],
         "with": [
           {
             "block": "modpack:ore/cinnabar/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/schist"
           }
         ]
       }

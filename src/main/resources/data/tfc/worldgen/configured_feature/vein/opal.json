@@ -4,91 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/opal/andesite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/claystone"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/opal/claystone"
-          }
-        ]
-      },
-      {
-        "replace": [
           "spectrum:blackslag"
         ],
         "with": [
           {
             "block": "modpack:ore/opal/blackslag"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/opal/phonolite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/opal/conglomerate"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/opal/red_sandstone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/opal/chalk"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/opal/limestone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/opal/breccia"
           }
         ]
       },
@@ -104,11 +24,121 @@
       },
       {
         "replace": [
-          "quark:limestone"
+          "create:scoria"
         ],
         "with": [
           {
-            "block": "modpack:ore/opal/arkose"
+            "block": "modpack:ore/opal/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/tuff"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/opal/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/opal/breccia"
           }
         ]
       },
@@ -134,41 +164,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/dolomite"
+          "minecraft:dripstone_block"
         ],
         "with": [
           {
-            "block": "tfc:ore/opal/dolomite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:deepslate"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/opal/nephelinite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/tuff"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/opal/tuff"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/opal/komatiite"
+            "block": "modpack:ore/opal/travertine"
           }
         ]
       },
@@ -184,11 +184,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/basalt"
+          "quark:limestone"
         ],
         "with": [
           {
-            "block": "tfc:ore/opal/basalt"
+            "block": "modpack:ore/opal/arkose"
           }
         ]
       },
@@ -204,21 +204,11 @@
       },
       {
         "replace": [
-          "minecraft:dripstone_block"
+          "minecraft:deepslate"
         ],
         "with": [
           {
-            "block": "modpack:ore/opal/travertine"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/opal/shale"
+            "block": "modpack:ore/opal/nephelinite"
           }
         ]
       },
@@ -229,6 +219,36 @@
         "with": [
           {
             "block": "modpack:ore/opal/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/opal/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/opal/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:smooth_basalt"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
           }
         ]
       }

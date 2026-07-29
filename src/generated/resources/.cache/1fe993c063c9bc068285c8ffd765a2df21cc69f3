@@ -1,10 +1,10 @@
-// 1.21.1	2026-07-29T09:25:15.037346388	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-07-29T10:51:40.111699026	Tags for minecraft:block mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/block/boards.json
 ff9b997efca1803dd84c8edf5041c872552abec4 data/c/tags/block/cobblestones.json
 8ab0167fc08d0663346e6a1b8aa95ba1787c8da5 data/c/tags/block/cobblestones/mossy.json
 6db0751f3bf323424462292e08507bbbc4c4fe21 data/c/tags/block/cobblestones/normal.json
 728bc458552c1dfbd4cadf81a1b32c6102149bde data/c/tags/block/gravels.json
-9e6242da30b96a109feb152eb9ff658c24059b2d data/c/tags/block/ores.json
+6bae25d2aaa860af78ecc329f41ad7adc1dca303 data/c/tags/block/ores.json
 0b4fd6a2de2bf82e1566596ead820aff4f046e3b data/c/tags/block/stones.json
 1baf7773d3ac159f9cf0db4b80a5ca45e6c2c715 data/c/tags/block/stones/hardened.json
 6cc5954d58a9fe60b2117557b3594a5d2c66bb12 data/c/tags/block/stones/loose.json
@@ -16,11 +16,11 @@ cd61a20ef02541d9d2d3257324508326d4407777 data/c/tags/block/stones/spike.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
 7e6b2297b68d7aa8a5d51aa7c1d7f07ad1272418 data/minecraft/tags/block/mineable/axe.json
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/minecraft/tags/block/mineable/hoe.json
-d35f302f537a08b26606811f6a56665d5de004e2 data/minecraft/tags/block/mineable/pickaxe.json
-0625838a8cf05ab70beecc9d7d990e1c634110f7 data/minecraft/tags/block/mineable/shovel.json
-5a224960f8e52d528d1ea86d885c5a850db3b1e2 data/minecraft/tags/block/needs_diamond_tool.json
-ceda0be95830e7a7e6f4e9c9726d12706e8c5ca0 data/minecraft/tags/block/needs_iron_tool.json
-e5b1ac22d19e4682480386083a1c11bffb17f73a data/minecraft/tags/block/needs_stone_tool.json
+adb551d7022c7e8b30f5217c87ab6fb3aff1f173 data/minecraft/tags/block/mineable/pickaxe.json
+f1543dfff764c601275b79ed10d7e5d212620e44 data/minecraft/tags/block/mineable/shovel.json
+0c7e58930c42d157e069baf52e48e04dd644b409 data/minecraft/tags/block/needs_diamond_tool.json
+1aea6bafc7cde9f9c853fc27979a2e4ea1ff27b7 data/minecraft/tags/block/needs_iron_tool.json
+6a7c9855af054ddab8d84eba166ee1a755ac69e7 data/minecraft/tags/block/needs_stone_tool.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/pressure_plates.json
 86e365f4c654d791d393e17f9aeeabb34bb9833f data/minecraft/tags/block/slabs.json
 5ed049f0f5ea050952c93a0961f6e802092c4660 data/minecraft/tags/block/stairs.json
@@ -31,14 +31,14 @@ d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/stone_pressur
 650fe2107b7e1320b82ea4a13c1c3cdf3d4894ff data/modpack/tags/block/cobblestones/mortared.json
 10bc593796795d9886f8935e63f9fb19fabf09d7 data/modpack/tags/block/gemstone_blocks.json
 341d3a8bcca759951f2de06dcbc28ef705e7d73d data/modpack/tags/block/snow_shovel_mineable.json
-03acb70c42a99e01066748c0de6ada0b69e0af88 data/neoforge/tags/block/needs_netherite_tool.json
-449f9abfe03c9f5b808cc60d5b93d80ac04bd711 data/spectrum/tags/block/azurite_ores.json
-32a748ee33254b0bd976b57166317ba15645c369 data/spectrum/tags/block/shimmerstone_ores.json
+60aea071bb0d83047d24fcbdf4622f32cdcc9ceb data/neoforge/tags/block/needs_netherite_tool.json
+1f622d7c3c56c02b054a1b5a0fe88eefa159b879 data/spectrum/tags/block/azurite_ores.json
+5e9cc8724688010641c1b86ba736c9a6060af541 data/spectrum/tags/block/shimmerstone_ores.json
 2860e2b2596b19e1464dfcf80309f988a742c446 data/tfc/tags/block/aqueducts.json
 00ac5a4758ee1dc7183ae3bec2d543b378d26247 data/tfc/tags/block/breaks_when_isolated.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/block/can_be_snow_piled.json
 54606d9bff3584ebe9ae688ddce6b9947c19ff88 data/tfc/tags/block/can_collapse.json
-9ad73eb7959af382bbb929fdca6a55db2baf7396 data/tfc/tags/block/can_landslide.json
+b61139b3e4dcc1ae2180a8c959b492b1b1a18bf0 data/tfc/tags/block/can_landslide.json
 485ed8b2ab9e3da3eb9f694eb37d1f303bc4fb91 data/tfc/tags/block/can_start_collapse.json
 5197cee1b2ffd17477d9561f3ee8ad772497cddb data/tfc/tags/block/can_trigger_collapse.json
 95c7102fb3c0ecb6d4c60a3ea9abaea8ce44ace9 data/tfc/tags/block/charcoal_forge_invisible.json
@@ -52,6 +52,6 @@ b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/halophyte_plantable
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/tfc/tags/block/mineable/knife.json
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/tfc/tags/block/mineable/scythe.json
 74acf2b5358515978fa3e2f17f2637288648a99d data/tfc/tags/block/pet_sits_on.json
-9e6242da30b96a109feb152eb9ff658c24059b2d data/tfc/tags/block/prospectable.json
+6bae25d2aaa860af78ecc329f41ad7adc1dca303 data/tfc/tags/block/prospectable.json
 b855331fc0f37cc26a2dce420904e5c63a771416 data/tfc/tags/block/sea_bush_plantable_on.json
 98548d218f2823032aa12a4a80260591cef9b1ad data/tfc/tags/block/support_beams.json

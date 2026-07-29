@@ -4,25 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/poor_sphalerite/peridotite",
-            "weight": 15.0
-          },
-          {
-            "block": "modpack:ore/normal_sphalerite/peridotite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/rich_sphalerite/peridotite",
-            "weight": 60.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/granite"
         ],
         "with": [
@@ -36,6 +17,25 @@
           },
           {
             "block": "tfc:ore/rich_sphalerite/granite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/poor_sphalerite/peridotite",
+            "weight": 15.0
+          },
+          {
+            "block": "modpack:ore/normal_sphalerite/peridotite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/rich_sphalerite/peridotite",
             "weight": 60.0
           }
         ]

@@ -1397,13 +1397,15 @@ public class BuiltinConfiguredFeatures  {
         }
 
         for (CoreRocks rock : CoreRocks.values()){
-            RockCategory category = rock.displayCategory().category();
-            if (category != RockCategory.SEDIMENTARY){
-                map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
-                        List.of(
-                                Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
-                        )
-                ));
+            if (rock.hasOres()){
+                RockCategory category = rock.displayCategory().category();
+                if (category != RockCategory.SEDIMENTARY){
+                    map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
+                            List.of(
+                                    Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
+                            )
+                    ));
+                }
             }
         }
 
@@ -1439,13 +1441,15 @@ public class BuiltinConfiguredFeatures  {
             });
 
             Stream.of(CoreRocks.values()).forEach(rock -> {
-                RockCategory category = rock.displayCategory().category();
-                if (category != RockCategory.SEDIMENTARY){
-                    map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
-                            List.of(
-                                    Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
-                            )
-                    ));
+                if (rock.hasOres()){
+                    RockCategory category = rock.displayCategory().category();
+                    if (category != RockCategory.SEDIMENTARY){
+                        map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
+                                List.of(
+                                        Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
+                                )
+                        ));
+                    }
                 }
             });
         }
@@ -1746,7 +1750,9 @@ public class BuiltinConfiguredFeatures  {
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            map.put(rock.getBlock(Rock.BlockType.RAW).get(), CoreBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState());
+            if (rock.hasOres()) {
+                map.put(rock.getBlock(Rock.BlockType.RAW).get(), CoreBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState());
+            }
         });
 
         return map;

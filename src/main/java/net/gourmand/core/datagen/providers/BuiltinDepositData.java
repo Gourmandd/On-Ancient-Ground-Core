@@ -28,7 +28,9 @@ public class BuiltinDepositData extends DataManagerProvider<Deposit> {
     {
         for (OreDeposit ore : OreDeposit.values()){
             for (CoreRocks rock : CoreRocks.values()){
-                add(rock, ore);
+                if (rock.hasOres()) {
+                    add(rock, ore);
+                }
             }
         }
     }

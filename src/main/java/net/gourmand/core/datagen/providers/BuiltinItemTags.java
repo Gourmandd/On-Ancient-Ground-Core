@@ -68,19 +68,17 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         );
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            Stream.of(Ore.values()).forEach(ore -> {
-                if (ore.hasBlock() && rock.hasOres())
-                {
-                    if (ore.isGraded())
-                    {
-                        addGradedOreTags(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES, ore, rock);
+            if (rock.hasOres()) {
+                Stream.of(Ore.values()).forEach(ore -> {
+                    if (ore.hasBlock()) {
+                        if (ore.isGraded()) {
+                            addGradedOreTags(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES, ore, rock);
+                        } else {
+                            addOreTags(CoreBlocks.CUSTOM_ROCK_TFC_ORES, ore, rock);
+                        }
                     }
-                    else
-                    {
-                        addOreTags(CoreBlocks.CUSTOM_ROCK_TFC_ORES, ore, rock);
-                    }
-                }
-            });
+                });
+            }
         });
 
         Stream.of(CoreOres.values()).forEach(ore -> {
@@ -92,13 +90,15 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             else
             {
                 Stream.of(CoreRocks.values()).forEach(rock -> {
-                    if (ore.isGraded() && rock.hasOres())
-                    {
-                        addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
-                    }
-                    else
-                    {
-                        addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
+                    if (rock.hasOres()){
+                        if (ore.isGraded())
+                        {
+                            addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
+                        }
+                        else
+                        {
+                            addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
+                        }
                     }
                 });
                 Stream.of(Rock.values()).forEach(rock -> {
@@ -213,13 +213,11 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 
         this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_VESSEL.key());
 
-        CategoryUtil.getTFCToolMetals().forEach(metal -> {
-            CategoryUtil.getTFCToolHeads().forEach(tool -> {
-                this.tag(CoreTags.Items.TOOL_HEADS.get(tool)).add(
-                        TFCItems.METAL_ITEMS.get(metal).get(tool).holder().getKey()
-                );
-            });
-        });
+        CategoryUtil.getTFCToolMetals().forEach(metal ->
+                CategoryUtil.getTFCToolHeads().forEach(tool -> this.tag(CoreTags.Items.TOOL_HEADS.get(tool))
+                                .add(TFCItems.METAL_ITEMS.get(metal).get(tool).holder().getKey())
+                )
+        );
 
         Stream.of(CoreRocks.values()).forEach(rock ->{
 
@@ -334,9 +332,7 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 )
         );
 
-        Stream.of(DyeColor.values()).forEach(color -> {
-            this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_GLAZED_VESSELS.get(color).key());
-        });
+        Stream.of(DyeColor.values()).forEach(color -> this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_GLAZED_VESSELS.get(color).key()));
 
         // modonomicon book multiblock
 
@@ -377,9 +373,9 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         addMultiBlockOre(Ore.CRYOLITE, List.of(Rock.GRANITE, Rock.DIORITE, CoreRocks.BLUESCHIST, CoreRocks.PERIDOTITE));
         addMultiBlockOre(Ore.GRAPHITE, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, Rock.QUARTZITE, Rock.SCHIST, CoreRocks.BLUESCHIST, CoreRocks.SERPENTINE));
 
-        addMultiBlockOre(Ore.GYPSUM, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));
+        addMultiBlockOre(Ore.GYPSUM, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));
 
-        addMultiBlockOre(Ore.DIAMOND, List.of(Rock.GABBRO, CoreRocks.SUEVITE));
+        addMultiBlockOre(Ore.DIAMOND, List.of(Rock.GABBRO));
         addMultiBlockOre(Ore.AMETHYST, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE, Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, Rock.QUARTZITE));
         addMultiBlockOre(Ore.TOPAZ, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, CoreRocks.SERPENTINE, Rock.GRANITE, Rock.GABBRO, Rock.BASALT, Rock.RHYOLITE, Rock.ANDESITE, CoreRocks.KOMATIITE));
         addMultiBlockOre(Ore.PYRITE, List.of(Rock.GRANITE, Rock.GABBRO, Rock.BASALT, Rock.RHYOLITE, Rock.ANDESITE, CoreRocks.KOMATIITE));

@@ -4,11 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "modpack:rock/raw/peridotite"
+          "tfc:rock/raw/gabbro"
         ],
         "with": [
           {
-            "block": "modpack:ore/azurite/peridotite"
+            "block": "modpack:ore/azurite/gabbro"
           }
         ]
       },
@@ -24,21 +24,21 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/azurite/gabbro"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/diorite"
         ],
         "with": [
           {
             "block": "modpack:ore/azurite/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/peridotite"
           }
         ]
       }

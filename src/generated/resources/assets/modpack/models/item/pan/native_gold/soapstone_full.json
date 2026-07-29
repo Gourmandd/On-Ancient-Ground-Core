@@ -1,6 +1,0 @@
-{
-  "parent": "tfc:item/pan/full",
-  "textures": {
-    "material": "modpack:block/rock/gravel/soapstone"
-  }
-}

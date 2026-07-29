@@ -127,28 +127,12 @@
         "with": "modpack:deposit/native_gold/red_sandstone"
       },
       {
-        "replace": "create:scorchia",
-        "with": "modpack:deposit/native_gold/suevite"
-      },
-      {
         "replace": "quark:shale",
         "with": "modpack:deposit/native_gold/phonolite"
       },
       {
         "replace": "quark:limestone",
         "with": "modpack:deposit/native_gold/arkose"
-      },
-      {
-        "replace": "minecraft:calcite",
-        "with": "modpack:deposit/native_gold/soapstone"
-      },
-      {
-        "replace": "minecraft:smooth_basalt",
-        "with": "modpack:deposit/native_gold/greywacke"
-      },
-      {
-        "replace": "create:limestone",
-        "with": "modpack:deposit/native_gold/marlstone"
       },
       {
         "replace": "modpack:rock/raw/blueschist",

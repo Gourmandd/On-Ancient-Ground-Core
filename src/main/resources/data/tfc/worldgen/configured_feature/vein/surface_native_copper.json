@@ -27,29 +27,6 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_native_copper/rhyolite",
-            "weight": 5.0
-          },
-          {
-            "block": "tfc:deposit/native_copper/rhyolite",
-            "weight": 10.0
-          },
-          {
-            "block": "tfc:ore/normal_native_copper/rhyolite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_native_copper/rhyolite",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "minecraft:deepslate"
         ],
         "with": [
@@ -67,29 +44,6 @@
           },
           {
             "block": "modpack:ore/poor_native_copper/nephelinite",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_native_copper/andesite",
-            "weight": 5.0
-          },
-          {
-            "block": "tfc:deposit/native_copper/andesite",
-            "weight": 10.0
-          },
-          {
-            "block": "tfc:ore/normal_native_copper/andesite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_native_copper/andesite",
             "weight": 70.0
           }
         ]
@@ -142,23 +96,46 @@
       },
       {
         "replace": [
-          "spectrum:blackslag"
+          "tfc:rock/raw/andesite"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_native_copper/blackslag",
+            "block": "tfc:ore/rich_native_copper/andesite",
             "weight": 5.0
           },
           {
-            "block": "modpack:deposit/native_copper/blackslag",
+            "block": "tfc:deposit/native_copper/andesite",
             "weight": 10.0
           },
           {
-            "block": "modpack:ore/normal_native_copper/blackslag",
+            "block": "tfc:ore/normal_native_copper/andesite",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_native_copper/blackslag",
+            "block": "tfc:ore/poor_native_copper/andesite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_native_copper/rhyolite",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:deposit/native_copper/rhyolite",
+            "weight": 10.0
+          },
+          {
+            "block": "tfc:ore/normal_native_copper/rhyolite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_native_copper/rhyolite",
             "weight": 70.0
           }
         ]
@@ -182,6 +159,29 @@
           },
           {
             "block": "tfc:ore/poor_native_copper/dacite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_native_copper/blackslag",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:deposit/native_copper/blackslag",
+            "weight": 10.0
+          },
+          {
+            "block": "modpack:ore/normal_native_copper/blackslag",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_native_copper/blackslag",
             "weight": 70.0
           }
         ]

@@ -8,53 +8,53 @@
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_tetrahedrite/suevite",
+            "block": "minecraft:dirt",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_tetrahedrite/suevite",
+            "block": "minecraft:dirt",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_tetrahedrite/suevite",
+            "block": "minecraft:dirt",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
+          "modpack:rock/raw/serpentine"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_tetrahedrite/blueschist",
+            "block": "modpack:ore/rich_tetrahedrite/serpentine",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_tetrahedrite/blueschist",
+            "block": "modpack:ore/poor_tetrahedrite/serpentine",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_tetrahedrite/blueschist",
+            "block": "modpack:ore/normal_tetrahedrite/serpentine",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "create:limestone"
+          "minecraft:calcite"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_tetrahedrite/soapstone",
+            "block": "minecraft:dirt",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_tetrahedrite/soapstone",
+            "block": "minecraft:dirt",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_tetrahedrite/soapstone",
+            "block": "minecraft:dirt",
             "weight": 40.0
           }
         ]
@@ -80,19 +80,19 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/slate"
+          "modpack:rock/raw/blueschist"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_tetrahedrite/slate",
+            "block": "modpack:ore/rich_tetrahedrite/blueschist",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_tetrahedrite/slate",
+            "block": "modpack:ore/poor_tetrahedrite/blueschist",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_tetrahedrite/slate",
+            "block": "modpack:ore/normal_tetrahedrite/blueschist",
             "weight": 40.0
           }
         ]
@@ -112,6 +112,44 @@
           },
           {
             "block": "tfc:ore/normal_tetrahedrite/gneiss",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_tetrahedrite/slate",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_tetrahedrite/slate",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/slate",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_tetrahedrite/quartzite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_tetrahedrite/quartzite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/quartzite",
             "weight": 40.0
           }
         ]
@@ -150,44 +188,6 @@
           },
           {
             "block": "tfc:ore/normal_tetrahedrite/schist",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_tetrahedrite/serpentine",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_tetrahedrite/serpentine",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_tetrahedrite/serpentine",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_tetrahedrite/quartzite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_tetrahedrite/quartzite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_tetrahedrite/quartzite",
             "weight": 40.0
           }
         ]

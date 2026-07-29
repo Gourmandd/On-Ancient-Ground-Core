@@ -190,12 +190,14 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
             if (ore.hasBlock()){
                 Stream.of(CoreRocks.values()).forEach(rock -> {
-                    if (ore.isGraded() && rock.hasOres()){
-                        Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                            createOreKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
-                        });
-                    } else {
-                        createOreKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), getName(rock), getName(ore));
+                    if (rock.hasOres()) {
+                        if (ore.isGraded()) {
+                            Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                                createOreKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
+                            });
+                        } else {
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), getName(rock), getName(ore));
+                        }
                     }
                 });
                 Stream.of(Rock.values()).forEach(rock -> {
@@ -225,12 +227,14 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
             if (ore.hasBlock()){
                 Stream.of(CoreRocks.values()).forEach(rock -> {
-                    if (ore.isGraded() && rock.hasOres()){
-                        Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
-                        });
-                    } else {
-                        createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(ore.name()));
+                    if (rock.hasOres()) {
+                        if (ore.isGraded()) {
+                            Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                                createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
+                            });
+                        } else {
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(ore.name()));
+                        }
                     }
                 });
             }

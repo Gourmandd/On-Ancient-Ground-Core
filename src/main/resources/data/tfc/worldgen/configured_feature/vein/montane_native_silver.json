@@ -4,25 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/diorite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_native_silver/diorite",
-            "weight": 5.0
-          },
-          {
-            "block": "tfc:ore/normal_native_silver/diorite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_native_silver/diorite",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/granite"
         ],
         "with": [
@@ -36,6 +17,25 @@
           },
           {
             "block": "tfc:ore/poor_native_silver/granite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_native_silver/diorite",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/diorite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_native_silver/diorite",
             "weight": 70.0
           }
         ]
