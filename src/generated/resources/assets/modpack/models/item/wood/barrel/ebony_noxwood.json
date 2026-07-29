@@ -1,0 +1,11 @@
+{
+  "parent": "modpack:block/wood/barrel/ebony_noxwood",
+  "overrides": [
+    {
+      "model": "modpack:block/wood/barrel/ebony_noxwood_sealed",
+      "predicate": {
+        "tfc:sealed": 1.0
+      }
+    }
+  ]
+}

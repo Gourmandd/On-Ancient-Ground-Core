@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "spectrum:block/green_planks",
+    "planks": "spectrum:block/green_planks",
+    "sheet": "spectrum:block/stripped_green_log"
+  }
+}

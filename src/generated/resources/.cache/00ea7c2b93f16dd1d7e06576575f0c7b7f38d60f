@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-28T12:11:18.575842336	Item Models: modpack
+// 1.21.1	2026-07-29T09:23:05.782545081	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -2256,6 +2256,27 @@ e50bc4b9cf9d590c520a657ab607f3bf9e749250 assets/modpack/models/item/rock/spike/p
 9b6a7306e8bf0358f4f9a98561a3f99dca5d6f42 assets/modpack/models/item/rock/spike/suevite.json
 baf032dd21cfaa44e85022c7d33f11237a3cccc4 assets/modpack/models/item/rock/spike/travertine.json
 d2ee205d2b6b8086f7a3365a8f8cf11c2f935053 assets/modpack/models/item/sludge.json
+7939f481e85832c8420dc627747141cc2ab4c045 assets/modpack/models/item/wood/barrel/black.json
+aa4a8788255b2a1e41c349e08a2ffc2f69e9bf0f assets/modpack/models/item/wood/barrel/blue.json
+1405f4ba6b834adc8ad059da780dc6d8e435afe3 assets/modpack/models/item/wood/barrel/brown.json
+61ef2b432cc85c7a390e5a92d67a8a9625e36481 assets/modpack/models/item/wood/barrel/chestnut_noxwood.json
+1c424b2b25842ee818080d9cf7d4fbdcea80be41 assets/modpack/models/item/wood/barrel/cyan.json
+74b219d9209d280a23fae56686f15c27f5982a51 assets/modpack/models/item/wood/barrel/ebony_noxwood.json
+e9a1e75f36ae1a8624a4477b3af707db530ecaf2 assets/modpack/models/item/wood/barrel/gray.json
+7200997fb9c8906dbe2af78bcd7a246efb1f7ef0 assets/modpack/models/item/wood/barrel/green.json
+59f90bc1fe4d270a8ad661dfa12a4e915fb5c66b assets/modpack/models/item/wood/barrel/ivory_noxwood.json
+42b229b2c534f49836aadf553e89b7b8f1553216 assets/modpack/models/item/wood/barrel/light_blue.json
+80a458137073583676263a04161da1d3afaaefd9 assets/modpack/models/item/wood/barrel/light_gray.json
+f5e2e9ab58cd6626b2d829f13c2b90adb6b2c830 assets/modpack/models/item/wood/barrel/lime.json
+ffa995a9a2f6ee1ea9dbe4a30fd00a0bb9c82d98 assets/modpack/models/item/wood/barrel/magenta.json
+08b8d000919f3b07c3cd2725c339b0e79c0bfc3c assets/modpack/models/item/wood/barrel/orange.json
+0bc19f6613a930e4e3bda7db7f4cf3f2ccb64979 assets/modpack/models/item/wood/barrel/pink.json
+ebb8bdb876d10f5a724b089df9202a973cf33c54 assets/modpack/models/item/wood/barrel/purple.json
+06f3bb322da721fc81fb74ee38e6360e4424316c assets/modpack/models/item/wood/barrel/red.json
+70ccb0b2560dd9fde0791a1592f7642ab61f56da assets/modpack/models/item/wood/barrel/slate_noxwood.json
+c60d88064e7d7c68c13dcd6468edfedd458958d6 assets/modpack/models/item/wood/barrel/weeping_gala.json
+ae49b9f2aaaf49edd91ce6d0a9d4b7e775219a2d assets/modpack/models/item/wood/barrel/white.json
+b14cff8a6406e8c9a1858319d64db5f483c9d555 assets/modpack/models/item/wood/barrel/yellow.json
 519fb0d8cf1f0503487d8f71b2db9c932062d97f assets/modpack/models/item/wood/boards/acacia.json
 a8c2ce7fbd18b16033de4f9af4500118b659b6bf assets/modpack/models/item/wood/boards/araucaria.json
 4e8c07fd832206a29b0b0185b3309a74da3bfd6b assets/modpack/models/item/wood/boards/ash.json

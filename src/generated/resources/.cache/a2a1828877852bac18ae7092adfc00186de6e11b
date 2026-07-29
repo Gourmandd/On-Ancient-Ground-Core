@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-28T12:23:48.679754243	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-07-29T09:36:55.36614236	Tags for minecraft:item mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/item/boards.json
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
@@ -127,12 +127,14 @@ e61065746a3f695534c29455001f21b7fad47afa data/modpack/tags/item/unfired_vessels.
 01088407841a5237bfb19ad8f6212a3ceb45da4f data/spectrum/tags/item/azurite_ores.json
 74f54973095d6dcf2f17901d14fcfa01ddaf5aed data/spectrum/tags/item/shimmerstone_ores.json
 2860e2b2596b19e1464dfcf80309f988a742c446 data/tfc/tags/item/aqueducts.json
+18b8d6b626aba278d978db614ff8382409de1209 data/tfc/tags/item/barrels.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/can_be_lit_on_torch.json
 74acf2b5358515978fa3e2f17f2637288648a99d data/tfc/tags/item/fired_vessels.json
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/tfc/tags/item/fluid_item_ingredient_empty_containers.json
 8c25f32bef63cf1012afdc19d0ba893bab2b9a74 data/tfc/tags/item/large_vessels.json
 df0a75d46911aae0147d30a3849d1a2dbf21c508 data/tfc/tags/item/looms.json
 62e6e1ed83fa606df559dd925f5cfe552f64afba data/tfc/tags/item/lumber.json
+18b8d6b626aba278d978db614ff8382409de1209 data/tfc/tags/item/minecart_holdable.json
 9b42d69576354582feaa42e2b11e5983ebee9f3e data/tfc/tags/item/ore_deposits.json
 19794141ae28f9266f50b60c1ce235367edde4fa data/tfc/tags/item/scribing_tables.json
 c5dac1fb2f237e8f98f11087d4b608c891623734 data/tfc/tags/item/sewing_tables.json

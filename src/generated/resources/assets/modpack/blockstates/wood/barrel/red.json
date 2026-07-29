@@ -1,0 +1,148 @@
+{
+  "variants": {
+    "facing=east,powered=false,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side"
+    },
+    "facing=east,powered=false,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side"
+    },
+    "facing=east,powered=false,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side_rack"
+    },
+    "facing=east,powered=false,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side_rack"
+    },
+    "facing=east,powered=true,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side"
+    },
+    "facing=east,powered=true,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side"
+    },
+    "facing=east,powered=true,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side_rack"
+    },
+    "facing=east,powered=true,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side_rack"
+    },
+    "facing=north,powered=false,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side",
+      "y": 270
+    },
+    "facing=north,powered=false,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side",
+      "y": 270
+    },
+    "facing=north,powered=false,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side_rack",
+      "y": 270
+    },
+    "facing=north,powered=false,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side_rack",
+      "y": 270
+    },
+    "facing=north,powered=true,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side",
+      "y": 270
+    },
+    "facing=north,powered=true,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side",
+      "y": 270
+    },
+    "facing=north,powered=true,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side_rack",
+      "y": 270
+    },
+    "facing=north,powered=true,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side_rack",
+      "y": 270
+    },
+    "facing=south,powered=false,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side",
+      "y": 90
+    },
+    "facing=south,powered=false,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side",
+      "y": 90
+    },
+    "facing=south,powered=false,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side_rack",
+      "y": 90
+    },
+    "facing=south,powered=false,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side_rack",
+      "y": 90
+    },
+    "facing=south,powered=true,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side",
+      "y": 90
+    },
+    "facing=south,powered=true,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side",
+      "y": 90
+    },
+    "facing=south,powered=true,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side_rack",
+      "y": 90
+    },
+    "facing=south,powered=true,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side_rack",
+      "y": 90
+    },
+    "facing=up,powered=false,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red"
+    },
+    "facing=up,powered=false,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed"
+    },
+    "facing=up,powered=false,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red"
+    },
+    "facing=up,powered=false,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed"
+    },
+    "facing=up,powered=true,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red"
+    },
+    "facing=up,powered=true,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed"
+    },
+    "facing=up,powered=true,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red"
+    },
+    "facing=up,powered=true,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed"
+    },
+    "facing=west,powered=false,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side",
+      "y": 180
+    },
+    "facing=west,powered=false,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side",
+      "y": 180
+    },
+    "facing=west,powered=false,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side_rack",
+      "y": 180
+    },
+    "facing=west,powered=false,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side_rack",
+      "y": 180
+    },
+    "facing=west,powered=true,rack=false,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side",
+      "y": 180
+    },
+    "facing=west,powered=true,rack=false,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side",
+      "y": 180
+    },
+    "facing=west,powered=true,rack=true,sealed=false": {
+      "model": "modpack:block/wood/barrel/red_side_rack",
+      "y": 180
+    },
+    "facing=west,powered=true,rack=true,sealed=true": {
+      "model": "modpack:block/wood/barrel/red_sealed_side_rack",
+      "y": 180
+    }
+  }
+}

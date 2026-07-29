@@ -229,7 +229,9 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
         for (CoreRocks rock : CoreRocks.values()){
             for (OreDeposit ore : OreDeposit.values()){
-                this.dropSelf(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get());
+                if (rock.hasOres()){
+                    this.dropSelf(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get());
+                }
             }
         }
     }
@@ -307,7 +309,9 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         Stream.of(SpectrumWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach( type -> {
                 if (wood.hasBlockType(type)){
-                    if (type == Wood.BlockType.SLUICE){
+                    if (type == Wood.BlockType.BARREL){
+                        this.add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get(), LootTableBuilders.createSealableBlockTable(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get()));
+                    } else if (type == Wood.BlockType.SLUICE){
                         this.add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get(), LootTableBuilders.createSluiceTable(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get()));
                     } else {
                         this.dropSelf(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get());
@@ -383,7 +387,7 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
                     if (type == CoreClay.BlockType.CLAY_BLOCK){
                         this.add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), LootTableBuilders.createClayBlockTable(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.CLAY_BALL).get()));
                     } else if (type == CoreClay.BlockType.LARGE_VESSEL) {
-                        this.add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), LootTableBuilders.createLargeVesselBlockTable(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get()));
+                        this.add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), LootTableBuilders.createSealableBlockTable(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get()));
                     } else {
                         this.dropSelf(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get());
                     }

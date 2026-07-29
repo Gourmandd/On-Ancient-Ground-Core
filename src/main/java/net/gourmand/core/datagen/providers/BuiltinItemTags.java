@@ -69,7 +69,7 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
             Stream.of(Ore.values()).forEach(ore -> {
-                if (ore.hasBlock())
+                if (ore.hasBlock() && rock.hasOres())
                 {
                     if (ore.isGraded())
                     {
@@ -92,7 +92,7 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             else
             {
                 Stream.of(CoreRocks.values()).forEach(rock -> {
-                    if (ore.isGraded())
+                    if (ore.isGraded() && rock.hasOres())
                     {
                         addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
                     }
@@ -120,14 +120,18 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            this.tag(AZURITE_ORES).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE)));
-            this.tag(SHIMMERSTONE_ORES).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE)));
+            if (rock.hasOres()) {
+                this.tag(AZURITE_ORES).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE)));
+                this.tag(SHIMMERSTONE_ORES).add(getKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE)));
+            }
         });
 
         for (CoreRocks rock : CoreRocks.values()){
-            add(CoreBlocks.ORE_DEPOSITS.get(rock), List.of(
-                    TFCTags.Items.ORE_DEPOSITS
-            ));
+            if (rock.hasOres()) {
+                add(CoreBlocks.ORE_DEPOSITS.get(rock), List.of(
+                        TFCTags.Items.ORE_DEPOSITS
+                ));
+            }
         }
 
         this.tag(CoreTags.Items.BELLS)
@@ -298,6 +302,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             this.tag(TFCTags.Items.LOOMS).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.LOOM)));
             this.tag(TFCTags.Items.TOOL_RACKS).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TOOL_RACK)));
             this.tag(TFCTags.Items.SLUICES).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SLUICE)));
+            this.tag(TFCTags.Items.BARRELS).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.BARREL)));
+            this.tag(TFCTags.Items.MINECART_HOLDABLE).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.BARREL)));
         });
 
         add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(

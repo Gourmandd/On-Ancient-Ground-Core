@@ -102,7 +102,7 @@ public enum SpectrumWood implements RegistryWood {
 
     public boolean hasBlockType(Wood.BlockType type){
         return switch (type) {
-            case TWIG, SEWING_TABLE, SCRIBING_TABLE, VERTICAL_SUPPORT, HORIZONTAL_SUPPORT, LOOM, TOOL_RACK, SLUICE, SHELF, SAPLING, CRATE -> true;
+            case TWIG, SEWING_TABLE, SCRIBING_TABLE, VERTICAL_SUPPORT, HORIZONTAL_SUPPORT, LOOM, TOOL_RACK, SLUICE, SHELF, SAPLING, CRATE, BARREL -> true;
             default -> false;
         };
     }

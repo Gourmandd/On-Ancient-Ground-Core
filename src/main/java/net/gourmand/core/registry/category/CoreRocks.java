@@ -73,6 +73,19 @@ public enum CoreRocks implements RegistryRock
         return color;
     }
 
+    public boolean hasOres()
+    {
+        // saves us from registering a couple of hundred blocks that are never used.
+        switch (this){
+            case GREYWACKE, MARLSTONE, SOAPSTONE, SUEVITE -> {
+                return false;
+            }
+            default -> {
+                return true;
+            }
+        }
+    }
+
     public boolean hasVariants()
     {
         return hasVariants;

@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-27T21:15:05.123833976	Recipes
+// 1.21.1	2026-07-29T09:26:06.992611568	Recipes
 74d08b4749e380fba2d005605c7ebb389e1b8576 data/modpack/recipe/alloy/aluminium_bronze.json
 2b8aaefb8411d25fa8d2563ddf617af092decbd1 data/modpack/recipe/alloy/cast_iron_alloy.json
 ce75347b3aeb00333930a53c795d09ba5de88583 data/modpack/recipe/alloy/electrum.json
@@ -705,6 +705,27 @@ e740328788059d681b03e52f17f8e7d88306c069 data/modpack/recipe/crafting/white_fenc
 01fd2db24b4fc6698b09001ee9ec92b8e7f951f9 data/modpack/recipe/crafting/white_pressure_plate.json
 5ed65d4381cac444e7b4a33f6368a4683cf637ab data/modpack/recipe/crafting/white_slab.json
 b34ef184ca32ddc8b4df37c309a8ce9c7827f571 data/modpack/recipe/crafting/white_stairs.json
+983c62d3b62a1c967912b89456cc61dd4fbc19a9 data/modpack/recipe/crafting/wood/barrel/black.json
+2fda10e9a73e5af14cdcc0646352a201b61bc9cc data/modpack/recipe/crafting/wood/barrel/blue.json
+ac8db8d0cbca7544e5efb72fcd2d843ac1629f51 data/modpack/recipe/crafting/wood/barrel/brown.json
+50a02e0c9be383d72de491056e330e50f305595b data/modpack/recipe/crafting/wood/barrel/chestnut_noxwood.json
+86841c2f7d8ccd4ca03f7483e76414132537bc53 data/modpack/recipe/crafting/wood/barrel/cyan.json
+fa65a2871a044c049887964258d560e3d4ab4334 data/modpack/recipe/crafting/wood/barrel/ebony_noxwood.json
+2e35e718198708de5d171173b5aa28188a529e38 data/modpack/recipe/crafting/wood/barrel/gray.json
+60648cdf606982a23c0a2656c6ca6b43c05bee55 data/modpack/recipe/crafting/wood/barrel/green.json
+d0ef540dab62f5073f817138adcb306d9113bad3 data/modpack/recipe/crafting/wood/barrel/ivory_noxwood.json
+471ed2c60897d6e3f637e3c5898c4ee4fde80d83 data/modpack/recipe/crafting/wood/barrel/light_blue.json
+11e6b9a416f65bfc986fb56f2690f2da07545467 data/modpack/recipe/crafting/wood/barrel/light_gray.json
+fb7e9be50de8ce242fb555484b2d953128d07d4d data/modpack/recipe/crafting/wood/barrel/lime.json
+c840fb463178397fe8cc04f3469fedf9f7abbc82 data/modpack/recipe/crafting/wood/barrel/magenta.json
+250e74aa13d121c03c3a1f7b43f98b9d3f59c3a1 data/modpack/recipe/crafting/wood/barrel/orange.json
+45c714efdf14cdfcb4cc277b4d709140210c7271 data/modpack/recipe/crafting/wood/barrel/pink.json
+0c0260ae585ba8ebcb28954e832a13fd279d4467 data/modpack/recipe/crafting/wood/barrel/purple.json
+7769e30fc642921d0764e3e85207f2ac90f8102e data/modpack/recipe/crafting/wood/barrel/red.json
+5ba74c1b0da3658fd82e08a86ad691a17043b48b data/modpack/recipe/crafting/wood/barrel/slate_noxwood.json
+2e99f2bb97866358f53eb0427e618c7643ce5452 data/modpack/recipe/crafting/wood/barrel/weeping_gala.json
+8cf6dc1b9683a7992668b4eef6f7b02eeb975e7d data/modpack/recipe/crafting/wood/barrel/white.json
+9c25d205124aa0a1c15fd3807c6784622e6d1e49 data/modpack/recipe/crafting/wood/barrel/yellow.json
 55e975f1106e34fd36c54bb918d6de44236c0147 data/modpack/recipe/crafting/wood/boards/acacia.json
 edd938621fdb1e9487f8694f6f77ff35f4192047 data/modpack/recipe/crafting/wood/boards/araucaria.json
 eaca7cafd7144d5b6a6238e587df33b585aaf305 data/modpack/recipe/crafting/wood/boards/ash.json

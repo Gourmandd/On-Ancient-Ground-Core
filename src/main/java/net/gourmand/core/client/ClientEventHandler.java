@@ -52,6 +52,7 @@ import java.util.stream.Stream;
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_FLOW;
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_STILL;
 import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.*;
+import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.BARREL;
 
 public class ClientEventHandler {
 
@@ -173,16 +174,19 @@ public class ClientEventHandler {
             });
         });
 
-        for (SpectrumWood wood : SpectrumWood.values()){
-            ItemBlockRenderTypes.setRenderLayer(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(SAPLING).get(), cutoutMipped);
-        }
-
         ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS.get(), translucent);
         ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get(), translucent);
         Stream.of(DyeColor.values()).forEach(color -> {
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS.get(color).get(), translucent);
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get(), translucent);
         });
+
+        for (SpectrumWood wood : SpectrumWood.values()){
+            ItemBlockRenderTypes.setRenderLayer(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(SAPLING).get(), cutoutMipped);
+            ItemBlockRenderTypes.setRenderLayer(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(BARREL).get(), cutoutMipped);
+
+            registerSealedProperty(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(BARREL).get(), TFCComponents.CONTENTS);
+        }
 
         for (CoreClay clayType : CoreClay.values()){
             registerSealedProperty(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL).get(), TFCComponents.CONTENTS);

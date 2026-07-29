@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/barrel_side_sealed_rack",
+  "textures": {
+    "particle": "spectrum:block/pink_planks",
+    "planks": "spectrum:block/pink_planks",
+    "sheet": "spectrum:block/stripped_pink_log"
+  }
+}

@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-28T12:31:58.818619468	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-07-29T09:25:15.037346388	Tags for minecraft:block mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/block/boards.json
 ff9b997efca1803dd84c8edf5041c872552abec4 data/c/tags/block/cobblestones.json
 8ab0167fc08d0663346e6a1b8aa95ba1787c8da5 data/c/tags/block/cobblestones/mossy.json
@@ -14,7 +14,7 @@ d4318b7c1669f905ef550da9c7648625f0433977 data/c/tags/block/stones/pressure_plate
 cd61a20ef02541d9d2d3257324508326d4407777 data/c/tags/block/stones/spike.json
 52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/block/buttons.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
-1a007c2a72795a317b151d75841ee9e61b5e039f data/minecraft/tags/block/mineable/axe.json
+7e6b2297b68d7aa8a5d51aa7c1d7f07ad1272418 data/minecraft/tags/block/mineable/axe.json
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/minecraft/tags/block/mineable/hoe.json
 d35f302f537a08b26606811f6a56665d5de004e2 data/minecraft/tags/block/mineable/pickaxe.json
 0625838a8cf05ab70beecc9d7d990e1c634110f7 data/minecraft/tags/block/mineable/shovel.json
@@ -42,6 +42,7 @@ a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/block/can_be_snow_piled.j
 485ed8b2ab9e3da3eb9f694eb37d1f303bc4fb91 data/tfc/tags/block/can_start_collapse.json
 5197cee1b2ffd17477d9561f3ee8ad772497cddb data/tfc/tags/block/can_trigger_collapse.json
 95c7102fb3c0ecb6d4c60a3ea9abaea8ce44ace9 data/tfc/tags/block/charcoal_forge_invisible.json
+18b8d6b626aba278d978db614ff8382409de1209 data/tfc/tags/block/clock_readable.json
 25a1a97177a06510355cad081a3ec15029c150f9 data/tfc/tags/block/fruit_tree_branches.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/tfc/tags/block/fruit_tree_leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/fruit_tree_saplings.json

@@ -1,0 +1,11 @@
+{
+  "parent": "modpack:block/wood/barrel/blue",
+  "overrides": [
+    {
+      "model": "modpack:block/wood/barrel/blue_sealed",
+      "predicate": {
+        "tfc:sealed": 1.0
+      }
+    }
+  ]
+}

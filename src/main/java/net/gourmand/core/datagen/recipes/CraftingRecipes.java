@@ -319,6 +319,11 @@ public interface CraftingRecipes extends Recipes {
                     .shaped(blocks.get(Wood.BlockType.TOOL_RACK).get());
             //recipe().to2x2(planks, blocks.get(Wood.BlockType.WORKBENCH), 1);
 
+            recipe()
+                    .input('L', lumber)
+                    .pattern("L L", "L L", "LLL")
+                    .shaped(blocks.get(Wood.BlockType.BARREL).get());
+
             if (woodType.isNoxfungi() || woodType == SpectrumWood.WEEPING_GALA){
                 recipe()
                         .input('L', lumber)

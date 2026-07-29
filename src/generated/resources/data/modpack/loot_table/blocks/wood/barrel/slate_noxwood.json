@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "modpack:wood/barrel/slate_noxwood",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "sealed": "true"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:copy_components",
+                  "include": [
+                    "minecraft:custom_name",
+                    "tfc:contents"
+                  ],
+                  "source": "block_entity"
+                }
+              ],
+              "name": "modpack:wood/barrel/slate_noxwood"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "modpack:wood/barrel/slate_noxwood"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "modpack:blocks/wood/barrel/slate_noxwood"
+}

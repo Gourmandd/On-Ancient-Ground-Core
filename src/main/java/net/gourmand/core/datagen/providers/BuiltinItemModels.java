@@ -66,34 +66,38 @@ public class BuiltinItemModels extends ItemModelProvider {
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            Stream.of(CoreOres.values()).forEach(ore -> {
-                if (!ore.isGraded() && ore.hasBlock()) {
-                    simpleBlock(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore));
-                }
-
-                Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                    if (ore.isGraded()) {
-                        simpleBlock(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade));
+            if (rock.hasOres()) {
+                Stream.of(CoreOres.values()).forEach(ore -> {
+                    if (!ore.isGraded() && ore.hasBlock()) {
+                        simpleBlock(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore));
                     }
+
+                    Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                        if (ore.isGraded()) {
+                            simpleBlock(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade));
+                        }
+                    });
                 });
-            });
 
-            Stream.of(Ore.values()).forEach(ore -> {
-                if (!ore.isGraded() && ore.hasBlock()) {
-                    simpleBlock(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore));
-                }
-
-                Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                    if (ore.isGraded()) {
-                        simpleBlock(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade));
+                Stream.of(Ore.values()).forEach(ore -> {
+                    if (!ore.isGraded() && ore.hasBlock()) {
+                        simpleBlock(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore));
                     }
+
+                    Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                        if (ore.isGraded()) {
+                            simpleBlock(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade));
+                        }
+                    });
                 });
-            });
+            }
         });
 
         for (CoreRocks rock : CoreRocks.values()){
             for (OreDeposit ore : OreDeposit.values()){
-                simpleBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore));
+                if (rock.hasOres()) {
+                    simpleBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore));
+                }
             }
         }
 
@@ -173,6 +177,18 @@ public class BuiltinItemModels extends ItemModelProvider {
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.CRATE));
             simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE), getBlockModelLocation(AncientGroundCore.MOD_ID,CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE).getId().getPath() + "_lower"));
             simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SAPLING).get().asItem(), TextureUtil.getSaplingTexture(woodType));
+
+            // barrel item
+            DeferredHolder<Block, Block> block = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.BARREL);
+
+            ResourceLocation locationOpened = ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), block.getId().getPath());
+            ResourceLocation locationSealed = ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), block.getId().getPath() + "_sealed");
+
+            ModelFile modelSealed = new ModelFile.ExistingModelFile(getBlockModelLocation(locationSealed), existingFileHelper);
+
+            withExistingParent(getItemModelString(block.getId()), getBlockModelLocation(locationOpened)).override()
+                    .predicate(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "sealed"), 1.0f)
+                    .model(modelSealed);
         });
 
         // buckets
@@ -285,18 +301,19 @@ public class BuiltinItemModels extends ItemModelProvider {
         // not tied to the item itself, it's referenced in the deposit data definition.
         for (OreDeposit ore : OreDeposit.values()){
             for (CoreRocks rock : CoreRocks.values()){
+                if (rock.hasOres()) {
+                    ResourceLocation texture = Objects.requireNonNull(TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL));
+                    String oreId = ore.name().toLowerCase(Locale.ROOT);
+                    String rockId = rock.getSerializedName();
 
-                ResourceLocation texture = Objects.requireNonNull(TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL));
-                String oreId = ore.name().toLowerCase(Locale.ROOT);
-                String rockId = rock.getSerializedName();
+                    this.getBuilder("%s:item/pan/%s/%s_full".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
+                            .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/full"))
+                            .texture("material", texture);
 
-                this.getBuilder("%s:item/pan/%s/%s_full".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
-                        .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/full"))
-                        .texture("material", texture);
-
-                this.getBuilder("%s:item/pan/%s/%s_half".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
-                        .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/half"))
-                        .texture("material", texture);
+                    this.getBuilder("%s:item/pan/%s/%s_half".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
+                            .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/half"))
+                            .texture("material", texture);
+                }
             }
         }
 

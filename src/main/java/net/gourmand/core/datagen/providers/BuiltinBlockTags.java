@@ -125,19 +125,17 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         );
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            Stream.of(Ore.values()).forEach(ore -> {
-                if (ore.hasBlock())
-                {
-                    if (ore.isGraded())
-                    {
-                        addGradedOreTags(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES, ore, rock);
+            if (rock.hasOres()) {
+                Stream.of(Ore.values()).forEach(ore -> {
+                    if (ore.hasBlock()) {
+                        if (ore.isGraded()) {
+                            addGradedOreTags(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES, ore, rock);
+                        } else {
+                            addOreTags(CoreBlocks.CUSTOM_ROCK_TFC_ORES, ore, rock);
+                        }
                     }
-                    else
-                    {
-                        addOreTags(CoreBlocks.CUSTOM_ROCK_TFC_ORES, ore, rock);
-                    }
-                }
-            });
+                });
+            }
         });
 
         Stream.of(CoreOres.values()).forEach(ore -> {
@@ -151,13 +149,12 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             else
             {
                 Stream.of(CoreRocks.values()).forEach(rock -> {
-                    if (ore.isGraded())
-                    {
-                        addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
-                    }
-                    else
-                    {
-                        addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
+                    if (rock.hasOres()) {
+                        if (ore.isGraded()) {
+                            addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
+                        } else {
+                            addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
+                        }
                     }
                 });
                 Stream.of(Rock.values()).forEach(rock -> {
@@ -174,8 +171,10 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            this.tag(SpectrumBlockTags.AZURITE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE).getKey());
-            this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
+            if (rock.hasOres()) {
+                this.tag(SpectrumBlockTags.AZURITE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE).getKey());
+                this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
+            }
         });
 
         Stream.of(Rock.values()).forEach(rock -> {
@@ -184,10 +183,12 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            add(CoreBlocks.ORE_DEPOSITS.get(rock), List.of(
-                    TFCTags.Blocks.CAN_LANDSLIDE,
-                    BlockTags.MINEABLE_WITH_SHOVEL
-            ));
+            if (rock.hasOres()) {
+                add(CoreBlocks.ORE_DEPOSITS.get(rock), List.of(
+                        TFCTags.Blocks.CAN_LANDSLIDE,
+                        BlockTags.MINEABLE_WITH_SHOVEL
+                ));
+            }
         });
 
         Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
@@ -311,13 +312,16 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SLUICE).getKey())
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TOOL_RACK).getKey())
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SHELF).getKey())
-                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.LOOM).getKey());
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.LOOM).getKey())
+                    .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.BARREL).getKey());
 
             this.tag(TFCTags.Blocks.SUPPORT_BEAMS)
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).getKey())
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).getKey());
 
             this.tag(TFCTags.Blocks.CAN_BE_SNOW_PILED).add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG).getKey());
+
+            this.tag(TFCTags.Blocks.CLOCK_READABLE).add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.BARREL).getKey());
         });
 
         Stream.of(CoreClay.values()).forEach(clay -> {

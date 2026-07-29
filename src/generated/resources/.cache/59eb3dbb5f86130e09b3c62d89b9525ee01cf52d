@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-27T21:56:18.583703117	Loot Tables
+// 1.21.1	2026-07-29T09:15:01.94714377	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -1946,6 +1946,27 @@ a5fe135e8f2894b81899358dd5eb4a8f8ce506f1 data/modpack/loot_table/blocks/sludge.j
 a27121b3f2f4af14e424f8d73a35e27bc81fbfc5 data/modpack/loot_table/blocks/wild_crop/cotton.json
 bfb05a0351a0abe4951b2576d84685fc28b2cc44 data/modpack/loot_table/blocks/wild_crop/glistering_melon.json
 2ff0c8334ff9a0c1c38e6c45e0a9e6669d39b3be data/modpack/loot_table/blocks/wild_crop/wart.json
+d560bb0241e06822b32b8058885be41b900c39dd data/modpack/loot_table/blocks/wood/barrel/black.json
+1d9a9d89166edd1914a0ba1d113396a4b10b02ee data/modpack/loot_table/blocks/wood/barrel/blue.json
+aa6f5e81053ad11ca2e9c3b9da52401fbdb4feec data/modpack/loot_table/blocks/wood/barrel/brown.json
+f925db2d9bf3c107b1f1a65e4b5ae55710147535 data/modpack/loot_table/blocks/wood/barrel/chestnut_noxwood.json
+51574ab54ecef3fca8b417378da752dd44f9fff7 data/modpack/loot_table/blocks/wood/barrel/cyan.json
+534a98aa9d08fd6c07be707b9a6182b65ed8d55e data/modpack/loot_table/blocks/wood/barrel/ebony_noxwood.json
+dccb0ef3c0e30e41c84ef2c939a9f8258e8e83ca data/modpack/loot_table/blocks/wood/barrel/gray.json
+ab8eae8d1303ba58335d920f2d50a11cb99b4535 data/modpack/loot_table/blocks/wood/barrel/green.json
+6b2cab05485e32fd0afde7b6e34f0b8ad016cd5b data/modpack/loot_table/blocks/wood/barrel/ivory_noxwood.json
+7c17141c337bb12c116653a4fcb582d9f930f68b data/modpack/loot_table/blocks/wood/barrel/light_blue.json
+9780e27a9ac1db298a16e633ed514e259ffe124d data/modpack/loot_table/blocks/wood/barrel/light_gray.json
+e8873addb037932dd66aff98399e8d086ad2df08 data/modpack/loot_table/blocks/wood/barrel/lime.json
+863649b1f52c501c1b7ff74b9a9e60023baf46c0 data/modpack/loot_table/blocks/wood/barrel/magenta.json
+67fdebee69f65ed3d0ddbb2ab208a0dff4fa9e21 data/modpack/loot_table/blocks/wood/barrel/orange.json
+3d4a91a0f8eaf71f73c3d930e6c4b6abd67f61dc data/modpack/loot_table/blocks/wood/barrel/pink.json
+68cf2a9b763f4e1b5d12cfa4c76bc18a8178a399 data/modpack/loot_table/blocks/wood/barrel/purple.json
+b98fc4382c293427dfff25475c215163b0deac3e data/modpack/loot_table/blocks/wood/barrel/red.json
+a8fbe78e5d74185a2cb4723a1bb03a104ac04ba1 data/modpack/loot_table/blocks/wood/barrel/slate_noxwood.json
+9a5587614f340ea658b1a71b1aaabfeaa3286163 data/modpack/loot_table/blocks/wood/barrel/weeping_gala.json
+ad40529a3ef2088a7061a446da2c3b2887412e42 data/modpack/loot_table/blocks/wood/barrel/white.json
+b3a3aca90d7f0881151f2c8c53009e8599aa282a data/modpack/loot_table/blocks/wood/barrel/yellow.json
 ab58a2eaee9e32f73bf00508d448f999c2efc3ca data/modpack/loot_table/blocks/wood/boards/acacia.json
 8c61115c812696aae7b581b69ead56005d5af2c8 data/modpack/loot_table/blocks/wood/boards/araucaria.json
 e0f12d1db6a9cf4023624f28de366031d82c26a8 data/modpack/loot_table/blocks/wood/boards/ash.json

@@ -374,13 +374,13 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createLargeVesselBlockTable(Block block){
+    protected static LootTable.Builder createSealableBlockTable(Block block){
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(AlternativesEntry.alternatives(
                                 LootItem.lootTableItem(block)
                                         .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LargeVesselBlock.SEALED, true))
+                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TFCBlockStateProperties.SEALED, true))
                                         ).apply(CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY).include(DataComponents.CUSTOM_NAME).include(TFCComponents.CONTENTS.get())),
                                 LootItem.lootTableItem(block.asItem())
                         ))

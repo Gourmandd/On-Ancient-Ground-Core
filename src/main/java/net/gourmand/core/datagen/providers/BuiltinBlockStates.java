@@ -1,10 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 import de.dafuqs.spectrum.blocks.crystallarieum.SpectrumClusterBlock;
-import net.dries007.tfc.common.blocks.LargeVesselBlock;
-import net.dries007.tfc.common.blocks.OreDeposit;
-import net.dries007.tfc.common.blocks.RockRopeAnchorBlock;
-import net.dries007.tfc.common.blocks.ShelfBlock;
+import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.common.blocks.wood.*;
@@ -19,10 +16,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.AttachFace;
-import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.block.state.properties.StairsShape;
+import net.minecraft.world.level.block.state.properties.*;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -72,34 +66,38 @@ public class BuiltinBlockStates extends BlockStateProvider {
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            Stream.of(CoreOres.values()).forEach(ore -> {
-                if (!ore.isGraded() && ore.hasBlock()) {
-                    simpleOre(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), rock, ore);
-                }
-
-                Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                    if (ore.isGraded()) {
-                        simpleOre(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
+            if (rock.hasOres()){
+                Stream.of(CoreOres.values()).forEach(ore -> {
+                    if (!ore.isGraded() && ore.hasBlock()) {
+                        simpleOre(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), rock, ore);
                     }
+
+                    Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                        if (ore.isGraded()) {
+                            simpleOre(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
+                        }
+                    });
                 });
-            });
 
-            Stream.of(Ore.values()).forEach(ore -> {
-                if (!ore.isGraded() && ore.hasBlock()) {
-                    simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), rock, ore);
-                }
-
-                Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                    if (ore.isGraded()) {
-                        simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
+                Stream.of(Ore.values()).forEach(ore -> {
+                    if (!ore.isGraded() && ore.hasBlock()) {
+                        simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), rock, ore);
                     }
+
+                    Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                        if (ore.isGraded()) {
+                            simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
+                        }
+                    });
                 });
-            });
+            }
         });
 
         for (CoreRocks rock : CoreRocks.values()){
             for (OreDeposit ore : OreDeposit.values()){
-                oreDeposit(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), rock, ore);
+                if (rock.hasOres()){
+                    oreDeposit(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), rock, ore);
+                }
             }
         }
 
@@ -168,6 +166,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
             sluiceBlock(map.get(Wood.BlockType.SLUICE), woodType);
             cross(map.get(Wood.BlockType.SAPLING), TextureUtil.getSaplingTexture(woodType));
             cubeAll(map.get(Wood.BlockType.CRATE), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/wood/crate/" + woodType.getSerializedName()));
+            barrelBlock(map.get(Wood.BlockType.BARREL), woodType);
         });
 
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
@@ -871,6 +870,98 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 .partialState().with(CopperBulbBlock.LIT, false).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredModel))
                 .partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredLitModel));
     }
+
+    private void barrelBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
+        this.getVariantBuilder(block.get()).forAllStates((blockState -> {
+
+            ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
+            ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
+
+            String barrelModelLocation = "tfc:block/barrel";
+            String sideBarrelModelLocation = "tfc:block/barrel_side";
+            String sideRackBarrelModelLocation = "tfc:block/barrel_side_rack";
+
+            String sealedBarrelModelLocation = "tfc:block/barrel_sealed";
+            String sealedSideBarrelModelLocation = "tfc:block/barrel_side_sealed";
+            String sealedSideRackBarrelModelLocation = "tfc:block/barrel_side_sealed_rack";
+
+
+            boolean isRacked = blockState.getValue(TFCBlockStateProperties.RACK);
+            boolean isSealed = blockState.getValue(TFCBlockStateProperties.SEALED);
+            Direction facing = blockState.getValue(TFCBlockStateProperties.FACING_NOT_DOWN);
+            ModelFile model;
+            int yRot;
+
+
+
+            String baseModelLocation = getBlockModelString(block.getId());
+            // for example "modpack:block/wood/barrel/white"
+
+            ModelFile openModel = createModel(baseModelLocation, barrelModelLocation)
+                    .texture("particle", texturePlank)
+                    .texture("planks", texturePlank)
+                    .texture("sheet", textureSmooth);
+
+            ModelFile sideOpenModel = createModel(baseModelLocation + "_side", sideBarrelModelLocation)
+                    .texture("particle", texturePlank)
+                    .texture("planks", texturePlank)
+                    .texture("sheet", textureSmooth)
+;
+
+            ModelFile sideRackOpenModel = createModel(baseModelLocation + "_side_rack", sideRackBarrelModelLocation)
+                    .texture("particle", texturePlank)
+                    .texture("planks", texturePlank)
+                    .texture("sheet", textureSmooth);
+
+            ModelFile sealedModel = createModel(baseModelLocation + "_sealed", sealedBarrelModelLocation)
+                    .texture("particle", texturePlank)
+                    .texture("planks", texturePlank)
+                    .texture("sheet", textureSmooth);
+
+            ModelFile sideSealedModel = createModel(baseModelLocation + "_sealed_side", sealedSideBarrelModelLocation)
+                    .texture("particle", texturePlank)
+                    .texture("planks", texturePlank)
+                    .texture("sheet", textureSmooth);
+
+            ModelFile sideRackSealedModel = createModel(baseModelLocation + "_sealed_side_rack", sealedSideRackBarrelModelLocation)
+                    .texture("particle", texturePlank)
+                    .texture("planks", texturePlank)
+                    .texture("sheet", textureSmooth);
+
+            if (facing == Direction.UP){
+                if (isSealed){
+                    model = sealedModel;
+                } else {
+                    model = openModel;
+                }
+            } else {
+                // if not up, then is sideways.
+                if (isRacked){
+                    if (isSealed){
+                        model = sideRackSealedModel;
+                    } else {
+                        model = sideRackOpenModel;
+                    }
+                } else {
+                    if (isSealed){
+                        model = sideSealedModel;
+                    } else {
+                        model = sideOpenModel;
+                    }
+                }
+            }
+
+            switch (facing){
+                case WEST -> yRot = 180;
+                case SOUTH -> yRot = 90;
+                case NORTH -> yRot = 270;
+                default -> yRot = 0;
+            }
+
+            return ConfiguredModel.builder().modelFile(model).rotationY(yRot).build();
+        }));
+    }
+
 
     private void fluidBlock(DeferredHolder<Block, LiquidBlock> block) {
 

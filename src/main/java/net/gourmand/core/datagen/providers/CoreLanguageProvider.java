@@ -190,7 +190,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
             if (ore.hasBlock()){
                 Stream.of(CoreRocks.values()).forEach(rock -> {
-                    if (ore.isGraded()){
+                    if (ore.isGraded() && rock.hasOres()){
                         Stream.of(CoreOres.Grade.values()).forEach(grade -> {
                             createOreKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
                         });
@@ -225,7 +225,7 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
             if (ore.hasBlock()){
                 Stream.of(CoreRocks.values()).forEach(rock -> {
-                    if (ore.isGraded()){
+                    if (ore.isGraded() && rock.hasOres()){
                         Stream.of(CoreOres.Grade.values()).forEach(grade -> {
                             createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
                         });
@@ -265,9 +265,11 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {
-            Streams.of(OreDeposit.values()).forEach(ore -> {
-                addBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), getName(rock) + " " + getName(ore.name().toLowerCase(Locale.ROOT)) + " Deposit");
-            });
+            if (rock.hasOres()) {
+                Streams.of(OreDeposit.values()).forEach(ore -> {
+                    addBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), getName(rock) + " " + getName(ore.name().toLowerCase(Locale.ROOT)) + " Deposit");
+                });
+            }
         });
 
         addBlock(CoreBlocks.SLUDGE, "Sludge");
