@@ -191,8 +191,8 @@ dependencies {
     implementation "curse.maven:arborfirmacraft-877545:8337732"
 
     // Spectrum Dependencies
-    implementation "curse.maven:spectrum-556967:8037133"
-    implementation "curse.maven:revelationary-656526:6728488"
+    implementation "curse.maven:spectrum-556967:8564379"
+    implementation "curse.maven:revelationary-656526:8259338"
     implementation "dev.architectury:architectury-neoforge:13.0.8"
     implementation "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"

@@ -1,6 +1,6 @@
 package net.gourmand.core.datagen.providers;
 
-import de.dafuqs.spectrum.blocks.crystallarieum.SpectrumClusterBlock;
+import de.dafuqs.spectrum.blocks.gemstone.SpectrumClusterBlock;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.rock.*;

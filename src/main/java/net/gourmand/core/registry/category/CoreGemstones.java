@@ -1,10 +1,10 @@
 package net.gourmand.core.registry.category;
 
-import de.dafuqs.spectrum.api.energy.color.InkColor;
-import de.dafuqs.spectrum.api.energy.color.InkColors;
+import de.dafuqs.spectrum.api.ink.color.InkColor;
+import de.dafuqs.spectrum.api.ink.color.InkColors;
 import de.dafuqs.spectrum.api.item.GemstoneColor;
-import de.dafuqs.spectrum.blocks.crystallarieum.SpectrumClusterBlock;
 import de.dafuqs.spectrum.blocks.gemstone.SpectrumBuddingBlock;
+import de.dafuqs.spectrum.blocks.gemstone.SpectrumClusterBlock;
 import de.dafuqs.spectrum.blocks.gemstone.SpectrumGemstoneBlock;
 import de.dafuqs.spectrum.registries.SpectrumSoundEvents;
 import de.dafuqs.spectrum.registries.SpectrumSoundTypes;
