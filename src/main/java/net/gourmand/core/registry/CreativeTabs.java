@@ -307,7 +307,6 @@ public class CreativeTabs {
     private static void fillMisc(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
         out.accept(Items.BUNDLE);
-        out.accept(CoreBlocks.SLUDGE.get());
         out.accept(CoreBlocks.PRISMATIC_ICE.get());
         out.accept(CoreBlocks.LEAD_BULB_BLOCK.get());
     }

@@ -211,7 +211,6 @@ public class BuiltinBlockStates extends BlockStateProvider {
         });
 
         cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/prismatic_ice" ));
-        cubeAll(CoreBlocks.SLUDGE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/sludge" ));
 
         Stream.of(CoreGemstones.values()).forEach(gem -> {
 
