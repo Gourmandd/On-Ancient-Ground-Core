@@ -437,7 +437,7 @@ public class BuiltinBlockTags extends TagsProvider<Block>
 
     private <T1 extends RegistryRock, T2 extends Enum> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock){
         ResourceKey<Block> key = map.get(rock).get(ore).getKey();
-        this.tag(getOreTierTag(ore)).add(key);
+        this.tag(BlockTags.NEEDS_STONE_TOOL).add(key);
         this.tag(Tags.Blocks.ORES).add(key);
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(key);
         this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
@@ -447,23 +447,10 @@ public class BuiltinBlockTags extends TagsProvider<Block>
 
         for (CoreOres.Grade grade : CoreOres.Grade.values()){
             ResourceKey<Block> key = map.get(rock).get(ore).get(grade).getKey();
-            this.tag(getOreTierTag(ore)).add(key);
+            this.tag(BlockTags.NEEDS_STONE_TOOL).add(key);
             this.tag(Tags.Blocks.ORES).add(key);
             this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(key);
             this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
         }
-    }
-
-    private TagKey<Block> getOreTierTag(Enum ore){
-
-        if (ore instanceof Ore){
-            return CategoryUtil.Ores.TFC_ORES_TO_MINING_TIER_TAG.get(ore);
-        }
-
-        if (ore instanceof CoreOres){
-            return CategoryUtil.Ores.CORE_ORE_TO_MINING_TIER_TAG.get(ore);
-        }
-
-        return null;
     }
 }

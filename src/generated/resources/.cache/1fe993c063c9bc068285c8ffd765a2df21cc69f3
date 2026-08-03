@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-29T10:51:40.111699026	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-08-03T09:08:38.8053755	Tags for minecraft:block mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/block/boards.json
 ff9b997efca1803dd84c8edf5041c872552abec4 data/c/tags/block/cobblestones.json
 8ab0167fc08d0663346e6a1b8aa95ba1787c8da5 data/c/tags/block/cobblestones/mossy.json
@@ -18,9 +18,7 @@ cd61a20ef02541d9d2d3257324508326d4407777 data/c/tags/block/stones/spike.json
 8b7eeba5d1dd69a38cd7f66f9b0476b79b689442 data/minecraft/tags/block/mineable/hoe.json
 adb551d7022c7e8b30f5217c87ab6fb3aff1f173 data/minecraft/tags/block/mineable/pickaxe.json
 f1543dfff764c601275b79ed10d7e5d212620e44 data/minecraft/tags/block/mineable/shovel.json
-0c7e58930c42d157e069baf52e48e04dd644b409 data/minecraft/tags/block/needs_diamond_tool.json
-1aea6bafc7cde9f9c853fc27979a2e4ea1ff27b7 data/minecraft/tags/block/needs_iron_tool.json
-6a7c9855af054ddab8d84eba166ee1a755ac69e7 data/minecraft/tags/block/needs_stone_tool.json
+92867addd56383211cd747394eb7ae481129ba2d data/minecraft/tags/block/needs_stone_tool.json
 d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/pressure_plates.json
 86e365f4c654d791d393e17f9aeeabb34bb9833f data/minecraft/tags/block/slabs.json
 5ed049f0f5ea050952c93a0961f6e802092c4660 data/minecraft/tags/block/stairs.json
@@ -31,7 +29,6 @@ d4318b7c1669f905ef550da9c7648625f0433977 data/minecraft/tags/block/stone_pressur
 650fe2107b7e1320b82ea4a13c1c3cdf3d4894ff data/modpack/tags/block/cobblestones/mortared.json
 10bc593796795d9886f8935e63f9fb19fabf09d7 data/modpack/tags/block/gemstone_blocks.json
 341d3a8bcca759951f2de06dcbc28ef705e7d73d data/modpack/tags/block/snow_shovel_mineable.json
-60aea071bb0d83047d24fcbdf4622f32cdcc9ceb data/neoforge/tags/block/needs_netherite_tool.json
 1f622d7c3c56c02b054a1b5a0fe88eefa159b879 data/spectrum/tags/block/azurite_ores.json
 5e9cc8724688010641c1b86ba736c9a6060af541 data/spectrum/tags/block/shimmerstone_ores.json
 2860e2b2596b19e1464dfcf80309f988a742c446 data/tfc/tags/block/aqueducts.json
