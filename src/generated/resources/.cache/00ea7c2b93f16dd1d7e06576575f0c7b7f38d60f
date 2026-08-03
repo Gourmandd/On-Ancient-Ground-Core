@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-29T10:51:40.184839113	Item Models: modpack
+// 1.21.1	2026-08-03T10:48:38.248201077	Item Models: modpack
 b8df96e7282ff27ca42fd2f2aedbfcb8656f0161 assets/modpack/models/item/anthracite.json
 4e2038d7064ab69b0adf00e340ce04d8330265f5 assets/modpack/models/item/bauxite.json
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
@@ -1963,7 +1963,6 @@ e50bc4b9cf9d590c520a657ab607f3bf9e749250 assets/modpack/models/item/rock/spike/p
 3023a39c29c2c6cf9ec835005574eaa22c86478a assets/modpack/models/item/rock/spike/soapstone.json
 9b6a7306e8bf0358f4f9a98561a3f99dca5d6f42 assets/modpack/models/item/rock/spike/suevite.json
 baf032dd21cfaa44e85022c7d33f11237a3cccc4 assets/modpack/models/item/rock/spike/travertine.json
-d2ee205d2b6b8086f7a3365a8f8cf11c2f935053 assets/modpack/models/item/sludge.json
 7939f481e85832c8420dc627747141cc2ab4c045 assets/modpack/models/item/wood/barrel/black.json
 aa4a8788255b2a1e41c349e08a2ffc2f69e9bf0f assets/modpack/models/item/wood/barrel/blue.json
 1405f4ba6b834adc8ad059da780dc6d8e435afe3 assets/modpack/models/item/wood/barrel/brown.json

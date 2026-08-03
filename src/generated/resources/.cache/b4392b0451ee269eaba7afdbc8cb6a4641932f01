@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-29T10:51:40.160157243	Block States: modpack
+// 1.21.1	2026-08-03T10:48:38.22381123	Block States: modpack
 28ef1e55551722f68f204d793cc49f3d5e37320d assets/modpack/blockstates/anthracite.json
 916700fca3bb7acd96169872356a8367e8537559 assets/modpack/blockstates/bauxite.json
 64ad5ff574f6381ee7771836d592b3d17de0acb6 assets/modpack/blockstates/ceramic/bricks/earthenware.json
@@ -1666,7 +1666,6 @@ b7ac3206427482999cdce4a4dc0f95f074a715ac assets/modpack/blockstates/rock/spike/r
 549152181c75084282b4adbd94154d4f83d3ea59 assets/modpack/blockstates/rock/spike/soapstone.json
 271dd22c89136ef66285772e27536ee434a32818 assets/modpack/blockstates/rock/spike/suevite.json
 526141329f2c47d2b6bd8795286853143eaf80f3 assets/modpack/blockstates/rock/spike/travertine.json
-43c495911c99cc472195cb9d42a879869cf0215e assets/modpack/blockstates/sludge.json
 394c77bca9e499814b5650e4d4c4bd22305d0082 assets/modpack/blockstates/wood/barrel/black.json
 0903ceb39e67f52937163cac54598f01dd5dff75 assets/modpack/blockstates/wood/barrel/blue.json
 140b74a03ae0c1ad504af0ab77838597f824a4b7 assets/modpack/blockstates/wood/barrel/brown.json
@@ -4199,7 +4198,6 @@ c30619e040ba749fa9a4a29134ff1fb2aa78b960 assets/modpack/models/block/rock/spike/
 fa156ce3e1f90037152c1c9e951b1d8e9a6a8635 assets/modpack/models/block/rock/spike/travertine_base.json
 daa6396fb8ef1be2a360fbec39361fa841176b0a assets/modpack/models/block/rock/spike/travertine_middle.json
 8fa4229d952df3ad3f605623647b7c53e6f48b3b assets/modpack/models/block/rock/spike/travertine_tip.json
-f234237bda05b3a90fa61f9d49c8379b78a0fcc2 assets/modpack/models/block/sludge.json
 d642f8f9959aef9145a3ee1dd3afd99de0ab5812 assets/modpack/models/block/wood/barrel/black.json
 424503bdea568ec37f9d17be51220404d76066e6 assets/modpack/models/block/wood/barrel/black_sealed.json
 6cd16481a4b6c10af3311e648192ccaa016060dc assets/modpack/models/block/wood/barrel/black_sealed_side.json

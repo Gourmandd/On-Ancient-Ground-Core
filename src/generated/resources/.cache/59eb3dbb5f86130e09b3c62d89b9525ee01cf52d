@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-29T10:51:40.112482181	Loot Tables
+// 1.21.1	2026-08-03T10:48:38.212012584	Loot Tables
 441a94935e7e8765627a73ade98cee060c624630 data/modpack/loot_table/blocks/anthracite.json
 4cb1ae8fe6f266d6a2c8fac66239a72751125613 data/modpack/loot_table/blocks/bauxite.json
 95c0e086c5a4357897fedaa782ec09fcb40ce68a data/modpack/loot_table/blocks/ceramic/bricks/earthenware.json
@@ -1680,7 +1680,6 @@ aac3e1da5a2a381370df01ac4547b51d332d33ac data/modpack/loot_table/blocks/rock/spi
 ab271c78e1b50f762df9283af72785fd54d1fb13 data/modpack/loot_table/blocks/rock/spike/soapstone.json
 3fa54a84ff378189ca685210ac935d3688adedbd data/modpack/loot_table/blocks/rock/spike/suevite.json
 f45973b8c598eec8fe0153589ac0f965f57a7e04 data/modpack/loot_table/blocks/rock/spike/travertine.json
-a5fe135e8f2894b81899358dd5eb4a8f8ce506f1 data/modpack/loot_table/blocks/sludge.json
 4f7d5e4b8608973d8c106197d01467ad06f0e32c data/modpack/loot_table/blocks/wild_crop/amaranth.json
 65c06711bb9e6331de315c8508c3d61e19c237b9 data/modpack/loot_table/blocks/wild_crop/coffee.json
 a27121b3f2f4af14e424f8d73a35e27bc81fbfc5 data/modpack/loot_table/blocks/wild_crop/cotton.json
