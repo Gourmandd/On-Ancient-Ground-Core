@@ -1,0 +1,73 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "devices",
+  "description": "book.modpack.guide.devices.mixing_bowl.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "firmalife:mixing_bowl"
+  },
+  "name": "book.modpack.guide.devices.mixing_bowl.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "firmalife:mixing_bowl"
+      },
+      "text": "book.modpack.guide.devices.mixing_bowl.page1.text",
+      "title": "book.modpack.guide.devices.mixing_bowl.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "firmalife:crafting/mixing_bowl",
+      "text": "book.modpack.guide.devices.mixing_bowl.page2.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:mixing_bowl",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "firmalife:mixing_bowl/food/butter",
+      "text": "book.modpack.guide.devices.mixing_bowl.page3.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:mixing_bowl",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "firmalife:mixing_bowl/food/pumpkin_pie_dough",
+      "text": "book.modpack.guide.devices.mixing_bowl.page4.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modpack:mixing_bowl",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "firmalife:mixing_bowl/food/chocolate_chip_cookie_dough",
+      "text": "book.modpack.guide.devices.mixing_bowl.page5.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 21,
+  "x": 2,
+  "y": 0
+}
