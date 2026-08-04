@@ -1,4 +1,4 @@
-package net.gourmand.core.datagen.book.guide.entries.homesteading;
+package net.gourmand.core.datagen.book.guide.entries.devices;
 
 import com.eerussianguy.firmalife.FirmaLife;
 import com.eerussianguy.firmalife.common.FLTags;

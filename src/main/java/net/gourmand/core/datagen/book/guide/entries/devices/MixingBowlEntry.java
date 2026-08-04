@@ -1,7 +1,6 @@
-package net.gourmand.core.datagen.book.guide.entries.homesteading;
+package net.gourmand.core.datagen.book.guide.entries.devices;
 
 import com.eerussianguy.firmalife.FirmaLife;
-import com.eerussianguy.firmalife.common.FLTags;
 import com.eerussianguy.firmalife.common.blocks.FLBlocks;
 import com.klikli_dev.modonomicon.api.datagen.CategoryProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;
@@ -10,82 +9,88 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookCraftingRecipePageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
-import net.dries007.tfc.common.blocks.wood.Wood;
-import net.gourmand.core.modonomicon.datagen.BookStompingBarrelPageModel;
+import net.gourmand.core.modonomicon.datagen.BookMixingBowlPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class StompingBarrelEntry extends EntryProvider {
+public class MixingBowlEntry extends EntryProvider {
 
-    public StompingBarrelEntry(CategoryProviderBase parent) {
+    public MixingBowlEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
     protected void generatePages() {
 
-        // page 1: explain stomping barrel.
+        // page 1: explain mixing bowl.
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(FLTags.Items.STOMPING_BARRELS))
+                .withItem(Ingredient.of(FLBlocks.MIXING_BOWL.asItem()))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                The **Stomping Barrel** is a device where you can crush items manually by jumping 16 times.
+                The **Mixing Bowl** is a device letting you mix up to 5 items and a fluid together by hand using a **Spoon**.
                 \\
                 \\
-                This serves as an alternative to using a **Quern**.
-                \\
-                \\
-                Use **Right-Click** with an item in hand to place items, and with an empty had to remove items.
+                Use **Right-Click** with an item or bucket in hand to add items of fluids, and with an empty hand or bucket to remove them.
+                Then **Right-Click** with a **Spoon** to start mixing.
                 """);
 
         // page 2: crafting recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/wood/stomping_barrel/ash"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/mixing_bowl"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-               The stomping barrel is made from lumber, and glue.
+               The mixing bowl is made from treated lumber, and glue.
                \s""");
 
         // page 3: recipe.
-        this.page("page3", () -> BookStompingBarrelPageModel.create()
+        this.page("page3", () -> BookMixingBowlPageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/smashed_red_grapes"))
-                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/smashed_white_grapes"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/butter"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-               Red and white grapes can be stomped.
+               Making butter in the mixing bowl.
                """);
 
-        // page 4: crafting recipe.
-        this.page("page4", () -> BookStompingBarrelPageModel.create()
+        // page 4: recipe.
+        this.page("page4", () -> BookMixingBowlPageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/soybean_paste"))
-                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/powder/charcoal"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/pumpkin_pie_dough"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-               Soybeans and charcoal can also be stomped.
+               Pumpkin Pie dough recipe.
+               \s""");
+
+        // page 5: recipe.
+        this.page("page5", () -> BookMixingBowlPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/chocolate_chip_cookie_dough"))
+        );
+
+        this.pageTitle(entryName());
+        this.pageText("""
+               Chocolate chip cookie dough!
                \s""");
     }
 
     @Override
     protected String entryName() {
-        return "Stomping Barrel";
+        return "Mixing Bowl";
     }
 
     @Override
     protected String entryDescription() {
-        return "About Stomping Barrels.";
+        return "About Mixing Bowls.";
     }
 
     @Override
@@ -95,11 +100,11 @@ public class StompingBarrelEntry extends EntryProvider {
 
     @Override
     protected BookIconModel entryIcon() {
-        return BookIconModel.create(FLBlocks.STOMPING_BARRELS.get(Wood.ASH));
+        return BookIconModel.create(FLBlocks.MIXING_BOWL);
     }
 
     @Override
     protected String entryId() {
-        return "stomping_barrel";
+        return "mixing_bowl";
     }
 }

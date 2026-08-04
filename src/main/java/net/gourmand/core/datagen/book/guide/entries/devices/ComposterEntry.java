@@ -1,4 +1,4 @@
-package net.gourmand.core.datagen.book.guide.entries.homesteading;
+package net.gourmand.core.datagen.book.guide.entries.devices;
 
 import com.klikli_dev.modonomicon.api.datagen.CategoryProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;

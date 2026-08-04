@@ -30,6 +30,7 @@ public class ModonomiconIntegration {
     public static final ResourceLocation QUERN_PAGE = AncientGroundCore.location("quern");
     public static final ResourceLocation HEATING_PAGE = AncientGroundCore.location("heating");
     public static final ResourceLocation STOMPING_BARREL_PAGE = AncientGroundCore.location("stomping_barrel");
+    public static final ResourceLocation MIXING_BOWL_PAGE = AncientGroundCore.location("mixing_bowl");
 
     public static void registerPages(){
         LoaderRegistry.registerPageLoader(KNAPPING_PAGE, (BookPageJsonLoader<?>) BookKnappingPage::fromJson, BookKnappingPage::fromNetwork);
@@ -43,6 +44,7 @@ public class ModonomiconIntegration {
         LoaderRegistry.registerPageLoader(QUERN_PAGE, (BookPageJsonLoader<?>) BookQuernPage::fromJson, BookQuernPage::fromNetwork);
         LoaderRegistry.registerPageLoader(HEATING_PAGE, (BookPageJsonLoader<?>) BookHeatingPage::fromJson, BookHeatingPage::fromNetwork);
         LoaderRegistry.registerPageLoader(STOMPING_BARREL_PAGE, (BookPageJsonLoader<?>) BookStompingBarrelPage::fromJson, BookStompingBarrelPage::fromNetwork);
+        LoaderRegistry.registerPageLoader(MIXING_BOWL_PAGE, (BookPageJsonLoader<?>) BookMixingBowlPage::fromJson, BookMixingBowlPage::fromNetwork);
     }
 
     public static void registerPageRenderers() {
@@ -57,6 +59,7 @@ public class ModonomiconIntegration {
         PageRendererRegistry.registerPageRenderer(QUERN_PAGE, p -> new BookQuernPageRenderer((BookQuernPage) p));
         PageRendererRegistry.registerPageRenderer(HEATING_PAGE, p -> new BookHeatingPageRenderer((BookHeatingPage) p));
         PageRendererRegistry.registerPageRenderer(STOMPING_BARREL_PAGE, p -> new BookStompingBarrelPageRenderer((BookStompingBarrelPage) p));
+        PageRendererRegistry.registerPageRenderer(MIXING_BOWL_PAGE, p -> new BookMixingBowlPageRenderer((BookMixingBowlPage) p));
     }
 
     public static NeoFluidHolder getFluidHolder(Fluid fluid, int amount){

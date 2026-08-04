@@ -19,8 +19,8 @@ public class HomesteadingCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-            "_abc_g",
-            "_def_h",
+            "_____g",
+            "_____h",
             "_____i",
             "______",
             "______",
@@ -35,14 +35,6 @@ public class HomesteadingCategory extends CategoryProvider {
 
     @Override
     protected void generateEntries() {
-
-        var barrel = this.add(new BarrelEntry(this).generate("a"));
-        var quern = this.add(new QuernEntry(this).generate("b"));
-        var composter = this.add(new ComposterEntry(this).generate("c"));
-
-        var keg = this.add(new KegEntry(this).generate("d").withParent(barrel));
-        var stomping_barrel = this.add(new StompingBarrelEntry(this).generate("e"));
-        var wine_shelf = this.add(new WineShelfEntry(this).generate("f"));
 
         var cellar = this.add(new CellarEntry(this).generate("g"));
         var food_shelf = this.add(new FoodShelfEntry(this).generate("h"));
