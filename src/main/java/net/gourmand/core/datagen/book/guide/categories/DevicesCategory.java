@@ -64,21 +64,35 @@ public class DevicesCategory extends CategoryProvider {
         var bellow = this.add(new BellowsEntry(this).generate("s"));
         var crucible = this.add(new CrucibleEntry(this).generate("t"));
         var firebox = this.add(new KilnEntry(this).generate("u"));
+        // add firepit
+        // add wrought iron grill
+        // add stove
+        // add cooking pot
+        // add oven.
+        // add oven appliances.
 
         var mixing_bowl = this.add(new MixingBowlEntry(this).generate("v"));
         // add mechanical bits
         // add crankshaft
         // add minecarts
-        // add lamp guide
         // add steel pump (might be being removed in the pack, buckets can move sources)
         // add scribing table
         // add sewing table
-        // add stove (same as homesteading)
         // add climate station (maybe move this to greenhouse guide)
         // add compost tumbler
-        // add mixing bowl (same as homesteading)
-        // add wrought iron grill
-        //
+        // add drying mat
+
+        // add smithing table + trims.
+
+        // add torches
+        // add candles
+        // add jack o lanterns
+        // add lamps
+
+        // item frame (same entry as devices category)
+        // cartography table (same entry as devices category)
+        // banner loom (same entry as devices category)
+        // Loom entry.
     }
 
     @Override

@@ -42,17 +42,8 @@ public class CarpentryCategory extends CategoryProvider {
     @Override
     protected void generateEntries() {
         // add misc
-        // vanilla barrel
-        // powder keg (same entry as devices category)
         // barrel rack
-        // bed (same entry as devices category)
         // ladder
-        // composter (same entry as devices & homesteading category)
-        // item frame (same entry as devices category)
-        // cartography table (same entry as devices category)
-        // banner loom (same entry as devices category)
-        // note block (same entry as devices category)
-        // jukebox (same entry as devices category)
 
         var saw = this.add(new SawEntry(this).generate("a"));
 

@@ -26,7 +26,7 @@ public class MasonryCategory extends CategoryProvider {
     protected void generateEntries() {
         // add brick (item)
         // add mortar
-        // add bricks (block)
+        // add bricks (block) (see field guide "Advanced Materials")
         // add smooth (block)
         // add chiseled (block)
         // add pressure plate
@@ -35,7 +35,7 @@ public class MasonryCategory extends CategoryProvider {
         // add aqueducts
         // add mortared cobble
         // add collapse (same as mining category)
-        // add plaster
+        // add plaster (see field guide "Advanced Materials")
     }
 
     @Override

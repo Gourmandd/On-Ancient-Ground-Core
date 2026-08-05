@@ -24,18 +24,23 @@ public class AgricultureCategory extends CategoryProvider {
     @Override
     protected void generateEntries() {
         // add composter (same as homesteading)
-        // crop list
+        // explain crops + crop list
         // fruit tree list
         // bushes list
         // add animal husbandry
-        // soil type list
+        // soil type list (+ fertility)
         // fertiliser list
         // add hydration guide.
         // pet guide.
+        // beekeeping
         // greenhouse guide.
         // greenhouse irrigation
         // greenhouse planters
         // greenhouse automation
+        // add spices guide
+
+        // animal husbandry (explain how familiarity works)
+        // entry on each category of animal. & ones for each animal.
     }
 
     @Override

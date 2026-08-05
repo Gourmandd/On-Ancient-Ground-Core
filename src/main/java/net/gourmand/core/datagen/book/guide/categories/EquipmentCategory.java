@@ -34,6 +34,9 @@ public class EquipmentCategory extends CategoryProvider {
     @Override
     protected void generateEntries() {
 
+        //TODO: expand chisel entry. Include chiseling mechanic.
+        //TODO: explain fishing rod.
+
         var axe = this.add(new AxeEntry(this).generate("a"));
         var chisel = this.add(new ChiselEntry(this).generate("b"));
         var firestarters = this.add(new FirestartersEntry(this).generate("c"));

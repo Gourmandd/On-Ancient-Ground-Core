@@ -62,17 +62,18 @@ public class HomesteadingCategory extends CategoryProvider {
         var shelved_traits = this.add(new ShelvedTraitEntry(this).generate("*"));
         var smoked_trait = this.add(new SmokedTraitEntry(this).generate("("));
 
-        // add cheesemaking
-        // jarring guide
+        // dyeing guide.
+        // add cheesemaking.
+        // jarring guide.
         // add drying guide.
         // add smoking guide.
 
-        // fishing guide (here or in agriculture category?)
         // add olive oil making
         // leather making guide.
         // light sources guide
         // add papermaking
         // add scraping guide
+        // add clothmaking
 
         // add breadmaking (flatbread + bread)
         // add oven
@@ -82,12 +83,15 @@ public class HomesteadingCategory extends CategoryProvider {
         // salad making
         // soup making
         // firmalife spices guide
-        // add mixing bowl
         // chocolate making guide
         // pie making guide
         // pizza making guide
 
         // add pasta and burritos (I don't know, it's not a dynamic food, so a bit too specific)
+
+        // maybe add:
+        // gem entry
+        // flux entry
     }
 
     @Override

@@ -35,6 +35,8 @@ public class GettingStartedCategory extends CategoryProvider {
     protected void generateEntries() {
         // about modpack
 
+        // a bit of info about geology, (and in geology category).
+        // a bit of info about ores, (and in geology category).
         // add size and weight guide (somewhere relevant, maybe not here)
         // add food and water guide (somewhere relevant, maybe not here)
         // add calendar and climate (somewhere relevant, maybe not here)
@@ -74,7 +76,7 @@ public class GettingStartedCategory extends CategoryProvider {
 
     @Override
     protected String categoryName() {
-        return "Getting Started";
+        return "About This World";
     }
 
     @Override

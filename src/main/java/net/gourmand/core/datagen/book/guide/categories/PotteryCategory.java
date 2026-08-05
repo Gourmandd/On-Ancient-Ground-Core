@@ -36,6 +36,7 @@ public class PotteryCategory extends CategoryProvider {
     protected void generateEntries() {
 
         // add pit kiln guide
+        // TODO: Expand bowl entry and add it to devices.
 
         var clay = this.add(new ClayEntry(this).generate("a"));
 

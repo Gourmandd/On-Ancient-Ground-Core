@@ -31,6 +31,7 @@ public class MiningCategory extends CategoryProvider {
     protected void generateEntries() {
 
         // maybe could add powder keg entry here as well, to explain blast mining.
+        // add ropes.
 
         var ore_deposit = this.add(new OreDepositEntry(this).generate("a"));
         var sluice = this.add(new SluiceEntry(this).generate("b").withParent(ore_deposit));
@@ -41,7 +42,6 @@ public class MiningCategory extends CategoryProvider {
         var ore_indicators = this.add(new SurfaceOreEntry(this).generate("e"));
         var prospecting = this.add(new ProspectingEntry(this).generate("f").withParent(ore_indicators));
         var excavating_tools = this.add(new ExcavatingToolsEntry(this).generate("g").withParent(support));
-        //
     }
 
     @Override
