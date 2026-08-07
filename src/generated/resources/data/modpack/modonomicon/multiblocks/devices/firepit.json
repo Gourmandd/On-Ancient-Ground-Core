@@ -1,0 +1,33 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tfc:grass/fluvisol"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "block": "tfc:firepit[lit=true]"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:grass/fluvisol"
+    }
+  },
+  "pattern": [
+    [
+      "AAA",
+      "ACA",
+      "AAA"
+    ],
+    [
+      "GGG",
+      "G0G",
+      "GGG"
+    ]
+  ]
+}

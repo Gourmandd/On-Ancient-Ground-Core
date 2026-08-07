@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.book;
 
 import com.eerussianguy.firmalife.common.blocks.FLBlocks;
+import com.eerussianguy.firmalife.common.blocks.oven.OvenType;
 import com.google.common.collect.ImmutableMap;
 import com.klikli_dev.modonomicon.api.datagen.MultiblockProvider;
 import net.dries007.tfc.common.blocks.TFCBlocks;
@@ -289,6 +290,81 @@ public class CoreMultiblockProvider extends MultiblockProvider {
                 .block('0', () -> Blocks.AIR)
                 .blockstate('D', FLBlocks.SEALED_BRICK_DOOR, "[facing=east,hinge=left,half=upper]")
                 .blockstate('R', FLBlocks.SEALED_BRICK_DOOR, "[facing=east,hinge=left,half=lower]")
+                .build(false)
+        );
+
+        this.add(this.modLoc("devices/firepit" ), new DenseMultiblockBuilder()
+                .layer("AAA", "ACA", "AAA")
+                .layer("GGG", "G0G", "GGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .block('0', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .blockstate('C', TFCBlocks.FIREPIT, "[lit=true]")
+                .build(false)
+        );
+
+        this.add(this.modLoc("devices/oven" ), new DenseMultiblockBuilder()
+                .layer("AAAAA", "AAEAA", "AAAAA", "AAAAA", "AAAAA")
+                .layer("AAAAA", "AAEAA", "ABDBA", "AAAAA", "AAAAA")
+                .layer("AAAAA", "AAEAA", "ABCBA", "AAAAA", "AAAAA")
+                .layer("GGGGG", "GGGGG", "GG0GG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .block('0', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .block('B', () -> Blocks.BRICKS)
+                .blockstate('C', () -> FLBlocks.CURED_OVEN_BOTTOM.get(OvenType.BRICK).get(), "[facing=east]")
+                .blockstate('D', () -> FLBlocks.CURED_OVEN_TOP.get(OvenType.BRICK).get(), "[facing=east]")
+                .block('E', () -> FLBlocks.CURED_OVEN_CHIMNEY.get(OvenType.BRICK).get())
+                .build(false)
+        );
+
+        this.add(this.modLoc("devices/oven_insulated" ), new DenseMultiblockBuilder()
+                .layer("AAAAA", "AAEAA", "AAAAA", "AAAAA", "AAAAA")
+                .layer("AAAAA", "AAEAA", "AADAA", "AAAAA", "AAAAA")
+                .layer("AAAAA", "AAEAA", "AACAA", "AAAAA", "AAAAA")
+                .layer("GGGGG", "GGGGG", "GG0GG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .block('0', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .blockstate('C', () -> FLBlocks.INSULATED_OVEN_BOTTOM.get(OvenType.BRICK).get(), "[facing=east]")
+                .blockstate('D', () -> FLBlocks.INSULATED_OVEN_TOP.get(OvenType.BRICK).get(), "[facing=east]")
+                .block('E', () -> FLBlocks.CURED_OVEN_CHIMNEY.get(OvenType.BRICK).get())
+                .build(false)
+        );
+
+        this.add(this.modLoc("devices/oven_showcase" ), new DenseMultiblockBuilder()
+                .layer("AAAAA", "AAEAA", "AAAAA", "AAAAA", "AAAAA")
+                .layer("AAAAA", "AFEIA", "BDDDH", "AAAAA", "AAAAA")
+                .layer("AAAAA", "AFEIA", "BCCCH", "AAAAA", "AAAAA")
+                .layer("GGGGG", "GGGGG", "GG0GG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .block('0', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .block('B', () -> Blocks.BRICKS)
+                .blockstate('C', FLBlocks.CLAY_OVEN_BOTTOM, "[facing=east]")
+                .blockstate('D', FLBlocks.CLAY_OVEN_TOP, "[facing=east]")
+                .block('E', FLBlocks.CLAY_OVEN_CHIMNEY)
+                .block('F', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.ANDESITE).get(Rock.BlockType.COBBLE).get())
+                .block('H', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.BRICKS).get())
+                .block('I', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.DIORITE).get(Rock.BlockType.SMOOTH).get())
+                .build(false)
+        );
+
+        this.add(this.modLoc("devices/oven_showcase_fired" ), new DenseMultiblockBuilder()
+                .layer("AAAAA", "AAEAA", "AAAAA", "AAAAA", "AAAAA")
+                .layer("AAAAA", "AFEIA", "BDDDH", "AAAAA", "AAAAA")
+                .layer("AAAAA", "AFEIA", "BCCCH", "AAAAA", "AAAAA")
+                .layer("GGGGG", "GGGGG", "GG0GG", "GGGGG", "GGGGG")
+                .block('A', () -> Blocks.AIR)
+                .block('G', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .block('0', () -> TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(SoilBlockType.Variant.FLUVISOL).get())
+                .block('B', () -> Blocks.BRICKS)
+                .blockstate('C', () -> FLBlocks.CURED_OVEN_BOTTOM.get(OvenType.BRICK).get(), "[facing=east]")
+                .blockstate('D', () -> FLBlocks.CURED_OVEN_TOP.get(OvenType.BRICK).get(), "[facing=east]")
+                .block('E', () -> FLBlocks.CURED_OVEN_CHIMNEY.get(OvenType.BRICK).get())
+                .block('F', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.ANDESITE).get(Rock.BlockType.COBBLE).get())
+                .block('H', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.BRICKS).get())
+                .block('I', () -> TFCBlocks.ROCK_BLOCKS.get(Rock.DIORITE).get(Rock.BlockType.SMOOTH).get())
                 .build(false)
         );
     }

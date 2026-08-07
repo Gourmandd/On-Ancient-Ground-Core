@@ -1,0 +1,101 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "devices",
+  "description": "book.modpack.guide.devices.fire_pit.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:firepit"
+  },
+  "name": "book.modpack.guide.devices.fire_pit.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:firepit"
+      },
+      "text": "book.modpack.guide.devices.fire_pit.page1.text",
+      "title": "book.modpack.guide.devices.fire_pit.page1.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "multiblock_id": "devices/firepit",
+      "multiblock_name": "",
+      "show_visualize_button": false,
+      "text": "book.modpack.guide.devices.fire_pit.page2.text"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "count": 1,
+        "item": "tfc:firestarter"
+      },
+      "text": "book.modpack.guide.devices.fire_pit.page3.text",
+      "title": "book.modpack.guide.devices.fire_pit.page3.title"
+    },
+    {
+      "type": "modonomicon:image",
+      "anchor": "",
+      "border": true,
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "images": [
+        "modpack:textures/book/devices/fire_pit_interface.png"
+      ],
+      "text": "book.modpack.guide.devices.fire_pit.page4.text",
+      "title": "",
+      "use_legacy_rendering": false
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.devices.fire_pit.page5.text",
+      "title": "book.modpack.guide.devices.fire_pit.page5.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modpack:heating",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:heating/food/cooked_beef",
+      "recipe_id_2": "tfc:heating/torch_from_stick",
+      "text": "book.modpack.guide.devices.fire_pit.page6.text",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.devices.fire_pit.page7.text",
+      "title": "book.modpack.guide.devices.fire_pit.page7.title",
+      "use_markdown_in_title": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 21,
+  "x": 4,
+  "y": 0
+}

@@ -37,7 +37,7 @@ public class CrucibleEntry extends EntryProvider {
                 **Crucibles** are an advanced device for melting, casting and alloying metals.
                 \\
                 \\
-                It is much more convenient at scale for this than using small vessels.
+                It is much more convenient at scale, than using small vessels.
                \s""");
 
         // page 2: knapping recipe.
@@ -59,7 +59,7 @@ public class CrucibleEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Crucibles** need a source of heat such as a **Charcoal Forge** under them.
+                **Crucibles** need a source of heat such as a **Charcoal Forge** or **Firebox** under them.
                 \\
                 \\
                 You can place **Bellows** pointing at them to boost the **Charcoal Forge** underneath.

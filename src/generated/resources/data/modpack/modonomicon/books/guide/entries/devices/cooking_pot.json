@@ -1,13 +1,13 @@
 {
   "background_u_index": 0,
   "background_v_index": 0,
-  "category": "pottery",
-  "description": "book.modpack.guide.pottery.cooking_pot.description",
+  "category": "devices",
+  "description": "book.modpack.guide.devices.cooking_pot.description",
   "hide_while_locked": false,
   "icon": {
     "item": "tfc:ceramic/pot"
   },
-  "name": "book.modpack.guide.pottery.cooking_pot.name",
+  "name": "book.modpack.guide.devices.cooking_pot.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -18,8 +18,8 @@
       "item": {
         "item": "tfc:ceramic/pot"
       },
-      "text": "book.modpack.guide.pottery.cooking_pot.page1.text",
-      "title": "book.modpack.guide.pottery.cooking_pot.page1.title"
+      "text": "book.modpack.guide.devices.cooking_pot.page1.text",
+      "title": "book.modpack.guide.devices.cooking_pot.page1.title"
     },
     {
       "type": "modpack:knapping",
@@ -28,7 +28,7 @@
         "type": "modonomicon:none"
       },
       "recipe_id_1": "tfc:knapping/ceramic/unfired_pot",
-      "text": "book.modpack.guide.pottery.cooking_pot.page2.text",
+      "text": "book.modpack.guide.devices.cooking_pot.page2.text",
       "title1": "",
       "title2": ""
     },
@@ -39,8 +39,8 @@
         "type": "modonomicon:none"
       },
       "show_title_separator": true,
-      "text": "book.modpack.guide.pottery.cooking_pot.page3.text",
-      "title": "book.modpack.guide.pottery.cooking_pot.page3.title",
+      "text": "book.modpack.guide.devices.cooking_pot.page3.text",
+      "title": "book.modpack.guide.devices.cooking_pot.page3.title",
       "use_markdown_in_title": false
     },
     {
@@ -53,8 +53,8 @@
       "images": [
         "modpack:textures/book/devices/cooking_pot_interface.png"
       ],
-      "text": "book.modpack.guide.pottery.cooking_pot.page4.text",
-      "title": "book.modpack.guide.pottery.cooking_pot.page4.title",
+      "text": "book.modpack.guide.devices.cooking_pot.page4.text",
+      "title": "book.modpack.guide.devices.cooking_pot.page4.title",
       "use_legacy_rendering": false
     },
     {
@@ -64,13 +64,13 @@
         "type": "modonomicon:none"
       },
       "show_title_separator": true,
-      "text": "book.modpack.guide.pottery.cooking_pot.page5.text",
-      "title": "book.modpack.guide.pottery.cooking_pot.page5.title",
+      "text": "book.modpack.guide.devices.cooking_pot.page5.text",
+      "title": "book.modpack.guide.devices.cooking_pot.page5.title",
       "use_markdown_in_title": false
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 9,
-  "x": -6,
+  "sort_number": 24,
+  "x": 5,
   "y": 0
 }

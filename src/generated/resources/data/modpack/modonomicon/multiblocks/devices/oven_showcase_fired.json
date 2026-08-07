@@ -1,0 +1,75 @@
+{
+  "type": "modonomicon:dense",
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tfc:grass/fluvisol"
+    },
+    "A": {
+      "type": "modonomicon:block",
+      "block": "minecraft:air"
+    },
+    "B": {
+      "type": "modonomicon:block",
+      "block": "minecraft:bricks"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "block": "firmalife:brick_oven_bottom[facing=east]"
+    },
+    "D": {
+      "type": "modonomicon:blockstate",
+      "block": "firmalife:brick_oven_top[facing=east]"
+    },
+    "E": {
+      "type": "modonomicon:block",
+      "block": "firmalife:brick_oven_chimney"
+    },
+    "F": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/cobble/andesite"
+    },
+    "G": {
+      "type": "modonomicon:block",
+      "block": "tfc:grass/fluvisol"
+    },
+    "H": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/bricks/chert"
+    },
+    "I": {
+      "type": "modonomicon:block",
+      "block": "tfc:rock/smooth/diorite"
+    }
+  },
+  "pattern": [
+    [
+      "AAAAA",
+      "AAEAA",
+      "AAAAA",
+      "AAAAA",
+      "AAAAA"
+    ],
+    [
+      "AAAAA",
+      "AFEIA",
+      "BDDDH",
+      "AAAAA",
+      "AAAAA"
+    ],
+    [
+      "AAAAA",
+      "AFEIA",
+      "BCCCH",
+      "AAAAA",
+      "AAAAA"
+    ],
+    [
+      "GGGGG",
+      "GGGGG",
+      "GG0GG",
+      "GGGGG",
+      "GGGGG"
+    ]
+  ]
+}

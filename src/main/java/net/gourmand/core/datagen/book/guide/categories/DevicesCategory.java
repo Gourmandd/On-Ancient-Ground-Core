@@ -10,6 +10,7 @@ import net.gourmand.core.datagen.book.guide.entries.devices.*;
 import net.gourmand.core.datagen.book.guide.entries.metalworking.BellowsEntry;
 import net.gourmand.core.datagen.book.guide.entries.metalworking.BlastFurnaceEntry;
 import net.gourmand.core.datagen.book.guide.entries.metalworking.BloomeryEntry;
+import net.gourmand.core.datagen.book.guide.entries.pottery.CookingPotEntry;
 import net.gourmand.core.datagen.book.guide.entries.pottery.CrucibleEntry;
 import net.gourmand.core.datagen.book.guide.entries.pottery.KilnEntry;
 import net.minecraft.resources.ResourceLocation;
@@ -23,12 +24,12 @@ public class DevicesCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-            "a_c_e_k_gh",
-            "b_d_f_l_ij",
-            "__________",
-            "mp_n_o_v_s",
-            "_________t",
-            "qr_______u"
+            "a_c_e_k_q_gh",
+            "b_d_f_l_n_ij",
+            "____________",
+            "__o_v_m__swz",
+            "______p__txA",
+            "______r__uyB",
         };
     }
 
@@ -57,19 +58,19 @@ public class DevicesCategory extends CategoryProvider {
         var quern = this.add(new QuernEntry(this).generate("n"));
         var composter = this.add(new ComposterEntry(this).generate("o"));
 
-        var keg = this.add(new KegEntry(this).generate("p").withParent(barrel));
+        var keg = this.add(new KegEntry(this).generate("p"));
         var stomping_barrel = this.add(new StompingBarrelEntry(this).generate("q"));
         var wine_shelf = this.add(new WineShelfEntry(this).generate("r"));
 
         var bellow = this.add(new BellowsEntry(this).generate("s"));
         var crucible = this.add(new CrucibleEntry(this).generate("t"));
         var firebox = this.add(new KilnEntry(this).generate("u"));
-        // add firepit
-        // add wrought iron grill
-        // add stove
-        // add cooking pot
-        // add oven.
-        // add oven appliances.
+        var firepit = this.add(new FirePitEntry(this).generate("w"));
+        var grill = this.add(new GrillEntry(this).generate("x"));
+        var stove = this.add(new StoveEntry(this).generate("y"));
+        var cookingPot = this.add(new CookingPotEntry(this).generate("z"));
+        var oven = this.add(new OvenEntry(this).generate("A"));
+        var ovenAppliances = this.add(new OvenAppliancesEntry(this).generate("B"));
 
         var mixing_bowl = this.add(new MixingBowlEntry(this).generate("v"));
         // add mechanical bits

@@ -49,7 +49,7 @@ public class ComposterEntry extends EntryProvider {
                The composter is made from lumber and dirt.
                \\
                \\
-               Adding items like meat and bone with create rotten compost instead, when used on a crop, it instantly kills it.
+               Adding items like meat and bone will create rotten compost instead, when used on a crop, it instantly kills it.
                \s""");
 
         // page 3: how to use
@@ -63,7 +63,7 @@ public class ComposterEntry extends EntryProvider {
                 The composter takes 12 days to complete in standard conditions. When it's ready, gray particles will appear above it.
                 \\
                 \\
-                The compost can removed with **Shift + Right-Click** and an empty hand.
+                The compost can removed with **Crouch + Right-Click** and an empty hand.
                 \\
                 \\
                 Rotten compost will emit gross particles.
@@ -77,7 +77,7 @@ public class ComposterEntry extends EntryProvider {
 
         this.pageTitle("How to use it");
         this.pageText("""
-                Composters operate slowing in some conditions:   \s
+                Composters operate slower in some conditions:   \s
                 - In regions of less than 150mm or greater than 350mm of rainfall.
                 - The previous effect is stronger the closer to the maximum and minimum rainfall.
                 - Composters touching other composters work slower.

@@ -33,16 +33,8 @@
       "title2": ""
     }
   ],
-  "parents": [
-    {
-      "draw_arrow": true,
-      "entry": "devices/barrel",
-      "line_enabled": true,
-      "line_reversed": false
-    }
-  ],
   "show_when_any_parent_unlocked": false,
   "sort_number": 15,
-  "x": -4,
-  "y": 0
+  "x": 0,
+  "y": 1
 }
