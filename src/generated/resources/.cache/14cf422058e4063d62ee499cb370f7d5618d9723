@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-07T18:12:07.603481527	Books: modpack
+// 1.21.1	2026-08-09T08:40:13.888158501	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
@@ -199,13 +199,15 @@ cd0394e70f2dfc5acfb0512146da024eeada0f02 data/modpack/modonomicon/books/guide/en
 e6eb7b51d456e66720998504875618ecdcf99232 data/modpack/modonomicon/books/guide/entries/metalworking/steel.json
 b953e27f9a9c14ff6b2cd969e94d34119011065f data/modpack/modonomicon/books/guide/entries/metalworking/welding.json
 da35df9a2dec4b85bc58c37848bbfb0326d7bf21 data/modpack/modonomicon/books/guide/entries/metalworking/wrought_iron.json
-bf5b74e5f875b9ec6f875149e2359d8bfb97e96f data/modpack/modonomicon/books/guide/entries/mining/ceramic_pan.json
-c85f6f1dc40167604e05d426157c95f58760d989 data/modpack/modonomicon/books/guide/entries/mining/excavating_tools.json
-5d972300fe7755e8806fb5488f660ff614395995 data/modpack/modonomicon/books/guide/entries/mining/ore_deposit.json
-88c53f5fb5a2b007d713b2dab657fb27ac1f7635 data/modpack/modonomicon/books/guide/entries/mining/ore_indicators.json
-9aad8fc672c98faa130172c205ad49fc2ed899d0 data/modpack/modonomicon/books/guide/entries/mining/prospecting.json
-81401f428bc28e7a7b628f8ccd9d1e2bb4ea9d4b data/modpack/modonomicon/books/guide/entries/mining/sluice.json
-7fd24aecd4d35ac4de031c50a09f0f8b4d2f7b16 data/modpack/modonomicon/books/guide/entries/mining/supports.json
+c5d14be71e6dfe532cf7ec2bcf93a75268762221 data/modpack/modonomicon/books/guide/entries/mining/ceramic_pan.json
+f64d66211d708bda13ac07617814e7f9d7e89dca data/modpack/modonomicon/books/guide/entries/mining/excavating_tools.json
+becbbd6e490d60ccfd79d277dc74189d2de3d8d7 data/modpack/modonomicon/books/guide/entries/mining/ore_deposit.json
+a99c69c0558cd02ceaab3ee0ffbc4cc317d3abf4 data/modpack/modonomicon/books/guide/entries/mining/ore_indicators.json
+e7fd359d3a810d369c4f27f0de1467e56780a327 data/modpack/modonomicon/books/guide/entries/mining/powderkeg.json
+02e73a5669b0ed17c09b432deef205881863490e data/modpack/modonomicon/books/guide/entries/mining/prospecting.json
+8b3c60728170a6c55774d118ab3d12283b13dfb4 data/modpack/modonomicon/books/guide/entries/mining/rope.json
+2056416ee08c252956f65b2f3f5387a05c257bdf data/modpack/modonomicon/books/guide/entries/mining/sluice.json
+8e2670be2b401ca71e0d72b625a75b2ae3a68f1a data/modpack/modonomicon/books/guide/entries/mining/supports.json
 040c27e6b591445af960163dfe2d224f4f9002b5 data/modpack/modonomicon/books/guide/entries/ores/amethyst.json
 943eae7c6a7209d693d6dee1571963b4f105ed9c data/modpack/modonomicon/books/guide/entries/ores/anthracite.json
 09f2de7f73a72ca2842ac875a92fbce76fedb5e7 data/modpack/modonomicon/books/guide/entries/ores/bauxite.json

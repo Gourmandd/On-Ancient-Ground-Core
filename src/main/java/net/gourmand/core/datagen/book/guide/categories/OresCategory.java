@@ -41,9 +41,6 @@ public class OresCategory extends CategoryProvider {
     @Override
     protected void generateEntries() {
 
-        // in the ore entries add their pickaxe tier required to mine.
-        // Update: the tool mining tier for gems is subject to change in TFC, should wait out until they do it or decide not to do it.
-
         // copper
         var nativeCopperEntry = createOreEntry(
                 "native_copper",

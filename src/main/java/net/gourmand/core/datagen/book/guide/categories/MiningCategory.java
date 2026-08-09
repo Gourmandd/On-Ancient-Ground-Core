@@ -7,6 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
+import net.gourmand.core.datagen.book.guide.entries.devices.PowderKegEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.*;
 import net.minecraft.resources.ResourceLocation;
 
@@ -19,11 +20,11 @@ public class MiningCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-                "b_c_g_",
-                "______",
-                "_a__d_",
-                "______",
-                "_e__f_"
+                "b_c_g__h",
+                "________",
+                "_a__d__i",
+                "________",
+                "_e__f___"
         };
     }
 
@@ -42,6 +43,9 @@ public class MiningCategory extends CategoryProvider {
         var ore_indicators = this.add(new SurfaceOreEntry(this).generate("e"));
         var prospecting = this.add(new ProspectingEntry(this).generate("f").withParent(ore_indicators));
         var excavating_tools = this.add(new ExcavatingToolsEntry(this).generate("g").withParent(support));
+
+        var powder_keg = this.add(new PowderKegEntry(this).generate("h"));
+        var rope = this.add(new RopeEntry(this).generate("i"));
     }
 
     @Override
