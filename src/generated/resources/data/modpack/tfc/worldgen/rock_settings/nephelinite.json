@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/nephelinite",
+  "gravel": "modpack:rock/gravel/nephelinite",
+  "hardened": "modpack:rock/hardened/nephelinite",
+  "karst": false,
+  "loose": "modpack:rock/loose/nephelinite",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/nephelinite",
+  "raw": "minecraft:deepslate",
+  "sand": "tfc:sand/black",
+  "sandstone": "tfc:raw_sandstone/black",
+  "spike": "modpack:rock/spike/nephelinite"
+}

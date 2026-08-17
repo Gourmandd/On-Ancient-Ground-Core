@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/phonolite",
+  "gravel": "modpack:rock/gravel/phonolite",
+  "hardened": "modpack:rock/hardened/phonolite",
+  "karst": false,
+  "loose": "modpack:rock/loose/phonolite",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/phonolite",
+  "raw": "quark:shale",
+  "sand": "tfc:sand/black",
+  "sandstone": "tfc:raw_sandstone/black",
+  "spike": "modpack:rock/spike/phonolite"
+}

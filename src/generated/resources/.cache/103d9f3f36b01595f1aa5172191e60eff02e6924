@@ -1,4 +1,18 @@
-// 1.21.1	2026-07-29T11:19:45.232562315	Registries
+// 1.21.1	2026-08-17T10:36:45.857355917	Registries
+755f601a9576c21c1f7ddf3ce51d3b4a337f1063 data/modpack/tfc/worldgen/rock_settings/argillite.json
+88485d1f3f6b55fc844d4d37f5a771a1f3570840 data/modpack/tfc/worldgen/rock_settings/arkose.json
+c43b5075786bc3beee1726c4658082d076c5149f data/modpack/tfc/worldgen/rock_settings/blackslag.json
+4dbeb5700cb00d314dd1cc2231547dc60438b130 data/modpack/tfc/worldgen/rock_settings/blueschist.json
+ca9fbb1cee3649b38d4774b502e8c909d04d28a2 data/modpack/tfc/worldgen/rock_settings/breccia.json
+ecb97576eb169dad339abbfdcf4e5823b7ec6eb0 data/modpack/tfc/worldgen/rock_settings/komatiite.json
+5473f26c604b125f0dac1de7ff7a34f8315c68c9 data/modpack/tfc/worldgen/rock_settings/nephelinite.json
+58c8146d72b2c5b36d48617b48898ff6592a0643 data/modpack/tfc/worldgen/rock_settings/peridotite.json
+3214ddf44c5e2d300a03bd60475913887d863f9f data/modpack/tfc/worldgen/rock_settings/phonolite.json
+7fc2d206a2c6ee661a5a9206c6657f0394d0c812 data/modpack/tfc/worldgen/rock_settings/picrite_basalt.json
+2c810705ed6538a4165fce1c25a1b0ef6b9c1529 data/modpack/tfc/worldgen/rock_settings/red_sandstone.json
+669169b0cd0407c513c782d85a6704371a015fba data/modpack/tfc/worldgen/rock_settings/sandstone.json
+cabc3ab6f2aa8b2daf3d1dd020c231fdaa7b68b6 data/modpack/tfc/worldgen/rock_settings/serpentine.json
+c1e7e5f1c5220b9e4fb6eeddbbce97c9cc3262bd data/modpack/tfc/worldgen/rock_settings/travertine.json
 f3d518a90908b698da60a781cf1655549c2bdf03 data/modpack/worldgen/configured_feature/monster_room.json
 89edeb375c890fd941d38e691dcaef27b8f14de6 data/modpack/worldgen/configured_feature/vein/deeper_down/bismuth.json
 694fd739f4479ddbaa34dbe09e6aa80fa090b6f8 data/modpack/worldgen/configured_feature/vein/deeper_down/borax.json

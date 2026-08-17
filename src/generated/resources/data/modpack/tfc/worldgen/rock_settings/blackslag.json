@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/blackslag",
+  "gravel": "modpack:rock/gravel/blackslag",
+  "hardened": "modpack:rock/hardened/blackslag",
+  "karst": false,
+  "loose": "modpack:rock/loose/blackslag",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/blackslag",
+  "raw": "spectrum:blackslag",
+  "sand": "tfc:sand/black",
+  "sandstone": "tfc:raw_sandstone/black",
+  "spike": "modpack:rock/spike/blackslag"
+}

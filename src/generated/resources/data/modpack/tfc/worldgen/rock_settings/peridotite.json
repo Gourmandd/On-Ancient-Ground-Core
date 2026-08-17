@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/peridotite",
+  "gravel": "modpack:rock/gravel/peridotite",
+  "hardened": "modpack:rock/hardened/peridotite",
+  "karst": false,
+  "loose": "modpack:rock/loose/peridotite",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/peridotite",
+  "raw": "modpack:rock/raw/peridotite",
+  "sand": "tfc:sand/green",
+  "sandstone": "tfc:raw_sandstone/green",
+  "spike": "modpack:rock/spike/peridotite"
+}

@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/picrite_basalt",
+  "gravel": "modpack:rock/gravel/picrite_basalt",
+  "hardened": "modpack:rock/hardened/picrite_basalt",
+  "karst": false,
+  "loose": "modpack:rock/loose/picrite_basalt",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/picrite_basalt",
+  "raw": "spectrum:basal_marble",
+  "sand": "tfc:sand/black",
+  "sandstone": "tfc:raw_sandstone/black",
+  "spike": "modpack:rock/spike/picrite_basalt"
+}

@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/argillite",
+  "gravel": "modpack:rock/gravel/argillite",
+  "hardened": "modpack:rock/hardened/argillite",
+  "karst": false,
+  "loose": "modpack:rock/loose/argillite",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/argillite",
+  "raw": "minecraft:stone",
+  "sand": "tfc:sand/brown",
+  "sandstone": "tfc:raw_sandstone/brown",
+  "spike": "modpack:rock/spike/argillite"
+}

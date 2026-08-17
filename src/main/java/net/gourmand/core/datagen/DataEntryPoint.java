@@ -5,6 +5,7 @@ package net.gourmand.core.datagen;
 import com.klikli_dev.modonomicon.api.datagen.LanguageProviderCache;
 import com.klikli_dev.modonomicon.api.datagen.NeoBookProvider;
 import net.dries007.tfc.TerraFirmaCraft;
+import net.dries007.tfc.world.settings.RockSettings;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.book.CoreMultiblockProvider;
 import net.gourmand.core.datagen.book.guide.GuideBook;
@@ -40,7 +41,8 @@ public final class DataEntryPoint
 
         RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder()
                 .add(Registries.CONFIGURED_FEATURE, BuiltinConfiguredFeatures::bootstrap)
-                .add(Registries.PLACED_FEATURE, BuiltinPlacedFeatures::bootstrap);
+                .add(Registries.PLACED_FEATURE, BuiltinPlacedFeatures::bootstrap)
+                .add(RockSettings.KEY, BuiltinRockSettings::bootstrap);
 
         final var lookup = add(event, new DatapackBuiltinEntriesProvider(
                 event.getGenerator().getPackOutput(), event.getLookupProvider(),

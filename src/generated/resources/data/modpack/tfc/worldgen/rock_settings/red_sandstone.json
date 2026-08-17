@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/red_sandstone",
+  "gravel": "modpack:rock/gravel/red_sandstone",
+  "hardened": "modpack:rock/hardened/red_sandstone",
+  "karst": false,
+  "loose": "modpack:rock/loose/red_sandstone",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/red_sandstone",
+  "raw": "quark:jasper",
+  "sand": "tfc:sand/red",
+  "sandstone": "tfc:raw_sandstone/red",
+  "spike": "modpack:rock/spike/red_sandstone"
+}

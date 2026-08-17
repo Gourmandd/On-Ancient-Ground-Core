@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/sandstone",
+  "gravel": "modpack:rock/gravel/sandstone",
+  "hardened": "modpack:rock/hardened/sandstone",
+  "karst": false,
+  "loose": "modpack:rock/loose/sandstone",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/sandstone",
+  "raw": "create:ochrum",
+  "sand": "tfc:sand/yellow",
+  "sandstone": "tfc:raw_sandstone/yellow",
+  "spike": "modpack:rock/spike/sandstone"
+}

@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/komatiite",
+  "gravel": "modpack:rock/gravel/komatiite",
+  "hardened": "modpack:rock/hardened/komatiite",
+  "karst": false,
+  "loose": "modpack:rock/loose/komatiite",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/komatiite",
+  "raw": "create:scoria",
+  "sand": "tfc:sand/brown",
+  "sandstone": "tfc:raw_sandstone/brown",
+  "spike": "modpack:rock/spike/komatiite"
+}

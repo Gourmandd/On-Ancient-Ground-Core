@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/blueschist",
+  "gravel": "modpack:rock/gravel/blueschist",
+  "hardened": "modpack:rock/hardened/blueschist",
+  "karst": false,
+  "loose": "modpack:rock/loose/blueschist",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/blueschist",
+  "raw": "modpack:rock/raw/blueschist",
+  "sand": "tfc:sand/black",
+  "sandstone": "tfc:raw_sandstone/black",
+  "spike": "modpack:rock/spike/blueschist"
+}

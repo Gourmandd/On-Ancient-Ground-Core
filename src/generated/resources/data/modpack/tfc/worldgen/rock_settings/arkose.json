@@ -1,0 +1,13 @@
+{
+  "cobble": "modpack:rock/cobble/arkose",
+  "gravel": "modpack:rock/gravel/arkose",
+  "hardened": "modpack:rock/hardened/arkose",
+  "karst": false,
+  "loose": "modpack:rock/loose/arkose",
+  "mafic": false,
+  "mossy_loose": "modpack:rock/mossy_loose/arkose",
+  "raw": "quark:limestone",
+  "sand": "tfc:sand/yellow",
+  "sandstone": "tfc:raw_sandstone/yellow",
+  "spike": "modpack:rock/spike/arkose"
+}
