@@ -85,8 +85,7 @@ public class GeologyCategory extends CategoryProvider {
                 "d",
                 """
                 **Peridotite** is a Mafic **Igneous Intrusive** rock. It can be found:
-                - In **Land Regions**.
-                - Near the bottom of the world.
+                - Under the surface in **Volcanic Regions**.
                 """
                 //It can be used for **Rock Anvils**. // NYI
         );
@@ -100,6 +99,7 @@ public class GeologyCategory extends CategoryProvider {
                 **Rhyolite** is a **Igneous Extrusive** rock. It can be found:
                 - In **Land Regions**.
                 - In **Volcanic Regions**.
+                - On the ocean floor.
                 \\
                 \\
                 It can be used for **Rock Anvils**.
@@ -113,6 +113,7 @@ public class GeologyCategory extends CategoryProvider {
                 **Basalt** is a **Igneous Extrusive** rock. It can be found:
                 - In **Land Regions**.
                 - In **Volcanic Regions**.
+                - On the ocean floor.
                 \\
                 \\
                 It can be used for **Rock Anvils**.
@@ -126,6 +127,7 @@ public class GeologyCategory extends CategoryProvider {
                 **Andesite** is a **Igneous Extrusive** rock. It can be found:
                 - In **Land Regions**.
                 - In **Volcanic Regions**.
+                - On the ocean floor.
                 \\
                 \\
                 It can be used for **Rock Anvils**.
@@ -139,6 +141,7 @@ public class GeologyCategory extends CategoryProvider {
                 **Dacite** is a **Igneous Extrusive** rock. It can be found:
                 - In **Land Regions**.
                 - In **Volcanic Regions**.
+                - On the ocean floor.
                 \\
                 \\
                 It can be used for **Rock Anvils**.
@@ -179,7 +182,8 @@ public class GeologyCategory extends CategoryProvider {
                 "F",
                 """
                 **Phonolite** is a **Igneous Extrusive** rock. It can be found:
-                - In **Land Regions**.
+                - In **Volcanic Regions**.
+                - On the ocean floor.
                 """//It can be used for **Rock Anvils**. // NYI
         );
 
@@ -188,8 +192,8 @@ public class GeologyCategory extends CategoryProvider {
                 "l",
                 """
                 **Komatiite** is a **Igneous Extrusive** rock. It can be found:
-                - In **Volcanic Regions**.
-                - In **Land Regions**.
+                - In **Uplift Regions**.
+                - Near the bottom of the world.
                 """//It can be used for **Rock Anvils**. // NYI
         );
         //endregion
@@ -266,8 +270,8 @@ public class GeologyCategory extends CategoryProvider {
                 "s",
                 """
                 **Blueschist** is a **Metamorphic** rock. It can be found:
-                - In **Land Regions**.
-                - In **Volcanic Regions**.
+                - In **Uplift Regions**.
+                - Under the surface in **Volcanic Regions**.
                 - Near the bottom of the world.
                 """
         );
@@ -277,8 +281,8 @@ public class GeologyCategory extends CategoryProvider {
                 "t",
                 """
                 **Serpentine** is a **Metamorphic** rock. It can be found:
-                - In **Land Regions**.
-                - Near the bottom of the world.
+                - Under the surface in **Volcanic Regions**.
+                - On the ocean floor.
                 """
         );
 
@@ -309,7 +313,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Limestone** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -319,7 +323,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Dolomite** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -329,7 +333,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Chalk** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
         //endregion
@@ -341,7 +345,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Shale** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -351,7 +355,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Claystone** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -361,7 +365,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Conglomerate** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -371,7 +375,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Chert** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -381,7 +385,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Tuff** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -391,7 +395,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Argillite** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 - Deep, deep underground.
                 """
         );
@@ -402,7 +406,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Travertine** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 - Deep, deep underground.
                 """
         );
@@ -413,7 +417,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Breccia** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -423,7 +427,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Sandstone** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -433,7 +437,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Red Sandstone** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
@@ -443,7 +447,7 @@ public class GeologyCategory extends CategoryProvider {
                 """
                 **Arkose** is a **Sedimentary** rock. It can be found:
                 - In **Land Regions**.
-                - In **Uplift Regions**.
+                - Uncommonly in **Uplift Regions**.
                 """
         );
 
