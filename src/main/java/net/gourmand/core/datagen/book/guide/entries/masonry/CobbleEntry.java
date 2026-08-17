@@ -1,4 +1,4 @@
-package net.gourmand.core.datagen.book.guide.entries.carpentry;
+package net.gourmand.core.datagen.book.guide.entries.masonry;
 
 import com.klikli_dev.modonomicon.api.datagen.CategoryProviderBase;
 import com.klikli_dev.modonomicon.api.datagen.EntryBackground;
@@ -9,54 +9,68 @@ import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.common.blocks.rock.Rock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class PressurePlateEntry extends EntryProvider {
+public class CobbleEntry extends EntryProvider {
 
-    public PressurePlateEntry(CategoryProviderBase parent) {
+    public CobbleEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
     protected void generatePages() {
 
-        // page 1: explain pressure plates.
+        // page 1: explain cobble.
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
                 .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.PRESSURE_PLATE)))
+                .withItem(Ingredient.of(TFCBlocks.ROCK_BLOCKS.get(Rock.ANDESITE).get(Rock.BlockType.COBBLE)))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Wooden Pressure Plates** need to be placed on a solid block.
+                **Cobble** is a cheap building block. It landslides, meaning it will fall to a side if not supported by 2+ adjacent blocks.
                 \\
                 \\
-                When any entity is on top of them, they emit a strong **Redstone** signal on the block they are on and a weak one to the surrounding blocks.
-               \s""");
+                There is a mossy variant.
+                \\
+                \\
+                Loose rock can be found on the ground or by mining raw rock.
+               """);
 
-        // page 2: ash pressure plate recipe.
+        // page 2: cobble crafting recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/pressure_plate/ash"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/rock/cobble/granite"))
         );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Ash pressure plate being made out Ash lumber.
-               \s""");
+               How to make cobble.
+               """);
+
+        // page 3: mossy cobble crafting recipe.
+        this.page("page3", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/rock/mossy_cobble/granite"))
+        );
+
+        this.pageTitle(entryName());
+        this.pageText("""
+               How to make mossy cobble.
+               """);
     }
 
     @Override
     protected String entryName() {
-        return "Wooden Pressure Plates";
+        return "Cobble";
     }
 
     @Override
     protected String entryDescription() {
-        return "About Wooden Pressure Plates";
+        return "About Cobble.";
     }
 
     @Override
@@ -66,11 +80,11 @@ public class PressurePlateEntry extends EntryProvider {
 
     @Override
     protected BookIconModel entryIcon() {
-        return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.PRESSURE_PLATE));
+        return BookIconModel.create(TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.COBBLE));
     }
 
     @Override
     protected String entryId() {
-        return "pressure_plate";
+        return "cobble";
     }
 }

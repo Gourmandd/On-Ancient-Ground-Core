@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "masonry",
+  "description": "book.modpack.guide.masonry.stone_button.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:rock/button/granite"
+  },
+  "name": "book.modpack.guide.masonry.stone_button.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "tfc:rock/button/andesite"
+      },
+      "text": "book.modpack.guide.masonry.stone_button.page1.text",
+      "title": "book.modpack.guide.masonry.stone_button.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/rock/button/granite",
+      "text": "book.modpack.guide.masonry.stone_button.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 6,
+  "x": 2,
+  "y": 0
+}

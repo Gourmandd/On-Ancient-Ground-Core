@@ -8,6 +8,7 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.book.guide.entries.devices.PowderKegEntry;
+import net.gourmand.core.datagen.book.guide.entries.masonry.QuarryingEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.*;
 import net.minecraft.resources.ResourceLocation;
 
@@ -24,16 +25,12 @@ public class MiningCategory extends CategoryProvider {
                 "________",
                 "_a__d__i",
                 "________",
-                "_e__f___"
+                "_e__f__j"
         };
     }
 
     @Override
     protected void generateEntries() {
-
-        // maybe could add powder keg entry here as well, to explain blast mining.
-        // add ropes.
-
         var ore_deposit = this.add(new OreDepositEntry(this).generate("a"));
         var sluice = this.add(new SluiceEntry(this).generate("b").withParent(ore_deposit));
         var pan = this.add(new CeramicPanEntry(this).generate("c").withParent(ore_deposit));
@@ -46,6 +43,7 @@ public class MiningCategory extends CategoryProvider {
 
         var powder_keg = this.add(new PowderKegEntry(this).generate("h"));
         var rope = this.add(new RopeEntry(this).generate("i"));
+        var quarrying = this.add(new QuarryingEntry(this).generate("j"));
     }
 
     @Override

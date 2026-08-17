@@ -1,0 +1,40 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "masonry",
+  "description": "book.modpack.guide.masonry.smooth_stone.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "tfc:rock/smooth/granite"
+  },
+  "name": "book.modpack.guide.masonry.smooth_stone.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "tag": "c:stones/smooth"
+      },
+      "text": "book.modpack.guide.masonry.smooth_stone.page1.text",
+      "title": "book.modpack.guide.masonry.smooth_stone.page1.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "tfc:crafting/rock/smooth/granite",
+      "text": "book.modpack.guide.masonry.smooth_stone.page2.text",
+      "title1": "",
+      "title2": ""
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 3,
+  "x": -1,
+  "y": 0
+}

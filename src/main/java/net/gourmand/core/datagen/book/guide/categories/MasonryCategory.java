@@ -7,6 +7,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
+import net.gourmand.core.datagen.book.guide.entries.masonry.*;
 import net.minecraft.resources.ResourceLocation;
 
 public class MasonryCategory extends CategoryProvider {
@@ -18,19 +19,21 @@ public class MasonryCategory extends CategoryProvider {
     @Override
     protected String[] generateEntryMap() {
         return new String[]{
-            ""
+            "abcdefgj"
         };
     }
 
     @Override
     protected void generateEntries() {
-        // add brick (item)
-        // add mortar
-        // add bricks (block) (see field guide "Advanced Materials")
-        // add smooth (block)
-        // add chiseled (block)
-        // add pressure plate
-        // add button
+
+        var bricks_and_mortar = this.add(new BricksAndMortarEntry(this).generate("a"));
+        var stone_bricks = this.add(new StoneBricksEntry(this).generate("b"));
+        var quarrying = this.add(new QuarryingEntry(this).generate("c"));
+        var smooth = this.add(new SmoothStoneEntry(this).generate("d"));
+        var chiseled_bricks = this.add(new ChiseledBricksEntry(this).generate("e"));
+        var stone_pressure_plate = this.add(new StonePressurePlateEntry(this).generate("f"));
+        var stone_button = this.add(new StoneButtonEntry(this).generate("g"));
+        var cobblestone = this.add(new CobbleEntry(this).generate("h"));
         // add chiseling (mechanic)
         // add aqueducts
         // add mortared cobble

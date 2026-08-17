@@ -34,7 +34,7 @@ public class ButtonEntry extends EntryProvider {
                 **Buttons** need to be placed on a solid block.
                 \\
                 \\
-                When they are pressed, they emit a strong **Redstone** signal on the block they are on and a weak one to the surrounding blocks.
+                For 1.5 seconds after it is pressed, it emits a strong **Redstone** signal on the block they are on and a weak one to the surrounding blocks.
                \s""");
 
         // page 2: ash button recipe.
