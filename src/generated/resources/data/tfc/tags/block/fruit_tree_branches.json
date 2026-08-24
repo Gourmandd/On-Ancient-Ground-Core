@@ -2,6 +2,9 @@
   "values": [
     "modpack:plant/wolfberry_growing_branch",
     "modpack:plant/fig_growing_branch",
-    "modpack:plant/walnut_growing_branch"
+    "modpack:plant/walnut_growing_branch",
+    "modpack:plant/wolfberry_branch",
+    "modpack:plant/fig_branch",
+    "modpack:plant/walnut_branch"
   ]
 }

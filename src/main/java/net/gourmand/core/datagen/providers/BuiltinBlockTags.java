@@ -83,6 +83,11 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                 TFCTags.Blocks.FRUIT_TREE_BRANCH)
         );
 
+        add(CoreBlocks.FRUIT_TREE_BRANCHES, List.of(
+                BlockTags.MINEABLE_WITH_AXE,
+                TFCTags.Blocks.FRUIT_TREE_BRANCH)
+        );
+
         add(CoreBlocks.CROPS, List.of(
                 BlockTags.MINEABLE_WITH_HOE,
                 TFCTags.Blocks.MINEABLE_WITH_HOE,
