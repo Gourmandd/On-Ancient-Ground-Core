@@ -1,0 +1,15 @@
+{
+  "type": "tfc:casting",
+  "break_chance": 0.0,
+  "fluid": {
+    "amount": 800,
+    "fluid": "modpack:glass/lime"
+  },
+  "mold": {
+    "item": "modpack:glass_mold"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:molten_glass/lime"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:gray_stained_glass"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "tfc:volcanic_glass_batch"
+    }
+  ]
+}

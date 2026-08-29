@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:lead_glass_pane/blue"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "chance": 0.06,
+      "id": "tfc:volcanic_glass_batch"
+    }
+  ]
+}

@@ -5,15 +5,19 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.common.recipes.HeatingRecipe;
 import net.dries007.tfc.common.recipes.outputs.ItemStackProvider;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.CoreFluids;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CategoryUtil;
 import net.gourmand.core.registry.category.CoreClay;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -21,6 +25,8 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public interface HeatingRecipes extends Recipes {
+
+    float GLASS_MELT_TEMPERATURE = 1070f;
 
     default void heatingRecipes(){
 
@@ -92,6 +98,49 @@ public interface HeatingRecipes extends Recipes {
                 }
             });
         });
+
+
+
+        // Colored glass
+        for (DyeColor color : DyeColor.values()){
+            Block framedGlassBlock = CategoryUtil.Glass.COLOR_TO_QUARK_GLASS.get(color).value();
+            Block framedGlassPane = CategoryUtil.Glass.COLOR_TO_QUARK_GLASS_PANE.get(color).value();
+
+            Block glassBlock = CategoryUtil.Glass.COLOR_TO_VANILLA_GLASS.get(color);
+            Block glassPane = CategoryUtil.Glass.COLOR_TO_VANILLA_GLASS_PANE.get(color);
+
+            Block leadGlassBlock = CoreBlocks.COLOURED_LEAD_GLASS.get(color).get();
+            Block leadGlassPane = CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get();
+
+            add(Ingredient.of(framedGlassBlock), new FluidStack(CoreFluids.COLORED_GLASS.get(color).getSource(), 800), GLASS_MELT_TEMPERATURE);
+            add(Ingredient.of(framedGlassPane), new FluidStack(CoreFluids.COLORED_GLASS.get(color).getSource(), 50), GLASS_MELT_TEMPERATURE);
+
+            add(Ingredient.of(glassBlock), new FluidStack(CoreFluids.COLORED_GLASS.get(color).getSource(), 800), GLASS_MELT_TEMPERATURE);
+            add(Ingredient.of(glassPane), new FluidStack(CoreFluids.COLORED_GLASS.get(color).getSource(), 50), GLASS_MELT_TEMPERATURE);
+
+            add(Ingredient.of(leadGlassBlock), new FluidStack(CoreFluids.COLORED_GLASS.get(color).getSource(), 800), GLASS_MELT_TEMPERATURE);
+            add(Ingredient.of(leadGlassPane), new FluidStack(CoreFluids.COLORED_GLASS.get(color).getSource(), 50), GLASS_MELT_TEMPERATURE);
+
+            add(Ingredient.of(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get()), new FluidStack(CoreFluids.COLORED_GLASS.get(color).getSource(), 800), GLASS_MELT_TEMPERATURE);
+            add(Ingredient.of(CoreItems.COLORED_LENS.get(color).get()), new FluidStack(CoreFluids.COLORED_GLASS.get(color).getSource(), 400), GLASS_MELT_TEMPERATURE);
+        }
+
+        add(Ingredient.of(CategoryUtil.Glass.QUARK_CLEAR_GLASS.value()), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 800), GLASS_MELT_TEMPERATURE);
+        add(Ingredient.of(CategoryUtil.Glass.QUARK_CLEAR_GLASS_PANE.value()), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 50), GLASS_MELT_TEMPERATURE);
+
+        add(Ingredient.of(Blocks.GLASS), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 800), GLASS_MELT_TEMPERATURE);
+        add(Ingredient.of(Blocks.GLASS_PANE), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 50), GLASS_MELT_TEMPERATURE);
+
+        add(Ingredient.of(CoreBlocks.CLEAR_LEAD_GLASS.get()), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 800), GLASS_MELT_TEMPERATURE);
+        add(Ingredient.of(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get()), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 50), GLASS_MELT_TEMPERATURE);
+
+        add(Ingredient.of(CoreBlocks.CLEAR_MOLTEN_GLASS.get()), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 800), GLASS_MELT_TEMPERATURE);
+        add(Ingredient.of(TFCItems.LENS.get()), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 400), GLASS_MELT_TEMPERATURE);
+
+        add(Ingredient.of(TFCItems.SILICA_GLASS_BATCH.get()), new FluidStack(CoreFluids.CLEAR_GLASS.getSource(), 800), GLASS_MELT_TEMPERATURE);
+        add(Ingredient.of(TFCItems.VOLCANIC_GLASS_BATCH.get()), new FluidStack(CoreFluids.COLORED_GLASS.get(DyeColor.BLUE).getSource(), 800), GLASS_MELT_TEMPERATURE);
+        add(Ingredient.of(TFCItems.OLIVINE_GLASS_BATCH.get()), new FluidStack(CoreFluids.COLORED_GLASS.get(DyeColor.GREEN).getSource(), 800), GLASS_MELT_TEMPERATURE);
+        add(Ingredient.of(TFCItems.HEMATITIC_GLASS_BATCH.get()), new FluidStack(CoreFluids.COLORED_GLASS.get(DyeColor.ORANGE).getSource(), 800), GLASS_MELT_TEMPERATURE);
     }
 
     /*

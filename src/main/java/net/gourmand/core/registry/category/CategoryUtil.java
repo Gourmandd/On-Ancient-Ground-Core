@@ -14,6 +14,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
@@ -447,6 +448,108 @@ public class CategoryUtil {
                 .put(MARBLE, SandBlockType.WHITE)
                 .build();
     }
+
+    public static class Glass {
+
+        public static final Map<DyeColor, Block> COLOR_TO_VANILLA_GLASS = ImmutableMap.<DyeColor, Block>builder()
+                .put(DyeColor.WHITE, Blocks.WHITE_STAINED_GLASS)
+                .put(DyeColor.ORANGE, Blocks.ORANGE_STAINED_GLASS)
+                .put(DyeColor.MAGENTA, Blocks.MAGENTA_STAINED_GLASS)
+                .put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_STAINED_GLASS)
+                .put(DyeColor.YELLOW, Blocks.YELLOW_STAINED_GLASS)
+                .put(DyeColor.LIME, Blocks.LIME_STAINED_GLASS)
+                .put(DyeColor.PINK, Blocks.PINK_STAINED_GLASS)
+                .put(DyeColor.GRAY, Blocks.GRAY_STAINED_GLASS)
+                .put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_STAINED_GLASS)
+                .put(DyeColor.CYAN, Blocks.CYAN_STAINED_GLASS)
+                .put(DyeColor.PURPLE, Blocks.PURPLE_STAINED_GLASS)
+                .put(DyeColor.BLUE, Blocks.BLUE_STAINED_GLASS)
+                .put(DyeColor.BROWN, Blocks.BROWN_STAINED_GLASS)
+                .put(DyeColor.GREEN, Blocks.GREEN_STAINED_GLASS)
+                .put(DyeColor.RED, Blocks.RED_STAINED_GLASS)
+                .put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS)
+                .build();
+
+        public static final Map<DyeColor, Holder.Reference<Block>> COLOR_TO_QUARK_GLASS = ImmutableMap.<DyeColor, Holder.Reference<Block>>builder()
+                .put(DyeColor.WHITE, getReference(Quark.MOD_ID, "white_framed_glass"))
+                .put(DyeColor.ORANGE, getReference(Quark.MOD_ID, "orange_framed_glass"))
+                .put(DyeColor.MAGENTA, getReference(Quark.MOD_ID, "magenta_framed_glass"))
+                .put(DyeColor.LIGHT_BLUE, getReference(Quark.MOD_ID, "light_blue_framed_glass"))
+                .put(DyeColor.YELLOW, getReference(Quark.MOD_ID, "yellow_framed_glass"))
+                .put(DyeColor.LIME, getReference(Quark.MOD_ID, "lime_framed_glass"))
+                .put(DyeColor.PINK, getReference(Quark.MOD_ID, "pink_framed_glass"))
+                .put(DyeColor.GRAY, getReference(Quark.MOD_ID, "gray_framed_glass"))
+                .put(DyeColor.LIGHT_GRAY, getReference(Quark.MOD_ID, "light_gray_framed_glass"))
+                .put(DyeColor.CYAN, getReference(Quark.MOD_ID, "cyan_framed_glass"))
+                .put(DyeColor.PURPLE, getReference(Quark.MOD_ID, "purple_framed_glass"))
+                .put(DyeColor.BLUE, getReference(Quark.MOD_ID, "blue_framed_glass"))
+                .put(DyeColor.BROWN, getReference(Quark.MOD_ID, "brown_framed_glass"))
+                .put(DyeColor.GREEN, getReference(Quark.MOD_ID, "green_framed_glass"))
+                .put(DyeColor.RED, getReference(Quark.MOD_ID, "red_framed_glass"))
+                .put(DyeColor.BLACK, getReference(Quark.MOD_ID, "black_framed_glass"))
+                .build();
+
+        public static final Map<DyeColor, Block> COLOR_TO_VANILLA_GLASS_PANE = ImmutableMap.<DyeColor, Block>builder()
+                .put(DyeColor.WHITE, Blocks.WHITE_STAINED_GLASS_PANE)
+                .put(DyeColor.ORANGE, Blocks.ORANGE_STAINED_GLASS_PANE)
+                .put(DyeColor.MAGENTA, Blocks.MAGENTA_STAINED_GLASS_PANE)
+                .put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_STAINED_GLASS_PANE)
+                .put(DyeColor.YELLOW, Blocks.YELLOW_STAINED_GLASS_PANE)
+                .put(DyeColor.LIME, Blocks.LIME_STAINED_GLASS_PANE)
+                .put(DyeColor.PINK, Blocks.PINK_STAINED_GLASS_PANE)
+                .put(DyeColor.GRAY, Blocks.GRAY_STAINED_GLASS_PANE)
+                .put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_STAINED_GLASS_PANE)
+                .put(DyeColor.CYAN, Blocks.CYAN_STAINED_GLASS_PANE)
+                .put(DyeColor.PURPLE, Blocks.PURPLE_STAINED_GLASS_PANE)
+                .put(DyeColor.BLUE, Blocks.BLUE_STAINED_GLASS_PANE)
+                .put(DyeColor.BROWN, Blocks.BROWN_STAINED_GLASS_PANE)
+                .put(DyeColor.GREEN, Blocks.GREEN_STAINED_GLASS_PANE)
+                .put(DyeColor.RED, Blocks.RED_STAINED_GLASS_PANE)
+                .put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS_PANE)
+                .build();
+
+        public static final Map<DyeColor, Holder.Reference<Block>> COLOR_TO_QUARK_GLASS_PANE = ImmutableMap.<DyeColor, Holder.Reference<Block>>builder()
+                .put(DyeColor.WHITE, getReference(Quark.MOD_ID, "white_framed_glass_pane"))
+                .put(DyeColor.ORANGE, getReference(Quark.MOD_ID, "orange_framed_glass_pane"))
+                .put(DyeColor.MAGENTA, getReference(Quark.MOD_ID, "magenta_framed_glass_pane"))
+                .put(DyeColor.LIGHT_BLUE, getReference(Quark.MOD_ID, "light_blue_framed_glass_pane"))
+                .put(DyeColor.YELLOW, getReference(Quark.MOD_ID, "yellow_framed_glass_pane"))
+                .put(DyeColor.LIME, getReference(Quark.MOD_ID, "lime_framed_glass_pane"))
+                .put(DyeColor.PINK, getReference(Quark.MOD_ID, "pink_framed_glass_pane"))
+                .put(DyeColor.GRAY, getReference(Quark.MOD_ID, "gray_framed_glass_pane"))
+                .put(DyeColor.LIGHT_GRAY, getReference(Quark.MOD_ID, "light_gray_framed_glass_pane"))
+                .put(DyeColor.CYAN, getReference(Quark.MOD_ID, "cyan_framed_glass_pane"))
+                .put(DyeColor.PURPLE, getReference(Quark.MOD_ID, "purple_framed_glass_pane"))
+                .put(DyeColor.BLUE, getReference(Quark.MOD_ID, "blue_framed_glass_pane"))
+                .put(DyeColor.BROWN, getReference(Quark.MOD_ID, "brown_framed_glass_pane"))
+                .put(DyeColor.GREEN, getReference(Quark.MOD_ID, "green_framed_glass_pane"))
+                .put(DyeColor.RED, getReference(Quark.MOD_ID, "red_framed_glass_pane"))
+                .put(DyeColor.BLACK, getReference(Quark.MOD_ID, "black_framed_glass_pane"))
+                .build();
+
+        public static final Map<DyeColor, Item> COLOR_TO_GLASS_BATCH = ImmutableMap.<DyeColor, Item>builder()
+                .put(DyeColor.WHITE, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.ORANGE, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.MAGENTA, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.LIGHT_BLUE, TFCItems.SILICA_GLASS_BATCH.asItem())
+                .put(DyeColor.YELLOW, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.LIME, TFCItems.OLIVINE_GLASS_BATCH.asItem())
+                .put(DyeColor.PINK, TFCItems.SILICA_GLASS_BATCH.asItem())
+                .put(DyeColor.GRAY, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.LIGHT_GRAY, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.CYAN, TFCItems.OLIVINE_GLASS_BATCH.asItem())
+                .put(DyeColor.PURPLE, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.BLUE, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.BROWN, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.GREEN, TFCItems.OLIVINE_GLASS_BATCH.asItem())
+                .put(DyeColor.RED, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.BLACK, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .build();
+
+        public static final Holder.Reference<Block> QUARK_CLEAR_GLASS = getReference(Quark.MOD_ID, "framed_glass");
+        public static final Holder.Reference<Block> QUARK_CLEAR_GLASS_PANE = getReference(Quark.MOD_ID, "framed_glass_pane");
+    }
+
 
     public static final Map<Metal, Integer> TFC_METAL_TO_TEMPERATURE = ImmutableMap.<Metal, Integer>builder()
             .put(Metal.BISMUTH, 270)

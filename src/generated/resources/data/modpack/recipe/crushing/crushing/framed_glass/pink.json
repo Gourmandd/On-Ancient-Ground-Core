@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "quark:pink_framed_glass"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "tfc:silica_glass_batch"
+    }
+  ]
+}

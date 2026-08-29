@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_stained_glass"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "tfc:hematitic_glass_batch"
+    }
+  ]
+}

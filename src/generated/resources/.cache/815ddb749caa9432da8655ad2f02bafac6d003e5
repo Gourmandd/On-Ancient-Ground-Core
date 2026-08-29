@@ -1,4 +1,21 @@
-// 1.21.1	2026-04-05T22:03:56.993257157	modpack's processing recipes: compacting
+// 1.21.1	2026-08-25T11:55:34.550089679	modpack's processing recipes: compacting
+6ea9d9aacb1b222da288f25d77b5d3cab1fac417 data/modpack/recipe/compacting/compacting/molten_glass/black.json
+02fde58ffe1823c204884e163164431094d565aa data/modpack/recipe/compacting/compacting/molten_glass/blue.json
+a3b4b405e4758c77bc1a1cc35b89c5bcae6aad68 data/modpack/recipe/compacting/compacting/molten_glass/brown.json
+6bdb914bc76f0af3e226d4f2b40fae1affcab783 data/modpack/recipe/compacting/compacting/molten_glass/clear.json
+b0a34d3d3b96d67c2f1919d63806eb8f985d55f0 data/modpack/recipe/compacting/compacting/molten_glass/cyan.json
+d1a5bf4747effbbc07c2c3c5d4a53c91db161438 data/modpack/recipe/compacting/compacting/molten_glass/gray.json
+3788216bfb9a33549b33690cb1c9a7301220591e data/modpack/recipe/compacting/compacting/molten_glass/green.json
+251c85ce6b14a3e3ff9588894faa10a7ec26f286 data/modpack/recipe/compacting/compacting/molten_glass/light_blue.json
+b4f1c6ce6cb8437eb66a8e821044e6e08b6d8fe9 data/modpack/recipe/compacting/compacting/molten_glass/light_gray.json
+5f2e072e4b737bf38cbbaa08e1a2516da100807a data/modpack/recipe/compacting/compacting/molten_glass/lime.json
+b2ed7c19eb93cb123a8dfb77eda6f5412214f478 data/modpack/recipe/compacting/compacting/molten_glass/magenta.json
+b17d5c11178935a3787851ce4983de52a547843a data/modpack/recipe/compacting/compacting/molten_glass/orange.json
+282a929f2b8856de6e8b2c10eef26103d4991b75 data/modpack/recipe/compacting/compacting/molten_glass/pink.json
+8e4a0853698603d7d3fbf884a9d72b48588d3acf data/modpack/recipe/compacting/compacting/molten_glass/purple.json
+72d4c9451b6d110bd82171fd5cfd39931a5e5d79 data/modpack/recipe/compacting/compacting/molten_glass/red.json
+334e9cd9cb3433e860e1a04dec5ab99af35d61cc data/modpack/recipe/compacting/compacting/molten_glass/white.json
+ff72c7667ad889a5ae1b66e5cea3d742c511a1d6 data/modpack/recipe/compacting/compacting/molten_glass/yellow.json
 a338e2ce2271f70871fbffe2b521c16e1e85d192 data/modpack/recipe/compacting/metal/double_ingot/aluminium.json
 6542712598a90375466454ca71f03c5872e8b8fa data/modpack/recipe/compacting/metal/double_ingot/aluminium_bronze.json
 bb8d257920d2efb8967e3a5b490d1e3167dee2ab data/modpack/recipe/compacting/metal/double_ingot/cast_iron_alloy.json

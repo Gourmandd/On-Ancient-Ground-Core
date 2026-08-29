@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:lead_glass/orange"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "tfc:hematitic_glass_batch"
+    }
+  ]
+}

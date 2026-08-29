@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "quark:black_framed_glass_pane"
+  },
+  "result_fluid": {
+    "amount": 50,
+    "id": "modpack:glass/black"
+  },
+  "temperature": 1070.0
+}

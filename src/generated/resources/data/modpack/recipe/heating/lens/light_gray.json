@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:lens/light_gray"
+  },
+  "result_fluid": {
+    "amount": 400,
+    "id": "modpack:glass/light_gray"
+  },
+  "temperature": 1070.0
+}

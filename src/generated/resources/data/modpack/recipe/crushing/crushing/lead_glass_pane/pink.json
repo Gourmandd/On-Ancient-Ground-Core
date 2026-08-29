@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:lead_glass_pane/pink"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "chance": 0.06,
+      "id": "tfc:silica_glass_batch"
+    }
+  ]
+}

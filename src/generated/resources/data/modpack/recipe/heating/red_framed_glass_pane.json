@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "quark:red_framed_glass_pane"
+  },
+  "result_fluid": {
+    "amount": 50,
+    "id": "modpack:glass/red"
+  },
+  "temperature": 1070.0
+}

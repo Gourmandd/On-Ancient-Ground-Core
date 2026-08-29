@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "quark:magenta_framed_glass"
+  },
+  "result_fluid": {
+    "amount": 800,
+    "id": "modpack:glass/magenta"
+  },
+  "temperature": 1070.0
+}

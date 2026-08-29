@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:lead_glass_pane/light_blue"
+  },
+  "result_fluid": {
+    "amount": 50,
+    "id": "modpack:glass/light_blue"
+  },
+  "temperature": 1070.0
+}

@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "modpack:molten_glass/brown"
+    },
+    {
+      "item": "tfc:metal/rod/steel"
+    }
+  ],
+  "results": [
+    {
+      "id": "quark:brown_framed_glass"
+    }
+  ]
+}

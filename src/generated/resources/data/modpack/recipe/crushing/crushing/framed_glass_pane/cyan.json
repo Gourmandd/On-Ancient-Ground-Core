@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "quark:cyan_framed_glass_pane"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "chance": 0.06,
+      "id": "tfc:olivine_glass_batch"
+    }
+  ]
+}

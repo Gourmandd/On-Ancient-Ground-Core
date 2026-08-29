@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_stained_glass_pane"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "chance": 0.06,
+      "id": "tfc:volcanic_glass_batch"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:molten_glass/purple"
+  },
+  "result_fluid": {
+    "amount": 800,
+    "id": "modpack:glass/purple"
+  },
+  "temperature": 1070.0
+}

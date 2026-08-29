@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:lead_glass_pane/yellow"
+  },
+  "result_fluid": {
+    "amount": 50,
+    "id": "modpack:glass/yellow"
+  },
+  "temperature": 1070.0
+}

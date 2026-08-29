@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "modpack:molten_glass/red"
+    },
+    {
+      "item": "modpack:metal/rod/lead"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:lead_glass/red"
+    }
+  ]
+}
