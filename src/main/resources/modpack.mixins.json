@@ -6,8 +6,10 @@
     "BasinBlockEntityMixin",
     "CACakeBlockMixin",
     "CloakedOreBlockMixin",
+    "CookingPotEMIRecipeMixin",
     "DecayAwayMixin",
     "DripstoneUtilsMixin",
+    "FDEMIPluginMixin",
     "LargeDripstoneFeatureMixin",
     "SwitchInventoryTabPacketMixin"
   ],
@@ -16,5 +18,8 @@
   ],
   "injectors": {
     "defaultRequire": 1
+  },
+  "mixinextras": {
+    "minVersion": "0.5.3"
   }
 }

@@ -191,7 +191,7 @@ dependencies {
     implementation "curse.maven:arborfirmacraft-877545:8337732"
 
     // Spectrum Dependencies
-    implementation "curse.maven:spectrum-556967:8564379"
+    implementation "curse.maven:spectrum-556967:8679750"
     implementation "curse.maven:revelationary-656526:8259338"
     implementation "dev.architectury:architectury-neoforge:13.0.8"
     implementation "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
@@ -211,7 +211,12 @@ dependencies {
     implementation "curse.maven:quark-243121:7640331"
     implementation "curse.maven:zeta-968868:7640154"
     implementation "curse.maven:createaddition-439890:7518252"
-    implementation "maven.modrinth:NjHNA0vG:ZIK2Nmq2"
+    implementation "maven.modrinth:NjHNA0vG:ZIK2Nmq2" //TODO: document what this is?
+
+    // Farmer's Delight and addon.
+    implementation "curse.maven:farmers-delight-398521:8672744"
+    implementation "curse.maven:survivors-abilities-1354890:8577849"
+    implementation "curse.maven:survivors-delight-1332913:8689934"
 
     // Create Big Cannons
     implementation "curse.maven:create-big-cannons-646668:7689060"
