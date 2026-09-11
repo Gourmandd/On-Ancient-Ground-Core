@@ -241,12 +241,13 @@ public class ClientEventHandler {
     public static void registerSpecialModels(ModelEvent.RegisterAdditional event){
         for (OreDeposit ore : OreDeposit.values()){
             for (CoreRocks rock : CoreRocks.values()){
+                if (rock.hasOres()){
+                    String oreId = ore.name().toLowerCase(Locale.ROOT);
+                    String rockId = rock.getSerializedName();
 
-                String oreId = ore.name().toLowerCase(Locale.ROOT);
-                String rockId = rock.getSerializedName();
-
-                event.register(ModelResourceLocation.standalone(AncientGroundCore.location("item/pan/%s/%s_full".formatted(oreId, rockId))));
-                event.register(ModelResourceLocation.standalone(AncientGroundCore.location("item/pan/%s/%s_half".formatted(oreId, rockId))));
+                    event.register(ModelResourceLocation.standalone(AncientGroundCore.location("item/pan/%s/%s_full".formatted(oreId, rockId))));
+                    event.register(ModelResourceLocation.standalone(AncientGroundCore.location("item/pan/%s/%s_half".formatted(oreId, rockId))));
+                }
             }
         }
     }
