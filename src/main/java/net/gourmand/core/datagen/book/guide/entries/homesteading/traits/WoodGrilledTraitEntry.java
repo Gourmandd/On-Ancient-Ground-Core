@@ -13,62 +13,62 @@ import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class WoodGrilledTraitEntry extends EntryProvider {
+public class WoodGrilledTraitEntry extends EntryProvider
+{
 
-    public WoodGrilledTraitEntry(CategoryProviderBase parent) {
+    public WoodGrilledTraitEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain wood grilled trait.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCTags.Items.LOG_PILE_LOGS))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCTags.Items.LOG_PILE_LOGS)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                The **Wood Grilled Trait** by default, modifies spoilage rate by **0.8**.
-                \\
-                \\
-                It occurs when you cook food using a **Grill** on a firepit.
-               """);
+                 The **Wood Grilled Trait** by default, modifies spoilage rate by **0.8**.
+                 \\
+                 \\
+                 It occurs when you cook food using a **Grill** on a firepit.
+                """);
 
         // page 2: wrought iron grill recipe.
-        this.page("page2", () -> BookAnvilWorkingPageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/wrought_iron_grill"))
-        );
+        this.page("page2", () -> BookAnvilWorkingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/wrought_iron_grill")));
 
         this.pageTitle(entryName());
         this.pageText("""
-               The wrought iron grill recipe.
-               """);
+                The wrought iron grill recipe.
+                """);
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Wood Grilled";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About The Wood Grilled Trait.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() { return BookIconModel.create(TFCItems.WROUGHT_IRON_GRILL); }
+    protected BookIconModel entryIcon() {return BookIconModel.create(TFCItems.WROUGHT_IRON_GRILL);}
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "wood_grilled_trait";
     }
 }

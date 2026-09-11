@@ -19,7 +19,8 @@ import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
-public class BuiltinPlacedFeatures {
+public class BuiltinPlacedFeatures
+{
 
     public static BootstrapContext<PlacedFeature> CTX;
     public static HolderGetter<ConfiguredFeature<?, ?>> REGISTRY;
@@ -79,18 +80,13 @@ public class BuiltinPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SURFACE_GALENA = createKey(AncientGroundCore.MOD_ID, "vein/surface_galena");
     public static final ResourceKey<PlacedFeature> TERRACOTTA = createKey(AncientGroundCore.MOD_ID, "vein/terracotta");
 
-    public static void bootstrap(BootstrapContext<PlacedFeature> ctx){
+    public static void bootstrap(BootstrapContext<PlacedFeature> ctx)
+    {
 
         CTX = ctx;
         REGISTRY = ctx.lookup(Registries.CONFIGURED_FEATURE);
 
-        create(MONSTER_ROOM, BuiltinConfiguredFeatures.MONSTER_ROOM,
-                List.of(
-                        CountPlacement.of(16),
-                        InSquarePlacement.spread(),
-                        createHeight(-48, 64)
-                )
-        );
+        create(MONSTER_ROOM, BuiltinConfiguredFeatures.MONSTER_ROOM, List.of(CountPlacement.of(16), InSquarePlacement.spread(), createHeight(-48, 64)));
 
         createDeeperDownGeode(BISMUTH_DEEPER_DOWN, BuiltinConfiguredFeatures.BISMUTH_DEEPER_DOWN);
         createDeeperDownGeode(BORAX_DEEPER_DOWN, BuiltinConfiguredFeatures.BORAX_DEEPER_DOWN);
@@ -123,45 +119,15 @@ public class BuiltinPlacedFeatures {
         createDeeperDownGeode(SULFUR_DEEPER_DOWN, BuiltinConfiguredFeatures.SULFUR_DEEPER_DOWN);
         createDeeperDownGeode(SYLVITE_DEEPER_DOWN, BuiltinConfiguredFeatures.SYLVITE_DEEPER_DOWN);
 
-        createGeode(AMETHYST_GEODE, BuiltinConfiguredFeatures.AMETHYST_GEODE,
-                UniformHeight.of(
-                        VerticalAnchor.aboveBottom(16),
-                        VerticalAnchor.absolute(32)
-                ),
-                24
-        );
+        createGeode(AMETHYST_GEODE, BuiltinConfiguredFeatures.AMETHYST_GEODE, UniformHeight.of(VerticalAnchor.aboveBottom(16), VerticalAnchor.absolute(32)), 24);
 
-        createGeode(CITRINE_GEODE, BuiltinConfiguredFeatures.CITRINE_GEODE,
-                UniformHeight.of(
-                        VerticalAnchor.aboveBottom(40),
-                        VerticalAnchor.absolute(40)
-                ),
-                40
-        );
+        createGeode(CITRINE_GEODE, BuiltinConfiguredFeatures.CITRINE_GEODE, UniformHeight.of(VerticalAnchor.aboveBottom(40), VerticalAnchor.absolute(40)), 40);
 
-        createGeode(TOPAZ_GEODE, BuiltinConfiguredFeatures.TOPAZ_GEODE,
-                TrapezoidHeight.of(
-                        VerticalAnchor.absolute(120),
-                        VerticalAnchor.absolute(384)
-                ),
-                10
-        );
+        createGeode(TOPAZ_GEODE, BuiltinConfiguredFeatures.TOPAZ_GEODE, TrapezoidHeight.of(VerticalAnchor.absolute(120), VerticalAnchor.absolute(384)), 10);
 
-        createGeode(MOONSTONE_GEODE, BuiltinConfiguredFeatures.MOONSTONE_GEODE,
-                UniformHeight.of(
-                        VerticalAnchor.aboveBottom(12),
-                        VerticalAnchor.aboveBottom(30)
-                ),
-                24
-        );
+        createGeode(MOONSTONE_GEODE, BuiltinConfiguredFeatures.MOONSTONE_GEODE, UniformHeight.of(VerticalAnchor.aboveBottom(12), VerticalAnchor.aboveBottom(30)), 24);
 
-        createGeode(ONYX_GEODE, BuiltinConfiguredFeatures.ONYX_GEODE,
-                UniformHeight.of(
-                        VerticalAnchor.aboveBottom(12),
-                        VerticalAnchor.aboveBottom(30)
-                ),
-                24
-        );
+        createGeode(ONYX_GEODE, BuiltinConfiguredFeatures.ONYX_GEODE, UniformHeight.of(VerticalAnchor.aboveBottom(12), VerticalAnchor.aboveBottom(30)), 24);
 
         createBlank(ANTHRACITE, BuiltinConfiguredFeatures.ANTHRACITE);
         createBlank(AZURITE, BuiltinConfiguredFeatures.AZURITE);
@@ -180,49 +146,33 @@ public class BuiltinPlacedFeatures {
         createBlank(TERRACOTTA, BuiltinConfiguredFeatures.TERRACOTTA);
     }
 
-    private static void createDeeperDownGeode(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured){
-        createGeode(keyPlaced, keyConfigured,
-                    UniformHeight.of(
-                            VerticalAnchor.aboveBottom(12),
-                            VerticalAnchor.aboveBottom(300)
-                    ),
-                40
-        );
+    private static void createDeeperDownGeode(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured)
+    {
+        createGeode(keyPlaced, keyConfigured, UniformHeight.of(VerticalAnchor.aboveBottom(12), VerticalAnchor.aboveBottom(300)), 40);
     }
 
-    private static void createGeode(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured, HeightProvider height, int rarity){
-        create(keyPlaced, keyConfigured,
-                List.of(
-                        RarityFilter.onAverageOnceEvery(rarity),
-                        InSquarePlacement.spread(),
-                        HeightRangePlacement.of(height),
-                        BiomeFilter.biome(),
-                        BlockPredicateFilter.forPredicate(BlockPredicate.not(new OverlapsStructureBlockPredicate(Vec3i.ZERO, HolderSet.empty(), 7)))
-                )
-        );
+    private static void createGeode(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured, HeightProvider height, int rarity)
+    {
+        create(keyPlaced, keyConfigured, List.of(RarityFilter.onAverageOnceEvery(rarity), InSquarePlacement.spread(), HeightRangePlacement.of(height), BiomeFilter.biome(), BlockPredicateFilter.forPredicate(BlockPredicate.not(new OverlapsStructureBlockPredicate(Vec3i.ZERO, HolderSet.empty(), 7)))));
     }
 
-    private static void createBlank(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured){
+    private static void createBlank(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured)
+    {
         create(keyPlaced, keyConfigured, List.of());
     }
 
-    private static ResourceKey<PlacedFeature> createKey(String name, String path){
-        return ResourceKey.create(
-                Registries.PLACED_FEATURE,
-                ResourceLocation.fromNamespaceAndPath(name, path)
-        );
+    private static ResourceKey<PlacedFeature> createKey(String name, String path)
+    {
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(name, path));
     }
 
-    private static void create(ResourceKey<PlacedFeature> key, ResourceKey<ConfiguredFeature<?, ?>> keyFeature, List<PlacementModifier> list){
+    private static void create(ResourceKey<PlacedFeature> key, ResourceKey<ConfiguredFeature<?, ?>> keyFeature, List<PlacementModifier> list)
+    {
         CTX.register(key, new PlacedFeature(REGISTRY.getOrThrow(keyFeature), list));
     }
 
-    private static HeightRangePlacement createHeight(int min, int max){
-        return HeightRangePlacement.of(
-                UniformHeight.of(
-                        VerticalAnchor.absolute(min),
-                        VerticalAnchor.absolute(max)
-                )
-        );
+    private static HeightRangePlacement createHeight(int min, int max)
+    {
+        return HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(min), VerticalAnchor.absolute(max)));
     }
 }

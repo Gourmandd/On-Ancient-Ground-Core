@@ -16,116 +16,103 @@ import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class CrucibleEntry extends EntryProvider {
+public class CrucibleEntry extends EntryProvider
+{
 
-    public CrucibleEntry(CategoryProviderBase parent) {
+    public CrucibleEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain crucibles.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.CRUCIBLE))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.CRUCIBLE)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Crucibles** are an advanced device for melting, casting and alloying metals.
-                \\
-                \\
-                It is much more convenient at scale, than using small vessels.
-               \s""");
+                 **Crucibles** are an advanced device for melting, casting and alloying metals.
+                 \\
+                 \\
+                 It is much more convenient at scale, than using small vessels.
+                \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_crucible"))
-        );
+        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_crucible")));
 
         this.pageTitle(entryName());
         this.pageText("""
-                A crucible being knapped out of **Fire Clay**.
-               \s""");
+                 A crucible being knapped out of **Fire Clay**.
+                \s""");
 
         // page 3: explain setup.
-        this.page("page3", () -> BookTextPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-        );
+        this.page("page3", () -> BookTextPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Crucibles** need a source of heat such as a **Charcoal Forge** or **Firebox** under them.
-                \\
-                \\
-                You can place **Bellows** pointing at them to boost the **Charcoal Forge** underneath.
-               \s""");
+                 **Crucibles** need a source of heat such as a **Charcoal Forge** or **Firebox** under them.
+                 \\
+                 \\
+                 You can place **Bellows** pointing at them to boost the **Charcoal Forge** underneath.
+                \s""");
 
         // page 4: multiblock.
-        this.page("page4", () -> BookMultiblockPageModel.create()
-                .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "pottery/crucible"))
-                .withVisualizeButton(false)
-        );
+        this.page("page4", () -> BookMultiblockPageModel.create().withText(this.context().pageText()).withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "pottery/crucible")).withVisualizeButton(false));
 
         this.pageTitle(entryName());
         this.pageText("""
-                A **Crucible** over a **Charcoal Forge** with a **Bellows**.
-               \s""");
+                 A **Crucible** over a **Charcoal Forge** with a **Bellows**.
+                \s""");
 
         // page 5: explain functions of the crucible.
-        this.page("page5", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.CRUCIBLE))
-        );
+        this.page("page5", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.CRUCIBLE)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Crucibles** can take heat from **Charcoal Forges** under them and heat up 9 items at once.
-                \\
-                \\
-                They can hold 4000 mb of molten metal.
-               \s""");
+                 **Crucibles** can take heat from **Charcoal Forges** under them and heat up 9 items at once.
+                 \\
+                 \\
+                 They can hold 4000 mb of molten metal.
+                \s""");
 
         // page 6: crucible interface.
-        this.page("page6", () -> BookImagePageModel.create()
-                .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/pottery/crucible_interface.png"))
-        );
+        this.page("page6", () -> BookImagePageModel.create().withText(this.context().pageText()).withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/pottery/crucible_interface.png")));
 
         this.pageTitle(entryName());
         this.pageText("""
-                The interface of the **Crucible**.
-               \s""");
+                 The interface of the **Crucible**.
+                \s""");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Crucible";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Crucibles";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCBlocks.CRUCIBLE);
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "crucible";
     }
 }

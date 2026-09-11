@@ -9,7 +9,8 @@ import net.minecraft.server.level.ServerPlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public record OpenFieldGuidePacket() implements CustomPacketPayload {
+public record OpenFieldGuidePacket() implements CustomPacketPayload
+{
 
     public static final CustomPacketPayload.Type<OpenFieldGuidePacket> TYPE = new CustomPacketPayload.Type<>(AncientGroundCore.location("open_tfc_book"));
     public static final StreamCodec<ByteBuf, OpenFieldGuidePacket> CODEC = StreamCodec.unit(new OpenFieldGuidePacket());

@@ -14,7 +14,8 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import java.util.function.Supplier;
 
-public abstract class CoreSpreadingCropBlock extends SpreadingCropBlock {
+public abstract class CoreSpreadingCropBlock extends SpreadingCropBlock
+{
 
     public static CoreSpreadingCropBlock create(ExtendedProperties properties, int stages, CoreCrops crop, Supplier<Supplier<? extends Block>> fruit)
     {

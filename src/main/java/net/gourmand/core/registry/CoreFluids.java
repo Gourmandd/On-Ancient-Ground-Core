@@ -24,82 +24,26 @@ import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class CoreFluids {
+public class CoreFluids
+{
 
     public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, AncientGroundCore.MOD_ID);
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(Registries.FLUID, AncientGroundCore.MOD_ID);
 
-    public static final Map<CoreMetals.MetalType, FluidHolder<BaseFlowingFluid>> METALS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal -> register(
-            "metal/" + metal.getSerializedName(),
-            properties -> properties
-                    .block(CoreBlocks.METAL_FLUIDS.get(metal))
-                    .bucket(CoreItems.METAL_FLUID_BUCKETS.get(metal))
-                    .explosionResistance(100),
-            lavaLike()
-                    .descriptionId("fluid." + AncientGroundCore.MOD_ID + ".metal." + metal.getSerializedName())
-                    .rarity(metal.rarity()),
-            MoltenFluid.Source::new,
-            MoltenFluid.Flowing::new
-    ));
+    public static final Map<CoreMetals.MetalType, FluidHolder<BaseFlowingFluid>> METALS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal -> register("metal/" + metal.getSerializedName(), properties -> properties.block(CoreBlocks.METAL_FLUIDS.get(metal)).bucket(CoreItems.METAL_FLUID_BUCKETS.get(metal)).explosionResistance(100), lavaLike().descriptionId("fluid." + AncientGroundCore.MOD_ID + ".metal." + metal.getSerializedName()).rarity(metal.rarity()), MoltenFluid.Source::new, MoltenFluid.Flowing::new));
 
-    public static final Map<DyeColor, FluidHolder<BaseFlowingFluid>> COLORED_GLASS = Helpers.mapOf(DyeColor.class, color -> register(
-            "glass/" + color.name().toLowerCase(Locale.ROOT),
-            properties -> properties
-                    .block(CoreBlocks.COLORED_GLASS_FLUIDS.get(color))
-                    .bucket(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(color))
-                    .explosionResistance(100),
-            lavaLike()
-                    .descriptionId("fluid." + AncientGroundCore.MOD_ID + ".glass." + color.getSerializedName())
-                     .rarity(Rarity.COMMON),
-            MoltenFluid.Source::new,
-            MoltenFluid.Flowing::new
-    ));
+    public static final Map<DyeColor, FluidHolder<BaseFlowingFluid>> COLORED_GLASS = Helpers.mapOf(DyeColor.class, color -> register("glass/" + color.name().toLowerCase(Locale.ROOT), properties -> properties.block(CoreBlocks.COLORED_GLASS_FLUIDS.get(color)).bucket(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(color)).explosionResistance(100), lavaLike().descriptionId("fluid." + AncientGroundCore.MOD_ID + ".glass." + color.getSerializedName()).rarity(Rarity.COMMON), MoltenFluid.Source::new, MoltenFluid.Flowing::new));
 
-    public static final FluidHolder<BaseFlowingFluid> CLEAR_GLASS = register(
-                "glass/clear" ,
-        properties -> properties
-                .block(CoreBlocks.CLEAR_GLASS_FLUID)
-                .bucket(CoreItems.CLEAR_GLASS_FLUID_BUCKET)
-                .explosionResistance(100),
-            lavaLike()
-                    .descriptionId("fluid." + AncientGroundCore.MOD_ID + ".glass.clear")
-                    .rarity(Rarity.COMMON),
-        MoltenFluid.Source::new,
-        MoltenFluid.Flowing::new
-    );
+    public static final FluidHolder<BaseFlowingFluid> CLEAR_GLASS = register("glass/clear", properties -> properties.block(CoreBlocks.CLEAR_GLASS_FLUID).bucket(CoreItems.CLEAR_GLASS_FLUID_BUCKET).explosionResistance(100), lavaLike().descriptionId("fluid." + AncientGroundCore.MOD_ID + ".glass.clear").rarity(Rarity.COMMON), MoltenFluid.Source::new, MoltenFluid.Flowing::new);
 
     private static FluidType.Properties lavaLike()
     {
-        return FluidType.Properties.create()
-                .adjacentPathType(PathType.LAVA)
-                .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
-                .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY_LAVA)
-                .lightLevel(15)
-                .density(3000)
-                .viscosity(6000)
-                .temperature(1300)
-                .canConvertToSource(false)
-                .canDrown(false)
-                .canExtinguish(false)
-                .canHydrate(false)
-                .canPushEntity(false)
-                .canSwim(false)
-                .supportsBoating(false);
+        return FluidType.Properties.create().adjacentPathType(PathType.LAVA).sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY_LAVA).lightLevel(15).density(3000).viscosity(6000).temperature(1300).canConvertToSource(false).canDrown(false).canExtinguish(false).canHydrate(false).canPushEntity(false).canSwim(false).supportsBoating(false);
     }
 
     private static FluidType.Properties waterLike()
     {
-        return FluidType.Properties.create()
-                .adjacentPathType(PathType.WATER)
-                .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
-                .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)
-                .canConvertToSource(true)
-                .canDrown(true)
-                .canExtinguish(true)
-                .canHydrate(true)
-                .canPushEntity(true)
-                .canSwim(true)
-                .supportsBoating(true);
+        return FluidType.Properties.create().adjacentPathType(PathType.WATER).sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).canConvertToSource(true).canDrown(true).canExtinguish(true).canHydrate(true).canPushEntity(true).canSwim(true).supportsBoating(true);
     }
 
     private static <F extends FlowingFluid> FluidHolder<F> register(String name, Consumer<BaseFlowingFluid.Properties> builder, FluidType.Properties typeProperties, Function<BaseFlowingFluid.Properties, F> sourceFactory, Function<BaseFlowingFluid.Properties, F> flowingFactory)

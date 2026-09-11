@@ -13,7 +13,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.FluidStack;
 
-public class ModonomiconIntegration {
+public class ModonomiconIntegration
+{
 
     public static final String ID = "guide";
     public static final ResourceLocation BOOK_ID = AncientGroundCore.location(ID);
@@ -32,7 +33,8 @@ public class ModonomiconIntegration {
     public static final ResourceLocation STOMPING_BARREL_PAGE = AncientGroundCore.location("stomping_barrel");
     public static final ResourceLocation MIXING_BOWL_PAGE = AncientGroundCore.location("mixing_bowl");
 
-    public static void registerPages(){
+    public static void registerPages()
+    {
         LoaderRegistry.registerPageLoader(KNAPPING_PAGE, (BookPageJsonLoader<?>) BookKnappingPage::fromJson, BookKnappingPage::fromNetwork);
         LoaderRegistry.registerPageLoader(CASTING_PAGE, (BookPageJsonLoader<?>) BookCastingPage::fromJson, BookCastingPage::fromNetwork);
         LoaderRegistry.registerPageLoader(ANVIL_WORKING_PAGE, (BookPageJsonLoader<?>) BookAnvilWorkingPage::fromJson, BookAnvilWorkingPage::fromNetwork);
@@ -47,7 +49,8 @@ public class ModonomiconIntegration {
         LoaderRegistry.registerPageLoader(MIXING_BOWL_PAGE, (BookPageJsonLoader<?>) BookMixingBowlPage::fromJson, BookMixingBowlPage::fromNetwork);
     }
 
-    public static void registerPageRenderers() {
+    public static void registerPageRenderers()
+    {
         PageRendererRegistry.registerPageRenderer(KNAPPING_PAGE, p -> new BookKnappingPageRenderer((BookKnappingPage) p));
         PageRendererRegistry.registerPageRenderer(CASTING_PAGE, p -> new BookCastingPageRenderer((BookCastingPage) p));
         PageRendererRegistry.registerPageRenderer(ANVIL_WORKING_PAGE, p -> new BookAnvilWorkingPageRenderer((BookAnvilWorkingPage) p));
@@ -62,15 +65,18 @@ public class ModonomiconIntegration {
         PageRendererRegistry.registerPageRenderer(MIXING_BOWL_PAGE, p -> new BookMixingBowlPageRenderer((BookMixingBowlPage) p));
     }
 
-    public static NeoFluidHolder getFluidHolder(Fluid fluid, int amount){
+    public static NeoFluidHolder getFluidHolder(Fluid fluid, int amount)
+    {
         return new NeoFluidHolder(new FluidStack(fluid, amount));
     }
 
-    public static NeoFluidHolder getFluidHolder(FluidStack fluid){
+    public static NeoFluidHolder getFluidHolder(FluidStack fluid)
+    {
         return new NeoFluidHolder(new FluidStack(fluid.getFluid(), fluid.getAmount()));
     }
 
-    public static void openBook(){
+    public static void openBook()
+    {
         BookGuiManager.get().openBook(BookAddress.defaultFor(BOOK_ID));
     }
 }

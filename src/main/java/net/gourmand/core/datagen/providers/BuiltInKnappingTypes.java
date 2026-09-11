@@ -20,46 +20,27 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-public class BuiltInKnappingTypes extends DataManagerProvider<KnappingType>{
+public class BuiltInKnappingTypes extends DataManagerProvider<KnappingType>
+{
 
-    public BuiltInKnappingTypes( PackOutput output, CompletableFuture<HolderLookup.Provider> lookup) {
+    public BuiltInKnappingTypes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup)
+    {
         super(KnappingType.MANAGER, output, lookup);
     }
 
     @Override
-    protected void addData(HolderLookup.Provider provider) {
+    protected void addData(HolderLookup.Provider provider)
+    {
         Stream.of(CoreClay.values()).forEach(this::addClay);
     }
 
     private void addClay(CoreClay clayType)
     {
-        add(
-            ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, clayType.getSerializedName()),
-            new KnappingType(
-                    new SizedIngredient(Ingredient.of(clayType.getClayBallItem().get()), 5),
-                    Optional.empty(),
-                    TFCSounds.KNAP_CLAY.holder(),
-                    true,
-                    true,
-                    false,
-                    new ItemStack(clayType.getClayBallItem().get())
-            )
-        );
+        add(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, clayType.getSerializedName()), new KnappingType(new SizedIngredient(Ingredient.of(clayType.getClayBallItem().get()), 5), Optional.empty(), TFCSounds.KNAP_CLAY.holder(), true, true, false, new ItemStack(clayType.getClayBallItem().get())));
     }
 
     private void add(ResourceLocation name, TagKey<Item> item, int amount, int consumeAmount, HolderHolder<SoundEvent> sound, boolean consumeAfterComplete, boolean useDisabledTexture, boolean spawnsParticles, ItemLike jeiIcon)
     {
-        add(
-            name,
-            new KnappingType(
-                    new SizedIngredient(Ingredient.of(item), amount),
-                    amount == consumeAmount ? Optional.empty() : Optional.of(consumeAmount),
-                    sound.holder(),
-                    consumeAfterComplete,
-                    useDisabledTexture,
-                    spawnsParticles,
-                    new ItemStack(jeiIcon)
-            )
-        );
+        add(name, new KnappingType(new SizedIngredient(Ingredient.of(item), amount), amount == consumeAmount ? Optional.empty() : Optional.of(consumeAmount), sound.holder(), consumeAfterComplete, useDisabledTexture, spawnsParticles, new ItemStack(jeiIcon)));
     }
 }

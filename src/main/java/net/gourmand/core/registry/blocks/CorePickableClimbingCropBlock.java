@@ -15,7 +15,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
-public abstract class CorePickableClimbingCropBlock extends PickableClimbingCropBlock {
+public abstract class CorePickableClimbingCropBlock extends PickableClimbingCropBlock
+{
     public static CorePickableClimbingCropBlock create(ExtendedProperties properties, int singleStages, int doubleStages, CoreCrops crop, @Nullable Supplier<Supplier<? extends Item>> fruit, Supplier<Supplier<? extends Item>> matureFruit)
     {
         final IntegerProperty property = TFCBlockStateProperties.getAgeProperty(singleStages + doubleStages - 1);

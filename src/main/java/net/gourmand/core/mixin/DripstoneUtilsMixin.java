@@ -13,17 +13,22 @@ import net.minecraft.world.level.levelgen.feature.DripstoneUtils;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(DripstoneUtils.class)
-public class DripstoneUtilsMixin {
+public class DripstoneUtilsMixin
+{
 
     /// Make sure that it places hardened travertine instead of raw.
     @WrapMethod(method = "placeDripstoneBlockIfPossible")
-    private static boolean onPlaceDripstoneBlockIfPossible(LevelAccessor level, BlockPos pos, Operation<Boolean> original){
+    private static boolean onPlaceDripstoneBlockIfPossible(LevelAccessor level, BlockPos pos, Operation<Boolean> original)
+    {
 
         BlockState blockstate = level.getBlockState(pos);
-        if (blockstate.is(BlockTags.DRIPSTONE_REPLACEABLE)) {
+        if (blockstate.is(BlockTags.DRIPSTONE_REPLACEABLE))
+        {
             level.setBlock(pos, CoreBlocks.ROCK_BLOCKS.get(CoreRocks.TRAVERTINE).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2);
             return true;
-        } else {
+        }
+        else
+        {
             return original.call(level, pos);
         }
     }

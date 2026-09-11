@@ -11,64 +11,65 @@ import net.dries007.tfc.TerraFirmaCraft;
 import net.gourmand.core.AncientGroundCore;
 import net.minecraft.resources.ResourceLocation;
 
-public class PitKilnEntry extends EntryProvider {
+public class PitKilnEntry extends EntryProvider
+{
 
-    public PitKilnEntry(CategoryProviderBase parent) {
+    public PitKilnEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain how pit kilns work.
-        this.page("page1", () -> BookTextPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-        );
+        this.page("page1", () -> BookTextPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Pit Kilns** create temperatures capable of firing pottery and melting **Non-Iron** metals like **Copper** and **Bronze**.
-                \\
-                \\
-                To create them, create a pit surrounded by blocks, use **V** to place items in the pit and **Right Click** 8 Straw and 8 Logs on the placed items.
-               \s""");
+                 **Pit Kilns** create temperatures capable of firing pottery and melting **Non-Iron** metals like **Copper** and **Bronze**.
+                 \\
+                 \\
+                 To create them, create a pit surrounded by blocks, use **V** to place items in the pit and **Right Click** 8 Straw and 8 Logs on the placed items.
+                \s""");
 
         // page 2: multiblock.
-        this.page("page2", () -> BookMultiblockPageModel.create()
-                .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "getting_started/pit_kiln"))
-                .withVisualizeButton(false)
-        );
+        this.page("page2", () -> BookMultiblockPageModel.create().withText(this.context().pageText()).withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "getting_started/pit_kiln")).withVisualizeButton(false));
 
         this.pageTitle(entryName());
         this.pageText("""
-                Light the pit kiln to start it. (It Takes 8 minutes).\s
-               \s""");
+                 Light the pit kiln to start it. (It Takes 8 minutes).\s
+                \s""");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Pit Kiln";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Pit Kilns";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "textures/gui/book/icons/pit_kiln.png"));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "pit_kiln";
     }
 }

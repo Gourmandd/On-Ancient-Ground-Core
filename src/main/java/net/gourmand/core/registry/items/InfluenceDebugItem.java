@@ -8,16 +8,20 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class InfluenceDebugItem extends Item {
+public class InfluenceDebugItem extends Item
+{
 
-    public InfluenceDebugItem(Properties properties) {
+    public InfluenceDebugItem(Properties properties)
+    {
         super(properties);
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand)
+    {
         //Only the client needs to know the value for now, while this is all WIP.
-        if (level.isClientSide){
+        if (level.isClientSide)
+        {
             OtherWorldlyManager.isActive = !OtherWorldlyManager.isActive;
         }
         return super.use(level, player, usedHand);

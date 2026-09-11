@@ -12,35 +12,31 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class AnemometerEntry extends EntryProvider {
+public class AnemometerEntry extends EntryProvider
+{
 
-    public AnemometerEntry(CategoryProviderBase parent) {
+    public AnemometerEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain anemometer.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.ANEMOMETER))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.ANEMOMETER)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Anemometers** are a device which emit redstone signals in a range based on wind speed.
-                \\
-                \\
-                This signal is emitted to adjacent blocks (you don't need a comparator).
-               """);
+                 **Anemometers** are a device which emit redstone signals in a range based on wind speed.
+                 \\
+                 \\
+                 This signal is emitted to adjacent blocks (you don't need a comparator).
+                """);
 
         // page 2: crafting.
-        this.page("page2", () -> BookCraftingRecipePageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/anemometer"))
-        );
+        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/anemometer")));
 
         this.pageTitle(entryName());
         this.pageText("""
@@ -52,27 +48,32 @@ public class AnemometerEntry extends EntryProvider {
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Anemometer";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Anemometers.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCBlocks.ANEMOMETER);
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "anemometer";
     }
 }

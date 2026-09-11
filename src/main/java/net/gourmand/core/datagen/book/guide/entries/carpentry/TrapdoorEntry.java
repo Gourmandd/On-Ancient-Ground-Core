@@ -13,61 +13,62 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class TrapdoorEntry extends EntryProvider {
+public class TrapdoorEntry extends EntryProvider
+{
 
-    public TrapdoorEntry(CategoryProviderBase parent) {
+    public TrapdoorEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain trapdoors.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.TRAPDOOR)))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.TRAPDOOR))));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Trapdoors** can be placed on the bottom or top half of a block, and can be **Right-Clicked** to open and close them.
-               \s""");
+                 **Trapdoors** can be placed on the bottom or top half of a block, and can be **Right-Clicked** to open and close them.
+                \s""");
 
         // page 2: ash trapdoor recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/trapdoor/ash"))
-        );
+        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/trapdoor/ash")));
 
         this.pageTitle(entryName());
         this.pageText("""
-                Ash trapdoor being made out Ash lumber.
-               \s""");
+                 Ash trapdoor being made out Ash lumber.
+                \s""");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Trapdoors";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Trapdoors";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.TRAPDOOR));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "trapdoor";
     }
 }

@@ -14,67 +14,68 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class KegEntry extends EntryProvider {
+public class KegEntry extends EntryProvider
+{
 
-    public KegEntry(CategoryProviderBase parent) {
+    public KegEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain kegs.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(FLTags.Items.KEGS))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(FLTags.Items.KEGS)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                The **Keg** is a device that like the Barrel holds items and fluids.
-                \\
-                \\
-                Its functionality is identical to the **Barrel** except that it can hold more items and fluid.
-                \\
-                \\
-                It occupies a 2x2x2 space.
-               \s""");
+                 The **Keg** is a device that like the Barrel holds items and fluids.
+                 \\
+                 \\
+                 Its functionality is identical to the **Barrel** except that it can hold more items and fluid.
+                 \\
+                 \\
+                 It occupies a 2x2x2 space.
+                \s""");
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/wood/keg/ash"))
-        );
+        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/wood/keg/ash")));
 
         this.pageTitle(entryName());
         this.pageText("""
-               The keg is made from lumber, barrel staves and glue.
-               \s""");
+                The keg is made from lumber, barrel staves and glue.
+                \s""");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Kegs";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Kegs.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(FLBlocks.KEGS.get(Wood.ASH));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "keg";
     }
 }

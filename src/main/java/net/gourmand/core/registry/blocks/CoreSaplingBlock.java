@@ -13,14 +13,17 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
-public class CoreSaplingBlock extends TFCSaplingBlock {
+public class CoreSaplingBlock extends TFCSaplingBlock
+{
 
-    public CoreSaplingBlock(TreeGrower tree, ExtendedProperties properties, Supplier<Integer> ticksToGrow, boolean sand) {
+    public CoreSaplingBlock(TreeGrower tree, ExtendedProperties properties, Supplier<Integer> ticksToGrow, boolean sand)
+    {
         super(tree, properties, ticksToGrow, sand);
     }
 
     @Override
-    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack)
+    {
         CoreTickCounterBlockEntity.reset(level, pos);
         super.setPlacedBy(level, pos, state, placer, stack);
     }

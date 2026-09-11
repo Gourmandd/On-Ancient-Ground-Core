@@ -13,61 +13,62 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class LogFenceEntry extends EntryProvider {
+public class LogFenceEntry extends EntryProvider
+{
 
-    public LogFenceEntry(CategoryProviderBase parent) {
+    public LogFenceEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain log fences.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LOG_FENCE)))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LOG_FENCE))));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Log Fences** can be used as a cheap barrier. They are 1.5 blocks tall preventing most creatures from jumping over.
-               \s""");
+                 **Log Fences** can be used as a cheap barrier. They are 1.5 blocks tall preventing most creatures from jumping over.
+                \s""");
 
         // page 2: ash fence recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/log_fence/ash"))
-        );
+        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/log_fence/ash")));
 
         this.pageTitle(entryName());
         this.pageText("""
-                Ash log fence being made out Ash planks and lumber.
-               \s""");
+                 Ash log fence being made out Ash planks and lumber.
+                \s""");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Log Fences";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Log Fences";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.LOG_FENCE));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "log_fence";
     }
 }

@@ -20,15 +20,7 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class BuiltinRecipes extends RecipeProvider implements
-        WeldingRecipes,
-        AnvilRecipes,
-        HeatingRecipes,
-        CastingRecipes,
-        CraftingRecipes,
-        AlloyRecipes,
-        KnappingRecipes,
-        CollapseRecipes
+public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, AnvilRecipes, HeatingRecipes, CastingRecipes, CraftingRecipes, AlloyRecipes, KnappingRecipes, CollapseRecipes
 {
 
     final Set<ResourceLocation> removedRecipes = new HashSet<>();
@@ -43,12 +35,7 @@ public class BuiltinRecipes extends RecipeProvider implements
     // we can ensure that the recipe will NEVER pass the condition - aka, if it is using a false condition. This is the most effective
     // way to remove recipes, that generates the least amount of log spam, but NeoForge's condition serializer won't let us not write
     // a real, actual recipe.
-    final Codec<Unit> emptyRecipeCodec = Codec.STRING.fieldOf("type")
-            .codec()
-            .listOf()
-            .fieldOf("neoforge:conditions")
-            .xmap(l -> Unit.INSTANCE, r -> List.of("neoforge:false"))
-            .codec();
+    final Codec<Unit> emptyRecipeCodec = Codec.STRING.fieldOf("type").codec().listOf().fieldOf("neoforge:conditions").xmap(l -> Unit.INSTANCE, r -> List.of("neoforge:false")).codec();
 
     public BuiltinRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, CompletableFuture<?> before, BuiltinItemHeats itemHeat)
     {
@@ -57,7 +44,8 @@ public class BuiltinRecipes extends RecipeProvider implements
     }
 
     @Override
-    protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
+    protected void buildRecipes(@NotNull RecipeOutput recipeOutput)
+    {
 
         this.output = recipeOutput;
 
@@ -72,7 +60,8 @@ public class BuiltinRecipes extends RecipeProvider implements
     }
 
     @Override
-    public HolderLookup.Provider lookup() {
+    public HolderLookup.Provider lookup()
+    {
         return lookup;
     }
 
@@ -80,17 +69,12 @@ public class BuiltinRecipes extends RecipeProvider implements
     public CompletableFuture<?> run(CachedOutput output, HolderLookup.Provider lookup)
     {
         this.lookup = lookup;
-        return before.thenCompose(v -> CompletableFuture.allOf(
-                super.run(output, lookup),
-                CompletableFuture.allOf(removedRecipes
-                        .stream()
-                        .map(id -> DataProvider.saveStable(output, lookup, emptyRecipeCodec, Unit.INSTANCE, recipePathProvider.json(id)))
-                        .toArray(CompletableFuture[]::new))
-        ));
+        return before.thenCompose(v -> CompletableFuture.allOf(super.run(output, lookup), CompletableFuture.allOf(removedRecipes.stream().map(id -> DataProvider.saveStable(output, lookup, emptyRecipeCodec, Unit.INSTANCE, recipePathProvider.json(id))).toArray(CompletableFuture[]::new))));
     }
 
     @Override
-    public void add(String prefix, String name, Recipe<?> recipe) {
+    public void add(String prefix, String name, Recipe<?> recipe)
+    {
         output.accept(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, (prefix + "/" + name).toLowerCase(Locale.ROOT)), recipe, null);
     }
 

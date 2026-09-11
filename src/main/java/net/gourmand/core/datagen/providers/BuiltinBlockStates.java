@@ -16,7 +16,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.AttachFace;
+import net.minecraft.world.level.block.state.properties.Half;
+import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -24,7 +27,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class BuiltinBlockStates extends BlockStateProvider {
+public class BuiltinBlockStates extends BlockStateProvider
+{
 
     private final static ResourceLocation oreParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/ore");
     private final static ResourceLocation aqueductBaseParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/base");
@@ -36,56 +40,75 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
     private final static ResourceLocation thickFluidFlowTexture = ResourceLocation.parse(AncientGroundCore.MOD_ID + ":block/thick_fluid_flow");
 
-    public BuiltinBlockStates(PackOutput output, ExistingFileHelper exFileHelper) {
+    public BuiltinBlockStates(PackOutput output, ExistingFileHelper exFileHelper)
+    {
         super(output, AncientGroundCore.MOD_ID, exFileHelper);
     }
 
     @Override
-    protected void registerStatesAndModels() {
+    protected void registerStatesAndModels()
+    {
 
         // ores.
 
-        Stream.of(CoreOres.values()).forEach(ore -> {
-            if (!ore.hasBlock()){
-                cubeAll(CoreBlocks.BASIC_ORES.get(ore), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/ore/" + ore.getSerializedName() ));
+        Stream.of(CoreOres.values()).forEach(ore ->
+        {
+            if (!ore.hasBlock())
+            {
+                cubeAll(CoreBlocks.BASIC_ORES.get(ore), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/ore/" + ore.getSerializedName()));
             }
         });
 
-        Stream.of(Rock.values()).forEach(rock -> {
-            Stream.of(CoreOres.values()).forEach(ore -> {
-                if (!ore.isGraded() && ore.hasBlock()){
+        Stream.of(Rock.values()).forEach(rock ->
+        {
+            Stream.of(CoreOres.values()).forEach(ore ->
+            {
+                if (!ore.isGraded() && ore.hasBlock())
+                {
                     simpleOre(CoreBlocks.ORES.get(rock).get(ore), rock, ore);
                 }
 
-                Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                    if (ore.isGraded()){
+                Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                {
+                    if (ore.isGraded())
+                    {
                         simpleOre(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
                     }
                 });
             });
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            if (rock.hasOres()){
-                Stream.of(CoreOres.values()).forEach(ore -> {
-                    if (!ore.isGraded() && ore.hasBlock()) {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
+            if (rock.hasOres())
+            {
+                Stream.of(CoreOres.values()).forEach(ore ->
+                {
+                    if (!ore.isGraded() && ore.hasBlock())
+                    {
                         simpleOre(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), rock, ore);
                     }
 
-                    Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                        if (ore.isGraded()) {
+                    Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                    {
+                        if (ore.isGraded())
+                        {
                             simpleOre(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
                         }
                     });
                 });
 
-                Stream.of(Ore.values()).forEach(ore -> {
-                    if (!ore.isGraded() && ore.hasBlock()) {
+                Stream.of(Ore.values()).forEach(ore ->
+                {
+                    if (!ore.isGraded() && ore.hasBlock())
+                    {
                         simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), rock, ore);
                     }
 
-                    Stream.of(CoreOres.Grade.values()).forEach(grade -> {
-                        if (ore.isGraded()) {
+                    Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                    {
+                        if (ore.isGraded())
+                        {
                             simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
                         }
                     });
@@ -93,26 +116,35 @@ public class BuiltinBlockStates extends BlockStateProvider {
             }
         });
 
-        for (CoreRocks rock : CoreRocks.values()){
-            for (OreDeposit ore : OreDeposit.values()){
-                if (rock.hasOres()){
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            for (OreDeposit ore : OreDeposit.values())
+            {
+                if (rock.hasOres())
+                {
                     oreDeposit(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), rock, ore);
                 }
             }
         }
 
         // rock blocks.
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            Stream.of(Rock.BlockType.values()).forEach(type -> {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
+            Stream.of(Rock.BlockType.values()).forEach(type ->
+            {
 
-                if (type.hasVariants() && rock.hasVariant(type)){
-                    if (generateMossyVariant(type, rock)){
+                if (type.hasVariants() && rock.hasVariant(type))
+                {
+                    if (generateMossyVariant(type, rock))
+                    {
                         ResourceLocation texture = TextureUtil.getRockTexture(rock, type);
                         cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), texture);
                         stairsBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), texture);
                         slabBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()));
                         wallBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()), texture);
-                    } else {
+                    }
+                    else
+                    {
                         ResourceLocation texture = TextureUtil.getRockTexture(rock, type);
                         cubeMossOverlayAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), texture);
                         stairsMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), texture);
@@ -124,16 +156,17 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
             });
 
-            cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.GRAVEL), TextureUtil.getRockTexture(rock ,Rock.BlockType.GRAVEL));
-            cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED), TextureUtil.getRockTexture(rock ,Rock.BlockType.HARDENED));
+            cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.GRAVEL), TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL));
+            cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED), TextureUtil.getRockTexture(rock, Rock.BlockType.HARDENED));
             aqueductBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.AQUEDUCT), TextureUtil.getRockTexture(rock, Rock.BlockType.AQUEDUCT));
             looseRockBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE), TextureUtil.getRockTexture(rock, Rock.BlockType.LOOSE), rock);
             looseRockBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE), TextureUtil.getRockTexture(rock, Rock.BlockType.MOSSY_LOOSE), rock);
-            rockSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE),  TextureUtil.getRockTexture(rock, Rock.BlockType.SPIKE));
-            ropeAnchorSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.ROPE_ANCHOR),  TextureUtil.getRockTexture(rock, Rock.BlockType.SPIKE));
+            rockSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE), TextureUtil.getRockTexture(rock, Rock.BlockType.SPIKE));
+            ropeAnchorSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.ROPE_ANCHOR), TextureUtil.getRockTexture(rock, Rock.BlockType.SPIKE));
 
-            if (rock.hasVariants()){
-                cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CHISELED), TextureUtil.getRockTexture(rock ,Rock.BlockType.CHISELED));
+            if (rock.hasVariants())
+            {
+                cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CHISELED), TextureUtil.getRockTexture(rock, Rock.BlockType.CHISELED));
                 pressurePlateBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.PRESSURE_PLATE), TextureUtil.getRockTexture(rock, Rock.BlockType.PRESSURE_PLATE));
                 buttonBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON), TextureUtil.getRockTexture(rock, Rock.BlockType.BUTTON));
             }
@@ -141,20 +174,23 @@ public class BuiltinBlockStates extends BlockStateProvider {
             cubeAll(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rock), TextureUtil.getRockTexture(rock, Rock.BlockType.COBBLE));
         });
 
-        Stream.of(Rock.values()).forEach(rock -> {
+        Stream.of(Rock.values()).forEach(rock ->
+        {
             cubeAll(CoreBlocks.MORTARED_TFC_COBBLE.get(rock), TextureUtil.getRockTexture(rock, Rock.BlockType.COBBLE));
         });
 
         // metal blocks
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        {
             ResourceLocation texture = TextureUtil.getMetalBlockTexture(metal);
             cubeAll(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK), texture);
-            stairsBlock( CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS), texture);
+            stairsBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS), texture);
             slabBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB), texture, getBlockModelLocation(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).getId()));
         });
 
         // spectrum wood types.
-        Stream.of(SpectrumWood.values()).forEach(woodType -> {
+        Stream.of(SpectrumWood.values()).forEach(woodType ->
+        {
             Map<Wood.BlockType, DeferredHolder<Block, Block>> map = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
             supportBlock(map.get(Wood.BlockType.HORIZONTAL_SUPPORT), map.get(Wood.BlockType.VERTICAL_SUPPORT), woodType);
             twigBlock(map.get(Wood.BlockType.TWIG), woodType);
@@ -173,60 +209,74 @@ public class BuiltinBlockStates extends BlockStateProvider {
         CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
         CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
 
-        Stream.of(DyeColor.values()).forEach(color -> {
+        Stream.of(DyeColor.values()).forEach(color ->
+        {
             moltenGlassBlock(CoreBlocks.COLORED_MOLTEN_GLASS.get(color));
         });
 
         moltenGlassBlock(CoreBlocks.CLEAR_MOLTEN_GLASS);
 
-        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS,  ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"));
-        Stream.of(DyeColor.values()).forEach(color -> {
+        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"));
+        Stream.of(DyeColor.values()).forEach(color ->
+        {
             cubeAll(CoreBlocks.COLOURED_LEAD_GLASS.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/" + color.getSerializedName()));
         });
 
-        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE,  ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
-        Stream.of(DyeColor.values()).forEach(color -> {
+        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
+        Stream.of(DyeColor.values()).forEach(color ->
+        {
             paneBlock(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/" + color.getSerializedName()), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
         });
 
-        Stream.of(CoreClay.values()).forEach(clay -> {
-            Stream.of(CoreClay.BlockType.values()).forEach(type -> {
+        Stream.of(CoreClay.values()).forEach(clay ->
+        {
+            Stream.of(CoreClay.BlockType.values()).forEach(type ->
+            {
 
                 ResourceLocation texture = TextureUtil.getCeramicBlockTexture(type, clay);
 
-                if (type.hasClayType(clay) && type.getType() != CoreClay.BlockPartType.VESSEL){
+                if (type.hasClayType(clay) && type.getType() != CoreClay.BlockPartType.VESSEL)
+                {
                     cubeAll(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), texture);
                 }
 
-                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
+                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET)
+                {
                     stairsBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair(), texture);
                     slabBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).getId()));
                     wallBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall(), getBlockModelString(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).getId()), texture);
                 }
 
-                if (type.getType() == CoreClay.BlockPartType.VESSEL){
+                if (type.getType() == CoreClay.BlockPartType.VESSEL)
+                {
                     largeVesselBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), texture);
                 }
             });
         });
 
-        cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/prismatic_ice" ));
+        cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/prismatic_ice"));
 
-        Stream.of(CoreGemstones.values()).forEach(gem -> {
+        Stream.of(CoreGemstones.values()).forEach(gem ->
+        {
 
-            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType -> {
+            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType ->
+            {
 
                 DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType);
                 ResourceLocation TEXTURE = blockTexture(BLOCK.get());
 
-                switch (blockType){
-                    case BLOCK, POWDER_BLOCK, BUDDING_BLOCK -> {
+                switch (blockType)
+                {
+                    case BLOCK, POWDER_BLOCK, BUDDING_BLOCK ->
+                    {
                         cubeAll(BLOCK, TEXTURE);
                     }
-                    case PILLAR -> {
+                    case PILLAR ->
+                    {
                         cubeBottomTop(BLOCK, TEXTURE);
                     }
-                    case CLUSTER, LARGE_CLUSTER, MEDIUM_CLUSTER, SMALL_CLUSTER -> {
+                    case CLUSTER, LARGE_CLUSTER, MEDIUM_CLUSTER, SMALL_CLUSTER ->
+                    {
                         cluster(BLOCK, TEXTURE);
                     }
                 }
@@ -281,76 +331,91 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         bulbBlock(CoreBlocks.LEAD_BULB_BLOCK);
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metalType -> {
-            if (!metalType.hasOtherFluid()){
+        Stream.of(CoreMetals.MetalType.values()).forEach(metalType ->
+        {
+            if (!metalType.hasOtherFluid())
+            {
                 fluidBlock(CoreBlocks.METAL_FLUIDS.get(metalType));
             }
         });
 
         fluidBlock(CoreBlocks.CLEAR_GLASS_FLUID);
-        Stream.of(DyeColor.values()).forEach(metalType -> {
+        Stream.of(DyeColor.values()).forEach(metalType ->
+        {
             fluidBlock(CoreBlocks.COLORED_GLASS_FLUIDS.get(metalType));
         });
     }
 
     //region Generation Methods
-    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, CoreOres ore){
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, CoreOres ore)
+    {
         String allTexture = TextureUtil.getRawRockTexture(rock);
         String oreTexture = TextureUtil.getOreTexture(ore);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 
-    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, CoreOres ore, CoreOres.Grade grade){
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, CoreOres ore, CoreOres.Grade grade)
+    {
         String allTexture = TextureUtil.getRawRockTexture(rock);
         String oreTexture = TextureUtil.getOreTexture(ore, grade);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 
-    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore){
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore)
+    {
         String allTexture = TextureUtil.getRawRockTexture(rock);
         String oreTexture = TextureUtil.getOreTexture(ore);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 
-    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore, CoreOres.Grade grade){
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore, CoreOres.Grade grade)
+    {
         String allTexture = TextureUtil.getRawRockTexture(rock);
         String oreTexture = TextureUtil.getOreTexture(ore, grade);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 
-    private void oreDeposit(DeferredHolder<Block, Block> block, CoreRocks rock, OreDeposit ore){
+    private void oreDeposit(DeferredHolder<Block, Block> block, CoreRocks rock, OreDeposit ore)
+    {
         String allTexture = TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL).toString();
         String oreTexture = TextureUtil.getOreTexture(ore);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 
-    private BlockModelBuilder createOreModel(String name, String allTexture, String oreTexture){
+    private BlockModelBuilder createOreModel(String name, String allTexture, String oreTexture)
+    {
         return models().withExistingParent("block/" + name, oreParent).texture("all", allTexture).texture("overlay", oreTexture);
     }
 
-    private void cubeAll(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void cubeAll(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
         simpleBlock(block.get(), this.models().cubeAll(block.getId().getNamespace() + ":block/" + block.getId().getPath(), texture));
     }
 
-    private void cubeMossOverlayAll(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void cubeMossOverlayAll(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOreModel(block.getId().getPath(), texture.toString(), mossOverlay.toString())).buildLast());
     }
 
-    private void stairsBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture){
+    private void stairsBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture)
+    {
         ModelFile stairs = this.models().stairs(getBlockModelString(block.getId()), texture, texture, texture);
         ModelFile stairsInner = this.models().stairsInner(getBlockModelString(block.getId()) + "_inner", texture, texture, texture);
         ModelFile stairsOuter = this.models().stairsOuter(getBlockModelString(block.getId()) + "_outer", texture, texture, texture);
 
-        this.getVariantBuilder(block.get()).forAllStatesExcept((state) -> {
+        this.getVariantBuilder(block.get()).forAllStatesExcept((state) ->
+        {
             Direction facing = state.getValue(StairBlock.FACING);
             Half half = state.getValue(StairBlock.HALF);
             StairsShape shape = state.getValue(StairBlock.SHAPE);
-            int yRot = (int)facing.getClockWise().toYRot();
-            if (shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT) {
+            int yRot = (int) facing.getClockWise().toYRot();
+            if (shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT)
+            {
                 yRot += 270;
             }
 
-            if (shape != StairsShape.STRAIGHT && half == Half.TOP) {
+            if (shape != StairsShape.STRAIGHT && half == Half.TOP)
+            {
                 yRot += 90;
             }
 
@@ -360,37 +425,26 @@ public class BuiltinBlockStates extends BlockStateProvider {
         }, StairBlock.WATERLOGGED);
     }
 
-    private void stairsMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture){
+    private void stairsMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture)
+    {
 
-        ModelFile stairs = createModel(getBlockModelString(block.getId()), "modpack:block/overlay_stairs")
-                .texture("bottom", texture)
-                .texture("side", texture)
-                .texture("top", texture)
-                .texture("particle", texture)
-                .texture("overlay", mossOverlay);
-        ModelFile stairsInner = createModel(getBlockModelString(block.getId()) + "_inner", "modpack:block/overlay_inner_stairs")
-                .texture("bottom", texture)
-                .texture("side", texture)
-                .texture("top", texture)
-                .texture("particle", texture)
-                .texture("overlay", mossOverlay);
-        ModelFile stairsOuter = createModel(getBlockModelString(block.getId()) + "_outer", "modpack:block/overlay_outer_stairs")
-                .texture("bottom", texture)
-                .texture("side", texture)
-                .texture("top", texture)
-                .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+        ModelFile stairs = createModel(getBlockModelString(block.getId()), "modpack:block/overlay_stairs").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
+        ModelFile stairsInner = createModel(getBlockModelString(block.getId()) + "_inner", "modpack:block/overlay_inner_stairs").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
+        ModelFile stairsOuter = createModel(getBlockModelString(block.getId()) + "_outer", "modpack:block/overlay_outer_stairs").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
 
-        this.getVariantBuilder(block.get()).forAllStatesExcept((state) -> {
+        this.getVariantBuilder(block.get()).forAllStatesExcept((state) ->
+        {
             Direction facing = state.getValue(StairBlock.FACING);
             Half half = state.getValue(StairBlock.HALF);
             StairsShape shape = state.getValue(StairBlock.SHAPE);
-            int yRot = (int)facing.getClockWise().toYRot();
-            if (shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT) {
+            int yRot = (int) facing.getClockWise().toYRot();
+            if (shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT)
+            {
                 yRot += 270;
             }
 
-            if (shape != StairsShape.STRAIGHT && half == Half.TOP) {
+            if (shape != StairsShape.STRAIGHT && half == Half.TOP)
+            {
                 yRot += 90;
             }
 
@@ -400,42 +454,29 @@ public class BuiltinBlockStates extends BlockStateProvider {
         }, StairBlock.WATERLOGGED);
     }
 
-    private void slabBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab){
+    private void slabBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab)
+    {
         ModelFile slabBottom = this.models().slab(getBlockModelString(block.getId()), texture, texture, texture);
         ModelFile slabTop = this.models().slabTop(getBlockModelString(block.getId()) + "_top", texture, texture, texture);
         ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
 
-        this.getVariantBuilder(block.get())
-                .partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).addModels(new ConfiguredModel(slabBottom))
-                .partialState().with(SlabBlock.TYPE, SlabType.TOP).addModels(new ConfiguredModel(slabTop))
-                .partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).addModels(new ConfiguredModel(slabDouble));
+        this.getVariantBuilder(block.get()).partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).addModels(new ConfiguredModel(slabBottom)).partialState().with(SlabBlock.TYPE, SlabType.TOP).addModels(new ConfiguredModel(slabTop)).partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).addModels(new ConfiguredModel(slabDouble));
     }
 
-    private void slabMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab){
+    private void slabMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab)
+    {
 
-        ModelFile slabBottom = createModel(getBlockModelString(block.getId()) , "modpack:block/overlay_slab")
-                .texture("bottom", texture)
-                .texture("side", texture)
-                .texture("top", texture)
-                .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+        ModelFile slabBottom = createModel(getBlockModelString(block.getId()), "modpack:block/overlay_slab").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
 
-        ModelFile slabTop = createModel(getBlockModelString(block.getId()) + "_top", "modpack:block/overlay_slab_top")
-                .texture("bottom", texture)
-                .texture("side", texture)
-                .texture("top", texture)
-                .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+        ModelFile slabTop = createModel(getBlockModelString(block.getId()) + "_top", "modpack:block/overlay_slab_top").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
 
         ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
 
-        this.getVariantBuilder(block.get())
-                .partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).addModels(new ConfiguredModel(slabBottom))
-                .partialState().with(SlabBlock.TYPE, SlabType.TOP).addModels(new ConfiguredModel(slabTop))
-                .partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).addModels(new ConfiguredModel(slabDouble));
+        this.getVariantBuilder(block.get()).partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).addModels(new ConfiguredModel(slabBottom)).partialState().with(SlabBlock.TYPE, SlabType.TOP).addModels(new ConfiguredModel(slabTop)).partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).addModels(new ConfiguredModel(slabDouble));
     }
 
-    private void aqueductBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void aqueductBlock(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
         ModelFile modelBase = createModel(getBlockModelString(block.getId()) + "/base", aqueductBaseParent).texture("texture", texture).texture("particle", texture);
         ModelFile modelNorth = createModel(getBlockModelString(block.getId()) + "/north", aqueductNorthParent).texture("texture", texture).texture("particle", texture);
         ModelFile modelSouth = createModel(getBlockModelString(block.getId()) + "/south", aqueductSouthParent).texture("texture", texture).texture("particle", texture);
@@ -451,104 +492,72 @@ public class BuiltinBlockStates extends BlockStateProvider {
         builder.part().modelFile(modelWest).addModel().condition(AqueductBlock.WEST, false);
     }
 
-    private void rockSpikeBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void rockSpikeBlock(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
         ModelFile modelBase = createModel(getBlockModelString(block.getId()) + "_base", "tfc:block/rock/spike_base").texture("texture", texture).texture("particle", texture);
         ModelFile modelMiddle = createModel(getBlockModelString(block.getId()) + "_middle", "tfc:block/rock/spike_middle").texture("texture", texture).texture("particle", texture);
         ModelFile modelTip = createModel(getBlockModelString(block.getId()) + "_tip", "tfc:block/rock/spike_tip").texture("texture", texture).texture("particle", texture);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.BASE).modelForState().modelFile(modelBase).addModel()
-                .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.MIDDLE).modelForState().modelFile(modelMiddle).addModel()
-                .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.TIP).modelForState().modelFile(modelTip).addModel();
+        builder.partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.BASE).modelForState().modelFile(modelBase).addModel().partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.MIDDLE).modelForState().modelFile(modelMiddle).addModel().partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.TIP).modelForState().modelFile(modelTip).addModel();
     }
 
-    private void ropeAnchorSpikeBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void ropeAnchorSpikeBlock(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
         ModelFile modelBase = createModel(getBlockModelString(block.getId()), "tfc:block/horizontal_rope_anchored").texture("texture", texture).texture("particle", texture);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(RockRopeAnchorBlock.FACING, Direction.EAST).modelForState().rotationY(90).modelFile(modelBase).addModel()
-                .partialState().with(RockRopeAnchorBlock.FACING, Direction.NORTH).modelForState().modelFile(modelBase).addModel()
-                .partialState().with(RockRopeAnchorBlock.FACING, Direction.SOUTH).modelForState().rotationY(180).modelFile(modelBase).addModel()
-                .partialState().with(RockRopeAnchorBlock.FACING, Direction.WEST).modelForState().rotationY(270).modelFile(modelBase).addModel();
+        builder.partialState().with(RockRopeAnchorBlock.FACING, Direction.EAST).modelForState().rotationY(90).modelFile(modelBase).addModel().partialState().with(RockRopeAnchorBlock.FACING, Direction.NORTH).modelForState().modelFile(modelBase).addModel().partialState().with(RockRopeAnchorBlock.FACING, Direction.SOUTH).modelForState().rotationY(180).modelFile(modelBase).addModel().partialState().with(RockRopeAnchorBlock.FACING, Direction.WEST).modelForState().rotationY(270).modelFile(modelBase).addModel();
     }
 
-    private void looseRockBlock(DeferredHolder<Block, Block> block, ResourceLocation texture, CoreRocks rock){
+    private void looseRockBlock(DeferredHolder<Block, Block> block, ResourceLocation texture, CoreRocks rock)
+    {
         ModelFile model1 = createModel(getBlockModelString(block.getId()) + "_1", getLooseRockModelParent(rock, 1)).texture("texture", texture).texture("particle", texture);
         ModelFile model2 = createModel(getBlockModelString(block.getId()) + "_2", getLooseRockModelParent(rock, 2)).texture("texture", texture).texture("particle", texture);
         ModelFile model3 = createModel(getBlockModelString(block.getId()) + "_3", getLooseRockModelParent(rock, 3)).texture("texture", texture).texture("particle", texture);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
-            builder
-                    .partialState().with(LooseRockBlock.COUNT, 1).modelForState()
-                            .modelFile(model1).rotationY(0).nextModel()
-                            .modelFile(model1).rotationY(90).nextModel()
-                            .modelFile(model1).rotationY(180).nextModel()
-                            .modelFile(model1).rotationY(270).addModel()
-                    .partialState().with(LooseRockBlock.COUNT, 2).modelForState()
-                            .modelFile(model2).rotationY(0).nextModel()
-                            .modelFile(model2).rotationY(90).nextModel()
-                            .modelFile(model2).rotationY(180).nextModel()
-                            .modelFile(model2).rotationY(270).addModel()
-                    .partialState().with(LooseRockBlock.COUNT, 3).modelForState()
-                            .modelFile(model3).rotationY(0).nextModel()
-                            .modelFile(model3).rotationY(90).nextModel()
-                            .modelFile(model3).rotationY(180).nextModel()
-                            .modelFile(model3).rotationY(270).addModel();
+        builder.partialState().with(LooseRockBlock.COUNT, 1).modelForState().modelFile(model1).rotationY(0).nextModel().modelFile(model1).rotationY(90).nextModel().modelFile(model1).rotationY(180).nextModel().modelFile(model1).rotationY(270).addModel().partialState().with(LooseRockBlock.COUNT, 2).modelForState().modelFile(model2).rotationY(0).nextModel().modelFile(model2).rotationY(90).nextModel().modelFile(model2).rotationY(180).nextModel().modelFile(model2).rotationY(270).addModel().partialState().with(LooseRockBlock.COUNT, 3).modelForState().modelFile(model3).rotationY(0).nextModel().modelFile(model3).rotationY(90).nextModel().modelFile(model3).rotationY(180).nextModel().modelFile(model3).rotationY(270).addModel();
     }
 
-    private void pressurePlateBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void pressurePlateBlock(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
         ModelFile pressurePlate = this.models().pressurePlate(getBlockModelString(block.getId()), texture);
         ModelFile pressurePlateDown = this.models().pressurePlateDown(getBlockModelString(block.getId()) + "_down", texture);
 
-        this.getVariantBuilder(block.get()).partialState()
-                .with(PressurePlateBlock.POWERED, true).addModels(new ConfiguredModel(pressurePlateDown)).partialState()
-                .with(PressurePlateBlock.POWERED, false).addModels(new ConfiguredModel(pressurePlate));
+        this.getVariantBuilder(block.get()).partialState().with(PressurePlateBlock.POWERED, true).addModels(new ConfiguredModel(pressurePlateDown)).partialState().with(PressurePlateBlock.POWERED, false).addModels(new ConfiguredModel(pressurePlate));
     }
 
-    private void buttonBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void buttonBlock(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
         ModelFile button = this.models().button(getBlockModelString(block.getId()), texture);
         ModelFile buttonPressed = this.models().buttonPressed(getBlockModelString(block.getId()) + "_pressed", texture);
 
-        this.getVariantBuilder(block.get()).forAllStates((state) -> {
+        this.getVariantBuilder(block.get()).forAllStates((state) ->
+        {
             Direction facing = state.getValue(ButtonBlock.FACING);
             AttachFace face = state.getValue(ButtonBlock.FACE);
             boolean powered = state.getValue(ButtonBlock.POWERED);
-            return ConfiguredModel.builder()
-                    .modelFile(powered ? buttonPressed : button)
-                    .rotationX(face == AttachFace.FLOOR ? 0 : (face == AttachFace.WALL ? 90 : 180))
-                    .rotationY((int) (face == AttachFace.CEILING ? facing : facing.getOpposite()).toYRot())
-                    .uvLock(face == AttachFace.WALL).build();
+            return ConfiguredModel.builder().modelFile(powered ? buttonPressed : button).rotationX(face == AttachFace.FLOOR ? 0 : (face == AttachFace.WALL ? 90 : 180)).rotationY((int) (face == AttachFace.CEILING ? facing : facing.getOpposite()).toYRot()).uvLock(face == AttachFace.WALL).build();
         });
     }
 
-    private void wallBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture){
+    private void wallBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture)
+    {
         this.wallBlock(block.get(), baseName, texture);
     }
 
-    private void wallMossOverlayBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture){
+    private void wallMossOverlayBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture)
+    {
 
-        this.wallBlock(block.get(),
-                createModel(baseName + "_post", "modpack:block/overlay_template_wall_post")
-                        .texture("wall", texture)
-                        .texture("particle", texture)
-                        .texture("overlay", mossOverlay),
-                createModel(baseName + "_side", "modpack:block/overlay_template_wall_side")
-                        .texture("wall", texture)
-                        .texture("particle", texture)
-                        .texture("overlay", mossOverlay),
-                createModel(baseName + "_side_tall", "modpack:block/overlay_template_wall_side_tall")
-                        .texture("wall", texture)
-                        .texture("particle", texture)
-                        .texture("overlay", mossOverlay)
-        );
+        this.wallBlock(block.get(), createModel(baseName + "_post", "modpack:block/overlay_template_wall_post").texture("wall", texture).texture("particle", texture).texture("overlay", mossOverlay), createModel(baseName + "_side", "modpack:block/overlay_template_wall_side").texture("wall", texture).texture("particle", texture).texture("overlay", mossOverlay), createModel(baseName + "_side_tall", "modpack:block/overlay_template_wall_side_tall").texture("wall", texture).texture("particle", texture).texture("overlay", mossOverlay));
     }
 
-    private void supportBlock(DeferredHolder<Block, Block> Hblock, DeferredHolder<Block, Block> Vblock, SpectrumWood wood){
+    private void supportBlock(DeferredHolder<Block, Block> Hblock, DeferredHolder<Block, Block> Vblock, SpectrumWood wood)
+    {
 
         ResourceLocation textureTop = TextureUtil.getStrippedLogTopTexture(wood);
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
@@ -579,7 +588,8 @@ public class BuiltinBlockStates extends BlockStateProvider {
         Vbuilder.part().modelFile(modelConnection).rotationY(180).addModel().condition(AqueductBlock.WEST, true);
     }
 
-    private void twigBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
+    private void twigBlock(DeferredHolder<Block, Block> block, SpectrumWood wood)
+    {
 
         ResourceLocation textureTop = TextureUtil.getLogTopTexture(wood);
         ResourceLocation texture = TextureUtil.getLogTexture(wood);
@@ -589,18 +599,11 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
-        builder.partialState().modelForState()
-                .modelFile(model).rotationY(0).nextModel()
-                .modelFile(model).rotationY(90).nextModel()
-                .modelFile(model).rotationY(180).nextModel()
-                .modelFile(model).rotationY(270).nextModel()
-                .modelFile(model45).rotationY(0).nextModel()
-                .modelFile(model45).rotationY(90).nextModel()
-                .modelFile(model45).rotationY(180).nextModel()
-                .modelFile(model45).rotationY(270).addModel();
+        builder.partialState().modelForState().modelFile(model).rotationY(0).nextModel().modelFile(model).rotationY(90).nextModel().modelFile(model).rotationY(180).nextModel().modelFile(model).rotationY(270).nextModel().modelFile(model45).rotationY(0).nextModel().modelFile(model45).rotationY(90).nextModel().modelFile(model45).rotationY(180).nextModel().modelFile(model45).rotationY(270).addModel();
     }
 
-    private void scribingTableBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
+    private void scribingTableBlock(DeferredHolder<Block, Block> block, SpectrumWood wood)
+    {
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
         ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
@@ -609,14 +612,11 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(ScribingTableBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel()
-                .partialState().with(ScribingTableBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel()
-                .partialState().with(ScribingTableBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel()
-                .partialState().with(ScribingTableBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
+        builder.partialState().with(ScribingTableBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel().partialState().with(ScribingTableBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel().partialState().with(ScribingTableBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel().partialState().with(ScribingTableBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
     }
 
-    private void sewingTableBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
+    private void sewingTableBlock(DeferredHolder<Block, Block> block, SpectrumWood wood)
+    {
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
         ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
@@ -625,14 +625,11 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(SewingTableBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel()
-                .partialState().with(SewingTableBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel()
-                .partialState().with(SewingTableBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel()
-                .partialState().with(SewingTableBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
+        builder.partialState().with(SewingTableBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel().partialState().with(SewingTableBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel().partialState().with(SewingTableBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel().partialState().with(SewingTableBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
     }
 
-    private void shelfBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
+    private void shelfBlock(DeferredHolder<Block, Block> block, SpectrumWood wood)
+    {
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
 
@@ -640,14 +637,11 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(ShelfBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel()
-                .partialState().with(ShelfBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel()
-                .partialState().with(ShelfBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel()
-                .partialState().with(ShelfBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
+        builder.partialState().with(ShelfBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel().partialState().with(ShelfBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel().partialState().with(ShelfBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel().partialState().with(ShelfBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
     }
 
-    private void loomBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
+    private void loomBlock(DeferredHolder<Block, Block> block, SpectrumWood wood)
+    {
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
 
@@ -655,14 +649,11 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(TFCLoomBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(180).addModel()
-                .partialState().with(TFCLoomBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(270).addModel()
-                .partialState().with(TFCLoomBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(0).addModel()
-                .partialState().with(TFCLoomBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(90).addModel();
+        builder.partialState().with(TFCLoomBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(180).addModel().partialState().with(TFCLoomBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(270).addModel().partialState().with(TFCLoomBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(0).addModel().partialState().with(TFCLoomBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(90).addModel();
     }
 
-    private void toolRackBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
+    private void toolRackBlock(DeferredHolder<Block, Block> block, SpectrumWood wood)
+    {
 
         ResourceLocation texturePlank = TextureUtil.getStrippedLogTexture(wood); // some of the plank textures don't look great, the stripped logs look a bit better.
 
@@ -670,14 +661,11 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(ToolRackBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(180).addModel()
-                .partialState().with(ToolRackBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(270).addModel()
-                .partialState().with(ToolRackBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(0).addModel()
-                .partialState().with(ToolRackBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(90).addModel();
+        builder.partialState().with(ToolRackBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(180).addModel().partialState().with(ToolRackBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(270).addModel().partialState().with(ToolRackBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(0).addModel().partialState().with(ToolRackBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(90).addModel();
     }
 
-    private void sluiceBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
+    private void sluiceBlock(DeferredHolder<Block, Block> block, SpectrumWood wood)
+    {
 
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
 
@@ -686,79 +674,61 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(SluiceBlock.FACING, Direction.NORTH).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(0).addModel()
-                .partialState().with(SluiceBlock.FACING, Direction.EAST).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(90).addModel()
-                .partialState().with(SluiceBlock.FACING, Direction.SOUTH).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(180).addModel()
-                .partialState().with(SluiceBlock.FACING, Direction.WEST).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(270).addModel()
-                .partialState().with(SluiceBlock.FACING, Direction.NORTH).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(0).addModel()
-                .partialState().with(SluiceBlock.FACING, Direction.EAST).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(90).addModel()
-                .partialState().with(SluiceBlock.FACING, Direction.SOUTH).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(180).addModel()
-                .partialState().with(SluiceBlock.FACING, Direction.WEST).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(270).addModel();
+        builder.partialState().with(SluiceBlock.FACING, Direction.NORTH).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(0).addModel().partialState().with(SluiceBlock.FACING, Direction.EAST).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(90).addModel().partialState().with(SluiceBlock.FACING, Direction.SOUTH).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(180).addModel().partialState().with(SluiceBlock.FACING, Direction.WEST).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(270).addModel().partialState().with(SluiceBlock.FACING, Direction.NORTH).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(0).addModel().partialState().with(SluiceBlock.FACING, Direction.EAST).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(90).addModel().partialState().with(SluiceBlock.FACING, Direction.SOUTH).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(180).addModel().partialState().with(SluiceBlock.FACING, Direction.WEST).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(270).addModel();
     }
 
-    private void paneBlock(DeferredHolder<Block, Block> block, ResourceLocation side, ResourceLocation top){
+    private void paneBlock(DeferredHolder<Block, Block> block, ResourceLocation side, ResourceLocation top)
+    {
         this.paneBlock((IronBarsBlock) block.get(), side, top);
     }
 
-    private void largeVesselBlock(DeferredHolder<Block, Block> block, ResourceLocation textureRoot){
+    private void largeVesselBlock(DeferredHolder<Block, Block> block, ResourceLocation textureRoot)
+    {
 
         ResourceLocation textureTop = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/top");
         ResourceLocation textureSide = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/side");
         ResourceLocation textureBottom = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/bottom");
 
-        ModelFile modelOpened = createModel(getBlockModelString(block.getId()) + "_opened", "tfc:block/ceramic/large_vessel_opened")
-                .texture("side", textureSide)
-                .texture("bottom", textureBottom)
-                .texture("particle", textureSide);
+        ModelFile modelOpened = createModel(getBlockModelString(block.getId()) + "_opened", "tfc:block/ceramic/large_vessel_opened").texture("side", textureSide).texture("bottom", textureBottom).texture("particle", textureSide);
 
-        ModelFile modelSealed = createModel(getBlockModelString(block.getId()) + "_sealed", "tfc:block/ceramic/large_vessel_sealed")
-                .texture("top", textureTop)
-                .texture("side", textureSide)
-                .texture("bottom", textureBottom)
-                .texture("particle", textureSide);
+        ModelFile modelSealed = createModel(getBlockModelString(block.getId()) + "_sealed", "tfc:block/ceramic/large_vessel_sealed").texture("top", textureTop).texture("side", textureSide).texture("bottom", textureBottom).texture("particle", textureSide);
 
         ResourceLocation textureClayTop = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_top");
         ResourceLocation textureClaySide = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_side");
         ResourceLocation textureClayBottom = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_bottom");
 
-        ModelFile modelItem = createModel(getBlockModelString(block.getId()) + "_item", "tfc:block/ceramic/large_vessel_sealed")
-                .texture("top", textureClayTop)
-                .texture("side", textureClaySide)
-                .texture("bottom", textureClayBottom)
-                .texture("particle", textureClaySide);
+        ModelFile modelItem = createModel(getBlockModelString(block.getId()) + "_item", "tfc:block/ceramic/large_vessel_sealed").texture("top", textureClayTop).texture("side", textureClaySide).texture("bottom", textureClayBottom).texture("particle", textureClaySide);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.NORTH).modelForState().modelFile(modelOpened).rotationY(180).addModel()
-                .partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.EAST).modelForState().modelFile(modelOpened).rotationY(270).addModel()
-                .partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.SOUTH).modelForState().modelFile(modelOpened).rotationY(0).addModel()
-                .partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.WEST).modelForState().modelFile(modelOpened).rotationY(90).addModel()
-                .partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.NORTH).modelForState().modelFile(modelSealed).rotationY(180).addModel()
-                .partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.EAST).modelForState().modelFile(modelSealed).rotationY(270).addModel()
-                .partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.SOUTH).modelForState().modelFile(modelSealed).rotationY(0).addModel()
-                .partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.WEST).modelForState().modelFile(modelSealed).rotationY(90).addModel();
+        builder.partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.NORTH).modelForState().modelFile(modelOpened).rotationY(180).addModel().partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.EAST).modelForState().modelFile(modelOpened).rotationY(270).addModel().partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.SOUTH).modelForState().modelFile(modelOpened).rotationY(0).addModel().partialState().with(LargeVesselBlock.SEALED, false).with(LargeVesselBlock.FACING, Direction.WEST).modelForState().modelFile(modelOpened).rotationY(90).addModel().partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.NORTH).modelForState().modelFile(modelSealed).rotationY(180).addModel().partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.EAST).modelForState().modelFile(modelSealed).rotationY(270).addModel().partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.SOUTH).modelForState().modelFile(modelSealed).rotationY(0).addModel().partialState().with(LargeVesselBlock.SEALED, true).with(LargeVesselBlock.FACING, Direction.WEST).modelForState().modelFile(modelSealed).rotationY(90).addModel();
     }
 
-    private String getBlockModelString(ResourceLocation block){
+    private String getBlockModelString(ResourceLocation block)
+    {
         return block.getNamespace() + ":block/" + block.getPath();
     }
 
-    private String getLooseRockModelParent(CoreRocks rock, int count){
+    private String getLooseRockModelParent(CoreRocks rock, int count)
+    {
         RockCategory category = rock.displayCategory().category();
 
-        switch (category){
-            case METAMORPHIC -> {
+        switch (category)
+        {
+            case METAMORPHIC ->
+            {
                 return "tfc:block/rock/loose_metamorphic_" + count;
             }
-            case SEDIMENTARY -> {
+            case SEDIMENTARY ->
+            {
                 return "tfc:block/rock/loose_sedimentary_" + count;
             }
-            case IGNEOUS_EXTRUSIVE -> {
+            case IGNEOUS_EXTRUSIVE ->
+            {
                 return "tfc:block/rock/loose_igneous_extrusive_" + count;
             }
-            case IGNEOUS_INTRUSIVE -> {
+            case IGNEOUS_INTRUSIVE ->
+            {
                 return "tfc:block/rock/loose_igneous_intrusive_" + count;
             }
             default -> throw new AssertionError("No category found for rock: " + rock.getSerializedName());
@@ -766,88 +736,93 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
     }
 
-    private ResourceLocation getBlockModelLocation(ResourceLocation block){
+    private ResourceLocation getBlockModelLocation(ResourceLocation block)
+    {
         return ResourceLocation.fromNamespaceAndPath(block.getNamespace(), "block/" + block.getPath());
     }
 
-    private ModelBuilder<BlockModelBuilder> createModel(String name, ResourceLocation parent){
+    private ModelBuilder<BlockModelBuilder> createModel(String name, ResourceLocation parent)
+    {
         return this.models().withExistingParent(name, parent);
     }
 
-    private ModelBuilder<BlockModelBuilder> createModel(String name, String parent){
+    private ModelBuilder<BlockModelBuilder> createModel(String name, String parent)
+    {
         return this.models().withExistingParent(name, parent);
     }
 
-    private boolean generateMossyVariant(Rock.BlockType type, CoreRocks rock){
-        if (type == Rock.BlockType.MOSSY_BRICKS){
-            switch (rock){
-                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE, ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE, MARLSTONE, GREYWACKE -> {return false;}
-                default -> {return true;}
+    private boolean generateMossyVariant(Rock.BlockType type, CoreRocks rock)
+    {
+        if (type == Rock.BlockType.MOSSY_BRICKS)
+        {
+            switch (rock)
+            {
+                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE,
+                     ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE, MARLSTONE, GREYWACKE ->
+                {
+                    return false;
+                }
+                default ->
+                {
+                    return true;
+                }
             }
         }
-        if (type == Rock.BlockType.MOSSY_COBBLE){
-            switch (rock){
-                case BLACKSLAG, NEPHELINITE -> {return false;}
-                default -> {return true;}
+        if (type == Rock.BlockType.MOSSY_COBBLE)
+        {
+            switch (rock)
+            {
+                case BLACKSLAG, NEPHELINITE ->
+                {
+                    return false;
+                }
+                default ->
+                {
+                    return true;
+                }
             }
         }
         return true;
     }
 
-    private void moltenGlassBlock(DeferredHolder<Block, Block> block){
-        this.getVariantBuilder(block.get())
-                .partialState()
-                .setModels(
-                        new ConfiguredModel(
-                                createModel(block.getId().getNamespace() + ":block/" + block.getId().getPath(), AncientGroundCore.MOD_ID + ":block/colored_cube_all")
-                                        .texture("all", thickFluidFlowTexture)
-                        )
-                );
+    private void moltenGlassBlock(DeferredHolder<Block, Block> block)
+    {
+        this.getVariantBuilder(block.get()).partialState().setModels(new ConfiguredModel(createModel(block.getId().getNamespace() + ":block/" + block.getId().getPath(), AncientGroundCore.MOD_ID + ":block/colored_cube_all").texture("all", thickFluidFlowTexture)));
     }
 
-    private void cubeBottomTop(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void cubeBottomTop(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
 
         final ResourceLocation BOTTOM = ResourceLocation.fromNamespaceAndPath(texture.getNamespace(), texture.getPath() + "_bottom");
         final ResourceLocation TOP = ResourceLocation.fromNamespaceAndPath(texture.getNamespace(), texture.getPath() + "_top");
         final ResourceLocation SIDE = ResourceLocation.fromNamespaceAndPath(texture.getNamespace(), texture.getPath() + "_side");
 
-        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cube_bottom_top")
-                .texture("bottom", BOTTOM)
-                .texture("side", SIDE)
-                .texture("top", TOP)
-                .texture("particle", SIDE);
+        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cube_bottom_top").texture("bottom", BOTTOM).texture("side", SIDE).texture("top", TOP).texture("particle", SIDE);
 
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(MODEL).buildLast());
     }
 
-    private void cross(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void cross(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
 
-        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cross")
-                .texture("cross", texture)
-                .texture("particle", texture);
+        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cross").texture("cross", texture).texture("particle", texture);
 
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(MODEL).buildLast());
     }
 
-    private void cluster(DeferredHolder<Block, Block> block, ResourceLocation texture){
+    private void cluster(DeferredHolder<Block, Block> block, ResourceLocation texture)
+    {
 
-        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cross")
-                .texture("cross", texture)
-                .texture("particle", texture);
+        final BlockModelBuilder MODEL = models().withExistingParent(getBlockModelString(block.getId()), "minecraft:block/cross").texture("cross", texture).texture("particle", texture);
 
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
-        builder
-                .partialState().with(SpectrumClusterBlock.FACING, Direction.UP).modelForState().modelFile(MODEL).addModel()
-                .partialState().with(SpectrumClusterBlock.FACING, Direction.DOWN).modelForState().modelFile(MODEL).rotationX(180).addModel()
-                .partialState().with(SpectrumClusterBlock.FACING, Direction.NORTH).modelForState().modelFile(MODEL).rotationX(90).addModel()
-                .partialState().with(SpectrumClusterBlock.FACING, Direction.EAST).modelForState().modelFile(MODEL).rotationY(90).rotationX(90).addModel()
-                .partialState().with(SpectrumClusterBlock.FACING, Direction.SOUTH).modelForState().modelFile(MODEL).rotationX(90).rotationY(180).addModel()
-                .partialState().with(SpectrumClusterBlock.FACING, Direction.WEST).modelForState().modelFile(MODEL).rotationX(90).rotationY(270).addModel();
+        builder.partialState().with(SpectrumClusterBlock.FACING, Direction.UP).modelForState().modelFile(MODEL).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.DOWN).modelForState().modelFile(MODEL).rotationX(180).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.NORTH).modelForState().modelFile(MODEL).rotationX(90).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.EAST).modelForState().modelFile(MODEL).rotationY(90).rotationX(90).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.SOUTH).modelForState().modelFile(MODEL).rotationX(90).rotationY(180).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.WEST).modelForState().modelFile(MODEL).rotationX(90).rotationY(270).addModel();
     }
 
-    private void bulbBlock(DeferredHolder<Block, CopperBulbBlock> block) {
+    private void bulbBlock(DeferredHolder<Block, CopperBulbBlock> block)
+    {
 
         ResourceLocation blockId = block.getId();
         String namespace = blockId.getNamespace();
@@ -863,15 +838,13 @@ public class BuiltinBlockStates extends BlockStateProvider {
         ModelFile poweredModel = this.models().cubeAll(namespace + ":block/" + path + "_powered", poweredTexture);
         ModelFile poweredLitModel = this.models().cubeAll(namespace + ":block/" + path + "_powered_lit", poweredLitTexture);
 
-        this.getVariantBuilder(block.get())
-                .partialState().with(CopperBulbBlock.LIT, false).with(CopperBulbBlock.POWERED, false).addModels(new ConfiguredModel(baseModel))
-                .partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, false).addModels(new ConfiguredModel(baseLitModel))
-                .partialState().with(CopperBulbBlock.LIT, false).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredModel))
-                .partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredLitModel));
+        this.getVariantBuilder(block.get()).partialState().with(CopperBulbBlock.LIT, false).with(CopperBulbBlock.POWERED, false).addModels(new ConfiguredModel(baseModel)).partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, false).addModels(new ConfiguredModel(baseLitModel)).partialState().with(CopperBulbBlock.LIT, false).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredModel)).partialState().with(CopperBulbBlock.LIT, true).with(CopperBulbBlock.POWERED, true).addModels(new ConfiguredModel(poweredLitModel));
     }
 
-    private void barrelBlock(DeferredHolder<Block, Block> block, SpectrumWood wood){
-        this.getVariantBuilder(block.get()).forAllStates((blockState -> {
+    private void barrelBlock(DeferredHolder<Block, Block> block, SpectrumWood wood)
+    {
+        this.getVariantBuilder(block.get()).forAllStates((blockState ->
+        {
 
             ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
             ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
@@ -892,65 +865,61 @@ public class BuiltinBlockStates extends BlockStateProvider {
             int yRot;
 
 
-
             String baseModelLocation = getBlockModelString(block.getId());
             // for example "modpack:block/wood/barrel/white"
 
-            ModelFile openModel = createModel(baseModelLocation, barrelModelLocation)
-                    .texture("particle", texturePlank)
-                    .texture("planks", texturePlank)
-                    .texture("sheet", textureSmooth);
+            ModelFile openModel = createModel(baseModelLocation, barrelModelLocation).texture("particle", texturePlank).texture("planks", texturePlank).texture("sheet", textureSmooth);
 
-            ModelFile sideOpenModel = createModel(baseModelLocation + "_side", sideBarrelModelLocation)
-                    .texture("particle", texturePlank)
-                    .texture("planks", texturePlank)
-                    .texture("sheet", textureSmooth)
-;
+            ModelFile sideOpenModel = createModel(baseModelLocation + "_side", sideBarrelModelLocation).texture("particle", texturePlank).texture("planks", texturePlank).texture("sheet", textureSmooth);
 
-            ModelFile sideRackOpenModel = createModel(baseModelLocation + "_side_rack", sideRackBarrelModelLocation)
-                    .texture("particle", texturePlank)
-                    .texture("planks", texturePlank)
-                    .texture("sheet", textureSmooth);
+            ModelFile sideRackOpenModel = createModel(baseModelLocation + "_side_rack", sideRackBarrelModelLocation).texture("particle", texturePlank).texture("planks", texturePlank).texture("sheet", textureSmooth);
 
-            ModelFile sealedModel = createModel(baseModelLocation + "_sealed", sealedBarrelModelLocation)
-                    .texture("particle", texturePlank)
-                    .texture("planks", texturePlank)
-                    .texture("sheet", textureSmooth);
+            ModelFile sealedModel = createModel(baseModelLocation + "_sealed", sealedBarrelModelLocation).texture("particle", texturePlank).texture("planks", texturePlank).texture("sheet", textureSmooth);
 
-            ModelFile sideSealedModel = createModel(baseModelLocation + "_sealed_side", sealedSideBarrelModelLocation)
-                    .texture("particle", texturePlank)
-                    .texture("planks", texturePlank)
-                    .texture("sheet", textureSmooth);
+            ModelFile sideSealedModel = createModel(baseModelLocation + "_sealed_side", sealedSideBarrelModelLocation).texture("particle", texturePlank).texture("planks", texturePlank).texture("sheet", textureSmooth);
 
-            ModelFile sideRackSealedModel = createModel(baseModelLocation + "_sealed_side_rack", sealedSideRackBarrelModelLocation)
-                    .texture("particle", texturePlank)
-                    .texture("planks", texturePlank)
-                    .texture("sheet", textureSmooth);
+            ModelFile sideRackSealedModel = createModel(baseModelLocation + "_sealed_side_rack", sealedSideRackBarrelModelLocation).texture("particle", texturePlank).texture("planks", texturePlank).texture("sheet", textureSmooth);
 
-            if (facing == Direction.UP){
-                if (isSealed){
+            if (facing == Direction.UP)
+            {
+                if (isSealed)
+                {
                     model = sealedModel;
-                } else {
+                }
+                else
+                {
                     model = openModel;
                 }
-            } else {
+            }
+            else
+            {
                 // if not up, then is sideways.
-                if (isRacked){
-                    if (isSealed){
+                if (isRacked)
+                {
+                    if (isSealed)
+                    {
                         model = sideRackSealedModel;
-                    } else {
+                    }
+                    else
+                    {
                         model = sideRackOpenModel;
                     }
-                } else {
-                    if (isSealed){
+                }
+                else
+                {
+                    if (isSealed)
+                    {
                         model = sideSealedModel;
-                    } else {
+                    }
+                    else
+                    {
                         model = sideOpenModel;
                     }
                 }
             }
 
-            switch (facing){
+            switch (facing)
+            {
                 case WEST -> yRot = 180;
                 case SOUTH -> yRot = 90;
                 case NORTH -> yRot = 270;
@@ -962,16 +931,18 @@ public class BuiltinBlockStates extends BlockStateProvider {
     }
 
 
-    private void fluidBlock(DeferredHolder<Block, LiquidBlock> block) {
+    private void fluidBlock(DeferredHolder<Block, LiquidBlock> block)
+    {
 
         ResourceLocation blockId = block.getId();
         String namespace = blockId.getNamespace();
         String path = blockId.getPath();
 
-        simpleBlock(block.get(), models().getBuilder(namespace + ":block/" + path ).texture("particle", thickFluidFlowTexture));
+        simpleBlock(block.get(), models().getBuilder(namespace + ":block/" + path).texture("particle", thickFluidFlowTexture));
     }
 
-    private void cubeAllWithAlternate(DeferredHolder<Block, Block> block, ResourceLocation texture, ResourceLocation altTexture){
+    private void cubeAllWithAlternate(DeferredHolder<Block, Block> block, ResourceLocation texture, ResourceLocation altTexture)
+    {
 
         ResourceLocation blockId = block.getId();
         String namespace = blockId.getNamespace();

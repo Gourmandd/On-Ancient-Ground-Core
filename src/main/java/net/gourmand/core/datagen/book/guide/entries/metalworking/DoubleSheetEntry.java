@@ -14,60 +14,60 @@ import net.gourmand.core.modonomicon.datagen.BookWeldingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class DoubleSheetEntry extends EntryProvider {
+public class DoubleSheetEntry extends EntryProvider
+{
 
-    public DoubleSheetEntry(CategoryProviderBase parent) {
+    public DoubleSheetEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain double sheet.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCTags.Items.DOUBLE_SHEETS))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCTags.Items.DOUBLE_SHEETS)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Double Sheets** are a material worth 400 mb of metal, you can get them by **Welding** two sheets.
-               \s""");
+                 **Double Sheets** are a material worth 400 mb of metal, you can get them by **Welding** two sheets.
+                \s""");
 
         // page 2: welding recipes.
-        this.page("page2", () -> BookWeldingPageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "welding/metal/double_sheet/bronze"))
-                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "welding/metal/double_sheet/copper"))
-        );
+        this.page("page2", () -> BookWeldingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "welding/metal/double_sheet/bronze")).withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "welding/metal/double_sheet/copper")));
 
         this.pageTitle(entryName());
         this.pageText("Getting Double Sheets from Welding");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Double Sheets";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Double Sheets";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.COPPER).get(Metal.ItemType.DOUBLE_SHEET));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "double_sheet";
     }
 }

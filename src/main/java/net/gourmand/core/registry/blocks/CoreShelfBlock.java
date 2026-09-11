@@ -1,27 +1,27 @@
 package net.gourmand.core.registry.blocks;
 
+import net.dries007.tfc.common.blockentities.PlacedItemBlockEntity;
+import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.ShelfBlock;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.devices.PlacedItemBlock;
 import net.gourmand.core.registry.CoreBlockEntities;
-import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
+public class CoreShelfBlock extends ShelfBlock
+{
 
-import net.dries007.tfc.common.blockentities.PlacedItemBlockEntity;
-import net.dries007.tfc.common.blockentities.TFCBlockEntities;
-import net.dries007.tfc.common.blocks.devices.PlacedItemBlock;
-
-public class CoreShelfBlock extends ShelfBlock {
-
-    public CoreShelfBlock(ExtendedProperties properties, boolean thick) {
+    public CoreShelfBlock(ExtendedProperties properties, boolean thick)
+    {
         super(properties, thick);
     }
 

@@ -14,7 +14,8 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
-public class BuiltinPlacedFeatureTags extends TagsProvider<PlacedFeature> {
+public class BuiltinPlacedFeatureTags extends TagsProvider<PlacedFeature>
+{
 
     private final ExistingFileHelper.IResourceType resourceType;
 
@@ -24,17 +25,15 @@ public class BuiltinPlacedFeatureTags extends TagsProvider<PlacedFeature> {
         this.resourceType = new ExistingFileHelper.ResourceType(PackType.SERVER_DATA, ".json", Registries.tagsDirPath(registryKey));
     }
 
-    private static final TagKey<PlacedFeature> TFC_ORE_VEINS = TagKey.create(
-            Registries.PLACED_FEATURE,
-            ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "in_biome/veins")
-    );
+    private static final TagKey<PlacedFeature> TFC_ORE_VEINS = TagKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "in_biome/veins"));
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.Provider provider)
+    {
 
         // port the other tag entries to this
-//        this.tag(TFC_ORE_VEINS)
-//                .add(BuiltinPlacedFeatures.MONSTER_ROOM)
-//                .replace(false);
+        //        this.tag(TFC_ORE_VEINS)
+        //                .add(BuiltinPlacedFeatures.MONSTER_ROOM)
+        //                .replace(false);
     }
 }

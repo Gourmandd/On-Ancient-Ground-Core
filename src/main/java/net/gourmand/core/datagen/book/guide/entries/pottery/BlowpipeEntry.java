@@ -12,61 +12,62 @@ import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class BlowpipeEntry extends EntryProvider {
+public class BlowpipeEntry extends EntryProvider
+{
 
-    public BlowpipeEntry(CategoryProviderBase parent) {
+    public BlowpipeEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain blowpipe.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCItems.CERAMIC_BLOWPIPE))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCItems.CERAMIC_BLOWPIPE)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Ceramic Blowpipes** can be used for glass blowing and can break after some use. See the **Glass Making** category for more info.
-               \s""");
+                 **Ceramic Blowpipes** can be used for glass blowing and can break after some use. See the **Glass Making** category for more info.
+                \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_blowpipe"))
-        );
+        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_blowpipe")));
 
         this.pageTitle(entryName());
         this.pageText("""
-                A ceramic blowpipe being knapped out of **Clay**.
-               \s""");
+                 A ceramic blowpipe being knapped out of **Clay**.
+                \s""");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Ceramic Blowpipes";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Ceramic Blowpipes";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCItems.CERAMIC_BLOWPIPE);
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "ceramic_blowpipe";
     }
 }

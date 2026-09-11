@@ -13,64 +13,65 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class ButtonEntry extends EntryProvider {
+public class ButtonEntry extends EntryProvider
+{
 
-    public ButtonEntry(CategoryProviderBase parent) {
+    public ButtonEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain buttons.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.BUTTON)))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.BUTTON))));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Buttons** need to be placed on a solid block.
-                \\
-                \\
-                For 1.5 seconds after it is pressed, it emits a strong **Redstone** signal on the block they are on and a weak one to the surrounding blocks.
-               \s""");
+                 **Buttons** need to be placed on a solid block.
+                 \\
+                 \\
+                 For 1.5 seconds after it is pressed, it emits a strong **Redstone** signal on the block they are on and a weak one to the surrounding blocks.
+                \s""");
 
         // page 2: ash button recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/button/ash"))
-        );
+        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/button/ash")));
 
         this.pageTitle(entryName());
         this.pageText("""
-                Ash button being made out Ash lumber.
-               \s""");
+                 Ash button being made out Ash lumber.
+                \s""");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Buttons";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Buttons";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.BUTTON));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "button";
     }
 }

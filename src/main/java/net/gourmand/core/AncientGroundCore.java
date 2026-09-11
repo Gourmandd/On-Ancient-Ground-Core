@@ -30,14 +30,16 @@ import java.util.Map;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AncientGroundCore.MOD_ID)
-public class AncientGroundCore {
+public class AncientGroundCore
+{
     public static final String MOD_NAME = "Modpack Core";
     public static final String MOD_ID = "modpack";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public AncientGroundCore(IEventBus modEventBus, ModContainer modContainer) {
+    public AncientGroundCore(IEventBus modEventBus, ModContainer modContainer)
+    {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(CoreItemCapabilities::register);
@@ -66,7 +68,8 @@ public class AncientGroundCore {
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         //modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
-        if (FMLEnvironment.dist == Dist.CLIENT){
+        if (FMLEnvironment.dist == Dist.CLIENT)
+        {
             ClientEventHandler.init(modEventBus, modContainer);
             ClientForgeEventHandler.init();
             ModonomiconIntegration.registerPageRenderers();
@@ -76,34 +79,36 @@ public class AncientGroundCore {
     }
 
 
-    private void commonSetup(FMLCommonSetupEvent event) {
+    private void commonSetup(FMLCommonSetupEvent event)
+    {
         LOGGER.info("HELLO FROM COMMON SETUP");
         CoreBoilerHeaters.register();
     }
 
-    private void clientSetup(FMLClientSetupEvent event) {
+    private void clientSetup(FMLClientSetupEvent event)
+    {
         LOGGER.info("HELLO FROM CLIENT SETUP");
 
-        Map<String, String> textMacros = ImmutableMap.<String, String>builder()
-                .put("macro.modpack.open_modpack_guide_key", CoreKeyBindings.OPEN_MODPACK_GUIDE.getKey().getDisplayName().getString())
-                .put("macro.modpack.open_tfc_guide_key", CoreKeyBindings.OPEN_TFC_GUIDE.getKey().getDisplayName().getString())
-                .build();
+        Map<String, String> textMacros = ImmutableMap.<String, String>builder().put("macro.modpack.open_modpack_guide_key", CoreKeyBindings.OPEN_MODPACK_GUIDE.getKey().getDisplayName().getString()).put("macro.modpack.open_tfc_guide_key", CoreKeyBindings.OPEN_TFC_GUIDE.getKey().getDisplayName().getString()).build();
 
         LoaderRegistry.registerDynamicTextMacroLoader(ModonomiconIntegration.BOOK_ID, () -> textMacros);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
+    public void onServerStarting(ServerStartingEvent event)
+    {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
 
-    public static ResourceLocation location(String path){
+    public static ResourceLocation location(String path)
+    {
         return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, path);
     }
 
-    public static ResourceLocation location(String name, String path){
+    public static ResourceLocation location(String name, String path)
+    {
         return ResourceLocation.fromNamespaceAndPath(name, path);
     }
 }

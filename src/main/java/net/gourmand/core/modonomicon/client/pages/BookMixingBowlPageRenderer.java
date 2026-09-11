@@ -19,33 +19,34 @@ import org.joml.Vector2i;
 import java.util.List;
 import java.util.Map;
 
-public class BookMixingBowlPageRenderer extends BookRecipePageRenderer<MixingBowlRecipe, BookMixingBowlPage> {
+public class BookMixingBowlPageRenderer extends BookRecipePageRenderer<MixingBowlRecipe, BookMixingBowlPage>
+{
 
-    public BookMixingBowlPageRenderer(BookMixingBowlPage page) {
+    public BookMixingBowlPageRenderer(BookMixingBowlPage page)
+    {
         super(page);
     }
 
-    public static final Map<Integer, Vector2i> ITEM_POSITIONS = ImmutableMap.<Integer, Vector2i>builder()
-            .put(0, new Vector2i(5, 16))
-            .put(1, new Vector2i(29, 16))
-            .put(2, new Vector2i(5, 40))
-            .put(3, new Vector2i(29, 40))
-            .put(4, new Vector2i(17, 64))
-            .build();
+    public static final Map<Integer, Vector2i> ITEM_POSITIONS = ImmutableMap.<Integer, Vector2i>builder().put(0, new Vector2i(5, 16)).put(1, new Vector2i(29, 16)).put(2, new Vector2i(5, 40)).put(3, new Vector2i(29, 40)).put(4, new Vector2i(17, 64)).build();
 
     @Override
-    protected int getRecipeHeight() {
+    protected int getRecipeHeight()
+    {
         return 92;
     }
 
     @Override
-    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<MixingBowlRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second) {
+    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<MixingBowlRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second)
+    {
 
         Level world = Minecraft.getInstance().level;
-        if (world == null) return;
+        if (world == null)
+            return;
 
-        if (!second) {
-            if (!this.page.getTitle1().isEmpty()) {
+        if (!second)
+        {
+            if (!this.page.getTitle1().isEmpty())
+            {
                 this.renderTitle(guiGraphics, this.page.getTitle1(), false, BookEntryScreen.PAGE_WIDTH / 2, 0);
             }
         } // only rendering 1 for now
@@ -75,11 +76,13 @@ public class BookMixingBowlPageRenderer extends BookRecipePageRenderer<MixingBow
 
         List<Ingredient> ingredients = mixingBowlRecipe.getItemIngredients();
 
-        for (int i = 0; i < ingredients.size(); i++) {
+        for (int i = 0; i < ingredients.size(); i++)
+        {
             this.parentScreen.renderIngredient(guiGraphics, ITEM_POSITIONS.get(i).x, ITEM_POSITIONS.get(i).y, mouseX, mouseY, ingredients.get(i));
         }
 
-        if (mixingBowlRecipe.getFluidIngredient().isPresent()){
+        if (mixingBowlRecipe.getFluidIngredient().isPresent())
+        {
             this.parentScreen.renderFluidStack(guiGraphics, recipeX + 49, recipeY + 35, mouseX, mouseY, ModonomiconIntegration.getFluidHolder(mixingBowlRecipe.getFluidIngredient().get().getFluids()[0]));
         }
         this.parentScreen.renderItemStack(guiGraphics, recipeX + 50, recipeY + 11, mouseX, mouseY, new ItemStack(FLBlocks.MIXING_BOWL.asItem()));

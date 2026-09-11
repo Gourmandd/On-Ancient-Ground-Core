@@ -16,11 +16,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public interface KnappingRecipes extends Recipes {
+public interface KnappingRecipes extends Recipes
+{
 
-    default void knappingRecipes(){
+    default void knappingRecipes()
+    {
 
-        Stream.of(CoreClay.values()).forEach(clayType -> {
+        Stream.of(CoreClay.values()).forEach(clayType ->
+        {
 
             final Map<CoreClay.ItemType, DeferredHolder<Item, Item>> MAP = CoreItems.CERAMICS.get(clayType);
 
@@ -77,11 +80,6 @@ public interface KnappingRecipes extends Recipes {
 
     private void clayKnapping(CoreClay clayType, String suffix, ItemLike output, int count, boolean defaultOn, String... pattern)
     {
-        add(nameOf(output) + (suffix.isEmpty() ? "" : "_" + suffix), new KnappingRecipe(
-                KnappingType.MANAGER.getCheckedReference(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, clayType.getSerializedName())),
-                KnappingPattern.from(defaultOn, pattern),
-                Optional.empty(),
-                new ItemStack(output, count)
-        ));
+        add(nameOf(output) + (suffix.isEmpty() ? "" : "_" + suffix), new KnappingRecipe(KnappingType.MANAGER.getCheckedReference(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, clayType.getSerializedName())), KnappingPattern.from(defaultOn, pattern), Optional.empty(), new ItemStack(output, count)));
     }
 }

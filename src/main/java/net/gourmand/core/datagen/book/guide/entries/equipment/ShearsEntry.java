@@ -13,70 +13,70 @@ import net.gourmand.core.modonomicon.datagen.BookWeldingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class ShearsEntry extends EntryProvider {
+public class ShearsEntry extends EntryProvider
+{
 
-    public ShearsEntry(CategoryProviderBase parent) {
+    public ShearsEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain shear.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCItems.METAL_ITEMS.get(Metal.COPPER).get(Metal.ItemType.SHEARS)))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCItems.METAL_ITEMS.get(Metal.COPPER).get(Metal.ItemType.SHEARS))));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Knives** are fast at breaking wool and related blocks.
-                \\
-                \\
-                They also allow you to shear woolly animals.
-                \\
+                 **Knives** are fast at breaking wool and related blocks.
                  \\
-                 They are welded from two knife blades.
-               \s""");
+                 \\
+                 They also allow you to shear woolly animals.
+                 \\
+                  \\
+                  They are welded from two knife blades.
+                \s""");
 
 
         // page 3: welding recipe.
-        this.page("page3", () -> BookWeldingPageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "welding/metal/shears/copper"))
-                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "welding/metal/shears/bronze"))
-        );
+        this.page("page3", () -> BookWeldingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "welding/metal/shears/copper")).withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "welding/metal/shears/bronze")));
 
         this.pageTitle(entryName());
         this.pageText("""
-                A shears being welded out of **Copper** and **Bronze** metal.
-               \s""");
+                 A shears being welded out of **Copper** and **Bronze** metal.
+                \s""");
 
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Shears";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Shears.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.COPPER).get(Metal.ItemType.SHEARS));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "shears";
     }
 }

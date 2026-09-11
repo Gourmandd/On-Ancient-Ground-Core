@@ -11,16 +11,19 @@ import net.minecraft.world.level.material.Fluid;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-public class BuiltinFluidHeats extends DataManagerProvider<FluidHeat>{
+public class BuiltinFluidHeats extends DataManagerProvider<FluidHeat>
+{
 
     public static final float HEAT_CAPACITY = 0.003f;
 
-    public BuiltinFluidHeats(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup) {
+    public BuiltinFluidHeats(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup)
+    {
         super(FluidHeat.MANAGER, output, lookup);
     }
 
     @Override
-    protected void addData(HolderLookup.Provider provider) {
+    protected void addData(HolderLookup.Provider provider)
+    {
 
         add(CoreMetals.MetalType.ALUMINIUM, 0.35f, 780);
         add(CoreMetals.MetalType.ALUMINIUM_BRONZE, 0.35f, 1180);
@@ -31,7 +34,7 @@ public class BuiltinFluidHeats extends DataManagerProvider<FluidHeat>{
         add(CoreMetals.MetalType.NETHERSTEEL, 0.35f, 1615);
 
         Stream.of(DyeColor.values()).forEach(color -> add(color, 0.35f, 1070));
-        add("glass/clear", CoreFluids.CLEAR_GLASS.getSource(),0.35f, 1070);
+        add("glass/clear", CoreFluids.CLEAR_GLASS.getSource(), 0.35f, 1070);
     }
 
     private void add(String name, Fluid fluid, float baseHeatCapacity, float meltTemperature)

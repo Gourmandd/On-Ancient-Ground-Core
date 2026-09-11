@@ -14,10 +14,12 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Pseudo
 @Mixin(targets = "net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$LargeDripstone")
-public class LargeDripstoneFeatureMixin {
+public class LargeDripstoneFeatureMixin
+{
 
     @WrapOperation(method = "placeBlocks", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/WorldGenLevel;setBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z", ordinal = 0))
-    private boolean changePlacedBlock(WorldGenLevel level, BlockPos blockPos, BlockState blockState, int i, Operation<Boolean> original){
+    private boolean changePlacedBlock(WorldGenLevel level, BlockPos blockPos, BlockState blockState, int i, Operation<Boolean> original)
+    {
         return level.setBlock(blockPos, CoreBlocks.ROCK_BLOCKS.get(CoreRocks.TRAVERTINE).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2);
     }
 }

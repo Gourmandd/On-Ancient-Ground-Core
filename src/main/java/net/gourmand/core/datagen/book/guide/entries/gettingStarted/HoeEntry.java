@@ -13,64 +13,65 @@ import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class HoeEntry extends EntryProvider {
+public class HoeEntry extends EntryProvider
+{
 
-    public HoeEntry(CategoryProviderBase parent) {
+    public HoeEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain hoes.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCItems.ROCK_TOOLS.get(RockCategory.SEDIMENTARY).get(RockCategory.ItemType.HOE)))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCItems.ROCK_TOOLS.get(RockCategory.SEDIMENTARY).get(RockCategory.ItemType.HOE))));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Knives** are fast at harvesting wild crops, leaves and can till dirt into farmland.\s
-                \\
-                \\
-                They also allow you to gain straw from breaking grass and let you pick up flowers and other foliage.
-               \s""");
+                 **Knives** are fast at harvesting wild crops, leaves and can till dirt into farmland.\s
+                 \\
+                 \\
+                 They also allow you to gain straw from breaking grass and let you pick up flowers and other foliage.
+                \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/stone/hoe_head/sedimentary"))
-        );
+        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/stone/hoe_head/sedimentary")));
 
         this.pageTitle(entryName());
         this.pageText("""
-                A hoe being knapped out of **Sedimentary** rock. \s
-               \s""");
+                 A hoe being knapped out of **Sedimentary** rock. \s
+                \s""");
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Hoes";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Hoes.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCItems.ROCK_TOOLS.get(RockCategory.SEDIMENTARY).get(RockCategory.ItemType.HOE));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "hoe";
     }
 }

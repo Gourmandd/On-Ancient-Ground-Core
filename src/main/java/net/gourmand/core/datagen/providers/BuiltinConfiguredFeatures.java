@@ -12,15 +12,18 @@ import net.dries007.tfc.util.collections.IWeighted;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.world.feature.*;
 import net.dries007.tfc.world.feature.cave.CaveVegetationConfig;
-import net.dries007.tfc.world.feature.vein.*;
+import net.dries007.tfc.world.feature.vein.ClusterVeinConfig;
+import net.dries007.tfc.world.feature.vein.DiscVeinConfig;
+import net.dries007.tfc.world.feature.vein.PipeVeinConfig;
+import net.dries007.tfc.world.feature.vein.VeinConfig;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreWorldGen;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.gourmand.core.registry.category.TFCOres;
-import net.gourmand.core.util.RegistryOre;
 import net.gourmand.core.util.DataWeighted;
+import net.gourmand.core.util.RegistryOre;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -46,7 +49,8 @@ import net.neoforged.neoforge.common.Tags;
 import java.util.*;
 import java.util.stream.Stream;
 
-public class BuiltinConfiguredFeatures  {
+public class BuiltinConfiguredFeatures
+{
     // Some features are commented out, and their generated jsons are moved to the non-datagenned data directories.
     // Each time they generate, the order of the maps is different, this is so that git doesn't bother with them each time data gen is run.
 
@@ -198,7 +202,8 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> TERRACOTTA = createKey(AncientGroundCore.MOD_ID, "vein/terracotta");
     //endregion
 
-    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx)
+    {
 
         CTX = ctx;
 
@@ -206,13 +211,9 @@ public class BuiltinConfiguredFeatures  {
         bootstrapTFCFeatures();
     }
 
-    private static void bootstrapModpackFeatures(){
-        CTX.register(
-                MONSTER_ROOM,
-                new ConfiguredFeature<>(CoreWorldGen.MONSTER_ROOM.get(),
-                        new NoneFeatureConfiguration()
-                )
-        );
+    private static void bootstrapModpackFeatures()
+    {
+        CTX.register(MONSTER_ROOM, new ConfiguredFeature<>(CoreWorldGen.MONSTER_ROOM.get(), new NoneFeatureConfiguration()));
 
         //region Geode
         createGeode(AMETHYST_GEODE, Blocks.AMETHYST_BLOCK, Blocks.CALCITE, Blocks.SMOOTH_BASALT, Blocks.BUDDING_AMETHYST, 0.1);
@@ -221,158 +222,65 @@ public class BuiltinConfiguredFeatures  {
         createGeode(ONYX_GEODE, SpectrumBlocks.ONYX_BLOCK.get(), Blocks.CALCITE, Blocks.SMOOTH_BASALT, SpectrumBlocks.BUDDING_ONYX.get(), 0.1);
         createGeode(MOONSTONE_GEODE, SpectrumBlocks.MOONSTONE_BLOCK.get(), Blocks.CALCITE, Blocks.SMOOTH_BASALT, SpectrumBlocks.BUDDING_MOONSTONE.get(), 0.1);
 
-        createOreGeode(BISMUTH_DEEPER_DOWN, CoreRocks.ARGILLITE, TFCOres.BISMUTHINITE,
-                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.ARGILLITE).get(Ore.BISMUTHINITE).get(CoreOres.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(BISMUTH_DEEPER_DOWN, CoreRocks.ARGILLITE, TFCOres.BISMUTHINITE, CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.ARGILLITE).get(Ore.BISMUTHINITE).get(CoreOres.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(BORAX_DEEPER_DOWN, Rock.SHALE, TFCOres.BORAX,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(BORAX_DEEPER_DOWN, Rock.SHALE, TFCOres.BORAX, TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(CASSITERITE_DEEPER_DOWN, Rock.DIORITE, TFCOres.CASSITERITE,
-                TFCBlocks.GRADED_ORES.get(Rock.DIORITE).get(Ore.CASSITERITE).get(Ore.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(CASSITERITE_DEEPER_DOWN, Rock.DIORITE, TFCOres.CASSITERITE, TFCBlocks.GRADED_ORES.get(Rock.DIORITE).get(Ore.CASSITERITE).get(Ore.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(CINNABAR_DEEPER_DOWN, Rock.GNEISS, TFCOres.CINNABAR,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GNEISS).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(CINNABAR_DEEPER_DOWN, Rock.GNEISS, TFCOres.CINNABAR, TFCBlocks.ROCK_BLOCKS.get(Rock.GNEISS).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(CRYOLITE_DEEPER_DOWN, Rock.GRANITE, TFCOres.CRYOLITE,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(CRYOLITE_DEEPER_DOWN, Rock.GRANITE, TFCOres.CRYOLITE, TFCBlocks.ROCK_BLOCKS.get(Rock.GRANITE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(DIAMOND_DEEPER_DOWN, Rock.GABBRO, TFCOres.DIAMOND,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(DIAMOND_DEEPER_DOWN, Rock.GABBRO, TFCOres.DIAMOND, TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(EMERALD_DEEPER_DOWN, Rock.DIORITE, TFCOres.EMERALD,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.DIORITE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(EMERALD_DEEPER_DOWN, Rock.DIORITE, TFCOres.EMERALD, TFCBlocks.ROCK_BLOCKS.get(Rock.DIORITE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(GARNIERITE_DEEPER_DOWN, Rock.GABBRO, TFCOres.GARNIERITE,
-                TFCBlocks.GRADED_ORES.get(Rock.GABBRO).get(Ore.GARNIERITE).get(Ore.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(GARNIERITE_DEEPER_DOWN, Rock.GABBRO, TFCOres.GARNIERITE, TFCBlocks.GRADED_ORES.get(Rock.GABBRO).get(Ore.GARNIERITE).get(Ore.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(GRAPHITE_DEEPER_DOWN, Rock.MARBLE, TFCOres.GRAPHITE,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(GRAPHITE_DEEPER_DOWN, Rock.MARBLE, TFCOres.GRAPHITE, TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(GYPSUM_DEEPER_DOWN, Rock.CLAYSTONE, TFCOres.GYPSUM,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.CLAYSTONE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(GYPSUM_DEEPER_DOWN, Rock.CLAYSTONE, TFCOres.GYPSUM, TFCBlocks.ROCK_BLOCKS.get(Rock.CLAYSTONE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(HALITE_DEEPER_DOWN, Rock.CLAYSTONE, TFCOres.HALITE,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.CLAYSTONE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(HALITE_DEEPER_DOWN, Rock.CLAYSTONE, TFCOres.HALITE, TFCBlocks.ROCK_BLOCKS.get(Rock.CLAYSTONE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(HEMATITE_DEEPER_DOWN, Rock.ANDESITE, TFCOres.HEMATITE,
-                TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.HEMATITE).get(Ore.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GNEISS).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(HEMATITE_DEEPER_DOWN, Rock.ANDESITE, TFCOres.HEMATITE, TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.HEMATITE).get(Ore.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.GNEISS).get(Rock.BlockType.HARDENED).get());
 
-        createGeode(KAOLINITE_DEEPER_DOWN,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(),
-                CoreBlocks.BASIC_ORES.get(CoreOres.BAUXITE).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get(),
-                CoreBlocks.BASIC_ORES.get(CoreOres.BAUXITE).get(),
-                0.25
-        );
+        createGeode(KAOLINITE_DEEPER_DOWN, TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(), CoreBlocks.BASIC_ORES.get(CoreOres.BAUXITE).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get(), CoreBlocks.BASIC_ORES.get(CoreOres.BAUXITE).get(), 0.25);
 
-        createOreGeode(LAPIS_LAZULI_DEEPER_DOWN, Rock.LIMESTONE, TFCOres.LAPIS_LAZULI,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.LIMESTONE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(LAPIS_LAZULI_DEEPER_DOWN, Rock.LIMESTONE, TFCOres.LAPIS_LAZULI, TFCBlocks.ROCK_BLOCKS.get(Rock.LIMESTONE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(LIGNITE_DEEPER_DOWN, Rock.DOLOMITE, TFCOres.LIGNITE,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.DOLOMITE).get(Rock.BlockType.HARDENED).get(),
-                CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE).get()
-        );
+        createOreGeode(LIGNITE_DEEPER_DOWN, Rock.DOLOMITE, TFCOres.LIGNITE, TFCBlocks.ROCK_BLOCKS.get(Rock.DOLOMITE).get(Rock.BlockType.HARDENED).get(), CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE).get());
 
-        createOreGeode(LIMONITE_DEEPER_DOWN, CoreRocks.ARKOSE, TFCOres.LIMONITE,
-                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.ARKOSE).get(Ore.LIMONITE).get(CoreOres.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(LIMONITE_DEEPER_DOWN, CoreRocks.ARKOSE, TFCOres.LIMONITE, CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.ARKOSE).get(Ore.LIMONITE).get(CoreOres.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(MALACHITE_DEEPER_DOWN, CoreRocks.PICRITE_BASALT, CoreOres.MALACHITE,
-                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.PICRITE_BASALT).get(CoreOres.MALACHITE).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(MALACHITE_DEEPER_DOWN, CoreRocks.PICRITE_BASALT, CoreOres.MALACHITE, CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.PICRITE_BASALT).get(CoreOres.MALACHITE).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(NATIVE_COPPER_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_COPPER,
-                TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_COPPER).get(Ore.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(NATIVE_COPPER_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_COPPER, TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_COPPER).get(Ore.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(NATIVE_GOLD_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_GOLD,
-                TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_GOLD).get(Ore.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(NATIVE_GOLD_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_GOLD, TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_GOLD).get(Ore.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(NATIVE_SILVER_DEEPER_DOWN, Rock.GRANITE, TFCOres.NATIVE_SILVER,
-                TFCBlocks.GRADED_ORES.get(Rock.GRANITE).get(Ore.NATIVE_SILVER).get(Ore.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(NATIVE_SILVER_DEEPER_DOWN, Rock.GRANITE, TFCOres.NATIVE_SILVER, TFCBlocks.GRADED_ORES.get(Rock.GRANITE).get(Ore.NATIVE_SILVER).get(Ore.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(OPAL_DEEPER_DOWN, Rock.DOLOMITE, TFCOres.OPAL,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.DOLOMITE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(OPAL_DEEPER_DOWN, Rock.DOLOMITE, TFCOres.OPAL, TFCBlocks.ROCK_BLOCKS.get(Rock.DOLOMITE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(PALTAERIA_DEEPER_DOWN, CoreRocks.TRAVERTINE, CoreOres.PALTAERIA,
-                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.TRAVERTINE).get(CoreOres.PALTAERIA).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(PALTAERIA_DEEPER_DOWN, CoreRocks.TRAVERTINE, CoreOres.PALTAERIA, CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.TRAVERTINE).get(CoreOres.PALTAERIA).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(RUBY_DEEPER_DOWN, Rock.CHERT, TFCOres.RUBY,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(RUBY_DEEPER_DOWN, Rock.CHERT, TFCOres.RUBY, TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(SALTPETER_DEEPER_DOWN, Rock.SHALE, TFCOres.SALTPETER,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SLATE).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(SALTPETER_DEEPER_DOWN, Rock.SHALE, TFCOres.SALTPETER, TFCBlocks.ROCK_BLOCKS.get(Rock.SHALE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SLATE).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(SAPPHIRE_DEEPER_DOWN, Rock.MARBLE, TFCOres.SAPPHIRE,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(SAPPHIRE_DEEPER_DOWN, Rock.MARBLE, TFCOres.SAPPHIRE, TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(SHIMERSTONE_DEEPER_DOWN, CoreRocks.KOMATIITE, CoreOres.SHIMMERSTONE,
-                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.KOMATIITE).get(CoreOres.SHIMMERSTONE).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(SHIMERSTONE_DEEPER_DOWN, CoreRocks.KOMATIITE, CoreOres.SHIMMERSTONE, CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.KOMATIITE).get(CoreOres.SHIMMERSTONE).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(SULFUR_DEEPER_DOWN, Rock.GABBRO, TFCOres.SULFUR,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(SULFUR_DEEPER_DOWN, Rock.GABBRO, TFCOres.SULFUR, TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(SPHALERITE_DEEPER_DOWN, CoreRocks.BLACKSLAG, TFCOres.SPHALERITE,
-                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.BLACKSLAG).get(Ore.SPHALERITE).get(CoreOres.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(SPHALERITE_DEEPER_DOWN, CoreRocks.BLACKSLAG, TFCOres.SPHALERITE, CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(CoreRocks.BLACKSLAG).get(Ore.SPHALERITE).get(CoreOres.Grade.POOR).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(STRATINE_DEEPER_DOWN, CoreRocks.ARGILLITE, CoreOres.STRATINE,
-                CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.ARGILLITE).get(CoreOres.STRATINE).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(STRATINE_DEEPER_DOWN, CoreRocks.ARGILLITE, CoreOres.STRATINE, CoreBlocks.CUSTOM_ROCK_ORES.get(CoreRocks.ARGILLITE).get(CoreOres.STRATINE).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get());
 
-        createOreGeode(SYLVITE_DEEPER_DOWN, Rock.CHERT, TFCOres.SYLVITE,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get()
-        );
+        createOreGeode(SYLVITE_DEEPER_DOWN, Rock.CHERT, TFCOres.SYLVITE, TFCBlocks.ROCK_BLOCKS.get(Rock.CHERT).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ROCK_BLOCKS.get(Rock.PHYLLITE).get(Rock.BlockType.HARDENED).get());
         //endregion
 
         // See notice at the top of the class.
@@ -585,7 +493,8 @@ public class BuiltinConfiguredFeatures  {
          */
     }
 
-    private static void bootstrapTFCFeatures(){
+    private static void bootstrapTFCFeatures()
+    {
 
         //region Non-Vein
         createSoilDisc(CASSITERITE_DEEP_DEPOSIT, createDepositMap(OreDeposit.CASSITERITE), 3, 10, 3, 0.9f);
@@ -1302,455 +1211,329 @@ public class BuiltinConfiguredFeatures  {
     }
 
     //region Functions to create features
-    private static void createSoilDisc(ResourceKey<ConfiguredFeature<?, ?>> key, Map<Block, BlockState> map, int minRadius, int maxRadius, int height, float integrity){
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.SOIL_DISC.get(),
-                        new SoilDiscConfig(map, minRadius, maxRadius, height, integrity)
-                )
-        );
+    private static void createSoilDisc(ResourceKey<ConfiguredFeature<?, ?>> key, Map<Block, BlockState> map, int minRadius, int maxRadius, int height, float integrity)
+    {
+        CTX.register(key, new ConfiguredFeature<>(TFCFeatures.SOIL_DISC.get(), new SoilDiscConfig(map, minRadius, maxRadius, height, integrity)));
     }
 
-    private static void createCaveVegetation(){
+    private static void createCaveVegetation()
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            map.putLast(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(
-                            Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d),
-                            Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get().defaultBlockState(), 8d)
-                    )
-            ));
+        for (Rock rock : Rock.values())
+        {
+            map.putLast(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d), Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get().defaultBlockState(), 8d))));
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(
-                            Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d),
-                            Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get().defaultBlockState(), 8d)
-                    )
-            ));
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d), Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get().defaultBlockState(), 8d))));
         }
 
-        CTX.register(
-                CAVE_VEGETATION,
-                new ConfiguredFeature<>(TFCFeatures.CAVE_VEGETATION.get(),
-                        new CaveVegetationConfig(map)
-                )
-        );
+        CTX.register(CAVE_VEGETATION, new ConfiguredFeature<>(TFCFeatures.CAVE_VEGETATION.get(), new CaveVegetationConfig(map)));
     }
 
-    private static void createBoulder(ResourceKey<ConfiguredFeature<?, ?>> key, List<Rock.BlockType> list, boolean isBaby){
+    private static void createBoulder(ResourceKey<ConfiguredFeature<?, ?>> key, List<Rock.BlockType> list, boolean isBaby)
+    {
 
         Map<Block, List<BlockState>> map = new LinkedHashMap<>();
 
-        list.forEach(blockType -> {
+        list.forEach(blockType ->
+        {
 
-            Stream.of(Rock.values()).forEach(rock -> {
-                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(),
-                        List.of(
-                                TFCBlocks.ROCK_BLOCKS.get(rock).get(blockType).get().defaultBlockState()
-                        )
-                );
+            Stream.of(Rock.values()).forEach(rock ->
+            {
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), List.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(blockType).get().defaultBlockState()));
             });
 
-            Stream.of(CoreRocks.values()).forEach(rock -> {
-                map.put(rock.getBlock(Rock.BlockType.RAW).get(),
-                        List.of(
-                                rock.getBlock(blockType).get().defaultBlockState()
-                        )
-                );
+            Stream.of(CoreRocks.values()).forEach(rock ->
+            {
+                map.put(rock.getBlock(Rock.BlockType.RAW).get(), List.of(rock.getBlock(blockType).get().defaultBlockState()));
             });
         });
 
-        if (isBaby) {
-            CTX.register(
-                    key,
-                    new ConfiguredFeature<>(TFCFeatures.BABY_BOULDER.get(),
-                            new BoulderConfig(map)
-                    )
-            );
-        } else {
-            CTX.register(
-                    key,
-                    new ConfiguredFeature<>(TFCFeatures.BOULDER.get(),
-                            new BoulderConfig(map)
-                    )
-            );
+        if (isBaby)
+        {
+            CTX.register(key, new ConfiguredFeature<>(TFCFeatures.BABY_BOULDER.get(), new BoulderConfig(map)));
+        }
+        else
+        {
+            CTX.register(key, new ConfiguredFeature<>(TFCFeatures.BOULDER.get(), new BoulderConfig(map)));
         }
     }
 
-    private static void createFissure(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, BlockState wallState, BlockState fluidState, int count, int radius, int radiusDeco, int countDeco, int rarityDeco){
+    private static void createFissure(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, BlockState wallState, BlockState fluidState, int count, int radius, int radiusDeco, int countDeco, int rarityDeco)
+    {
 
         Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
+        for (Rock rock : Rock.values())
+        {
             RockCategory category = rock.displayCategory().category();
-            if (category != RockCategory.SEDIMENTARY){
-                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
-                        List.of(
-                                Pair.of(TFCBlocks.ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
-                        )
-                ));
+            if (category != RockCategory.SEDIMENTARY)
+            {
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(List.of(Pair.of(TFCBlocks.ORES.get(rock).get(ore).get().defaultBlockState(), 1d))));
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (rock.hasOres()){
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (rock.hasOres())
+            {
                 RockCategory category = rock.displayCategory().category();
-                if (category != RockCategory.SEDIMENTARY){
-                    map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
-                            List.of(
-                                    Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
-                            )
-                    ));
+                if (category != RockCategory.SEDIMENTARY)
+                {
+                    map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(List.of(Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d))));
                 }
             }
         }
 
         FissureConfig.Decoration deco = new FissureConfig.Decoration(map, rarityDeco, radiusDeco, countDeco);
 
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.FISSURE.get(),
-                        new FissureConfig(Optional.of(wallState), fluidState, count, radius, VerticalAnchor.BOTTOM, 10, 24, 6, Optional.of(deco))
-                )
-        );
+        CTX.register(key, new ConfiguredFeature<>(TFCFeatures.FISSURE.get(), new FissureConfig(Optional.of(wallState), fluidState, count, radius, VerticalAnchor.BOTTOM, 10, 24, 6, Optional.of(deco))));
     }
 
-    private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco){
+    private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco)
+    {
         createHotSpring(key, ore, wallState, fluidState, radius, radiusDeco, countDeco, rarityDeco, false, Optional.empty());
     }
 
-    private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco, boolean allowUnderwater, Optional<Map<Block, IWeighted<BlockState>>> replacement){
+    private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco, boolean allowUnderwater, Optional<Map<Block, IWeighted<BlockState>>> replacement)
+    {
 
         Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        if (ore != null){
-            Stream.of(Rock.values()).forEach(rock -> {
+        if (ore != null)
+        {
+            Stream.of(Rock.values()).forEach(rock ->
+            {
 
                 RockCategory category = rock.displayCategory().category();
-                if (category != RockCategory.SEDIMENTARY){
-                    map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
-                            List.of(
-                                    Pair.of(TFCBlocks.ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
-                            )
-                    ));
+                if (category != RockCategory.SEDIMENTARY)
+                {
+                    map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(List.of(Pair.of(TFCBlocks.ORES.get(rock).get(ore).get().defaultBlockState(), 1d))));
                 }
             });
 
-            Stream.of(CoreRocks.values()).forEach(rock -> {
-                if (rock.hasOres()){
+            Stream.of(CoreRocks.values()).forEach(rock ->
+            {
+                if (rock.hasOres())
+                {
                     RockCategory category = rock.displayCategory().category();
-                    if (category != RockCategory.SEDIMENTARY){
-                        map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
-                                List.of(
-                                        Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
-                                )
-                        ));
+                    if (category != RockCategory.SEDIMENTARY)
+                    {
+                        map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(List.of(Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d))));
                     }
                 }
             });
         }
 
-        if (ore != null){
+        if (ore != null)
+        {
             FissureConfig.Decoration deco = new FissureConfig.Decoration(map, rarityDeco, radiusDeco, countDeco);
-            CTX.register(
-                    key,
-                    new ConfiguredFeature<>(TFCFeatures.HOT_SPRING.get(),
-                            new HotSpringConfig(wallState, fluidState, radius, Optional.of(deco), allowUnderwater, replacement)
-                    )
-            );
-        } else {
-            CTX.register(
-                    key,
-                    new ConfiguredFeature<>(TFCFeatures.HOT_SPRING.get(),
-                            new HotSpringConfig(wallState, fluidState, radius, Optional.empty(), allowUnderwater, replacement)
-                    )
-            );
+            CTX.register(key, new ConfiguredFeature<>(TFCFeatures.HOT_SPRING.get(), new HotSpringConfig(wallState, fluidState, radius, Optional.of(deco), allowUnderwater, replacement)));
+        }
+        else
+        {
+            CTX.register(key, new ConfiguredFeature<>(TFCFeatures.HOT_SPRING.get(), new HotSpringConfig(wallState, fluidState, radius, Optional.empty(), allowUnderwater, replacement)));
         }
     }
 
-    private static void createSpring(ResourceKey<ConfiguredFeature<?, ?>> key, FluidState fluidState){
+    private static void createSpring(ResourceKey<ConfiguredFeature<?, ?>> key, FluidState fluidState)
+    {
 
         List<Block> list = new ArrayList<Block>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
+        Stream.of(Rock.values()).forEach(rock ->
+        {
             list.add(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get());
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
             list.add(rock.getBlock(Rock.BlockType.RAW).get());
         });
 
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.SPRING.get(),
-                        new SpringConfiguration(fluidState, true, 4, 1, CTX.lookup(Registries.BLOCK).getOrThrow(Tags.Blocks.STONES))
-                )
-        );
+        CTX.register(key, new ConfiguredFeature<>(TFCFeatures.SPRING.get(), new SpringConfiguration(fluidState, true, 4, 1, CTX.lookup(Registries.BLOCK).getOrThrow(Tags.Blocks.STONES))));
     }
 
-    private static void createRivulet(ResourceKey<ConfiguredFeature<?, ?>> key){
+    private static void createRivulet(ResourceKey<ConfiguredFeature<?, ?>> key)
+    {
 
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
+        Stream.of(Rock.values()).forEach(rock ->
+        {
 
             RockCategory category = rock.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
-                map.put(
-                        TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(),
-                        TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState()
-                );
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState());
 
-                map.put(
-                        TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(),
-                        TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState()
-                );
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(), TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState());
             }
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
 
             RockCategory category = rock.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
-                map.put(
-                        rock.getBlock(Rock.BlockType.RAW).get(),
-                        CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState()
-                );
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
+                map.put(rock.getBlock(Rock.BlockType.RAW).get(), CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState());
 
-                map.put(
-                        CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(),
-                        CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState()
-                );
+                map.put(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(), CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState());
             }
         });
 
-        map.put(
-                TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.RAW).get(),
-                TFCBlocks.MAGMA_BLOCKS.get(Rock.ANDESITE).get().defaultBlockState()
-        );
+        map.put(TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.RAW).get(), TFCBlocks.MAGMA_BLOCKS.get(Rock.ANDESITE).get().defaultBlockState());
 
-        map.put(
-                TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.MAGMA_BLOCKS.get(Rock.ANDESITE).get().defaultBlockState()
-        );
+        map.put(TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.HARDENED).get(), TFCBlocks.MAGMA_BLOCKS.get(Rock.ANDESITE).get().defaultBlockState());
 
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.RIVULET.get(),
-                        new BlockStateMapConfig(map)
-                )
-        );
+        CTX.register(key, new ConfiguredFeature<>(TFCFeatures.RIVULET.get(), new BlockStateMapConfig(map)));
     }
 
-    private static void createSulfurRivulet(ResourceKey<ConfiguredFeature<?, ?>> key){
+    private static void createSulfurRivulet(ResourceKey<ConfiguredFeature<?, ?>> key)
+    {
 
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
+        Stream.of(Rock.values()).forEach(rock ->
+        {
 
             RockCategory category = rock.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
-                map.put(
-                        TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(),
-                        TFCBlocks.ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState()
-                );
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), TFCBlocks.ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState());
 
-                map.put(
-                        TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(),
-                        TFCBlocks.ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState()
-                );
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState());
             }
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
 
             RockCategory category = rock.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
-                map.put(
-                        rock.getBlock(Rock.BlockType.RAW).get(),
-                        CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState()
-                );
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
+                map.put(rock.getBlock(Rock.BlockType.RAW).get(), CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState());
 
-                map.put(
-                        CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(),
-                        CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState()
-                );
+                map.put(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(), CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState());
             }
         });
 
-        map.put(
-                TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.RAW).get(),
-                TFCBlocks.ORES.get(Rock.TUFF).get(Ore.SULFUR).get().defaultBlockState()
-        );
+        map.put(TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.RAW).get(), TFCBlocks.ORES.get(Rock.TUFF).get(Ore.SULFUR).get().defaultBlockState());
 
-        map.put(
-                TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ORES.get(Rock.TUFF).get(Ore.SULFUR).get().defaultBlockState()
-        );
+        map.put(TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.HARDENED).get(), TFCBlocks.ORES.get(Rock.TUFF).get(Ore.SULFUR).get().defaultBlockState());
 
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.RIVULET.get(),
-                        new BlockStateMapConfig(map)
-                )
-        );
+        CTX.register(key, new ConfiguredFeature<>(TFCFeatures.RIVULET.get(), new BlockStateMapConfig(map)));
     }
 
-    private static void createDiscVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, int height, VeinConfig config){
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.DISC_VEIN.get(),
-                        new DiscVeinConfig(config, size, height)
-                )
-        );
+    private static void createDiscVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, int height, VeinConfig config)
+    {
+        CTX.register(key, new ConfiguredFeature<>(TFCFeatures.DISC_VEIN.get(), new DiscVeinConfig(config, size, height)));
     }
 
-    private static void createPipeVein(ResourceKey<ConfiguredFeature<?, ?>> key, int height, int radius, int minSkew, int maxSkew, int minSlant, int maxSlant, float sign, VeinConfig config){
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.PIPE_VEIN.get(),
-                        new PipeVeinConfig(config, height, radius, minSkew, maxSkew, minSlant, maxSlant, sign)
-                )
-        );
+    private static void createPipeVein(ResourceKey<ConfiguredFeature<?, ?>> key, int height, int radius, int minSkew, int maxSkew, int minSlant, int maxSlant, float sign, VeinConfig config)
+    {
+        CTX.register(key, new ConfiguredFeature<>(TFCFeatures.PIPE_VEIN.get(), new PipeVeinConfig(config, height, radius, minSkew, maxSkew, minSlant, maxSlant, sign)));
     }
 
-    private static void createClusterVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, VeinConfig config){
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(TFCFeatures.CLUSTER_VEIN.get(),
-                        new ClusterVeinConfig(config, size)
-                )
-        );
+    private static void createClusterVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, VeinConfig config)
+    {
+        CTX.register(key, new ConfiguredFeature<>(TFCFeatures.CLUSTER_VEIN.get(), new ClusterVeinConfig(config, size)));
     }
 
-    private static void createGeode(ResourceKey<ConfiguredFeature<?, ?>> key, Block inner, Block middle, Block outer, Block alt, double altChance){
+    private static void createGeode(ResourceKey<ConfiguredFeature<?, ?>> key, Block inner, Block middle, Block outer, Block alt, double altChance)
+    {
 
-        new WeightedStateProvider(
-                SimpleWeightedRandomList.<BlockState>builder()
-                        .add(alt.defaultBlockState(), 1)
-                        .add(alt.defaultBlockState(), 2)
-                        .add(alt.defaultBlockState(), 1)
-                        .add(inner.defaultBlockState(), 2)
-                        .build()
-        );
+        new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(alt.defaultBlockState(), 1).add(alt.defaultBlockState(), 2).add(alt.defaultBlockState(), 1).add(inner.defaultBlockState(), 2).build());
 
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(Feature.GEODE,
-                        new GeodeConfiguration(
-                                new GeodeBlockSettings(
-                                        SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
-                                        SimpleStateProvider.simple(inner), //inner
-                                        SimpleStateProvider.simple(alt), //alt inner
-                                        SimpleStateProvider.simple(middle), //middle
-                                        SimpleStateProvider.simple(outer), //outer
-                                        List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
-                                        BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
-                                        BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
-                                ),
-                                new GeodeLayerSettings(
-                                        1.7, //default
-                                        2.2, //default
-                                        3.2, //default
-                                        4.2 //default
-                                ),
-                                new GeodeCrackSettings(
-                                        1, //default
-                                        2, //default
-                                        2 //default
-                                ),
-                                0.35, //default
-                                altChance, // arg
-                                true, //default
-                                UniformInt.of(4, 5), //default
-                                UniformInt.of(3, 4), //default
-                                UniformInt.of(1, 2), //default
-                                -16,  //default
-                                16, //default
-                                0.05,  //default
-                                1  //default
-                        )
-                )
-        );
+        CTX.register(key, new ConfiguredFeature<>(Feature.GEODE, new GeodeConfiguration(new GeodeBlockSettings(SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
+                SimpleStateProvider.simple(inner), //inner
+                SimpleStateProvider.simple(alt), //alt inner
+                SimpleStateProvider.simple(middle), //middle
+                SimpleStateProvider.simple(outer), //outer
+                List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
+                BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
+                BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
+        ), new GeodeLayerSettings(1.7, //default
+                2.2, //default
+                3.2, //default
+                4.2 //default
+        ), new GeodeCrackSettings(1, //default
+                2, //default
+                2 //default
+        ), 0.35, //default
+                altChance, // arg
+                true, //default
+                UniformInt.of(4, 5), //default
+                UniformInt.of(3, 4), //default
+                UniformInt.of(1, 2), //default
+                -16,  //default
+                16, //default
+                0.05,  //default
+                1  //default
+        )));
     }
 
-    private static void createOreGeode(ResourceKey<ConfiguredFeature<?, ?>> key, RegistryRock rock, RegistryOre ore, Block middle, Block outer){
+    private static void createOreGeode(ResourceKey<ConfiguredFeature<?, ?>> key, RegistryRock rock, RegistryOre ore, Block middle, Block outer)
+    {
 
         WeightedStateProvider altInner;
 
-        if (ore.isGraded()){
-            altInner = new WeightedStateProvider(
-                    SimpleWeightedRandomList.<BlockState>builder()
-                            .add(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), 1)
-                            .add(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), 2)
-                            .add(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), 1)
-                            .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
-                            .build()
-            );
-        } else {
-            altInner = new WeightedStateProvider(
-                    SimpleWeightedRandomList.<BlockState>builder()
-                            .add(ore.getOreBlock(rock, null).defaultBlockState(), 2)
-                            .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
-                            .build()
-            );
+        if (ore.isGraded())
+        {
+            altInner = new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), 1).add(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), 2).add(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), 1).add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2).build());
+        }
+        else
+        {
+            altInner = new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ore.getOreBlock(rock, null).defaultBlockState(), 2).add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2).build());
         }
 
-        CTX.register(
-                key,
-                new ConfiguredFeature<>(Feature.GEODE,
-                        new GeodeConfiguration(
-                                new GeodeBlockSettings(
-                                        SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
-                                        SimpleStateProvider.simple(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState()), //inner
-                                        altInner, //alt inner
-                                        SimpleStateProvider.simple(middle), //middle
-                                        SimpleStateProvider.simple(outer), //outer
-                                        List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
-                                        BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
-                                        BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
-                                ),
-                                new GeodeLayerSettings(
-                                        1.7, //default
-                                        2.2, //default
-                                        3.2, //default
-                                        4.2 //default
-                                ),
-                                new GeodeCrackSettings(
-                                        1, //default
-                                        2, //default
-                                        2 //default
-                                ),
-                                0.35, //default
-                                1,
-                                true, //default
-                                UniformInt.of(4, 5), //default
-                                UniformInt.of(3, 4), //default
-                                UniformInt.of(1, 2), //default
-                                -16,  //default
-                                16, //default
-                                0.05,  //default
-                                1  //default
-                        )
-                )
-        );
+        CTX.register(key, new ConfiguredFeature<>(Feature.GEODE, new GeodeConfiguration(new GeodeBlockSettings(SimpleStateProvider.simple(Blocks.AIR.defaultBlockState()), //not default, but is common //filling
+                SimpleStateProvider.simple(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState()), //inner
+                altInner, //alt inner
+                SimpleStateProvider.simple(middle), //middle
+                SimpleStateProvider.simple(outer), //outer
+                List.of(Blocks.AIR.defaultBlockState()), //not default, but is common
+                BlockTags.FEATURES_CANNOT_REPLACE, //not default, but is common
+                BlockTags.GEODE_INVALID_BLOCKS //not default, but is common
+        ), new GeodeLayerSettings(1.7, //default
+                2.2, //default
+                3.2, //default
+                4.2 //default
+        ), new GeodeCrackSettings(1, //default
+                2, //default
+                2 //default
+        ), 0.35, //default
+                1, true, //default
+                UniformInt.of(4, 5), //default
+                UniformInt.of(3, 4), //default
+                UniformInt.of(1, 2), //default
+                -16,  //default
+                16, //default
+                0.05,  //default
+                1  //default
+        )));
     }
     //endregion
 
     //region Functions to create block maps for features.
-    private static Map<Block, BlockState> createDepositMap(OreDeposit deposit){
+    private static Map<Block, BlockState> createDepositMap(OreDeposit deposit)
+    {
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
+        Stream.of(Rock.values()).forEach(rock ->
+        {
             map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), TFCBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState());
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            if (rock.hasOres()) {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
+            if (rock.hasOres())
+            {
                 map.put(rock.getBlock(Rock.BlockType.RAW).get(), CoreBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState());
             }
         });
@@ -1758,226 +1541,187 @@ public class BuiltinConfiguredFeatures  {
         return map;
     }
 
-    private static Optional<Map<Block, IWeighted<BlockState>>> createLavaHotSpringMap(){
+    private static Optional<Map<Block, IWeighted<BlockState>>> createLavaHotSpringMap()
+    {
         Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
+        Stream.of(Rock.values()).forEach(rock ->
+        {
             RockCategory category = rock.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
-                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
-                        List.of(
-                                Pair.of(TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState(), 1d),
-                                Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2d)
-                        )
-                ));
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(List.of(Pair.of(TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState(), 1d), Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2d))));
             }
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
             RockCategory category = rock.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
-                map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
-                        List.of(
-                                Pair.of(CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState(), 1d),
-                                Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2d)
-                        )
-                ));
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
+                map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(List.of(Pair.of(CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState(), 1d), Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2d))));
             }
         });
 
         return Optional.of(map);
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore)
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d)
-                        )
-                ));
+        for (Rock rock : Rock.values())
+        {
+            if (categoryList.contains(rock.displayCategory().category()))
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d))));
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d)
-                        )
-                ));
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (categoryList.contains(rock.displayCategory().category()))
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d))));
             }
         }
 
-        for (RegistryRock rock : rockList){
-            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(
-                            Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d)
-                    )
-            ));
+        for (RegistryRock rock : rockList)
+        {
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d))));
         }
 
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createGradedOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore, double poorChance, double normalChance, double richChance){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createGradedOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore, double poorChance, double normalChance, double richChance)
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
+        for (Rock rock : Rock.values())
+        {
+            if (categoryList.contains(rock.displayCategory().category()))
+            {
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), simpleGradedWeighted(rock, ore, poorChance, normalChance, richChance));
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (categoryList.contains(rock.displayCategory().category()))
+            {
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), simpleGradedWeighted(rock, ore, poorChance, normalChance, richChance));
             }
         }
 
-        for (RegistryRock rock : rockList){
+        for (RegistryRock rock : rockList)
+        {
             map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), simpleGradedWeighted(rock, ore, poorChance, normalChance, richChance));
         }
 
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createGradedOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore, OreDeposit deposit, double poorChance, double normalChance, double richChance, double despositChance){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createGradedOreVeinMap(List<RockCategory> categoryList, List<RegistryRock> rockList, RegistryOre ore, OreDeposit deposit, double poorChance, double normalChance, double richChance, double despositChance)
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance),
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance),
-                                Pair.of(TFCBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState(), despositChance)
-                        )
-                ));
+        for (Rock rock : Rock.values())
+        {
+            if (categoryList.contains(rock.displayCategory().category()))
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance), Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance), Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance), Pair.of(TFCBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState(), despositChance))));
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance),
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance),
-                                Pair.of(CoreBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState(), despositChance)
-                        )
-                ));
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (categoryList.contains(rock.displayCategory().category()))
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance), Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance), Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance), Pair.of(CoreBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState(), despositChance))));
             }
         }
 
-        for (RegistryRock rock : rockList){
-            if (rock instanceof Rock){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance),
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance),
-                                Pair.of(TFCBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState(), despositChance)
-                        )
-                ));
+        for (RegistryRock rock : rockList)
+        {
+            if (rock instanceof Rock)
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance), Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance), Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance), Pair.of(TFCBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState(), despositChance))));
             }
-            if (rock instanceof CoreRocks){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance),
-                                Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance),
-                                Pair.of(CoreBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState(), despositChance)
-                        )
-                ));
+            if (rock instanceof CoreRocks)
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance), Pair.of(ore.getOreBlock(rock, CoreOres.Grade.NORMAL).defaultBlockState(), normalChance), Pair.of(ore.getOreBlock(rock, CoreOres.Grade.RICH).defaultBlockState(), richChance), Pair.of(CoreBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState(), despositChance))));
             }
         }
 
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createMeteorOreVeinMap(){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createMeteorOreVeinMap()
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(
-                            Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 65d),
-                            Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 5d),
-                            Pair.of(CoreBlocks.BASIC_ORES.get(CoreOres.METEORIC_IRON).get().defaultBlockState(), 5d),
-                            Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 25d)
-                    )
-            ));
+        for (Rock rock : Rock.values())
+        {
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 65d), Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 5d), Pair.of(CoreBlocks.BASIC_ORES.get(CoreOres.METEORIC_IRON).get().defaultBlockState(), 5d), Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 25d))));
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(
-                            Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 65d),
-                            Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 5d),
-                            Pair.of(CoreBlocks.BASIC_ORES.get(CoreOres.METEORIC_IRON).get().defaultBlockState(), 5d),
-                            Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 25d)
-                    )
-            ));
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 65d), Pair.of(CoreRocks.SUEVITE.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 5d), Pair.of(CoreBlocks.BASIC_ORES.get(CoreOres.METEORIC_IRON).get().defaultBlockState(), 5d), Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 25d))));
         }
 
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createGravelVeinMap(){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createGravelVeinMap()
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 1d))
-            ));
+        for (Rock rock : Rock.values())
+        {
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 1d))));
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 1d))
-            ));
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(rock.getBlock(Rock.BlockType.GRAVEL).get().defaultBlockState(), 1d))));
         }
 
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createMarlstoneOreVeinMap(){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createMarlstoneOreVeinMap()
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            if (rock.displayCategory().category() == RockCategory.SEDIMENTARY){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(CoreRocks.MARLSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
-                        )
-                ));
+        for (Rock rock : Rock.values())
+        {
+            if (rock.displayCategory().category() == RockCategory.SEDIMENTARY)
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(CoreRocks.MARLSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))));
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (rock.displayCategory().category() == RockCategory.SEDIMENTARY){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(CoreRocks.MARLSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
-                        )
-                ));
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (rock.displayCategory().category() == RockCategory.SEDIMENTARY)
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(CoreRocks.MARLSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))));
             }
         }
 
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createTerracottaOreVeinMap(){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createTerracottaOreVeinMap()
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
@@ -2022,60 +1766,46 @@ public class BuiltinConfiguredFeatures  {
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createDikeVeinMap(RegistryRock baseRock){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createDikeVeinMap(RegistryRock baseRock)
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(Pair.of(baseRock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))
-            ));
-            map.putLast(rock.getBlock(Rock.BlockType.GRAVEL).get(), new DataWeighted<>(
-                    List.of(Pair.of(baseRock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))
-            ));
-            map.putLast(rock.getBlock(Rock.BlockType.HARDENED).get(), new DataWeighted<>(
-                    List.of(Pair.of(baseRock.getBlock(Rock.BlockType.HARDENED).get().defaultBlockState(), 1d))
-            ));
+        for (Rock rock : Rock.values())
+        {
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(baseRock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))));
+            map.putLast(rock.getBlock(Rock.BlockType.GRAVEL).get(), new DataWeighted<>(List.of(Pair.of(baseRock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))));
+            map.putLast(rock.getBlock(Rock.BlockType.HARDENED).get(), new DataWeighted<>(List.of(Pair.of(baseRock.getBlock(Rock.BlockType.HARDENED).get().defaultBlockState(), 1d))));
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                    List.of(Pair.of(baseRock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))
-            ));
-            map.putLast(rock.getBlock(Rock.BlockType.GRAVEL).get(), new DataWeighted<>(
-                    List.of(Pair.of(baseRock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))
-            ));
-            map.putLast(rock.getBlock(Rock.BlockType.HARDENED).get(), new DataWeighted<>(
-                    List.of(Pair.of(baseRock.getBlock(Rock.BlockType.HARDENED).get().defaultBlockState(), 1d))
-            ));
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(baseRock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))));
+            map.putLast(rock.getBlock(Rock.BlockType.GRAVEL).get(), new DataWeighted<>(List.of(Pair.of(baseRock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d))));
+            map.putLast(rock.getBlock(Rock.BlockType.HARDENED).get(), new DataWeighted<>(List.of(Pair.of(baseRock.getBlock(Rock.BlockType.HARDENED).get().defaultBlockState(), 1d))));
         }
 
         return map;
     }
 
-    private static LinkedHashMap<Block, IWeighted<BlockState>> createRubyMarbleBeltVeinMapChance(){
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createRubyMarbleBeltVeinMapChance()
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            if (rock.displayCategory().category() != RockCategory.SEDIMENTARY){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(Rock.MARBLE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 94d),
-                                Pair.of(TFCOres.RUBY.getOreBlock(rock, null).defaultBlockState(), 6d)
-                        )
-                ));
+        for (Rock rock : Rock.values())
+        {
+            if (rock.displayCategory().category() != RockCategory.SEDIMENTARY)
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(Rock.MARBLE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 94d), Pair.of(TFCOres.RUBY.getOreBlock(rock, null).defaultBlockState(), 6d))));
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (rock.displayCategory().category() != RockCategory.SEDIMENTARY){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
-                        List.of(
-                                Pair.of(Rock.MARBLE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 94d),
-                                Pair.of(TFCOres.RUBY.getOreBlock(rock, null).defaultBlockState(), 6d)
-                        )
-                ));
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (rock.displayCategory().category() != RockCategory.SEDIMENTARY)
+            {
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(List.of(Pair.of(Rock.MARBLE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 94d), Pair.of(TFCOres.RUBY.getOreBlock(rock, null).defaultBlockState(), 6d))));
             }
         }
 
@@ -2084,11 +1814,13 @@ public class BuiltinConfiguredFeatures  {
     //endregion
 
     //region Util
-    private static DataWeighted<BlockState> singleWeighted(Block block){
+    private static DataWeighted<BlockState> singleWeighted(Block block)
+    {
         return new DataWeighted<>(List.of(Pair.of(block.defaultBlockState(), 1d)));
     }
 
-    private static DataWeighted<BlockState> simpleGradedWeighted(RegistryRock rock, RegistryOre ore, double poorChance, double normalChance, double richChance){
+    private static DataWeighted<BlockState> simpleGradedWeighted(RegistryRock rock, RegistryOre ore, double poorChance, double normalChance, double richChance)
+    {
         DataWeighted<BlockState> weighted = new DataWeighted<>(List.of());
 
         weighted.add(poorChance, ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState());
@@ -2098,11 +1830,9 @@ public class BuiltinConfiguredFeatures  {
         return weighted;
     }
 
-    private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name, String path){
-        return ResourceKey.create(
-                Registries.CONFIGURED_FEATURE,
-                ResourceLocation.fromNamespaceAndPath(name, path)
-        );
+    private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name, String path)
+    {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(name, path));
     }
 
     private static long hash(String name)

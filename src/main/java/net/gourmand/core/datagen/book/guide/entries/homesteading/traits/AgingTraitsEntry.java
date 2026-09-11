@@ -13,64 +13,65 @@ import com.mojang.datafixers.util.Pair;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class AgingTraitsEntry extends EntryProvider {
+public class AgingTraitsEntry extends EntryProvider
+{
 
-    public AgingTraitsEntry(CategoryProviderBase parent) {
+    public AgingTraitsEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain aging traits.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(FLTags.Items.CHEESE_WHEELS))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(FLTags.Items.CHEESE_WHEELS)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                The **Fresh**, **Aged** and **Vintage** traits by default, modifies spoilage rates by **1.1**, **0.9** and **0.6** respectfully.
-                \\
-                \\
-                It occurs when you create and age **Cheese**.
-               """);
+                 The **Fresh**, **Aged** and **Vintage** traits by default, modifies spoilage rates by **1.1**, **0.9** and **0.6** respectfully.
+                 \\
+                 \\
+                 It occurs when you create and age **Cheese**.
+                """);
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/cheddar_wheel"))
-        );
+        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/cheddar_wheel")));
 
         this.pageTitle(entryName());
         this.pageText("""
-               The cheddar wheel recipe.
-               """);
+                The cheddar wheel recipe.
+                """);
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Aging";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About The Aging Traits.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(FLBlocks.CHEDDAR_WHEEL);
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "aging_traits";
     }
 }

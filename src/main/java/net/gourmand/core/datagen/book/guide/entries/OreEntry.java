@@ -14,7 +14,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class OreEntry extends EntryProvider {
+public class OreEntry extends EntryProvider
+{
 
     public final String ID;
     public final BookIconModel ICON;
@@ -22,7 +23,8 @@ public class OreEntry extends EntryProvider {
     public final Item item;
     public final TagKey<Item> ores;
 
-    public OreEntry(CategoryProvider parent, String id, Item item, String text, TagKey<Item> ores) {
+    public OreEntry(CategoryProvider parent, String id, Item item, String text, TagKey<Item> ores)
+    {
         super(parent);
         this.ID = id;
         this.ICON = BookIconModel.create(item);
@@ -33,21 +35,14 @@ public class OreEntry extends EntryProvider {
 
 
     @Override
-    protected void generatePages() {
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(ores))
-        );
+    protected void generatePages()
+    {
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(ores)));
 
         this.pageTitle(entryName());
         this.pageText(text);
 
-        this.page("page2", () -> BookMultiblockPageModel.create()
-                .withText(this.context().pageText())
-                .withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "ore_preview/" + ID))
-                .withVisualizeButton(false)
-        );
+        this.page("page2", () -> BookMultiblockPageModel.create().withText(this.context().pageText()).withMultiblockId(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "ore_preview/" + ID)).withVisualizeButton(false));
 
 
         this.pageTitle(entryName());
@@ -55,27 +50,32 @@ public class OreEntry extends EntryProvider {
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return TextUtil.getName(ID);
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "Where to find: " + TextUtil.getName(ID);
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return ICON;
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return ID;
     }
 }

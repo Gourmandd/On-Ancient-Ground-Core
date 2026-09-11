@@ -9,7 +9,6 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.registry.items.CoreSeedItem;
 import net.gourmand.core.registry.items.InfluenceDebugItem;
 import net.gourmand.core.registry.items.MetalBucketItem;
@@ -22,62 +21,35 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class CoreItems {
+public class CoreItems
+{
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientGroundCore.MOD_ID);
 
-    public static final Map<CoreMetals.MetalType, Map<Metal.ItemType, DeferredHolder<Item, Item>>> METAL_ITEMS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
-            Helpers.mapOf(Metal.ItemType.class, type -> type.has(metal.getLikeMetal()), type ->
-                    register("metal/" + type.name() + "/" + metal.name(), () -> type.create(metal))
-            )
-    );
+    public static final Map<CoreMetals.MetalType, Map<Metal.ItemType, DeferredHolder<Item, Item>>> METAL_ITEMS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> Helpers.mapOf(Metal.ItemType.class, type -> type.has(metal.getLikeMetal()), type -> register("metal/" + type.name() + "/" + metal.name(), () -> type.create(metal))));
 
-    public static final Map<CoreCrops, DeferredHolder<Item, Item>> CROP_SEEDS = Helpers.mapOf(CoreCrops.class, crop ->
-            register("seeds/" + crop.name(), () -> new CoreSeedItem(crop, CoreBlocks.CROPS.get(crop).get(), new Item.Properties()))
-    );
+    public static final Map<CoreCrops, DeferredHolder<Item, Item>> CROP_SEEDS = Helpers.mapOf(CoreCrops.class, crop -> register("seeds/" + crop.name(), () -> new CoreSeedItem(crop, CoreBlocks.CROPS.get(crop).get(), new Item.Properties())));
 
-    public static final Map<CoreOres, DeferredHolder<Item, Item>> ORES = Helpers.mapOf(CoreOres.class, ore -> !(ore.isGraded() || ore.hasSpectrumOreType()), type ->
-            register("ore/" + type.name())
-    );
+    public static final Map<CoreOres, DeferredHolder<Item, Item>> ORES = Helpers.mapOf(CoreOres.class, ore -> !(ore.isGraded() || ore.hasSpectrumOreType()), type -> register("ore/" + type.name()));
 
-    public static final Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Item, Item>>> GRADED_ORES = Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore ->
-            Helpers.mapOf(CoreOres.Grade.class, grade ->
-                    register("ore/" + grade.name() + '_' + ore.name())
-            )
-    );
+    public static final Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Item, Item>>> GRADED_ORES = Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore -> Helpers.mapOf(CoreOres.Grade.class, grade -> register("ore/" + grade.name() + '_' + ore.name())));
 
-    public static final Map<CoreOres, DeferredHolder<Item, Item>> GEMS = Helpers.mapOf(CoreOres.class, CoreOres::isGem, ore ->
-            register("gem/" + ore.name())
-    );
+    public static final Map<CoreOres, DeferredHolder<Item, Item>> GEMS = Helpers.mapOf(CoreOres.class, CoreOres::isGem, ore -> register("gem/" + ore.name()));
 
-    public static final Map<CoreRocks,  DeferredHolder<Item, Item>> BRICKS = Helpers.mapOf(CoreRocks.class,type ->
-            register("brick/" + type.name(), type.createItemProperties())
-    );
+    public static final Map<CoreRocks, DeferredHolder<Item, Item>> BRICKS = Helpers.mapOf(CoreRocks.class, type -> register("brick/" + type.name(), type.createItemProperties()));
 
 
     public static final Map<SpectrumWood, DeferredHolder<Item, Item>> LUMBER = Helpers.mapOf(SpectrumWood.class, wood -> register("wood/lumber/" + wood.name()));
 
-    public static final Map<SpectrumWood, DeferredHolder<Item, Item>> SUPPORTS = Helpers.mapOf(SpectrumWood.class, wood ->
-            register("wood/support/" + wood.name(), () -> new StandingAndWallBlockItem(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).get(), CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get(), new Item.Properties(), Direction.DOWN))
-    );
+    public static final Map<SpectrumWood, DeferredHolder<Item, Item>> SUPPORTS = Helpers.mapOf(SpectrumWood.class, wood -> register("wood/support/" + wood.name(), () -> new StandingAndWallBlockItem(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).get(), CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get(), new Item.Properties(), Direction.DOWN)));
 
-    public static final Map<CoreClay, Map<CoreClay.ItemType, DeferredHolder<Item, Item>>> CERAMICS = Helpers.mapOf(CoreClay.class, clay ->
-            Helpers.mapOf(CoreClay.ItemType.class, type -> type.hasType(clay),type ->
-                    register("ceramic/" + type.getName(clay), type.create(clay))
-            )
-    );
+    public static final Map<CoreClay, Map<CoreClay.ItemType, DeferredHolder<Item, Item>>> CERAMICS = Helpers.mapOf(CoreClay.class, clay -> Helpers.mapOf(CoreClay.ItemType.class, type -> type.hasType(clay), type -> register("ceramic/" + type.getName(clay), type.create(clay))));
 
-    public static final Map<DyeColor, DeferredHolder<Item, Item>> COLORED_LENS = Helpers.mapOf(DyeColor.class, color ->
-            register("lens/" + color.getSerializedName())
-    );
+    public static final Map<DyeColor, DeferredHolder<Item, Item>> COLORED_LENS = Helpers.mapOf(DyeColor.class, color -> register("lens/" + color.getSerializedName()));
 
-    public static final Map<CoreMetals.MetalType, DeferredHolder<Item, Item>> METAL_FLUID_BUCKETS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal ->
-            register("bucket/metal/" + metal.name(), () -> new BucketItem(CoreFluids.METALS.get(metal).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
-    );
+    public static final Map<CoreMetals.MetalType, DeferredHolder<Item, Item>> METAL_FLUID_BUCKETS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal -> register("bucket/metal/" + metal.name(), () -> new BucketItem(CoreFluids.METALS.get(metal).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))));
 
-    public static final Map<DyeColor, DeferredHolder<Item, Item>> COLORED_GLASS_FLUID_BUCKETS = Helpers.mapOf(DyeColor.class, color ->
-            register("bucket/glass/" + color.getSerializedName(), () -> new BucketItem(CoreFluids.COLORED_GLASS.get(color).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
-    );
+    public static final Map<DyeColor, DeferredHolder<Item, Item>> COLORED_GLASS_FLUID_BUCKETS = Helpers.mapOf(DyeColor.class, color -> register("bucket/glass/" + color.getSerializedName(), () -> new BucketItem(CoreFluids.COLORED_GLASS.get(color).source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))));
 
     public static final DeferredHolder<Item, Item> CLEAR_GLASS_FLUID_BUCKET = register("bucket/glass/clear", () -> new BucketItem(CoreFluids.CLEAR_GLASS.source().get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
@@ -89,15 +61,12 @@ public class CoreItems {
 
     public static final DeferredHolder<Item, Item> WROUGHT_IRON_BUCKET = register("metal/bucket/wrought_iron", () -> new MetalBucketItem(new Item.Properties(), CoreTags.WROUGHT_IRON_BUCKET_ACCEPTABLE, true, TFCConfig.SERVER.metalBucketCanPlaceSources));
 
-    public static final Map<CoreGemstones, Map<CoreGemstones.GemstoneItems, DeferredHolder<Item, Item>>> GEMSTONE_ITEMS = Helpers.mapOf(CoreGemstones.class, gem ->
-            Helpers.mapOf(CoreGemstones.GemstoneItems.class, itemType ->
-                    register("gemstone/" + itemType.getSerializedName() + "/" + gem.getSerializedName(), () -> itemType.create(gem))
-            )
-    );
+    public static final Map<CoreGemstones, Map<CoreGemstones.GemstoneItems, DeferredHolder<Item, Item>>> GEMSTONE_ITEMS = Helpers.mapOf(CoreGemstones.class, gem -> Helpers.mapOf(CoreGemstones.GemstoneItems.class, itemType -> register("gemstone/" + itemType.getSerializedName() + "/" + gem.getSerializedName(), () -> itemType.create(gem))));
 
     public static final DeferredHolder<Item, Item> DEBUG_ITEM = register("influence_debug", () -> new InfluenceDebugItem(new Item.Properties()));
 
-    private static Item basicItem(){
+    private static Item basicItem()
+    {
         return new Item(new Item.Properties());
     }
 

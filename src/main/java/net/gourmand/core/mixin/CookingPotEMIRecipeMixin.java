@@ -22,7 +22,8 @@ import static de.dafuqs.spectrum.compat.emi.SpectrumEmiRecipe.HIDDEN_LINE_1;
 import static de.dafuqs.spectrum.compat.emi.SpectrumEmiRecipe.HIDDEN_LINE_2;
 
 @Mixin(value = CookingPotEmiRecipe.class, remap = false)
-public abstract class CookingPotEMIRecipeMixin implements CookingPotEMIRecipeExtraData {
+public abstract class CookingPotEMIRecipeMixin implements CookingPotEMIRecipeExtraData
+{
 
     @Unique
     @Nullable
@@ -33,26 +34,27 @@ public abstract class CookingPotEMIRecipeMixin implements CookingPotEMIRecipeExt
     private ResourceLocation modpack$secretAdvancement;
 
     @Override
-    public void modpack$setAdvancements(@Nullable ResourceLocation unlock, @Nullable ResourceLocation secret) {
+    public void modpack$setAdvancements(@Nullable ResourceLocation unlock, @Nullable ResourceLocation secret)
+    {
         modpack$unlockAdvancement = unlock;
         modpack$secretAdvancement = secret;
     }
 
     @Override
-    public @Nullable ResourceLocation modpack$getSecretAdvancement() {
+    public @Nullable ResourceLocation modpack$getSecretAdvancement()
+    {
         return modpack$secretAdvancement;
     }
 
     @Override
-    public @Nullable ResourceLocation modpack$getUnlockAdvancement() {
+    public @Nullable ResourceLocation modpack$getUnlockAdvancement()
+    {
         return modpack$unlockAdvancement;
     }
 
-    @ModifyReturnValue(
-            method = "getDisplayWidth",
-            at = @At("RETURN")
-    )
-    private int modpack$addWidth(int original) {
+    @ModifyReturnValue(method = "getDisplayWidth", at = @At("RETURN"))
+    private int modpack$addWidth(int original)
+    {
         return original + 12;
     }
 
@@ -63,22 +65,30 @@ public abstract class CookingPotEMIRecipeMixin implements CookingPotEMIRecipeExt
     public abstract int getDisplayWidth();
 
     @Unique
-    public boolean modpack$hasAdvancement(@Nullable ResourceLocation advancement) {
+    public boolean modpack$hasAdvancement(@Nullable ResourceLocation advancement)
+    {
         Minecraft client = Minecraft.getInstance();
         return AdvancementHelper.hasAdvancement(client.player, advancement);
     }
 
     @WrapMethod(method = "addWidgets")
-    private void modpack$advancementWidget(WidgetHolder widgets, Operation<Void> original){
+    private void modpack$advancementWidget(WidgetHolder widgets, Operation<Void> original)
+    {
 
-        if (modpack$unlockAdvancement != null && !modpack$hasAdvancement(modpack$unlockAdvancement)){
+        if (modpack$unlockAdvancement != null && !modpack$hasAdvancement(modpack$unlockAdvancement))
+        {
             widgets.addText(HIDDEN_LINE_1, getDisplayWidth() / 2, getDisplayHeight() / 2 - 8, 0x3f3f3f, false).horizontalAlign(TextWidget.Alignment.CENTER);
             widgets.addText(HIDDEN_LINE_2, getDisplayWidth() / 2, getDisplayHeight() / 2 + 2, 0x3f3f3f, false).horizontalAlign(TextWidget.Alignment.CENTER);
-        } else if (modpack$secretAdvancement != null && !modpack$hasAdvancement(modpack$secretAdvancement)){
-            widgets.addText(SECRET, getDisplayWidth() / 2, getDisplayHeight() / 2 - 4, 0x3f3f3f, false).horizontalAlign(TextWidget.Alignment.CENTER);
-            widgets.addText(SECRET_HINT, getDisplayWidth() / 2, getDisplayHeight() / 2 - 8, 0x3f3f3f, false).horizontalAlign(TextWidget.Alignment.CENTER);
-        } else {
-            original.call(widgets);
         }
+        else
+            if (modpack$secretAdvancement != null && !modpack$hasAdvancement(modpack$secretAdvancement))
+            {
+                widgets.addText(SECRET, getDisplayWidth() / 2, getDisplayHeight() / 2 - 4, 0x3f3f3f, false).horizontalAlign(TextWidget.Alignment.CENTER);
+                widgets.addText(SECRET_HINT, getDisplayWidth() / 2, getDisplayHeight() / 2 - 8, 0x3f3f3f, false).horizontalAlign(TextWidget.Alignment.CENTER);
+            }
+            else
+            {
+                original.call(widgets);
+            }
     }
 }

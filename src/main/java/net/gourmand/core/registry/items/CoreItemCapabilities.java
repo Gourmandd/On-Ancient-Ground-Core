@@ -14,9 +14,11 @@ import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import org.jetbrains.annotations.Nullable;
 
-public class CoreItemCapabilities {
+public class CoreItemCapabilities
+{
 
-    public static void register(RegisterCapabilitiesEvent event){
+    public static void register(RegisterCapabilitiesEvent event)
+    {
 
 
         for (CoreClay clay : CoreClay.values())
@@ -33,25 +35,14 @@ public class CoreItemCapabilities {
         }
 
 
-        event.registerItem(ItemCapabilities.MOLD, CoreItemCapabilities::getMold,
-                CoreItems.GLASS_MOLD.get(),
-                CoreItems.GLASS_PANE_MOLD.get()
-        );
+        event.registerItem(ItemCapabilities.MOLD, CoreItemCapabilities::getMold, CoreItems.GLASS_MOLD.get(), CoreItems.GLASS_PANE_MOLD.get());
 
-        event.registerItem(ItemCapabilities.FLUID, CoreItemCapabilities::getMold,
-                CoreItems.GLASS_MOLD.get(),
-                CoreItems.GLASS_PANE_MOLD.get()
-        );
+        event.registerItem(ItemCapabilities.FLUID, CoreItemCapabilities::getMold, CoreItems.GLASS_MOLD.get(), CoreItems.GLASS_PANE_MOLD.get());
 
-        event.registerItem(ItemCapabilities.HEAT, CoreItemCapabilities::getMold,
-                CoreItems.GLASS_MOLD.get(),
-                CoreItems.GLASS_PANE_MOLD.get()
-        );
+        event.registerItem(ItemCapabilities.HEAT, CoreItemCapabilities::getMold, CoreItems.GLASS_MOLD.get(), CoreItems.GLASS_PANE_MOLD.get());
 
 
-        event.registerItem(Capabilities.FluidHandler.ITEM, ItemCapabilities::forBucket,
-                CoreItems.WROUGHT_IRON_BUCKET.get()
-        );
+        event.registerItem(Capabilities.FluidHandler.ITEM, ItemCapabilities::forBucket, CoreItems.WROUGHT_IRON_BUCKET.get());
     }
 
     public static IMold getMold(ItemStack stack, @Nullable Void context)

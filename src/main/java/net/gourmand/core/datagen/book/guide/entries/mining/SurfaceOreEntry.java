@@ -14,65 +14,66 @@ import net.gourmand.core.AncientGroundCore;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class SurfaceOreEntry extends EntryProvider {
+public class SurfaceOreEntry extends EntryProvider
+{
 
-    public SurfaceOreEntry(CategoryProviderBase parent) {
+    public SurfaceOreEntry(CategoryProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         // page 1: explain ore indicators.
-        this.page("page1", () -> BookSpotlightPageModel.create()
-                .withTitle(this.context().pageTitle())
-                .withText(this.context().pageText())
-                .withItem(Ingredient.of(TFCTags.Items.SMALL_ORE_PIECES))
-        );
+        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCTags.Items.SMALL_ORE_PIECES)));
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Ore Indicators** are a patch of ore bits which can be found above ore veins.
-                \\
-                \\
-                The small ores can be melted into 10 mb of metal, which is the main method of getting metal before getting a **Pickaxe**
-               \s""");
+                 **Ore Indicators** are a patch of ore bits which can be found above ore veins.
+                 \\
+                 \\
+                 The small ores can be melted into 10 mb of metal, which is the main method of getting metal before getting a **Pickaxe**
+                \s""");
 
         // page 2: image of an ore deposit.
-        this.page("page2", () -> BookImagePageModel.create()
-                .withText(this.context().pageText())
-                .withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/mining/ore_indicator.png"))
-        );
+        this.page("page2", () -> BookImagePageModel.create().withText(this.context().pageText()).withImages(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "textures/book/mining/ore_indicator.png")));
 
         this.pageTitle("Ore Indicator");
         this.pageText("""
-                A **Hematite** ore indicator in an **Andesite** region.
-               \s""");
+                 A **Hematite** ore indicator in an **Andesite** region.
+                \s""");
 
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return "Ore Indicators";
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "About Ore Indicators";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return BookIconModel.create(TFCBlocks.SMALL_ORES.get(Ore.NATIVE_GOLD));
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return "ore_indicators";
     }
 }

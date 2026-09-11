@@ -25,32 +25,22 @@ import java.util.stream.Stream;
 
 import static net.dries007.tfc.util.DataGenerationHelpers.Builder;
 
-public interface CraftingRecipes extends Recipes {
+public interface CraftingRecipes extends Recipes
+{
 
-    default void craftingRecipes(){
+    default void craftingRecipes()
+    {
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        {
 
             final var blocks = CoreBlocks.METALS.get(metal);
 
             if (metal.getLikeMetal().defaultParts())
             {
-                recipe()
-                        .input('S', ingredientOf(metal, Metal.ItemType.SHEET))
-                        .input('W', ItemTags.PLANKS)
-                        .input('H', TFCTags.Items.TOOLS_HAMMER)
-                        .pattern(" SH", "SWS", " S ")
-                        .damageInputs()
-                        .source(0, 2)
-                        .shaped(blocks.get(Metal.BlockType.BLOCK).get(), 8);
-                recipe()
-                        .input('B', ingredientOf(metal, Metal.BlockType.BLOCK))
-                        .pattern("BBB")
-                        .shaped(blocks.get(Metal.BlockType.BLOCK_SLAB).get(), 6);
-                recipe()
-                        .input('B', ingredientOf(metal, Metal.BlockType.BLOCK))
-                        .pattern("B  ", "BB ")
-                        .shaped(blocks.get(Metal.BlockType.BLOCK_STAIRS).get(), 4);
+                recipe().input('S', ingredientOf(metal, Metal.ItemType.SHEET)).input('W', ItemTags.PLANKS).input('H', TFCTags.Items.TOOLS_HAMMER).pattern(" SH", "SWS", " S ").damageInputs().source(0, 2).shaped(blocks.get(Metal.BlockType.BLOCK).get(), 8);
+                recipe().input('B', ingredientOf(metal, Metal.BlockType.BLOCK)).pattern("BBB").shaped(blocks.get(Metal.BlockType.BLOCK_SLAB).get(), 6);
+                recipe().input('B', ingredientOf(metal, Metal.BlockType.BLOCK)).pattern("B  ", "BB ").shaped(blocks.get(Metal.BlockType.BLOCK_STAIRS).get(), 4);
                 /*
                 recipe()
                         .input(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).get())
@@ -156,47 +146,30 @@ public interface CraftingRecipes extends Recipes {
         });
          */
 
-        Stream.of(CoreClay.values()).forEach(clayType -> {
+        Stream.of(CoreClay.values()).forEach(clayType ->
+        {
 
             final Map<CoreClay.ItemType, DeferredHolder<Item, Item>> ITEM_MAP = CoreItems.CERAMICS.get(clayType);
             final Map<CoreClay.BlockType, DeferredHolder<Block, Block>> BLOCK_MAP = CoreBlocks.CERAMIC_BLOCKS.get(clayType);
             final CoreDecorationBlockHolder BRICK_BLOCKS = CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(CoreClay.BlockType.BRICKS);
 
-            recipe()
-                    .input('B', ITEM_MAP.get(CoreClay.ItemType.BRICK).get())
-                    .input('M', TFCItems.MORTAR.asItem())
-                    .pattern("BMB", "MBM", "BMB")
-                    .shaped(BLOCK_MAP.get(CoreClay.BlockType.BRICKS).get(), 2);
-            recipe()
-                    .input('B', BLOCK_MAP.get(CoreClay.BlockType.BRICKS).get())
-                    .pattern("BBB")
-                    .shaped(BRICK_BLOCKS.slab().get(), 6);
-            recipe()
-                    .input('B', BLOCK_MAP.get(CoreClay.BlockType.BRICKS).get())
-                    .pattern("B  ", "BB ")
-                    .shaped(BRICK_BLOCKS.stair().get(), 4);
-            recipe()
-                    .input('B', BLOCK_MAP.get(CoreClay.BlockType.BRICKS).get())
-                    .pattern("BBB", "BBB")
-                    .shaped(BRICK_BLOCKS.wall().get(), 6);
+            recipe().input('B', ITEM_MAP.get(CoreClay.ItemType.BRICK).get()).input('M', TFCItems.MORTAR.asItem()).pattern("BMB", "MBM", "BMB").shaped(BLOCK_MAP.get(CoreClay.BlockType.BRICKS).get(), 2);
+            recipe().input('B', BLOCK_MAP.get(CoreClay.BlockType.BRICKS).get()).pattern("BBB").shaped(BRICK_BLOCKS.slab().get(), 6);
+            recipe().input('B', BLOCK_MAP.get(CoreClay.BlockType.BRICKS).get()).pattern("B  ", "BB ").shaped(BRICK_BLOCKS.stair().get(), 4);
+            recipe().input('B', BLOCK_MAP.get(CoreClay.BlockType.BRICKS).get()).pattern("BBB", "BBB").shaped(BRICK_BLOCKS.wall().get(), 6);
 
-            recipe("recycling_1")
-                    .input(CoreTags.Items.CLAY_RECYCLING_1.get(clayType))
-                    .shapeless(clayType.getClayBallItem().get(), 1);
+            recipe("recycling_1").input(CoreTags.Items.CLAY_RECYCLING_1.get(clayType)).shapeless(clayType.getClayBallItem().get(), 1);
 
-            recipe("recycling_5")
-                    .input(CoreTags.Items.CLAY_RECYCLING_5.get(clayType))
-                    .shapeless(clayType.getClayBallItem().get(), 4);
+            recipe("recycling_5").input(CoreTags.Items.CLAY_RECYCLING_5.get(clayType)).shapeless(clayType.getClayBallItem().get(), 4);
 
-            if (!clayType.hasReducedSet()){
-                recipe()
-                        .input('B', clayType.getClayBallItem().get())
-                        .pattern("BB", "BB")
-                        .shaped(BLOCK_MAP.get(CoreClay.BlockType.CLAY_BLOCK).get(), 1);
+            if (!clayType.hasReducedSet())
+            {
+                recipe().input('B', clayType.getClayBallItem().get()).pattern("BB", "BB").shaped(BLOCK_MAP.get(CoreClay.BlockType.CLAY_BLOCK).get(), 1);
             }
         });
 
-        Stream.of(SpectrumWood.values()).forEach(woodType -> {
+        Stream.of(SpectrumWood.values()).forEach(woodType ->
+        {
 
             final var blocks = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
             final var lumber = CoreItems.LUMBER.get(woodType).get();
@@ -211,16 +184,8 @@ public interface CraftingRecipes extends Recipes {
 
              */
 
-            recipe()
-                    .input('P', planks)
-                    .input('L', lumber)
-                    .pattern("PLP", "PLP")
-                    .shaped(woodType.getPlankFence(), 8);
-            recipe()
-                    .input('P', planks)
-                    .input('L', lumber)
-                    .pattern("LPL", "LPL")
-                    .shaped(woodType.getPlankFenceGate(), 2);
+            recipe().input('P', planks).input('L', lumber).pattern("PLP", "PLP").shaped(woodType.getPlankFence(), 8);
+            recipe().input('P', planks).input('L', lumber).pattern("LPL", "LPL").shaped(woodType.getPlankFenceGate(), 2);
             /*
             recipe()
                     .input('L', lumber)
@@ -237,105 +202,35 @@ public interface CraftingRecipes extends Recipes {
                     .shaped(blocks.get(Wood.BlockType.LOG_FENCE), 8);
 
              */
-            recipe()
-                    .input('L', lumber)
-                    .input('S', Tags.Items.RODS_WOODEN)
-                    .pattern("LLL", "LSL", "L L")
-                    .shaped(blocks.get(Wood.BlockType.LOOM).get());
+            recipe().input('L', lumber).input('S', Tags.Items.RODS_WOODEN).pattern("LLL", "LSL", "L L").shaped(blocks.get(Wood.BlockType.LOOM).get());
 
-            recipe("from_logs")
-                    .inputIsPrimary(TFCTags.Items.TOOLS_SAW)
-                    .input(logsTagOf(woodType))
-                    .damageInputs()
-                    .shapeless(lumber, 8);
-            recipe("from_planks")
-                    .inputIsPrimary(TFCTags.Items.TOOLS_SAW)
-                    .input(planks)
-                    .damageInputs()
-                    .shapeless(lumber, 4);
-            recipe("from_stairs")
-                    .inputIsPrimary(TFCTags.Items.TOOLS_SAW)
-                    .input(woodType.getPlankStairs())
-                    .damageInputs()
-                    .shapeless(lumber, 3);
-            recipe("from_slabs")
-                    .inputIsPrimary(TFCTags.Items.TOOLS_SAW)
-                    .input(woodType.getPlankSlab())
-                    .damageInputs()
-                    .shapeless(lumber, 2);
+            recipe("from_logs").inputIsPrimary(TFCTags.Items.TOOLS_SAW).input(logsTagOf(woodType)).damageInputs().shapeless(lumber, 8);
+            recipe("from_planks").inputIsPrimary(TFCTags.Items.TOOLS_SAW).input(planks).damageInputs().shapeless(lumber, 4);
+            recipe("from_stairs").inputIsPrimary(TFCTags.Items.TOOLS_SAW).input(woodType.getPlankStairs()).damageInputs().shapeless(lumber, 3);
+            recipe("from_slabs").inputIsPrimary(TFCTags.Items.TOOLS_SAW).input(woodType.getPlankSlab()).damageInputs().shapeless(lumber, 2);
             recipe().to2x2(lumber, planks, 1);
-            recipe()
-                    .input('L', lumber)
-                    .pattern("LL")
-                    .shaped(woodType.getPressurePlate());
-            recipe()
-                    .input('F', Tags.Items.FEATHERS)
-                    .input('D', Tags.Items.DYES_BLACK)
-                    .input('S', woodType.getPlankSlab())
-                    .input('W', planks)
-                    .pattern("F D", "SSS", "W W")
-                    .shaped(blocks.get(Wood.BlockType.SCRIBING_TABLE).get());
-            recipe()
-                    .input('S', Tags.Items.TOOLS_SHEAR)
-                    .input('L', Tags.Items.LEATHERS)
-                    .input('P', planks)
-                    .input('G', woodType.getLog())
-                    .pattern(" LS", "PPP", "G G")
-                    .shaped(blocks.get(Wood.BlockType.SEWING_TABLE).get());
-            recipe()
-                    .input('L', lumber)
-                    .input('P', planks)
-                    .input('S', Tags.Items.RODS_WOODEN)
-                    .pattern("PPP", "L L", "S S")
-                    .shaped(blocks.get(Wood.BlockType.SHELF).get(), 2);
-            recipe()
-                    .input('#', planks)
-                    .pattern("###")
-                    .shaped(woodType.getPlankSlab(), 6);
-            recipe()
-                    .input('#', planks)
-                    .pattern("#  ", "## ", "###")
-                    .shaped(woodType.getPlankStairs(), 8);
-            recipe()
-                    .input('L', lumber)
-                    .input('S', Tags.Items.RODS_WOODEN)
-                    .pattern("  S", " SL", "SLL")
-                    .shaped(blocks.get(Wood.BlockType.SLUICE).get());
-            recipe()
-                    .input('L', logsTagOf(woodType))
-                    .input('S', TFCTags.Items.TOOLS_SAW)
-                    .pattern("LS", "L ")
-                    .damageInputs()
-                    .source(0, 1)
-                    .shaped(CoreItems.SUPPORTS.get(woodType).get(), 8);
-            recipe()
-                    .input('S', strippedLog)
-                    .input('L', lumber)
-                    .pattern("SLS", "L L", "SLS")
-                    .shaped(blocks.get(Wood.BlockType.CRATE).get(), 1);
-            recipe()
-                    .input('L', lumber)
-                    .pattern("LLL", "   ", "LLL")
-                    .shaped(blocks.get(Wood.BlockType.TOOL_RACK).get());
+            recipe().input('L', lumber).pattern("LL").shaped(woodType.getPressurePlate());
+            recipe().input('F', Tags.Items.FEATHERS).input('D', Tags.Items.DYES_BLACK).input('S', woodType.getPlankSlab()).input('W', planks).pattern("F D", "SSS", "W W").shaped(blocks.get(Wood.BlockType.SCRIBING_TABLE).get());
+            recipe().input('S', Tags.Items.TOOLS_SHEAR).input('L', Tags.Items.LEATHERS).input('P', planks).input('G', woodType.getLog()).pattern(" LS", "PPP", "G G").shaped(blocks.get(Wood.BlockType.SEWING_TABLE).get());
+            recipe().input('L', lumber).input('P', planks).input('S', Tags.Items.RODS_WOODEN).pattern("PPP", "L L", "S S").shaped(blocks.get(Wood.BlockType.SHELF).get(), 2);
+            recipe().input('#', planks).pattern("###").shaped(woodType.getPlankSlab(), 6);
+            recipe().input('#', planks).pattern("#  ", "## ", "###").shaped(woodType.getPlankStairs(), 8);
+            recipe().input('L', lumber).input('S', Tags.Items.RODS_WOODEN).pattern("  S", " SL", "SLL").shaped(blocks.get(Wood.BlockType.SLUICE).get());
+            recipe().input('L', logsTagOf(woodType)).input('S', TFCTags.Items.TOOLS_SAW).pattern("LS", "L ").damageInputs().source(0, 1).shaped(CoreItems.SUPPORTS.get(woodType).get(), 8);
+            recipe().input('S', strippedLog).input('L', lumber).pattern("SLS", "L L", "SLS").shaped(blocks.get(Wood.BlockType.CRATE).get(), 1);
+            recipe().input('L', lumber).pattern("LLL", "   ", "LLL").shaped(blocks.get(Wood.BlockType.TOOL_RACK).get());
             //recipe().to2x2(planks, blocks.get(Wood.BlockType.WORKBENCH), 1);
 
-            recipe()
-                    .input('L', lumber)
-                    .pattern("L L", "L L", "LLL")
-                    .shaped(blocks.get(Wood.BlockType.BARREL).get());
+            recipe().input('L', lumber).pattern("L L", "L L", "LLL").shaped(blocks.get(Wood.BlockType.BARREL).get());
 
-            if (woodType.isNoxfungi() || woodType == SpectrumWood.WEEPING_GALA){
-                recipe()
-                        .input('L', lumber)
-                        .pattern("LL", "LL", "LL")
-                        .shaped(woodType.getDoor());
-                recipe()
-                        .input('L', lumber)
-                        .pattern("LLL", "LLL")
-                        .shaped(woodType.getTrapdoor(), 2);
+            if (woodType.isNoxfungi() || woodType == SpectrumWood.WEEPING_GALA)
+            {
+                recipe().input('L', lumber).pattern("LL", "LL", "LL").shaped(woodType.getDoor());
+                recipe().input('L', lumber).pattern("LLL", "LLL").shaped(woodType.getTrapdoor(), 2);
             }
 
-            if (woodType.isNoxfungi() && woodType != SpectrumWood.WEEPING_GALA){
+            if (woodType.isNoxfungi() && woodType != SpectrumWood.WEEPING_GALA)
+            {
                 final String name = woodType.getSerializedName().replace("_noxwood", "");
                 remove("spectrum:crafting_table/noxwood/" + name + "_planks");
                 remove("spectrum:crafting_table/noxwood/" + name + "_stairs");
@@ -347,7 +242,8 @@ public interface CraftingRecipes extends Recipes {
                 remove("spectrum:crafting_table/noxwood/" + name + "_pressure_plate");
             }
 
-            if (woodType == SpectrumWood.WEEPING_GALA){
+            if (woodType == SpectrumWood.WEEPING_GALA)
+            {
                 remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/planks");
                 remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/stairs");
                 remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/slab");
@@ -358,7 +254,8 @@ public interface CraftingRecipes extends Recipes {
                 remove("spectrum:crafting_table/" + woodType.getSerializedName() + "/pressure_plate");
             }
 
-            if (!woodType.isNoxfungi()){
+            if (!woodType.isNoxfungi())
+            {
                 remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_planks");
                 remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_plank_stairs");
                 remove("spectrum:crafting_table/colored_wood/" + woodType.getSerializedName() + "_plank_slab");
@@ -368,155 +265,94 @@ public interface CraftingRecipes extends Recipes {
             }
         });
 
-        Stream.of(CoreRocks.values()).forEach(rockType -> {
+        Stream.of(CoreRocks.values()).forEach(rockType ->
+        {
 
             final var MAP = CoreBlocks.ROCK_BLOCKS.get(rockType);
             final var BRICK_ITEM = CoreItems.BRICKS.get(rockType).get();
             final var RAW_BLOCK = CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rockType).value();
 
-            recipe()
-                    .input('X', BRICK_ITEM)
-                    .input('M', TFCItems.MORTAR)
-                    .pattern("X X", "MXM")
-                    .shaped(MAP.get(Rock.BlockType.AQUEDUCT).get(), 2);
-            recipe()
-                    .input(Ingredient.of(
-                            MAP.get(Rock.BlockType.LOOSE).get(),
-                            MAP.get(Rock.BlockType.MOSSY_LOOSE).get()
-                            )
-                    )
-                    .inputIsPrimary(TFCTags.Items.TOOLS_CHISEL)
-                    .damageInputs()
-                    .shapeless(BRICK_ITEM);
+            recipe().input('X', BRICK_ITEM).input('M', TFCItems.MORTAR).pattern("X X", "MXM").shaped(MAP.get(Rock.BlockType.AQUEDUCT).get(), 2);
+            recipe().input(Ingredient.of(MAP.get(Rock.BlockType.LOOSE).get(), MAP.get(Rock.BlockType.MOSSY_LOOSE).get())).inputIsPrimary(TFCTags.Items.TOOLS_CHISEL).damageInputs().shapeless(BRICK_ITEM);
             recipe().bricksWithMortar(BRICK_ITEM, CategoryUtil.CoreRock.TO_BRICK_BLOCK.get(rockType).value(), 4);
-            recipe()
-                    .input(MAP.get(Rock.BlockType.COBBLE).get())
-                    .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 4);
+            recipe().input(MAP.get(Rock.BlockType.COBBLE).get()).shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 4);
             recipe().bricksWithMortar(RAW_BLOCK, MAP.get(Rock.BlockType.HARDENED).get(), 2);
             recipe().to2x2(MAP.get(Rock.BlockType.LOOSE).get(), MAP.get(Rock.BlockType.COBBLE).get(), 1);
-            recipe()
-                    .input(MAP.get(Rock.BlockType.MOSSY_COBBLE).get())
-                    .shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 4);
+            recipe().input(MAP.get(Rock.BlockType.MOSSY_COBBLE).get()).shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 4);
             recipe().to2x2(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), MAP.get(Rock.BlockType.MOSSY_COBBLE).get(), 1);
 
             CoreBlocks.ROCK_DECORATIONS.get(rockType).forEach((type, decorations) -> addDecorations(MAP.get(type).get(), decorations));
 
-            recipe("from_slabs")
-                    .input(rockType.getSlab(Rock.BlockType.COBBLE).get())
-                    .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 2);
-            recipe("from_slabs")
-                    .input(rockType.getSlab(Rock.BlockType.MOSSY_COBBLE).get())
-                    .shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 2);
-            recipe("from_stairs")
-                    .input(rockType.getStair(Rock.BlockType.COBBLE).get())
-                    .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 3);
-            recipe("from_stairs")
-                    .input(rockType.getStair(Rock.BlockType.MOSSY_COBBLE).get())
-                    .shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 3);
-            recipe("from_walls")
-                    .input(rockType.getWall(Rock.BlockType.COBBLE).get())
-                    .shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 4);
-            recipe("from_walls")
-                    .input(rockType.getWall(Rock.BlockType.MOSSY_COBBLE).get())
-                    .shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 4);
+            recipe("from_slabs").input(rockType.getSlab(Rock.BlockType.COBBLE).get()).shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 2);
+            recipe("from_slabs").input(rockType.getSlab(Rock.BlockType.MOSSY_COBBLE).get()).shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 2);
+            recipe("from_stairs").input(rockType.getStair(Rock.BlockType.COBBLE).get()).shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 3);
+            recipe("from_stairs").input(rockType.getStair(Rock.BlockType.MOSSY_COBBLE).get()).shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 3);
+            recipe("from_walls").input(rockType.getWall(Rock.BlockType.COBBLE).get()).shapeless(MAP.get(Rock.BlockType.LOOSE).get(), 4);
+            recipe("from_walls").input(rockType.getWall(Rock.BlockType.MOSSY_COBBLE).get()).shapeless(MAP.get(Rock.BlockType.MOSSY_LOOSE).get(), 4);
 
-            if (rockType.hasVariants()){
+            if (rockType.hasVariants())
+            {
                 recipe().useTool(TFCTags.Items.TOOLS_CHISEL, BRICK_ITEM, MAP.get(Rock.BlockType.BUTTON).get());
                 recipe().useTool(TFCTags.Items.TOOLS_CHISEL, MAP.get(Rock.BlockType.BRICKS).get(), MAP.get(Rock.BlockType.CHISELED).get());
                 recipe().useTool(TFCTags.Items.TOOLS_CHISEL, MAP.get(Rock.BlockType.RAW).get(), MAP.get(Rock.BlockType.SMOOTH).get());
                 recipe().useTool(TFCTags.Items.TOOLS_HAMMER, MAP.get(Rock.BlockType.BRICKS).get(), MAP.get(Rock.BlockType.CRACKED_BRICKS).get());
 
-                recipe()
-                        .input('C', TFCTags.Items.TOOLS_CHISEL)
-                        .input('X', BRICK_ITEM)
-                        .pattern(" C", "XX")
-                        .damageInputs()
-                        .source(0, 1)
-                        .shaped(MAP.get(Rock.BlockType.PRESSURE_PLATE).get());
+                recipe().input('C', TFCTags.Items.TOOLS_CHISEL).input('X', BRICK_ITEM).pattern(" C", "XX").damageInputs().source(0, 1).shaped(MAP.get(Rock.BlockType.PRESSURE_PLATE).get());
             }
         });
 
-        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> {
-            recipe()
-                    .input('X', CoreItems.LUMBER.get(wood).get())
-                    .pattern("XXX", "XXX", "XXX")
-                    .shaped(block.get(), 1);
-            recipe()
-                    .input(Ingredient.of(block.get()))
-                    .shapeless(new ItemStack(CoreItems.LUMBER.get(wood).get(), 9));
+        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) ->
+        {
+            recipe().input('X', CoreItems.LUMBER.get(wood).get()).pattern("XXX", "XXX", "XXX").shaped(block.get(), 1);
+            recipe().input(Ingredient.of(block.get())).shapeless(new ItemStack(CoreItems.LUMBER.get(wood).get(), 9));
         });
-        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> {
-            recipe()
-                    .input('X', TFCItems.LUMBER.get(wood).get())
-                    .pattern("XXX", "XXX", "XXX")
-                    .shaped(block.get(), 1);
-            recipe()
-                    .input(Ingredient.of(block.get()))
-                    .shapeless(new ItemStack(TFCItems.LUMBER.get(wood).get(), 9));
+        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) ->
+        {
+            recipe().input('X', TFCItems.LUMBER.get(wood).get()).pattern("XXX", "XXX", "XXX").shaped(block.get(), 1);
+            recipe().input(Ingredient.of(block.get())).shapeless(new ItemStack(TFCItems.LUMBER.get(wood).get(), 9));
         });
-        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> {
-            recipe()
-                    .input('X', AFCItems.LUMBER.get(wood).get())
-                    .pattern("XXX", "XXX", "XXX")
-                    .shaped(block.get(), 1);
-            recipe()
-                    .input(Ingredient.of(block.get()))
-                    .shapeless(new ItemStack(AFCItems.LUMBER.get(wood).get(), 9));
+        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) ->
+        {
+            recipe().input('X', AFCItems.LUMBER.get(wood).get()).pattern("XXX", "XXX", "XXX").shaped(block.get(), 1);
+            recipe().input(Ingredient.of(block.get())).shapeless(new ItemStack(AFCItems.LUMBER.get(wood).get(), 9));
         });
 
-        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) -> {
-            recipe()
-                    .input('X', CoreItems.LUMBER.get(wood).get())
-                    .input('S', Items.STICK)
-                    .input('B', TFCItems.BRASS_MECHANISMS)
-                    .pattern("XSX", "XSX", "XBX")
-                    .shaped(block.get(), 16);
+        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) ->
+        {
+            recipe().input('X', CoreItems.LUMBER.get(wood).get()).input('S', Items.STICK).input('B', TFCItems.BRASS_MECHANISMS).pattern("XSX", "XSX", "XBX").shaped(block.get(), 16);
         });
-        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) -> {
-            recipe()
-                    .input('X', TFCItems.LUMBER.get(wood).get())
-                    .input('S', Items.STICK)
-                    .input('B', TFCItems.BRASS_MECHANISMS)
-                    .pattern("XSX", "XSX", "XBX")
-                    .shaped(block.get(), 16);
+        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) ->
+        {
+            recipe().input('X', TFCItems.LUMBER.get(wood).get()).input('S', Items.STICK).input('B', TFCItems.BRASS_MECHANISMS).pattern("XSX", "XSX", "XBX").shaped(block.get(), 16);
         });
-        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) -> {
-            recipe()
-                    .input('X', AFCItems.LUMBER.get(wood).get())
-                    .input('S', Items.STICK)
-                    .input('B', TFCItems.BRASS_MECHANISMS)
-                    .pattern("XSX", "XSX", "XBX")
-                    .shaped(block.get(), 16);
+        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) ->
+        {
+            recipe().input('X', AFCItems.LUMBER.get(wood).get()).input('S', Items.STICK).input('B', TFCItems.BRASS_MECHANISMS).pattern("XSX", "XSX", "XBX").shaped(block.get(), 16);
         });
     }
 
     private void addDecorations(ItemLike input, CoreDecorationBlockHolder output)
     {
-        recipe()
-                .input('#', input)
-                .pattern("###")
-                .shaped(output.slab().get(), 6);
-        recipe()
-                .input('#', input)
-                .pattern("#  ", "## ")
-                .shaped(output.stair().get(), 4);
-        recipe()
-                .input('#', input)
-                .pattern("###", "###")
-                .shaped(output.wall().get(), 6);
+        recipe().input('#', input).pattern("###").shaped(output.slab().get(), 6);
+        recipe().input('#', input).pattern("#  ", "## ").shaped(output.stair().get(), 4);
+        recipe().input('#', input).pattern("###", "###").shaped(output.wall().get(), 6);
     }
 
     private Builder recipe()
     {
-        return new Builder((name, r) -> {
-            if (name != null) add(name, r);
-            else add(r);
+        return new Builder((name, r) ->
+        {
+            if (name != null)
+                add(name, r);
+            else
+                add(r);
         });
     }
 
     private Builder recipe(String suffix)
     {
-        return new Builder((name, r) -> {
+        return new Builder((name, r) ->
+        {
             assert !suffix.startsWith("_") : "recipe(String suffix) shouldn't start with an '_', it is added for you!";
             assert name == null : "Cannot use a named recipe and recipe(String suffix) at the same time!";
             add(nameOf(r.getResultItem(lookup()).getItem()) + "_" + suffix, r);

@@ -15,26 +15,23 @@ import net.gourmand.core.datagen.book.guide.entries.pottery.CrucibleEntry;
 import net.gourmand.core.datagen.book.guide.entries.pottery.KilnEntry;
 import net.minecraft.resources.ResourceLocation;
 
-public class DevicesCategory extends CategoryProvider {
+public class DevicesCategory extends CategoryProvider
+{
 
-    public DevicesCategory(ModonomiconProviderBase parent) {
+    public DevicesCategory(ModonomiconProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
-        return new String[]{
-            "a_c_e_k_q_gh",
-            "b_d_f_l_n_ij",
-            "____________",
-            "__o_v_m__swz",
-            "______p__txA",
-            "______r__uyB",
-        };
+    protected String[] generateEntryMap()
+    {
+        return new String[]{"a_c_e_k_q_gh", "b_d_f_l_n_ij", "____________", "__o_v_m__swz", "______p__txA", "______r__uyB",};
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
 
         // have mechanical automation in entries as needed.
 
@@ -97,22 +94,26 @@ public class DevicesCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Devices";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCBlocks.QUERN);
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return "devices";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

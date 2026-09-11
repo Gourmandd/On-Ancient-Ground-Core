@@ -16,32 +16,35 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 
-public class BookBarrelInstantFluidPage extends BookRecipePage<InstantFluidBarrelRecipe> {
+public class BookBarrelInstantFluidPage extends BookRecipePage<InstantFluidBarrelRecipe>
+{
 
-    public BookBarrelInstantFluidPage(BookTextHolder title1, ResourceLocation recipeId1, BookTextHolder title2, ResourceLocation recipeId2, BookTextHolder text, String anchor, BookCondition condition) {
+    public BookBarrelInstantFluidPage(BookTextHolder title1, ResourceLocation recipeId1, BookTextHolder title2, ResourceLocation recipeId2, BookTextHolder text, String anchor, BookCondition condition)
+    {
         super(TFCRecipeTypes.BARREL_INSTANT_FLUID.get(), title1, recipeId1, title2, recipeId2, text, anchor, condition);
     }
 
     @Override
-    protected ItemStack getRecipeOutput(Level level, RecipeHolder<InstantFluidBarrelRecipe> recipe) {
-        if (recipe == null) {
+    protected ItemStack getRecipeOutput(Level level, RecipeHolder<InstantFluidBarrelRecipe> recipe)
+    {
+        if (recipe == null)
+        {
             return ItemStack.EMPTY;
         }
         return recipe.value().getResultItem(level.registryAccess());
     }
 
-    public static BookBarrelInstantFluidPage fromJson(ResourceLocation entryId, JsonObject json, HolderLookup.Provider provider) {
+    public static BookBarrelInstantFluidPage fromJson(ResourceLocation entryId, JsonObject json, HolderLookup.Provider provider)
+    {
         var common = BookRecipePage.commonFromJson(json, provider);
         var anchor = GsonHelper.getAsString(json, "anchor", "");
-        var condition = json.has("condition")
-                ? BookCondition.fromJson(entryId, json.getAsJsonObject("condition"), provider)
-                : new BookNoneCondition();
+        var condition = json.has("condition") ? BookCondition.fromJson(entryId, json.getAsJsonObject("condition"), provider) : new BookNoneCondition();
         return new BookBarrelInstantFluidPage(common.title1(), common.recipeId1(), common.title2(), common.recipeId2(), common.text(), anchor, condition);
     }
 
 
-
-    public static BookBarrelInstantFluidPage fromNetwork(RegistryFriendlyByteBuf buffer) {
+    public static BookBarrelInstantFluidPage fromNetwork(RegistryFriendlyByteBuf buffer)
+    {
         var common = BookRecipePage.commonFromNetwork(buffer);
         var anchor = buffer.readUtf();
         var condition = BookCondition.fromNetwork(buffer);
@@ -49,7 +52,8 @@ public class BookBarrelInstantFluidPage extends BookRecipePage<InstantFluidBarre
     }
 
     @Override
-    public ResourceLocation getType() {
+    public ResourceLocation getType()
+    {
         return ModonomiconIntegration.BARREL_FLUID_INSTANT_PAGE;
     }
 }
