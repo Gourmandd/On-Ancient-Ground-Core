@@ -10,15 +10,15 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Map;
 
-public class CoreGemstoneColors
-{
+public class CoreGemstoneColors {
 
     public static final DeferredRegister<GemstoneColor> GEMSTONE_COLORS = DeferredRegister.create(SpectrumRegistries.GEMSTONE_COLOR, AncientGroundCore.MOD_ID);
 
-    public static final Map<CoreGemstones, DeferredHolder<GemstoneColor, CoreGemstones>> GEMSTONES = Helpers.mapOf(CoreGemstones.class, gem -> register(gem.getSerializedName(), gem));
+    public static final Map<CoreGemstones, DeferredHolder<GemstoneColor, CoreGemstones>> GEMSTONES = Helpers.mapOf(CoreGemstones.class, gem ->
+        register(gem.getSerializedName(), gem)
+    );
 
-    private static DeferredHolder<GemstoneColor, CoreGemstones> register(String name, CoreGemstones gem)
-    {
+    private static DeferredHolder<GemstoneColor, CoreGemstones> register(String name, CoreGemstones gem){
         return GEMSTONE_COLORS.register(name, () -> gem);
     }
 }

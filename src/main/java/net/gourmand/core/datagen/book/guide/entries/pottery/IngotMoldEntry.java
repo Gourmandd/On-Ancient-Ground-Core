@@ -13,73 +13,75 @@ import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class IngotMoldEntry extends EntryProvider
-{
+public class IngotMoldEntry extends EntryProvider {
 
-    public IngotMoldEntry(CategoryProviderBase parent)
-    {
+    public IngotMoldEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain ingot molds.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCItems.MOLDS.get(Metal.ItemType.INGOT))));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCItems.MOLDS.get(Metal.ItemType.INGOT)))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Ingot Molds** can be used to **Cast** ingots. (See **Casting** for more info)
-                 \\
-                 \\
-                 Regular **Ingot Molds** have a 1/10 chance to break, while **Fire Ingot Molds** have a 1/100 chance to break.
-                \s""");
+                **Ingot Molds** can be used to **Cast** ingots. (See **Casting** for more info)
+                \\
+                \\
+                Regular **Ingot Molds** have a 1/10 chance to break, while **Fire Ingot Molds** have a 1/100 chance to break.
+               \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_ingot_mold")));
+        this.page("page2", () -> BookKnappingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_ingot_mold"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 An Ingot Mold being knapped out of **Clay**.
-                \s""");
+                An Ingot Mold being knapped out of **Clay**.
+               \s""");
 
         // page 3: fire knapping recipe.
-        this.page("page3", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_fire_ingot_mold")));
+        this.page("page3", () -> BookKnappingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_fire_ingot_mold"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 An Ingot Mold being knapped out of **Fire Clay**.
-                \s""");
+                An Ingot Mold being knapped out of **Fire Clay**.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Ingot Molds";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Ingot Molds";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.MOLDS.get(Metal.ItemType.INGOT));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "ingot_mold";
     }
 }

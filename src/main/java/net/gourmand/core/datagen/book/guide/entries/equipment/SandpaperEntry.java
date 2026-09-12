@@ -12,66 +12,65 @@ import com.simibubi.create.Create;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class SandpaperEntry extends EntryProvider
-{
+public class SandpaperEntry extends EntryProvider {
 
-    public SandpaperEntry(CategoryProviderBase parent)
-    {
+    public SandpaperEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain sandpaper.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(AllItems.SAND_PAPER)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(AllItems.SAND_PAPER))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Sandpaper** can be used to polish items.
-                 \\
-                 \\
-                 To do so, hold sandpaper in your offhand and the item you wish to polish in your main hand,
-                  and hold **Right-Click** until the item is converted.
-                \s""");
+                **Sandpaper** can be used to polish items.
+                \\
+                \\
+                To do so, hold sandpaper in your offhand and the item you wish to polish in your main hand,
+                 and hold **Right-Click** until the item is converted.
+               \s""");
 
         // page 2: recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(Create.ID, "crafting/materials/sand_paper")));
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(Create.ID, "crafting/materials/sand_paper"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 Sandpaper being crafted out of a paper, glue and sand. \s
-                \s""");
+                Sandpaper being crafted out of a paper, glue and sand. \s
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Sandpaper";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Sandpaper";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(AllItems.SAND_PAPER);
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "sandpaper";
     }
 }

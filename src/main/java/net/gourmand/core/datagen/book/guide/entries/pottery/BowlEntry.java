@@ -12,65 +12,64 @@ import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class BowlEntry extends EntryProvider
-{
+public class BowlEntry extends EntryProvider {
 
-    public BowlEntry(CategoryProviderBase parent)
-    {
+    public BowlEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain bowls.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.CERAMIC_BOWL)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCBlocks.CERAMIC_BOWL))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Ceramic Bowls** can be used to make **Soup** in the **Cooking Pot**.
-                 \\
-                 \\
-                 They can also be placed on the ground, and can hold powder in them. (with gunpowder being ignitable!)
-                \s""");
+                **Ceramic Bowls** can be used to make **Soup** in the **Cooking Pot**.
+                \\
+                \\
+                They can also be placed on the ground, and can hold powder in them. (with gunpowder being ignitable!)
+               \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_bowl")));
+        this.page("page2", () -> BookKnappingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_bowl"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 A ceramic bowl being knapped out of **Clay**.
-                \s""");
+                A ceramic bowl being knapped out of **Clay**.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Ceramic Bowl";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Ceramic Bowls";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCBlocks.CERAMIC_BOWL);
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "ceramic_bowl";
     }
 }

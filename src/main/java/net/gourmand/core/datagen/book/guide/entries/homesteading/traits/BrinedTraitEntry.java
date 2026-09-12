@@ -13,65 +13,64 @@ import net.gourmand.core.modonomicon.datagen.BookBarrelSealedPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class BrinedTraitEntry extends EntryProvider
-{
+public class BrinedTraitEntry extends EntryProvider {
 
-    public BrinedTraitEntry(CategoryProviderBase parent)
-    {
+    public BrinedTraitEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain brined trait.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCTags.Items.FRUITS)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCTags.Items.FRUITS))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 The **Brined Trait** by default, modifies spoilage rate by **1.0**.
-                 \\
-                 \\
-                 It is an intermediate step for other preservation techniques. It is done by sealing any food item with 125mb of **Brine**.
-                """);
+                The **Brined Trait** by default, modifies spoilage rate by **1.0**.
+                \\
+                \\
+                It is an intermediate step for other preservation techniques. It is done by sealing any food item with 125mb of **Brine**.
+               """);
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookBarrelSealedPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "barrel/brined")));
+        this.page("page2", () -> BookBarrelSealedPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "barrel/brined"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                The brining recipe.
-                """);
+               The brining recipe.
+               """);
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Brined";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About The Brined Trait.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.WOODEN_BUCKET);
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "brined_trait";
     }
 }

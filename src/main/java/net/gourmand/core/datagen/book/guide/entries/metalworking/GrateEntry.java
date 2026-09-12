@@ -13,63 +13,62 @@ import net.dries007.tfc.util.Metal;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class GrateEntry extends EntryProvider
-{
+public class GrateEntry extends EntryProvider {
 
-    public GrateEntry(CategoryProviderBase parent)
-    {
+    public GrateEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain grates.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.GRATE))));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.GRATE)))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Grates** are a block worth 100 mb of metal, they are a transparent block. They are used in building **Kilns**.
-                 \\
-                 \\
-                 You can get them from crafting 4 bars of many metals.
-                \s""");
+                **Grates** are a block worth 100 mb of metal, they are a transparent block. They are used in building **Kilns**.
+                \\
+                \\
+                You can get them from crafting 4 bars of many metals.
+               \s""");
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/metal/grate/copper")));
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/metal/grate/copper"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("Crafting copper grates");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Grates";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Grates";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.GRATE));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "grates";
     }
 }

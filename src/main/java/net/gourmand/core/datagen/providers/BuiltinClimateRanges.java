@@ -1,19 +1,17 @@
 package net.gourmand.core.datagen.providers;
 
-import net.dries007.tfc.util.climate.ClimateRange;
-import net.dries007.tfc.util.data.DataManager;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.PackOutput;
-
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 
-import static net.gourmand.core.registry.category.CoreClimateRanges.*;
-import static net.gourmand.core.registry.category.CoreCrops.*;
+import net.dries007.tfc.util.climate.ClimateRange;
+import net.dries007.tfc.util.data.DataManager;
 import static net.gourmand.core.registry.category.CoreFruitTrees.*;
-import static net.gourmand.core.registry.category.CoreStationaryBushes.ALOE;
-import static net.gourmand.core.registry.category.CoreStationaryBushes.SAWBLADE_HOLLY;
+import static net.gourmand.core.registry.category.CoreClimateRanges.*;
+import static net.gourmand.core.registry.category.CoreStationaryBushes.*;
+import static net.gourmand.core.registry.category.CoreCrops.*;
 
 public class BuiltinClimateRanges extends DataManagerProvider<ClimateRange>
 {

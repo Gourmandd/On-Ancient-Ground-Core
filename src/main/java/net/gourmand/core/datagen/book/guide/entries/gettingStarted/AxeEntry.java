@@ -13,62 +13,61 @@ import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class AxeEntry extends EntryProvider
-{
+public class AxeEntry extends EntryProvider {
 
-    public AxeEntry(CategoryProviderBase parent)
-    {
+    public AxeEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain axes.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCItems.ROCK_TOOLS.get(RockCategory.SEDIMENTARY).get(RockCategory.ItemType.AXE))));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCItems.ROCK_TOOLS.get(RockCategory.SEDIMENTARY).get(RockCategory.ItemType.AXE)))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Axes** are required to chop down trees and mine logs, if you mine the bottom of a tree the rest of it will fall. Stone axes are less efficient at logging than metal ones.\s
-                \s""");
+                **Axes** are required to chop down trees and mine logs, if you mine the bottom of a tree the rest of it will fall. Stone axes are less efficient at logging than metal ones.\s
+               \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/stone/axe_head/metamorphic")));
+        this.page("page2", () -> BookKnappingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/stone/axe_head/metamorphic"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 An axe being knapped out of **Metamorphic** rock. \s
-                \s""");
+                An axe being knapped out of **Metamorphic** rock. \s
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Axes";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Axes";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.ROCK_TOOLS.get(RockCategory.SEDIMENTARY).get(RockCategory.ItemType.AXE));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "axe";
     }
 }

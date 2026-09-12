@@ -6,8 +6,7 @@ import net.dries007.tfc.util.collections.IWeighted;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class DataWeighted<E> implements IWeighted<E>
-{
+public class DataWeighted<E> implements IWeighted<E> {
 
     // A IWeighted implementation similar to TFC's Weighted with changes allowing for data gen utilising IWeighted.
 

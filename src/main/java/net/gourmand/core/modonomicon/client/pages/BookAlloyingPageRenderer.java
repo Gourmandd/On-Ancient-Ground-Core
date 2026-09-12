@@ -16,42 +16,39 @@ import org.joml.Vector2i;
 
 import java.util.Map;
 
-public class BookAlloyingPageRenderer extends BookRecipePageRenderer<AlloyRecipe, BookAlloyingPage>
-{
+public class BookAlloyingPageRenderer extends BookRecipePageRenderer<AlloyRecipe, BookAlloyingPage> {
 
-    public BookAlloyingPageRenderer(BookAlloyingPage page)
-    {
+    public BookAlloyingPageRenderer(BookAlloyingPage page) {
         super(page);
     }
 
-    public static final Map<Integer, Vector2i> FLUID_POSITIONS = ImmutableMap.<Integer, Vector2i>builder().put(0, new Vector2i(3, 3 + 10)).put(1, new Vector2i(3, 27 + 10)).put(2, new Vector2i(3, 51 + 10)).put(3, new Vector2i(3, 75 + 10)).build();
+    public static final Map<Integer, Vector2i> FLUID_POSITIONS = ImmutableMap.<Integer, Vector2i>builder()
+            .put(0, new Vector2i(3, 3 + 10))
+            .put(1, new Vector2i(3, 27 + 10))
+            .put(2, new Vector2i(3, 51 + 10))
+            .put(3, new Vector2i(3, 75 + 10))
+            .build();
 
     @Override
-    protected int getRecipeHeight()
-    {
+    protected int getRecipeHeight() {
         return 45;
     }
 
     @Override
-    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<AlloyRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second)
-    {
+    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<AlloyRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second) {
 
         Level world = Minecraft.getInstance().level;
-        if (world == null)
-            return;
+        if (world == null) return;
 
-        if (!second)
-        {
-            if (!this.page.getTitle1().isEmpty())
-            {
+        if (!second) {
+            if (!this.page.getTitle1().isEmpty()) {
                 this.renderTitle(guiGraphics, this.page.getTitle1(), false, BookEntryScreen.PAGE_WIDTH / 2, 0);
             }
-        }
-        else
-        {
-            if (!this.page.getTitle2().isEmpty())
-            {
-                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2, recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0));
+        } else {
+            if (!this.page.getTitle2().isEmpty()) {
+                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2,
+                        recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0)
+                );
             }
         }
 
@@ -61,8 +58,7 @@ public class BookAlloyingPageRenderer extends BookRecipePageRenderer<AlloyRecipe
         var alloying_recipe = recipe.value();
 
         //fluid stack 1-4
-        alloying_recipe.contents().forEach(range ->
-        {
+        alloying_recipe.contents().forEach(range -> {
 
             int count = alloying_recipe.contents().indexOf(range);
 

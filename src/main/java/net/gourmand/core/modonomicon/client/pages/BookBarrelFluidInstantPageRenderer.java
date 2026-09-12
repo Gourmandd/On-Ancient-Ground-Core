@@ -13,40 +13,32 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.fluids.FluidStack;
 
-public class BookBarrelFluidInstantPageRenderer extends BookRecipePageRenderer<InstantFluidBarrelRecipe, BookBarrelInstantFluidPage>
-{
+public class BookBarrelFluidInstantPageRenderer extends BookRecipePageRenderer<InstantFluidBarrelRecipe, BookBarrelInstantFluidPage> {
 
-    public BookBarrelFluidInstantPageRenderer(BookBarrelInstantFluidPage page)
-    {
+    public BookBarrelFluidInstantPageRenderer(BookBarrelInstantFluidPage page) {
         super(page);
     }
 
     @Override
-    protected int getRecipeHeight()
-    {
+    protected int getRecipeHeight() {
         return 52;
     }
 
     @Override
-    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<InstantFluidBarrelRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second)
-    {
+    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<InstantFluidBarrelRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second) {
 
         Level world = Minecraft.getInstance().level;
-        if (world == null)
-            return;
+        if (world == null) return;
 
-        if (!second)
-        {
-            if (!this.page.getTitle1().isEmpty())
-            {
+        if (!second) {
+            if (!this.page.getTitle1().isEmpty()) {
                 this.renderTitle(guiGraphics, this.page.getTitle1(), false, BookEntryScreen.PAGE_WIDTH / 2, 0);
             }
-        }
-        else
-        {
-            if (!this.page.getTitle2().isEmpty())
-            {
-                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2, recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0));
+        } else {
+            if (!this.page.getTitle2().isEmpty()) {
+                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2,
+                        recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0)
+                );
             }
         }
 
@@ -74,8 +66,7 @@ public class BookBarrelFluidInstantPageRenderer extends BookRecipePageRenderer<I
 
         this.parentScreen.renderFluidStack(guiGraphics, recipeX - 12 + 20 + 7, recipeY + 8 + 3, mouseX, mouseY, ModonomiconIntegration.getFluidHolder(fluidAddedInput.getFluid(), fluidAddedInput.getAmount()));
 
-        if (!instantFluidBarrelRecipe.getOutputFluid().isEmpty())
-        {
+        if (!instantFluidBarrelRecipe.getOutputFluid().isEmpty()) {
             FluidStack fluidStack = instantFluidBarrelRecipe.getOutputFluid();
             this.parentScreen.renderFluidStack(guiGraphics, recipeX - 12 + 66 + 5, recipeY + 8 + 3, mouseX, mouseY, ModonomiconIntegration.getFluidHolder(fluidStack.getFluid(), fluidStack.getAmount()));
         }

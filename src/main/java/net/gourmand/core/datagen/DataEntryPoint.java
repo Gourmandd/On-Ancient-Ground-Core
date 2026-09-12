@@ -1,3 +1,5 @@
+
+
 package net.gourmand.core.datagen;
 
 import com.klikli_dev.modonomicon.api.datagen.LanguageProviderCache;
@@ -29,6 +31,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 
+
 public final class DataEntryPoint
 {
     @SubscribeEvent
@@ -36,9 +39,15 @@ public final class DataEntryPoint
     {
         final PackOutput output = event.getGenerator().getPackOutput();
 
-        RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder().add(Registries.CONFIGURED_FEATURE, BuiltinConfiguredFeatures::bootstrap).add(Registries.PLACED_FEATURE, BuiltinPlacedFeatures::bootstrap).add(RockSettings.KEY, BuiltinRockSettings::bootstrap);
+        RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder()
+                .add(Registries.CONFIGURED_FEATURE, BuiltinConfiguredFeatures::bootstrap)
+                .add(Registries.PLACED_FEATURE, BuiltinPlacedFeatures::bootstrap)
+                .add(RockSettings.KEY, BuiltinRockSettings::bootstrap);
 
-        final var lookup = add(event, new DatapackBuiltinEntriesProvider(event.getGenerator().getPackOutput(), event.getLookupProvider(), registrySetBuilder, Set.of(AncientGroundCore.MOD_ID, "minecraft", TerraFirmaCraft.MOD_ID))).getRegistryProvider();
+        final var lookup = add(event, new DatapackBuiltinEntriesProvider(
+                event.getGenerator().getPackOutput(), event.getLookupProvider(),
+                registrySetBuilder
+                , Set.of(AncientGroundCore.MOD_ID, "minecraft", TerraFirmaCraft.MOD_ID))).getRegistryProvider();
 
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinDepositData(output, lookup));
@@ -73,7 +82,7 @@ public final class DataEntryPoint
         var enUsCache = new LanguageProviderCache("en_us");
 
         add(event, new CoreMultiblockProvider(output));
-        add(event, NeoBookProvider.of(event, new GuideBook(enUsCache)));
+        add(event, NeoBookProvider.of(event, new GuideBook( enUsCache)));
         add(event, new CoreLanguageProvider(output, enUsCache));
     }
 
@@ -82,8 +91,21 @@ public final class DataEntryPoint
         return event.getGenerator().addProvider(true, provider);
     }
 
-    private static void addLoot(CompletableFuture<HolderLookup.Provider> lookup, PackOutput output, GatherDataEvent event, Function<HolderLookup.Provider, LootTableSubProvider> provider, LootContextParamSet set)
+    private static void addLoot(CompletableFuture<HolderLookup.Provider> lookup, PackOutput output, GatherDataEvent event, Function<HolderLookup.Provider, LootTableSubProvider> provider, LootContextParamSet set )
     {
-        add(event, new LootTableProvider(output, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(provider, set), new LootTableProvider.SubProviderEntry(BuiltinDepositLootTables::new, LootContextParamSets.EMPTY)), lookup));
+        add(event,
+                new LootTableProvider(
+                        output,
+                        Collections.emptySet(),
+                        List.of(
+                                new LootTableProvider.SubProviderEntry(provider, set),
+                                new LootTableProvider.SubProviderEntry(
+                                        BuiltinDepositLootTables::new,
+                                        LootContextParamSets.EMPTY
+                                )
+                        ),
+                        lookup
+                )
+        );
     }
 }

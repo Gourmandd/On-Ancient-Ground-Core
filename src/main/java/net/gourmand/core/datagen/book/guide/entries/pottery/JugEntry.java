@@ -12,65 +12,64 @@ import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class JugEntry extends EntryProvider
-{
+public class JugEntry extends EntryProvider {
 
-    public JugEntry(CategoryProviderBase parent)
-    {
+    public JugEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain jugs.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCItems.JUG)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCItems.JUG))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Jugs** can hold 100mb of non-hazardous fluids and be drank from. Some fluids can give **Nutrition** or status effects.
-                 \\
-                 \\
-                 Shift + right-clicking on any block empties (and deletes) the contained fluid. Right-clicking in the air with an empty **Jug** creates a sound!
-                \s""");
+                **Jugs** can hold 100mb of non-hazardous fluids and be drank from. Some fluids can give **Nutrition** or status effects.
+                \\
+                \\
+                Shift + right-clicking on any block empties (and deletes) the contained fluid. Right-clicking in the air with an empty **Jug** creates a sound!
+               \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_jug")));
+        this.page("page2", () -> BookKnappingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_jug"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 A jug being knapped out of **Clay**.
-                \s""");
+                A jug being knapped out of **Clay**.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Jug";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Jugs";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.JUG);
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "jug";
     }
 }

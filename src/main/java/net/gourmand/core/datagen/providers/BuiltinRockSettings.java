@@ -13,15 +13,12 @@ import net.minecraft.resources.ResourceKey;
 
 import java.util.Optional;
 
-public class BuiltinRockSettings
-{
+public class BuiltinRockSettings {
 
-    public static void bootstrap(BootstrapContext<RockSettings> ctx)
-    {
+    public static void bootstrap(BootstrapContext<RockSettings> ctx){
         for (CoreRocks rock : CoreRocks.values())
         {
-            if (rock.hasOres())
-            {
+            if (rock.hasOres()){
                 ctx.register(rockKey(rock), makeSetting(rock));
             }
         }
@@ -31,7 +28,17 @@ public class BuiltinRockSettings
     {
         final var blocks = CoreBlocks.ROCK_BLOCKS.get(rock);
         final var color = CategoryUtil.CoreRock.TO_SAND_COLOR.get(rock);
-        return new RockSettings(rock.getBlock(Rock.BlockType.RAW).get(), blocks.get(Rock.BlockType.HARDENED).get(), blocks.get(Rock.BlockType.GRAVEL).get(), blocks.get(Rock.BlockType.COBBLE).get(), TFCBlocks.SAND.get(color).get(), TFCBlocks.SANDSTONE.get(color).get(SandstoneBlockType.RAW).get(), Optional.of(blocks.get(Rock.BlockType.SPIKE).get()), Optional.of(blocks.get(Rock.BlockType.LOOSE).get()), Optional.of(blocks.get(Rock.BlockType.MOSSY_LOOSE).get()), Optional.of(false), //none of our rocks are karst.
+        return new RockSettings(
+                rock.getBlock(Rock.BlockType.RAW).get(),
+                blocks.get(Rock.BlockType.HARDENED).get(),
+                blocks.get(Rock.BlockType.GRAVEL).get(),
+                blocks.get(Rock.BlockType.COBBLE).get(),
+                TFCBlocks.SAND.get(color).get(),
+                TFCBlocks.SANDSTONE.get(color).get(SandstoneBlockType.RAW).get(),
+                Optional.of(blocks.get(Rock.BlockType.SPIKE).get()),
+                Optional.of(blocks.get(Rock.BlockType.LOOSE).get()),
+                Optional.of(blocks.get(Rock.BlockType.MOSSY_LOOSE).get()),
+                Optional.of(false), //none of our rocks are karst.
                 Optional.of(false) //some of ours are mafic, but they don't use black sand.
         );
     }

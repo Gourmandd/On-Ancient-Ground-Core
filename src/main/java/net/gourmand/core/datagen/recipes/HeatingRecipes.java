@@ -24,23 +24,38 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public interface HeatingRecipes extends Recipes
-{
+public interface HeatingRecipes extends Recipes {
 
     float GLASS_MELT_TEMPERATURE = 1070f;
 
-    default void heatingRecipes()
-    {
+    default void heatingRecipes(){
 
-        Stream.of(CoreOres.values()).forEach(ore ->
-        {
+        Stream.of(CoreOres.values()).forEach(ore -> {
             if (ore.isGraded())
                 addOres(ore, ore.metal());
         });
 
-        CoreItems.METAL_ITEMS.forEach((metal, items) -> items.forEach((type, item) -> add(nameOf(item.get()), new HeatingRecipe(ingredientOf(metal, type), ItemStackProvider.empty(), new FluidStack(metal.getFluid(), units(type)), temperatureOf(metal), new ItemStack(item).isDamageableItem()))));
+        CoreItems.METAL_ITEMS.forEach((metal, items) -> items.forEach((type, item) ->
+                add(nameOf(item.get()),
+                        new HeatingRecipe(
+                            ingredientOf(metal, type),
+                            ItemStackProvider.empty(),
+                            new FluidStack(metal.getFluid(), units(type)),
+                            temperatureOf(metal), new ItemStack(item).isDamageableItem()
+                        )
+                )
+        ));
 
-        CoreBlocks.METALS.forEach((metal, items) -> items.forEach((type, item) -> add(nameOf(item.get()), new HeatingRecipe(ingredientOf(metal, type), ItemStackProvider.empty(), new FluidStack(metal.getFluid(), units(type)), temperatureOf(metal), new ItemStack(item.get()).isDamageableItem()))));
+        CoreBlocks.METALS.forEach((metal, items) -> items.forEach((type, item) ->
+                add(nameOf(item.get()),
+                        new HeatingRecipe(
+                            ingredientOf(metal, type),
+                            ItemStackProvider.empty(),
+                            new FluidStack(metal.getFluid(), units(type)),
+                            temperatureOf(metal), new ItemStack(item.get()).isDamageableItem()
+                        )
+                )
+        ));
 
         /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
@@ -58,8 +73,7 @@ public interface HeatingRecipes extends Recipes
         });
          */
 
-        Stream.of(CoreClay.values()).forEach(clayType ->
-        {
+        Stream.of(CoreClay.values()).forEach(clayType -> {
 
             final Map<CoreClay.ItemType, DeferredHolder<Item, Item>> MAP = CoreItems.CERAMICS.get(clayType);
 
@@ -75,11 +89,9 @@ public interface HeatingRecipes extends Recipes
             add(MAP.get(CoreClay.ItemType.UNFIRED_JUG).get(), MAP.get(CoreClay.ItemType.JUG).get(), 1399);
             add(MAP.get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).get(), CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL).get().asItem(), 1399);
 
-            Stream.of(CoreClay.ItemType.values()).forEach(itemType ->
-            {
+            Stream.of(CoreClay.ItemType.values()).forEach(itemType -> {
 
-                if (itemType.getType() == CoreClay.ItemPartType.UNFIRED_MOLD && itemType.hasType(clayType))
-                {
+                if (itemType.getType() == CoreClay.ItemPartType.UNFIRED_MOLD && itemType.hasType(clayType)){
 
                     final DeferredHolder<Item, Item> MOLD = MAP.get(itemType);
                     add(MOLD.get(), CategoryUtil.Tools.UNFIRED_MOLD_TYPE_TO_FIRED.get(itemType), 1399);
@@ -88,9 +100,9 @@ public interface HeatingRecipes extends Recipes
         });
 
 
+
         // Colored glass
-        for (DyeColor color : DyeColor.values())
-        {
+        for (DyeColor color : DyeColor.values()){
             Block framedGlassBlock = CategoryUtil.Glass.COLOR_TO_QUARK_GLASS.get(color).value();
             Block framedGlassPane = CategoryUtil.Glass.COLOR_TO_QUARK_GLASS_PANE.get(color).value();
 

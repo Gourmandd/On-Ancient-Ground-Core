@@ -13,65 +13,64 @@ import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class PreservedTraitEntry extends EntryProvider
-{
+public class PreservedTraitEntry extends EntryProvider {
 
-    public PreservedTraitEntry(CategoryProviderBase parent)
-    {
+    public PreservedTraitEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain preserved trait.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCTags.Items.VESSELS)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCTags.Items.VESSELS))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 The **Preserved Trait** by default, modifies spoilage rate by **0.5**.
-                 \\
-                 \\
-                 Any food item can be placed in Vessels or (sealed) large vessels to be considered **Preserved** while inside.
-                """);
+                The **Preserved Trait** by default, modifies spoilage rate by **0.5**.
+                \\
+                \\
+                Any food item can be placed in Vessels or (sealed) large vessels to be considered **Preserved** while inside.
+               """);
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_vessel")));
+        this.page("page2", () -> BookKnappingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_vessel"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                The unfired vessel recipe.
-                """);
+               The unfired vessel recipe.
+               """);
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Preserved";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About The Preserved Trait.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
-
+    
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.VESSEL);
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "preserved_trait";
     }
 }

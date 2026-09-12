@@ -13,62 +13,61 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class FenceEntry extends EntryProvider
-{
+public class FenceEntry extends EntryProvider {
 
-    public FenceEntry(CategoryProviderBase parent)
-    {
+    public FenceEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain fences.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.FENCE))));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.FENCE)))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Fences** can be used as a cheap barrier. They are 1.5 blocks tall preventing most creatures from jumping over.
-                \s""");
+                **Fences** can be used as a cheap barrier. They are 1.5 blocks tall preventing most creatures from jumping over.
+               \s""");
 
         // page 2: ash fence recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/fence/ash")));
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/fence/ash"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 Ash fence being made out Ash planks and lumber.
-                \s""");
+                Ash fence being made out Ash planks and lumber.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Fences";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Fences";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCBlocks.WOODS.get(Wood.ASH).get(Wood.BlockType.FENCE));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "fence";
     }
 }

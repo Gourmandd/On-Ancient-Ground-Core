@@ -16,28 +16,29 @@ import net.minecraft.world.level.material.Fluid;
 import java.util.Locale;
 import java.util.Map;
 
-public class CoreTags
-{
+public class CoreTags {
 
 
-    private static TagKey<Fluid> createFluidTag(String name)
-    {
-        return TagKey.create(Registries.FLUID, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name));
+    private static TagKey<Fluid> createFluidTag(String name){
+        return TagKey.create(
+                Registries.FLUID,
+                ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name)
+        );
     }
 
-    public static final TagKey<Fluid> GLASS_MOLD_ACCEPTABLE = createFluidTag("molten_glass");
-    public static final TagKey<Fluid> WROUGHT_IRON_BUCKET_ACCEPTABLE = createFluidTag("usable_in_wrought_iron_bucket");
+    public static final TagKey<Fluid> GLASS_MOLD_ACCEPTABLE = createFluidTag( "molten_glass");
+    public static final TagKey<Fluid> WROUGHT_IRON_BUCKET_ACCEPTABLE = createFluidTag( "usable_in_wrought_iron_bucket");
 
-    public static class Blocks
-    {
+    public static class Blocks {
 
-        private static TagKey<Block> tag(String name, String key)
-        {
-            return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(name, key));
+        private static TagKey<Block> tag(String name, String key){
+            return TagKey.create(
+                    Registries.BLOCK,
+                    ResourceLocation.fromNamespaceAndPath(name, key)
+            );
         }
 
-        private static TagKey<Block> tag(String key)
-        {
+        private static TagKey<Block> tag(String key){
             return tag(AncientGroundCore.MOD_ID, key);
         }
 
@@ -48,60 +49,77 @@ public class CoreTags
         public static final TagKey<Block> GEMSTONE_BLOCKS = tag("gemstone_blocks");
     }
 
-    public static class Items
-    {
-        private static TagKey<Item> tag(String name)
-        {
+    public static class Items {
+        private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
         }
 
-        private static TagKey<Item> tag(String namespace, String name)
-        {
+        private static TagKey<Item> tag(String namespace, String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, name));
         }
 
-        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_INGOTS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> tag("ingots/" + metal.getSerializedName()));
+        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_INGOTS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
+            tag("ingots/" + metal.getSerializedName())
+        );
 
-        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_INGOTS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> tag("double_ingots/" + metal.getSerializedName()));
+        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_INGOTS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
+                tag("double_ingots/" + metal.getSerializedName())
+        );
 
-        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_SHEETS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> tag("sheets/" + metal.getSerializedName()));
+        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_SHEETS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
+                tag("sheets/" + metal.getSerializedName())
+        );
 
-        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_SHEETS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> tag("double_sheets/" + metal.getSerializedName()));
+        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_SHEETS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
+                tag("double_sheets/" + metal.getSerializedName())
+        );
 
-        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_5 = Helpers.mapOf(CoreClay.class, clay -> tag(AncientGroundCore.MOD_ID, "clay/" + clay.getSerializedName() + "/recycling_5"));
+        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_5 = Helpers.mapOf(CoreClay.class, clay ->
+                tag(AncientGroundCore.MOD_ID,"clay/" + clay.getSerializedName() + "/recycling_5")
+        );
 
-        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_1 = Helpers.mapOf(CoreClay.class, clay -> tag(AncientGroundCore.MOD_ID, "clay/" + clay.getSerializedName() + "/recycling_1"));
+        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_1 = Helpers.mapOf(CoreClay.class, clay ->
+                tag(AncientGroundCore.MOD_ID,"clay/" + clay.getSerializedName() + "/recycling_1")
+        );
 
-        public static final Map<Metal.ItemType, TagKey<Item>> TOOL_HEADS = Helpers.mapOf(Metal.ItemType.class, tool -> (tool.hasMold() && tool != Metal.ItemType.INGOT), tool -> tag(AncientGroundCore.MOD_ID, "tool_heads/" + tool.name().toLowerCase(Locale.ROOT)));
+        public static final Map<Metal.ItemType, TagKey<Item>> TOOL_HEADS = Helpers.mapOf(Metal.ItemType.class, tool -> (tool.hasMold() && tool != Metal.ItemType.INGOT), tool ->
+                tag(AncientGroundCore.MOD_ID,"tool_heads/" + tool.name().toLowerCase(Locale.ROOT))
+        );
 
-        public static final Map<SpectrumWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(SpectrumWood.class, wood -> (!wood.isNoxfungi() && wood != SpectrumWood.WEEPING_GALA), color -> tag(SpectrumCommon.MOD_ID, color.getSerializedName() + "_logs"));
+        public static final Map<SpectrumWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(SpectrumWood.class, wood -> (!wood.isNoxfungi() && wood != SpectrumWood.WEEPING_GALA), color ->
+                tag(SpectrumCommon.MOD_ID , color.getSerializedName() + "_logs")
+        );
 
-        public static final Map<Ore, TagKey<Item>> TFC_ORE_MULTIBLOCK = Helpers.mapOf(Ore.class, ore -> tag("do_not_use_in_recipes/ore/" + ore.name().toLowerCase(Locale.ROOT)));
+        public static final Map<Ore, TagKey<Item>> TFC_ORE_MULTIBLOCK = Helpers.mapOf(Ore.class, ore ->
+                tag("do_not_use_in_recipes/ore/" + ore.name().toLowerCase(Locale.ROOT))
+        );
 
-        public static final Map<CoreOres, TagKey<Item>> CORE_ORE_MULTIBLOCK = Helpers.mapOf(CoreOres.class, ore -> tag("do_not_use_in_recipes/ore/" + ore.getSerializedName()));
+        public static final Map<CoreOres, TagKey<Item>> CORE_ORE_MULTIBLOCK = Helpers.mapOf(CoreOres.class, ore ->
+                tag("do_not_use_in_recipes/ore/" + ore.getSerializedName())
+        );
 
-        public static final TagKey<Item> KAOLIN_CLAYS = tag(AncientGroundCore.MOD_ID, "kaolin_clay_blocks");
+        public static final TagKey<Item> KAOLIN_CLAYS = tag( AncientGroundCore.MOD_ID,"kaolin_clay_blocks");
 
-        public static final TagKey<Item> WEEPING_GALA_LOGS = tag(SpectrumCommon.MOD_ID, "weeping_gala_logs");
+        public static final TagKey<Item> WEEPING_GALA_LOGS = tag(SpectrumCommon.MOD_ID , "weeping_gala_logs");
 
-        public static final TagKey<Item> SLATE_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID, "slate_noxcap_stems");
-        public static final TagKey<Item> IVORY_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID, "ivory_noxcap_stems");
-        public static final TagKey<Item> CHESTNUT_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID, "chestnut_noxcap_stems");
-        public static final TagKey<Item> EBONY_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID, "ebony_noxcap_stems");
+        public static final TagKey<Item> SLATE_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "slate_noxcap_stems");
+        public static final TagKey<Item> IVORY_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "ivory_noxcap_stems");
+        public static final TagKey<Item> CHESTNUT_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "chestnut_noxcap_stems");
+        public static final TagKey<Item> EBONY_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID , "ebony_noxcap_stems");
 
-        public static final TagKey<Item> BELLS = tag(AncientGroundCore.MOD_ID, "bells");
+        public static final TagKey<Item> BELLS = tag(AncientGroundCore.MOD_ID,"bells");
 
-        public static final TagKey<Item> UNFIRED_VESSELS = tag(AncientGroundCore.MOD_ID, "unfired_vessels");
+        public static final TagKey<Item> UNFIRED_VESSELS = tag(AncientGroundCore.MOD_ID,"unfired_vessels");
 
         public static final TagKey<Item> CLAY_BALLS = tag("clay_balls");
 
         public static final TagKey<Item> CLAY_BRICKS = tag("clay_bricks");
 
-        public static final TagKey<Item> MORTARED_COBBLE = tag(AncientGroundCore.MOD_ID, "cobblestones/mortared");
+        public static final TagKey<Item> MORTARED_COBBLE = tag( AncientGroundCore.MOD_ID,"cobblestones/mortared");
 
-        public static final TagKey<Item> MOLTEN_GLASS = tag(AncientGroundCore.MOD_ID, "molten_glass");
+        public static final TagKey<Item> MOLTEN_GLASS = tag( AncientGroundCore.MOD_ID,"molten_glass");
 
-        public static final TagKey<Item> LEAD_GLASS = tag(AncientGroundCore.MOD_ID, "lead_glass");
-        public static final TagKey<Item> LEAD_GLASS_PANES = tag(AncientGroundCore.MOD_ID, "lead_glass_panes");
+        public static final TagKey<Item> LEAD_GLASS = tag( AncientGroundCore.MOD_ID,"lead_glass");
+        public static final TagKey<Item> LEAD_GLASS_PANES = tag( AncientGroundCore.MOD_ID,"lead_glass_panes");
     }
 }

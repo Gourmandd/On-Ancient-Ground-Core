@@ -16,18 +16,29 @@ import java.util.Collection;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class CoreBlockEntities
-{
+public class CoreBlockEntities {
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, AncientGroundCore.MOD_ID);
 
     public static final TFCBlockEntities.Id<CoreCropBlockEntity> CROP = register("crop", CoreCropBlockEntity::new, CoreBlocks.CROPS.values().stream());
 
-    public static final TFCBlockEntities.Id<BerryBushBlockEntity> BERRY_BUSH = register("berry_bush", CoreBerryBushBlockEntity::new, Stream.of(CoreBlocks.SPREADING_BUSHES.values(), CoreBlocks.SPREADING_CANES.values(), CoreBlocks.STATIONARY_BUSHES.values(), CoreBlocks.FRUIT_TREE_LEAVES.values()).flatMap(Collection::stream));
+    public static final TFCBlockEntities.Id<BerryBushBlockEntity> BERRY_BUSH = register("berry_bush", CoreBerryBushBlockEntity::new, Stream.of(
+            CoreBlocks.SPREADING_BUSHES.values(),
+            CoreBlocks.SPREADING_CANES.values(),
+            CoreBlocks.STATIONARY_BUSHES.values(),
+            CoreBlocks.FRUIT_TREE_LEAVES.values()
+    ).flatMap(Collection::stream));
 
-    public static final TFCBlockEntities.Id<CoreTickingPlantBlockEntity> TICK_COUNTING_PLANT = register("tick_counting_branch", CoreTickingPlantBlockEntity::new, Stream.of(CoreBlocks.FRUIT_TREE_SAPLINGS.values().stream(), CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.values().stream()).flatMap(e -> e));
+    public static final TFCBlockEntities.Id<CoreTickingPlantBlockEntity> TICK_COUNTING_PLANT = register("tick_counting_branch", CoreTickingPlantBlockEntity::new, Stream.of(
+                    CoreBlocks.FRUIT_TREE_SAPLINGS.values().stream(),
+                    CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.values().stream()
+            ).flatMap(e -> e)
+    );
 
-    public static final TFCBlockEntities.Id<CoreTickCounterBlockEntity> TICK_COUNTING = register("tick_counting", CoreTickCounterBlockEntity::new, Stream.of(deeperDownWoodBlocks(Wood.BlockType.SAPLING)).flatMap(e -> e));
+    public static final TFCBlockEntities.Id<CoreTickCounterBlockEntity> TICK_COUNTING = register("tick_counting", CoreTickCounterBlockEntity::new, Stream.of(
+                    deeperDownWoodBlocks(Wood.BlockType.SAPLING)
+            ).flatMap(e -> e)
+    );
 
     public static final TFCBlockEntities.Id<CoreToolRackBlockEntity> TOOL_RACK = register("tool_rack", CoreToolRackBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.TOOL_RACK));
     public static final TFCBlockEntities.Id<CoreLoomBlockEntity> LOOM = register("loom", CoreLoomBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.LOOM));

@@ -13,12 +13,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class CoreLoomBlock extends TFCLoomBlock
-{
+public class CoreLoomBlock extends TFCLoomBlock {
 
 
-    public CoreLoomBlock(ExtendedProperties properties, ResourceLocation textureLocation)
-    {
+    public CoreLoomBlock(ExtendedProperties properties, ResourceLocation textureLocation) {
         super(properties, textureLocation);
     }
 
@@ -29,6 +27,8 @@ public class CoreLoomBlock extends TFCLoomBlock
         {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
-        return level.getBlockEntity(pos, CoreBlockEntities.LOOM.get()).map(loom -> loom.onRightClick(player)).orElse(ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION);
+        return level.getBlockEntity(pos, CoreBlockEntities.LOOM.get())
+                .map(loom -> loom.onRightClick(player))
+                .orElse(ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION);
     }
 }

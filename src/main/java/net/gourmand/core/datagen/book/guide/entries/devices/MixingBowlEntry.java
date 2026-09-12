@@ -13,20 +13,21 @@ import net.gourmand.core.modonomicon.datagen.BookMixingBowlPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class MixingBowlEntry extends EntryProvider
-{
+public class MixingBowlEntry extends EntryProvider {
 
-    public MixingBowlEntry(CategoryProviderBase parent)
-    {
+    public MixingBowlEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain mixing bowl.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(FLBlocks.MIXING_BOWL.asItem())));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(FLBlocks.MIXING_BOWL.asItem()))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
@@ -38,65 +39,72 @@ public class MixingBowlEntry extends EntryProvider
                 """);
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/mixing_bowl")));
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/mixing_bowl"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                The mixing bowl is made from treated lumber, and glue.
-                \s""");
+               The mixing bowl is made from treated lumber, and glue.
+               \s""");
 
         // page 3: recipe.
-        this.page("page3", () -> BookMixingBowlPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/butter")));
+        this.page("page3", () -> BookMixingBowlPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/butter"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Making butter in the mixing bowl.
-                """);
+               Making butter in the mixing bowl.
+               """);
 
         // page 4: recipe.
-        this.page("page4", () -> BookMixingBowlPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/pumpkin_pie_dough")));
+        this.page("page4", () -> BookMixingBowlPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/pumpkin_pie_dough"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Pumpkin Pie dough recipe.
-                \s""");
+               Pumpkin Pie dough recipe.
+               \s""");
 
         // page 5: recipe.
-        this.page("page5", () -> BookMixingBowlPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/chocolate_chip_cookie_dough")));
+        this.page("page5", () -> BookMixingBowlPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "mixing_bowl/food/chocolate_chip_cookie_dough"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Chocolate chip cookie dough!
-                \s""");
+               Chocolate chip cookie dough!
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Mixing Bowl";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Mixing Bowls.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(FLBlocks.MIXING_BOWL);
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "mixing_bowl";
     }
 }

@@ -15,23 +15,19 @@ import net.minecraft.world.level.ItemLike;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implements Accessors
-{
+public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implements Accessors {
 
     private final CompletableFuture<?> lookup;
 
-    public BuiltinItemHeats(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup)
-    {
+    public BuiltinItemHeats(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup) {
         super(HeatCapability.MANAGER, output, lookup);
         this.lookup = lookup;
     }
 
     @Override
-    protected void addData(HolderLookup.Provider provider)
-    {
+    protected void addData(HolderLookup.Provider provider) {
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(type ->
-        {
+        Stream.of(CoreMetals.MetalType.values()).forEach(type -> {
             add(CoreItems.METAL_ITEMS.get(type).get(Metal.ItemType.INGOT).get(), CategoryUtil.HeatCapacities.INGOT);
             add(CoreItems.METAL_ITEMS.get(type).get(Metal.ItemType.DOUBLE_INGOT).get(), CategoryUtil.HeatCapacities.DOUBLE_INGOT);
             add(CoreItems.METAL_ITEMS.get(type).get(Metal.ItemType.SHEET).get(), CategoryUtil.HeatCapacities.SHEET);
@@ -59,8 +55,7 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
         });
          */
 
-        Stream.of(CoreClay.values()).forEach(type ->
-        {
+        Stream.of(CoreClay.values()).forEach(type -> {
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BRICK).get(), 0.4f);
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).get(), 0.6f);
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_JUG).get(), 0.8f);
@@ -73,12 +68,9 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).get(), 0.6f);
         });
 
-        Stream.of(CoreOres.values()).forEach(ore ->
-        {
-            if (ore.isGraded())
-            {
-                Stream.of(CoreOres.Grade.values()).forEach(grade ->
-                {
+        Stream.of(CoreOres.values()).forEach(ore -> {
+            if (ore.isGraded()){
+                Stream.of(CoreOres.Grade.values()).forEach(grade -> {
                     add(CoreItems.GRADED_ORES.get(ore).get(grade).get(), 2.857143f, 138.0f, 184.0f);
                 });
                 add(CoreBlocks.SMALL_ORES.get(ore).get(), 2.857143f, 138.0f, 184.0f);
@@ -99,7 +91,7 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
 
     private void add(ItemLike item, float heatCapacity, float forgingTemperature, float weldingTemperature)
     {
-        add(Ingredient.of(item), heatCapacity, forgingTemperature, weldingTemperature);
+        add(Ingredient.of(item), heatCapacity, forgingTemperature,  weldingTemperature);
     }
 
     private void add(Ingredient item, float heatCapacity)
@@ -111,6 +103,7 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
     {
         add(nameOf(item), new HeatDefinition(item, heatCapacity, forgingTemperature, weldingTemperature));
     }
+
 
 
 }

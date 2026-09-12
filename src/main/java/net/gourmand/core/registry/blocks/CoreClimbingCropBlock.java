@@ -15,8 +15,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import java.util.function.Supplier;
 
-public abstract class CoreClimbingCropBlock extends ClimbingCropBlock
-{
+public abstract class CoreClimbingCropBlock extends ClimbingCropBlock {
 
     public static final BooleanProperty STICK = TFCBlockStateProperties.STICK;
 

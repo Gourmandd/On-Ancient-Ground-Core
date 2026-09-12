@@ -16,35 +16,32 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 
-public class BookKnappingPage extends BookRecipePage<KnappingRecipe>
-{
+public class BookKnappingPage extends BookRecipePage<KnappingRecipe> {
 
-    public BookKnappingPage(BookTextHolder title1, ResourceLocation recipeId1, BookTextHolder title2, ResourceLocation recipeId2, BookTextHolder text, String anchor, BookCondition condition)
-    {
+    public BookKnappingPage(BookTextHolder title1, ResourceLocation recipeId1, BookTextHolder title2, ResourceLocation recipeId2, BookTextHolder text, String anchor, BookCondition condition) {
         super(TFCRecipeTypes.KNAPPING.get(), title1, recipeId1, title2, recipeId2, text, anchor, condition);
     }
 
     @Override
-    protected ItemStack getRecipeOutput(Level level, RecipeHolder<KnappingRecipe> recipe)
-    {
-        if (recipe == null)
-        {
+    protected ItemStack getRecipeOutput(Level level, RecipeHolder<KnappingRecipe> recipe) {
+        if (recipe == null) {
             return ItemStack.EMPTY;
         }
         return recipe.value().getResultItem(level.registryAccess());
     }
 
-    public static BookKnappingPage fromJson(ResourceLocation entryId, JsonObject json, HolderLookup.Provider provider)
-    {
+    public static BookKnappingPage fromJson(ResourceLocation entryId, JsonObject json, HolderLookup.Provider provider) {
         var common = BookRecipePage.commonFromJson(json, provider);
         var anchor = GsonHelper.getAsString(json, "anchor", "");
-        var condition = json.has("condition") ? BookCondition.fromJson(entryId, json.getAsJsonObject("condition"), provider) : new BookNoneCondition();
+        var condition = json.has("condition")
+                ? BookCondition.fromJson(entryId, json.getAsJsonObject("condition"), provider)
+                : new BookNoneCondition();
         return new BookKnappingPage(common.title1(), common.recipeId1(), common.title2(), common.recipeId2(), common.text(), anchor, condition);
     }
 
 
-    public static BookKnappingPage fromNetwork(RegistryFriendlyByteBuf buffer)
-    {
+
+    public static BookKnappingPage fromNetwork(RegistryFriendlyByteBuf buffer) {
         var common = BookRecipePage.commonFromNetwork(buffer);
         var anchor = buffer.readUtf();
         var condition = BookCondition.fromNetwork(buffer);
@@ -52,8 +49,7 @@ public class BookKnappingPage extends BookRecipePage<KnappingRecipe>
     }
 
     @Override
-    public ResourceLocation getType()
-    {
+    public ResourceLocation getType() {
         return ModonomiconIntegration.KNAPPING_PAGE;
     }
 }

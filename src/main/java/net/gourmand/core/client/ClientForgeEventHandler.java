@@ -9,8 +9,7 @@ import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-public class ClientForgeEventHandler
-{
+public class ClientForgeEventHandler {
 
     public static void init()
     {
@@ -22,12 +21,10 @@ public class ClientForgeEventHandler
 
     public static void onKeyEvent(InputEvent.Key event)
     {
-        if (CoreKeyBindings.OPEN_MODPACK_GUIDE.consumeClick() && Minecraft.getInstance().isWindowActive())
-        {
+        if (CoreKeyBindings.OPEN_MODPACK_GUIDE.consumeClick() && Minecraft.getInstance().isWindowActive()){
             ModonomiconIntegration.openBook();
         }
-        if (CoreKeyBindings.OPEN_TFC_GUIDE.isDown())
-        {
+        if (CoreKeyBindings.OPEN_TFC_GUIDE.isDown()){
             PacketDistributor.sendToServer(new OpenFieldGuidePacket());
         }
     }

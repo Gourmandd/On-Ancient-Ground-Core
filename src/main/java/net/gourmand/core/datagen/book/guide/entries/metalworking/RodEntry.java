@@ -14,60 +14,60 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
 
-public class RodEntry extends EntryProvider
-{
+public class RodEntry extends EntryProvider {
 
-    public RodEntry(CategoryProviderBase parent)
-    {
+    public RodEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain sheet.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(Tags.Items.RODS)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(Tags.Items.RODS))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Rods** are a material worth 50 mb of metal, you can get them by **Anvil-Working** an ingot.
-                \s""");
+                **Rods** are a material worth 50 mb of metal, you can get them by **Anvil-Working** an ingot.
+               \s""");
 
         // page 2: anvil working recipes.
-        this.page("page2", () -> BookAnvilWorkingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/rod/bronze")).withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/rod/copper")));
+        this.page("page2", () -> BookAnvilWorkingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/rod/bronze"))
+                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/rod/copper"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("Forging Rods");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Rods";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Rods";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.COPPER).get(Metal.ItemType.ROD));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "rod";
     }
 }

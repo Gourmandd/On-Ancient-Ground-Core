@@ -14,81 +14,86 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class LumberEntry extends EntryProvider
-{
+public class LumberEntry extends EntryProvider {
 
-    public LumberEntry(CategoryProviderBase parent)
-    {
+    public LumberEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain lumber.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCTags.Items.LUMBER)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCTags.Items.LUMBER))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Lumber** is a material needed for most complex wooden blocks and items. You can make it using a saw and logs.
-                 \\
-                 \\
-                 Planks, slabs, and stairs can be also recycled into lumber.
-                \s""");
+                **Lumber** is a material needed for most complex wooden blocks and items. You can make it using a saw and logs.
+                \\
+                \\
+                Planks, slabs, and stairs can be also recycled into lumber.
+               \s""");
 
         // page 2: ash lumber recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lumber/ash_from_logs")));
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lumber/ash_from_logs"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 8 Ash lumber being made out Ash logs.
-                \s""");
+                8 Ash lumber being made out Ash logs.
+               \s""");
 
         // page 3: ash lumber recipe.
-        this.page("page3", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lumber/birch_from_slabs")));
+        this.page("page3", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lumber/birch_from_slabs"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 2 Birch lumber being made out Birch plank slabs.
-                \s""");
+                2 Birch lumber being made out Birch plank slabs.
+               \s""");
 
         // page 3: ash lumber recipe.
-        this.page("page4", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lumber/pine_from_planks")));
+        this.page("page4", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/lumber/pine_from_planks"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 4 Pine lumber being made out Pine planks.
-                \s""");
+                4 Pine lumber being made out Pine planks.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Lumber";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Lumber";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.LUMBER.get(Wood.ASH));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "lumber";
     }
 }

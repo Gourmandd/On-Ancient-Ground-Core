@@ -12,17 +12,46 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
 
-public enum TFCOres implements RegistryOre
-{
+public enum TFCOres implements RegistryOre {
 
-    NATIVE_COPPER(CoreOres.Type.GRADED, Ore.NATIVE_COPPER), NATIVE_GOLD(CoreOres.Type.GRADED, Ore.NATIVE_GOLD), HEMATITE(CoreOres.Type.GRADED, Ore.HEMATITE), NATIVE_SILVER(CoreOres.Type.GRADED, Ore.NATIVE_SILVER), CASSITERITE(CoreOres.Type.GRADED, Ore.CASSITERITE), BISMUTHINITE(CoreOres.Type.GRADED, Ore.BISMUTHINITE), GARNIERITE(CoreOres.Type.GRADED, Ore.GARNIERITE), MALACHITE(CoreOres.Type.GRADED, Ore.MALACHITE), MAGNETITE(CoreOres.Type.GRADED, Ore.MAGNETITE), LIMONITE(CoreOres.Type.GRADED, Ore.LIMONITE), SPHALERITE(CoreOres.Type.GRADED, Ore.SPHALERITE), TETRAHEDRITE(CoreOres.Type.GRADED, Ore.TETRAHEDRITE), GYPSUM(CoreOres.Type.NORMAL, Ore.GYPSUM), CINNABAR(CoreOres.Type.NORMAL, Ore.CINNABAR), CRYOLITE(CoreOres.Type.NORMAL, Ore.CRYOLITE), BORAX(CoreOres.Type.NORMAL, Ore.BORAX), GRAPHITE(CoreOres.Type.NORMAL_WITH_POWDER, Ore.GRAPHITE), SALTPETER(CoreOres.Type.NORMAL_WITH_POWDER, Ore.SALTPETER), SULFUR(CoreOres.Type.NORMAL_WITH_POWDER, Ore.SULFUR), SYLVITE(CoreOres.Type.NORMAL_WITH_POWDER, Ore.SYLVITE), AMETHYST(CoreOres.Type.GEM, Ore.AMETHYST), DIAMOND(CoreOres.Type.GEM, Ore.DIAMOND), EMERALD(CoreOres.Type.GEM, Ore.EMERALD), LAPIS_LAZULI(CoreOres.Type.GEM, Ore.LAPIS_LAZULI), OPAL(CoreOres.Type.GEM, Ore.OPAL), PYRITE(CoreOres.Type.GEM, Ore.PYRITE), RUBY(CoreOres.Type.GEM, Ore.RUBY), SAPPHIRE(CoreOres.Type.GEM, Ore.SAPPHIRE), TOPAZ(CoreOres.Type.GEM, Ore.TOPAZ), BITUMINOUS_COAL(CoreOres.Type.ITEM_ONLY, Ore.BITUMINOUS_COAL), LIGNITE(CoreOres.Type.ITEM_ONLY, Ore.LIGNITE), HALITE(CoreOres.Type.ITEM_ONLY, Ore.HALITE);
+    NATIVE_COPPER(CoreOres.Type.GRADED, Ore.NATIVE_COPPER),
+    NATIVE_GOLD(CoreOres.Type.GRADED, Ore.NATIVE_GOLD),
+    HEMATITE(CoreOres.Type.GRADED, Ore.HEMATITE),
+    NATIVE_SILVER(CoreOres.Type.GRADED, Ore.NATIVE_SILVER),
+    CASSITERITE(CoreOres.Type.GRADED, Ore.CASSITERITE),
+    BISMUTHINITE(CoreOres.Type.GRADED, Ore.BISMUTHINITE),
+    GARNIERITE(CoreOres.Type.GRADED, Ore.GARNIERITE),
+    MALACHITE(CoreOres.Type.GRADED, Ore.MALACHITE),
+    MAGNETITE(CoreOres.Type.GRADED, Ore.MAGNETITE),
+    LIMONITE(CoreOres.Type.GRADED, Ore.LIMONITE),
+    SPHALERITE(CoreOres.Type.GRADED, Ore.SPHALERITE),
+    TETRAHEDRITE(CoreOres.Type.GRADED, Ore.TETRAHEDRITE),
+    GYPSUM(CoreOres.Type.NORMAL, Ore.GYPSUM),
+    CINNABAR(CoreOres.Type.NORMAL, Ore.CINNABAR),
+    CRYOLITE(CoreOres.Type.NORMAL, Ore.CRYOLITE),
+    BORAX(CoreOres.Type.NORMAL, Ore.BORAX),
+    GRAPHITE(CoreOres.Type.NORMAL_WITH_POWDER, Ore.GRAPHITE),
+    SALTPETER(CoreOres.Type.NORMAL_WITH_POWDER, Ore.SALTPETER),
+    SULFUR(CoreOres.Type.NORMAL_WITH_POWDER, Ore.SULFUR),
+    SYLVITE(CoreOres.Type.NORMAL_WITH_POWDER, Ore.SYLVITE),
+    AMETHYST(CoreOres.Type.GEM, Ore.AMETHYST),
+    DIAMOND(CoreOres.Type.GEM, Ore.DIAMOND),
+    EMERALD(CoreOres.Type.GEM, Ore.EMERALD),
+    LAPIS_LAZULI(CoreOres.Type.GEM, Ore.LAPIS_LAZULI),
+    OPAL(CoreOres.Type.GEM, Ore.OPAL),
+    PYRITE(CoreOres.Type.GEM, Ore.PYRITE),
+    RUBY(CoreOres.Type.GEM, Ore.RUBY),
+    SAPPHIRE(CoreOres.Type.GEM, Ore.SAPPHIRE),
+    TOPAZ(CoreOres.Type.GEM, Ore.TOPAZ),
+    BITUMINOUS_COAL(CoreOres.Type.ITEM_ONLY, Ore.BITUMINOUS_COAL),
+    LIGNITE(CoreOres.Type.ITEM_ONLY, Ore.LIGNITE),
+    HALITE(CoreOres.Type.ITEM_ONLY, Ore.HALITE);
 
     private final Ore TFCOre;
     private final CoreOres.Type type;
     private final String serializedName;
 
-    TFCOres(CoreOres.Type type, Ore TFCOre)
-    {
+    TFCOres(CoreOres.Type type, Ore TFCOre) {
         this.TFCOre = TFCOre;
         this.type = type;
         this.serializedName = name().toLowerCase(Locale.ROOT);
@@ -49,23 +78,17 @@ public enum TFCOres implements RegistryOre
     }
 
     @Override
-    public Block getOreBlock(RegistryRock rock, @Nullable CoreOres.Grade grade)
-    {
+    public Block getOreBlock(RegistryRock rock, @Nullable CoreOres.Grade grade) {
 
-        if (this.type == CoreOres.Type.ITEM_ONLY)
-        {
-            switch (this)
-            {
-                case LIGNITE ->
-                {
+        if (this.type == CoreOres.Type.ITEM_ONLY){
+            switch (this){
+                case LIGNITE -> {
                     return TFCBlocks.LIGNITE.get();
                 }
-                case BITUMINOUS_COAL ->
-                {
+                case BITUMINOUS_COAL -> {
                     return TFCBlocks.BITUMINOUS_COAL.get();
                 }
-                case HALITE ->
-                {
+                case HALITE -> {
                     return TFCBlocks.HALITE.get();
                 }
             }
@@ -73,28 +96,19 @@ public enum TFCOres implements RegistryOre
 
         assert rock instanceof Rock || rock instanceof CoreRocks;
 
-        if (rock instanceof Rock)
-        {
-            if (grade == null)
-            {
+        if (rock instanceof Rock){
+            if (grade == null){
                 return TFCBlocks.ORES.get(rock).get(this.TFCOre).get();
-            }
-            else
-            {
+            } else {
                 return TFCBlocks.GRADED_ORES.get(rock).get(this.TFCOre).get(CoreOres.getTFCgrade(grade)).get();
             }
         }
 
-        if (rock instanceof CoreRocks)
-        {
-            if (((CoreRocks) rock).hasOres())
-            {
-                if (grade == null)
-                {
+        if (rock instanceof CoreRocks){
+            if (((CoreRocks) rock).hasOres()){
+                if (grade == null){
                     return CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(this.TFCOre).get();
-                }
-                else
-                {
+                } else {
                     return CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(this.TFCOre).get(grade).get();
                 }
             }
@@ -104,8 +118,7 @@ public enum TFCOres implements RegistryOre
     }
 
     @Override
-    public String getSerializedName()
-    {
+    public String getSerializedName() {
         return serializedName;
     }
 }

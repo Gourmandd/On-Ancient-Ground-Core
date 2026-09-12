@@ -13,62 +13,61 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 
-public class BricksEntry extends EntryProvider
-{
+public class BricksEntry extends EntryProvider {
 
-    public BricksEntry(CategoryProviderBase parent)
-    {
+    public BricksEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain bricks.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(Blocks.BRICKS)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(Blocks.BRICKS))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Bricks** are made in threes, and need to be fired. You need mortar to craft the brick block.
-                \s""");
+                **Bricks** are made in threes, and need to be fired. You need mortar to craft the brick block.
+               \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_brick")));
+        this.page("page2", () -> BookKnappingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_brick"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 Bricks being knapped out of **Clay**.
-                \s""");
+                Bricks being knapped out of **Clay**.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Bricks";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Bricks";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(Items.BRICK);
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "brick";
     }
 }

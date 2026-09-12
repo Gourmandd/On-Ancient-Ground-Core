@@ -13,29 +13,34 @@ import net.gourmand.core.datagen.book.guide.entries.devices.KegEntry;
 import net.gourmand.core.datagen.book.guide.entries.devices.StompingBarrelEntry;
 import net.gourmand.core.datagen.book.guide.entries.devices.WineShelfEntry;
 import net.gourmand.core.datagen.book.guide.entries.equipment.SawEntry;
-import net.gourmand.core.datagen.book.guide.entries.homesteading.FoodShelfEntry;
-import net.gourmand.core.datagen.book.guide.entries.homesteading.HangerEntry;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.*;
 import net.gourmand.core.datagen.book.guide.entries.mining.SluiceEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.SupportEntry;
 import net.minecraft.resources.ResourceLocation;
 
-public class CarpentryCategory extends CategoryProvider
-{
+public class CarpentryCategory extends CategoryProvider {
 
-    public CarpentryCategory(ModonomiconProviderBase parent)
-    {
+    public CarpentryCategory(ModonomiconProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap()
-    {
-        return new String[]{"_________", "__ngo_ksv", "__mfh_jru", "d_lep_iqt", "_________", "a__b___c_", "_________", "__BzA_xwy", "__CD_____"};
+    protected String[] generateEntryMap() {
+        return new String[]{
+                "_________",
+                "__ngo_ksv",
+                "__mfh_jru",
+                "d_lep_iqt",
+                "_________",
+                "a__b___c_",
+                "_________",
+                "__BzA_xwy",
+                "__CD_____"
+        };
     }
 
     @Override
-    protected void generateEntries()
-    {
+    protected void generateEntries() {
         // add misc
         // barrel rack
         // ladder
@@ -87,26 +92,22 @@ public class CarpentryCategory extends CategoryProvider
     }
 
     @Override
-    protected String categoryName()
-    {
+    protected String categoryName() {
         return "Carpentry";
     }
 
     @Override
-    protected BookIconModel categoryIcon()
-    {
+    protected BookIconModel categoryIcon() {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.BRONZE).get(Metal.ItemType.SAW));
     }
 
     @Override
-    public String categoryId()
-    {
+    public String categoryId() {
         return "carpentry";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category)
-    {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

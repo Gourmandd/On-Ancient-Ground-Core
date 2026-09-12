@@ -13,34 +13,21 @@ import vectorwing.farmersdelight.integration.emi.EMIPlugin;
 import java.util.Optional;
 
 @Mixin(value = EMIPlugin.class, remap = false)
-public class FDEMIPluginMixin
-{
+public class FDEMIPluginMixin {
     @WrapOperation(method = "register", at = @At(value = "INVOKE", target = "Ldev/emi/emi/api/EmiRegistry;addRecipe(Ldev/emi/emi/api/recipe/EmiRecipe;)V"))
-    private void modpack$addEMIRecipe(EmiRegistry instance, EmiRecipe emiRecipe, Operation<Void> original)
-    {
+    private void modpack$addEMIRecipe(EmiRegistry instance, EmiRecipe emiRecipe, Operation<Void> original){
         original.call(instance, emiRecipe);
-        if (emiRecipe instanceof CookingPotEMIRecipeExtraData recipeExtraData)
-        {
-            Optional.ofNullable(emiRecipe.getId()).ifPresent(id ->
-            {
-                instance.getRecipeManager().byKey(id).ifPresent(recipe ->
-                {
-                    if (recipe.value() instanceof GatedCookingRecipe gatedRecipe)
-                    {
-                        if (gatedRecipe.getRequiredAdvancement().isPresent() && gatedRecipe.getRevealSecretAdvancement().isPresent())
-                        {
+        if(emiRecipe instanceof CookingPotEMIRecipeExtraData recipeExtraData){
+            Optional.ofNullable(emiRecipe.getId()).ifPresent(id -> {
+                instance.getRecipeManager().byKey(id).ifPresent(recipe -> {
+                    if(recipe.value() instanceof GatedCookingRecipe gatedRecipe){
+                        if (gatedRecipe.getRequiredAdvancement().isPresent() && gatedRecipe.getRevealSecretAdvancement().isPresent()){
                             recipeExtraData.modpack$setAdvancements(gatedRecipe.getRequiredAdvancement().get(), gatedRecipe.getRevealSecretAdvancement().get());
+                        } else if (gatedRecipe.getRequiredAdvancement().isPresent()) {
+                            recipeExtraData.modpack$setAdvancements(gatedRecipe.getRequiredAdvancement().get(), null);
+                        } else if (gatedRecipe.getRevealSecretAdvancement().isPresent()) {
+                            recipeExtraData.modpack$setAdvancements(null, gatedRecipe.getRevealSecretAdvancement().get());
                         }
-                        else
-                            if (gatedRecipe.getRequiredAdvancement().isPresent())
-                            {
-                                recipeExtraData.modpack$setAdvancements(gatedRecipe.getRequiredAdvancement().get(), null);
-                            }
-                            else
-                                if (gatedRecipe.getRevealSecretAdvancement().isPresent())
-                                {
-                                    recipeExtraData.modpack$setAdvancements(null, gatedRecipe.getRevealSecretAdvancement().get());
-                                }
                     }
                 });
             });

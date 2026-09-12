@@ -12,62 +12,61 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class FlowerPotEntry extends EntryProvider
-{
+public class FlowerPotEntry extends EntryProvider {
 
-    public FlowerPotEntry(CategoryProviderBase parent)
-    {
+    public FlowerPotEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain flower pots.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(Items.FLOWER_POT)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(Items.FLOWER_POT))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Flower Pots** can hold flowers in them for decorative purposes.
-                \s""");
+                **Flower Pots** can hold flowers in them for decorative purposes.
+               \s""");
 
         // page 2: knapping recipe.
-        this.page("page2", () -> BookKnappingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_flower_pot")));
+        this.page("page2", () -> BookKnappingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "knapping/ceramic/unfired_flower_pot"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 A flower pot being knapped out of **Clay**.
-                \s""");
+                A flower pot being knapped out of **Clay**.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Flower Pots";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Flower Pots";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(Items.FLOWER_POT);
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "flower_pot";
     }
 }

@@ -8,23 +8,21 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.minecraft.resources.ResourceLocation;
 
-public class AgricultureCategory extends CategoryProvider
-{
+public class AgricultureCategory extends CategoryProvider {
 
-    public AgricultureCategory(ModonomiconProviderBase parent)
-    {
+    public AgricultureCategory(ModonomiconProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap()
-    {
-        return new String[]{""};
+    protected String[] generateEntryMap() {
+        return new String[]{
+            ""
+        };
     }
 
     @Override
-    protected void generateEntries()
-    {
+    protected void generateEntries() {
         // add composter (same as homesteading)
         // explain crops + crop list
         // fruit tree list
@@ -46,26 +44,22 @@ public class AgricultureCategory extends CategoryProvider
     }
 
     @Override
-    protected String categoryName()
-    {
+    protected String categoryName() {
         return "Homesteading";
     }
 
     @Override
-    protected BookIconModel categoryIcon()
-    {
+    protected BookIconModel categoryIcon() {
         return BookIconModel.create(TFCItems.JUTE_NET);
     }
 
     @Override
-    public String categoryId()
-    {
+    public String categoryId() {
         return "homesteading";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category)
-    {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

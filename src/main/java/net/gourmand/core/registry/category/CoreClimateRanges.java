@@ -9,8 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.Locale;
 import java.util.Map;
 
-public class CoreClimateRanges
-{
+public class CoreClimateRanges {
 
     public static final Map<CoreCrops, DataManager.Reference<ClimateRange>> CROPS = Helpers.mapOf(CoreCrops.class, crop -> register("crop/" + crop.getSerializedName()));
 

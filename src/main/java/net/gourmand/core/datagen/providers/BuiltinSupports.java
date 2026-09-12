@@ -1,15 +1,16 @@
 package net.gourmand.core.datagen.providers;
 
-import net.dries007.tfc.common.blocks.wood.Wood;
-import net.dries007.tfc.common.recipes.ingredients.BlockIngredient;
-import net.dries007.tfc.util.data.Support;
+import java.util.Arrays;
+import java.util.concurrent.CompletableFuture;
+
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.SpectrumWood;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 
-import java.util.Arrays;
-import java.util.concurrent.CompletableFuture;
+import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.common.recipes.ingredients.BlockIngredient;
+import net.dries007.tfc.util.data.Support;
 
 public class BuiltinSupports extends DataManagerProvider<Support>
 {
@@ -21,6 +22,10 @@ public class BuiltinSupports extends DataManagerProvider<Support>
     @Override
     protected void addData(HolderLookup.Provider provider)
     {
-        add("deeper_down_horizontal_support_beam", new Support(BlockIngredient.of(Arrays.stream(SpectrumWood.values()).map(wood -> CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get())), 2, 2, 4));
+        add("deeper_down_horizontal_support_beam", new Support(BlockIngredient.of(
+                Arrays.stream(SpectrumWood.values()).map(wood ->
+                        CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get())),
+                2, 2, 4
+        ));
     }
 }

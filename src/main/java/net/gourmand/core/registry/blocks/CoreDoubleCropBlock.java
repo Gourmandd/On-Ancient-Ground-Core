@@ -15,8 +15,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import java.util.function.Supplier;
 
-public abstract class CoreDoubleCropBlock extends DoubleCropBlock
-{
+public abstract class CoreDoubleCropBlock extends DoubleCropBlock {
 
     public static final EnumProperty<Part> PART = TFCBlockStateProperties.DOUBLE_CROP_PART;
 

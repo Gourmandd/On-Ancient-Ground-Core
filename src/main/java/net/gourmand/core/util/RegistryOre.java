@@ -6,8 +6,7 @@ import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.Nullable;
 
-public interface RegistryOre extends StringRepresentable
-{
+public interface RegistryOre extends StringRepresentable {
 
     boolean isGem();
 

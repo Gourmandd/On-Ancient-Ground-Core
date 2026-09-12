@@ -36,90 +36,203 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public class CoreBlocks
-{
+public class CoreBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AncientGroundCore.MOD_ID);
 
-    public static final Map<CoreMetals.MetalType, Map<Metal.BlockType, DeferredHolder<Block, Block>>> METALS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> Helpers.mapOf(Metal.BlockType.class, type -> type.has(metal.getLikeMetal()), type -> register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))));
+    public static final Map<CoreMetals.MetalType, Map<Metal.BlockType, DeferredHolder<Block, Block>>> METALS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
+            Helpers.mapOf(Metal.BlockType.class, type -> type.has(metal.getLikeMetal()), type ->
+                    register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
+            )
+    );
 
-    public static final Map<CoreCrops, DeferredHolder<Block, Block>> CROPS = Helpers.mapOf(CoreCrops.class, crop -> registerNoItem("crop/" + crop.name(), crop::create));
+    public static final Map<CoreCrops, DeferredHolder<Block, Block> > CROPS = Helpers.mapOf(CoreCrops.class, crop ->
+            registerNoItem("crop/" + crop.name(),  crop::create)
+    );
 
-    public static final Map<CoreCrops, DeferredHolder<Block, Block>> DEAD_CROPS = Helpers.mapOf(CoreCrops.class, crop -> registerNoItem("dead_crop/" + crop.name(), crop::createDead));
+    public static final Map<CoreCrops, DeferredHolder<Block, Block>> DEAD_CROPS = Helpers.mapOf(CoreCrops.class, crop ->
+            registerNoItem("dead_crop/" + crop.name(), crop::createDead)
+    );
 
-    public static final Map<CoreCrops, DeferredHolder<Block, Block>> WILD_CROPS = Helpers.mapOf(CoreCrops.class, crop -> register("wild_crop/" + crop.name(), crop::createWild));
+    public static final Map<CoreCrops, DeferredHolder<Block, Block>> WILD_CROPS = Helpers.mapOf(CoreCrops.class, crop ->
+            register("wild_crop/" + crop.name(), crop::createWild)
+    );
 
-    public static final Map<CoreStationaryBushes, DeferredHolder<Block, Block>> STATIONARY_BUSHES = Helpers.mapOf(CoreStationaryBushes.class, bush -> register("plant/" + bush.name() + "_bush", bush::create, bush::createItem));
+    public static final Map<CoreStationaryBushes, DeferredHolder<Block, Block>> STATIONARY_BUSHES = Helpers.mapOf(CoreStationaryBushes.class, bush ->
+            register("plant/" + bush.name() + "_bush", bush::create, bush::createItem)
+    );
 
-    public static final Map<CoreSpreadingBushes, DeferredHolder<Block, Block>> SPREADING_CANES = Helpers.mapOf(CoreSpreadingBushes.class, bush -> registerNoItem("plant/" + bush.name() + "_bush_cane", bush::createCane));
+    public static final Map<CoreSpreadingBushes, DeferredHolder<Block, Block>> SPREADING_CANES = Helpers.mapOf(CoreSpreadingBushes.class, bush ->
+            registerNoItem("plant/" + bush.name() + "_bush_cane", bush::createCane)
+    );
 
-    public static final Map<CoreSpreadingBushes, DeferredHolder<Block, Block>> SPREADING_BUSHES = Helpers.mapOf(CoreSpreadingBushes.class, bush -> register("plant/" + bush.name() + "_bush", bush::createBush, bush::createItem));
+    public static final Map<CoreSpreadingBushes, DeferredHolder<Block, Block>> SPREADING_BUSHES = Helpers.mapOf(CoreSpreadingBushes.class, bush ->
+            register("plant/" + bush.name() + "_bush", bush::createBush, bush::createItem)
+    );
 
-    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_LEAVES = Helpers.mapOf(CoreFruitTrees.class, tree -> register("plant/" + tree.name() + "_leaves", tree::createLeaves));
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_LEAVES = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            register("plant/" + tree.name() + "_leaves", tree::createLeaves)
+    );
 
-    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_BRANCHES = Helpers.mapOf(CoreFruitTrees.class, tree -> registerNoItem("plant/" + tree.name() + "_branch", tree::createBranch));
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_BRANCHES = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            registerNoItem("plant/" + tree.name() + "_branch", tree::createBranch)
+    );
 
-    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_GROWING_BRANCHES = Helpers.mapOf(CoreFruitTrees.class, tree -> registerNoItem("plant/" + tree.name() + "_growing_branch", tree::createGrowingBranch));
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_GROWING_BRANCHES = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            registerNoItem("plant/" + tree.name() + "_growing_branch", tree::createGrowingBranch)
+    );
 
-    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_SAPLINGS = Helpers.mapOf(CoreFruitTrees.class, tree -> register("plant/" + tree.name() + "_sapling", tree::createSapling, tree::createSaplingItem));
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_SAPLINGS = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            register("plant/" + tree.name() + "_sapling", tree::createSapling, tree::createSaplingItem)
+    );
 
-    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_POTTED_SAPLINGS = Helpers.mapOf(CoreFruitTrees.class, tree -> registerNoItem("plant/potted/" + tree.name() + "_sapling", tree::createPottedSapling));
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_POTTED_SAPLINGS = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            registerNoItem("plant/potted/" + tree.name() + "_sapling", tree::createPottedSapling)
+    );
 
-    public static final Map<CoreRocks, Map<Rock.BlockType, DeferredHolder<Block, Block>>> ROCK_BLOCKS = Helpers.mapOf(CoreRocks.class, rock -> Helpers.mapOf(Rock.BlockType.class, rock::hasVariant, type -> register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock), rock.createItemProperties())));
+    public static final Map<CoreRocks, Map<Rock.BlockType, DeferredHolder<Block, Block>>> ROCK_BLOCKS = Helpers.mapOf(CoreRocks.class, rock ->
+            Helpers.mapOf(Rock.BlockType.class, rock::hasVariant, type ->
+                    register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock), rock.createItemProperties())
+            )
+    );
 
-    public static final Map<CoreRocks, Map<Rock.BlockType, CoreDecorationBlockHolder>> ROCK_DECORATIONS = Helpers.mapOf(CoreRocks.class, rock -> Helpers.mapOf(Rock.BlockType.class, type -> (type.hasVariants() || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_BRICKS) && rock.hasVariant(type), type -> registerDecorations("rock/" + type.name() + "/" + rock.name(), () -> type.createSlab(rock), () -> type.createStairs(rock), () -> type.createWall(rock), rock.createItemProperties())));
+    public static final Map<CoreRocks, Map<Rock.BlockType, CoreDecorationBlockHolder>> ROCK_DECORATIONS = Helpers.mapOf(CoreRocks.class, rock ->
+            Helpers.mapOf(Rock.BlockType.class, type -> (type.hasVariants() || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_BRICKS) && rock.hasVariant(type), type -> registerDecorations(
+                    "rock/" + type.name() + "/" + rock.name(),
+                    () -> type.createSlab(rock),
+                    () -> type.createStairs(rock),
+                    () -> type.createWall(rock),
+                    rock.createItemProperties()
+            ))
+    );
 
-    public static final Map<CoreOres, DeferredHolder<Block, Block>> BASIC_ORES = Helpers.mapOf(CoreOres.class, ore -> (!ore.hasBlock()), ore -> register(ore.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(Rock.ANDESITE.category().hardness(6.5f), 10).requiresCorrectToolForDrops())));
+    public static final Map<CoreOres, DeferredHolder<Block, Block>> BASIC_ORES = Helpers.mapOf(CoreOres.class, ore -> (!ore.hasBlock()), ore ->
+            register(ore.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(Rock.ANDESITE.category().hardness(6.5f), 10).requiresCorrectToolForDrops()))
+    );
 
-    public static final Map<Rock, Map<CoreOres, DeferredHolder<Block, Block>>> ORES = Helpers.mapOf(Rock.class, rock -> Helpers.mapOf(CoreOres.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore -> register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))));
+    public static final Map<Rock, Map<CoreOres, DeferredHolder<Block, Block>>> ORES = Helpers.mapOf(Rock.class, rock ->
+            Helpers.mapOf(CoreOres.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
+                    register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+            )
+    );
 
-    public static final Map<Rock, Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> GRADED_ORES = Helpers.mapOf(Rock.class, rock -> Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore -> Helpers.mapOf(CoreOres.Grade.class, grade -> register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock)))));
+    public static final Map<Rock, Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> GRADED_ORES = Helpers.mapOf(Rock.class, rock ->
+            Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore ->
+                    Helpers.mapOf(CoreOres.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+                    )
+            )
+    );
 
-    public static final Map<CoreRocks, Map<CoreOres, DeferredHolder<Block, Block>>> CUSTOM_ROCK_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock -> Helpers.mapOf(CoreOres.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore -> register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))));
+    public static final Map<CoreRocks, Map<CoreOres, DeferredHolder<Block, Block>>> CUSTOM_ROCK_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+            Helpers.mapOf(CoreOres.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
+                    register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+            )
+    );
 
     // Even if no ores are registered as of now, it adds the opportunity to easily add them.
-    public static final Map<CoreRocks, Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock -> Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore -> Helpers.mapOf(CoreOres.Grade.class, grade -> register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock)))));
+    public static final Map<CoreRocks, Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+            Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore ->
+                    Helpers.mapOf(CoreOres.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+                    )
+            )
+    );
 
-    public static final Map<CoreRocks, Map<Ore, DeferredHolder<Block, Block>>> CUSTOM_ROCK_TFC_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock -> Helpers.mapOf(Ore.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore -> register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))));
+    public static final Map<CoreRocks, Map<Ore, DeferredHolder<Block, Block>>> CUSTOM_ROCK_TFC_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+            Helpers.mapOf(Ore.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
+                    register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+            )
+    );
 
-    public static final Map<CoreRocks, Map<Ore, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_TFC_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock -> Helpers.mapOf(Ore.class, Ore::isGraded, ore -> Helpers.mapOf(CoreOres.Grade.class, grade -> register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock)))));
+    public static final Map<CoreRocks, Map<Ore, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_TFC_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+            Helpers.mapOf(Ore.class, Ore::isGraded, ore ->
+                    Helpers.mapOf(CoreOres.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+                    )
+            )
+    );
 
-    public static final Map<CoreOres, DeferredHolder<Block, Block>> SMALL_ORES = Helpers.mapOf(CoreOres.class, CoreOres::isGraded, type -> register(("ore/small_" + type.name()), () -> GroundcoverBlock.looseOre(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.05F, 0.0F).sound(SoundType.NETHER_ORE).noCollission().pushReaction(PushReaction.DESTROY))));
+    public static final Map<CoreOres, DeferredHolder<Block, Block>> SMALL_ORES = Helpers.mapOf(CoreOres.class, CoreOres::isGraded, type ->
+            register(("ore/small_" + type.name()), () -> GroundcoverBlock.looseOre(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.05F, 0.0F).sound(SoundType.NETHER_ORE).noCollission().pushReaction(PushReaction.DESTROY)))
+    );
 
-    public static final Map<CoreRocks, Map<OreDeposit, DeferredHolder<Block, Block>>> ORE_DEPOSITS = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock -> Helpers.mapOf(OreDeposit.class, ore -> register("deposit/" + ore.name() + "/" + rock.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.GRAVEL).strength(rock.category().hardness(2.0f))))));
+    public static final Map<CoreRocks, Map<OreDeposit, DeferredHolder<Block, Block>>> ORE_DEPOSITS = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+            Helpers.mapOf(OreDeposit.class, ore ->
+                    register("deposit/" + ore.name() + "/" + rock.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.GRAVEL).strength(rock.category().hardness(2.0f))))
+            )
+    );
 
-    public static final Map<CoreRocks, DeferredHolder<Block, Block>> MAGMA_BLOCKS = Helpers.mapOf(CoreRocks.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock -> register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(ExtendedProperties.of().pathType(PathType.LAVA).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(CoreBlocks::always)), b -> new BlockItem(b, rock.createItemProperties())));
+    public static final Map<CoreRocks, DeferredHolder<Block, Block>> MAGMA_BLOCKS = Helpers.mapOf(CoreRocks.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
+            register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(ExtendedProperties.of().pathType(PathType.LAVA).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(CoreBlocks::always)), b -> new BlockItem(b, rock.createItemProperties()))
+    );
 
-    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLORED_MOLTEN_GLASS = Helpers.mapOf(DyeColor.class, color -> register("molten_glass/" + color.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS))));
+    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLORED_MOLTEN_GLASS = Helpers.mapOf(DyeColor.class, color ->
+            register("molten_glass/" + color.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)))
+    );
 
-    public static final DeferredHolder<Block, Block> CLEAR_MOLTEN_GLASS = register("molten_glass/clear", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
+    public static final DeferredHolder<Block, Block> CLEAR_MOLTEN_GLASS =  register("molten_glass/clear", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
 
 
-    public static final Map<SpectrumWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(SpectrumWood.class, wood -> Helpers.mapOf(Wood.BlockType.class, wood::hasBlockType, type -> register(type.nameFor(wood), SpectrumWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))));
+    public static final Map<SpectrumWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(SpectrumWood.class, wood ->
+            Helpers.mapOf(Wood.BlockType.class, wood::hasBlockType, type ->
+                    register(type.nameFor(wood), SpectrumWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))
+            )
+    );
 
-    public static final Map<Rock, DeferredHolder<Block, Block>> MORTARED_TFC_COBBLE = Helpers.mapOf(Rock.class, rock -> register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE))));
+    public static final Map<Rock, DeferredHolder<Block, Block>> MORTARED_TFC_COBBLE = Helpers.mapOf(Rock.class, rock ->
+            register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)))
+    );
 
-    public static final Map<CoreRocks, DeferredHolder<Block, Block>> MORTARED_CUSTOM_COBBLE = Helpers.mapOf(CoreRocks.class, rock -> register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE))));
+    public static final Map<CoreRocks, DeferredHolder<Block, Block>> MORTARED_CUSTOM_COBBLE = Helpers.mapOf(CoreRocks.class, rock ->
+            register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)))
+    );
 
-    public static final Map<CoreClay, Map<CoreClay.BlockType, DeferredHolder<Block, Block>>> CERAMIC_BLOCKS = Helpers.mapOf(CoreClay.class, clay -> Helpers.mapOf(CoreClay.BlockType.class, type -> type.hasClayType(clay), type -> register("ceramic/" + type.getSerializedName() + "/" + clay.getSerializedName(), () -> type.getBlock(clay), type.getItemFactory())));
+    public static final Map<CoreClay, Map<CoreClay.BlockType, DeferredHolder<Block, Block>>> CERAMIC_BLOCKS = Helpers.mapOf(CoreClay.class, clay ->
+            Helpers.mapOf(CoreClay.BlockType.class, type -> type.hasClayType(clay), type ->
+                    register("ceramic/" + type.getSerializedName() + "/" + clay.getSerializedName(), () -> type.getBlock(clay), type.getItemFactory())
+            )
+    );
 
-    public static final Map<CoreClay, Map<CoreClay.BlockType, CoreDecorationBlockHolder>> CERAMIC_DECORATION_BLOCKS = Helpers.mapOf(CoreClay.class, clay -> Helpers.mapOf(CoreClay.BlockType.class, type -> type.hasClayType(clay) && type.getType() == CoreClay.BlockPartType.BLOCK_SET, type -> registerDecorations("ceramic/" + type.getSerializedName() + "/" + clay.name(), () -> type.createSlab(clay), () -> type.createStairs(clay), () -> type.createWall(clay), new Item.Properties())));
+    public static final Map<CoreClay, Map<CoreClay.BlockType, CoreDecorationBlockHolder>> CERAMIC_DECORATION_BLOCKS = Helpers.mapOf(CoreClay.class, clay ->
+            Helpers.mapOf(CoreClay.BlockType.class, type -> type.hasClayType(clay) && type.getType() == CoreClay.BlockPartType.BLOCK_SET, type ->
+                    registerDecorations(
+                            "ceramic/" + type.getSerializedName() + "/" + clay.name(),
+                            () -> type.createSlab(clay),
+                            () -> type.createStairs(clay),
+                            () -> type.createWall(clay),
+                            new Item.Properties()
+                    )
+            )
+    );
 
-    public static final Map<CoreMetals.MetalType, DeferredHolder<Block, LiquidBlock>> METAL_FLUIDS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal -> registerNoItem("fluid/metal/" + metal.name(), () -> new LiquidBlock(CoreFluids.METALS.get(metal).getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable())));
+    public static final Map<CoreMetals.MetalType, DeferredHolder<Block, LiquidBlock>> METAL_FLUIDS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> !metal.hasOtherFluid(), metal ->
+            registerNoItem("fluid/metal/" + metal.name(), () -> new LiquidBlock(CoreFluids.METALS.get(metal).getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()))
+    );
 
-    public static final Map<DyeColor, DeferredHolder<Block, LiquidBlock>> COLORED_GLASS_FLUIDS = Helpers.mapOf(DyeColor.class, color -> registerNoItem("fluid/glass/" + color.getSerializedName(), () -> new LiquidBlock(CoreFluids.COLORED_GLASS.get(color).getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable())));
+    public static final Map<DyeColor, DeferredHolder<Block, LiquidBlock>> COLORED_GLASS_FLUIDS = Helpers.mapOf(DyeColor.class, color ->
+            registerNoItem("fluid/glass/" + color.getSerializedName(), () -> new LiquidBlock(CoreFluids.COLORED_GLASS.get(color).getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()))
+    );
 
     public static final DeferredHolder<Block, LiquidBlock> CLEAR_GLASS_FLUID = registerNoItem("fluid/glass/clear", () -> new LiquidBlock(CoreFluids.CLEAR_GLASS.getSource(), BlockBehaviour.Properties.ofFullCopy(Blocks.LAVA).noLootTable()));
 
     public static final DeferredHolder<Block, Block> PRISMATIC_ICE = register("prismatic_ice", () -> new MeltableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE).mapColor(MapColor.COLOR_PINK), SpectrumBlocks.LIQUID_CRYSTAL.get().defaultBlockState()));
 
-    public static final Map<CoreGemstones, Map<CoreGemstones.GemstoneBlocks, DeferredHolder<Block, Block>>> GEMSTONE_BLOCKS = Helpers.mapOf(CoreGemstones.class, gem -> Helpers.mapOf(CoreGemstones.GemstoneBlocks.class, blockType -> register("gemstone/" + blockType.getSerializedName() + "/" + gem.getSerializedName(), () -> blockType.create(gem))));
+    public static final Map<CoreGemstones, Map<CoreGemstones.GemstoneBlocks, DeferredHolder<Block, Block>>> GEMSTONE_BLOCKS = Helpers.mapOf(CoreGemstones.class, gem ->
+            Helpers.mapOf(CoreGemstones.GemstoneBlocks.class, blockType ->
+                    register("gemstone/" + blockType.getSerializedName() + "/" + gem.getSerializedName(), () -> blockType.create(gem))
+            )
+    );
 
-    public static final DeferredHolder<Block, Block> CLEAR_LEAD_GLASS = register("lead_glass/clear", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
-    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLOURED_LEAD_GLASS = Helpers.mapOf(DyeColor.class, color -> register("lead_glass/" + color.getSerializedName(), () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).requiresCorrectToolForDrops().strength(4.5f))));
+    public static final DeferredHolder<Block, Block> CLEAR_LEAD_GLASS = register("lead_glass/clear" , () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)));
+    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLOURED_LEAD_GLASS = Helpers.mapOf(DyeColor.class, color ->
+            register("lead_glass/" + color.getSerializedName(), () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).requiresCorrectToolForDrops().strength(4.5f)))
+    );
 
-    public static final DeferredHolder<Block, Block> CLEAR_LEAD_GLASS_PANE = register("lead_glass_pane/clear", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE)));
-    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLOURED_LEAD_GLASS_PANE = Helpers.mapOf(DyeColor.class, color -> register("lead_glass_pane/" + color.getSerializedName(), () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).requiresCorrectToolForDrops().strength(4.5f))));
+    public static final DeferredHolder<Block, Block> CLEAR_LEAD_GLASS_PANE = register("lead_glass_pane/clear" , () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE)));
+    public static final Map<DyeColor, DeferredHolder<Block, Block>> COLOURED_LEAD_GLASS_PANE = Helpers.mapOf(DyeColor.class, color ->
+            register("lead_glass_pane/" + color.getSerializedName(), () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).requiresCorrectToolForDrops().strength(4.5f)))
+    );
 
     /*
     public static final Map<CoreMetals.MetalType, Map<CoreMetals.BlockType, DeferredHolder<Block, Block>>> CORE_CUSTOM_METAL_BLOCKS = Helpers.mapOf(CoreMetals.MetalType.class, metal ->
@@ -135,19 +248,31 @@ public class CoreBlocks
     );
     */
 
-    public static final DeferredHolder<Block, CopperBulbBlock> LEAD_BULB_BLOCK = register("metal/bulb/lead", () -> new CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).mapColor(MapColor.COLOR_PURPLE)));
+    public static final DeferredHolder<Block, CopperBulbBlock> LEAD_BULB_BLOCK = register("metal/bulb/lead", () -> new  CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).mapColor(MapColor.COLOR_PURPLE)));
 
-    public static final Map<SpectrumWood, DeferredHolder<Block, Block>> SPECTRUM_WOOD_BOARDS = Helpers.mapOf(SpectrumWood.class, wood -> register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties())));
+    public static final Map<SpectrumWood, DeferredHolder<Block, Block>> SPECTRUM_WOOD_BOARDS = Helpers.mapOf(SpectrumWood.class, wood ->
+                    register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
 
-    public static final Map<Wood, DeferredHolder<Block, Block>> TFC_WOOD_BOARDS = Helpers.mapOf(Wood.class, wood -> register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties())));
+    public static final Map<Wood, DeferredHolder<Block, Block>> TFC_WOOD_BOARDS = Helpers.mapOf(Wood.class, wood ->
+            register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
 
-    public static final Map<AFCWood, DeferredHolder<Block, Block>> AFC_WOOD_BOARDS = Helpers.mapOf(AFCWood.class, wood -> register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties())));
+    public static final Map<AFCWood, DeferredHolder<Block, Block>> AFC_WOOD_BOARDS = Helpers.mapOf(AFCWood.class, wood ->
+            register("wood/boards/" + wood.getSerializedName(), Wood.BlockType.PLANKS.create(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
 
-    public static final Map<SpectrumWood, DeferredHolder<Block, Block>> SPECTRUM_WOOD_SHUTTERS = Helpers.mapOf(SpectrumWood.class, wood -> register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties())));
+    public static final Map<SpectrumWood, DeferredHolder<Block, Block>> SPECTRUM_WOOD_SHUTTERS = Helpers.mapOf(SpectrumWood.class, wood ->
+            register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
 
-    public static final Map<Wood, DeferredHolder<Block, Block>> TFC_WOOD_SHUTTERS = Helpers.mapOf(Wood.class, wood -> register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties())));
+    public static final Map<Wood, DeferredHolder<Block, Block>> TFC_WOOD_SHUTTERS = Helpers.mapOf(Wood.class, wood ->
+            register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
 
-    public static final Map<AFCWood, DeferredHolder<Block, Block>> AFC_WOOD_SHUTTERS = Helpers.mapOf(AFCWood.class, wood -> register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties())));
+    public static final Map<AFCWood, DeferredHolder<Block, Block>> AFC_WOOD_SHUTTERS = Helpers.mapOf(AFCWood.class, wood ->
+            register("wood/shutter/" + wood.getSerializedName(), SpectrumWood.createShutter(wood), Wood.BlockType.PLANKS.createBlockItem(wood, new Item.Properties()))
+    );
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {
@@ -156,7 +281,11 @@ public class CoreBlocks
 
     private static <T1 extends SlabBlock, T2 extends StairBlock, T3 extends WallBlock> CoreDecorationBlockHolder registerDecorations(String baseName, Supplier<T1> slab, Supplier<T2> stair, Supplier<T3> wall, Item.Properties properties)
     {
-        return new CoreDecorationBlockHolder(register(baseName + "_slab", slab, b -> new BlockItem(b, properties)), register(baseName + "_stairs", stair, b -> new BlockItem(b, properties)), register(baseName + "_wall", wall, b -> new BlockItem(b, properties)));
+        return new CoreDecorationBlockHolder(
+                register(baseName + "_slab", slab, b -> new BlockItem(b, properties)),
+                register(baseName + "_stairs", stair, b -> new BlockItem(b, properties)),
+                register(baseName + "_wall", wall, b -> new BlockItem(b, properties))
+        );
     }
 
     private static <T extends Block> DeferredHolder<Block, T> registerNoItem(String name, Supplier<T> blockSupplier)

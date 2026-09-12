@@ -15,20 +15,21 @@ import net.gourmand.core.modonomicon.datagen.BookStompingBarrelPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class StompingBarrelEntry extends EntryProvider
-{
+public class StompingBarrelEntry extends EntryProvider {
 
-    public StompingBarrelEntry(CategoryProviderBase parent)
-    {
+    public StompingBarrelEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain stomping barrel.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(FLTags.Items.STOMPING_BARRELS)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(FLTags.Items.STOMPING_BARRELS))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
@@ -42,57 +43,63 @@ public class StompingBarrelEntry extends EntryProvider
                 """);
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/wood/stomping_barrel/ash")));
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/wood/stomping_barrel/ash"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                The stomping barrel is made from lumber, and glue.
-                \s""");
+               The stomping barrel is made from lumber, and glue.
+               \s""");
 
         // page 3: recipe.
-        this.page("page3", () -> BookStompingBarrelPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/smashed_red_grapes")).withRecipeId2(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/smashed_white_grapes")));
+        this.page("page3", () -> BookStompingBarrelPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/smashed_red_grapes"))
+                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/smashed_white_grapes"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Red and white grapes can be stomped.
-                """);
+               Red and white grapes can be stomped.
+               """);
 
         // page 4: crafting recipe.
-        this.page("page4", () -> BookStompingBarrelPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/soybean_paste")).withRecipeId2(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/powder/charcoal")));
+        this.page("page4", () -> BookStompingBarrelPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/food/soybean_paste"))
+                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "stomping/powder/charcoal"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                Soybeans and charcoal can also be stomped.
-                \s""");
+               Soybeans and charcoal can also be stomped.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Stomping Barrel";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Stomping Barrels.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(FLBlocks.STOMPING_BARRELS.get(Wood.ASH));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "stomping_barrel";
     }
 }

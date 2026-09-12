@@ -52,9 +52,9 @@ import java.util.stream.Stream;
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_FLOW;
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_STILL;
 import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.*;
+import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.BARREL;
 
-public class ClientEventHandler
-{
+public class ClientEventHandler {
 
     public static void init(IEventBus modEventBus, ModContainer modContainer)
     {
@@ -67,42 +67,44 @@ public class ClientEventHandler
         modEventBus.addListener(ClientEventHandler::registerSpecialModels);
     }
 
-    private static void registerExtensions(RegisterClientExtensionsEvent event)
-    {
-        CoreFluids.METALS.forEach((metal, holder) ->
-        {
-            if (!metal.hasOtherFluid())
-            {
-                event.registerFluidType(new FluidRendererExtension(TFCFluids.ALPHA_MASK | metal.getColor(), MOLTEN_STILL, MOLTEN_FLOW, null, null), holder.getType());
+    private static void registerExtensions(RegisterClientExtensionsEvent event) {
+        CoreFluids.METALS.forEach((metal, holder) -> {
+            if (!metal.hasOtherFluid()){
+                event.registerFluidType(
+                        new FluidRendererExtension(TFCFluids.ALPHA_MASK | metal.getColor(), MOLTEN_STILL, MOLTEN_FLOW, null, null),
+                        holder.getType()
+                );
             }
         });
 
-        CoreFluids.COLORED_GLASS.forEach((color, holder) ->
-        {
-            event.registerFluidType(new FluidRendererExtension(TFCFluids.ALPHA_MASK | color.getTextureDiffuseColor(), MOLTEN_STILL, MOLTEN_FLOW, null, null), holder.getType());
+        CoreFluids.COLORED_GLASS.forEach((color, holder) -> {
+            event.registerFluidType(
+                    new FluidRendererExtension(TFCFluids.ALPHA_MASK | color.getTextureDiffuseColor(), MOLTEN_STILL, MOLTEN_FLOW, null, null),
+                    holder.getType()
+            );
         });
 
         // clear glass
-        event.registerFluidType(new FluidRendererExtension(TFCFluids.ALPHA_MASK | 0xD4FBFB, MOLTEN_STILL, MOLTEN_FLOW, null, null), CoreFluids.CLEAR_GLASS.getType());
+        event.registerFluidType(
+                new FluidRendererExtension(TFCFluids.ALPHA_MASK | 0xD4FBFB, MOLTEN_STILL, MOLTEN_FLOW, null, null),
+                CoreFluids.CLEAR_GLASS.getType()
+        );
     }
 
-    private static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)
-    {
+    private static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(CoreBlockEntities.LOOM.get(), ctx -> new LoomBlockEntityRenderer());
         event.registerBlockEntityRenderer(CoreBlockEntities.SLUICE.get(), ctx -> new SluiceBlockEntityRenderer());
         event.registerBlockEntityRenderer(CoreBlockEntities.TOOL_RACK.get(), ctx -> new ToolRackBlockEntityRenderer());
         event.registerBlockEntityRenderer(CoreBlockEntities.SHELF.get(), ctx -> new PlacedItemBlockEntityRenderer<>());
     }
 
-    public static void registerKeyBindings(RegisterKeyMappingsEvent event)
-    {
+    public static void registerKeyBindings(RegisterKeyMappingsEvent event) {
         event.register(CoreKeyBindings.OPEN_MODPACK_GUIDE);
         event.register(CoreKeyBindings.OPEN_TFC_GUIDE);
     }
 
     @SuppressWarnings("deprecation")
-    public static void clientSetup(FMLClientSetupEvent event)
-    {
+    public static void clientSetup(FMLClientSetupEvent event){
 
         final RenderType solid = RenderType.solid();
         final RenderType cutout = RenderType.cutout();
@@ -112,8 +114,7 @@ public class ClientEventHandler
 
         CoreBlocks.METALS.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
 
-        CoreBlocks.CROPS.values().forEach(reg ->
-        {
+        CoreBlocks.CROPS.values().forEach(reg -> {
             if (reg.get() instanceof IGhostBlockHandler)
             {
                 ItemBlockRenderTypes.setRenderLayer(reg.get(), ghostBlock);
@@ -144,17 +145,13 @@ public class ClientEventHandler
         CoreBlocks.CUSTOM_ROCK_TFC_ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
         CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
 
-        CoreBlocks.DEEPER_DOWN_WOODS.values().forEach(map ->
-        {
+        CoreBlocks.DEEPER_DOWN_WOODS.values().forEach(map -> {
             Stream.of(SCRIBING_TABLE, SEWING_TABLE).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), cutout));
         });
 
-        for (CoreRocks rock : CoreRocks.values())
-        {
-            for (Rock.BlockType type : Rock.BlockType.values())
-            {
-                if (makeMossyVariantCutout(type, rock))
-                {
+        for (CoreRocks rock : CoreRocks.values()){
+            for (Rock.BlockType type : Rock.BlockType.values()){
+                if (makeMossyVariantCutout(type, rock)){
                     ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), cutoutMipped);
                     ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().get(), cutoutMipped);
                     ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().get(), cutoutMipped);
@@ -163,23 +160,17 @@ public class ClientEventHandler
             }
         }
 
-        Stream.of(CoreRocks.values()).forEach(rock ->
-        {
-            if (rock.hasOres())
-            {
-                Stream.of(OreDeposit.values()).forEach(ore ->
-                {
+        Stream.of(CoreRocks.values()).forEach(rock -> {
+            if (rock.hasOres()){
+                Stream.of(OreDeposit.values()).forEach(ore -> {
                     ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get(), cutoutMipped);
                 });
             }
         });
 
-        Stream.of(CoreGemstones.values()).forEach(gem ->
-        {
-            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType ->
-            {
-                if (blockType.isCluster())
-                {
+        Stream.of(CoreGemstones.values()).forEach(gem -> {
+            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType -> {
+                if (blockType.isCluster()){
                     ItemBlockRenderTypes.setRenderLayer(CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType).get(), cutoutMipped);
                 }
             });
@@ -187,35 +178,30 @@ public class ClientEventHandler
 
         ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS.get(), translucent);
         ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get(), translucent);
-        Stream.of(DyeColor.values()).forEach(color ->
-        {
+        Stream.of(DyeColor.values()).forEach(color -> {
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS.get(color).get(), translucent);
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get(), translucent);
         });
 
-        for (SpectrumWood wood : SpectrumWood.values())
-        {
+        for (SpectrumWood wood : SpectrumWood.values()){
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(SAPLING).get(), cutoutMipped);
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(BARREL).get(), cutoutMipped);
 
             registerSealedProperty(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(BARREL).get(), TFCComponents.CONTENTS);
         }
 
-        for (CoreClay clayType : CoreClay.values())
-        {
+        for (CoreClay clayType : CoreClay.values()){
             registerSealedProperty(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL).get(), TFCComponents.CONTENTS);
         }
     }
 
-    public static void registerColorHandlerBlocks(RegisterColorHandlersEvent.Block event)
-    {
+    public static void registerColorHandlerBlocks(RegisterColorHandlersEvent.Block event){
 
         final BlockColor grassColor = (state, level, pos, tintIndex) -> TFCColors.getGrassColor(pos, tintIndex);
 
         CoreBlocks.WILD_CROPS.forEach((crop, reg) -> event.register(grassColor, reg.get()));
 
-        Stream.of(DyeColor.values()).forEach(color ->
-        {
+        Stream.of(DyeColor.values()).forEach(color -> {
             final BlockColor glassColor = (state, level, pos, tintIndex) -> color.getTextureDiffuseColor();
             event.register(glassColor, CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
         });
@@ -224,42 +210,38 @@ public class ClientEventHandler
         event.register(clearGlassColor, CoreBlocks.CLEAR_MOLTEN_GLASS.get());
     }
 
-    private static void registerColorHandlerItems(RegisterColorHandlersEvent.Item event)
-    {
+    private static void registerColorHandlerItems(RegisterColorHandlersEvent.Item event) {
 
         final ItemColor grassColor = (stack, tintIndex) -> TFCColors.getGrassColor(null, tintIndex);
 
         CoreBlocks.WILD_CROPS.values().forEach((block) -> event.register(grassColor, block.get().asItem()));
 
-        for (CoreClay clay : CoreClay.values())
-        {
+        for (CoreClay clay : CoreClay.values()){
             event.register(ContainedFluidModel.COLOR, CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.JUG).get());
         }
 
-        event.register(ContainedFluidModel.COLOR, CoreItems.GLASS_MOLD.get(), CoreItems.GLASS_PANE_MOLD.get(), CoreItems.WROUGHT_IRON_BUCKET.get());
+        event.register(ContainedFluidModel.COLOR,
+                CoreItems.GLASS_MOLD.get(),
+                CoreItems.GLASS_PANE_MOLD.get(),
+                CoreItems.WROUGHT_IRON_BUCKET.get()
+        );
 
         // buckets
-        CoreFluids.METALS.forEach((metal, holder) ->
-        {
+        CoreFluids.METALS.forEach((metal, holder) -> {
             event.register(new DynamicFluidContainerModel.Colors(), holder.getSource().getBucket());
         });
 
-        CoreFluids.COLORED_GLASS.forEach((color, holder) ->
-        {
+        CoreFluids.COLORED_GLASS.forEach((color, holder) -> {
             event.register(new DynamicFluidContainerModel.Colors(), holder.getSource().getBucket());
         });
 
         event.register(new DynamicFluidContainerModel.Colors(), CoreFluids.CLEAR_GLASS.getSource().getBucket());
     }
 
-    public static void registerSpecialModels(ModelEvent.RegisterAdditional event)
-    {
-        for (OreDeposit ore : OreDeposit.values())
-        {
-            for (CoreRocks rock : CoreRocks.values())
-            {
-                if (rock.hasOres())
-                {
+    public static void registerSpecialModels(ModelEvent.RegisterAdditional event){
+        for (OreDeposit ore : OreDeposit.values()){
+            for (CoreRocks rock : CoreRocks.values()){
+                if (rock.hasOres()){
                     String oreId = ore.name().toLowerCase(Locale.ROOT);
                     String rockId = rock.getSerializedName();
 
@@ -270,35 +252,17 @@ public class ClientEventHandler
         }
     }
 
-    private static boolean makeMossyVariantCutout(Rock.BlockType type, CoreRocks rock)
-    {
-        if (type == Rock.BlockType.MOSSY_BRICKS)
-        {
-            switch (rock)
-            {
-                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE,
-                     ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE ->
-                {
-                    return true;
-                }
-                default ->
-                {
-                    return false;
-                }
+    private static boolean makeMossyVariantCutout(Rock.BlockType type, CoreRocks rock){
+        if (type == Rock.BlockType.MOSSY_BRICKS){
+            switch (rock){
+                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE, ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE -> {return true;}
+                default -> {return false;}
             }
         }
-        if (type == Rock.BlockType.MOSSY_COBBLE)
-        {
-            switch (rock)
-            {
-                case BLACKSLAG, NEPHELINITE ->
-                {
-                    return true;
-                }
-                default ->
-                {
-                    return false;
-                }
+        if (type == Rock.BlockType.MOSSY_COBBLE){
+            switch (rock){
+                case BLACKSLAG, NEPHELINITE -> {return true;}
+                default -> {return false;}
             }
         }
         return false;

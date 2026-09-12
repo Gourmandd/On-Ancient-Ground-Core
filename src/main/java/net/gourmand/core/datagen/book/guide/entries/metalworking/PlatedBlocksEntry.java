@@ -13,66 +13,65 @@ import net.dries007.tfc.util.Metal;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class PlatedBlocksEntry extends EntryProvider
-{
+public class PlatedBlocksEntry extends EntryProvider {
 
-    public PlatedBlocksEntry(CategoryProviderBase parent)
-    {
+    public PlatedBlocksEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain plated blocks.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.BLOCK))));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.BLOCK)))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Plated Blocks** are worth 100 mb of metal, they are decorational.
-                 \\
-                 \\
-                 Brass plated blocks are used for the **Table Pour** glassworking operation.
-                 \\
-                 \\
-                 You can made them by crafting 4 sheets of most metals with planks.
-                \s""");
+                **Plated Blocks** are worth 100 mb of metal, they are decorational.
+                \\
+                \\
+                Brass plated blocks are used for the **Table Pour** glassworking operation.
+                \\
+                \\
+                You can made them by crafting 4 sheets of most metals with planks.
+               \s""");
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/metal/block/copper")));
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/metal/block/copper"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("Crafting plated blocks");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Plated Blocks";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Plated Blocks";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.BLOCK));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "block";
     }
 }

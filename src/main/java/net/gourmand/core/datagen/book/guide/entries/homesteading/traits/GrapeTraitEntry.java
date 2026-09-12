@@ -14,65 +14,64 @@ import com.mojang.datafixers.util.Pair;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class GrapeTraitEntry extends EntryProvider
-{
+public class GrapeTraitEntry extends EntryProvider {
 
-    public GrapeTraitEntry(CategoryProviderBase parent)
-    {
+    public GrapeTraitEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain fermented trait.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(FLTags.Items.SMASHED_GRAPES)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(FLTags.Items.SMASHED_GRAPES))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 The **Bee Pollinated**, **Dirt Grown**, **Gravel Grown**, and **Slope Grown** traits by default, modifies spoilage rate by **0.8**, **0.9**, **0.8**, **0.8** respectfully.
-                 \\
-                 \\
-                 Grapes acquire these based on the surroundings they grow in. See **Here** for more.
-                """);
+                The **Bee Pollinated**, **Dirt Grown**, **Gravel Grown**, and **Slope Grown** traits by default, modifies spoilage rate by **0.8**, **0.9**, **0.8**, **0.8** respectfully.
+                \\
+                \\
+                Grapes acquire these based on the surroundings they grow in. See **Here** for more.
+               """);
 
         // page 2: crafting recipe.
-        this.page("page2", () -> BookCraftingRecipePageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/grape_trellis_post")));
+        this.page("page2", () -> BookCraftingRecipePageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "crafting/grape_trellis_post"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                The grape trellis post recipe.
-                """);
+               The grape trellis post recipe.
+               """);
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Grape Traits";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About The Grape Traits.";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(FLItems.FRUITS.get(FLFruit.RED_GRAPES));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "grape_traits";
     }
 }

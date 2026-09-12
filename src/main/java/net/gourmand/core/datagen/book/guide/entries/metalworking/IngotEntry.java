@@ -14,63 +14,63 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
 
-public class IngotEntry extends EntryProvider
-{
+public class IngotEntry extends EntryProvider {
 
-    public IngotEntry(CategoryProviderBase parent)
-    {
+    public IngotEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain ingots.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(Tags.Items.INGOTS)));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(Tags.Items.INGOTS))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Ingots** are a material worth 100 mb of metal, you can cast them using ingot molds.
-                 \\
-                 \\
-                 You can get them from refining **Pig Iron**, **Blooms** and **Weak Steels**.
-                \s""");
+                **Ingots** are a material worth 100 mb of metal, you can cast them using ingot molds.
+                \\
+                \\
+                You can get them from refining **Pig Iron**, **Blooms** and **Weak Steels**.
+               \s""");
 
         // page 2: casting recipe.
-        this.page("page2", () -> BookCastingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "casting/bronze_ingot")).withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "casting/copper_ingot")));
+        this.page("page2", () -> BookCastingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "casting/bronze_ingot"))
+                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "casting/copper_ingot"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("Casting Ingots");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Ingots";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Ingots";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.COPPER).get(Metal.ItemType.INGOT));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "ingot";
     }
 }

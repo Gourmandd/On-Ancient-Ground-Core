@@ -10,29 +10,22 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(BasinBlockEntity.class)
-public abstract class BasinBlockEntityMixin
-{
+public abstract class BasinBlockEntityMixin {
 
     @WrapMethod(method = "getHeatLevelOf")
-    private static BlazeBurnerBlock.HeatLevel modpack$getHeatLevelOf(BlockState state, Operation<BlazeBurnerBlock.HeatLevel> original)
-    {
+    private static BlazeBurnerBlock.HeatLevel modpack$getHeatLevelOf(BlockState state, Operation<BlazeBurnerBlock.HeatLevel> original){
 
-        if (state.hasProperty(FireboxBlock.LIT))
-        {
-            if (state.getValue(FireboxBlock.LIT))
-            {
+        if (state.hasProperty(FireboxBlock.LIT)){
+            if (state.getValue(FireboxBlock.LIT)){
                 return BlazeBurnerBlock.HeatLevel.KINDLED;
             }
         }
-        if (state.hasProperty(CharcoalForgeBlock.HEAT))
-        {
+        if (state.hasProperty(CharcoalForgeBlock.HEAT)){
             int heat = state.getValue(CharcoalForgeBlock.HEAT);
-            if (heat < 2)
-            {
+            if (heat < 2){
                 return BlazeBurnerBlock.HeatLevel.NONE; //lower than ~266C
             }
-            if (heat < 6)
-            {
+            if (heat < 6){
                 return BlazeBurnerBlock.HeatLevel.KINDLED; //lower than ~1335C
             }
             return BlazeBurnerBlock.HeatLevel.SEETHING; //higher than ~1335C

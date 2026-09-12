@@ -15,8 +15,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import java.util.function.Supplier;
 
-public abstract class CoreFloodedCropBlock extends FloodedCropBlock
-{
+public abstract class CoreFloodedCropBlock extends FloodedCropBlock {
 
     public static final FluidProperty FLUID = TFCBlockStateProperties.FRESH_WATER;
 

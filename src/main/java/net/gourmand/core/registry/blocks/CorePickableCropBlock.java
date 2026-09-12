@@ -15,8 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
-public abstract class CorePickableCropBlock extends PickableCropBlock
-{
+public abstract class CorePickableCropBlock extends PickableCropBlock {
 
     public static CorePickableCropBlock create(ExtendedProperties properties, int stages, CoreCrops crop, @Nullable Supplier<Supplier<? extends Item>> fruit, Supplier<Supplier<? extends Item>> matureFruit)
     {

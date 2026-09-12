@@ -30,89 +30,73 @@ import static net.dries007.tfc.common.blocks.rock.Rock.*;
 import static net.gourmand.core.registry.category.CoreCrops.*;
 import static net.gourmand.core.registry.category.CoreRocks.*;
 
-public class CategoryUtil
-{
+public class CategoryUtil {
 
-    public static ArrayList<String> getCropNames()
-    {
+    public static ArrayList<String> getCropNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreCrops crop : CoreCrops.values())
-        {
+        for (CoreCrops crop : CoreCrops.values()){
             list.add(crop.getSerializedName());
         }
 
         return list;
     }
 
-    public static ArrayList<String> getFruitTreeNames()
-    {
+    public static ArrayList<String> getFruitTreeNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreFruitTrees tree : CoreFruitTrees.values())
-        {
+        for (CoreFruitTrees tree : CoreFruitTrees.values()){
             list.add(tree.getSerializedName());
         }
 
         return list;
     }
 
-    public static ArrayList<String> getStationaryBushNames()
-    {
+    public static ArrayList<String> getStationaryBushNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreStationaryBushes bush : CoreStationaryBushes.values())
-        {
+        for (CoreStationaryBushes bush : CoreStationaryBushes.values()){
             list.add(bush.getSerializedName());
         }
 
         return list;
     }
 
-    public static ArrayList<String> getSpreadingBushNames()
-    {
+    public static ArrayList<String> getSpreadingBushNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreSpreadingBushes bush : CoreSpreadingBushes.values())
-        {
+        for (CoreSpreadingBushes bush : CoreSpreadingBushes.values()){
             list.add(bush.getSerializedName());
         }
 
         return list;
     }
 
-    public static ArrayList<String> getMetalNames()
-    {
+    public static ArrayList<String> getMetalNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreMetals.MetalType metal : CoreMetals.MetalType.values())
-        {
+        for (CoreMetals.MetalType metal : CoreMetals.MetalType.values()){
             list.add(metal.getSerializedName());
         }
 
         return list;
     }
 
-    public static ArrayList<String> getAllOreNames()
-    {
+    public static ArrayList<String> getAllOreNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreOres ore : CoreOres.values())
-        {
+        for (CoreOres ore : CoreOres.values()){
             list.add(ore.name().toLowerCase(Locale.ROOT));
         }
 
         return list;
     }
 
-    public static ArrayList<String> getNonGradedOreNames()
-    {
+    public static ArrayList<String> getNonGradedOreNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreOres ore : CoreOres.values())
-        {
-            if (!ore.isGraded())
-            {
+        for (CoreOres ore : CoreOres.values()){
+            if (!ore.isGraded()){
                 list.add(ore.name().toLowerCase(Locale.ROOT));
             }
         }
@@ -120,14 +104,11 @@ public class CategoryUtil
         return list;
     }
 
-    public static ArrayList<String> getGradedOreNames()
-    {
+    public static ArrayList<String> getGradedOreNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreOres ore : CoreOres.values())
-        {
-            if (ore.isGraded())
-            {
+        for (CoreOres ore : CoreOres.values()){
+            if (ore.isGraded()){
                 list.add(ore.name().toLowerCase(Locale.ROOT));
             }
         }
@@ -135,14 +116,11 @@ public class CategoryUtil
         return list;
     }
 
-    public static ArrayList<String> GetGemOreNames()
-    {
+    public static ArrayList<String> GetGemOreNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreOres ore : CoreOres.values())
-        {
-            if (ore.isGem())
-            {
+        for (CoreOres ore : CoreOres.values()){
+            if (ore.isGem()){
                 list.add(ore.name().toLowerCase(Locale.ROOT));
             }
         }
@@ -150,14 +128,11 @@ public class CategoryUtil
         return list;
     }
 
-    public static ArrayList<String> getPastelOreNames()
-    {
+    public static ArrayList<String> getPastelOreNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreOres ore : CoreOres.values())
-        {
-            if (ore.hasSpectrumOreType())
-            {
+        for (CoreOres ore : CoreOres.values()){
+            if (ore.hasSpectrumOreType()){
                 list.add(ore.name().toLowerCase(Locale.ROOT));
             }
         }
@@ -165,26 +140,21 @@ public class CategoryUtil
         return list;
     }
 
-    public static ArrayList<String> getAllRockNames()
-    {
+    public static ArrayList<String> getAllRockNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreRocks rock : CoreRocks.values())
-        {
+        for (CoreRocks rock : CoreRocks.values()){
             list.add(rock.name().toLowerCase(Locale.ROOT));
         }
 
         return list;
     }
 
-    public static ArrayList<String> getAllVariantRockNames()
-    {
+    public static ArrayList<String> getAllVariantRockNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreRocks rock : CoreRocks.values())
-        {
-            if (rock.hasVariants())
-            {
+        for (CoreRocks rock : CoreRocks.values()){
+            if (rock.hasVariants()){
                 list.add(rock.name().toLowerCase(Locale.ROOT));
             }
         }
@@ -192,50 +162,41 @@ public class CategoryUtil
         return list;
     }
 
-    public static ArrayList<String> getPastelWoodNames()
-    {
+    public static ArrayList<String> getPastelWoodNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (SpectrumWood wood : SpectrumWood.values())
-        {
+        for (SpectrumWood wood : SpectrumWood.values()){
             list.add(wood.getSerializedName());
         }
 
         return list;
     }
 
-    public static ArrayList<String> getClayNames()
-    {
+    public static ArrayList<String> getClayNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreClay clay : CoreClay.values())
-        {
+        for (CoreClay clay : CoreClay.values()){
             list.add(clay.getSerializedName());
         }
 
         return list;
     }
 
-    public static ArrayList<String> getClayItemTypeNames()
-    {
+    public static ArrayList<String> getClayItemTypeNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreClay.ItemType type : CoreClay.ItemType.values())
-        {
+        for (CoreClay.ItemType type : CoreClay.ItemType.values()){
             list.add(type.getSerializedName());
         }
 
         return list;
     }
 
-    public static ArrayList<String> getClayMoldNames()
-    {
+    public static ArrayList<String> getClayMoldNames(){
         ArrayList<String> list = new ArrayList<>();
 
-        for (CoreClay.ItemType type : CoreClay.ItemType.values())
-        {
-            if (type.getType() == CoreClay.ItemPartType.UNFIRED_MOLD)
-            {
+        for (CoreClay.ItemType type : CoreClay.ItemType.values()){
+            if (type.getType() == CoreClay.ItemPartType.UNFIRED_MOLD){
                 list.add(type.getSerializedName());
             }
         }
@@ -243,19 +204,28 @@ public class CategoryUtil
         return list;
     }
 
-    public static Metal.ItemType[] getTFCTools()
-    {
-        return new Metal.ItemType[]{Metal.ItemType.PICKAXE, Metal.ItemType.PROPICK, Metal.ItemType.AXE, Metal.ItemType.SHOVEL, Metal.ItemType.HOE, Metal.ItemType.CHISEL, Metal.ItemType.HAMMER, Metal.ItemType.SAW, Metal.ItemType.JAVELIN, Metal.ItemType.SWORD, Metal.ItemType.MACE, Metal.ItemType.KNIFE, Metal.ItemType.SCYTHE};
+    public static Metal.ItemType[] getTFCTools(){
+        return new Metal.ItemType[] {
+            Metal.ItemType.PICKAXE,
+                    Metal.ItemType.PROPICK,
+                    Metal.ItemType.AXE,
+                    Metal.ItemType.SHOVEL,
+                    Metal.ItemType.HOE,
+                    Metal.ItemType.CHISEL,
+                    Metal.ItemType.HAMMER,
+                    Metal.ItemType.SAW,
+                    Metal.ItemType.JAVELIN,
+                    Metal.ItemType.SWORD,
+                    Metal.ItemType.MACE,
+                    Metal.ItemType.KNIFE,
+                    Metal.ItemType.SCYTHE
+        };
     }
-
-    public static ArrayList<Metal.ItemType> getTFCToolHeads()
-    {
+    public static ArrayList<Metal.ItemType> getTFCToolHeads(){
         ArrayList<Metal.ItemType> list = new ArrayList<Metal.ItemType>();
 
-        for (Metal.ItemType type : Metal.ItemType.values())
-        {
-            if (type.hasMold() && type != Metal.ItemType.INGOT)
-            {
+        for (Metal.ItemType type : Metal.ItemType.values()){
+            if (type.hasMold() && type != Metal.ItemType.INGOT){
                 list.add(type);
             }
         }
@@ -264,14 +234,11 @@ public class CategoryUtil
     }
 
 
-    public static ArrayList<Metal> getTFCToolMetals()
-    {
+    public static ArrayList<Metal> getTFCToolMetals(){
         ArrayList<Metal> list = new ArrayList<Metal>();
 
-        for (Metal metal : Metal.values())
-        {
-            if (Metal.ItemType.PICKAXE.has(metal))
-            {
+        for (Metal metal : Metal.values()){
+            if (Metal.ItemType.PICKAXE.has(metal)){
                 list.add(metal);
             }
         }
@@ -279,8 +246,7 @@ public class CategoryUtil
         return list;
     }
 
-    public static class HeatCapacities
-    {
+    public static class HeatCapacities {
         public final static float DOUBLE_SHEET = 11.428572f;
         public final static float SHEET = 5.714286f;
         public final static float DOUBLE_INGOT = 5.714286f;
@@ -289,90 +255,165 @@ public class CategoryUtil
         public final static float ANVIL = 40.0f;
     }
 
-    public static class CoreCrop
-    {
+    public static class CoreCrop {
 
-        public static final Map<CoreCrops, Item> TO_CROP_PRODUCT = ImmutableMap.<CoreCrops, Item>builder().put(COFFEE, BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "coffee_beans"))).put(COTTON, BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "cotton_boll"))).put(GLISTERING_MELON, SpectrumBlocks.GLISTERING_MELON.asItem()).put(AMARANTH, SpectrumBlocks.AMARANTH_BUSHEL.asItem()).put(WART, Items.NETHER_WART).build();
+        public static final Map<CoreCrops, Item> TO_CROP_PRODUCT = ImmutableMap.<CoreCrops, Item>builder()
+                .put(COFFEE, BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "coffee_beans")))
+                .put(COTTON, BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("rusticdelight", "cotton_boll")))
+                .put(GLISTERING_MELON, SpectrumBlocks.GLISTERING_MELON.asItem())
+                .put(AMARANTH, SpectrumBlocks.AMARANTH_BUSHEL.asItem())
+                .put(WART, Items.NETHER_WART)
+                .build();
     }
 
-    public static class Tools
-    {
+    public static class Tools {
 
         // ItemType has to be of CoreClay.ItemPartType.UNFIRED_MOLD.
-        public static final Map<CoreClay.ItemType, TagKey<Item>> MOLD_TO_TOOL_BLADE_TAG = ImmutableMap.<CoreClay.ItemType, TagKey<Item>>builder().put(CoreClay.ItemType.PICKAXE_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.PICKAXE_HEAD)).put(CoreClay.ItemType.PROPICK_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.PROPICK_HEAD)).put(CoreClay.ItemType.AXE_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.AXE_HEAD)).put(CoreClay.ItemType.SHOVEL_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.SHOVEL_HEAD)).put(CoreClay.ItemType.HOE_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.HOE_HEAD)).put(CoreClay.ItemType.CHISEL_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.CHISEL_HEAD)).put(CoreClay.ItemType.HAMMER_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.HAMMER_HEAD)).put(CoreClay.ItemType.SAW_BLADE, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.SAW_BLADE)).put(CoreClay.ItemType.JAVELIN_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.JAVELIN_HEAD)).put(CoreClay.ItemType.SWORD_BLADE, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.SWORD_BLADE)).put(CoreClay.ItemType.MACE_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.MACE_HEAD)).put(CoreClay.ItemType.KNIFE_BLADE, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.KNIFE_BLADE)).put(CoreClay.ItemType.SCYTHE_BLADE, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.SCYTHE_BLADE)).put(CoreClay.ItemType.BELL, CoreTags.Items.BELLS).put(CoreClay.ItemType.INGOT, Tags.Items.INGOTS).build();
+        public static final Map<CoreClay.ItemType, TagKey<Item>> MOLD_TO_TOOL_BLADE_TAG = ImmutableMap.<CoreClay.ItemType, TagKey<Item>>builder()
+                .put(CoreClay.ItemType.PICKAXE_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.PICKAXE_HEAD))
+                .put(CoreClay.ItemType.PROPICK_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.PROPICK_HEAD))
+                .put(CoreClay.ItemType.AXE_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.AXE_HEAD))
+                .put(CoreClay.ItemType.SHOVEL_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.SHOVEL_HEAD))
+                .put(CoreClay.ItemType.HOE_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.HOE_HEAD))
+                .put(CoreClay.ItemType.CHISEL_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.CHISEL_HEAD))
+                .put(CoreClay.ItemType.HAMMER_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.HAMMER_HEAD))
+                .put(CoreClay.ItemType.SAW_BLADE, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.SAW_BLADE))
+                .put(CoreClay.ItemType.JAVELIN_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.JAVELIN_HEAD))
+                .put(CoreClay.ItemType.SWORD_BLADE, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.SWORD_BLADE))
+                .put(CoreClay.ItemType.MACE_HEAD, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.MACE_HEAD))
+                .put(CoreClay.ItemType.KNIFE_BLADE, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.KNIFE_BLADE))
+                .put(CoreClay.ItemType.SCYTHE_BLADE, CoreTags.Items.TOOL_HEADS.get(Metal.ItemType.SCYTHE_BLADE))
+                .put(CoreClay.ItemType.BELL, CoreTags.Items.BELLS)
+                .put(CoreClay.ItemType.INGOT, Tags.Items.INGOTS)
+                .build();
 
-        public static final Map<CoreClay.ItemType, Item> UNFIRED_MOLD_TYPE_TO_FIRED = ImmutableMap.<CoreClay.ItemType, Item>builder().put(CoreClay.ItemType.PICKAXE_HEAD, TFCItems.MOLDS.get(Metal.ItemType.PICKAXE_HEAD).asItem()).put(CoreClay.ItemType.PROPICK_HEAD, TFCItems.MOLDS.get(Metal.ItemType.PROPICK_HEAD).asItem()).put(CoreClay.ItemType.AXE_HEAD, TFCItems.MOLDS.get(Metal.ItemType.AXE_HEAD).asItem()).put(CoreClay.ItemType.SHOVEL_HEAD, TFCItems.MOLDS.get(Metal.ItemType.SHOVEL_HEAD).asItem()).put(CoreClay.ItemType.HOE_HEAD, TFCItems.MOLDS.get(Metal.ItemType.HOE_HEAD).asItem()).put(CoreClay.ItemType.CHISEL_HEAD, TFCItems.MOLDS.get(Metal.ItemType.CHISEL_HEAD).asItem()).put(CoreClay.ItemType.HAMMER_HEAD, TFCItems.MOLDS.get(Metal.ItemType.HAMMER_HEAD).asItem()).put(CoreClay.ItemType.SAW_BLADE, TFCItems.MOLDS.get(Metal.ItemType.SAW_BLADE).asItem()).put(CoreClay.ItemType.JAVELIN_HEAD, TFCItems.MOLDS.get(Metal.ItemType.JAVELIN_HEAD).asItem()).put(CoreClay.ItemType.SWORD_BLADE, TFCItems.MOLDS.get(Metal.ItemType.SWORD_BLADE).asItem()).put(CoreClay.ItemType.MACE_HEAD, TFCItems.MOLDS.get(Metal.ItemType.MACE_HEAD).asItem()).put(CoreClay.ItemType.KNIFE_BLADE, TFCItems.MOLDS.get(Metal.ItemType.KNIFE_BLADE).asItem()).put(CoreClay.ItemType.SCYTHE_BLADE, TFCItems.MOLDS.get(Metal.ItemType.SCYTHE_BLADE).asItem()).put(CoreClay.ItemType.BELL, TFCItems.BELL_MOLD.asItem()).put(CoreClay.ItemType.INGOT, TFCItems.MOLDS.get(Metal.ItemType.INGOT).asItem()).build();
+        public static final Map<CoreClay.ItemType, Item> UNFIRED_MOLD_TYPE_TO_FIRED = ImmutableMap.<CoreClay.ItemType, Item>builder()
+                .put(CoreClay.ItemType.PICKAXE_HEAD, TFCItems.MOLDS.get(Metal.ItemType.PICKAXE_HEAD).asItem())
+                .put(CoreClay.ItemType.PROPICK_HEAD, TFCItems.MOLDS.get(Metal.ItemType.PROPICK_HEAD).asItem())
+                .put(CoreClay.ItemType.AXE_HEAD, TFCItems.MOLDS.get(Metal.ItemType.AXE_HEAD).asItem())
+                .put(CoreClay.ItemType.SHOVEL_HEAD, TFCItems.MOLDS.get(Metal.ItemType.SHOVEL_HEAD).asItem())
+                .put(CoreClay.ItemType.HOE_HEAD, TFCItems.MOLDS.get(Metal.ItemType.HOE_HEAD).asItem())
+                .put(CoreClay.ItemType.CHISEL_HEAD, TFCItems.MOLDS.get(Metal.ItemType.CHISEL_HEAD).asItem())
+                .put(CoreClay.ItemType.HAMMER_HEAD, TFCItems.MOLDS.get(Metal.ItemType.HAMMER_HEAD).asItem())
+                .put(CoreClay.ItemType.SAW_BLADE, TFCItems.MOLDS.get(Metal.ItemType.SAW_BLADE).asItem())
+                .put(CoreClay.ItemType.JAVELIN_HEAD, TFCItems.MOLDS.get(Metal.ItemType.JAVELIN_HEAD).asItem())
+                .put(CoreClay.ItemType.SWORD_BLADE, TFCItems.MOLDS.get(Metal.ItemType.SWORD_BLADE).asItem())
+                .put(CoreClay.ItemType.MACE_HEAD, TFCItems.MOLDS.get(Metal.ItemType.MACE_HEAD).asItem())
+                .put(CoreClay.ItemType.KNIFE_BLADE, TFCItems.MOLDS.get(Metal.ItemType.KNIFE_BLADE).asItem())
+                .put(CoreClay.ItemType.SCYTHE_BLADE, TFCItems.MOLDS.get(Metal.ItemType.SCYTHE_BLADE).asItem())
+                .put(CoreClay.ItemType.BELL, TFCItems.BELL_MOLD.asItem())
+                .put(CoreClay.ItemType.INGOT, TFCItems.MOLDS.get(Metal.ItemType.INGOT).asItem())
+                .build();
     }
 
-    public static class CoreRock
-    {
+    public static class CoreRock {
 
-        public static final Map<CoreRocks, SandBlockType> TO_SAND_COLOR = ImmutableMap.<CoreRocks, SandBlockType>builder().put(SERPENTINE, SandBlockType.GREEN).put(PERIDOTITE, SandBlockType.GREEN).put(SOAPSTONE, SandBlockType.WHITE).put(RED_SANDSTONE, SandBlockType.RED).put(NEPHELINITE, SandBlockType.BLACK).put(BLACKSLAG, SandBlockType.BLACK).put(PICRITE_BASALT, SandBlockType.BLACK).put(SUEVITE, SandBlockType.BLACK).put(PHONOLITE, SandBlockType.BLACK).put(BLUESCHIST, SandBlockType.BLACK).put(KOMATIITE, SandBlockType.BROWN).put(TRAVERTINE, SandBlockType.BROWN).put(ARGILLITE, SandBlockType.BROWN).put(BRECCIA, SandBlockType.YELLOW).put(SANDSTONE, SandBlockType.YELLOW).put(ARKOSE, SandBlockType.YELLOW).put(MARLSTONE, SandBlockType.YELLOW).put(GREYWACKE, SandBlockType.RED).build();
+        public static final Map<CoreRocks, SandBlockType> TO_SAND_COLOR = ImmutableMap.<CoreRocks, SandBlockType>builder()
+                .put(SERPENTINE, SandBlockType.GREEN)
+                .put(PERIDOTITE, SandBlockType.GREEN)
+                .put(SOAPSTONE, SandBlockType.WHITE)
+                .put(RED_SANDSTONE, SandBlockType.RED)
+                .put(NEPHELINITE, SandBlockType.BLACK)
+                .put(BLACKSLAG, SandBlockType.BLACK)
+                .put(PICRITE_BASALT, SandBlockType.BLACK)
+                .put(SUEVITE, SandBlockType.BLACK)
+                .put(PHONOLITE, SandBlockType.BLACK)
+                .put(BLUESCHIST, SandBlockType.BLACK)
+                .put(KOMATIITE, SandBlockType.BROWN)
+                .put(TRAVERTINE, SandBlockType.BROWN)
+                .put(ARGILLITE, SandBlockType.BROWN)
+                .put(BRECCIA, SandBlockType.YELLOW)
+                .put(SANDSTONE, SandBlockType.YELLOW)
+                .put(ARKOSE, SandBlockType.YELLOW)
+                .put(MARLSTONE, SandBlockType.YELLOW)
+                .put(GREYWACKE, SandBlockType.RED)
+                .build();
 
-        public static final Map<CoreRocks, Holder.Reference<Block>> TO_RAW_BLOCK = ImmutableMap.<CoreRocks, Holder.Reference<Block>>builder().put(SERPENTINE, getReference(CoreBlocks.ROCK_BLOCKS.get(SERPENTINE).get(BlockType.RAW).get())).put(PERIDOTITE, getReference(CoreBlocks.ROCK_BLOCKS.get(PERIDOTITE).get(BlockType.RAW).get())).put(BLUESCHIST, getReference(CoreBlocks.ROCK_BLOCKS.get(BLUESCHIST).get(BlockType.RAW).get())).put(SOAPSTONE, getReference(Blocks.CALCITE)).put(SANDSTONE, getReference(getRawRockId(SANDSTONE).getNamespace(), getRawRockId(SANDSTONE).getPath())).put(SUEVITE, getReference(getRawRockId(SUEVITE).getNamespace(), getRawRockId(SUEVITE).getPath())).put(KOMATIITE, getReference(getRawRockId(KOMATIITE).getNamespace(), getRawRockId(KOMATIITE).getPath())).put(RED_SANDSTONE, getReference(getRawRockId(RED_SANDSTONE).getNamespace(), getRawRockId(RED_SANDSTONE).getPath())).put(PHONOLITE, getReference(getRawRockId(PHONOLITE).getNamespace(), getRawRockId(PHONOLITE).getPath())).put(ARKOSE, getReference(getRawRockId(ARKOSE).getNamespace(), getRawRockId(ARKOSE).getPath())).put(BLACKSLAG, getReference(SpectrumBlocks.BLACKSLAG.get())).put(PICRITE_BASALT, getReference(SpectrumBlocks.BASAL_MARBLE.get())).put(TRAVERTINE, getReference(Blocks.DRIPSTONE_BLOCK)).put(ARGILLITE, getReference(Blocks.STONE)).put(NEPHELINITE, getReference(Blocks.DEEPSLATE)).put(BRECCIA, getReference(getRawRockId(BRECCIA).getNamespace(), getRawRockId(BRECCIA).getPath())).put(MARLSTONE, getReference(getRawRockId(MARLSTONE).getNamespace(), getRawRockId(MARLSTONE).getPath())).put(GREYWACKE, getReference(Blocks.SMOOTH_BASALT)).build();
+        public static final Map<CoreRocks, Holder.Reference<Block>> TO_RAW_BLOCK = ImmutableMap.<CoreRocks, Holder.Reference<Block>>builder()
+                .put(SERPENTINE, getReference(CoreBlocks.ROCK_BLOCKS.get(SERPENTINE).get(BlockType.RAW).get()))
+                .put(PERIDOTITE, getReference(CoreBlocks.ROCK_BLOCKS.get(PERIDOTITE).get(BlockType.RAW).get()))
+                .put(BLUESCHIST, getReference(CoreBlocks.ROCK_BLOCKS.get(BLUESCHIST).get(BlockType.RAW).get()))
+                .put(SOAPSTONE, getReference(Blocks.CALCITE))
+                .put(SANDSTONE, getReference(getRawRockId(SANDSTONE).getNamespace(), getRawRockId(SANDSTONE).getPath()))
+                .put(SUEVITE, getReference(getRawRockId(SUEVITE).getNamespace(), getRawRockId(SUEVITE).getPath()))
+                .put(KOMATIITE, getReference(getRawRockId(KOMATIITE).getNamespace(), getRawRockId(KOMATIITE).getPath()))
+                .put(RED_SANDSTONE, getReference(getRawRockId(RED_SANDSTONE).getNamespace(), getRawRockId(RED_SANDSTONE).getPath()))
+                .put(PHONOLITE, getReference(getRawRockId(PHONOLITE).getNamespace(), getRawRockId(PHONOLITE).getPath()))
+                .put(ARKOSE, getReference(getRawRockId(ARKOSE).getNamespace(), getRawRockId(ARKOSE).getPath()))
+                .put(BLACKSLAG, getReference(SpectrumBlocks.BLACKSLAG.get()))
+                .put(PICRITE_BASALT, getReference(SpectrumBlocks.BASAL_MARBLE.get()))
+                .put(TRAVERTINE, getReference(Blocks.DRIPSTONE_BLOCK))
+                .put(ARGILLITE, getReference(Blocks.STONE))
+                .put(NEPHELINITE, getReference(Blocks.DEEPSLATE))
+                .put(BRECCIA, getReference(getRawRockId(BRECCIA).getNamespace(), getRawRockId(BRECCIA).getPath()))
+                .put(MARLSTONE, getReference(getRawRockId(MARLSTONE).getNamespace(), getRawRockId(MARLSTONE).getPath()))
+                .put(GREYWACKE, getReference(Blocks.SMOOTH_BASALT))
+                .build();
 
-        public static final Map<CoreRocks, Holder.Reference<Block>> TO_BRICK_BLOCK = ImmutableMap.<CoreRocks, Holder.Reference<Block>>builder().put(SERPENTINE, getReference(CoreBlocks.ROCK_BLOCKS.get(SERPENTINE).get(BlockType.BRICKS).get())).put(PERIDOTITE, getReference(CoreBlocks.ROCK_BLOCKS.get(PERIDOTITE).get(BlockType.BRICKS).get())).put(BLUESCHIST, getReference(CoreBlocks.ROCK_BLOCKS.get(BLUESCHIST).get(BlockType.BRICKS).get())).put(SOAPSTONE, getReference(SpectrumBlocks.CALCITE_BRICKS.get())).put(SANDSTONE, getReference(Create.ID, "cut_" + getRawRockId(SANDSTONE).getPath() + "_bricks")).put(SUEVITE, getReference(Create.ID, "cut_" + getRawRockId(SUEVITE).getPath() + "_bricks")).put(KOMATIITE, getReference(Create.ID, "cut_" + getRawRockId(KOMATIITE).getPath() + "_bricks")).put(RED_SANDSTONE, getReference(Quark.MOD_ID, getRawRockId(RED_SANDSTONE).getPath() + "_bricks")).put(PHONOLITE, getReference(Quark.MOD_ID, getRawRockId(PHONOLITE).getPath() + "_bricks")).put(ARKOSE, getReference(Quark.MOD_ID, getRawRockId(ARKOSE).getPath() + "_bricks")).put(BLACKSLAG, getReference(SpectrumBlocks.BLACKSLAG_BRICKS.get())).put(PICRITE_BASALT, getReference(SpectrumBlocks.BASAL_MARBLE_BRICKS.get())).put(TRAVERTINE, getReference(APBlocks.DRIPSTONE_BRICKS.get())).put(ARGILLITE, getReference(Blocks.STONE_BRICKS)).put(NEPHELINITE, getReference(Blocks.DEEPSLATE_BRICKS)).put(BRECCIA, getReference(CPMain.MODID, getRawRockId(BRECCIA).getPath() + "_bricks")).put(MARLSTONE, getReference(Create.ID, "cut_" + getRawRockId(MARLSTONE).getPath() + "_bricks")).put(GREYWACKE, getReference(SpectrumBlocks.BASALT_BRICKS.get())).build();
+        public static final Map<CoreRocks, Holder.Reference<Block>> TO_BRICK_BLOCK = ImmutableMap.<CoreRocks, Holder.Reference<Block>>builder()
+                .put(SERPENTINE, getReference(CoreBlocks.ROCK_BLOCKS.get(SERPENTINE).get(BlockType.BRICKS).get()))
+                .put(PERIDOTITE, getReference(CoreBlocks.ROCK_BLOCKS.get(PERIDOTITE).get(BlockType.BRICKS).get()))
+                .put(BLUESCHIST, getReference(CoreBlocks.ROCK_BLOCKS.get(BLUESCHIST).get(BlockType.BRICKS).get()))
+                .put(SOAPSTONE, getReference(SpectrumBlocks.CALCITE_BRICKS.get()))
+                .put(SANDSTONE, getReference(Create.ID, "cut_" + getRawRockId(SANDSTONE).getPath() + "_bricks"))
+                .put(SUEVITE, getReference(Create.ID, "cut_" + getRawRockId(SUEVITE).getPath() + "_bricks"))
+                .put(KOMATIITE, getReference(Create.ID, "cut_" + getRawRockId(KOMATIITE).getPath() + "_bricks"))
+                .put(RED_SANDSTONE, getReference(Quark.MOD_ID, getRawRockId(RED_SANDSTONE).getPath() + "_bricks"))
+                .put(PHONOLITE, getReference(Quark.MOD_ID, getRawRockId(PHONOLITE).getPath() + "_bricks"))
+                .put(ARKOSE, getReference(Quark.MOD_ID, getRawRockId(ARKOSE).getPath() + "_bricks"))
+                .put(BLACKSLAG, getReference(SpectrumBlocks.BLACKSLAG_BRICKS.get()))
+                .put(PICRITE_BASALT, getReference(SpectrumBlocks.BASAL_MARBLE_BRICKS.get()))
+                .put(TRAVERTINE, getReference(APBlocks.DRIPSTONE_BRICKS.get()))
+                .put(ARGILLITE, getReference(Blocks.STONE_BRICKS))
+                .put(NEPHELINITE, getReference(Blocks.DEEPSLATE_BRICKS))
+                .put(BRECCIA, getReference(CPMain.MODID, getRawRockId(BRECCIA).getPath() + "_bricks"))
+                .put(MARLSTONE, getReference(Create.ID, "cut_" + getRawRockId(MARLSTONE).getPath() + "_bricks"))
+                .put(GREYWACKE, getReference(SpectrumBlocks.BASALT_BRICKS.get()))
+                .build();
 
         public static ResourceLocation getRawRockId(CoreRocks rock)
         {
-            if (rock.hasVariants())
-            {
+            if (rock.hasVariants()){
                 return CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).getId();
-            }
-            else
-            {
-                switch (rock)
-                {
-                    case BRECCIA ->
-                    {
+            } else {
+                switch (rock){
+                    case BRECCIA -> {
                         return ResourceLocation.fromNamespaceAndPath(CPMain.MODID, "felsic_tuff");
                     }
-                    case KOMATIITE ->
-                    {
+                    case KOMATIITE -> {
                         return ResourceLocation.fromNamespaceAndPath(Create.ID, "scoria");
                     }
-                    case ARGILLITE ->
-                    {
+                    case ARGILLITE -> {
                         return ResourceLocation.fromNamespaceAndPath("minecraft", "stone");
                     }
-                    case NEPHELINITE ->
-                    {
+                    case NEPHELINITE -> {
                         return ResourceLocation.fromNamespaceAndPath("minecraft", "deepslate");
                     }
-                    case TRAVERTINE ->
-                    {
+                    case TRAVERTINE-> {
                         return ResourceLocation.fromNamespaceAndPath("minecraft", "dripstone_block");
                     }
-                    case SANDSTONE ->
-                    {
+                    case SANDSTONE -> {
                         return ResourceLocation.fromNamespaceAndPath(Create.ID, "ochrum");
                     }
-                    case RED_SANDSTONE ->
-                    {
+                    case RED_SANDSTONE -> {
                         return ResourceLocation.fromNamespaceAndPath(Quark.MOD_ID, "jasper");
                     }
-                    case SUEVITE ->
-                    {
+                    case SUEVITE -> {
                         return ResourceLocation.fromNamespaceAndPath(Create.ID, "scorchia");
                     }
-                    case PHONOLITE ->
-                    {
+                    case PHONOLITE -> {
                         return ResourceLocation.fromNamespaceAndPath(Quark.MOD_ID, "shale");
                     }
-                    case ARKOSE ->
-                    {
+                    case ARKOSE -> {
                         return ResourceLocation.fromNamespaceAndPath(Quark.MOD_ID, "limestone");
                     }
-                    case MARLSTONE ->
-                    {
+                    case MARLSTONE -> {
                         return ResourceLocation.fromNamespaceAndPath(Create.ID, "limestone");
                     }
-                    case SOAPSTONE ->
-                    {
+                    case SOAPSTONE -> {
                         return ResourceLocation.fromNamespaceAndPath("minecraft", "calcite");
                     }
-                    case GREYWACKE ->
-                    {
+                    case GREYWACKE -> {
                         return ResourceLocation.fromNamespaceAndPath("minecraft", "smooth_basalt");
                     }
                     case null, default -> throw new AssertionError("no raw rock for this rock type");
@@ -381,39 +422,171 @@ public class CategoryUtil
         }
     }
 
-    public static class TFCRock
-    {
+    public static class TFCRock {
 
-        public static final Map<Rock, SandBlockType> TO_SAND_COLOR = ImmutableMap.<Rock, SandBlockType>builder().put(GRANITE, SandBlockType.YELLOW).put(DIORITE, SandBlockType.RED).put(GABBRO, SandBlockType.BLACK).put(RHYOLITE, SandBlockType.YELLOW).put(DACITE, SandBlockType.RED).put(ANDESITE, SandBlockType.RED).put(BASALT, SandBlockType.BLACK).put(SHALE, SandBlockType.BROWN).put(CLAYSTONE, SandBlockType.BROWN).put(LIMESTONE, SandBlockType.WHITE).put(CONGLOMERATE, SandBlockType.BROWN).put(DOLOMITE, SandBlockType.WHITE).put(CHERT, SandBlockType.RED).put(CHALK, SandBlockType.WHITE).put(TUFF, SandBlockType.GREEN).put(QUARTZITE, SandBlockType.WHITE).put(SLATE, SandBlockType.YELLOW).put(PHYLLITE, SandBlockType.YELLOW).put(SCHIST, SandBlockType.YELLOW).put(GNEISS, SandBlockType.YELLOW).put(MARBLE, SandBlockType.WHITE).build();
+        public static final Map<Rock, SandBlockType> TO_SAND_COLOR = ImmutableMap.<Rock, SandBlockType>builder()
+                .put(GRANITE, SandBlockType.YELLOW)
+                .put(DIORITE, SandBlockType.RED)
+                .put(GABBRO, SandBlockType.BLACK)
+                .put(RHYOLITE, SandBlockType.YELLOW)
+                .put(DACITE, SandBlockType.RED)
+                .put(ANDESITE, SandBlockType.RED)
+                .put(BASALT, SandBlockType.BLACK)
+                .put(SHALE, SandBlockType.BROWN)
+                .put(CLAYSTONE, SandBlockType.BROWN)
+                .put(LIMESTONE, SandBlockType.WHITE)
+                .put(CONGLOMERATE, SandBlockType.BROWN)
+                .put(DOLOMITE, SandBlockType.WHITE)
+                .put(CHERT, SandBlockType.RED)
+                .put(CHALK, SandBlockType.WHITE)
+                .put(TUFF, SandBlockType.GREEN)
+                .put(QUARTZITE, SandBlockType.WHITE)
+                .put(SLATE, SandBlockType.YELLOW)
+                .put(PHYLLITE, SandBlockType.YELLOW)
+                .put(SCHIST, SandBlockType.YELLOW)
+                .put(GNEISS, SandBlockType.YELLOW)
+                .put(MARBLE, SandBlockType.WHITE)
+                .build();
     }
 
-    public static class Glass
-    {
+    public static class Glass {
 
-        public static final Map<DyeColor, Block> COLOR_TO_VANILLA_GLASS = ImmutableMap.<DyeColor, Block>builder().put(DyeColor.WHITE, Blocks.WHITE_STAINED_GLASS).put(DyeColor.ORANGE, Blocks.ORANGE_STAINED_GLASS).put(DyeColor.MAGENTA, Blocks.MAGENTA_STAINED_GLASS).put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_STAINED_GLASS).put(DyeColor.YELLOW, Blocks.YELLOW_STAINED_GLASS).put(DyeColor.LIME, Blocks.LIME_STAINED_GLASS).put(DyeColor.PINK, Blocks.PINK_STAINED_GLASS).put(DyeColor.GRAY, Blocks.GRAY_STAINED_GLASS).put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_STAINED_GLASS).put(DyeColor.CYAN, Blocks.CYAN_STAINED_GLASS).put(DyeColor.PURPLE, Blocks.PURPLE_STAINED_GLASS).put(DyeColor.BLUE, Blocks.BLUE_STAINED_GLASS).put(DyeColor.BROWN, Blocks.BROWN_STAINED_GLASS).put(DyeColor.GREEN, Blocks.GREEN_STAINED_GLASS).put(DyeColor.RED, Blocks.RED_STAINED_GLASS).put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS).build();
+        public static final Map<DyeColor, Block> COLOR_TO_VANILLA_GLASS = ImmutableMap.<DyeColor, Block>builder()
+                .put(DyeColor.WHITE, Blocks.WHITE_STAINED_GLASS)
+                .put(DyeColor.ORANGE, Blocks.ORANGE_STAINED_GLASS)
+                .put(DyeColor.MAGENTA, Blocks.MAGENTA_STAINED_GLASS)
+                .put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_STAINED_GLASS)
+                .put(DyeColor.YELLOW, Blocks.YELLOW_STAINED_GLASS)
+                .put(DyeColor.LIME, Blocks.LIME_STAINED_GLASS)
+                .put(DyeColor.PINK, Blocks.PINK_STAINED_GLASS)
+                .put(DyeColor.GRAY, Blocks.GRAY_STAINED_GLASS)
+                .put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_STAINED_GLASS)
+                .put(DyeColor.CYAN, Blocks.CYAN_STAINED_GLASS)
+                .put(DyeColor.PURPLE, Blocks.PURPLE_STAINED_GLASS)
+                .put(DyeColor.BLUE, Blocks.BLUE_STAINED_GLASS)
+                .put(DyeColor.BROWN, Blocks.BROWN_STAINED_GLASS)
+                .put(DyeColor.GREEN, Blocks.GREEN_STAINED_GLASS)
+                .put(DyeColor.RED, Blocks.RED_STAINED_GLASS)
+                .put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS)
+                .build();
 
-        public static final Map<DyeColor, Holder.Reference<Block>> COLOR_TO_QUARK_GLASS = ImmutableMap.<DyeColor, Holder.Reference<Block>>builder().put(DyeColor.WHITE, getReference(Quark.MOD_ID, "white_framed_glass")).put(DyeColor.ORANGE, getReference(Quark.MOD_ID, "orange_framed_glass")).put(DyeColor.MAGENTA, getReference(Quark.MOD_ID, "magenta_framed_glass")).put(DyeColor.LIGHT_BLUE, getReference(Quark.MOD_ID, "light_blue_framed_glass")).put(DyeColor.YELLOW, getReference(Quark.MOD_ID, "yellow_framed_glass")).put(DyeColor.LIME, getReference(Quark.MOD_ID, "lime_framed_glass")).put(DyeColor.PINK, getReference(Quark.MOD_ID, "pink_framed_glass")).put(DyeColor.GRAY, getReference(Quark.MOD_ID, "gray_framed_glass")).put(DyeColor.LIGHT_GRAY, getReference(Quark.MOD_ID, "light_gray_framed_glass")).put(DyeColor.CYAN, getReference(Quark.MOD_ID, "cyan_framed_glass")).put(DyeColor.PURPLE, getReference(Quark.MOD_ID, "purple_framed_glass")).put(DyeColor.BLUE, getReference(Quark.MOD_ID, "blue_framed_glass")).put(DyeColor.BROWN, getReference(Quark.MOD_ID, "brown_framed_glass")).put(DyeColor.GREEN, getReference(Quark.MOD_ID, "green_framed_glass")).put(DyeColor.RED, getReference(Quark.MOD_ID, "red_framed_glass")).put(DyeColor.BLACK, getReference(Quark.MOD_ID, "black_framed_glass")).build();
+        public static final Map<DyeColor, Holder.Reference<Block>> COLOR_TO_QUARK_GLASS = ImmutableMap.<DyeColor, Holder.Reference<Block>>builder()
+                .put(DyeColor.WHITE, getReference(Quark.MOD_ID, "white_framed_glass"))
+                .put(DyeColor.ORANGE, getReference(Quark.MOD_ID, "orange_framed_glass"))
+                .put(DyeColor.MAGENTA, getReference(Quark.MOD_ID, "magenta_framed_glass"))
+                .put(DyeColor.LIGHT_BLUE, getReference(Quark.MOD_ID, "light_blue_framed_glass"))
+                .put(DyeColor.YELLOW, getReference(Quark.MOD_ID, "yellow_framed_glass"))
+                .put(DyeColor.LIME, getReference(Quark.MOD_ID, "lime_framed_glass"))
+                .put(DyeColor.PINK, getReference(Quark.MOD_ID, "pink_framed_glass"))
+                .put(DyeColor.GRAY, getReference(Quark.MOD_ID, "gray_framed_glass"))
+                .put(DyeColor.LIGHT_GRAY, getReference(Quark.MOD_ID, "light_gray_framed_glass"))
+                .put(DyeColor.CYAN, getReference(Quark.MOD_ID, "cyan_framed_glass"))
+                .put(DyeColor.PURPLE, getReference(Quark.MOD_ID, "purple_framed_glass"))
+                .put(DyeColor.BLUE, getReference(Quark.MOD_ID, "blue_framed_glass"))
+                .put(DyeColor.BROWN, getReference(Quark.MOD_ID, "brown_framed_glass"))
+                .put(DyeColor.GREEN, getReference(Quark.MOD_ID, "green_framed_glass"))
+                .put(DyeColor.RED, getReference(Quark.MOD_ID, "red_framed_glass"))
+                .put(DyeColor.BLACK, getReference(Quark.MOD_ID, "black_framed_glass"))
+                .build();
 
-        public static final Map<DyeColor, Block> COLOR_TO_VANILLA_GLASS_PANE = ImmutableMap.<DyeColor, Block>builder().put(DyeColor.WHITE, Blocks.WHITE_STAINED_GLASS_PANE).put(DyeColor.ORANGE, Blocks.ORANGE_STAINED_GLASS_PANE).put(DyeColor.MAGENTA, Blocks.MAGENTA_STAINED_GLASS_PANE).put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_STAINED_GLASS_PANE).put(DyeColor.YELLOW, Blocks.YELLOW_STAINED_GLASS_PANE).put(DyeColor.LIME, Blocks.LIME_STAINED_GLASS_PANE).put(DyeColor.PINK, Blocks.PINK_STAINED_GLASS_PANE).put(DyeColor.GRAY, Blocks.GRAY_STAINED_GLASS_PANE).put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_STAINED_GLASS_PANE).put(DyeColor.CYAN, Blocks.CYAN_STAINED_GLASS_PANE).put(DyeColor.PURPLE, Blocks.PURPLE_STAINED_GLASS_PANE).put(DyeColor.BLUE, Blocks.BLUE_STAINED_GLASS_PANE).put(DyeColor.BROWN, Blocks.BROWN_STAINED_GLASS_PANE).put(DyeColor.GREEN, Blocks.GREEN_STAINED_GLASS_PANE).put(DyeColor.RED, Blocks.RED_STAINED_GLASS_PANE).put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS_PANE).build();
+        public static final Map<DyeColor, Block> COLOR_TO_VANILLA_GLASS_PANE = ImmutableMap.<DyeColor, Block>builder()
+                .put(DyeColor.WHITE, Blocks.WHITE_STAINED_GLASS_PANE)
+                .put(DyeColor.ORANGE, Blocks.ORANGE_STAINED_GLASS_PANE)
+                .put(DyeColor.MAGENTA, Blocks.MAGENTA_STAINED_GLASS_PANE)
+                .put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_STAINED_GLASS_PANE)
+                .put(DyeColor.YELLOW, Blocks.YELLOW_STAINED_GLASS_PANE)
+                .put(DyeColor.LIME, Blocks.LIME_STAINED_GLASS_PANE)
+                .put(DyeColor.PINK, Blocks.PINK_STAINED_GLASS_PANE)
+                .put(DyeColor.GRAY, Blocks.GRAY_STAINED_GLASS_PANE)
+                .put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_STAINED_GLASS_PANE)
+                .put(DyeColor.CYAN, Blocks.CYAN_STAINED_GLASS_PANE)
+                .put(DyeColor.PURPLE, Blocks.PURPLE_STAINED_GLASS_PANE)
+                .put(DyeColor.BLUE, Blocks.BLUE_STAINED_GLASS_PANE)
+                .put(DyeColor.BROWN, Blocks.BROWN_STAINED_GLASS_PANE)
+                .put(DyeColor.GREEN, Blocks.GREEN_STAINED_GLASS_PANE)
+                .put(DyeColor.RED, Blocks.RED_STAINED_GLASS_PANE)
+                .put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS_PANE)
+                .build();
 
-        public static final Map<DyeColor, Holder.Reference<Block>> COLOR_TO_QUARK_GLASS_PANE = ImmutableMap.<DyeColor, Holder.Reference<Block>>builder().put(DyeColor.WHITE, getReference(Quark.MOD_ID, "white_framed_glass_pane")).put(DyeColor.ORANGE, getReference(Quark.MOD_ID, "orange_framed_glass_pane")).put(DyeColor.MAGENTA, getReference(Quark.MOD_ID, "magenta_framed_glass_pane")).put(DyeColor.LIGHT_BLUE, getReference(Quark.MOD_ID, "light_blue_framed_glass_pane")).put(DyeColor.YELLOW, getReference(Quark.MOD_ID, "yellow_framed_glass_pane")).put(DyeColor.LIME, getReference(Quark.MOD_ID, "lime_framed_glass_pane")).put(DyeColor.PINK, getReference(Quark.MOD_ID, "pink_framed_glass_pane")).put(DyeColor.GRAY, getReference(Quark.MOD_ID, "gray_framed_glass_pane")).put(DyeColor.LIGHT_GRAY, getReference(Quark.MOD_ID, "light_gray_framed_glass_pane")).put(DyeColor.CYAN, getReference(Quark.MOD_ID, "cyan_framed_glass_pane")).put(DyeColor.PURPLE, getReference(Quark.MOD_ID, "purple_framed_glass_pane")).put(DyeColor.BLUE, getReference(Quark.MOD_ID, "blue_framed_glass_pane")).put(DyeColor.BROWN, getReference(Quark.MOD_ID, "brown_framed_glass_pane")).put(DyeColor.GREEN, getReference(Quark.MOD_ID, "green_framed_glass_pane")).put(DyeColor.RED, getReference(Quark.MOD_ID, "red_framed_glass_pane")).put(DyeColor.BLACK, getReference(Quark.MOD_ID, "black_framed_glass_pane")).build();
+        public static final Map<DyeColor, Holder.Reference<Block>> COLOR_TO_QUARK_GLASS_PANE = ImmutableMap.<DyeColor, Holder.Reference<Block>>builder()
+                .put(DyeColor.WHITE, getReference(Quark.MOD_ID, "white_framed_glass_pane"))
+                .put(DyeColor.ORANGE, getReference(Quark.MOD_ID, "orange_framed_glass_pane"))
+                .put(DyeColor.MAGENTA, getReference(Quark.MOD_ID, "magenta_framed_glass_pane"))
+                .put(DyeColor.LIGHT_BLUE, getReference(Quark.MOD_ID, "light_blue_framed_glass_pane"))
+                .put(DyeColor.YELLOW, getReference(Quark.MOD_ID, "yellow_framed_glass_pane"))
+                .put(DyeColor.LIME, getReference(Quark.MOD_ID, "lime_framed_glass_pane"))
+                .put(DyeColor.PINK, getReference(Quark.MOD_ID, "pink_framed_glass_pane"))
+                .put(DyeColor.GRAY, getReference(Quark.MOD_ID, "gray_framed_glass_pane"))
+                .put(DyeColor.LIGHT_GRAY, getReference(Quark.MOD_ID, "light_gray_framed_glass_pane"))
+                .put(DyeColor.CYAN, getReference(Quark.MOD_ID, "cyan_framed_glass_pane"))
+                .put(DyeColor.PURPLE, getReference(Quark.MOD_ID, "purple_framed_glass_pane"))
+                .put(DyeColor.BLUE, getReference(Quark.MOD_ID, "blue_framed_glass_pane"))
+                .put(DyeColor.BROWN, getReference(Quark.MOD_ID, "brown_framed_glass_pane"))
+                .put(DyeColor.GREEN, getReference(Quark.MOD_ID, "green_framed_glass_pane"))
+                .put(DyeColor.RED, getReference(Quark.MOD_ID, "red_framed_glass_pane"))
+                .put(DyeColor.BLACK, getReference(Quark.MOD_ID, "black_framed_glass_pane"))
+                .build();
 
-        public static final Map<DyeColor, Item> COLOR_TO_GLASS_BATCH = ImmutableMap.<DyeColor, Item>builder().put(DyeColor.WHITE, TFCItems.HEMATITIC_GLASS_BATCH.asItem()).put(DyeColor.ORANGE, TFCItems.HEMATITIC_GLASS_BATCH.asItem()).put(DyeColor.MAGENTA, TFCItems.VOLCANIC_GLASS_BATCH.asItem()).put(DyeColor.LIGHT_BLUE, TFCItems.SILICA_GLASS_BATCH.asItem()).put(DyeColor.YELLOW, TFCItems.HEMATITIC_GLASS_BATCH.asItem()).put(DyeColor.LIME, TFCItems.OLIVINE_GLASS_BATCH.asItem()).put(DyeColor.PINK, TFCItems.SILICA_GLASS_BATCH.asItem()).put(DyeColor.GRAY, TFCItems.VOLCANIC_GLASS_BATCH.asItem()).put(DyeColor.LIGHT_GRAY, TFCItems.VOLCANIC_GLASS_BATCH.asItem()).put(DyeColor.CYAN, TFCItems.OLIVINE_GLASS_BATCH.asItem()).put(DyeColor.PURPLE, TFCItems.VOLCANIC_GLASS_BATCH.asItem()).put(DyeColor.BLUE, TFCItems.VOLCANIC_GLASS_BATCH.asItem()).put(DyeColor.BROWN, TFCItems.HEMATITIC_GLASS_BATCH.asItem()).put(DyeColor.GREEN, TFCItems.OLIVINE_GLASS_BATCH.asItem()).put(DyeColor.RED, TFCItems.HEMATITIC_GLASS_BATCH.asItem()).put(DyeColor.BLACK, TFCItems.VOLCANIC_GLASS_BATCH.asItem()).build();
+        public static final Map<DyeColor, Item> COLOR_TO_GLASS_BATCH = ImmutableMap.<DyeColor, Item>builder()
+                .put(DyeColor.WHITE, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.ORANGE, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.MAGENTA, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.LIGHT_BLUE, TFCItems.SILICA_GLASS_BATCH.asItem())
+                .put(DyeColor.YELLOW, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.LIME, TFCItems.OLIVINE_GLASS_BATCH.asItem())
+                .put(DyeColor.PINK, TFCItems.SILICA_GLASS_BATCH.asItem())
+                .put(DyeColor.GRAY, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.LIGHT_GRAY, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.CYAN, TFCItems.OLIVINE_GLASS_BATCH.asItem())
+                .put(DyeColor.PURPLE, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.BLUE, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .put(DyeColor.BROWN, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.GREEN, TFCItems.OLIVINE_GLASS_BATCH.asItem())
+                .put(DyeColor.RED, TFCItems.HEMATITIC_GLASS_BATCH.asItem())
+                .put(DyeColor.BLACK, TFCItems.VOLCANIC_GLASS_BATCH.asItem())
+                .build();
 
         public static final Holder.Reference<Block> QUARK_CLEAR_GLASS = getReference(Quark.MOD_ID, "framed_glass");
         public static final Holder.Reference<Block> QUARK_CLEAR_GLASS_PANE = getReference(Quark.MOD_ID, "framed_glass_pane");
     }
 
 
-    public static final Map<Metal, Integer> TFC_METAL_TO_TEMPERATURE = ImmutableMap.<Metal, Integer>builder().put(Metal.BISMUTH, 270).put(Metal.BISMUTH_BRONZE, 985).put(Metal.BLACK_BRONZE, 1070).put(Metal.BRASS, 930).put(Metal.COPPER, 1080).put(Metal.GOLD, 1060).put(Metal.NICKEL, 1453).put(Metal.ROSE_GOLD, 960).put(Metal.SILVER, 961).put(Metal.TIN, 230).put(Metal.ZINC, 420).put(Metal.STERLING_SILVER, 950).put(Metal.WROUGHT_IRON, 1535).put(Metal.CAST_IRON, 1535).put(Metal.PIG_IRON, 1535).put(Metal.STEEL, 1540).put(Metal.BLACK_STEEL, 1485).put(Metal.BLUE_STEEL, 1540).put(Metal.RED_STEEL, 1540).put(Metal.WEAK_STEEL, 1540).put(Metal.WEAK_BLUE_STEEL, 1540).put(Metal.WEAK_RED_STEEL, 1540).put(Metal.HIGH_CARBON_STEEL, 1540).put(Metal.HIGH_CARBON_BLACK_STEEL, 1540).put(Metal.HIGH_CARBON_BLUE_STEEL, 1540).put(Metal.HIGH_CARBON_RED_STEEL, 1540).put(Metal.BRONZE, 950).put(Metal.UNKNOWN, 400).build();
+    public static final Map<Metal, Integer> TFC_METAL_TO_TEMPERATURE = ImmutableMap.<Metal, Integer>builder()
+            .put(Metal.BISMUTH, 270)
+            .put(Metal.BISMUTH_BRONZE, 985)
+            .put(Metal.BLACK_BRONZE, 1070)
+            .put(Metal.BRASS, 930)
+            .put(Metal.COPPER, 1080)
+            .put(Metal.GOLD, 1060)
+            .put(Metal.NICKEL, 1453)
+            .put(Metal.ROSE_GOLD, 960)
+            .put(Metal.SILVER, 961)
+            .put(Metal.TIN,230)
+            .put(Metal.ZINC, 420)
+            .put(Metal.STERLING_SILVER, 950)
+            .put(Metal.WROUGHT_IRON, 1535)
+            .put(Metal.CAST_IRON, 1535)
+            .put(Metal.PIG_IRON, 1535)
+            .put(Metal.STEEL, 1540)
+            .put(Metal.BLACK_STEEL, 1485)
+            .put(Metal.BLUE_STEEL, 1540)
+            .put(Metal.RED_STEEL, 1540)
+            .put(Metal.WEAK_STEEL, 1540)
+            .put(Metal.WEAK_BLUE_STEEL, 1540)
+            .put(Metal.WEAK_RED_STEEL, 1540)
+            .put(Metal.HIGH_CARBON_STEEL, 1540)
+            .put(Metal.HIGH_CARBON_BLACK_STEEL, 1540)
+            .put(Metal.HIGH_CARBON_BLUE_STEEL, 1540)
+            .put(Metal.HIGH_CARBON_RED_STEEL, 1540)
+            .put(Metal.BRONZE, 950)
+            .put(Metal.UNKNOWN, 400)
+            .build();
 
-    private static Holder.Reference<Block> getReference(String namespace, String path)
-    {
+    private static Holder.Reference<Block> getReference(String namespace, String path){
         return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(namespace, path)).builtInRegistryHolder();
     }
 
-    private static Holder.Reference<Block> getReference(Block block)
-    {
+    private static Holder.Reference<Block> getReference(Block block){
         return block.builtInRegistryHolder();
     }
 }

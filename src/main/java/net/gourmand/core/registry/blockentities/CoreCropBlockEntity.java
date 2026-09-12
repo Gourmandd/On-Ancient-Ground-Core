@@ -6,8 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class CoreCropBlockEntity extends CropBlockEntity
-{
+public class CoreCropBlockEntity extends CropBlockEntity {
 
     public CoreCropBlockEntity(BlockPos pos, BlockState state)
     {

@@ -2,15 +2,13 @@ package net.gourmand.core.datagen;
 
 import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.common.items.TFCItems;
-import net.dries007.tfc.util.Metal;
-import net.dries007.tfc.util.data.FluidHeat;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CategoryUtil;
+import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreTags;
-import net.gourmand.core.registry.category.SpectrumWood;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -19,6 +17,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.dries007.tfc.util.Metal;
+import net.dries007.tfc.util.data.FluidHeat;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 
@@ -63,12 +63,9 @@ public interface Accessors
 
     default Fluid fluidFor(Metal metal)
     {
-        if (metal == Metal.WROUGHT_IRON)
-        {
+        if (metal == Metal.WROUGHT_IRON){
             return TFCFluids.METALS.get(Metal.CAST_IRON).getSource();
-        }
-        else
-        {
+        } else {
             return fluidOf(metal);
         }
     }
@@ -82,13 +79,10 @@ public interface Accessors
 
     default String nameOf(Ingredient ingredient)
     {
-        if (ingredient.getCustomIngredient() instanceof CompoundIngredient(java.util.List<Ingredient> children))
-            return nameOf(children.get(0));
+        if (ingredient.getCustomIngredient() instanceof CompoundIngredient ing) return nameOf(ing.children().get(0));
         final Ingredient.Value value = ingredient.getValues()[0];
-        if (value instanceof Ingredient.TagValue(TagKey<Item> tag))
-            return tag.location().getPath();
-        if (value instanceof Ingredient.ItemValue(ItemStack item))
-            return nameOf(item.getItem());
+        if (value instanceof Ingredient.TagValue(TagKey<Item> tag)) return tag.location().getPath();
+        if (value instanceof Ingredient.ItemValue(ItemStack item)) return nameOf(item.getItem());
         throw new AssertionError("Unknown ingredient value");
     }
 
@@ -97,14 +91,12 @@ public interface Accessors
         return switch (type)
         {
             case ROD -> 50;
-            case DOUBLE_INGOT, SHEET, FISH_HOOK, FISHING_ROD, SWORD, SWORD_BLADE, MACE, MACE_HEAD, SHEARS,
-                 UNFINISHED_BOOTS -> 200;
-            case DOUBLE_SHEET, TUYERE, UNFINISHED_HELMET, UNFINISHED_CHESTPLATE, UNFINISHED_GREAVES, SHIELD, BOOTS ->
-                    400;
+            default -> 100;
+            case DOUBLE_INGOT, SHEET, FISH_HOOK, FISHING_ROD, SWORD, SWORD_BLADE, MACE, MACE_HEAD, SHEARS, UNFINISHED_BOOTS -> 200;
+            case DOUBLE_SHEET, TUYERE, UNFINISHED_HELMET, UNFINISHED_CHESTPLATE, UNFINISHED_GREAVES, SHIELD, BOOTS -> 400;
             case HELMET, GREAVES -> 600;
             case CHESTPLATE -> 800;
             case HORSE_ARMOR -> 1200;
-            default -> 100;
         };
     }
 
@@ -113,8 +105,7 @@ public interface Accessors
         return switch (type)
         {
             case ANVIL -> 1400;
-            case BLOCK, EXPOSED_BLOCK, WEATHERED_BLOCK, OXIDIZED_BLOCK, LAMP, GRATE, EXPOSED_GRATE, WEATHERED_GRATE,
-                 OXIDIZED_GRATE -> 100;
+            case BLOCK, EXPOSED_BLOCK, WEATHERED_BLOCK, OXIDIZED_BLOCK, LAMP, GRATE, EXPOSED_GRATE, WEATHERED_GRATE, OXIDIZED_GRATE -> 100;
             case BLOCK_SLAB, EXPOSED_BLOCK_SLAB, WEATHERED_BLOCK_SLAB, OXIDIZED_BLOCK_SLAB -> 50;
             case BLOCK_STAIRS, EXPOSED_BLOCK_STAIRS, WEATHERED_BLOCK_STAIRS, OXIDIZED_BLOCK_STAIRS -> 75;
             case BARS -> 25;
@@ -129,8 +120,7 @@ public interface Accessors
         {
             case CUT_BLOCK, EXPOSED_CUT_BLOCK, WEATHERED_CUT_BLOCK, OXIDIZED_CUT_BLOCK -> 100;
             case CUT_BLOCK_SLAB, EXPOSED_CUT_BLOCK_SLAB, WEATHERED_CUT_BLOCK_SLAB, OXIDIZED_CUT_BLOCK_SLAB -> 50;
-            case CUT_BLOCK_STAIRS, EXPOSED_CUT_BLOCK_STAIRS, WEATHERED_CUT_BLOCK_STAIRS, OXIDIZED_CUT_BLOCK_STAIRS ->
-                    75;
+            case CUT_BLOCK_STAIRS, EXPOSED_CUT_BLOCK_STAIRS, WEATHERED_CUT_BLOCK_STAIRS, OXIDIZED_CUT_BLOCK_STAIRS -> 75;
         };
     }
 
@@ -144,34 +134,24 @@ public interface Accessors
         return FluidHeat.MANAGER.getOrThrow(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, metal.getSerializedName())).meltTemperature();
     }
 
-    default TagKey<Item> logsTagOf(SpectrumWood woodType)
-    {
-        if (!woodType.isNoxfungi() && woodType != SpectrumWood.WEEPING_GALA)
-        {
+    default TagKey<Item> logsTagOf(SpectrumWood woodType){
+        if (!woodType.isNoxfungi() && woodType != SpectrumWood.WEEPING_GALA){
             return CoreTags.Items.SPECTRUM_COLORED_LOGS.get(woodType);
-        }
-        else
-        {
-            switch (woodType)
-            {
-                case SLATE_NOXWOOD ->
-                {
+        } else {
+            switch (woodType){
+                case SLATE_NOXWOOD -> {
                     return CoreTags.Items.SLATE_NOXCAP_STEMS;
                 }
-                case CHESTNUT_NOXWOOD ->
-                {
+                case CHESTNUT_NOXWOOD -> {
                     return CoreTags.Items.CHESTNUT_NOXCAP_STEMS;
                 }
-                case IVORY_NOXWOOD ->
-                {
+                case IVORY_NOXWOOD -> {
                     return CoreTags.Items.IVORY_NOXCAP_STEMS;
                 }
-                case EBONY_NOXWOOD ->
-                {
+                case EBONY_NOXWOOD -> {
                     return CoreTags.Items.EBONY_NOXCAP_STEMS;
                 }
-                case WEEPING_GALA ->
-                {
+                case WEEPING_GALA -> {
                     return CoreTags.Items.WEEPING_GALA_LOGS;
                 }
             }

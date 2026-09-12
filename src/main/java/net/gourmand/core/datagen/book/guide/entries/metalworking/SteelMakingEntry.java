@@ -13,65 +13,65 @@ import net.gourmand.core.modonomicon.datagen.BookAnvilWorkingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class SteelMakingEntry extends EntryProvider
-{
+public class SteelMakingEntry extends EntryProvider {
 
-    public SteelMakingEntry(CategoryProviderBase parent)
-    {
+    public SteelMakingEntry(CategoryProviderBase parent) {
         super(parent);
     }
 
     @Override
-    protected void generatePages()
-    {
+    protected void generatePages() {
 
         // page 1: explain steel making.
-        this.page("page1", () -> BookSpotlightPageModel.create().withTitle(this.context().pageTitle()).withText(this.context().pageText()).withItem(Ingredient.of(TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.INGOT))));
+        this.page("page1", () -> BookSpotlightPageModel.create()
+                .withTitle(this.context().pageTitle())
+                .withText(this.context().pageText())
+                .withItem(Ingredient.of(TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.INGOT)))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 **Steel** is a durable metal, used for machinery, and it more durable than **Wrought Iron**.
-                 \\
-                 \\
-                 It is made using a **Blast Furnace** which in itself requires **Kaolin** and **Graphite**.
-                \s""");
+                **Steel** is a durable metal, used for machinery, and it more durable than **Wrought Iron**.
+                \\
+                \\
+                It is made using a **Blast Furnace** which in itself requires **Kaolin** and **Graphite**.
+               \s""");
 
         // page 2: making it
-        this.page("page2", () -> BookAnvilWorkingPageModel.create().withText(this.context().pageText()).withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/ingot/high_carbon_steel")).withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/ingot/steel")));
+        this.page("page2", () -> BookAnvilWorkingPageModel.create()
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/ingot/high_carbon_steel"))
+                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "anvil/metal/ingot/steel"))
+        );
 
         this.pageTitle(entryName());
         this.pageText("""
-                 It is made by refining weak steel ingots made using a **Blast Furnace**.
-                \s""");
+                It is made by refining weak steel ingots made using a **Blast Furnace**.
+               \s""");
     }
 
     @Override
-    protected String entryName()
-    {
+    protected String entryName() {
         return "Steel";
     }
 
     @Override
-    protected String entryDescription()
-    {
+    protected String entryDescription() {
         return "About Steel!";
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground()
-    {
+    protected Pair<Integer, Integer> entryBackground() {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon()
-    {
+    protected BookIconModel entryIcon() {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.INGOT));
     }
 
     @Override
-    protected String entryId()
-    {
+    protected String entryId() {
         return "steel";
     }
 }

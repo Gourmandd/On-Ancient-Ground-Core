@@ -1,7 +1,6 @@
 package net.gourmand.core.registry.category;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.plant.fruit.SpreadingBushBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.SpreadingCaneBlock;
 import net.gourmand.core.registry.CoreBlockEntities;
@@ -13,12 +12,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
+import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Locale;
 
-public enum CoreSpreadingBushes implements StringRepresentable
-{
+public enum CoreSpreadingBushes implements StringRepresentable {
 
     //TEST(TFCItems.ALFALFA.holder(), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}, 3)
     ;
@@ -52,8 +51,7 @@ public enum CoreSpreadingBushes implements StringRepresentable
     }
 
     @Override
-    public String getSerializedName()
-    {
+    public String getSerializedName() {
         return serializedName;
     }
 }

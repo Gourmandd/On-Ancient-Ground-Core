@@ -11,11 +11,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class CoreToolRackBlock extends ToolRackBlock
-{
+public class CoreToolRackBlock extends ToolRackBlock {
 
-    public CoreToolRackBlock(ExtendedProperties properties)
-    {
+    public CoreToolRackBlock(ExtendedProperties properties) {
         super(properties);
     }
 

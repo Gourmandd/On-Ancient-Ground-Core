@@ -12,23 +12,27 @@ import net.minecraft.world.item.DyeColor;
 
 import java.util.concurrent.CompletableFuture;
 
-public class FillingRecipes extends FillingRecipeGen
-{
+public class FillingRecipes extends FillingRecipeGen {
 
-    public FillingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries)
-    {
+    public FillingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, AncientGroundCore.MOD_ID);
         fillingRecipes();
     }
 
-    public void fillingRecipes()
-    {
+    public void fillingRecipes(){
 
-        for (DyeColor color : DyeColor.values())
-        {
-            create(AncientGroundCore.location("filling/molten_glass/" + color.getSerializedName()), b -> b.require(CoreFluids.COLORED_GLASS.get(color).getSource(), 800).require(TFCItems.POWDERS.get(Powder.FLUX)).output(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get()));
+        for (DyeColor color : DyeColor.values()){
+            create(AncientGroundCore.location("filling/molten_glass/" + color.getSerializedName()), b -> b
+                    .require(CoreFluids.COLORED_GLASS.get(color).getSource(), 800)
+                    .require(TFCItems.POWDERS.get(Powder.FLUX))
+                    .output(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
+            );
         }
 
-        create(AncientGroundCore.location("filling/molten_glass/clear"), b -> b.require(CoreFluids.CLEAR_GLASS.getSource(), 800).require(TFCItems.POWDERS.get(Powder.FLUX)).output(CoreBlocks.CLEAR_MOLTEN_GLASS.get()));
+        create(AncientGroundCore.location("filling/molten_glass/clear"), b -> b
+                .require(CoreFluids.CLEAR_GLASS.getSource(), 800)
+                .require(TFCItems.POWDERS.get(Powder.FLUX))
+                .output(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
+        );
     }
 }

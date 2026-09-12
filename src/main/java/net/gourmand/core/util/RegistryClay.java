@@ -4,12 +4,11 @@ import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.material.MapColor;
 
-public interface RegistryClay extends StringRepresentable
-{
+public interface RegistryClay extends StringRepresentable {
 
-    MapColor mapColor();
+    public MapColor mapColor();
 
-    Rarity getRarity();
+    public Rarity getRarity();
 
-    boolean hasReducedSet();
+    public boolean hasReducedSet();
 }
