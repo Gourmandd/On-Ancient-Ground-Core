@@ -9,21 +9,25 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.BiConsumer;
 
-public class GuideBook extends SingleBookSubProvider {
+public class GuideBook extends SingleBookSubProvider
+{
 
     public static final String ID = "guide";
 
-    public GuideBook(BiConsumer<String, String> defaultLang) {
+    public GuideBook(BiConsumer<String, String> defaultLang)
+    {
         super(ID, AncientGroundCore.MOD_ID, defaultLang);
     }
 
     @Override
-    protected void registerDefaultMacros() {
+    protected void registerDefaultMacros()
+    {
 
     }
 
     @Override
-    protected void generateCategories() {
+    protected void generateCategories()
+    {
         var gettingStartedCategory = this.add(new GettingStartedCategory(this).generate());
         var equipmentCategory = this.add(new EquipmentCategory(this).generate());
         var miningCategory = this.add(new MiningCategory(this).generate());
@@ -39,22 +43,26 @@ public class GuideBook extends SingleBookSubProvider {
     }
 
     @Override
-    protected String bookName() {
+    protected String bookName()
+    {
         return "Guide To This World";
     }
 
     @Override
-    protected String bookTooltip() {
+    protected String bookTooltip()
+    {
         return "Helping you, one page at a time!";
     }
 
     @Override
-    public String bookId() {
+    public String bookId()
+    {
         return super.bookId();
     }
 
     @Override
-    protected BookModel additionalSetup(BookModel book) {
+    protected BookModel additionalSetup(BookModel book)
+    {
         return super.additionalSetup(book)
                 .withFont(ResourceLocation.fromNamespaceAndPath("minecraft", "default"))
                 .withBookContentTexture(ResourceLocation.parse("spectrum:textures/gui/modonomicon/guidebook_entry.png"))

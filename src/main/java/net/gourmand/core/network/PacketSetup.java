@@ -11,9 +11,11 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-public class PacketSetup {
+public class PacketSetup
+{
 
-    public static void setup(RegisterPayloadHandlersEvent event){
+    public static void setup(RegisterPayloadHandlersEvent event)
+    {
 
         final PayloadRegistrar register = event.registrar(ModList.get().getModFileById(AncientGroundCore.MOD_ID).versionString());
 

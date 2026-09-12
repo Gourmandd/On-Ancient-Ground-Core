@@ -18,7 +18,8 @@ import java.util.Locale;
 
 import static net.dries007.tfc.common.blocks.plant.fruit.Lifecycle.*;
 
-public enum CoreStationaryBushes implements StringRepresentable {
+public enum CoreStationaryBushes implements StringRepresentable
+{
 
     SAWBLADE_HOLLY(SpectrumItems.SAWBLADE_HOLLY_BERRY, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT),
     ALOE(SpectrumItems.ALOE_LEAF, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING);
@@ -45,7 +46,8 @@ public enum CoreStationaryBushes implements StringRepresentable {
     }
 
     @Override
-    public String getSerializedName() {
+    public String getSerializedName()
+    {
         return serializedName;
     }
 }

@@ -14,14 +14,17 @@ import net.gourmand.core.datagen.book.guide.entries.mining.ProspectingEntry;
 import net.gourmand.core.datagen.book.guide.entries.pottery.SpindleEntry;
 import net.minecraft.resources.ResourceLocation;
 
-public class EquipmentCategory extends CategoryProvider {
+public class EquipmentCategory extends CategoryProvider
+{
 
-    public EquipmentCategory(ModonomiconProviderBase parent) {
+    public EquipmentCategory(ModonomiconProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
                 "______v_w______",
                 "_______________",
@@ -32,7 +35,8 @@ public class EquipmentCategory extends CategoryProvider {
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
 
         //TODO: expand chisel entry. Include chiseling mechanic.
         //TODO: explain fishing rod.
@@ -74,22 +78,26 @@ public class EquipmentCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Equipment";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.BRONZE).get(Metal.ItemType.SWORD));
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return "equipment";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

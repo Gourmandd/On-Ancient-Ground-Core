@@ -60,10 +60,12 @@ import static net.gourmand.core.registry.category.CoreOres.BAUXITE;
 import static net.gourmand.core.registry.category.CoreRocks.*;
 import static net.gourmand.core.registry.category.CoreRocks.BRECCIA;
 
-public class LootTableBuilders {
+public class LootTableBuilders
+{
 
     // ore
-    protected static LootTable.Builder createOreTable(Block oreBlock, Item oreItem){
+    protected static LootTable.Builder createOreTable(Block oreBlock, Item oreItem)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(oreBlock).when(() -> IsIsolatedCondition.INSTANCE)
@@ -73,7 +75,8 @@ public class LootTableBuilders {
     }
 
     //crops
-    protected static LootTable.Builder createSingleCropTable(CoreCrops crop, Item productItem){
+    protected static LootTable.Builder createSingleCropTable(CoreCrops crop, Item productItem)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(productItem)
@@ -90,7 +93,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createDoubleCropTable(CoreCrops crop, Item productItem){
+    protected static LootTable.Builder createDoubleCropTable(CoreCrops crop, Item productItem)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(productItem)
@@ -115,14 +119,16 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createSpreadingCropTable(CoreCrops crop){
+    protected static LootTable.Builder createSpreadingCropTable(CoreCrops crop)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(CoreItems.CROP_SEEDS.get(crop).get()))
                 );
     }
 
-    protected static LootTable.Builder createDeadSingleCropTable(CoreCrops crop, Item productItem){
+    protected static LootTable.Builder createDeadSingleCropTable(CoreCrops crop, Item productItem)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().when(ExplosionCondition.survivesExplosion()).add(
                                 AlternativesEntry.alternatives(
@@ -139,7 +145,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createDeadDoubleCropTable(CoreCrops crop, Item productItem){
+    protected static LootTable.Builder createDeadDoubleCropTable(CoreCrops crop, Item productItem)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().when(ExplosionCondition.survivesExplosion()).add(
                                 AlternativesEntry.alternatives(
@@ -162,7 +169,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createWildSingleCropTable(CoreCrops crop, Item productItem){
+    protected static LootTable.Builder createWildSingleCropTable(CoreCrops crop, Item productItem)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(CoreItems.CROP_SEEDS.get(crop).get()))
@@ -174,14 +182,16 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createWildSpreadingCropTable(CoreCrops crop){
+    protected static LootTable.Builder createWildSpreadingCropTable(CoreCrops crop)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(CoreItems.CROP_SEEDS.get(crop).get()))
                 );
     }
 
-    protected static LootTable.Builder createWildDoubleCropTable(CoreCrops crop, Item productItem){
+    protected static LootTable.Builder createWildDoubleCropTable(CoreCrops crop, Item productItem)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(CoreItems.CROP_SEEDS.get(crop).get())).when(
@@ -202,7 +212,8 @@ public class LootTableBuilders {
     }
 
     // fruit trees
-    protected static LootTable.Builder createGrowingBranchTable(){
+    protected static LootTable.Builder createGrowingBranchTable()
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(Items.STICK))
@@ -210,7 +221,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createBranchTable(CoreFruitTrees tree){
+    protected static LootTable.Builder createBranchTable(CoreFruitTrees tree)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree).get()))
@@ -243,7 +255,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createFruitTreeSaplingTable(CoreFruitTrees tree){
+    protected static LootTable.Builder createFruitTreeSaplingTable(CoreFruitTrees tree)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(CoreBlocks.FRUIT_TREE_SAPLINGS.get(tree).get()))
@@ -278,7 +291,8 @@ public class LootTableBuilders {
     }
 
     //bushes
-    protected static LootTable.Builder createStationaryBushTable(CoreStationaryBushes bush){
+    protected static LootTable.Builder createStationaryBushTable(CoreStationaryBushes bush)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(CoreBlocks.STATIONARY_BUSHES.get(bush).get())
@@ -287,14 +301,16 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createSpreadingBushCaneTable(CoreSpreadingBushes bush){
+    protected static LootTable.Builder createSpreadingBushCaneTable(CoreSpreadingBushes bush)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(Items.STICK))
                 );
     }
 
-    protected static LootTable.Builder createSpreadingBushTable(CoreSpreadingBushes bush){
+    protected static LootTable.Builder createSpreadingBushTable(CoreSpreadingBushes bush)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(Items.STICK))
@@ -314,7 +330,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createRockDropTable(Block block, int min, int max){
+    protected static LootTable.Builder createRockDropTable(Block block, int min, int max)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(block))
@@ -322,7 +339,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createRockDropTable(Block block, int number){
+    protected static LootTable.Builder createRockDropTable(Block block, int number)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(block))
@@ -330,7 +348,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createRawRockDropTable(Block block, Block item){
+    protected static LootTable.Builder createRawRockDropTable(Block block, Block item)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(AlternativesEntry.alternatives(
@@ -340,7 +359,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createLooseRockDropTable(Block block){
+    protected static LootTable.Builder createLooseRockDropTable(Block block)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(block)).apply(
@@ -357,7 +377,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createSluiceTable(Block block){
+    protected static LootTable.Builder createSluiceTable(Block block)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(block))
@@ -367,14 +388,16 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createClayBlockTable(Block block, Item item){
+    protected static LootTable.Builder createClayBlockTable(Block block, Item item)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(LootItem.lootTableItem(item)).apply(SetItemCountFunction.setCount(new UniformGenerator(ConstantValue.exactly(2), ConstantValue.exactly(4))))
                 );
     }
 
-    protected static LootTable.Builder createSealableBlockTable(Block block){
+    protected static LootTable.Builder createSealableBlockTable(Block block)
+    {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(ExplosionCondition.survivesExplosion())
                         .add(AlternativesEntry.alternatives(
@@ -387,7 +410,8 @@ public class LootTableBuilders {
                 );
     }
 
-    protected static LootTable.Builder createDepositPanningTable(OreDeposit ore, CoreRocks rock){
+    protected static LootTable.Builder createDepositPanningTable(OreDeposit ore, CoreRocks rock)
+    {
 
         Map<CoreRocks, Item> PANNING_ALT = ImmutableMap.<CoreRocks, Item>builder()
                 .put(SERPENTINE, TFCItems.ORES.get(GRAPHITE).asItem())

@@ -13,23 +13,25 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-public class RollingRecipes extends RollingRecipeGen {
+public class RollingRecipes extends RollingRecipeGen
+{
 
-    public RollingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+    public RollingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries)
+    {
         super(output, registries, AncientGroundCore.MOD_ID);
         rollingRecipes();
     }
 
-    public void rollingRecipes(){
+    public void rollingRecipes()
+    {
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        {
 
             final DeferredHolder<Item, Item> INGOT = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.INGOT);
             final DeferredHolder<Item, Item> ROD = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.ROD);
 
-            create(ROD.getId().getPath(), b -> b.require(INGOT.get())
-                    .output(ROD.get(), 2)
-            );
+            create(ROD.getId().getPath(), b -> b.require(INGOT.get()).output(ROD.get(), 2));
         });
     }
 }

@@ -27,7 +27,8 @@ import java.util.Locale;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public enum CoreClay implements RegistryClay {
+public enum CoreClay implements RegistryClay
+{
     YIXING(MapColor.COLOR_PURPLE),
     YELLOWWARE(MapColor.TERRACOTTA_YELLOW),
     PORCELAIN(MapColor.SNOW),
@@ -39,15 +40,18 @@ public enum CoreClay implements RegistryClay {
     private final Rarity rarity;
     private final String serializedName;
 
-    CoreClay(MapColor mapColor){
+    CoreClay(MapColor mapColor)
+    {
         this(mapColor, false);
     }
 
-    CoreClay(MapColor mapColor, boolean reducedSet){
-      this(mapColor, reducedSet, Rarity.COMMON);
+    CoreClay(MapColor mapColor, boolean reducedSet)
+    {
+        this(mapColor, reducedSet, Rarity.COMMON);
     }
 
-    CoreClay(MapColor mapColor, boolean reducedSet, Rarity rarity){
+    CoreClay(MapColor mapColor, boolean reducedSet, Rarity rarity)
+    {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.mapColor = mapColor;
         this.reducedSet = reducedSet;
@@ -61,7 +65,8 @@ public enum CoreClay implements RegistryClay {
     }
 
     @Override
-    public Rarity getRarity() {
+    public Rarity getRarity()
+    {
         return rarity;
     }
 
@@ -72,27 +77,37 @@ public enum CoreClay implements RegistryClay {
     }
 
     @Override
-    public boolean hasReducedSet() {
+    public boolean hasReducedSet()
+    {
         return reducedSet;
     }
 
-    public DeferredHolder<Item, Item> getClayBallItem() {
-        if (reducedSet){
+    public DeferredHolder<Item, Item> getClayBallItem()
+    {
+        if (reducedSet)
+        {
             return TFCItems.KAOLIN_CLAY.holder();
-        } else {
+        }
+        else
+        {
             return CoreItems.CERAMICS.get(this).get(ItemType.CLAY_BALL);
         }
     }
 
-    public DeferredHolder<Block, Block> getClayBlock() {
-        if (reducedSet){
+    public DeferredHolder<Block, Block> getClayBlock()
+    {
+        if (reducedSet)
+        {
             return TFCBlocks.WHITE_KAOLIN_CLAY.holder();
-        } else {
+        }
+        else
+        {
             return CoreBlocks.CERAMIC_BLOCKS.get(this).get(BlockType.CLAY_BLOCK);
         }
     }
 
-    public enum ItemType {
+    public enum ItemType
+    {
         PICKAXE_HEAD(ItemPartType.UNFIRED_MOLD),
         PROPICK_HEAD(ItemPartType.UNFIRED_MOLD),
         AXE_HEAD(ItemPartType.UNFIRED_MOLD),
@@ -154,9 +169,12 @@ public enum CoreClay implements RegistryClay {
 
         public String getName(RegistryClay clay)
         {
-            if (type == ItemPartType.UNFIRED_MOLD){
+            if (type == ItemPartType.UNFIRED_MOLD)
+            {
                 return clay.getSerializedName() + "/unfired_" + getSerializedName() + "_mold";
-            } else {
+            }
+            else
+            {
                 return clay.getSerializedName() + "/" + getSerializedName();
             }
         }
@@ -171,12 +189,14 @@ public enum CoreClay implements RegistryClay {
             return () -> itemFactory.apply(clay);
         }
 
-        public ItemPartType getType() {
+        public ItemPartType getType()
+        {
             return type;
         }
     }
 
-    public enum BlockType implements StringRepresentable {
+    public enum BlockType implements StringRepresentable
+    {
 
         CLAY_BLOCK(BlockPartType.REDUCED_BLOCK, Blocks.CLAY),
         BRICKS(BlockPartType.BLOCK_SET, Blocks.BRICKS),
@@ -188,15 +208,18 @@ public enum CoreClay implements RegistryClay {
         private final BlockBehaviour.Properties blockProperties;
         private final String serializedName;
 
-        BlockType(BlockPartType type, Block copyBlock){
+        BlockType(BlockPartType type, Block copyBlock)
+        {
             this(type, BlockBehaviour.Properties.ofFullCopy(copyBlock), (block) -> new BlockItem(block, new Item.Properties()));
         }
 
-        BlockType(BlockPartType type, BlockBehaviour.Properties blockProperties, Function<Block, BlockItem> itemFactory){
+        BlockType(BlockPartType type, BlockBehaviour.Properties blockProperties, Function<Block, BlockItem> itemFactory)
+        {
             this(type, clay -> new Block(blockProperties), itemFactory, blockProperties);
         }
 
-        BlockType(BlockPartType type, Function<CoreClay, Block> blockFactory, Function<Block, BlockItem> itemFactory, BlockBehaviour.Properties blockProperties){
+        BlockType(BlockPartType type, Function<CoreClay, Block> blockFactory, Function<Block, BlockItem> itemFactory, BlockBehaviour.Properties blockProperties)
+        {
             this.type = type;
             this.blockFactory = blockFactory;
             this.itemFactory = itemFactory;
@@ -204,23 +227,28 @@ public enum CoreClay implements RegistryClay {
             this.serializedName = name().toLowerCase(Locale.ROOT);
         }
 
-        public SlabBlock createSlab(CoreClay clay){
+        public SlabBlock createSlab(CoreClay clay)
+        {
             return new SlabBlock(this.blockProperties.mapColor(clay.mapColor()));
         }
 
-        public StairBlock createStairs(CoreClay clay){
+        public StairBlock createStairs(CoreClay clay)
+        {
             return new StairBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(this).get().defaultBlockState(), this.blockProperties.mapColor(clay.mapColor()));
         }
 
-        public WallBlock createWall(CoreClay clay){
+        public WallBlock createWall(CoreClay clay)
+        {
             return new WallBlock(this.blockProperties.mapColor(clay.mapColor()));
         }
 
-        public Block getBlock(CoreClay clay){
+        public Block getBlock(CoreClay clay)
+        {
             return this.blockFactory.apply(clay);
         }
 
-        public Function<Block, BlockItem> getItemFactory(){
+        public Function<Block, BlockItem> getItemFactory()
+        {
             return this.itemFactory;
         }
 
@@ -230,12 +258,14 @@ public enum CoreClay implements RegistryClay {
             return !(clay.hasReducedSet() && getType() == BlockPartType.REDUCED_BLOCK);
         }
 
-        public BlockPartType getType() {
+        public BlockPartType getType()
+        {
             return type;
         }
 
         @Override
-        public String getSerializedName() {
+        public String getSerializedName()
+        {
             return serializedName;
         }
     }
@@ -243,12 +273,17 @@ public enum CoreClay implements RegistryClay {
     public enum ItemPartType
     {
         // reduced item means that clay types with reducedSet: true won't have this item.
-        UNFIRED_MOLD, ITEM, REDUCED_ITEM
+        UNFIRED_MOLD,
+        ITEM,
+        REDUCED_ITEM
     }
 
     public enum BlockPartType
     {
         // reduced block means that clay types with reducedSet: true won't have this block.
-        VESSEL, BLOCK, BLOCK_SET, REDUCED_BLOCK
+        VESSEL,
+        BLOCK,
+        BLOCK_SET,
+        REDUCED_BLOCK
     }
 }

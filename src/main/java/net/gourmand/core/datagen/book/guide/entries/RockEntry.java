@@ -20,14 +20,16 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.Objects;
 
-public class RockEntry extends EntryProvider {
+public class RockEntry extends EntryProvider
+{
 
     public final String ID;
     public final BookIconModel ICON;
     public final String text;
     public final Item item;
 
-    public RockEntry(CategoryProviderBase parent, RegistryRock rock, String text) {
+    public RockEntry(CategoryProviderBase parent, RegistryRock rock, String text)
+    {
         super(parent);
         this.ID = rock.getSerializedName();
         this.ICON = BookIconModel.create(Objects.requireNonNull(getLooseItem(rock)));
@@ -36,7 +38,8 @@ public class RockEntry extends EntryProvider {
     }
 
     @Override
-    protected void generatePages() {
+    protected void generatePages()
+    {
 
         this.page("page1", () -> BookSpotlightPageModel.create()
                 .withTitle(this.context().pageTitle())
@@ -56,39 +59,47 @@ public class RockEntry extends EntryProvider {
     }
 
     @Override
-    protected String entryName() {
+    protected String entryName()
+    {
         return TextUtil.getName(ID);
     }
 
     @Override
-    protected String entryDescription() {
+    protected String entryDescription()
+    {
         return "Where to find: " + TextUtil.getName(ID);
     }
 
     @Override
-    protected Pair<Integer, Integer> entryBackground() {
+    protected Pair<Integer, Integer> entryBackground()
+    {
         return EntryBackground.DEFAULT;
     }
 
     @Override
-    protected BookIconModel entryIcon() {
+    protected BookIconModel entryIcon()
+    {
         return ICON;
     }
 
     @Override
-    protected String entryId() {
+    protected String entryId()
+    {
         return ID;
     }
 
-    private Item getLooseItem(RegistryRock rock){
+    private Item getLooseItem(RegistryRock rock)
+    {
 
-        assert rock instanceof Rock || rock instanceof CoreRocks: "rock is not from Rock (TFC) or CoreRocks (On Ancient Ground)";
+        assert rock instanceof Rock || rock instanceof CoreRocks : "rock is not from Rock (TFC) or CoreRocks (On Ancient Ground)";
 
-        if (rock instanceof Rock){
+        if (rock instanceof Rock)
+        {
             return TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).holder().get().asItem();
         }
 
-        if (rock instanceof CoreRocks){
+        if (rock instanceof CoreRocks)
+        {
             return CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get().asItem();
         }
 

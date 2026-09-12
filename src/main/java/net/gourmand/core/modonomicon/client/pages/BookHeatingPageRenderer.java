@@ -15,39 +15,47 @@ import net.minecraft.world.level.Level;
 
 import java.util.Objects;
 
-public class BookHeatingPageRenderer extends BookRecipePageRenderer<HeatingRecipe, BookHeatingPage> {
+public class BookHeatingPageRenderer extends BookRecipePageRenderer<HeatingRecipe, BookHeatingPage>
+{
 
-    public BookHeatingPageRenderer(BookHeatingPage page) {
+    public BookHeatingPageRenderer(BookHeatingPage page)
+    {
         super(page);
     }
 
     @Override
-    protected int getRecipeHeight() {
+    protected int getRecipeHeight()
+    {
         return 45;
     }
 
     @Override
-    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<HeatingRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second) {
+    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<HeatingRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second)
+    {
 
         Level world = Minecraft.getInstance().level;
         if (world == null) return;
 
         recipeY += 10;
 
-        if (!second) {
-            if (!this.page.getTitle1().isEmpty()) {
+        if (!second)
+        {
+            if (!this.page.getTitle1().isEmpty())
+            {
                 this.renderTitle(guiGraphics, this.page.getTitle1(), false, BookEntryScreen.PAGE_WIDTH / 2, 0);
             }
-        } else {
-            if (!this.page.getTitle2().isEmpty()) {
-                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2,
-                        recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0) - 10);
+        }
+        else
+        {
+            if (!this.page.getTitle2().isEmpty())
+            {
+                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2, recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0) - 10);
             }
         }
 
         RenderSystem.enableBlend();
         guiGraphics.blit(this.page.getBook().getCraftingTexture(), recipeX - 12, recipeY, 11, 71, 24, 24, 128, 256); // box
-        guiGraphics.blit(this.page.getBook().getCraftingTexture(), recipeX - 12 + 26, recipeY+ 7, 38, 79, 9, 9, 128, 256); // arrow
+        guiGraphics.blit(this.page.getBook().getCraftingTexture(), recipeX - 12 + 26, recipeY + 7, 38, 79, 9, 9, 128, 256); // arrow
 
         guiGraphics.blit(this.page.getBook().getCraftingTexture(), recipeX - 12 + 80, recipeY + 7, 38, 79, 9, 9, 128, 256); // arrow
         guiGraphics.blit(this.page.getBook().getCraftingTexture(), recipeX - 12 + 92, recipeY, 11, 71, 24, 24, 128, 256); // box

@@ -13,12 +13,15 @@ import net.minecraft.resources.ResourceKey;
 
 import java.util.Optional;
 
-public class BuiltinRockSettings {
+public class BuiltinRockSettings
+{
 
-    public static void bootstrap(BootstrapContext<RockSettings> ctx){
+    public static void bootstrap(BootstrapContext<RockSettings> ctx)
+    {
         for (CoreRocks rock : CoreRocks.values())
         {
-            if (rock.hasOres()){
+            if (rock.hasOres())
+            {
                 ctx.register(rockKey(rock), makeSetting(rock));
             }
         }

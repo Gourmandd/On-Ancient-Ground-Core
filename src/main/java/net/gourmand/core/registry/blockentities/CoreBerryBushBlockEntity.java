@@ -4,25 +4,15 @@ import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blockentities.TickCounterBlockEntity;
 import net.gourmand.core.registry.CoreBlockEntities;
 import net.minecraft.core.BlockPos;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class CoreBerryBushBlockEntity extends BerryBushBlockEntity {
-
-    public static void reset(Level level, BlockPos pos)
-    {
-        level.getBlockEntity(pos, CoreBlockEntities.BERRY_BUSH.get()).ifPresent(TickCounterBlockEntity::resetCounter);
-    }
-
-    public static void resetPickedTick(Level level, BlockPos pos)
-    {
-        level.getBlockEntity(pos, CoreBlockEntities.BERRY_BUSH.get()).ifPresent(BerryBushBlockEntity::resetLastPickedCounter);
-    }
+public class CoreBerryBushBlockEntity extends BerryBushBlockEntity
+{
 
     // Allows for large bushes without runaway spreading
-    private int growthsRemaining;
+    private final int growthsRemaining;
 
     public CoreBerryBushBlockEntity(BlockPos pos, BlockState state)
     {
@@ -33,5 +23,15 @@ public class CoreBerryBushBlockEntity extends BerryBushBlockEntity {
     {
         super(type, pos, state);
         this.growthsRemaining = 24;
+    }
+
+    public static void reset(Level level, BlockPos pos)
+    {
+        level.getBlockEntity(pos, CoreBlockEntities.BERRY_BUSH.get()).ifPresent(TickCounterBlockEntity::resetCounter);
+    }
+
+    public static void resetPickedTick(Level level, BlockPos pos)
+    {
+        level.getBlockEntity(pos, CoreBlockEntities.BERRY_BUSH.get()).ifPresent(BerryBushBlockEntity::resetLastPickedCounter);
     }
 }

@@ -47,7 +47,8 @@ public class BuiltinBlockTags extends TagsProvider<Block>
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.Provider provider)
+    {
 
         final TagKey<Block> SHIMMERSTONE_ORES = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "shimmerstone_ores"));
         // adds #c:ores to this tag to be able to isolate and get ore blocks.
@@ -129,13 +130,20 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             )
         );
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            if (rock.hasOres()) {
-                Stream.of(Ore.values()).forEach(ore -> {
-                    if (ore.hasBlock()) {
-                        if (ore.isGraded()) {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
+            if (rock.hasOres())
+            {
+                Stream.of(Ore.values()).forEach(ore ->
+                {
+                    if (ore.hasBlock())
+                    {
+                        if (ore.isGraded())
+                        {
                             addGradedOreTags(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES, ore, rock);
-                        } else {
+                        }
+                        else
+                        {
                             addOreTags(CoreBlocks.CUSTOM_ROCK_TFC_ORES, ore, rock);
                         }
                     }
@@ -143,7 +151,8 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             }
         });
 
-        Stream.of(CoreOres.values()).forEach(ore -> {
+        Stream.of(CoreOres.values()).forEach(ore ->
+        {
             if (!ore.hasBlock())
             {
                 ResourceKey<Block> key = CoreBlocks.BASIC_ORES.get(ore).getKey();
@@ -153,16 +162,22 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             }
             else
             {
-                Stream.of(CoreRocks.values()).forEach(rock -> {
-                    if (rock.hasOres()) {
-                        if (ore.isGraded()) {
+                Stream.of(CoreRocks.values()).forEach(rock ->
+                {
+                    if (rock.hasOres())
+                    {
+                        if (ore.isGraded())
+                        {
                             addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
-                        } else {
+                        }
+                        else
+                        {
                             addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
                         }
                     }
                 });
-                Stream.of(Rock.values()).forEach(rock -> {
+                Stream.of(Rock.values()).forEach(rock ->
+                {
                     if (ore.isGraded())
                     {
                         addGradedOreTags(CoreBlocks.GRADED_ORES, ore, rock);
@@ -175,28 +190,31 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             }
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            if (rock.hasOres()) {
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
+            if (rock.hasOres())
+            {
                 this.tag(SpectrumBlockTags.AZURITE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE).getKey());
                 this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
             }
         });
 
-        Stream.of(Rock.values()).forEach(rock -> {
+        Stream.of(Rock.values()).forEach(rock ->
+        {
             this.tag(SpectrumBlockTags.AZURITE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.AZURITE).getKey());
             this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            if (rock.hasOres()) {
-                add(CoreBlocks.ORE_DEPOSITS.get(rock), List.of(
-                        TFCTags.Blocks.CAN_LANDSLIDE,
-                        BlockTags.MINEABLE_WITH_SHOVEL
-                ));
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
+            if (rock.hasOres())
+            {
+                add(CoreBlocks.ORE_DEPOSITS.get(rock), List.of(TFCTags.Blocks.CAN_LANDSLIDE, BlockTags.MINEABLE_WITH_SHOVEL));
             }
         });
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        {
             this.tag(BlockTags.SLABS).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB).getKey());
             this.tag(BlockTags.STAIRS).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS).getKey());
 
@@ -205,16 +223,22 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS).getKey());
         });
 
-        Stream.of(CoreRocks.values()).forEach(rock ->{
+        Stream.of(CoreRocks.values()).forEach(rock ->
+        {
 
-            Stream.of(Rock.BlockType.values()).forEach(type ->{
-                if (rock.hasVariant(type) && type != Rock.BlockType.GRAVEL){
-                    if (type.hasVariants()){
+            Stream.of(Rock.BlockType.values()).forEach(type ->
+            {
+                if (rock.hasVariant(type) && type != Rock.BlockType.GRAVEL)
+                {
+                    if (type.hasVariants())
+                    {
                         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().getKey());
                         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().getKey());
                         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().getKey());
                         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getKey());
-                    } else {
+                    }
+                    else
+                    {
                         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getKey());
                     }
                 }
@@ -229,9 +253,15 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).getKey())
                     .add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
 
-            this.tag(TFCTags.Blocks.STONES_RAW).add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
-            this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
-            this.tag(TFCTags.Blocks.CAN_START_COLLAPSE).add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
+            this.tag(TFCTags.Blocks.STONES_RAW)
+                    .add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
+
+            this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED)
+                    .add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
+
+            this.tag(TFCTags.Blocks.CAN_START_COLLAPSE)
+                    .add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key());
+
             this.tag(TFCTags.Blocks.CAN_TRIGGER_COLLAPSE)
                     .add(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key())
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).getKey());
@@ -244,8 +274,11 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).getKey())
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).getKey());
 
-            this.tag(Tags.Blocks.COBBLESTONES_NORMAL).add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).getKey());
-            this.tag(Tags.Blocks.COBBLESTONES_MOSSY).add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).getKey());
+            this.tag(Tags.Blocks.COBBLESTONES_NORMAL)
+                    .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).getKey());
+
+            this.tag(Tags.Blocks.COBBLESTONES_MOSSY)
+                    .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).getKey());
 
             this.tag(Tags.Blocks.COBBLESTONES)
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).getKey())
@@ -275,7 +308,8 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).getKey())
                     .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE).getKey());
 
-            if (rock.hasVariants()){
+            if (rock.hasVariants())
+            {
                 this.tag(BlockTags.STONE_BRICKS)
                         .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BRICKS).getKey())
                         .add(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CRACKED_BRICKS).getKey())
@@ -307,7 +341,8 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             }
         });
 
-        Stream.of(SpectrumWood.values()).forEach(wood ->{
+        Stream.of(SpectrumWood.values()).forEach(wood ->
+        {
             this.tag(BlockTags.MINEABLE_WITH_AXE)
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.TWIG).getKey())
                     .add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).getKey())
@@ -329,9 +364,11 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             this.tag(TFCTags.Blocks.CLOCK_READABLE).add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.BARREL).getKey());
         });
 
-        Stream.of(CoreClay.values()).forEach(clay -> {
+        Stream.of(CoreClay.values()).forEach(clay ->
+        {
 
-            if (CoreClay.BlockType.CLAY_BLOCK.hasClayType(clay)){
+            if (CoreClay.BlockType.CLAY_BLOCK.hasClayType(clay))
+            {
 
                 this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                         .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.CLAY_BLOCK).getKey());
@@ -346,7 +383,9 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                         .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.CLAY_BLOCK).getKey());
             }
 
-            if (CoreClay.BlockType.BRICKS.hasClayType(clay)){
+            if (CoreClay.BlockType.BRICKS.hasClayType(clay))
+            {
+
                 this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                         .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).getKey())
                         .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).stair().getKey())
@@ -363,9 +402,13 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                         .add(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(CoreClay.BlockType.BRICKS).stair().getKey());
             }
 
-            if (CoreClay.BlockType.LARGE_VESSEL.hasClayType(clay)){
-                this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL).getKey());
-                this.tag(TFCTags.Blocks.PET_SITS_ON).add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL).getKey());
+            if (CoreClay.BlockType.LARGE_VESSEL.hasClayType(clay))
+            {
+                this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                        .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL).getKey());
+
+                this.tag(TFCTags.Blocks.PET_SITS_ON)
+                        .add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(CoreClay.BlockType.LARGE_VESSEL).getKey());
             }
         });
 
@@ -432,15 +475,19 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         this.tag(TFCTags.Blocks.CHARCOAL_FORGE_INVISIBLE).add(AllBlocks.BASIN.getKey());
     }
 
-    protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){
-        for (DeferredHolder<Block, Block> block : map.values()){
-            for (TagKey<Block> tag : tags){
+    protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags)
+    {
+        for (DeferredHolder<Block, Block> block : map.values())
+        {
+            for (TagKey<Block> tag : tags)
+            {
                 this.tag(tag).add(block.getKey());
             }
         }
     }
 
-    private <T1 extends RegistryRock, T2 extends Enum> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock){
+    private <T1 extends RegistryRock, T2 extends Enum> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock)
+    {
         ResourceKey<Block> key = map.get(rock).get(ore).getKey();
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(key);
         this.tag(Tags.Blocks.ORES).add(key);
@@ -448,9 +495,11 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
     }
 
-    private <T1 extends RegistryRock, T2 extends Enum, T3 extends CoreOres.Grade> void addGradedOreTags(Map<T1, Map<T2, Map<T3, DeferredHolder<Block, Block>>>> map, T2 ore, T1 rock){
+    private <T1 extends RegistryRock, T2 extends Enum, T3 extends CoreOres.Grade> void addGradedOreTags(Map<T1, Map<T2, Map<T3, DeferredHolder<Block, Block>>>> map, T2 ore, T1 rock)
+    {
 
-        for (CoreOres.Grade grade : CoreOres.Grade.values()){
+        for (CoreOres.Grade grade : CoreOres.Grade.values())
+        {
             ResourceKey<Block> key = map.get(rock).get(ore).get(grade).getKey();
             this.tag(BlockTags.NEEDS_STONE_TOOL).add(key);
             this.tag(Tags.Blocks.ORES).add(key);

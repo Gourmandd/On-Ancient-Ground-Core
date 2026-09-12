@@ -15,7 +15,18 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
-public abstract class CorePickableClimbingCropBlock extends PickableClimbingCropBlock {
+public abstract class CorePickableClimbingCropBlock extends PickableClimbingCropBlock
+{
+    private final @Nullable Supplier<Supplier<? extends Item>> fruit;
+    private final Supplier<Supplier<? extends Item>> matureFruit;
+
+    protected CorePickableClimbingCropBlock(ExtendedProperties properties, int maxSingleAge, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange, @Nullable Supplier<Supplier<? extends Item>> fruit, Supplier<Supplier<? extends Item>> matureFruit)
+    {
+        super(properties, maxSingleAge, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange, fruit, matureFruit);
+        this.fruit = fruit;
+        this.matureFruit = matureFruit;
+    }
+
     public static CorePickableClimbingCropBlock create(ExtendedProperties properties, int singleStages, int doubleStages, CoreCrops crop, @Nullable Supplier<Supplier<? extends Item>> fruit, Supplier<Supplier<? extends Item>> matureFruit)
     {
         final IntegerProperty property = TFCBlockStateProperties.getAgeProperty(singleStages + doubleStages - 1);
@@ -27,15 +38,5 @@ public abstract class CorePickableClimbingCropBlock extends PickableClimbingCrop
                 return property;
             }
         };
-    }
-
-    private final @Nullable Supplier<Supplier<? extends Item>> fruit;
-    private final Supplier<Supplier<? extends Item>> matureFruit;
-
-    protected CorePickableClimbingCropBlock(ExtendedProperties properties, int maxSingleAge, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange, @Nullable Supplier<Supplier<? extends Item>> fruit, Supplier<Supplier<? extends Item>> matureFruit)
-    {
-        super(properties, maxSingleAge, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange, fruit, matureFruit);
-        this.fruit = fruit;
-        this.matureFruit = matureFruit;
     }
 }

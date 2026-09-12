@@ -8,7 +8,6 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.SpectrumWood;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,7 +22,8 @@ import java.util.Map;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class CreativeTabs {
+public class CreativeTabs
+{
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AncientGroundCore.MOD_ID);
 
 
@@ -65,7 +65,7 @@ public class CreativeTabs {
 
     private static void fillMetal(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
-        for(CoreMetals.MetalType metal : CoreMetals.MetalType.values())
+        for (CoreMetals.MetalType metal : CoreMetals.MetalType.values())
         {
             for (Metal.ItemType type : Metal.ItemType.values())
             {
@@ -113,9 +113,7 @@ public class CreativeTabs {
             }
         }
 
-        CoreBlocks.BASIC_ORES.values().forEach( basicOre ->
-                out.accept(basicOre.get())
-        );
+        CoreBlocks.BASIC_ORES.values().forEach(basicOre -> out.accept(basicOre.get()));
 
         for (CoreOres ore : CoreOres.values())
         {
@@ -126,19 +124,19 @@ public class CreativeTabs {
         {
             if (ore.isGraded())
             {
-                CoreBlocks.GRADED_ORES.values().forEach(map -> {
-                        accept(out, map, ore, CoreOres.Grade.POOR);
-                        accept(out, map, ore, CoreOres.Grade.NORMAL);
-                        accept(out, map, ore, CoreOres.Grade.RICH);
-                    }
-                );
+                CoreBlocks.GRADED_ORES.values().forEach(map ->
+                {
+                    accept(out, map, ore, CoreOres.Grade.POOR);
+                    accept(out, map, ore, CoreOres.Grade.NORMAL);
+                    accept(out, map, ore, CoreOres.Grade.RICH);
+                });
 
-                CoreBlocks.CUSTOM_ROCK_GRADED_ORES.values().forEach(map -> {
-                            accept(out, map, ore, CoreOres.Grade.POOR);
-                            accept(out, map, ore, CoreOres.Grade.NORMAL);
-                            accept(out, map, ore, CoreOres.Grade.RICH);
-                        }
-                );
+                CoreBlocks.CUSTOM_ROCK_GRADED_ORES.values().forEach(map ->
+                {
+                    accept(out, map, ore, CoreOres.Grade.POOR);
+                    accept(out, map, ore, CoreOres.Grade.NORMAL);
+                    accept(out, map, ore, CoreOres.Grade.RICH);
+                });
             }
             else
             {
@@ -154,12 +152,12 @@ public class CreativeTabs {
         {
             if (ore.isGraded())
             {
-                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map -> {
-                            accept(out, map, ore, CoreOres.Grade.POOR);
-                            accept(out, map, ore, CoreOres.Grade.NORMAL);
-                            accept(out, map, ore, CoreOres.Grade.RICH);
-                        }
-                );
+                CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map ->
+                {
+                    accept(out, map, ore, CoreOres.Grade.POOR);
+                    accept(out, map, ore, CoreOres.Grade.NORMAL);
+                    accept(out, map, ore, CoreOres.Grade.RICH);
+                });
             }
             else
             {
@@ -167,9 +165,12 @@ public class CreativeTabs {
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (rock.hasOres()){
-                for (OreDeposit ore : OreDeposit.values()){
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (rock.hasOres())
+            {
+                for (OreDeposit ore : OreDeposit.values())
+                {
                     out.accept(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get());
                 }
             }
@@ -180,24 +181,7 @@ public class CreativeTabs {
     {
         for (CoreRocks rock : CoreRocks.VALUES)
         {
-            for (Rock.BlockType type : new Rock.BlockType[] {
-                    Rock.BlockType.HARDENED,
-                    Rock.BlockType.RAW,
-                    Rock.BlockType.PRESSURE_PLATE,
-                    Rock.BlockType.BUTTON,
-                    Rock.BlockType.SPIKE,
-                    Rock.BlockType.COBBLE,
-                    Rock.BlockType.MOSSY_COBBLE,
-                    Rock.BlockType.BRICKS,
-                    Rock.BlockType.CRACKED_BRICKS,
-                    Rock.BlockType.MOSSY_BRICKS,
-                    Rock.BlockType.SMOOTH,
-                    Rock.BlockType.CHISELED,
-                    Rock.BlockType.AQUEDUCT,
-                    Rock.BlockType.GRAVEL,
-                    Rock.BlockType.LOOSE,
-                    Rock.BlockType.MOSSY_LOOSE,
-            })
+            for (Rock.BlockType type : new Rock.BlockType[]{Rock.BlockType.HARDENED, Rock.BlockType.RAW, Rock.BlockType.PRESSURE_PLATE, Rock.BlockType.BUTTON, Rock.BlockType.SPIKE, Rock.BlockType.COBBLE, Rock.BlockType.MOSSY_COBBLE, Rock.BlockType.BRICKS, Rock.BlockType.CRACKED_BRICKS, Rock.BlockType.MOSSY_BRICKS, Rock.BlockType.SMOOTH, Rock.BlockType.CHISELED, Rock.BlockType.AQUEDUCT, Rock.BlockType.GRAVEL, Rock.BlockType.LOOSE, Rock.BlockType.MOSSY_LOOSE,})
             {
                 if (rock.hasVariant(type))
                 {
@@ -214,7 +198,8 @@ public class CreativeTabs {
             accept(out, CoreBlocks.MORTARED_CUSTOM_COBBLE, rock);
         }
 
-        for (Rock rock : Rock.values()){
+        for (Rock rock : Rock.values())
+        {
             accept(out, CoreBlocks.MORTARED_TFC_COBBLE, rock);
         }
     }
@@ -236,18 +221,22 @@ public class CreativeTabs {
         {
             for (CoreClay.ItemType type : CoreClay.ItemType.values())
             {
-                if (type.hasType(clay)){
+                if (type.hasType(clay))
+                {
                     out.accept(CoreItems.CERAMICS.get(clay).get(type).get());
                 }
             }
 
-            Stream.of(CoreClay.BlockType.values()).forEach(type -> {
+            Stream.of(CoreClay.BlockType.values()).forEach(type ->
+            {
 
-                if (type.hasClayType(clay)){
+                if (type.hasClayType(clay))
+                {
                     out.accept(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get());
                 }
 
-                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET){
+                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET)
+                {
                     out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair().get());
                     out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab().get());
                     out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall().get());
@@ -260,7 +249,7 @@ public class CreativeTabs {
     {
         for (SpectrumWood wood : SpectrumWood.values())
         {
-            CoreBlocks.DEEPER_DOWN_WOODS.get(wood).forEach((type,reg) ->
+            CoreBlocks.DEEPER_DOWN_WOODS.get(wood).forEach((type, reg) ->
             {
                 if (type.needsItem() && wood.hasBlockType(type))
                 {
@@ -283,22 +272,26 @@ public class CreativeTabs {
 
     private static void fillGlass(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
-        Stream.of(DyeColor.values()).forEach(color -> {
+        Stream.of(DyeColor.values()).forEach(color ->
+        {
             out.accept(CoreItems.COLORED_LENS.get(color).get());
         });
 
         out.accept(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
-        Stream.of(DyeColor.values()).forEach(color -> {
+        Stream.of(DyeColor.values()).forEach(color ->
+        {
             out.accept(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
         });
 
         out.accept(CoreBlocks.CLEAR_LEAD_GLASS.get());
-        Stream.of(DyeColor.values()).forEach(color -> {
+        Stream.of(DyeColor.values()).forEach(color ->
+        {
             out.accept(CoreBlocks.COLOURED_LEAD_GLASS.get(color).get());
         });
 
         out.accept(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get());
-        Stream.of(DyeColor.values()).forEach(color -> {
+        Stream.of(DyeColor.values()).forEach(color ->
+        {
             out.accept(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get());
         });
 
@@ -328,18 +321,14 @@ public class CreativeTabs {
 
     private static <R extends DeferredHolder<?, ?>, K> void accept(CreativeModeTab.Output out, Map<K, R> map, K key)
     {
-        if (map.containsKey(key)) {
+        if (map.containsKey(key))
+        {
             out.accept((ItemLike) map.get(key));
         }
     }
 
     private static DeferredHolder<CreativeModeTab, CreativeModeTab> register(String id, Supplier<ItemStack> icon, CreativeModeTab.DisplayItemsGenerator gen)
     {
-        return CREATIVE_TABS.register(id, () -> CreativeModeTab.builder()
-                .icon(icon)
-                .title(Component.translatable("item_group." + id + "." + AncientGroundCore.MOD_ID))
-                .displayItems(gen)
-                .build()
-        );
+        return CREATIVE_TABS.register(id, () -> CreativeModeTab.builder().icon(icon).title(Component.translatable("item_group." + id + "." + AncientGroundCore.MOD_ID)).displayItems(gen).build());
     }
 }

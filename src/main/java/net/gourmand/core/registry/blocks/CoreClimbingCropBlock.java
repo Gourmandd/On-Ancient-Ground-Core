@@ -15,9 +15,16 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import java.util.function.Supplier;
 
-public abstract class CoreClimbingCropBlock extends ClimbingCropBlock {
+public abstract class CoreClimbingCropBlock extends ClimbingCropBlock
+{
 
     public static final BooleanProperty STICK = TFCBlockStateProperties.STICK;
+
+    protected CoreClimbingCropBlock(ExtendedProperties properties, int maxSingleAge, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange)
+    {
+        super(properties, maxSingleAge, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange);
+        registerDefaultState(getStateDefinition().any().setValue(STICK, false).setValue(PART, Part.BOTTOM));
+    }
 
     public static CoreClimbingCropBlock create(ExtendedProperties properties, int singleStages, int doubleStages, CoreCrops crop)
     {
@@ -30,11 +37,5 @@ public abstract class CoreClimbingCropBlock extends ClimbingCropBlock {
                 return property;
             }
         };
-    }
-
-    protected CoreClimbingCropBlock(ExtendedProperties properties, int maxSingleAge, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange)
-    {
-        super(properties, maxSingleAge, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange);
-        registerDefaultState(getStateDefinition().any().setValue(STICK, false).setValue(PART, Part.BOTTOM));
     }
 }

@@ -12,16 +12,23 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(SwitchInventoryTabPacket.class)
-public class SwitchInventoryTabPacketMixin {
+public class SwitchInventoryTabPacketMixin
+{
 
-    @Shadow @Final private PlayerInventoryTabButton.Tab tab;
+    @Shadow
+    @Final
+    private PlayerInventoryTabButton.Tab tab;
 
     @WrapMethod(method = "handle")
-    void onHandle(ServerPlayer player, Operation<Void> original){
-        if ((player != null) && (this.tab == PlayerInventoryTabButton.Tab.BOOK)) {
+    void onHandle(ServerPlayer player, Operation<Void> original)
+    {
+        if ((player != null) && (this.tab == PlayerInventoryTabButton.Tab.BOOK))
+        {
             player.doCloseContainer();
             PacketDistributor.sendToPlayer(player, new OpenModpackGuidePacket());
-        } else {
+        }
+        else
+        {
             original.call(player);
         }
     }

@@ -10,21 +10,25 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.datagen.book.guide.entries.masonry.*;
 import net.minecraft.resources.ResourceLocation;
 
-public class MasonryCategory extends CategoryProvider {
+public class MasonryCategory extends CategoryProvider
+{
 
-    public MasonryCategory(ModonomiconProviderBase parent) {
+    public MasonryCategory(ModonomiconProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
             "abcdefgj"
         };
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
 
         var bricks_and_mortar = this.add(new BricksAndMortarEntry(this).generate("a"));
         var stone_bricks = this.add(new StoneBricksEntry(this).generate("b"));
@@ -42,22 +46,26 @@ public class MasonryCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Masonry";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.BRONZE).get(Metal.ItemType.CHISEL));
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return "masonry";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

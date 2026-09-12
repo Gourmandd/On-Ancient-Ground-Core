@@ -16,7 +16,8 @@ import java.util.Collection;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class CoreBlockEntities {
+public class CoreBlockEntities
+{
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, AncientGroundCore.MOD_ID);
 

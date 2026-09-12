@@ -6,18 +6,23 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookCategoryModel;
 import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
-import net.gourmand.core.datagen.book.guide.entries.homesteading.*;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.CellarEntry;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.FoodShelfEntry;
+import net.gourmand.core.datagen.book.guide.entries.homesteading.HangerEntry;
 import net.gourmand.core.datagen.book.guide.entries.homesteading.traits.*;
 import net.minecraft.resources.ResourceLocation;
 
-public class HomesteadingCategory extends CategoryProvider {
+public class HomesteadingCategory extends CategoryProvider
+{
 
-    public HomesteadingCategory(ModonomiconProviderBase parent) {
+    public HomesteadingCategory(ModonomiconProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
             "_____g",
             "_____h",
@@ -34,7 +39,8 @@ public class HomesteadingCategory extends CategoryProvider {
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
 
         var cellar = this.add(new CellarEntry(this).generate("g"));
         var food_shelf = this.add(new FoodShelfEntry(this).generate("h"));
@@ -95,22 +101,26 @@ public class HomesteadingCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Homesteading";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCItems.JUTE_NET);
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return "homesteading";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

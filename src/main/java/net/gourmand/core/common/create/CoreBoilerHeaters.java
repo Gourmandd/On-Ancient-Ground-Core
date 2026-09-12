@@ -12,60 +12,72 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Optional;
 
-public class CoreBoilerHeaters {
-
-    static public void register(){
-        BoilerHeater.REGISTRY.register(TFCBlocks.FIREBOX.get(), FIREBOX);
-        BoilerHeater.REGISTRY.register(TFCBlocks.CHARCOAL_FORGE.get(), CHARCOAL_FORGE);
-        BoilerHeater.REGISTRY.register(TFCBlocks.CRUCIBLE.get(), CRUCIBLE);
-    }
+public class CoreBoilerHeaters
+{
 
     static BoilerHeater FIREBOX = CoreBoilerHeaters::FireboxDevice;
     static BoilerHeater CHARCOAL_FORGE = CoreBoilerHeaters::CharcoalForgeDevice;
     static BoilerHeater CRUCIBLE = CoreBoilerHeaters::CrucibleDevice;
 
-    public static int FireboxDevice(Level level, BlockPos pos, BlockState state) {
+    static public void register()
+    {
+        BoilerHeater.REGISTRY.register(TFCBlocks.FIREBOX.get(), FIREBOX);
+        BoilerHeater.REGISTRY.register(TFCBlocks.CHARCOAL_FORGE.get(), CHARCOAL_FORGE);
+        BoilerHeater.REGISTRY.register(TFCBlocks.CRUCIBLE.get(), CRUCIBLE);
+    }
+
+    public static int FireboxDevice(Level level, BlockPos pos, BlockState state)
+    {
 
         Optional<FireboxBlockEntity> firebox = level.getBlockEntity(pos, TFCBlockEntities.FIREBOX.get());
 
-        if (firebox.isPresent()){
+        if (firebox.isPresent())
+        {
             return getHeatValue((int) firebox.get().getTemperature());
         }
 
         return BoilerHeater.NO_HEAT;
     }
 
-    public static int CharcoalForgeDevice(Level level, BlockPos pos, BlockState state) {
+    public static int CharcoalForgeDevice(Level level, BlockPos pos, BlockState state)
+    {
 
         Optional<CharcoalForgeBlockEntity> forge = level.getBlockEntity(pos, TFCBlockEntities.CHARCOAL_FORGE.get());
 
-        if (forge.isPresent()){
+        if (forge.isPresent())
+        {
             return getHeatValue((int) forge.get().getTemperature());
         }
 
         return BoilerHeater.NO_HEAT;
     }
 
-    public static int CrucibleDevice(Level level, BlockPos pos, BlockState state) {
+    public static int CrucibleDevice(Level level, BlockPos pos, BlockState state)
+    {
 
         Optional<CrucibleBlockEntity> crucible = level.getBlockEntity(pos, TFCBlockEntities.CRUCIBLE.get());
 
-        if (crucible.isPresent()){
+        if (crucible.isPresent())
+        {
             return getHeatValue((int) crucible.get().getTemperature());
         }
 
         return BoilerHeater.NO_HEAT;
     }
 
-    private static int getHeatValue(int temperature){
+    private static int getHeatValue(int temperature)
+    {
 
-        if (temperature <= 90){
+        if (temperature <= 90)
+        {
             return BoilerHeater.NO_HEAT; // -1 / ignored
         }
-        if (temperature <= 210){
+        if (temperature <= 210)
+        {
             return BoilerHeater.PASSIVE_HEAT; // 0
         }
-        if (temperature < 960){
+        if (temperature < 960)
+        {
             return 1; // equal to heated blaze burner
         }
         return 2; // greater than 960, equal to seething blaze burner

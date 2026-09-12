@@ -13,8 +13,10 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 @Mod(value = AncientGroundCore.MOD_ID, dist = Dist.CLIENT)
 // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
 @EventBusSubscriber(modid = AncientGroundCore.MOD_ID, value = Dist.CLIENT)
-public class HorizonsCoreClient {
-    public HorizonsCoreClient(ModContainer container) {
+public class HorizonsCoreClient
+{
+    public HorizonsCoreClient(ModContainer container)
+    {
         // Allows NeoForge to create a config screen for this mod's configs.
         // The config screen is accessed by going to the Mods screen > clicking on your mod > clicking on config.
         // Do not forget to add translations for your config options to the en_us.json file.
@@ -22,7 +24,8 @@ public class HorizonsCoreClient {
     }
 
     @SubscribeEvent
-    static void onClientSetup(FMLClientSetupEvent event) {
+    static void onClientSetup(FMLClientSetupEvent event)
+    {
         // Template code: Some client setup code
         //GoldenHorizonsCore.LOGGER.info("HELLO FROM CLIENT SETUP");
         //GoldenHorizonsCore.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());

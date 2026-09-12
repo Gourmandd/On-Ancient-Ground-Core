@@ -16,19 +16,44 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 
-public class BookKnappingPageRenderer extends BookRecipePageRenderer<KnappingRecipe, BookKnappingPage> {
+public class BookKnappingPageRenderer extends BookRecipePageRenderer<KnappingRecipe, BookKnappingPage>
+{
 
-    public BookKnappingPageRenderer(BookKnappingPage page) {
+    public BookKnappingPageRenderer(BookKnappingPage page)
+    {
         super(page);
     }
 
+    private static void drawSquare(GuiGraphics graphics, @Nullable ResourceLocation texture, int x0, int y0, int x, int y)
+    {
+        if (texture != null)
+        {
+            RenderSystem.setShaderTexture(0, texture);
+            graphics.blit(texture, x0 + 5 + x * 16, y0 + 5 + y * 16, 0, 0, 16, 16, 16, 16);
+        }
+    }
+
+    private static ItemStack[] getIngredients(RecipeHolder<KnappingRecipe> recipe)
+    {
+        if (recipe.value().getIngredient() == null)
+        {
+            return recipe.value().knappingType().get().inputItem().getItems();
+        }
+        else
+        {
+            return recipe.value().getIngredient().getItems();
+        }
+    }
+
     @Override
-    protected int getRecipeHeight() {
+    protected int getRecipeHeight()
+    {
         return 96;
     }
 
     @Override
-    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<KnappingRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second) {
+    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<KnappingRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second)
+    {
 
         Level world = Minecraft.getInstance().level;
         if (world == null) return; // we need to get the resultItem later
@@ -49,7 +74,8 @@ public class BookKnappingPageRenderer extends BookRecipePageRenderer<KnappingRec
         guiGraphics.pose().popPose();
     }
 
-    private void render(GuiGraphics graphics, int mouseX, int mouseY, KnappingRecipe recipe, ItemStack resultStack, @Nullable ResourceLocation highTexture, @Nullable ResourceLocation lowTexture, int recipeX, int recipeY){
+    private void render(GuiGraphics graphics, int mouseX, int mouseY, KnappingRecipe recipe, ItemStack resultStack, @Nullable ResourceLocation highTexture, @Nullable ResourceLocation lowTexture, int recipeX, int recipeY)
+    {
 
         int x0 = recipeX - 27;
         int y0 = recipeY - 10;
@@ -80,22 +106,5 @@ public class BookKnappingPageRenderer extends BookRecipePageRenderer<KnappingRec
         }
 
         parentScreen.renderItemStack(graphics, x0 + 95, y0 + 37, mouseX - 12, mouseY, resultStack);
-    }
-
-    private static void drawSquare(GuiGraphics graphics, @Nullable ResourceLocation texture, int x0, int y0, int x, int y)
-    {
-        if (texture != null)
-        {
-            RenderSystem.setShaderTexture(0, texture);
-            graphics.blit(texture, x0 + 5 + x * 16, y0 + 5 + y * 16, 0, 0, 16, 16, 16, 16);
-        }
-    }
-
-    private static ItemStack[] getIngredients(RecipeHolder<KnappingRecipe> recipe){
-        if (recipe.value().getIngredient() == null){
-            return recipe.value().knappingType().get().inputItem().getItems();
-        } else {
-            return recipe.value().getIngredient().getItems();
-        }
     }
 }

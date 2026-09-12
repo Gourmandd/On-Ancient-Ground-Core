@@ -18,16 +18,19 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
-public class OresCategory extends CategoryProvider {
+public class OresCategory extends CategoryProvider
+{
 
     public static final String ID = "ores";
 
-    public OresCategory(SingleBookSubProvider parent) {
+    public OresCategory(SingleBookSubProvider parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
                 "w__a__m__dei",
                 "x__b__k__fgh",
@@ -39,7 +42,8 @@ public class OresCategory extends CategoryProvider {
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
 
         // copper
         var nativeCopperEntry = createOreEntry(
@@ -527,21 +531,25 @@ public class OresCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Ores";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCItems.GRADED_ORES.get(Ore.NATIVE_COPPER).get(Ore.Grade.RICH));
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return ID;
     }
 
-    public BookEntryModel createOreEntry(String id, TagKey<Item> tag, Item item, String symbol, String text){
+    public BookEntryModel createOreEntry(String id, TagKey<Item> tag, Item item, String symbol, String text)
+    {
         return this.add(new OreEntry(
                 this,
                 id,
@@ -553,7 +561,8 @@ public class OresCategory extends CategoryProvider {
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

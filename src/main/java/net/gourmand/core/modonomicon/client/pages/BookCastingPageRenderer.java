@@ -11,33 +11,41 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 
-public class BookCastingPageRenderer extends BookRecipePageRenderer<CastingRecipe, BookCastingPage> {
+public class BookCastingPageRenderer extends BookRecipePageRenderer<CastingRecipe, BookCastingPage>
+{
 
-    public BookCastingPageRenderer(BookCastingPage page) {
+    public BookCastingPageRenderer(BookCastingPage page)
+    {
         super(page);
     }
 
     @Override
-    protected int getRecipeHeight() {
+    protected int getRecipeHeight()
+    {
         return 45;
     }
 
     @Override
-    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<CastingRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second) {
+    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<CastingRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second)
+    {
 
         Level world = Minecraft.getInstance().level;
         if (world == null) return;
 
         recipeY += 10;
 
-        if (!second) {
-            if (!this.page.getTitle1().isEmpty()) {
+        if (!second)
+        {
+            if (!this.page.getTitle1().isEmpty())
+            {
                 this.renderTitle(guiGraphics, this.page.getTitle1(), false, BookEntryScreen.PAGE_WIDTH / 2, 0);
             }
-        } else {
-            if (!this.page.getTitle2().isEmpty()) {
-                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2,
-                        recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0) - 10);
+        }
+        else
+        {
+            if (!this.page.getTitle2().isEmpty())
+            {
+                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2, recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0) - 10);
             }
         }
 

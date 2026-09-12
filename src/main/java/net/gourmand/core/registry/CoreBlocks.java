@@ -36,7 +36,8 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public class CoreBlocks {
+public class CoreBlocks
+{
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AncientGroundCore.MOD_ID);
 

@@ -20,43 +20,43 @@ import net.minecraft.world.level.Level;
 
 import java.util.Map;
 
-public class BookWeldingPageRenderer extends BookRecipePageRenderer<WeldingRecipe, BookWeldingPage> {
+public class BookWeldingPageRenderer extends BookRecipePageRenderer<WeldingRecipe, BookWeldingPage>
+{
 
-    final static Map<Integer, Item> TIER_TO_BLOCK = ImmutableMap.<Integer, Item>builder()
-            .put(-1, TFCBlocks.ROCK_ANVILS.get(Rock.ANDESITE).asItem())
-            .put(0, TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.ANVIL).asItem())
-            .put(1, TFCBlocks.METALS.get(Metal.BRONZE).get(Metal.BlockType.ANVIL).asItem())
-            .put(2, TFCBlocks.METALS.get(Metal.WROUGHT_IRON).get(Metal.BlockType.ANVIL).asItem())
-            .put(3, TFCBlocks.METALS.get(Metal.STEEL).get(Metal.BlockType.ANVIL).asItem())
-            .put(4, TFCBlocks.METALS.get(Metal.BLACK_STEEL).get(Metal.BlockType.ANVIL).asItem())
-            .put(5, TFCBlocks.METALS.get(Metal.BLUE_STEEL).get(Metal.BlockType.ANVIL).asItem())
-            .build();
+    final static Map<Integer, Item> TIER_TO_BLOCK = ImmutableMap.<Integer, Item>builder().put(-1, TFCBlocks.ROCK_ANVILS.get(Rock.ANDESITE).asItem()).put(0, TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.ANVIL).asItem()).put(1, TFCBlocks.METALS.get(Metal.BRONZE).get(Metal.BlockType.ANVIL).asItem()).put(2, TFCBlocks.METALS.get(Metal.WROUGHT_IRON).get(Metal.BlockType.ANVIL).asItem()).put(3, TFCBlocks.METALS.get(Metal.STEEL).get(Metal.BlockType.ANVIL).asItem()).put(4, TFCBlocks.METALS.get(Metal.BLACK_STEEL).get(Metal.BlockType.ANVIL).asItem()).put(5, TFCBlocks.METALS.get(Metal.BLUE_STEEL).get(Metal.BlockType.ANVIL).asItem()).build();
 
-    public BookWeldingPageRenderer(BookWeldingPage page) {
+    public BookWeldingPageRenderer(BookWeldingPage page)
+    {
         super(page);
     }
 
     @Override
-    protected int getRecipeHeight() {
+    protected int getRecipeHeight()
+    {
         return 60;
     }
 
     @Override
-    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<WeldingRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second) {
+    protected void drawRecipe(GuiGraphics guiGraphics, RecipeHolder<WeldingRecipe> recipe, int recipeX, int recipeY, int mouseX, int mouseY, boolean second)
+    {
 
         Level world = Minecraft.getInstance().level;
         if (world == null) return;
 
         recipeY += 10;
 
-        if (!second) {
-            if (!this.page.getTitle1().isEmpty()) {
+        if (!second)
+        {
+            if (!this.page.getTitle1().isEmpty())
+            {
                 this.renderTitle(guiGraphics, this.page.getTitle1(), false, BookEntryScreen.PAGE_WIDTH / 2, 0);
             }
-        } else {
-            if (!this.page.getTitle2().isEmpty()) {
-                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2,
-                        recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0) - 10);
+        }
+        else
+        {
+            if (!this.page.getTitle2().isEmpty())
+            {
+                this.renderTitle(guiGraphics, this.page.getTitle2(), false, BookEntryScreen.PAGE_WIDTH / 2, recipeY - (this.page.getTitle2().getString().isEmpty() ? 10 : 0) - 10);
             }
         }
 

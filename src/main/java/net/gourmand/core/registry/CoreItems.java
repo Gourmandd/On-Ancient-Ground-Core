@@ -22,7 +22,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class CoreItems {
+public class CoreItems
+{
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientGroundCore.MOD_ID);
 
@@ -97,10 +98,10 @@ public class CoreItems {
 
     public static final DeferredHolder<Item, Item> DEBUG_ITEM = register("influence_debug", () -> new InfluenceDebugItem(new Item.Properties()));
 
-    private static Item basicItem(){
+    private static Item basicItem()
+    {
         return new Item(new Item.Properties());
     }
-
 
     private static DeferredHolder<Item, Item> register(String name)
     {

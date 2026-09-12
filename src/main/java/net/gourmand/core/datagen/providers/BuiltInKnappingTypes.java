@@ -20,14 +20,17 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-public class BuiltInKnappingTypes extends DataManagerProvider<KnappingType>{
+public class BuiltInKnappingTypes extends DataManagerProvider<KnappingType>
+{
 
-    public BuiltInKnappingTypes( PackOutput output, CompletableFuture<HolderLookup.Provider> lookup) {
+    public BuiltInKnappingTypes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup)
+    {
         super(KnappingType.MANAGER, output, lookup);
     }
 
     @Override
-    protected void addData(HolderLookup.Provider provider) {
+    protected void addData(HolderLookup.Provider provider)
+    {
         Stream.of(CoreClay.values()).forEach(this::addClay);
     }
 

@@ -12,14 +12,17 @@ import net.gourmand.core.datagen.book.guide.entries.masonry.QuarryingEntry;
 import net.gourmand.core.datagen.book.guide.entries.mining.*;
 import net.minecraft.resources.ResourceLocation;
 
-public class MiningCategory extends CategoryProvider {
+public class MiningCategory extends CategoryProvider
+{
 
-    public MiningCategory(ModonomiconProviderBase parent) {
+    public MiningCategory(ModonomiconProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
                 "b_c_g__h",
                 "________",
@@ -30,7 +33,8 @@ public class MiningCategory extends CategoryProvider {
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
         var ore_deposit = this.add(new OreDepositEntry(this).generate("a"));
         var sluice = this.add(new SluiceEntry(this).generate("b").withParent(ore_deposit));
         var pan = this.add(new CeramicPanEntry(this).generate("c").withParent(ore_deposit));
@@ -47,22 +51,26 @@ public class MiningCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Mining";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCItems.METAL_ITEMS.get(Metal.BRONZE).get(Metal.ItemType.PICKAXE));
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return "mining";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

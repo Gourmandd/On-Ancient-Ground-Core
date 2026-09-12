@@ -10,24 +10,29 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import javax.annotation.Nullable;
 
-public class MeltableBlock extends Block {
+public class MeltableBlock extends Block
+{
 
     private final BlockState meltsInto;
 
-    public MeltableBlock(Properties properties, BlockState meltsInto) {
+    public MeltableBlock(Properties properties, BlockState meltsInto)
+    {
         super(properties);
         this.meltsInto = meltsInto;
     }
 
-    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity te, ItemStack stack) {
+    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity te, ItemStack stack)
+    {
         super.playerDestroy(level, player, pos, state, te, stack);
         BlockState blockstate = level.getBlockState(pos.below());
-        if (blockstate.blocksMotion() || blockstate.liquid()) {
+        if (blockstate.blocksMotion() || blockstate.liquid())
+        {
             level.setBlockAndUpdate(pos, meltsIntoState());
         }
     }
 
-    public BlockState meltsIntoState() {
+    public BlockState meltsIntoState()
+    {
         return meltsInto;
     }
 }

@@ -12,7 +12,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
 
-public enum TFCOres implements RegistryOre {
+public enum TFCOres implements RegistryOre
+{
 
     NATIVE_COPPER(CoreOres.Type.GRADED, Ore.NATIVE_COPPER),
     NATIVE_GOLD(CoreOres.Type.GRADED, Ore.NATIVE_GOLD),
@@ -51,7 +52,8 @@ public enum TFCOres implements RegistryOre {
     private final CoreOres.Type type;
     private final String serializedName;
 
-    TFCOres(CoreOres.Type type, Ore TFCOre) {
+    TFCOres(CoreOres.Type type, Ore TFCOre)
+    {
         this.TFCOre = TFCOre;
         this.type = type;
         this.serializedName = name().toLowerCase(Locale.ROOT);
@@ -78,17 +80,23 @@ public enum TFCOres implements RegistryOre {
     }
 
     @Override
-    public Block getOreBlock(RegistryRock rock, @Nullable CoreOres.Grade grade) {
+    public Block getOreBlock(RegistryRock rock, @Nullable CoreOres.Grade grade)
+    {
 
-        if (this.type == CoreOres.Type.ITEM_ONLY){
-            switch (this){
-                case LIGNITE -> {
+        if (this.type == CoreOres.Type.ITEM_ONLY)
+        {
+            switch (this)
+            {
+                case LIGNITE ->
+                {
                     return TFCBlocks.LIGNITE.get();
                 }
-                case BITUMINOUS_COAL -> {
+                case BITUMINOUS_COAL ->
+                {
                     return TFCBlocks.BITUMINOUS_COAL.get();
                 }
-                case HALITE -> {
+                case HALITE ->
+                {
                     return TFCBlocks.HALITE.get();
                 }
             }
@@ -96,19 +104,28 @@ public enum TFCOres implements RegistryOre {
 
         assert rock instanceof Rock || rock instanceof CoreRocks;
 
-        if (rock instanceof Rock){
-            if (grade == null){
+        if (rock instanceof Rock)
+        {
+            if (grade == null)
+            {
                 return TFCBlocks.ORES.get(rock).get(this.TFCOre).get();
-            } else {
+            }
+            else
+            {
                 return TFCBlocks.GRADED_ORES.get(rock).get(this.TFCOre).get(CoreOres.getTFCgrade(grade)).get();
             }
         }
 
-        if (rock instanceof CoreRocks){
-            if (((CoreRocks) rock).hasOres()){
-                if (grade == null){
+        if (rock instanceof CoreRocks)
+        {
+            if (((CoreRocks) rock).hasOres())
+            {
+                if (grade == null)
+                {
                     return CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(this.TFCOre).get();
-                } else {
+                }
+                else
+                {
                     return CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(this.TFCOre).get(grade).get();
                 }
             }
@@ -118,7 +135,8 @@ public enum TFCOres implements RegistryOre {
     }
 
     @Override
-    public String getSerializedName() {
+    public String getSerializedName()
+    {
         return serializedName;
     }
 }

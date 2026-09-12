@@ -18,57 +18,52 @@ import java.util.Map;
 
 import static net.gourmand.core.registry.category.CoreRocks.*;
 
-public class TextureUtil {
+public class TextureUtil
+{
 
-    public static String getRawRockTexture(RegistryRock rock){
+    public static final Map<CoreRocks, String> GET_RAW_CORE_ROCK_TEXTURE = ImmutableMap.<CoreRocks, String>builder().put(SERPENTINE, AncientGroundCore.MOD_ID + ":block/rock/raw/" + SERPENTINE.getSerializedName()).put(PERIDOTITE, AncientGroundCore.MOD_ID + ":block/rock/raw/" + PERIDOTITE.getSerializedName()).put(BLUESCHIST, AncientGroundCore.MOD_ID + ":block/rock/raw/" + BLUESCHIST.getSerializedName()).put(SOAPSTONE, "minecraft:block/calcite").put(SANDSTONE, Create.ID + ":block/palettes/stone_types/natural/ochrum_0").put(SUEVITE, Create.ID + ":block/palettes/stone_types/scorchia").put(KOMATIITE, Create.ID + ":block/palettes/stone_types/scoria").put(RED_SANDSTONE, Quark.MOD_ID + ":block/jasper").put(PHONOLITE, Quark.MOD_ID + ":block/shale").put(ARKOSE, Quark.MOD_ID + ":block/limestone").put(BLACKSLAG, SpectrumCommon.MOD_ID + ":block/blackslag").put(PICRITE_BASALT, SpectrumCommon.MOD_ID + ":block/basal_marble").put(TRAVERTINE, "minecraft:block/dripstone_block").put(ARGILLITE, "minecraft:block/stone").put(NEPHELINITE, "minecraft:block/deepslate").put(BRECCIA, "caupona:block/felsic_tuff").put(MARLSTONE, Create.ID + ":block/palettes/stone_types/limestone").put(GREYWACKE, "minecraft:block/smooth_basalt").build();
 
-        if (rock instanceof Rock){
+    public static String getRawRockTexture(RegistryRock rock)
+    {
+
+        if (rock instanceof Rock)
+        {
             return getRawRockTexture((Rock) rock);
         }
 
-        if (rock instanceof CoreRocks){
+        if (rock instanceof CoreRocks)
+        {
             return GET_RAW_CORE_ROCK_TEXTURE.get((CoreRocks) rock);
         }
 
         throw new IllegalArgumentException("RockType: " + rock.getSerializedName() + " not found");
     }
 
-    public static final Map<CoreRocks, String> GET_RAW_CORE_ROCK_TEXTURE = ImmutableMap.<CoreRocks, String>builder()
-            .put(SERPENTINE, AncientGroundCore.MOD_ID + ":block/rock/raw/" + SERPENTINE.getSerializedName())
-            .put(PERIDOTITE, AncientGroundCore.MOD_ID + ":block/rock/raw/" + PERIDOTITE.getSerializedName())
-            .put(BLUESCHIST, AncientGroundCore.MOD_ID + ":block/rock/raw/" + BLUESCHIST.getSerializedName())
-            .put(SOAPSTONE, "minecraft:block/calcite")
-            .put(SANDSTONE, Create.ID + ":block/palettes/stone_types/natural/ochrum_0")
-            .put(SUEVITE, Create.ID + ":block/palettes/stone_types/scorchia")
-            .put(KOMATIITE, Create.ID + ":block/palettes/stone_types/scoria")
-            .put(RED_SANDSTONE, Quark.MOD_ID + ":block/jasper")
-            .put(PHONOLITE, Quark.MOD_ID + ":block/shale")
-            .put(ARKOSE, Quark.MOD_ID + ":block/limestone")
-            .put(BLACKSLAG, SpectrumCommon.MOD_ID + ":block/blackslag")
-            .put(PICRITE_BASALT, SpectrumCommon.MOD_ID + ":block/basal_marble")
-            .put(TRAVERTINE, "minecraft:block/dripstone_block")
-            .put(ARGILLITE, "minecraft:block/stone")
-            .put(NEPHELINITE, "minecraft:block/deepslate")
-            .put(BRECCIA, "caupona:block/felsic_tuff")
-            .put(MARLSTONE, Create.ID + ":block/palettes/stone_types/limestone")
-            .put(GREYWACKE, "minecraft:block/smooth_basalt")
-            .build();
-
-    private static String getCobbleTexture(CoreRocks rock){
-        if (rock.hasVariants()){
+    private static String getCobbleTexture(CoreRocks rock)
+    {
+        if (rock.hasVariants())
+        {
             return (AncientGroundCore.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
-        } else {
-            switch (rock){
-                case ARGILLITE -> {
+        }
+        else
+        {
+            switch (rock)
+            {
+                case ARGILLITE ->
+                {
                     return "minecraft:block/cobblestone";
                 }
-                case NEPHELINITE -> {
+                case NEPHELINITE ->
+                {
                     return "minecraft:block/cobbled_deepslate";
                 }
-                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE, ARKOSE, SOAPSTONE, GREYWACKE, MARLSTONE -> {
+                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE,
+                     ARKOSE, SOAPSTONE, GREYWACKE, MARLSTONE ->
+                {
                     return (AncientGroundCore.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
                 }
-                case BLACKSLAG -> {
+                case BLACKSLAG ->
+                {
                     return SpectrumCommon.MOD_ID + ":block/cobbled_blackslag";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
@@ -76,21 +71,31 @@ public class TextureUtil {
         }
     }
 
-    private static String getMossyCobbleTexture(CoreRocks rock){
-        if (rock.hasVariants()){
+    private static String getMossyCobbleTexture(CoreRocks rock)
+    {
+        if (rock.hasVariants())
+        {
             return (AncientGroundCore.MOD_ID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
-        } else {
-            switch (rock){
-                case ARGILLITE -> {
+        }
+        else
+        {
+            switch (rock)
+            {
+                case ARGILLITE ->
+                {
                     return "minecraft:block/mossy_cobblestone";
                 }
-                case NEPHELINITE -> {
+                case NEPHELINITE ->
+                {
                     return "minecraft:block/cobbled_deepslate";
                 }
-                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE, ARKOSE, SOAPSTONE, GREYWACKE, MARLSTONE -> {
+                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT, SANDSTONE, RED_SANDSTONE, SUEVITE, PHONOLITE,
+                     ARKOSE, SOAPSTONE, GREYWACKE, MARLSTONE ->
+                {
                     return (AncientGroundCore.MOD_ID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
                 }
-                case BLACKSLAG -> {
+                case BLACKSLAG ->
+                {
                     return SpectrumCommon.MOD_ID + ":block/cobbled_blackslag";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
@@ -98,109 +103,150 @@ public class TextureUtil {
         }
     }
 
-    private static String getBricksTexture(CoreRocks rock){
-        if (rock.hasVariants()){
+    private static String getBricksTexture(CoreRocks rock)
+    {
+        if (rock.hasVariants())
+        {
             return (AncientGroundCore.MOD_ID + ":block/rock/bricks/" + rock.getSerializedName());
-        } else {
-            switch (rock){
-                case ARGILLITE -> {
+        }
+        else
+        {
+            switch (rock)
+            {
+                case ARGILLITE ->
+                {
                     return "minecraft:block/stone_bricks";
                 }
-                case NEPHELINITE -> {
+                case NEPHELINITE ->
+                {
                     return "minecraft:block/deepslate_bricks";
                 }
-                case TRAVERTINE -> {
+                case TRAVERTINE ->
+                {
                     return "architects_palette:block/dripstone_bricks";
                 }
-                case BRECCIA -> {
+                case BRECCIA ->
+                {
                     return "caupona:block/felsic_tuff_bricks";
                 }
-                case KOMATIITE -> {
+                case KOMATIITE ->
+                {
                     return "create:block/palettes/stone_types/brick/scoria_cut_brick";
                 }
-                case BLACKSLAG -> {
+                case BLACKSLAG ->
+                {
                     return SpectrumCommon.MOD_ID + ":block/blackslag_bricks";
                 }
-                case PICRITE_BASALT -> {
+                case PICRITE_BASALT ->
+                {
                     return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
                 }
-                case SANDSTONE -> {
+                case SANDSTONE ->
+                {
                     return "create:block/palettes/stone_types/brick/ochrum_cut_brick";
                 }
-                case RED_SANDSTONE -> {
+                case RED_SANDSTONE ->
+                {
                     return Quark.MOD_ID + ":block/jasper_bricks";
                 }
-                case SUEVITE -> {
+                case SUEVITE ->
+                {
                     return "create:block/palettes/stone_types/brick/scorchia_cut_brick";
                 }
-                case PHONOLITE -> {
+                case PHONOLITE ->
+                {
                     return Quark.MOD_ID + ":block/shale_bricks";
                 }
-                case ARKOSE -> {
+                case ARKOSE ->
+                {
                     return Quark.MOD_ID + ":block/limestone_bricks";
                 }
-                case SOAPSTONE -> {
+                case SOAPSTONE ->
+                {
                     return "spectrum:block/calcite_bricks";
                 }
-                case MARLSTONE -> {
+                case MARLSTONE ->
+                {
                     return "create:block/palettes/stone_types/brick/limestone_cut_brick";
                 }
-                case GREYWACKE -> {
+                case GREYWACKE ->
+                {
                     return "spectrum:block/basalt_bricks";
                 }
-                case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
+                case null, default ->
+                        throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
             }
         }
     }
 
-    private static String getMossyBricksTexture(CoreRocks rock){
-        if (rock.hasVariants()){
+    private static String getMossyBricksTexture(CoreRocks rock)
+    {
+        if (rock.hasVariants())
+        {
             return (AncientGroundCore.MOD_ID + ":block/rock/mossy_bricks/" + rock.getSerializedName());
-        } else {
-            switch (rock){
-                case ARGILLITE -> {
+        }
+        else
+        {
+            switch (rock)
+            {
+                case ARGILLITE ->
+                {
                     return "minecraft:block/mossy_stone_bricks";
                 }
-                case NEPHELINITE -> {
+                case NEPHELINITE ->
+                {
                     return "minecraft:block/deepslate_bricks";
                 }
-                case TRAVERTINE -> {
+                case TRAVERTINE ->
+                {
                     return "architects_palette:block/dripstone_bricks";
                 }
-                case BRECCIA -> {
+                case BRECCIA ->
+                {
                     return "caupona:block/felsic_tuff_bricks";
                 }
-                case KOMATIITE -> {
+                case KOMATIITE ->
+                {
                     return "create:block/palettes/stone_types/brick/scoria_cut_brick";
                 }
-                case BLACKSLAG -> {
+                case BLACKSLAG ->
+                {
                     return SpectrumCommon.MOD_ID + ":block/blackslag_bricks";
                 }
-                case PICRITE_BASALT -> {
+                case PICRITE_BASALT ->
+                {
                     return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
                 }
-                case SANDSTONE -> {
+                case SANDSTONE ->
+                {
                     return "create:block/palettes/stone_types/brick/ochrum_cut_brick";
                 }
-                case RED_SANDSTONE -> {
+                case RED_SANDSTONE ->
+                {
                     return Quark.MOD_ID + ":block/jasper_bricks";
                 }
-                case SUEVITE -> {
+                case SUEVITE ->
+                {
                     return "create:block/palettes/stone_types/brick/scorchia_cut_brick";
                 }
-                case PHONOLITE -> {
+                case PHONOLITE ->
+                {
                     return Quark.MOD_ID + ":block/shale_bricks";
                 }
-                case ARKOSE -> {
+                case ARKOSE ->
+                {
                     return Quark.MOD_ID + ":block/limestone_bricks";
                 }
-                case SOAPSTONE -> {
+                case SOAPSTONE ->
+                {
                     return "spectrum:block/calcite_bricks";
                 }
-                case MARLSTONE -> {
+                case MARLSTONE ->
+                {
                     return "create:block/palettes/stone_types/brick/limestone_cut_brick";
                 }
-                case GREYWACKE -> {
+                case GREYWACKE ->
+                {
                     return "spectrum:block/basalt_bricks";
                 }
                 case null, default -> throw new AssertionError("Invalid Rock to get texture for");
@@ -208,262 +254,350 @@ public class TextureUtil {
         }
     }
 
-    private static String getCrackedBricksTexture(CoreRocks rock){
-        if (rock.hasVariants()){
+    private static String getCrackedBricksTexture(CoreRocks rock)
+    {
+        if (rock.hasVariants())
+        {
             return (AncientGroundCore.MOD_ID + ":block/rock/cracked_bricks/" + rock.getSerializedName());
-        } else {
-            switch (rock){
-                case ARGILLITE -> {
+        }
+        else
+        {
+            switch (rock)
+            {
+                case ARGILLITE ->
+                {
                     return "minecraft:block/stone_bricks";
                 }
-                case NEPHELINITE -> {
+                case NEPHELINITE ->
+                {
                     return "minecraft:block/deepslate_bricks";
                 }
-                case TRAVERTINE -> {
+                case TRAVERTINE ->
+                {
                     return "architects_palette:block/dripstone_bricks";
                 }
-                case BRECCIA -> {
+                case BRECCIA ->
+                {
                     return "caupona:block/felsic_tuff_bricks";
                 }
-                case KOMATIITE -> {
+                case KOMATIITE ->
+                {
                     return "create:block/palettes/stone_types/brick/scoria_cut_brick";
                 }
-                case BLACKSLAG -> {
+                case BLACKSLAG ->
+                {
                     return SpectrumCommon.MOD_ID + ":block/blackslag_bricks";
                 }
-                case PICRITE_BASALT -> {
+                case PICRITE_BASALT ->
+                {
                     return SpectrumCommon.MOD_ID + ":block/basal_marble_bricks";
                 }
-                case SANDSTONE -> {
+                case SANDSTONE ->
+                {
                     return "create:block/palettes/stone_types/brick/ochrum_cut_brick";
                 }
-                case RED_SANDSTONE -> {
+                case RED_SANDSTONE ->
+                {
                     return Quark.MOD_ID + ":block/jasper_bricks";
                 }
-                case SUEVITE -> {
+                case SUEVITE ->
+                {
                     return "create:block/palettes/stone_types/brick/scorchia_cut_brick";
                 }
-                case PHONOLITE -> {
+                case PHONOLITE ->
+                {
                     return Quark.MOD_ID + ":block/shale_bricks";
                 }
-                case ARKOSE -> {
+                case ARKOSE ->
+                {
                     return Quark.MOD_ID + ":block/limestone_bricks";
                 }
-                case SOAPSTONE -> {
+                case SOAPSTONE ->
+                {
                     return "spectrum:block/calcite_bricks";
                 }
-                case MARLSTONE -> {
+                case MARLSTONE ->
+                {
                     return "create:block/palettes/stone_types/brick/limestone_cut_brick";
                 }
-                case GREYWACKE -> {
+                case GREYWACKE ->
+                {
                     return "spectrum:block/basalt_bricks";
                 }
-                case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
+                case null, default ->
+                        throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
             }
         }
     }
 
-    private static String getGravelTexture(CoreRocks rock){
-        switch (rock){
-            case ARGILLITE -> {
+    private static String getGravelTexture(CoreRocks rock)
+    {
+        switch (rock)
+        {
+            case ARGILLITE ->
+            {
                 return "minecraft:block/gravel";
             }
-            default -> {
+            default ->
+            {
                 return (AncientGroundCore.MOD_ID + ":block/rock/gravel/" + rock.getSerializedName());
             }
         }
     }
 
-    private static String getSmoothTexture(CoreRocks rock){
-        if (rock.hasVariants()){
+    private static String getSmoothTexture(CoreRocks rock)
+    {
+        if (rock.hasVariants())
+        {
             return (AncientGroundCore.MOD_ID + ":block/rock/smooth/" + rock.getSerializedName());
-        } else {
+        }
+        else
+        {
             throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
         }
     }
 
-    private static String getChiseledTexture(CoreRocks rock){
-        if (rock.hasVariants()){
+    private static String getChiseledTexture(CoreRocks rock)
+    {
+        if (rock.hasVariants())
+        {
             return (AncientGroundCore.MOD_ID + ":block/rock/chiseled/" + rock.getSerializedName());
-        } else {
+        }
+        else
+        {
             throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
         }
     }
 
-    private static String getRawRockTexture(Rock rock){
+    private static String getRawRockTexture(Rock rock)
+    {
         return (TerraFirmaCraft.MOD_ID + ":block/rock/raw/" + rock.getSerializedName());
     }
 
-    public static String getOreTexture(CoreOres ore){
+    public static String getOreTexture(CoreOres ore)
+    {
         return (AncientGroundCore.MOD_ID + ":block/ore/" + ore.getSerializedName());
     }
 
-    public static String getOreTexture(Ore ore){
+    public static String getOreTexture(Ore ore)
+    {
         return (TerraFirmaCraft.MOD_ID + ":block/ore/" + ore.name().toLowerCase(Locale.ROOT));
     }
 
-    public static String getOreTexture(CoreOres ore, CoreOres.Grade grade){
-        switch (grade){
-            case RICH -> {
+    public static String getOreTexture(CoreOres ore, CoreOres.Grade grade)
+    {
+        switch (grade)
+        {
+            case RICH ->
+            {
                 return AncientGroundCore.MOD_ID + ":block/ore/rich/" + ore.getSerializedName();
             }
-            case NORMAL -> {
+            case NORMAL ->
+            {
                 return AncientGroundCore.MOD_ID + ":block/ore/normal_" + ore.getSerializedName();
             }
-            case POOR -> {
+            case POOR ->
+            {
                 return AncientGroundCore.MOD_ID + ":block/ore/poor/" + ore.getSerializedName();
             }
             case null -> throw new AssertionError("Invalid grade");
         }
     }
 
-    public static String getOreTexture(Ore ore, CoreOres.Grade grade){
-        switch (grade){
-            case RICH -> {
+    public static String getOreTexture(Ore ore, CoreOres.Grade grade)
+    {
+        switch (grade)
+        {
+            case RICH ->
+            {
                 return TerraFirmaCraft.MOD_ID + ":block/ore/rich/" + ore.name().toLowerCase(Locale.ROOT);
             }
-            case NORMAL -> {
+            case NORMAL ->
+            {
                 return TerraFirmaCraft.MOD_ID + ":block/ore/normal_" + ore.name().toLowerCase(Locale.ROOT);
             }
-            case POOR -> {
+            case POOR ->
+            {
                 return TerraFirmaCraft.MOD_ID + ":block/ore/poor/" + ore.name().toLowerCase(Locale.ROOT);
             }
             case null -> throw new AssertionError("Invalid grade");
         }
     }
 
-    public static String getOreTexture(OreDeposit ore){
-        switch (ore){
-            case NATIVE_COPPER, NATIVE_GOLD, NATIVE_SILVER, CASSITERITE -> {
+    public static String getOreTexture(OreDeposit ore)
+    {
+        switch (ore)
+        {
+            case NATIVE_COPPER, NATIVE_GOLD, NATIVE_SILVER, CASSITERITE ->
+            {
                 return TerraFirmaCraft.MOD_ID + ":block/ore/normal_" + ore.name().toLowerCase(Locale.ROOT);
             }
             case null -> throw new AssertionError("Invalid Ore");
         }
     }
 
-    public static ResourceLocation getRockTexture(CoreRocks rock, Rock.BlockType type){
+    public static ResourceLocation getRockTexture(CoreRocks rock, Rock.BlockType type)
+    {
 
-        switch(type){
-            case RAW, HARDENED, SPIKE -> {
+        switch (type)
+        {
+            case RAW, HARDENED, SPIKE ->
+            {
                 return ResourceLocation.parse(getRawRockTexture(rock));
             }
-            case LOOSE, COBBLE -> {
+            case LOOSE, COBBLE ->
+            {
                 return ResourceLocation.parse(getCobbleTexture(rock));
             }
-            case MOSSY_LOOSE, MOSSY_COBBLE -> {
+            case MOSSY_LOOSE, MOSSY_COBBLE ->
+            {
                 return ResourceLocation.parse(getMossyCobbleTexture(rock));
             }
-            case GRAVEL -> {
+            case GRAVEL ->
+            {
                 return ResourceLocation.parse(getGravelTexture(rock));
             }
-            case SMOOTH, BUTTON, PRESSURE_PLATE -> {
+            case SMOOTH, BUTTON, PRESSURE_PLATE ->
+            {
                 return ResourceLocation.parse(getSmoothTexture(rock));
             }
-            case CHISELED -> {
+            case CHISELED ->
+            {
                 return ResourceLocation.parse(getChiseledTexture(rock));
             }
-            case BRICKS, AQUEDUCT -> {
+            case BRICKS, AQUEDUCT ->
+            {
                 return ResourceLocation.parse(getBricksTexture(rock));
             }
-            case MOSSY_BRICKS -> {
+            case MOSSY_BRICKS ->
+            {
                 return ResourceLocation.parse(getMossyBricksTexture(rock));
             }
-            case CRACKED_BRICKS -> {
+            case CRACKED_BRICKS ->
+            {
                 return ResourceLocation.parse(getCrackedBricksTexture(rock));
             }
         }
         return null;
     }
 
-    public static ResourceLocation getRockTexture(Rock rock, Rock.BlockType type){
+    public static ResourceLocation getRockTexture(Rock rock, Rock.BlockType type)
+    {
 
-        switch(type){
-            case RAW, HARDENED, SPIKE -> {
+        switch (type)
+        {
+            case RAW, HARDENED, SPIKE ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/raw/" + rock.getSerializedName());
             }
-            case LOOSE, COBBLE -> {
+            case LOOSE, COBBLE ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
             }
-            case MOSSY_LOOSE, MOSSY_COBBLE -> {
+            case MOSSY_LOOSE, MOSSY_COBBLE ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
             }
-            case GRAVEL -> {
+            case GRAVEL ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/gravel/" + rock.getSerializedName());
             }
-            case SMOOTH, BUTTON, PRESSURE_PLATE -> {
+            case SMOOTH, BUTTON, PRESSURE_PLATE ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/smooth/" + rock.getSerializedName());
             }
-            case CHISELED -> {
+            case CHISELED ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/chiseled/" + rock.getSerializedName());
             }
-            case BRICKS, AQUEDUCT -> {
+            case BRICKS, AQUEDUCT ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/bricks/" + rock.getSerializedName());
             }
-            case MOSSY_BRICKS -> {
+            case MOSSY_BRICKS ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/mossy_bricks/" + rock.getSerializedName());
             }
-            case CRACKED_BRICKS -> {
+            case CRACKED_BRICKS ->
+            {
                 return ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/rock/cracked_bricks/" + rock.getSerializedName());
             }
         }
         return null;
     }
 
-    public static ResourceLocation getMetalBlockTexture(CoreMetals.MetalType metal){
+    public static ResourceLocation getMetalBlockTexture(CoreMetals.MetalType metal)
+    {
 
-        switch(metal){
-            case ELECTRUM -> {
+        switch (metal)
+        {
+            case ELECTRUM ->
+            {
                 return ResourceLocation.parse("createaddition:block/electrum_block/block");
             }
-            case NETHERSTEEL -> {
+            case NETHERSTEEL ->
+            {
                 return ResourceLocation.parse("createbigcannons:block/nethersteel_block");
             }
-            case CAST_IRON_ALLOY -> {
+            case CAST_IRON_ALLOY ->
+            {
                 return ResourceLocation.parse("createbigcannons:block/cast_iron_block");
             }
-            case HARDENED_STEEL -> {
+            case HARDENED_STEEL ->
+            {
                 return ResourceLocation.parse("createbigcannons:block/steel_block");
             }
-            case ALUMINIUM_BRONZE -> {
+            case ALUMINIUM_BRONZE ->
+            {
                 return ResourceLocation.parse("createbigcannons:block/bronze_block");
             }
-            default -> {
-                return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID,"block/metal/full/" + metal.getSerializedName());
+            default ->
+            {
+                return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/metal/full/" + metal.getSerializedName());
             }
         }
     }
 
-    public static ResourceLocation getPlanksTexture(SpectrumWood wood){
+    public static ResourceLocation getPlanksTexture(SpectrumWood wood)
+    {
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName() + "_planks");
     }
 
-    public static ResourceLocation getLogTexture(SpectrumWood wood){
+    public static ResourceLocation getLogTexture(SpectrumWood wood)
+    {
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getLogTopTexture(SpectrumWood wood){
+    public static ResourceLocation getLogTopTexture(SpectrumWood wood)
+    {
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getStrippedLogTexture(SpectrumWood wood){
+    public static ResourceLocation getStrippedLogTexture(SpectrumWood wood)
+    {
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getStrippedLogTopTexture(SpectrumWood wood){
+    public static ResourceLocation getStrippedLogTopTexture(SpectrumWood wood)
+    {
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
     }
 
-    public static ResourceLocation getSaplingTexture(SpectrumWood wood){
-        if (wood.getSpectrumWoodType() == SpectrumWood.SpectrumWoodType.WEEPING_GALA){
+    public static ResourceLocation getSaplingTexture(SpectrumWood wood)
+    {
+        if (wood.getSpectrumWoodType() == SpectrumWood.SpectrumWoodType.WEEPING_GALA)
+        {
             return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/weeping_gala_sprig");
         }
-        if (wood.getSpectrumWoodType() == SpectrumWood.SpectrumWoodType.NOXWOOD){
+        if (wood.getSpectrumWoodType() == SpectrumWood.SpectrumWoodType.NOXWOOD)
+        {
             return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName().replace("wood", "shroom") + "_type_1");
         }
         return ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "block/" + wood.getSerializedName() + "_sapling");
     }
 
-    public static ResourceLocation getCeramicBlockTexture(CoreClay.BlockType type, CoreClay clay){
+    public static ResourceLocation getCeramicBlockTexture(CoreClay.BlockType type, CoreClay clay)
+    {
 
         return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/ceramic/" + type.getSerializedName() + "/" + clay.getSerializedName());
     }

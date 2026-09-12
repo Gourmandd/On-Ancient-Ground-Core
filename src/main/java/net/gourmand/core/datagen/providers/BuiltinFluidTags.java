@@ -35,27 +35,34 @@ public class BuiltinFluidTags extends TagsProvider<Fluid> implements Accessors
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.Provider provider)
+    {
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        {
             this.tag(TFCTags.Fluids.MOLTEN_METALS).add(getKey(metal.getFluid()));
         });
 
-        Stream.of(DyeColor.values()).forEach(color -> {
+        Stream.of(DyeColor.values()).forEach(color ->
+        {
             this.tag(CoreTags.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.COLORED_GLASS.get(color).source().getKey());
         });
         this.tag(CoreTags.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.CLEAR_GLASS.source().getKey());
     }
 
-    protected void add(Map<?, DeferredHolder<Fluid, Fluid>> map, List<TagKey<Fluid>> tags ){
-        for (DeferredHolder<Fluid, Fluid> fluid : map.values()){
-            for (TagKey<Fluid> tag : tags){
+    protected void add(Map<?, DeferredHolder<Fluid, Fluid>> map, List<TagKey<Fluid>> tags)
+    {
+        for (DeferredHolder<Fluid, Fluid> fluid : map.values())
+        {
+            for (TagKey<Fluid> tag : tags)
+            {
                 this.tag(tag).add(fluid.getKey());
-            };
+            }
         }
-    };
+    }
 
-    protected ResourceKey<Fluid> getKey(Fluid fluid ){
+    protected ResourceKey<Fluid> getKey(Fluid fluid)
+    {
         return fluid.builtInRegistryHolder().getKey();
     }
 }

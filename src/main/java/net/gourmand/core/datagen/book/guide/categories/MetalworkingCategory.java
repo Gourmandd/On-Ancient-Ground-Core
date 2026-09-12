@@ -12,14 +12,17 @@ import net.gourmand.core.datagen.book.guide.entries.pottery.CrucibleEntry;
 import net.gourmand.core.datagen.book.guide.entries.pottery.MoldTableEntry;
 import net.minecraft.resources.ResourceLocation;
 
-public class MetalworkingCategory extends CategoryProvider {
+public class MetalworkingCategory extends CategoryProvider
+{
 
-    public MetalworkingCategory(ModonomiconProviderBase parent) {
+    public MetalworkingCategory(ModonomiconProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
                 "____uvAwz___________",
                 "___________________",
@@ -32,7 +35,8 @@ public class MetalworkingCategory extends CategoryProvider {
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
 
         var rock_anvil = this.add(new RockAnvilEntry(this).generate("c"));
 
@@ -78,22 +82,26 @@ public class MetalworkingCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Metalworking";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCBlocks.METALS.get(Metal.BRONZE).get(Metal.BlockType.ANVIL));
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return "metalworking";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

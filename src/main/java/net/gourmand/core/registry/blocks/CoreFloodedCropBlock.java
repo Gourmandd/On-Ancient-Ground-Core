@@ -15,9 +15,15 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import java.util.function.Supplier;
 
-public abstract class CoreFloodedCropBlock extends FloodedCropBlock {
+public abstract class CoreFloodedCropBlock extends FloodedCropBlock
+{
 
     public static final FluidProperty FLUID = TFCBlockStateProperties.FRESH_WATER;
+
+    protected CoreFloodedCropBlock(ExtendedProperties properties, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange)
+    {
+        super(properties, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange);
+    }
 
     public static FloodedCropBlock create(ExtendedProperties properties, int stages, CoreCrops crop)
     {
@@ -30,11 +36,6 @@ public abstract class CoreFloodedCropBlock extends FloodedCropBlock {
                 return property;
             }
         };
-    }
-
-    protected CoreFloodedCropBlock(ExtendedProperties properties, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange)
-    {
-        super(properties, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange);
     }
 
 }

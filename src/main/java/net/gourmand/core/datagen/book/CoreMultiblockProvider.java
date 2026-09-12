@@ -28,9 +28,11 @@ import java.util.stream.Stream;
 import static net.gourmand.core.registry.category.CoreOres.*;
 import static net.dries007.tfc.common.blocks.rock.Ore.*;
 
-public class CoreMultiblockProvider extends MultiblockProvider {
+public class CoreMultiblockProvider extends MultiblockProvider
+{
 
-    public CoreMultiblockProvider(PackOutput packOutput) {
+    public CoreMultiblockProvider(PackOutput packOutput)
+    {
         super(packOutput, AncientGroundCore.MOD_ID);
     }
 
@@ -78,7 +80,8 @@ public class CoreMultiblockProvider extends MultiblockProvider {
             .build();
 
     @Override
-    public void buildMultiblocks() {
+    public void buildMultiblocks()
+    {
 
         CORE_ORES.forEach((ore, block) -> {
             this.add(this.modLoc("ore_preview/" + ore.getSerializedName()), new DenseMultiblockBuilder()

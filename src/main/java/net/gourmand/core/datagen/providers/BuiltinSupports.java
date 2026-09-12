@@ -1,16 +1,15 @@
 package net.gourmand.core.datagen.providers;
 
-import java.util.Arrays;
-import java.util.concurrent.CompletableFuture;
-
+import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.common.recipes.ingredients.BlockIngredient;
+import net.dries007.tfc.util.data.Support;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.SpectrumWood;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 
-import net.dries007.tfc.common.blocks.wood.Wood;
-import net.dries007.tfc.common.recipes.ingredients.BlockIngredient;
-import net.dries007.tfc.util.data.Support;
+import java.util.Arrays;
+import java.util.concurrent.CompletableFuture;
 
 public class BuiltinSupports extends DataManagerProvider<Support>
 {

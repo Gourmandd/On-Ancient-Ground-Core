@@ -10,16 +10,19 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.datagen.book.guide.entries.gettingStarted.*;
 import net.minecraft.resources.ResourceLocation;
 
-public class GettingStartedCategory extends CategoryProvider {
+public class GettingStartedCategory extends CategoryProvider
+{
 
     public static final String ID = "getting_started";
 
-    public GettingStartedCategory(SingleBookSubProvider parent) {
+    public GettingStartedCategory(SingleBookSubProvider parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
                 "k___h_j",
                 "_______",
@@ -32,7 +35,8 @@ public class GettingStartedCategory extends CategoryProvider {
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
         // about modpack
 
         // a bit of info about geology, (and in geology category).
@@ -61,36 +65,35 @@ public class GettingStartedCategory extends CategoryProvider {
 
         var clay = this.add(new ClayEntry(this).generate("h").withParent(shovel));
 
-        var pitkiln = this.add(new PitKilnEntry(this).generate("j")
-                .withParent(straw)
-                .withParent(clay)
-        );
+        var pitkiln = this.add(new PitKilnEntry(this).generate("j").withParent(straw).withParent(clay));
 
         var fire = this.add(new FireEntry(this).generate("k").withParent(shovel));
-
-
 
 
         var field_guide = this.add(new FieldGuideEntry(this).generate("Z").withParent(introduction));
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "About This World";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCItems.ROCK_TOOLS.get(RockCategory.METAMORPHIC).get(RockCategory.ItemType.AXE));
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return ID;
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

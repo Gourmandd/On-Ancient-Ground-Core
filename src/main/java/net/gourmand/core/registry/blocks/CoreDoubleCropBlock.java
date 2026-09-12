@@ -15,9 +15,21 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import java.util.function.Supplier;
 
-public abstract class CoreDoubleCropBlock extends DoubleCropBlock {
+public abstract class CoreDoubleCropBlock extends DoubleCropBlock
+{
 
     public static final EnumProperty<Part> PART = TFCBlockStateProperties.DOUBLE_CROP_PART;
+    protected final int maxSingleAge;
+    protected final float maxSingleGrowth;
+
+    protected CoreDoubleCropBlock(ExtendedProperties properties, int maxSingleAge, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosporous, float potassium, Supplier<ClimateRange> climateRange)
+    {
+        super(properties, maxSingleAge, maxAge, dead, seeds, nitrogen, phosporous, potassium, climateRange);
+
+        this.maxSingleAge = maxSingleAge;
+        this.maxSingleGrowth = (float) maxSingleAge / maxAge;
+        registerDefaultState(defaultBlockState().setValue(PART, Part.BOTTOM));
+    }
 
     public static CoreDoubleCropBlock create(ExtendedProperties properties, int singleStages, int doubleStages, CoreCrops crop)
     {
@@ -30,17 +42,5 @@ public abstract class CoreDoubleCropBlock extends DoubleCropBlock {
                 return property;
             }
         };
-    }
-
-    protected final int maxSingleAge;
-    protected final float maxSingleGrowth;
-
-    protected CoreDoubleCropBlock(ExtendedProperties properties, int maxSingleAge, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosporous, float potassium, Supplier<ClimateRange> climateRange)
-    {
-        super(properties, maxSingleAge, maxAge, dead, seeds, nitrogen, phosporous, potassium, climateRange);
-
-        this.maxSingleAge = maxSingleAge;
-        this.maxSingleGrowth = (float) maxSingleAge / maxAge;
-        registerDefaultState(defaultBlockState().setValue(PART, Part.BOTTOM));
     }
 }

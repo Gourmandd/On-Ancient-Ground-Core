@@ -14,7 +14,17 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import java.util.function.Supplier;
 
-public abstract class CoreSpreadingCropBlock extends SpreadingCropBlock {
+public abstract class CoreSpreadingCropBlock extends SpreadingCropBlock
+{
+
+    private final Supplier<Supplier<? extends Block>> fruit;
+
+    protected CoreSpreadingCropBlock(ExtendedProperties properties, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange, Supplier<Supplier<? extends Block>> fruit)
+    {
+        super(properties, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange, fruit);
+        registerDefaultState(getStateDefinition().any().setValue(NORTH, false).setValue(WEST, false).setValue(EAST, false).setValue(SOUTH, false).setValue(getAgeProperty(), 0));
+        this.fruit = fruit;
+    }
 
     public static CoreSpreadingCropBlock create(ExtendedProperties properties, int stages, CoreCrops crop, Supplier<Supplier<? extends Block>> fruit)
     {
@@ -27,14 +37,5 @@ public abstract class CoreSpreadingCropBlock extends SpreadingCropBlock {
                 return property;
             }
         };
-    }
-
-    private final Supplier<Supplier<? extends Block>> fruit;
-
-    protected CoreSpreadingCropBlock(ExtendedProperties properties, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange, Supplier<Supplier<? extends Block>> fruit)
-    {
-        super(properties, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange, fruit);
-        registerDefaultState(getStateDefinition().any().setValue(NORTH, false).setValue(WEST, false).setValue(EAST, false).setValue(SOUTH, false).setValue(getAgeProperty(), 0));
-        this.fruit = fruit;
     }
 }

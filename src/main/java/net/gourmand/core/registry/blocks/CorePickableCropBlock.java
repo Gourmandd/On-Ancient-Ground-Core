@@ -15,7 +15,18 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
-public abstract class CorePickableCropBlock extends PickableCropBlock {
+public abstract class CorePickableCropBlock extends PickableCropBlock
+{
+
+    private final @Nullable Supplier<Supplier<? extends Item>> fruit;
+    private final Supplier<Supplier<? extends Item>> matureFruit;
+
+    protected CorePickableCropBlock(ExtendedProperties properties, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange, @Nullable Supplier<Supplier<? extends Item>> fruit, Supplier<Supplier<? extends Item>> matureFruit)
+    {
+        super(properties, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange, fruit, matureFruit);
+        this.fruit = fruit;
+        this.matureFruit = matureFruit;
+    }
 
     public static CorePickableCropBlock create(ExtendedProperties properties, int stages, CoreCrops crop, @Nullable Supplier<Supplier<? extends Item>> fruit, Supplier<Supplier<? extends Item>> matureFruit)
     {
@@ -28,15 +39,5 @@ public abstract class CorePickableCropBlock extends PickableCropBlock {
                 return property;
             }
         };
-    }
-
-    private final @Nullable Supplier<Supplier<? extends Item>> fruit;
-    private final Supplier<Supplier<? extends Item>> matureFruit;
-
-    protected CorePickableCropBlock(ExtendedProperties properties, int maxAge, Supplier<? extends Block> dead, Supplier<? extends Item> seeds, float nitrogen, float phosphorous, float potassium, Supplier<ClimateRange> climateRange, @Nullable Supplier<Supplier<? extends Item>> fruit, Supplier<Supplier<? extends Item>> matureFruit)
-    {
-        super(properties, maxAge, dead, seeds, nitrogen, phosphorous, potassium, climateRange, fruit, matureFruit);
-        this.fruit = fruit;
-        this.matureFruit = matureFruit;
     }
 }

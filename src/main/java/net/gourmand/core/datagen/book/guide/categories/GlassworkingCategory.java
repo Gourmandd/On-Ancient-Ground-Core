@@ -8,21 +8,25 @@ import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.items.TFCItems;
 import net.minecraft.resources.ResourceLocation;
 
-public class GlassworkingCategory extends CategoryProvider {
+public class GlassworkingCategory extends CategoryProvider
+{
 
-    public GlassworkingCategory(ModonomiconProviderBase parent) {
+    public GlassworkingCategory(ModonomiconProviderBase parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
             ""
         };
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
         // add glassworking
         // add glass batches
         // add hand processes
@@ -42,22 +46,26 @@ public class GlassworkingCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Glassworking";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCItems.BLOWPIPE_WITH_GLASS);
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return "glassworking";
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }

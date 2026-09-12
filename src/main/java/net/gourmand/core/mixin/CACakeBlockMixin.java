@@ -13,11 +13,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(CACakeBlock.class)
-public class CACakeBlockMixin {
+public class CACakeBlockMixin
+{
 
     @WrapMethod(method = "eat")
-    private static InteractionResult onEat(LevelAccessor world, BlockPos pos, BlockState state, Player player, Operation<InteractionResult> original){
-        if (player.canEat(false)){
+    private static InteractionResult onEat(LevelAccessor world, BlockPos pos, BlockState state, Player player, Operation<InteractionResult> original)
+    {
+        if (player.canEat(false))
+        {
             IPlayerInfo.get(player).eat(FoodData.CAKE);
         }
         return original.call(world, pos, state, player);

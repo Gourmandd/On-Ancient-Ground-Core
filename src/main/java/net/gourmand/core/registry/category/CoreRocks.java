@@ -76,11 +76,14 @@ public enum CoreRocks implements RegistryRock
     public boolean hasOres()
     {
         // saves us from registering a couple of hundred blocks that are never used.
-        switch (this){
-            case GREYWACKE, MARLSTONE, SOAPSTONE, SUEVITE -> {
+        switch (this)
+        {
+            case GREYWACKE, MARLSTONE, SOAPSTONE, SUEVITE ->
+            {
                 return false;
             }
-            default -> {
+            default ->
+            {
                 return true;
             }
         }
@@ -91,17 +94,23 @@ public enum CoreRocks implements RegistryRock
         return hasVariants;
     }
 
-    public boolean hasVariant(Rock.BlockType blockType){
+    public boolean hasVariant(Rock.BlockType blockType)
+    {
 
-        if (hasVariants){
+        if (hasVariants)
+        {
             return true;
         }
 
-        switch (blockType){
-            case RAW, BRICKS, SMOOTH, CRACKED_BRICKS, CHISELED, PRESSURE_PLATE, BUTTON  -> {
+        switch (blockType)
+        {
+            case RAW, BRICKS, SMOOTH, CRACKED_BRICKS, CHISELED, PRESSURE_PLATE, BUTTON ->
+            {
                 return false;
             }
-            case HARDENED, GRAVEL, SPIKE, MOSSY_BRICKS, COBBLE, MOSSY_COBBLE, MOSSY_LOOSE, LOOSE, AQUEDUCT, ROPE_ANCHOR -> {
+            case HARDENED, GRAVEL, SPIKE, MOSSY_BRICKS, COBBLE, MOSSY_COBBLE, MOSSY_LOOSE, LOOSE, AQUEDUCT,
+                 ROPE_ANCHOR ->
+            {
                 return true;
             }
         }
@@ -111,15 +120,19 @@ public enum CoreRocks implements RegistryRock
     @Override
     public Supplier<? extends Block> getBlock(Rock.BlockType type)
     {
-        if (type == Rock.BlockType.RAW){
+        if (type == Rock.BlockType.RAW)
+        {
             return () -> CategoryUtil.CoreRock.TO_RAW_BLOCK.get(this).value();
-        } else {
+        }
+        else
+        {
             return CoreBlocks.ROCK_BLOCKS.get(this).get(type);
         }
     }
 
     @Override
-    public Supplier<? extends Block> getAnvil() {
+    public Supplier<? extends Block> getAnvil()
+    {
         return null;
     }
 

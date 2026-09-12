@@ -14,17 +14,29 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.Nullable;
+
 import java.util.Locale;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public enum CoreCrops implements StringRepresentable {
+public enum CoreCrops implements StringRepresentable
+{
 
     GLISTERING_MELON(0.75f, -0.2f, -0.2f, 8, () -> SpectrumBlocks.GLISTERING_MELON),
     COTTON(0.75f, -0.2f, -0.2f, 4),
     COFFEE(0.75f, -0.2f, -0.2f, 6),
     AMARANTH(0.75f, -0.2f, -0.2f, 4, 4, false),
     WART(-0.1f, -0.1f, -0.1f, 3);
+
+    private final String serializedName;
+    private final float nitrogen;
+    private final float phosphorous;
+    private final float potassium;
+    private final Supplier<Block> factory;
+    private final Supplier<Block> deadFactory;
+    private final Supplier<Block> wildFactory;
+    private final CropType cropType;
+    private final int ripeStage;
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int singleBlockStages)
     {
@@ -49,32 +61,12 @@ public enum CoreCrops implements StringRepresentable {
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int doubleBlockBottomStages, int doubleBlockTopStages, boolean requiresStick, @Nullable Supplier<Supplier<? extends Item>> fruit1, Supplier<Supplier<? extends Item>> fruit2)
     {
-        this(nitrogen, phosphorus, potassium,
-                requiresStick ?
-                        self -> CorePickableClimbingCropBlock.create(doubleCrop(), doubleBlockBottomStages, doubleBlockTopStages, self, fruit1, fruit2) :
-                        self -> CoreDoubleCropBlock.create(doubleCrop(), doubleBlockBottomStages, doubleBlockTopStages, self),
-                requiresStick ?
-                        self -> new DeadClimbingCropBlock(dead(), self.getClimateRange()) :
-                        self -> new DeadDoubleCropBlock(dead(), self.getClimateRange()),
-                self -> new WildDoubleCropBlock(dead().randomTicks()),
-                CropType.DOUBLE,
-                (doubleBlockBottomStages + doubleBlockTopStages - 1)
-        );
+        this(nitrogen, phosphorus, potassium, requiresStick ? self -> CorePickableClimbingCropBlock.create(doubleCrop(), doubleBlockBottomStages, doubleBlockTopStages, self, fruit1, fruit2) : self -> CoreDoubleCropBlock.create(doubleCrop(), doubleBlockBottomStages, doubleBlockTopStages, self), requiresStick ? self -> new DeadClimbingCropBlock(dead(), self.getClimateRange()) : self -> new DeadDoubleCropBlock(dead(), self.getClimateRange()), self -> new WildDoubleCropBlock(dead().randomTicks()), CropType.DOUBLE, (doubleBlockBottomStages + doubleBlockTopStages - 1));
     }
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int doubleBlockBottomStages, int doubleBlockTopStages, boolean requiresStick)
     {
-        this(nitrogen, phosphorus, potassium,
-                requiresStick ?
-                        self -> CoreClimbingCropBlock.create(doubleCrop(), doubleBlockBottomStages, doubleBlockTopStages, self) :
-                        self -> CoreDoubleCropBlock.create(doubleCrop(), doubleBlockBottomStages, doubleBlockTopStages, self),
-                requiresStick ?
-                        self -> new DeadClimbingCropBlock(dead(), self.getClimateRange()) :
-                        self -> new DeadDoubleCropBlock(dead(), self.getClimateRange()),
-                self -> new WildDoubleCropBlock(dead().randomTicks()),
-                CropType.DOUBLE,
-                (doubleBlockBottomStages + doubleBlockTopStages - 1)
-        );
+        this(nitrogen, phosphorus, potassium, requiresStick ? self -> CoreClimbingCropBlock.create(doubleCrop(), doubleBlockBottomStages, doubleBlockTopStages, self) : self -> CoreDoubleCropBlock.create(doubleCrop(), doubleBlockBottomStages, doubleBlockTopStages, self), requiresStick ? self -> new DeadClimbingCropBlock(dead(), self.getClimateRange()) : self -> new DeadDoubleCropBlock(dead(), self.getClimateRange()), self -> new WildDoubleCropBlock(dead().randomTicks()), CropType.DOUBLE, (doubleBlockBottomStages + doubleBlockTopStages - 1));
     }
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, Function<CoreCrops, Block> factory, Function<CoreCrops, Block> deadFactory, Function<CoreCrops, Block> wildFactory, CropType cropType, int ripeStage)
@@ -89,16 +81,6 @@ public enum CoreCrops implements StringRepresentable {
         this.cropType = cropType;
         this.ripeStage = ripeStage;
     }
-
-    private final String serializedName;
-    private final float nitrogen;
-    private final float phosphorous;
-    private final float potassium;
-    private final Supplier<Block> factory;
-    private final Supplier<Block> deadFactory;
-    private final Supplier<Block> wildFactory;
-    private final CropType cropType;
-    private final int ripeStage;
 
     private static ExtendedProperties doubleCrop()
     {
@@ -166,10 +148,11 @@ public enum CoreCrops implements StringRepresentable {
         return ripeStage;
     }
 
-    public enum CropType {
+    public enum CropType
+    {
         SINGLE,
         DOUBLE,
-        SPREADING;
+        SPREADING
     }
 }
 

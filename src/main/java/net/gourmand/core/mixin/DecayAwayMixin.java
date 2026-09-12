@@ -12,11 +12,14 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(DecayAwayBlock.TargetConversion.class)
-public class DecayAwayMixin {
+public class DecayAwayMixin
+{
 
     @Inject(method = "getTargetState", at = @At(value = "RETURN", ordinal = 3), cancellable = true)
-    void onGetTargetState(Level world, CallbackInfoReturnable<BlockState> cir){
-        if (cir.getReturnValue().is(Blocks.DIRT)){
+    void onGetTargetState(Level world, CallbackInfoReturnable<BlockState> cir)
+    {
+        if (cir.getReturnValue().is(Blocks.DIRT))
+        {
             cir.setReturnValue(TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.ARIDISOL).get().defaultBlockState());
         }
     }

@@ -13,16 +13,19 @@ import net.gourmand.core.datagen.book.guide.entries.mining.CeramicPanEntry;
 import net.gourmand.core.datagen.book.guide.entries.pottery.*;
 import net.minecraft.resources.ResourceLocation;
 
-public class PotteryCategory extends CategoryProvider {
+public class PotteryCategory extends CategoryProvider
+{
 
     public static final String ID = "pottery";
 
-    public PotteryCategory(SingleBookSubProvider parent) {
+    public PotteryCategory(SingleBookSubProvider parent)
+    {
         super(parent);
     }
 
     @Override
-    protected String[] generateEntryMap() {
+    protected String[] generateEntryMap()
+    {
         return new String[]{
                 "__g_h___c____",
                 "__i_l_______d",
@@ -33,7 +36,8 @@ public class PotteryCategory extends CategoryProvider {
     }
 
     @Override
-    protected void generateEntries() {
+    protected void generateEntries()
+    {
 
         // add pit kiln guide
         // TODO: Expand bowl entry and add it to devices.
@@ -83,22 +87,26 @@ public class PotteryCategory extends CategoryProvider {
     }
 
     @Override
-    protected String categoryName() {
+    protected String categoryName()
+    {
         return "Pottery";
     }
 
     @Override
-    protected BookIconModel categoryIcon() {
+    protected BookIconModel categoryIcon()
+    {
         return BookIconModel.create(TFCItems.VESSEL.asItem());
     }
 
     @Override
-    public String categoryId() {
+    public String categoryId()
+    {
         return ID;
     }
 
     @Override
-    protected BookCategoryModel additionalSetup(BookCategoryModel category) {
+    protected BookCategoryModel additionalSetup(BookCategoryModel category)
+    {
         category.withBackground(ResourceLocation.parse(SpectrumCommon.MOD_ID + ":textures/gui/modonomicon/category_background.png"));
         return super.additionalSetup(category);
     }
