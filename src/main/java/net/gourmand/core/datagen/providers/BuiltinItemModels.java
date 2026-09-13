@@ -38,6 +38,17 @@ public class BuiltinItemModels extends ItemModelProvider
     @Override
     protected void registerModels()
     {
+        generateOre();
+        generateMetal();
+        generateRock();
+        generateWood();
+        generateGemstones();
+        generateCeramics();
+        generateMisc();
+    }
+
+    private void generateOre()
+    {
         for (CoreOres oreType : CoreOres.values())
         {
             if (!oreType.hasBlock())
@@ -122,6 +133,65 @@ public class BuiltinItemModels extends ItemModelProvider
             }
         }
 
+        // not tied to the item itself, it's referenced in the deposit data definition.
+        for (OreDeposit ore : OreDeposit.values())
+        {
+            for (CoreRocks rock : CoreRocks.values())
+            {
+                if (rock.hasOres())
+                {
+                    ResourceLocation texture = Objects.requireNonNull(TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL));
+                    String oreId = ore.name().toLowerCase(Locale.ROOT);
+                    String rockId = rock.getSerializedName();
+
+                    this.getBuilder("%s:item/pan/%s/%s_full".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
+                            .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/full"))
+                            .texture("material", texture);
+
+                    this.getBuilder("%s:item/pan/%s/%s_half".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
+                            .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/half"))
+                            .texture("material", texture);
+                }
+            }
+        }
+    }
+
+    private void generateMetal()
+    {
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
+        {
+            for (Metal.ItemType itemType : Metal.ItemType.values())
+            {
+                if (itemType.has(metalType.getLikeMetal()))
+                {
+                    simpleItem(CoreItems.METAL_ITEMS.get(metalType).get(itemType).get(), getItemModelLocation(CoreItems.METAL_ITEMS.get(metalType).get(itemType).getId()));
+                }
+            }
+
+            simpleBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK));
+            simpleBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_STAIRS));
+            simpleBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_SLAB));
+        }
+
+        /*
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    simpleBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type));
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    simpleBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type));
+                }
+            });
+        });
+         */
+    }
+
+    private void generateRock()
+    {
         // rock blocks.
         for (CoreRocks rockType : CoreRocks.values())
         {
@@ -154,23 +224,87 @@ public class BuiltinItemModels extends ItemModelProvider
             simpleItem(CoreItems.BRICKS.get(rockType).get(), getItemModelLocation(CoreItems.BRICKS.get(rockType).getId()));
         }
 
-        // metal items and blocks
-        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
+        CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(this::simpleBlock);
+        CoreBlocks.MORTARED_CUSTOM_COBBLE.values().forEach(this::simpleBlock);
+    }
+
+    private void generateWood()
+    {
+        for (SpectrumWood woodType : SpectrumWood.values())
         {
-            for (Metal.ItemType itemType : Metal.ItemType.values())
+
+            supportBlockItem(CoreItems.SUPPORTS.get(woodType).get(), woodType);
+
+            simpleItem(CoreItems.LUMBER.get(woodType).get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/lumber/" + woodType.getSerializedName()));
+            simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TWIG).get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/twig/" + woodType.getSerializedName()));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SCRIBING_TABLE));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SEWING_TABLE));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.LOOM));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SHELF));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TOOL_RACK));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.CRATE));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE), getBlockModelLocation(AncientGroundCore.MOD_ID, CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE).getId().getPath() + "_lower"));
+            simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SAPLING).get().asItem(), TextureUtil.getSaplingTexture(woodType));
+
+            // barrel item
+            DeferredHolder<Block, Block> block = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.BARREL);
+
+            ResourceLocation locationOpened = ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), block.getId().getPath());
+            ResourceLocation locationSealed = ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), block.getId().getPath() + "_sealed");
+
+            ModelFile modelSealed = new ModelFile.ExistingModelFile(getBlockModelLocation(locationSealed), existingFileHelper);
+
+            withExistingParent(getItemModelString(block.getId()), getBlockModelLocation(locationOpened)).override()
+                    .predicate(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "sealed"), 1.0f)
+                    .model(modelSealed);
+        }
+
+        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
+        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
+        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
+
+        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
+        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
+        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
+
+    }
+
+    private void generateGemstones()
+    {
+        for (CoreGemstones gemType : CoreGemstones.values())
+        {
+            for (CoreGemstones.GemstoneBlocks blockType : CoreGemstones.GemstoneBlocks.values())
             {
-                if (itemType.has(metalType.getLikeMetal()))
+
+                final DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType);
+
+                switch (blockType)
                 {
-                    simpleItem(CoreItems.METAL_ITEMS.get(metalType).get(itemType).get(), getItemModelLocation(CoreItems.METAL_ITEMS.get(metalType).get(itemType).getId()));
+                    case BLOCK, BUDDING_BLOCK, PILLAR, POWDER_BLOCK -> simpleBlock(BLOCK);
+                    case CLUSTER -> itemModel(BLOCK.get().asItem(),
+                            getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/cluster"
+                    );
+                    case LARGE_CLUSTER -> itemModel(BLOCK.get().asItem(),
+                            getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/large_bud"
+                    );
+                    case MEDIUM_CLUSTER -> itemModel(BLOCK.get().asItem(),
+                            getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/medium_bud"
+                    );
+                    case SMALL_CLUSTER -> itemModel(BLOCK.get().asItem(),
+                            getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/small_bud"
+                    );
                 }
             }
 
-            simpleBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK));
-            simpleBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_STAIRS));
-            simpleBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_SLAB));
+            for (CoreGemstones.GemstoneItems itemType : CoreGemstones.GemstoneItems.values())
+            {
+                simpleItem(CoreItems.GEMSTONE_ITEMS.get(gemType).get(itemType).get(), itemTexture(CoreItems.GEMSTONE_ITEMS.get(gemType).get(itemType)));
+            }
         }
+    }
 
-        // ceramics
+    private void generateCeramics()
+    {
         for (CoreClay clayType : CoreClay.values())
         {
             for (CoreClay.ItemType itemType : CoreClay.ItemType.values())
@@ -223,51 +357,10 @@ public class BuiltinItemModels extends ItemModelProvider
                 }
             }
         }
+    }
 
-        // spectrum wood types.
-        for (SpectrumWood woodType : SpectrumWood.values())
-        {
-
-            supportBlockItem(CoreItems.SUPPORTS.get(woodType).get(), woodType);
-            // do support
-
-            simpleItem(CoreItems.LUMBER.get(woodType).get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/lumber/" + woodType.getSerializedName()));
-            simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TWIG).get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/twig/" + woodType.getSerializedName()));
-            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SCRIBING_TABLE));
-            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SEWING_TABLE));
-            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.LOOM));
-            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SHELF));
-            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TOOL_RACK));
-            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.CRATE));
-            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE), getBlockModelLocation(AncientGroundCore.MOD_ID, CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE).getId().getPath() + "_lower"));
-            simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SAPLING).get().asItem(), TextureUtil.getSaplingTexture(woodType));
-
-            // barrel item
-            DeferredHolder<Block, Block> block = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.BARREL);
-
-            ResourceLocation locationOpened = ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), block.getId().getPath());
-            ResourceLocation locationSealed = ResourceLocation.fromNamespaceAndPath(block.getId().getNamespace(), block.getId().getPath() + "_sealed");
-
-            ModelFile modelSealed = new ModelFile.ExistingModelFile(getBlockModelLocation(locationSealed), existingFileHelper);
-
-            withExistingParent(getItemModelString(block.getId()), getBlockModelLocation(locationOpened)).override()
-                    .predicate(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "sealed"), 1.0f)
-                    .model(modelSealed);
-        }
-
-        // buckets
-        CoreItems.METAL_FLUID_BUCKETS.forEach((metal, holder) ->
-        {
-            simpleBucket(holder);
-        });
-
-        CoreItems.COLORED_GLASS_FLUID_BUCKETS.forEach((metal, holder) ->
-        {
-            simpleBucket(holder);
-        });
-
-        simpleBucket(CoreItems.CLEAR_GLASS_FLUID_BUCKET);
-
+    private void generateMisc()
+    {
         for (DyeColor color : DyeColor.values())
         {
             simpleItem(CoreItems.COLORED_LENS.get(color).get(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/lens/" + color.getSerializedName()));
@@ -281,98 +374,18 @@ public class BuiltinItemModels extends ItemModelProvider
         simpleBlock(CoreBlocks.CLEAR_LEAD_GLASS);
         simpleItem(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":block/lead_glass/clear"));
 
-        CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(this::simpleBlock);
-
-        CoreBlocks.MORTARED_CUSTOM_COBBLE.values().forEach(this::simpleBlock);
-
-        /*
-        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
-            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
-                if (type.hasMetal(metal)){
-                    simpleBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type));
-                }
-            });
-
-            Stream.of(Metal.values()).forEach(metal -> {
-                if (type.hasMetal(metal)){
-                    simpleBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type));
-                }
-            });
-        });
-         */
 
         simpleBlock(CoreBlocks.PRISMATIC_ICE);
         simpleBlock(CoreBlocks.LEAD_BULB_BLOCK);
-        for (CoreGemstones gemType : CoreGemstones.values())
-        {
-            for (CoreGemstones.GemstoneBlocks blockType : CoreGemstones.GemstoneBlocks.values())
-            {
 
-                final DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType);
+        // buckets
+        CoreItems.METAL_FLUID_BUCKETS.forEach((metal, holder) -> simpleBucket(holder));
+        CoreItems.COLORED_GLASS_FLUID_BUCKETS.forEach((metal, holder) -> simpleBucket(holder));
 
-                switch (blockType)
-                {
-                    case BLOCK, BUDDING_BLOCK, PILLAR, POWDER_BLOCK ->
-                    {
-                        simpleBlock(BLOCK);
-                    }
-                    case CLUSTER ->
-                    {
-                        itemModel(BLOCK.get().asItem(), getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/cluster");
-                    }
-                    case LARGE_CLUSTER ->
-                    {
-                        itemModel(BLOCK.get().asItem(), getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/large_bud");
-                    }
-                    case MEDIUM_CLUSTER ->
-                    {
-                        itemModel(BLOCK.get().asItem(), getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/medium_bud");
-                    }
-                    case SMALL_CLUSTER ->
-                    {
-                        itemModel(BLOCK.get().asItem(), getBlockModelLocation(BLOCK.getId().getNamespace(), BLOCK.getId().getPath()), "spectrum:templates_item/small_bud");
-                    }
-                }
-            }
-
-            for (CoreGemstones.GemstoneItems itemType : CoreGemstones.GemstoneItems.values())
-            {
-                simpleItem(CoreItems.GEMSTONE_ITEMS.get(gemType).get(itemType).get(), itemTexture(CoreItems.GEMSTONE_ITEMS.get(gemType).get(itemType)));
-            }
-        }
-
-
-        // not tied to the item itself, it's referenced in the deposit data definition.
-        for (OreDeposit ore : OreDeposit.values())
-        {
-            for (CoreRocks rock : CoreRocks.values())
-            {
-                if (rock.hasOres())
-                {
-                    ResourceLocation texture = Objects.requireNonNull(TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL));
-                    String oreId = ore.name().toLowerCase(Locale.ROOT);
-                    String rockId = rock.getSerializedName();
-
-                    this.getBuilder("%s:item/pan/%s/%s_full".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
-                            .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/full"))
-                            .texture("material", texture);
-
-                    this.getBuilder("%s:item/pan/%s/%s_half".formatted(AncientGroundCore.MOD_ID, oreId, rockId))
-                            .parent(new ModelFile.UncheckedModelFile("tfc:item/pan/half"))
-                            .texture("material", texture);
-                }
-            }
-        }
-
-        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
-        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
-        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> simpleBlock(block));
-
-        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
-        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
-        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) -> simpleItem(block.get().asItem(), ResourceLocation.parse(AncientGroundCore.MOD_ID + ":item/wood/shutter/" + wood.getSerializedName())));
+        simpleBucket(CoreItems.CLEAR_GLASS_FLUID_BUCKET);
     }
 
+    //region methods
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block)
     {
         withExistingParent(getItemModelString(block.getId()), getBlockModelLocation(block.getId()));
@@ -501,4 +514,5 @@ public class BuiltinItemModels extends ItemModelProvider
                     .fluid(bucket.content);
         }
     }
+    //endregion
 }

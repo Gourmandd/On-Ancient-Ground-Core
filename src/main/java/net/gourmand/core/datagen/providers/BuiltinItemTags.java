@@ -31,6 +31,7 @@ import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Map;
@@ -40,6 +41,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 {
     final TagKey<Item> SHIMMERSTONE_ORES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "shimmerstone_ores"));
     final TagKey<Item> AZURITE_ORES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "azurite_ores"));
+    final TagKey<Item> UPRIGHT_ON_BELT = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("create", "upright_on_belt"));
+
     private final ExistingFileHelper.IResourceType resourceType;
 
     public BuiltinItemTags(GatherDataEvent event, CompletableFuture<HolderLookup.Provider> lookup)
@@ -49,18 +52,43 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider)
+    protected void addTags(HolderLookup.@NotNull Provider provider)
     {
+        generateMetal();
+        generateOre();
+        generateRock();
+        generateWood();
+        generateGemstones();
+        generateCeramics();
+        generateMisc();
+        generateMultiblock();
+    }
 
-        final TagKey<Item> UPRIGHT_ON_BELT = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("create", "upright_on_belt"));
+    private void generateMetal()
+    {
+        this.tag(CoreTags.Items.BELLS).add(getKey(TFCBlocks.BRASS_BELL.asItem())).add(getKey(TFCBlocks.BRONZE_BELL.asItem())).add(getKey(Blocks.BELL));
 
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
+        {
+            this.tag(Tags.Items.INGOTS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT).getKey());
+            this.tag(TFCTags.Items.DOUBLE_INGOTS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_INGOT).getKey());
+            this.tag(TFCTags.Items.SHEETS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.SHEET).getKey());
+            this.tag(TFCTags.Items.DOUBLE_SHEETS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_SHEET).getKey());
+            this.tag(Tags.Items.RODS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.ROD).getKey());
 
-        this.tag(Tags.Items.HIDDEN_FROM_RECIPE_VIEWERS).add(CoreItems.ORES.get(CoreOres.ANTHRACITE).getKey());
+            this.tag(CoreTags.Items.METAL_INGOTS.get(metalType)).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT).getKey());
+            this.tag(CoreTags.Items.METAL_DOUBLE_INGOTS.get(metalType)).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_INGOT).getKey());
+            this.tag(CoreTags.Items.METAL_SHEETS.get(metalType)).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.SHEET).getKey());
+            this.tag(CoreTags.Items.METAL_DOUBLE_SHEETS.get(metalType)).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_SHEET).getKey());
+        }
 
-        add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(ItemTags.LEAVES));
+        CategoryUtil.getTFCToolMetals().forEach(metal ->
+                CategoryUtil.getTFCToolHeads().forEach(tool -> this.tag(CoreTags.Items.TOOL_HEADS.get(tool)).add(TFCItems.METAL_ITEMS.get(metal).get(tool).holder().getKey()))
+        );
+    }
 
-        add(CoreBlocks.FRUIT_TREE_SAPLINGS, List.of(ItemTags.SAPLINGS));
-
+    private void generateOre()
+    {
         for (CoreRocks rockType : CoreRocks.values())
         {
             if (rockType.hasOres())
@@ -134,91 +162,10 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 add(CoreBlocks.ORE_DEPOSITS.get(rockType), List.of(TFCTags.Items.ORE_DEPOSITS));
             }
         }
+    }
 
-        this.tag(CoreTags.Items.BELLS).add(getKey(TFCBlocks.BRASS_BELL.asItem())).add(getKey(TFCBlocks.BRONZE_BELL.asItem())).add(getKey(Blocks.BELL));
-
-        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
-        {
-            this.tag(Tags.Items.INGOTS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT).getKey());
-            this.tag(TFCTags.Items.DOUBLE_INGOTS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_INGOT).getKey());
-            this.tag(TFCTags.Items.SHEETS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.SHEET).getKey());
-            this.tag(TFCTags.Items.DOUBLE_SHEETS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_SHEET).getKey());
-            this.tag(Tags.Items.RODS).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.ROD).getKey());
-
-            this.tag(CoreTags.Items.METAL_INGOTS.get(metalType)).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT).getKey());
-            this.tag(CoreTags.Items.METAL_DOUBLE_INGOTS.get(metalType)).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_INGOT).getKey());
-            this.tag(CoreTags.Items.METAL_SHEETS.get(metalType)).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.SHEET).getKey());
-            this.tag(CoreTags.Items.METAL_DOUBLE_SHEETS.get(metalType)).add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_SHEET).getKey());
-        }
-
-        for (CoreClay clayType : CoreClay.values())
-        {
-            for (CoreClay.ItemType itemType : CoreClay.ItemType.values())
-            {
-                if (itemType.getType() == CoreClay.ItemPartType.UNFIRED_MOLD && itemType != CoreClay.ItemType.INGOT)
-                {
-                    this.tag(TFCTags.Items.UNFIRED_MOLDS).add(CoreItems.CERAMICS.get(clayType).get(itemType).getKey());
-                    this.tag(CoreTags.Items.CLAY_RECYCLING_5.get(clayType)).add(CoreItems.CERAMICS.get(clayType).get(itemType).getKey());
-                }
-            }
-
-            this.tag(CoreTags.Items.CLAY_BRICKS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).getKey());
-            this.tag(Tags.Items.BRICKS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.BRICK).getKey());
-
-            this.tag(TFCTags.Items.VESSELS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.VESSEL).getKey());
-            this.tag(CoreTags.Items.UNFIRED_VESSELS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey());
-            this.tag(TFCTags.Items.UNFIRED_VESSELS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey());
-            this.tag(TFCTags.Items.FLUID_ITEM_INGREDIENT_EMPTY_CONTAINERS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.JUG).getKey());
-            this.tag(UPRIGHT_ON_BELT).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.JUG).getKey());
-
-            this.tag(TFCTags.Items.LARGE_VESSELS)
-                    .add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey())
-                    .add(getKey(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL)));
-
-            this.tag(TFCTags.Items.FIRED_VESSELS).add(getKey(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL)));
-            this.tag(TFCTags.Items.UNFIRED_LARGE_VESSELS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey());
-
-            this.tag(CoreTags.Items.CLAY_RECYCLING_5.get(clayType)).add(
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_JUG).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_POT).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_PAN).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).getKey()
-            );
-
-            this.tag(CoreTags.Items.CLAY_RECYCLING_1.get(clayType)).add(
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BOWL).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.INGOT).getKey()
-            );
-
-            this.tag(TFCTags.Items.UNFIRED_POTTERY).add(
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BOWL).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_JUG).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_POT).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_PAN).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).getKey(),
-                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey()
-            );
-
-            if (!clayType.hasReducedSet())
-            {
-                this.tag(CoreTags.Items.CLAY_BALLS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.CLAY_BALL).getKey());
-            }
-        }
-
-        this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_VESSEL.key());
-
-        CategoryUtil.getTFCToolMetals().forEach(metal ->
-                CategoryUtil.getTFCToolHeads().forEach(tool -> this.tag(CoreTags.Items.TOOL_HEADS.get(tool)).add(TFCItems.METAL_ITEMS.get(metal).get(tool).holder().getKey()))
-        );
-
+    private void generateRock()
+    {
         for (CoreRocks rockType : CoreRocks.values())
         {
 
@@ -287,6 +234,12 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             }
         }
 
+        add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(CoreTags.Items.MORTARED_COBBLE));
+        add(CoreBlocks.MORTARED_CUSTOM_COBBLE, List.of(CoreTags.Items.MORTARED_COBBLE));
+    }
+
+    private void generateWood()
+    {
         for (SpectrumWood woodType : SpectrumWood.values())
         {
             this.tag(TFCTags.Items.LUMBER).add(getKey(CoreItems.LUMBER.get(woodType).get()));
@@ -305,9 +258,95 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             this.tag(TFCTags.Items.MINECART_HOLDABLE).add(getKey(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.BARREL)));
         }
 
-        add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(CoreTags.Items.MORTARED_COBBLE));
+        add(CoreBlocks.SPECTRUM_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
+        add(CoreBlocks.TFC_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
+        add(CoreBlocks.AFC_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
+    }
 
-        add(CoreBlocks.MORTARED_CUSTOM_COBBLE, List.of(CoreTags.Items.MORTARED_COBBLE));
+    private void generateGemstones()
+    {
+        //TODO: add relevant gemstone related tags, ie: clusters, budding blocks.
+    }
+
+    private void generateCeramics()
+    {
+        for (CoreClay clayType : CoreClay.values())
+        {
+            for (CoreClay.ItemType itemType : CoreClay.ItemType.values())
+            {
+                if (itemType.getType() == CoreClay.ItemPartType.UNFIRED_MOLD && itemType != CoreClay.ItemType.INGOT)
+                {
+                    this.tag(TFCTags.Items.UNFIRED_MOLDS).add(CoreItems.CERAMICS.get(clayType).get(itemType).getKey());
+                    this.tag(CoreTags.Items.CLAY_RECYCLING_5.get(clayType)).add(CoreItems.CERAMICS.get(clayType).get(itemType).getKey());
+                }
+            }
+
+            this.tag(CoreTags.Items.CLAY_BRICKS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).getKey());
+            this.tag(Tags.Items.BRICKS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.BRICK).getKey());
+
+            this.tag(TFCTags.Items.VESSELS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.VESSEL).getKey());
+            this.tag(CoreTags.Items.UNFIRED_VESSELS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey());
+            this.tag(TFCTags.Items.UNFIRED_VESSELS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey());
+            this.tag(TFCTags.Items.FLUID_ITEM_INGREDIENT_EMPTY_CONTAINERS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.JUG).getKey());
+            this.tag(UPRIGHT_ON_BELT).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.JUG).getKey());
+
+            this.tag(TFCTags.Items.LARGE_VESSELS)
+                    .add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey())
+                    .add(getKey(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL)));
+
+            this.tag(TFCTags.Items.FIRED_VESSELS).add(getKey(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.LARGE_VESSEL)));
+            this.tag(TFCTags.Items.UNFIRED_LARGE_VESSELS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey());
+
+            this.tag(CoreTags.Items.CLAY_RECYCLING_5.get(clayType)).add(
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_JUG).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_POT).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_PAN).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).getKey()
+            );
+
+            this.tag(CoreTags.Items.CLAY_RECYCLING_1.get(clayType)).add(
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BOWL).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.INGOT).getKey()
+            );
+
+            this.tag(TFCTags.Items.UNFIRED_POTTERY).add(
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BOWL).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_JUG).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_POT).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_PAN).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).getKey(),
+                    CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).getKey()
+            );
+
+            if (!clayType.hasReducedSet())
+            {
+                this.tag(CoreTags.Items.CLAY_BALLS).add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.CLAY_BALL).getKey());
+            }
+        }
+
+        this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_VESSEL.key());
+
+        for (DyeColor color : DyeColor.values())
+        {
+            this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_GLAZED_VESSELS.get(color).key());
+        }
+    }
+
+    private void generateMisc()
+    {
+        this.tag(CoreTags.Items.KAOLIN_CLAYS)
+                .add(getKey(TFCBlocks.KAOLIN_CLAY_GRASS.asItem()))
+                .add(getKey(TFCBlocks.WHITE_KAOLIN_CLAY.asItem()))
+                .add(getKey(TFCBlocks.PINK_KAOLIN_CLAY.asItem()))
+                .add(getKey(TFCBlocks.RED_KAOLIN_CLAY.asItem()));
 
         this.tag(CoreTags.Items.MOLTEN_GLASS).add(getKey(CoreBlocks.CLEAR_MOLTEN_GLASS.get()));
         add(CoreBlocks.COLORED_MOLTEN_GLASS, List.of(CoreTags.Items.MOLTEN_GLASS));
@@ -318,12 +357,17 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         this.tag(CoreTags.Items.LEAD_GLASS_PANES).add(getKey(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get()));
         add(CoreBlocks.COLOURED_LEAD_GLASS_PANE, List.of(CoreTags.Items.LEAD_GLASS_PANES));
 
-        for (DyeColor color : DyeColor.values())
-        {
-            this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_GLAZED_VESSELS.get(color).key());
-        }
+        this.tag(Tags.Items.HIDDEN_FROM_RECIPE_VIEWERS).add(CoreItems.ORES.get(CoreOres.ANTHRACITE).getKey());
 
-        // modonomicon book multiblock
+        add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(ItemTags.LEAVES));
+
+        add(CoreBlocks.FRUIT_TREE_SAPLINGS, List.of(ItemTags.SAPLINGS));
+
+        add(CoreBlocks.WILD_CROPS, List.of(TFCTags.Items.WILD_CROPS));
+    }
+
+    private void generateMultiblock()
+    {
         addMultiBlockOre(Ore.NATIVE_COPPER, List.of(Rock.ANDESITE, Rock.BASALT, Rock.RHYOLITE, Rock.DACITE, CoreRocks.PHONOLITE, CoreRocks.KOMATIITE));
         addMultiBlockOre(Ore.MALACHITE, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.DOLOMITE, Rock.MARBLE));
         addMultiBlockOre(Ore.TETRAHEDRITE, List.of(Rock.MARBLE, Rock.SCHIST, Rock.GNEISS, Rock.QUARTZITE, Rock.SCHIST, Rock.PHYLLITE, CoreRocks.BLUESCHIST, CoreRocks.SERPENTINE));
@@ -373,19 +417,9 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         addMultiBlockOre(Ore.LAPIS_LAZULI, List.of(Rock.LIMESTONE, Rock.MARBLE, CoreRocks.ARKOSE, CoreRocks.SANDSTONE, CoreRocks.RED_SANDSTONE));
         addMultiBlockOre(Ore.OPAL, List.of(Rock.LIMESTONE, Rock.CHALK, Rock.CHERT, Rock.TUFF, Rock.CLAYSTONE, Rock.CONGLOMERATE, Rock.DOLOMITE, CoreRocks.ARGILLITE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE, CoreRocks.SANDSTONE));
 
-        this.tag(CoreTags.Items.KAOLIN_CLAYS)
-                .add(getKey(TFCBlocks.KAOLIN_CLAY_GRASS.asItem()))
-                .add(getKey(TFCBlocks.WHITE_KAOLIN_CLAY.asItem()))
-                .add(getKey(TFCBlocks.PINK_KAOLIN_CLAY.asItem()))
-                .add(getKey(TFCBlocks.RED_KAOLIN_CLAY.asItem()));
-
-        add(CoreBlocks.WILD_CROPS, List.of(TFCTags.Items.WILD_CROPS));
-
-        add(CoreBlocks.SPECTRUM_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
-        add(CoreBlocks.TFC_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
-        add(CoreBlocks.AFC_WOOD_BOARDS, List.of(APTags.BOARDS_ITEM));
     }
 
+    //region methods
     protected void addMultiBlockOre(CoreOres ore, Block block)
     {
         this.tag(CoreTags.Items.CORE_ORE_MULTIBLOCK.get(ore)).add(getKey(block));
@@ -497,4 +531,5 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
             this.tag(Tags.Items.ORES).add(getKey(block));
         }
     }
+    //endregion
 }

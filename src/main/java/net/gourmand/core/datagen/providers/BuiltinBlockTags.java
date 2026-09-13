@@ -16,6 +16,7 @@ import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.*;
+import net.gourmand.core.util.RegistryOre;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
@@ -30,6 +31,7 @@ import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Map;
@@ -46,88 +48,22 @@ public class BuiltinBlockTags extends TagsProvider<Block>
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider)
+    protected void addTags(HolderLookup.@NotNull Provider provider)
     {
+        generateOre();
+        generateCrop();
+        generateMetal();
+        generateRock();
+        generateWood();
+        generateGemstones();
+        generateMisc();
+    }
 
+    private void generateOre()
+    {
         final TagKey<Block> SHIMMERSTONE_ORES = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(SpectrumCommon.MOD_ID, "shimmerstone_ores"));
         // adds #c:ores to this tag to be able to isolate and get ore blocks.
         this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).addTag(Tags.Blocks.ORES);
-
-        this.tag(CoreTags.Blocks.SNOW_SHOVEL_MINEABLE).add(
-                Blocks.SNOW.builtInRegistryHolder().key(),
-                Blocks.SNOW_BLOCK.builtInRegistryHolder().key(),
-                TFCBlocks.SNOW_PILE.key(),
-                SpectrumBlocks.ASH.getKey(),
-                SpectrumBlocks.ASH_PILE.getKey()
-        );
-
-        add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(
-            BlockTags.LEAVES,
-            BlockTags.MINEABLE_WITH_HOE,
-            TFCTags.Blocks.MINEABLE_WITH_HOE,
-            TFCTags.Blocks.MINEABLE_WITH_SCYTHE,
-            TFCTags.Blocks.MINEABLE_WITH_KNIFE,
-            TFCTags.Blocks.FRUIT_TREE_LEAVES)
-        );
-
-        add(CoreBlocks.FRUIT_TREE_SAPLINGS, List.of(
-            BlockTags.MINEABLE_WITH_HOE,
-            TFCTags.Blocks.MINEABLE_WITH_HOE,
-            TFCTags.Blocks.MINEABLE_WITH_SCYTHE,
-            TFCTags.Blocks.MINEABLE_WITH_KNIFE,
-            TFCTags.Blocks.FRUIT_TREE_SAPLING)
-        );
-
-        add(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES, List.of(
-                BlockTags.MINEABLE_WITH_AXE,
-                TFCTags.Blocks.FRUIT_TREE_BRANCH)
-        );
-
-        add(CoreBlocks.FRUIT_TREE_BRANCHES, List.of(
-                BlockTags.MINEABLE_WITH_AXE,
-                TFCTags.Blocks.FRUIT_TREE_BRANCH)
-        );
-
-        add(CoreBlocks.CROPS, List.of(
-                BlockTags.MINEABLE_WITH_HOE,
-                TFCTags.Blocks.MINEABLE_WITH_HOE,
-                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
-                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
-        );
-
-        add(CoreBlocks.WILD_CROPS, List.of(
-                BlockTags.MINEABLE_WITH_HOE,
-                TFCTags.Blocks.MINEABLE_WITH_HOE,
-                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
-                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
-        );
-
-        add(CoreBlocks.DEAD_CROPS, List.of(
-                BlockTags.MINEABLE_WITH_HOE,
-                TFCTags.Blocks.MINEABLE_WITH_HOE,
-                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
-                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
-        );
-
-        add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(
-                BlockTags.MINEABLE_WITH_PICKAXE,
-                TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
-                TFCTags.Blocks.CAN_COLLAPSE,
-                TFCTags.Blocks.CAN_START_COLLAPSE,
-                Tags.Blocks.STONES,
-                CoreTags.Blocks.MORTARED_COBBLE
-            )
-        );
-
-        add(CoreBlocks.MORTARED_CUSTOM_COBBLE, List.of(
-                BlockTags.MINEABLE_WITH_PICKAXE,
-                TFCTags.Blocks.CAN_START_COLLAPSE,
-                TFCTags.Blocks.CAN_COLLAPSE,
-                TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
-                Tags.Blocks.STONES,
-                CoreTags.Blocks.MORTARED_COBBLE
-            )
-        );
 
         for (CoreRocks rockType : CoreRocks.values())
         {
@@ -204,7 +140,61 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             this.tag(SpectrumBlockTags.AZURITE_ORES).add(CoreBlocks.ORES.get(rockType).get(CoreOres.AZURITE).getKey());
             this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.ORES.get(rockType).get(CoreOres.SHIMMERSTONE).getKey());
         }
+    }
 
+    private void generateCrop()
+    {
+        add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(
+                BlockTags.LEAVES,
+                BlockTags.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
+                TFCTags.Blocks.FRUIT_TREE_LEAVES)
+        );
+
+        add(CoreBlocks.FRUIT_TREE_SAPLINGS, List.of(
+                BlockTags.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
+                TFCTags.Blocks.FRUIT_TREE_SAPLING)
+        );
+
+        add(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES, List.of(
+                BlockTags.MINEABLE_WITH_AXE,
+                TFCTags.Blocks.FRUIT_TREE_BRANCH)
+        );
+
+        add(CoreBlocks.FRUIT_TREE_BRANCHES, List.of(
+                BlockTags.MINEABLE_WITH_AXE,
+                TFCTags.Blocks.FRUIT_TREE_BRANCH)
+        );
+
+        add(CoreBlocks.CROPS, List.of(
+                BlockTags.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
+        );
+
+        add(CoreBlocks.WILD_CROPS, List.of(
+                BlockTags.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
+        );
+
+        add(CoreBlocks.DEAD_CROPS, List.of(
+                BlockTags.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_HOE,
+                TFCTags.Blocks.MINEABLE_WITH_KNIFE,
+                TFCTags.Blocks.MINEABLE_WITH_SCYTHE)
+        );
+    }
+
+    private void generateMetal()
+    {
         for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
             this.tag(BlockTags.SLABS).add(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_SLAB).getKey());
@@ -214,6 +204,61 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_SLAB).getKey());
             this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_STAIRS).getKey());
         }
+
+        /*
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    if (type.isStair()){
+                        this.tag(BlockTags.STAIRS).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                    }
+
+                    if (type.isSlab()){
+                        this.tag(BlockTags.SLABS).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                    }
+
+                    this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    if (type.isStair()){
+                        this.tag(BlockTags.STAIRS).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                    }
+
+                    if (type.isSlab()){
+                        this.tag(BlockTags.SLABS).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                    }
+
+                    this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
+                }
+            });
+        });
+        */
+    }
+
+    private void generateRock()
+    {
+        add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(
+                        BlockTags.MINEABLE_WITH_PICKAXE,
+                        TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
+                        TFCTags.Blocks.CAN_COLLAPSE,
+                        TFCTags.Blocks.CAN_START_COLLAPSE,
+                        Tags.Blocks.STONES,
+                        CoreTags.Blocks.MORTARED_COBBLE
+                )
+        );
+
+        add(CoreBlocks.MORTARED_CUSTOM_COBBLE, List.of(
+                        BlockTags.MINEABLE_WITH_PICKAXE,
+                        TFCTags.Blocks.CAN_START_COLLAPSE,
+                        TFCTags.Blocks.CAN_COLLAPSE,
+                        TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
+                        Tags.Blocks.STONES,
+                        CoreTags.Blocks.MORTARED_COBBLE
+                )
+        );
 
         for (CoreRocks rockType : CoreRocks.values())
         {
@@ -331,7 +376,10 @@ public class BuiltinBlockTags extends TagsProvider<Block>
                 this.tag(BlockTags.BUTTONS).add(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON).getKey());
             }
         }
+    }
 
+    private void generateWood()
+    {
         for (SpectrumWood woodType : SpectrumWood.values())
         {
             this.tag(BlockTags.MINEABLE_WITH_AXE)
@@ -354,6 +402,42 @@ public class BuiltinBlockTags extends TagsProvider<Block>
 
             this.tag(TFCTags.Blocks.CLOCK_READABLE).add(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.BARREL).getKey());
         }
+
+        add(CoreBlocks.SPECTRUM_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
+        add(CoreBlocks.TFC_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
+        add(CoreBlocks.AFC_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
+    }
+
+    private void generateGemstones()
+    {
+        //TODO: give our gemstones the proper tags. Like for clusters, budding blocks and so on.
+
+        this.tag(CoreTags.Blocks.GEMSTONE_BLOCKS)
+                .add(Blocks.AMETHYST_BLOCK.builtInRegistryHolder().key())
+                .add(SpectrumBlocks.TOPAZ_BLOCK.getKey())
+                .add(SpectrumBlocks.CITRINE_BLOCK.getKey())
+                .add(SpectrumBlocks.ONYX_BLOCK.getKey())
+                .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
+
+        this.tag(TFCTags.Blocks.CAN_LANDSLIDE)
+                .add(SpectrumBlocks.TOPAZ_POWDER_BLOCK.getKey())
+                .add(SpectrumBlocks.AMETHYST_POWDER_BLOCK.getKey())
+                .add(SpectrumBlocks.CITRINE_POWDER_BLOCK.getKey())
+                .add(SpectrumBlocks.ONYX_POWDER_BLOCK.getKey())
+                .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
+    }
+
+    private void generateMisc()
+    {
+        this.tag(TFCTags.Blocks.CHARCOAL_FORGE_INVISIBLE).add(AllBlocks.BASIN.getKey());
+
+        this.tag(CoreTags.Blocks.SNOW_SHOVEL_MINEABLE).add(
+                Blocks.SNOW.builtInRegistryHolder().key(),
+                Blocks.SNOW_BLOCK.builtInRegistryHolder().key(),
+                TFCBlocks.SNOW_PILE.key(),
+                SpectrumBlocks.ASH.getKey(),
+                SpectrumBlocks.ASH_PILE.getKey()
+        );
 
         for (CoreClay clayType : CoreClay.values())
         {
@@ -403,52 +487,6 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             }
         }
 
-        /*
-        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
-            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
-                if (type.hasMetal(metal)){
-                    if (type.isStair()){
-                        this.tag(BlockTags.STAIRS).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
-                    }
-
-                    if (type.isSlab()){
-                        this.tag(BlockTags.SLABS).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
-                    }
-
-                    this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
-                }
-            });
-
-            Stream.of(Metal.values()).forEach(metal -> {
-                if (type.hasMetal(metal)){
-                    if (type.isStair()){
-                        this.tag(BlockTags.STAIRS).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
-                    }
-
-                    if (type.isSlab()){
-                        this.tag(BlockTags.SLABS).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
-                    }
-
-                    this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type).getKey());
-                }
-            });
-        });
-        */
-
-        this.tag(CoreTags.Blocks.GEMSTONE_BLOCKS)
-                .add(Blocks.AMETHYST_BLOCK.builtInRegistryHolder().key())
-                .add(SpectrumBlocks.TOPAZ_BLOCK.getKey())
-                .add(SpectrumBlocks.CITRINE_BLOCK.getKey())
-                .add(SpectrumBlocks.ONYX_BLOCK.getKey())
-                .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
-
-        this.tag(TFCTags.Blocks.CAN_LANDSLIDE)
-                .add(SpectrumBlocks.TOPAZ_POWDER_BLOCK.getKey())
-                .add(SpectrumBlocks.AMETHYST_POWDER_BLOCK.getKey())
-                .add(SpectrumBlocks.CITRINE_POWDER_BLOCK.getKey())
-                .add(SpectrumBlocks.ONYX_POWDER_BLOCK.getKey())
-                .add(SpectrumBlocks.MOONSTONE_BLOCK.getKey());
-
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(CoreBlocks.CLEAR_MOLTEN_GLASS.getKey())
                 .add(CoreBlocks.CLEAR_LEAD_GLASS.getKey())
@@ -458,14 +496,9 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         add(CoreBlocks.COLOURED_LEAD_GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
         add(CoreBlocks.COLOURED_LEAD_GLASS_PANE, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
         add(CoreBlocks.COLORED_MOLTEN_GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE));
-
-        add(CoreBlocks.SPECTRUM_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
-        add(CoreBlocks.TFC_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
-        add(CoreBlocks.AFC_WOOD_BOARDS, List.of(BlockTags.MINEABLE_WITH_AXE, APTags.BOARDS));
-
-        this.tag(TFCTags.Blocks.CHARCOAL_FORGE_INVISIBLE).add(AllBlocks.BASIN.getKey());
     }
 
+    //region methods
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags)
     {
         for (DeferredHolder<Block, Block> block : map.values())
@@ -477,7 +510,16 @@ public class BuiltinBlockTags extends TagsProvider<Block>
         }
     }
 
-    private <T1 extends RegistryRock, T2 extends Enum> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock)
+    private <T1 extends RegistryRock, T2 extends Ore> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock)
+    {
+        ResourceKey<Block> key = map.get(rock).get(ore).getKey();
+        this.tag(BlockTags.NEEDS_STONE_TOOL).add(key);
+        this.tag(Tags.Blocks.ORES).add(key);
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(key);
+        this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
+    }
+
+    private <T1 extends RegistryRock, T2 extends RegistryOre> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock)
     {
         ResourceKey<Block> key = map.get(rock).get(ore).getKey();
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(key);
@@ -498,4 +540,5 @@ public class BuiltinBlockTags extends TagsProvider<Block>
             this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
         }
     }
+    //endregion
 }

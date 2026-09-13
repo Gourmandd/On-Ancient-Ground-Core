@@ -24,6 +24,9 @@ public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, An
 {
 
     final Set<ResourceLocation> removedRecipes = new HashSet<>();
+
+    // full credit to TFC for this comment and method of doing this wacky stuff that we want to get done.
+
     // This here, is a dirty hack that allows us to generate a recipe without a 'type' field, which is perfectly legal! As long as
     // we can ensure that the recipe will NEVER pass the condition - aka, if it is using a false condition. This is the most effective
     // way to remove recipes, that generates the least amount of log spam, but NeoForge's condition serializer won't let us not write
@@ -32,8 +35,6 @@ public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, An
     private final CompletableFuture<?> before;
     RecipeOutput output;
 
-
-    // full credit to TFC for this comment and method of doing this wacky stuff that we want to get done.
     HolderLookup.Provider lookup;
 
     public BuiltinRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, CompletableFuture<?> before, BuiltinItemHeats itemHeat)
@@ -65,7 +66,7 @@ public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, An
     }
 
     @Override
-    public CompletableFuture<?> run(CachedOutput output, HolderLookup.Provider lookup)
+    public @NotNull CompletableFuture<?> run(@NotNull CachedOutput output, HolderLookup.@NotNull Provider lookup)
     {
         this.lookup = lookup;
         return before.thenCompose(v -> CompletableFuture.allOf(

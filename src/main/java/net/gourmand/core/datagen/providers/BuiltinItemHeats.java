@@ -28,6 +28,13 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
     @Override
     protected void addData(HolderLookup.Provider provider)
     {
+        generateMetal();
+        generateCeramics();
+        generateMisc();
+    }
+
+    private void generateMetal()
+    {
         for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
             add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT).get(), CategoryUtil.HeatCapacities.INGOT);
@@ -57,20 +64,6 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
         });
          */
 
-        for (CoreClay clayType : CoreClay.values())
-        {
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).get(), 0.4f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).get(), 0.6f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_JUG).get(), 0.8f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BOWL).get(), 0.4f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_POT).get(), 0.8f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).get(), 0.8f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_PAN).get(), 0.8f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).get(), 0.6f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.INGOT).get(), 0.6f);
-            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).get(), 0.6f);
-        }
-
         for (CoreOres oreType : CoreOres.values())
         {
             if (oreType.isGraded())
@@ -84,7 +77,27 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
         }
 
         add(CoreItems.ORES.get(CoreOres.METEORIC_IRON).get(), CategoryUtil.HeatCapacities.INGOT);
+    }
 
+    private void generateCeramics()
+    {
+        for (CoreClay clayType : CoreClay.values())
+        {
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).get(), 0.4f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).get(), 0.6f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_JUG).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BOWL).get(), 0.4f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_POT).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_PAN).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).get(), 0.6f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.INGOT).get(), 0.6f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).get(), 0.6f);
+        }
+    }
+
+    private void generateMisc()
+    {
         add(Ingredient.of(CoreTags.Items.MOLTEN_GLASS), 0.8f);
         add(Ingredient.of(CoreTags.Items.LEAD_GLASS), 0.8f);
         add(Ingredient.of(CoreTags.Items.LEAD_GLASS_PANES), 0.2f);

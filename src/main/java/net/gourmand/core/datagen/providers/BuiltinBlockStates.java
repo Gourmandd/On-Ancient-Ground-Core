@@ -5,6 +5,7 @@ import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.common.blocks.wood.*;
+import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
@@ -30,15 +31,15 @@ import java.util.stream.Stream;
 public class BuiltinBlockStates extends BlockStateProvider
 {
 
-    private final static ResourceLocation oreParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/ore");
-    private final static ResourceLocation aqueductBaseParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/base");
-    private final static ResourceLocation aqueductNorthParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/north");
-    private final static ResourceLocation aqueductSouthParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/south");
-    private final static ResourceLocation aqueductEastParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/east");
-    private final static ResourceLocation aqueductWestParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/west");
-    private final static ResourceLocation mossOverlay = ResourceLocation.parse(AncientGroundCore.MOD_ID + ":block/moss_brick_overlay");
+    private final static ResourceLocation oreParent = Helpers.identifier("block/ore");
+    private final static ResourceLocation aqueductBaseParent = Helpers.identifier("block/aqueduct/base");
+    private final static ResourceLocation aqueductNorthParent = Helpers.identifier("block/aqueduct/north");
+    private final static ResourceLocation aqueductSouthParent = Helpers.identifier("block/aqueduct/south");
+    private final static ResourceLocation aqueductEastParent = Helpers.identifier("block/aqueduct/east");
+    private final static ResourceLocation aqueductWestParent = Helpers.identifier("block/aqueduct/west");
+    private final static ResourceLocation mossOverlay = AncientGroundCore.location("block/moss_brick_overlay");
 
-    private final static ResourceLocation thickFluidFlowTexture = ResourceLocation.parse(AncientGroundCore.MOD_ID + ":block/thick_fluid_flow");
+    private final static ResourceLocation thickFluidFlowTexture = AncientGroundCore.location("block/thick_fluid_flow");
 
     public BuiltinBlockStates(PackOutput output, ExistingFileHelper exFileHelper)
     {
@@ -48,14 +49,21 @@ public class BuiltinBlockStates extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        generateOre();
+        generateMetal();
+        generateRock();
+        generateWood();
+        generateGemstones();
+        generateMisc();
+    }
 
-        // ores.
-
+    private void generateOre()
+    {
         for (CoreOres oreType : CoreOres.values())
         {
             if (!oreType.hasBlock())
             {
-                cubeAll(CoreBlocks.BASIC_ORES.get(oreType), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/ore/" + oreType.getSerializedName()));
+                cubeAll(CoreBlocks.BASIC_ORES.get(oreType), AncientGroundCore.location("block/ore/" + oreType.getSerializedName()));
             }
 
             for (Rock rockType : Rock.values())
@@ -127,8 +135,73 @@ public class BuiltinBlockStates extends BlockStateProvider
                 }
             }
         }
+    }
 
-        // rock blocks.
+    private void generateMetal()
+    {
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
+        {
+            ResourceLocation texture = TextureUtil.getMetalBlockTexture(metalType);
+            cubeAll(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK), texture);
+            stairsBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_STAIRS), texture);
+            slabBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_SLAB), texture, getBlockModelLocation(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK).getId()));
+        }
+
+        bulbBlock(CoreBlocks.LEAD_BULB_BLOCK);
+
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
+        {
+            if (!metalType.hasOtherFluid())
+            {
+                fluidBlock(CoreBlocks.METAL_FLUIDS.get(metalType));
+            }
+        }
+        /*
+        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
+            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    ResourceLocation texture = AncientGroundCore.location("block/" + type.createName(metal).replace("_stairs", "").replace("_slab", ""));
+
+                    if (type.isStair()){
+                        stairsBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
+                    }
+
+                    if (type.isBlock()){
+                        cubeAll(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
+                    }
+
+                    if (type.isSlab()){
+                        slabBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture, getBlockModelLocation(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK).getId()));
+                    }
+                }
+            });
+
+            Stream.of(Metal.values()).forEach(metal -> {
+                if (type.hasMetal(metal)){
+                    ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(
+                            AncientGroundCore.MODID,
+                            "block/" + type.createName(metal).replace("_stairs", "").replace("_slab", "")
+                    );
+
+                    if (type.isStair()){
+                        stairsBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
+                    }
+
+                    if (type.isBlock()){
+                        cubeAll(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
+                    }
+
+                    if (type.isSlab()){
+                        slabBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture, getBlockModelLocation(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK).getId()));
+                    }
+                }
+            });
+        });
+         */
+    }
+
+    private void generateRock()
+    {
         for (CoreRocks rockType : CoreRocks.values())
         {
             for (Rock.BlockType blockType : Rock.BlockType.values())
@@ -176,17 +249,10 @@ public class BuiltinBlockStates extends BlockStateProvider
         {
             cubeAll(CoreBlocks.MORTARED_TFC_COBBLE.get(rockType), TextureUtil.getRockTexture(rockType, Rock.BlockType.COBBLE));
         }
+    }
 
-        // metal blocks
-        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
-        {
-            ResourceLocation texture = TextureUtil.getMetalBlockTexture(metalType);
-            cubeAll(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK), texture);
-            stairsBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_STAIRS), texture);
-            slabBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_SLAB), texture, getBlockModelLocation(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK).getId()));
-        }
-
-        // spectrum wood types.
+    private void generateWood()
+    {
         for (SpectrumWood woodType : SpectrumWood.values())
         {
             Map<Wood.BlockType, DeferredHolder<Block, Block>> map = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
@@ -199,24 +265,47 @@ public class BuiltinBlockStates extends BlockStateProvider
             toolRackBlock(map.get(Wood.BlockType.TOOL_RACK), woodType);
             sluiceBlock(map.get(Wood.BlockType.SLUICE), woodType);
             cross(map.get(Wood.BlockType.SAPLING), TextureUtil.getSaplingTexture(woodType));
-            cubeAll(map.get(Wood.BlockType.CRATE), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/wood/crate/" + woodType.getSerializedName()));
+            cubeAll(map.get(Wood.BlockType.CRATE), AncientGroundCore.location("block/wood/crate/" + woodType.getSerializedName()));
             barrelBlock(map.get(Wood.BlockType.BARREL), woodType);
         }
 
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
         CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
         CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
+    }
 
+    private void generateGemstones()
+    {
+        for (CoreGemstones gemType : CoreGemstones.values())
+        {
+            for (CoreGemstones.GemstoneBlocks blockType : CoreGemstones.GemstoneBlocks.values())
+            {
+
+                DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType);
+                ResourceLocation TEXTURE = blockTexture(BLOCK.get());
+
+                switch (blockType)
+                {
+                    case BLOCK, POWDER_BLOCK, BUDDING_BLOCK -> cubeAll(BLOCK, TEXTURE);
+                    case PILLAR -> cubeBottomTop(BLOCK, TEXTURE);
+                    case CLUSTER, LARGE_CLUSTER, MEDIUM_CLUSTER, SMALL_CLUSTER -> cluster(BLOCK, TEXTURE);
+                }
+            }
+        }
+    }
+
+    private void generateMisc()
+    {
         for (DyeColor color : DyeColor.values())
         {
             moltenGlassBlock(CoreBlocks.COLORED_MOLTEN_GLASS.get(color));
-            cubeAll(CoreBlocks.COLOURED_LEAD_GLASS.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/" + color.getSerializedName()));
-            paneBlock(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/" + color.getSerializedName()), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
+            cubeAll(CoreBlocks.COLOURED_LEAD_GLASS.get(color), AncientGroundCore.location("block/lead_glass/" + color.getSerializedName()));
+            paneBlock(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color), AncientGroundCore.location("block/lead_glass/" + color.getSerializedName()), AncientGroundCore.location("block/lead_glass/pane_top"));
             fluidBlock(CoreBlocks.COLORED_GLASS_FLUIDS.get(color));
         }
         moltenGlassBlock(CoreBlocks.CLEAR_MOLTEN_GLASS);
-        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"));
-        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
+        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS, AncientGroundCore.location("block/lead_glass/clear"));
+        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE, AncientGroundCore.location("block/lead_glass/clear"), AncientGroundCore.location("block/lead_glass/pane_top"));
         fluidBlock(CoreBlocks.CLEAR_GLASS_FLUID);
 
         for (CoreClay clayType : CoreClay.values())
@@ -245,89 +334,7 @@ public class BuiltinBlockStates extends BlockStateProvider
             }
         }
 
-        cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/prismatic_ice"));
-
-        for (CoreGemstones gemType : CoreGemstones.values())
-        {
-            for (CoreGemstones.GemstoneBlocks blockType : CoreGemstones.GemstoneBlocks.values())
-            {
-
-                DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType);
-                ResourceLocation TEXTURE = blockTexture(BLOCK.get());
-
-                switch (blockType)
-                {
-                    case BLOCK, POWDER_BLOCK, BUDDING_BLOCK ->
-                    {
-                        cubeAll(BLOCK, TEXTURE);
-                    }
-                    case PILLAR ->
-                    {
-                        cubeBottomTop(BLOCK, TEXTURE);
-                    }
-                    case CLUSTER, LARGE_CLUSTER, MEDIUM_CLUSTER, SMALL_CLUSTER ->
-                    {
-                        cluster(BLOCK, TEXTURE);
-                    }
-                }
-            }
-        }
-
-        /*
-        Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
-            Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
-                if (type.hasMetal(metal)){
-                    ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(
-                            AncientGroundCore.MODID,
-                            "block/" + type.createName(metal).replace("_stairs", "").replace("_slab", "")
-                    );
-
-                    if (type.isStair()){
-                        stairsBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
-                    }
-
-                    if (type.isBlock()){
-                        cubeAll(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
-                    }
-
-                    if (type.isSlab()){
-                        slabBlock(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture, getBlockModelLocation(CoreBlocks.CORE_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK).getId()));
-                    }
-                }
-            });
-
-            Stream.of(Metal.values()).forEach(metal -> {
-                if (type.hasMetal(metal)){
-                    ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(
-                            AncientGroundCore.MODID,
-                            "block/" + type.createName(metal).replace("_stairs", "").replace("_slab", "")
-                    );
-
-                    if (type.isStair()){
-                        stairsBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
-                    }
-
-                    if (type.isBlock()){
-                        cubeAll(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture);
-                    }
-
-                    if (type.isSlab()){
-                        slabBlock(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(type), texture, getBlockModelLocation(CoreBlocks.TFC_CUSTOM_METAL_BLOCKS.get(metal).get(CoreMetals.BlockType.CUT_BLOCK).getId()));
-                    }
-                }
-            });
-        });
-         */
-
-        bulbBlock(CoreBlocks.LEAD_BULB_BLOCK);
-
-        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
-        {
-            if (!metalType.hasOtherFluid())
-            {
-                fluidBlock(CoreBlocks.METAL_FLUIDS.get(metalType));
-            }
-        }
+        cubeAll(CoreBlocks.PRISMATIC_ICE, AncientGroundCore.location("block/prismatic_ice"));
     }
 
     //region Generation Methods
@@ -368,7 +375,9 @@ public class BuiltinBlockStates extends BlockStateProvider
 
     private BlockModelBuilder createOreModel(String name, String allTexture, String oreTexture)
     {
-        return models().withExistingParent("block/" + name, oreParent).texture("all", allTexture).texture("overlay", oreTexture);
+        return models().withExistingParent("block/" + name, oreParent)
+                .texture("all", allTexture)
+                .texture("overlay", oreTexture);
     }
 
     private void cubeAll(DeferredHolder<Block, Block> block, ResourceLocation texture)
@@ -405,16 +414,38 @@ public class BuiltinBlockStates extends BlockStateProvider
 
             yRot %= 360;
             boolean uvlock = yRot != 0 || half == Half.TOP;
-            return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? stairs : (shape != StairsShape.INNER_LEFT && shape != StairsShape.INNER_RIGHT ? stairsOuter : stairsInner)).rotationX(half == Half.BOTTOM ? 0 : 180).rotationY(yRot).uvLock(uvlock).build();
+            return ConfiguredModel.builder()
+                    .modelFile(shape == StairsShape.STRAIGHT ? stairs : (shape != StairsShape.INNER_LEFT && shape != StairsShape.INNER_RIGHT ? stairsOuter : stairsInner))
+                    .rotationX(half == Half.BOTTOM ? 0 : 180)
+                    .rotationY(yRot)
+                    .uvLock(uvlock)
+                    .build();
         }, StairBlock.WATERLOGGED);
     }
 
     private void stairsMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture)
     {
 
-        ModelFile stairs = createModel(getBlockModelString(block.getId()), "modpack:block/overlay_stairs").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
-        ModelFile stairsInner = createModel(getBlockModelString(block.getId()) + "_inner", "modpack:block/overlay_inner_stairs").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
-        ModelFile stairsOuter = createModel(getBlockModelString(block.getId()) + "_outer", "modpack:block/overlay_outer_stairs").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
+        ModelFile stairs = createModel(getBlockModelString(block.getId()), "modpack:block/overlay_stairs")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
+
+        ModelFile stairsInner = createModel(getBlockModelString(block.getId()) + "_inner", "modpack:block/overlay_inner_stairs")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
+
+        ModelFile stairsOuter = createModel(getBlockModelString(block.getId()) + "_outer", "modpack:block/overlay_outer_stairs")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
 
         this.getVariantBuilder(block.get()).forAllStatesExcept((state) ->
         {
@@ -434,7 +465,12 @@ public class BuiltinBlockStates extends BlockStateProvider
 
             yRot %= 360;
             boolean uvlock = yRot != 0 || half == Half.TOP;
-            return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? stairs : (shape != StairsShape.INNER_LEFT && shape != StairsShape.INNER_RIGHT ? stairsOuter : stairsInner)).rotationX(half == Half.BOTTOM ? 0 : 180).rotationY(yRot).uvLock(uvlock).build();
+            return ConfiguredModel.builder()
+                    .modelFile(shape == StairsShape.STRAIGHT ? stairs : (shape != StairsShape.INNER_LEFT && shape != StairsShape.INNER_RIGHT ? stairsOuter : stairsInner))
+                    .rotationX(half == Half.BOTTOM ? 0 : 180)
+                    .rotationY(yRot)
+                    .uvLock(uvlock)
+                    .build();
         }, StairBlock.WATERLOGGED);
     }
 
@@ -453,9 +489,19 @@ public class BuiltinBlockStates extends BlockStateProvider
     private void slabMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab)
     {
 
-        ModelFile slabBottom = createModel(getBlockModelString(block.getId()), "modpack:block/overlay_slab").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
+        ModelFile slabBottom = createModel(getBlockModelString(block.getId()), "modpack:block/overlay_slab")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
 
-        ModelFile slabTop = createModel(getBlockModelString(block.getId()) + "_top", "modpack:block/overlay_slab_top").texture("bottom", texture).texture("side", texture).texture("top", texture).texture("particle", texture).texture("overlay", mossOverlay);
+        ModelFile slabTop = createModel(getBlockModelString(block.getId()) + "_top", "modpack:block/overlay_slab_top")
+                .texture("bottom", texture)
+                .texture("side", texture)
+                .texture("top", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay);
 
         ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
 
@@ -467,11 +513,25 @@ public class BuiltinBlockStates extends BlockStateProvider
 
     private void aqueductBlock(DeferredHolder<Block, Block> block, ResourceLocation texture)
     {
-        ModelFile modelBase = createModel(getBlockModelString(block.getId()) + "/base", aqueductBaseParent).texture("texture", texture).texture("particle", texture);
-        ModelFile modelNorth = createModel(getBlockModelString(block.getId()) + "/north", aqueductNorthParent).texture("texture", texture).texture("particle", texture);
-        ModelFile modelSouth = createModel(getBlockModelString(block.getId()) + "/south", aqueductSouthParent).texture("texture", texture).texture("particle", texture);
-        ModelFile modelEast = createModel(getBlockModelString(block.getId()) + "/east", aqueductEastParent).texture("texture", texture).texture("particle", texture);
-        ModelFile modelWest = createModel(getBlockModelString(block.getId()) + "/west", aqueductWestParent).texture("texture", texture).texture("particle", texture);
+        ModelFile modelBase = createModel(getBlockModelString(block.getId()) + "/base", aqueductBaseParent)
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile modelNorth = createModel(getBlockModelString(block.getId()) + "/north", aqueductNorthParent)
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile modelSouth = createModel(getBlockModelString(block.getId()) + "/south", aqueductSouthParent)
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile modelEast = createModel(getBlockModelString(block.getId()) + "/east", aqueductEastParent)
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile modelWest = createModel(getBlockModelString(block.getId()) + "/west", aqueductWestParent)
+                .texture("texture", texture)
+                .texture("particle", texture);
 
         MultiPartBlockStateBuilder builder = getMultipartBuilder(block.get());
 
@@ -484,9 +544,17 @@ public class BuiltinBlockStates extends BlockStateProvider
 
     private void rockSpikeBlock(DeferredHolder<Block, Block> block, ResourceLocation texture)
     {
-        ModelFile modelBase = createModel(getBlockModelString(block.getId()) + "_base", "tfc:block/rock/spike_base").texture("texture", texture).texture("particle", texture);
-        ModelFile modelMiddle = createModel(getBlockModelString(block.getId()) + "_middle", "tfc:block/rock/spike_middle").texture("texture", texture).texture("particle", texture);
-        ModelFile modelTip = createModel(getBlockModelString(block.getId()) + "_tip", "tfc:block/rock/spike_tip").texture("texture", texture).texture("particle", texture);
+        ModelFile modelBase = createModel(getBlockModelString(block.getId()) + "_base", "tfc:block/rock/spike_base")
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile modelMiddle = createModel(getBlockModelString(block.getId()) + "_middle", "tfc:block/rock/spike_middle")
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile modelTip = createModel(getBlockModelString(block.getId()) + "_tip", "tfc:block/rock/spike_tip")
+                .texture("texture", texture)
+                .texture("particle", texture);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
@@ -498,7 +566,9 @@ public class BuiltinBlockStates extends BlockStateProvider
 
     private void ropeAnchorSpikeBlock(DeferredHolder<Block, Block> block, ResourceLocation texture)
     {
-        ModelFile modelBase = createModel(getBlockModelString(block.getId()), "tfc:block/horizontal_rope_anchored").texture("texture", texture).texture("particle", texture);
+        ModelFile modelBase = createModel(getBlockModelString(block.getId()), "tfc:block/horizontal_rope_anchored")
+                .texture("texture", texture)
+                .texture("particle", texture);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
@@ -511,9 +581,17 @@ public class BuiltinBlockStates extends BlockStateProvider
 
     private void looseRockBlock(DeferredHolder<Block, Block> block, ResourceLocation texture, CoreRocks rock)
     {
-        ModelFile model1 = createModel(getBlockModelString(block.getId()) + "_1", getLooseRockModelParent(rock, 1)).texture("texture", texture).texture("particle", texture);
-        ModelFile model2 = createModel(getBlockModelString(block.getId()) + "_2", getLooseRockModelParent(rock, 2)).texture("texture", texture).texture("particle", texture);
-        ModelFile model3 = createModel(getBlockModelString(block.getId()) + "_3", getLooseRockModelParent(rock, 3)).texture("texture", texture).texture("particle", texture);
+        ModelFile model1 = createModel(getBlockModelString(block.getId()) + "_1", getLooseRockModelParent(rock, 1))
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile model2 = createModel(getBlockModelString(block.getId()) + "_2", getLooseRockModelParent(rock, 2))
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile model3 = createModel(getBlockModelString(block.getId()) + "_3", getLooseRockModelParent(rock, 3))
+                .texture("texture", texture)
+                .texture("particle", texture);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
@@ -555,7 +633,10 @@ public class BuiltinBlockStates extends BlockStateProvider
             Direction facing = state.getValue(ButtonBlock.FACING);
             AttachFace face = state.getValue(ButtonBlock.FACE);
             boolean powered = state.getValue(ButtonBlock.POWERED);
-            return ConfiguredModel.builder().modelFile(powered ? buttonPressed : button).rotationX(face == AttachFace.FLOOR ? 0 : (face == AttachFace.WALL ? 90 : 180)).rotationY((int) (face == AttachFace.CEILING ? facing : facing.getOpposite()).toYRot()).uvLock(face == AttachFace.WALL).build();
+            return ConfiguredModel.builder().modelFile(powered ? buttonPressed : button)
+                    .rotationX(face == AttachFace.FLOOR ? 0 : (face == AttachFace.WALL ? 90 : 180))
+                    .rotationY((int) (face == AttachFace.CEILING ? facing : facing.getOpposite()).toYRot())
+                    .uvLock(face == AttachFace.WALL).build();
         });
     }
 
@@ -567,7 +648,16 @@ public class BuiltinBlockStates extends BlockStateProvider
     private void wallMossOverlayBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture)
     {
 
-        this.wallBlock(block.get(), createModel(baseName + "_post", "modpack:block/overlay_template_wall_post").texture("wall", texture).texture("particle", texture).texture("overlay", mossOverlay), createModel(baseName + "_side", "modpack:block/overlay_template_wall_side").texture("wall", texture).texture("particle", texture).texture("overlay", mossOverlay), createModel(baseName + "_side_tall", "modpack:block/overlay_template_wall_side_tall").texture("wall", texture).texture("particle", texture).texture("overlay", mossOverlay));
+        this.wallBlock(block.get(), createModel(baseName + "_post", "modpack:block/overlay_template_wall_post")
+                .texture("wall", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay), createModel(baseName + "_side", "modpack:block/overlay_template_wall_side")
+                .texture("wall", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay), createModel(baseName + "_side_tall", "modpack:block/overlay_template_wall_side_tall")
+                .texture("wall", texture)
+                .texture("particle", texture)
+                .texture("overlay", mossOverlay));
     }
 
     private void supportBlock(DeferredHolder<Block, Block> Hblock, DeferredHolder<Block, Block> Vblock, SpectrumWood wood)
@@ -576,12 +666,27 @@ public class BuiltinBlockStates extends BlockStateProvider
         ResourceLocation textureTop = TextureUtil.getStrippedLogTopTexture(wood);
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
 
-        ModelFile modelHorizontal = createModel(getBlockModelString(Hblock.getId()) + "_horizontal", "tfc:block/wood/support/horizontal_vex").texture("top", textureTop).texture("texture", texture).texture("particle", texture);
-        ModelFile modelConnection = createModel(getBlockModelString(Hblock.getId()).replace("_horizontal", "") + "_connection", "tfc:block/wood/support/connection_vex").texture("top", textureTop).texture("texture", texture).texture("particle", texture);
-        ModelFile modelVertical = createModel(getBlockModelString(Vblock.getId()) + "_vertical", "tfc:block/wood/support/vertical_vex").texture("top", textureTop).texture("texture", texture).texture("particle", texture);
+        ModelFile modelHorizontal = createModel(getBlockModelString(Hblock.getId()) + "_horizontal", "tfc:block/wood/support/horizontal_vex")
+                .texture("top", textureTop)
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile modelConnection = createModel(getBlockModelString(Hblock.getId()).replace("_horizontal", "") + "_connection", "tfc:block/wood/support/connection_vex")
+                .texture("top", textureTop)
+                .texture("texture", texture)
+                .texture("particle", texture);
+
+        ModelFile modelVertical = createModel(getBlockModelString(Vblock.getId()) + "_vertical", "tfc:block/wood/support/vertical_vex")
+                .texture("top", textureTop)
+                .texture("texture", texture)
+                .texture("particle", texture);
 
         // generated but reference never used?
-        //ModelFile modelInventory = createModel(getBlockModelString(block.getId()) + "_inventory", aqueductNorthParent).texture("top", textureTop).texture("vertical", texture).texture("horizontal", texture).texture("particle", texture);
+        //ModelFile modelInventory = createModel(getBlockModelString(block.getId()) + "_inventory", aqueductNorthParent)
+        // .texture("top", textureTop)
+        // .texture("vertical", texture)
+        // .texture("horizontal", texture)
+        // .texture("particle", texture);
 
         // horizontal
         MultiPartBlockStateBuilder Hbuilder = getMultipartBuilder(Hblock.get());
@@ -608,8 +713,15 @@ public class BuiltinBlockStates extends BlockStateProvider
         ResourceLocation textureTop = TextureUtil.getLogTopTexture(wood);
         ResourceLocation texture = TextureUtil.getLogTexture(wood);
 
-        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/groundcover/twig").texture("top", textureTop).texture("side", texture).texture("particle", texture);
-        ModelFile model45 = createModel(getBlockModelString(block.getId()) + "_45", "tfc:block/groundcover/twig_45").texture("top", textureTop).texture("side", texture).texture("particle", texture);
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/groundcover/twig")
+                .texture("top", textureTop)
+                .texture("side", texture)
+                .texture("particle", texture);
+
+        ModelFile model45 = createModel(getBlockModelString(block.getId()) + "_45", "tfc:block/groundcover/twig_45")
+                .texture("top", textureTop)
+                .texture("side", texture)
+                .texture("particle", texture);
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
@@ -630,7 +742,10 @@ public class BuiltinBlockStates extends BlockStateProvider
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
         ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
 
-        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/scribing_table").texture("sheet", textureSmooth).texture("planks", texturePlank).texture("particle", texturePlank);
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/scribing_table")
+                .texture("sheet", textureSmooth)
+                .texture("planks", texturePlank)
+                .texture("particle", texturePlank);
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
@@ -647,7 +762,10 @@ public class BuiltinBlockStates extends BlockStateProvider
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
         ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
 
-        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/sewing_table").texture("0", textureSmooth).texture("1", texturePlank).texture("particle", texturePlank);
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/sewing_table")
+                .texture("0", textureSmooth)
+                .texture("1", texturePlank)
+                .texture("particle", texturePlank);
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
@@ -663,7 +781,9 @@ public class BuiltinBlockStates extends BlockStateProvider
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
 
-        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/wood/shelf").texture("0", texturePlank).texture("particle", texturePlank);
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/wood/shelf")
+                .texture("0", texturePlank)
+                .texture("particle", texturePlank);
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
@@ -679,7 +799,9 @@ public class BuiltinBlockStates extends BlockStateProvider
 
         ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
 
-        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/loom").texture("texture", texturePlank).texture("particle", texturePlank);
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/loom")
+                .texture("texture", texturePlank)
+                .texture("particle", texturePlank);
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
@@ -695,7 +817,9 @@ public class BuiltinBlockStates extends BlockStateProvider
 
         ResourceLocation texturePlank = TextureUtil.getStrippedLogTexture(wood); // some of the plank textures don't look great, the stripped logs look a bit better.
 
-        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/tool_rack").texture("texture", texturePlank).texture("particle", texturePlank);
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/tool_rack")
+                .texture("texture", texturePlank)
+                .texture("particle", texturePlank);
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
@@ -711,8 +835,12 @@ public class BuiltinBlockStates extends BlockStateProvider
 
         ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
 
-        ModelFile modelUpper = createModel(getBlockModelString(block.getId()) + "_upper", "tfc:block/sluice_upper").texture("texture", texture).texture("particle", texture);
-        ModelFile modelLower = createModel(getBlockModelString(block.getId()) + "_lower", "tfc:block/sluice_lower").texture("texture", texture).texture("particle", texture);
+        ModelFile modelUpper = createModel(getBlockModelString(block.getId()) + "_upper", "tfc:block/sluice_upper")
+                .texture("texture", texture)
+                .texture("particle", texture);
+        ModelFile modelLower = createModel(getBlockModelString(block.getId()) + "_lower", "tfc:block/sluice_lower")
+                .texture("texture", texture)
+                .texture("particle", texture);
 
         VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
 
@@ -739,15 +867,27 @@ public class BuiltinBlockStates extends BlockStateProvider
         ResourceLocation textureSide = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/side");
         ResourceLocation textureBottom = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/bottom");
 
-        ModelFile modelOpened = createModel(getBlockModelString(block.getId()) + "_opened", "tfc:block/ceramic/large_vessel_opened").texture("side", textureSide).texture("bottom", textureBottom).texture("particle", textureSide);
+        ModelFile modelOpened = createModel(getBlockModelString(block.getId()) + "_opened", "tfc:block/ceramic/large_vessel_opened")
+                .texture("side", textureSide)
+                .texture("bottom", textureBottom)
+                .texture("particle", textureSide);
 
-        ModelFile modelSealed = createModel(getBlockModelString(block.getId()) + "_sealed", "tfc:block/ceramic/large_vessel_sealed").texture("top", textureTop).texture("side", textureSide).texture("bottom", textureBottom).texture("particle", textureSide);
+        ModelFile modelSealed = createModel(getBlockModelString(block.getId()) + "_sealed", "tfc:block/ceramic/large_vessel_sealed")
+                .texture("top", textureTop)
+                .texture("side", textureSide)
+                .texture("bottom", textureBottom)
+                .texture("particle", textureSide);
 
         ResourceLocation textureClayTop = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_top");
         ResourceLocation textureClaySide = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_side");
         ResourceLocation textureClayBottom = ResourceLocation.fromNamespaceAndPath(textureRoot.getNamespace(), textureRoot.getPath() + "/clay_bottom");
 
-        ModelFile modelItem = createModel(getBlockModelString(block.getId()) + "_item", "tfc:block/ceramic/large_vessel_sealed").texture("top", textureClayTop).texture("side", textureClaySide).texture("bottom", textureClayBottom).texture("particle", textureClaySide);
+        //don't need it as a variable as its not used in the blockState model definition, this model is referenced by the item model.
+        createModel(getBlockModelString(block.getId()) + "_item", "tfc:block/ceramic/large_vessel_sealed")
+                .texture("top", textureClayTop)
+                .texture("side", textureClaySide)
+                .texture("bottom", textureClayBottom)
+                .texture("particle", textureClaySide);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
@@ -891,7 +1031,13 @@ public class BuiltinBlockStates extends BlockStateProvider
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
-        builder.partialState().with(SpectrumClusterBlock.FACING, Direction.UP).modelForState().modelFile(MODEL).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.DOWN).modelForState().modelFile(MODEL).rotationX(180).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.NORTH).modelForState().modelFile(MODEL).rotationX(90).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.EAST).modelForState().modelFile(MODEL).rotationY(90).rotationX(90).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.SOUTH).modelForState().modelFile(MODEL).rotationX(90).rotationY(180).addModel().partialState().with(SpectrumClusterBlock.FACING, Direction.WEST).modelForState().modelFile(MODEL).rotationX(90).rotationY(270).addModel();
+        builder.partialState()
+                .with(SpectrumClusterBlock.FACING, Direction.UP).modelForState().modelFile(MODEL).addModel().partialState()
+                .with(SpectrumClusterBlock.FACING, Direction.DOWN).modelForState().modelFile(MODEL).rotationX(180).addModel().partialState()
+                .with(SpectrumClusterBlock.FACING, Direction.NORTH).modelForState().modelFile(MODEL).rotationX(90).addModel().partialState()
+                .with(SpectrumClusterBlock.FACING, Direction.EAST).modelForState().modelFile(MODEL).rotationY(90).rotationX(90).addModel().partialState()
+                .with(SpectrumClusterBlock.FACING, Direction.SOUTH).modelForState().modelFile(MODEL).rotationX(90).rotationY(180).addModel().partialState()
+                .with(SpectrumClusterBlock.FACING, Direction.WEST).modelForState().modelFile(MODEL).rotationX(90).rotationY(270).addModel();
     }
 
     private void bulbBlock(DeferredHolder<Block, CopperBulbBlock> block)

@@ -39,7 +39,6 @@ import java.util.Set;
 
 public class BuiltinBlockLootTables extends BlockLootSubProvider
 {
-
     public BuiltinBlockLootTables(HolderLookup.Provider lookupProvider)
     {
         super(Set.of(), FeatureFlags.DEFAULT_FLAGS, lookupProvider);
@@ -54,135 +53,29 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
                 .map(e -> (Block) e.value()).toList();
     }
 
-    // methods to call from generate()
-    private void addOreTable(Block oreBlock, Item oreItem)
-    {
-        this.add(oreBlock, LootTableBuilders.createOreTable(oreBlock, oreItem));
-    }
-
-    private void addCropTable(CoreCrops crop)
-    {
-
-        final var PRODUCT = CategoryUtil.CoreCrop.TO_CROP_PRODUCT.get(crop);
-
-        switch (crop.getCropType())
-        {
-            case SINGLE ->
-            {
-                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSingleCropTable(crop, PRODUCT));
-                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, PRODUCT));
-                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSingleCropTable(crop, PRODUCT));
-            }
-            case DOUBLE ->
-            {
-                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createDoubleCropTable(crop, PRODUCT));
-                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadDoubleCropTable(crop, PRODUCT));
-                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildDoubleCropTable(crop, PRODUCT));
-            }
-            case SPREADING ->
-            {
-                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSpreadingCropTable(crop));
-                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, PRODUCT));
-                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSpreadingCropTable(crop));
-            }
-        }
-    }
-
-    private void addFruitTreeTable(CoreFruitTrees tree)
-    {
-
-        this.dropPottedContents(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(tree).get());
-        this.add(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree).get(), LootTableBuilders.createBranchTable(tree));
-        this.add(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(tree).get(), LootTableBuilders.createGrowingBranchTable());
-        this.add(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get(), createFruitTreeLeavesTable(tree));
-        this.add(CoreBlocks.FRUIT_TREE_SAPLINGS.get(tree).get(), LootTableBuilders.createFruitTreeSaplingTable(tree));
-    }
-
-    private void addStationaryBushTable(CoreStationaryBushes bush)
-    {
-        this.add(CoreBlocks.STATIONARY_BUSHES.get(bush).get(), LootTableBuilders.createStationaryBushTable(bush));
-    }
-
-    private void addSpreadingBushTable(CoreSpreadingBushes bush)
-    {
-        this.add(CoreBlocks.SPREADING_BUSHES.get(bush).get(), LootTableBuilders.createSpreadingBushTable(bush));
-        this.add(CoreBlocks.SPREADING_CANES.get(bush).get(), LootTableBuilders.createSpreadingBushCaneTable(bush));
-    }
-
-    private void addRockBlockTable(CoreRocks rock, Rock.BlockType type)
-    {
-        switch (type)
-        {
-            case LOOSE, MOSSY_LOOSE ->
-            {
-                this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createLooseRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get()));
-            }
-            case SPIKE ->
-            {
-                this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1, 2));
-            }
-            case ROPE_ANCHOR ->
-            {
-                this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1));
-            }
-            case RAW, HARDENED ->
-            {
-                this.add(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRawRockDropTable(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).value(), CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get()));
-            }
-            default ->
-            {
-                this.dropSelf(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get());
-            }
-        }
-    }
-
-    private void dropAir(Block block)
-    {
-        this.add(block, LootTable.lootTable());
-    }
-
     @Override
     protected void generate()
     {
-
         generateOre();
         generateCrop();
         generateMetal();
         generateRock();
         generateWood();
-        generateMisc();
         generateGemstones();
-
-        for (DyeColor color : DyeColor.values())
-        {
-            this.dropSelf(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
-        }
-
-        this.dropSelf(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
+        generateMisc();
     }
 
     private void generateOre()
     {
-
-
         for (CoreOres oreType : CoreOres.values())
         {
             if (!oreType.hasBlock())
             {
                 switch (oreType)
                 {
-                    case ANTHRACITE ->
-                    {
-                        addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), SpectrumItems.PURE_COAL.get());
-                    }
-                    case QUARTZ ->
-                    {
-                        addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), Items.QUARTZ);
-                    }
-                    default ->
-                    {
-                        addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), CoreItems.ORES.get(oreType).get());
-                    }
+                    case ANTHRACITE -> addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), SpectrumItems.PURE_COAL.get());
+                    case QUARTZ -> addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), Items.QUARTZ);
+                    default -> addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), CoreItems.ORES.get(oreType).get());
                 }
             }
 
@@ -427,30 +320,12 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
 
                 switch (blockType)
                 {
-                    case BLOCK, POWDER_BLOCK, PILLAR ->
-                    {
-                        this.dropSelf(block.get());
-                    }
-                    case BUDDING_BLOCK ->
-                    {
-                        dropAir(block.get());
-                    }
-                    case CLUSTER ->
-                    {
-                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.SHARD).get(), 4));
-                    }
-                    case LARGE_CLUSTER ->
-                    {
-                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 4));
-                    }
-                    case MEDIUM_CLUSTER ->
-                    {
-                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 2));
-                    }
-                    case SMALL_CLUSTER ->
-                    {
-                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 1));
-                    }
+                    case BLOCK, POWDER_BLOCK, PILLAR -> this.dropSelf(block.get());
+                    case BUDDING_BLOCK -> dropAir(block.get());
+                    case CLUSTER -> this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.SHARD).get(), 4));
+                    case LARGE_CLUSTER -> this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 4));
+                    case MEDIUM_CLUSTER -> this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 2));
+                    case SMALL_CLUSTER -> this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 1));
                 }
             }
         }
@@ -511,6 +386,89 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
         this.dropOther(CoreBlocks.PRISMATIC_ICE.get(), Items.AIR);
     }
 
+    //region methods to call from generate()
+    private void addOreTable(Block oreBlock, Item oreItem)
+    {
+        this.add(oreBlock, LootTableBuilders.createOreTable(oreBlock, oreItem));
+    }
+
+    private void addCropTable(CoreCrops crop)
+    {
+
+        final var PRODUCT = CategoryUtil.CoreCrop.TO_CROP_PRODUCT.get(crop);
+
+        switch (crop.getCropType())
+        {
+            case SINGLE ->
+            {
+                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSingleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSingleCropTable(crop, PRODUCT));
+            }
+            case DOUBLE ->
+            {
+                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createDoubleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadDoubleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildDoubleCropTable(crop, PRODUCT));
+            }
+            case SPREADING ->
+            {
+                this.add(CoreBlocks.CROPS.get(crop).get(), LootTableBuilders.createSpreadingCropTable(crop));
+                this.add(CoreBlocks.DEAD_CROPS.get(crop).get(), LootTableBuilders.createDeadSingleCropTable(crop, PRODUCT));
+                this.add(CoreBlocks.WILD_CROPS.get(crop).get(), LootTableBuilders.createWildSpreadingCropTable(crop));
+            }
+        }
+    }
+
+    private void addFruitTreeTable(CoreFruitTrees tree)
+    {
+
+        this.dropPottedContents(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(tree).get());
+        this.add(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree).get(), LootTableBuilders.createBranchTable(tree));
+        this.add(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(tree).get(), LootTableBuilders.createGrowingBranchTable());
+        this.add(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get(), createFruitTreeLeavesTable(tree));
+        this.add(CoreBlocks.FRUIT_TREE_SAPLINGS.get(tree).get(), LootTableBuilders.createFruitTreeSaplingTable(tree));
+    }
+
+    private void addStationaryBushTable(CoreStationaryBushes bush)
+    {
+        this.add(CoreBlocks.STATIONARY_BUSHES.get(bush).get(), LootTableBuilders.createStationaryBushTable(bush));
+    }
+
+    private void addSpreadingBushTable(CoreSpreadingBushes bush)
+    {
+        this.add(CoreBlocks.SPREADING_BUSHES.get(bush).get(), LootTableBuilders.createSpreadingBushTable(bush));
+        this.add(CoreBlocks.SPREADING_CANES.get(bush).get(), LootTableBuilders.createSpreadingBushCaneTable(bush));
+    }
+
+    private void addRockBlockTable(CoreRocks rock, Rock.BlockType type)
+    {
+        switch (type)
+        {
+            case LOOSE, MOSSY_LOOSE -> this.add(
+                    CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createLooseRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get())
+            );
+            case SPIKE -> this.add(
+                    CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1, 2)
+            );
+            case ROPE_ANCHOR -> this.add(
+                    CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1)
+            );
+            case RAW, HARDENED -> this.add(
+                    CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get(),
+                    LootTableBuilders.createRawRockDropTable(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).value(), CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get())
+            );
+            default -> this.dropSelf(
+                    CoreBlocks.ROCK_BLOCKS.get(rock).get(type).get()
+            );
+        }
+    }
+
+    private void dropAir(Block block)
+    {
+        this.add(block, LootTable.lootTable());
+    }
+
     private LootTable.Builder createFruitTreeLeavesTable(CoreFruitTrees tree)
     {
         return this.createSilkTouchOrShearsDispatchTable(CoreBlocks.FRUIT_TREE_LEAVES.get(tree).get(),
@@ -523,20 +481,19 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
         );
     }
 
-    //gemstones
     protected LootTable.Builder createClusterTable(Block block, Item item, float amount)
     {
-        return this.createSilkTouchDispatchTable(
-                block,
+        return this.createSilkTouchDispatchTable(block,
                 LootItem.lootTableItem(item)
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(amount)))
                         .apply(ApplyBonusCount.addOreBonusCount(this.registries.holderOrThrow(Enchantments.FORTUNE)))
                         .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
                         .otherwise(
-                                this.applyExplosionDecay(
-                                        block, LootItem.lootTableItem(item).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))
+                                this.applyExplosionDecay(block,
+                                        LootItem.lootTableItem(item).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))
                                 )
                         )
         );
     }
+    //endregion
 }
