@@ -20,7 +20,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Map;
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 public class CreativeTabs
 {
@@ -213,29 +212,29 @@ public class CreativeTabs
     {
         for (CoreClay clay : CoreClay.values())
         {
-            for (CoreClay.ItemType type : CoreClay.ItemType.values())
+            for (CoreClay.ItemType itemType : CoreClay.ItemType.values())
             {
-                if (type.hasType(clay))
+                if (itemType.hasType(clay))
                 {
-                    out.accept(CoreItems.CERAMICS.get(clay).get(type).get());
+                    out.accept(CoreItems.CERAMICS.get(clay).get(itemType).get());
                 }
             }
 
-            Stream.of(CoreClay.BlockType.values()).forEach(type ->
+            for (CoreClay.BlockType blockType : CoreClay.BlockType.values())
             {
 
-                if (type.hasClayType(clay))
+                if (blockType.hasClayType(clay))
                 {
-                    out.accept(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get());
+                    out.accept(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(blockType).get());
                 }
 
-                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET)
+                if (blockType.getType() == CoreClay.BlockPartType.BLOCK_SET)
                 {
-                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair().get());
-                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab().get());
-                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall().get());
+                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(blockType).stair().get());
+                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(blockType).slab().get());
+                    out.accept(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(blockType).wall().get());
                 }
-            });
+            }
         }
     }
 
