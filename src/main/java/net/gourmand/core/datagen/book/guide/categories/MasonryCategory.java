@@ -40,7 +40,6 @@ public class MasonryCategory extends CategoryProvider
         var cobblestone = this.add(new CobbleEntry(this).generate("h"));
         // add chiseling (mechanic)
         // add aqueducts
-        // add mortared cobble
         // add collapse (same as mining category)
         // add plaster (see field guide "Advanced Materials")
     }

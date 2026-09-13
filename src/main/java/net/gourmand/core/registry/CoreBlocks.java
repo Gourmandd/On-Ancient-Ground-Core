@@ -125,14 +125,14 @@ public class CoreBlocks
             )
     );
 
-    public static final Map<CoreRocks, Map<CoreOres, DeferredHolder<Block, Block>>> CUSTOM_ROCK_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+    public static final Map<CoreRocks, Map<CoreOres, DeferredHolder<Block, Block>>> CUSTOM_ROCK_ORES = Helpers.mapOf(CoreRocks.class, CoreRocks::hasOres, rock ->
             Helpers.mapOf(CoreOres.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
                     register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
             )
     );
 
     // Even if no ores are registered as of now, it adds the opportunity to easily add them.
-    public static final Map<CoreRocks, Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+    public static final Map<CoreRocks, Map<CoreOres, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_GRADED_ORES = Helpers.mapOf(CoreRocks.class, CoreRocks::hasOres, rock ->
             Helpers.mapOf(CoreOres.class, CoreOres::isGraded, ore ->
                     Helpers.mapOf(CoreOres.Grade.class, grade ->
                             register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
@@ -140,13 +140,13 @@ public class CoreBlocks
             )
     );
 
-    public static final Map<CoreRocks, Map<Ore, DeferredHolder<Block, Block>>> CUSTOM_ROCK_TFC_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+    public static final Map<CoreRocks, Map<Ore, DeferredHolder<Block, Block>>> CUSTOM_ROCK_TFC_ORES = Helpers.mapOf(CoreRocks.class, CoreRocks::hasOres, rock ->
             Helpers.mapOf(Ore.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
                     register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
             )
     );
 
-    public static final Map<CoreRocks, Map<Ore, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_TFC_GRADED_ORES = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+    public static final Map<CoreRocks, Map<Ore, Map<CoreOres.Grade, DeferredHolder<Block, Block>>>> CUSTOM_ROCK_TFC_GRADED_ORES = Helpers.mapOf(CoreRocks.class, CoreRocks::hasOres, rock ->
             Helpers.mapOf(Ore.class, Ore::isGraded, ore ->
                     Helpers.mapOf(CoreOres.Grade.class, grade ->
                             register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
@@ -158,7 +158,7 @@ public class CoreBlocks
             register(("ore/small_" + type.name()), () -> GroundcoverBlock.looseOre(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).strength(0.05F, 0.0F).sound(SoundType.NETHER_ORE).noCollission().pushReaction(PushReaction.DESTROY)))
     );
 
-    public static final Map<CoreRocks, Map<OreDeposit, DeferredHolder<Block, Block>>> ORE_DEPOSITS = Helpers.mapOf(CoreRocks.class, rock -> rock.hasOres(), rock ->
+    public static final Map<CoreRocks, Map<OreDeposit, DeferredHolder<Block, Block>>> ORE_DEPOSITS = Helpers.mapOf(CoreRocks.class, CoreRocks::hasOres, rock ->
             Helpers.mapOf(OreDeposit.class, ore ->
                     register("deposit/" + ore.name() + "/" + rock.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.GRAVEL).strength(rock.category().hardness(2.0f))))
             )
@@ -179,14 +179,6 @@ public class CoreBlocks
             Helpers.mapOf(Wood.BlockType.class, wood::hasBlockType, type ->
                     register(type.nameFor(wood), SpectrumWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))
             )
-    );
-
-    public static final Map<Rock, DeferredHolder<Block, Block>> MORTARED_TFC_COBBLE = Helpers.mapOf(Rock.class, rock ->
-            register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)))
-    );
-
-    public static final Map<CoreRocks, DeferredHolder<Block, Block>> MORTARED_CUSTOM_COBBLE = Helpers.mapOf(CoreRocks.class, rock ->
-            register("rock/mortared_cobble/" + rock.getSerializedName(), () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)))
     );
 
     public static final Map<CoreClay, Map<CoreClay.BlockType, DeferredHolder<Block, Block>>> CERAMIC_BLOCKS = Helpers.mapOf(CoreClay.class, clay ->

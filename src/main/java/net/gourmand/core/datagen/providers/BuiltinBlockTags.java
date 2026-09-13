@@ -240,26 +240,6 @@ public class BuiltinBlockTags extends TagsProvider<Block>
 
     private void generateRock()
     {
-        add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(
-                        BlockTags.MINEABLE_WITH_PICKAXE,
-                        TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
-                        TFCTags.Blocks.CAN_COLLAPSE,
-                        TFCTags.Blocks.CAN_START_COLLAPSE,
-                        Tags.Blocks.STONES,
-                        CoreTags.Blocks.MORTARED_COBBLE
-                )
-        );
-
-        add(CoreBlocks.MORTARED_CUSTOM_COBBLE, List.of(
-                        BlockTags.MINEABLE_WITH_PICKAXE,
-                        TFCTags.Blocks.CAN_START_COLLAPSE,
-                        TFCTags.Blocks.CAN_COLLAPSE,
-                        TFCTags.Blocks.CAN_TRIGGER_COLLAPSE,
-                        Tags.Blocks.STONES,
-                        CoreTags.Blocks.MORTARED_COBBLE
-                )
-        );
-
         for (CoreRocks rockType : CoreRocks.values())
         {
             for (Rock.BlockType blockType : Rock.BlockType.values())

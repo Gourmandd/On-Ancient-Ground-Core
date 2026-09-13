@@ -223,9 +223,6 @@ public class BuiltinItemModels extends ItemModelProvider
 
             simpleItem(CoreItems.BRICKS.get(rockType).get(), getItemModelLocation(CoreItems.BRICKS.get(rockType).getId()));
         }
-
-        CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(this::simpleBlock);
-        CoreBlocks.MORTARED_CUSTOM_COBBLE.values().forEach(this::simpleBlock);
     }
 
     private void generateWood()

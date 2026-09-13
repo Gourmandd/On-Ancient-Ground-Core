@@ -148,13 +148,6 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
                 }
             }
             addItem(CoreItems.BRICKS.get(rockType), getName(rockType) + " Brick");
-            addBlock(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rockType), "Mortared " + getName(rockType) + " Cobble");
-        }
-
-        // tfc rocks.
-        for (Rock rockType : Rock.values())
-        {
-            addBlock(CoreBlocks.MORTARED_TFC_COBBLE.get(rockType), "Mortared " + getName(rockType) + " Cobble");
         }
 
         for (SpectrumWood woodType : SpectrumWood.values())

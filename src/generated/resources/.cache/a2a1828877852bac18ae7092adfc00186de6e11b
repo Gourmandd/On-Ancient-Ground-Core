@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-29T10:51:40.194606561	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-09-13T13:57:57.949648986	Tags for minecraft:item mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/item/boards.json
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
@@ -105,7 +105,6 @@ b2312ebde29079c6e591aa4b4104fc9a7124529e data/modpack/tags/item/clay/yellowware/
 2e461972e31c372a9588a8d7033e15ebe16d2f27 data/modpack/tags/item/clay/yellowware/recycling_5.json
 9ad88fb52c4069029918f419178f4b063761f751 data/modpack/tags/item/clay/yixing/recycling_1.json
 604789ce7039198303486f848d2644a77cee7416 data/modpack/tags/item/clay/yixing/recycling_5.json
-650fe2107b7e1320b82ea4a13c1c3cdf3d4894ff data/modpack/tags/item/cobblestones/mortared.json
 2d219f30b78c2ff4f46ddd8a044f5c9d787e58c8 data/modpack/tags/item/kaolin_clay_blocks.json
 5ca9fcf767b678053d4f0393568745c6372859c2 data/modpack/tags/item/lead_glass.json
 d8eaeaeb7a14a3009857143300cb2be14296bce5 data/modpack/tags/item/lead_glass_panes.json

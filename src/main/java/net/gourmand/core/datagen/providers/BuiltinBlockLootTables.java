@@ -250,13 +250,6 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
                     this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).wall().get());
                 }
             }
-
-            this.dropSelf(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rockType).get());
-        }
-
-        for (Rock rockType : Rock.values())
-        {
-            this.dropSelf(CoreBlocks.MORTARED_TFC_COBBLE.get(rockType).get());
         }
     }
 

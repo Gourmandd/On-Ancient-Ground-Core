@@ -233,9 +233,6 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 this.tag(ItemTags.BUTTONS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON)));
             }
         }
-
-        add(CoreBlocks.MORTARED_TFC_COBBLE, List.of(CoreTags.Items.MORTARED_COBBLE));
-        add(CoreBlocks.MORTARED_CUSTOM_COBBLE, List.of(CoreTags.Items.MORTARED_COBBLE));
     }
 
     private void generateWood()

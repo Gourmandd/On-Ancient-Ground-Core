@@ -241,13 +241,6 @@ public class BuiltinBlockStates extends BlockStateProvider
                 pressurePlateBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.PRESSURE_PLATE), TextureUtil.getRockTexture(rockType, Rock.BlockType.PRESSURE_PLATE));
                 buttonBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON), TextureUtil.getRockTexture(rockType, Rock.BlockType.BUTTON));
             }
-
-            cubeAll(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rockType), TextureUtil.getRockTexture(rockType, Rock.BlockType.COBBLE));
-        }
-
-        for (Rock rockType : Rock.values())
-        {
-            cubeAll(CoreBlocks.MORTARED_TFC_COBBLE.get(rockType), TextureUtil.getRockTexture(rockType, Rock.BlockType.COBBLE));
         }
     }
 
