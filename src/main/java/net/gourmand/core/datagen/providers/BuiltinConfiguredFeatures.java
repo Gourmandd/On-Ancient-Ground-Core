@@ -12,15 +12,18 @@ import net.dries007.tfc.util.collections.IWeighted;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.world.feature.*;
 import net.dries007.tfc.world.feature.cave.CaveVegetationConfig;
-import net.dries007.tfc.world.feature.vein.*;
+import net.dries007.tfc.world.feature.vein.ClusterVeinConfig;
+import net.dries007.tfc.world.feature.vein.DiscVeinConfig;
+import net.dries007.tfc.world.feature.vein.PipeVeinConfig;
+import net.dries007.tfc.world.feature.vein.VeinConfig;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreWorldGen;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.gourmand.core.registry.category.TFCOres;
-import net.gourmand.core.util.RegistryOre;
 import net.gourmand.core.util.DataWeighted;
+import net.gourmand.core.util.RegistryOre;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -44,7 +47,6 @@ import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.common.Tags;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class BuiltinConfiguredFeatures  {
     // Some features are commented out, and their generated jsons are moved to the non-datagenned data directories.
@@ -1347,21 +1349,22 @@ public class BuiltinConfiguredFeatures  {
 
         list.forEach(blockType -> {
 
-            Stream.of(Rock.values()).forEach(rock -> {
-                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(),
+            for (Rock rockType : Rock.values())
+            {
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(),
                         List.of(
-                                TFCBlocks.ROCK_BLOCKS.get(rock).get(blockType).get().defaultBlockState()
+                                TFCBlocks.ROCK_BLOCKS.get(rockType).get(blockType).get().defaultBlockState()
                         )
                 );
-            });
+            }
 
-            Stream.of(CoreRocks.values()).forEach(rock -> {
-                map.put(rock.getBlock(Rock.BlockType.RAW).get(),
+            for (CoreRocks rockType : CoreRocks.values()){
+                map.put(rockType.getBlock(Rock.BlockType.RAW).get(),
                         List.of(
-                                rock.getBlock(blockType).get().defaultBlockState()
+                                rockType.getBlock(blockType).get().defaultBlockState()
                         )
                 );
-            });
+            }
         });
 
         if (isBaby) {
@@ -1428,43 +1431,41 @@ public class BuiltinConfiguredFeatures  {
         Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
         if (ore != null){
-            Stream.of(Rock.values()).forEach(rock -> {
-
-                RockCategory category = rock.displayCategory().category();
+            for (Rock rockType : Rock.values())
+            {
+                RockCategory category = rockType.displayCategory().category();
                 if (category != RockCategory.SEDIMENTARY){
-                    map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
+                    map.put(TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
                             List.of(
-                                    Pair.of(TFCBlocks.ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
+                                    Pair.of(TFCBlocks.ORES.get(rockType).get(ore).get().defaultBlockState(), 1d)
                             )
                     ));
                 }
-            });
-
-            Stream.of(CoreRocks.values()).forEach(rock -> {
-                if (rock.hasOres()){
-                    RockCategory category = rock.displayCategory().category();
+            }
+            for (CoreRocks rockType : CoreRocks.values())
+            {
+                if (rockType.hasOres()){
+                    RockCategory category = rockType.displayCategory().category();
                     if (category != RockCategory.SEDIMENTARY){
-                        map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
+                        map.put(rockType.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
                                 List.of(
-                                        Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
+                                        Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(ore).get().defaultBlockState(), 1d)
                                 )
                         ));
                     }
                 }
-            });
+            }
         }
 
         if (ore != null){
             FissureConfig.Decoration deco = new FissureConfig.Decoration(map, rarityDeco, radiusDeco, countDeco);
-            CTX.register(
-                    key,
+            CTX.register(key,
                     new ConfiguredFeature<>(TFCFeatures.HOT_SPRING.get(),
                             new HotSpringConfig(wallState, fluidState, radius, Optional.of(deco), allowUnderwater, replacement)
                     )
             );
         } else {
-            CTX.register(
-                    key,
+            CTX.register(key,
                     new ConfiguredFeature<>(TFCFeatures.HOT_SPRING.get(),
                             new HotSpringConfig(wallState, fluidState, radius, Optional.empty(), allowUnderwater, replacement)
                     )
@@ -1476,16 +1477,17 @@ public class BuiltinConfiguredFeatures  {
 
         List<Block> list = new ArrayList<Block>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
-            list.add(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get());
-        });
+        for (Rock rockType : Rock.values())
+        {
+            list.add(TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get());
+        }
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            list.add(rock.getBlock(Rock.BlockType.RAW).get());
-        });
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            list.add(rockType.getBlock(Rock.BlockType.RAW).get());
+        }
 
-        CTX.register(
-                key,
+        CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.SPRING.get(),
                         new SpringConfiguration(fluidState, true, 4, 1, CTX.lookup(Registries.BLOCK).getOrThrow(Tags.Blocks.STONES))
                 )
@@ -1496,37 +1498,37 @@ public class BuiltinConfiguredFeatures  {
 
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
-
-            RockCategory category = rock.displayCategory().category();
+        for (Rock rockType : Rock.values())
+        {
+            RockCategory category = rockType.displayCategory().category();
             if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
                 map.put(
-                        TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(),
-                        TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState()
+                        TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(),
+                        TFCBlocks.MAGMA_BLOCKS.get(rockType).get().defaultBlockState()
                 );
 
                 map.put(
-                        TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(),
-                        TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState()
+                        TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.HARDENED).get(),
+                        TFCBlocks.MAGMA_BLOCKS.get(rockType).get().defaultBlockState()
                 );
             }
-        });
+        }
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-
-            RockCategory category = rock.displayCategory().category();
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            RockCategory category = rockType.displayCategory().category();
             if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
                 map.put(
-                        rock.getBlock(Rock.BlockType.RAW).get(),
-                        CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState()
+                        rockType.getBlock(Rock.BlockType.RAW).get(),
+                        CoreBlocks.MAGMA_BLOCKS.get(rockType).get().defaultBlockState()
                 );
 
                 map.put(
-                        CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(),
-                        CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState()
+                        CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.HARDENED).get(),
+                        CoreBlocks.MAGMA_BLOCKS.get(rockType).get().defaultBlockState()
                 );
             }
-        });
+        }
 
         map.put(
                 TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.RAW).get(),
@@ -1538,8 +1540,7 @@ public class BuiltinConfiguredFeatures  {
                 TFCBlocks.MAGMA_BLOCKS.get(Rock.ANDESITE).get().defaultBlockState()
         );
 
-        CTX.register(
-                key,
+        CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.RIVULET.get(),
                         new BlockStateMapConfig(map)
                 )
@@ -1550,37 +1551,37 @@ public class BuiltinConfiguredFeatures  {
 
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
-
-            RockCategory category = rock.displayCategory().category();
+        for (Rock rockType : Rock.values())
+        {
+            RockCategory category = rockType.displayCategory().category();
             if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
                 map.put(
-                        TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(),
-                        TFCBlocks.ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState()
+                        TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(),
+                        TFCBlocks.ORES.get(rockType).get(Ore.SULFUR).get().defaultBlockState()
                 );
 
                 map.put(
-                        TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(),
-                        TFCBlocks.ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState()
+                        TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.HARDENED).get(),
+                        TFCBlocks.ORES.get(rockType).get(Ore.SULFUR).get().defaultBlockState()
                 );
             }
-        });
+        }
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-
-            RockCategory category = rock.displayCategory().category();
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            RockCategory category = rockType.displayCategory().category();
             if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
                 map.put(
-                        rock.getBlock(Rock.BlockType.RAW).get(),
-                        CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState()
+                        rockType.getBlock(Rock.BlockType.RAW).get(),
+                        CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(Ore.SULFUR).get().defaultBlockState()
                 );
 
                 map.put(
-                        CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get(),
-                        CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(Ore.SULFUR).get().defaultBlockState()
+                        CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.HARDENED).get(),
+                        CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(Ore.SULFUR).get().defaultBlockState()
                 );
             }
-        });
+        }
 
         map.put(
                 TFCBlocks.ROCK_BLOCKS.get(Rock.TUFF).get(Rock.BlockType.RAW).get(),
@@ -1592,8 +1593,7 @@ public class BuiltinConfiguredFeatures  {
                 TFCBlocks.ORES.get(Rock.TUFF).get(Ore.SULFUR).get().defaultBlockState()
         );
 
-        CTX.register(
-                key,
+        CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.RIVULET.get(),
                         new BlockStateMapConfig(map)
                 )
@@ -1601,8 +1601,7 @@ public class BuiltinConfiguredFeatures  {
     }
 
     private static void createDiscVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, int height, VeinConfig config){
-        CTX.register(
-                key,
+        CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.DISC_VEIN.get(),
                         new DiscVeinConfig(config, size, height)
                 )
@@ -1610,8 +1609,7 @@ public class BuiltinConfiguredFeatures  {
     }
 
     private static void createPipeVein(ResourceKey<ConfiguredFeature<?, ?>> key, int height, int radius, int minSkew, int maxSkew, int minSlant, int maxSlant, float sign, VeinConfig config){
-        CTX.register(
-                key,
+        CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.PIPE_VEIN.get(),
                         new PipeVeinConfig(config, height, radius, minSkew, maxSkew, minSlant, maxSlant, sign)
                 )
@@ -1619,8 +1617,7 @@ public class BuiltinConfiguredFeatures  {
     }
 
     private static void createClusterVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, VeinConfig config){
-        CTX.register(
-                key,
+        CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.CLUSTER_VEIN.get(),
                         new ClusterVeinConfig(config, size)
                 )
@@ -1638,8 +1635,7 @@ public class BuiltinConfiguredFeatures  {
                         .build()
         );
 
-        CTX.register(
-                key,
+        CTX.register(key,
                 new ConfiguredFeature<>(Feature.GEODE,
                         new GeodeConfiguration(
                                 new GeodeBlockSettings(
@@ -1700,8 +1696,7 @@ public class BuiltinConfiguredFeatures  {
             );
         }
 
-        CTX.register(
-                key,
+        CTX.register(key,
                 new ConfiguredFeature<>(Feature.GEODE,
                         new GeodeConfiguration(
                                 new GeodeBlockSettings(
@@ -1745,15 +1740,17 @@ public class BuiltinConfiguredFeatures  {
     private static Map<Block, BlockState> createDepositMap(OreDeposit deposit){
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
-            map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), TFCBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState());
-        });
+        for (Rock rockType : Rock.values())
+        {
+            map.put(TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(), TFCBlocks.ORE_DEPOSITS.get(rockType).get(deposit).get().defaultBlockState());
+        }
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            if (rock.hasOres()) {
-                map.put(rock.getBlock(Rock.BlockType.RAW).get(), CoreBlocks.ORE_DEPOSITS.get(rock).get(deposit).get().defaultBlockState());
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            if (rockType.hasOres()) {
+                map.put(rockType.getBlock(Rock.BlockType.RAW).get(), CoreBlocks.ORE_DEPOSITS.get(rockType).get(deposit).get().defaultBlockState());
             }
-        });
+        }
 
         return map;
     }
@@ -1761,29 +1758,31 @@ public class BuiltinConfiguredFeatures  {
     private static Optional<Map<Block, IWeighted<BlockState>>> createLavaHotSpringMap(){
         Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        Stream.of(Rock.values()).forEach(rock -> {
-            RockCategory category = rock.displayCategory().category();
+        for (Rock rockType : Rock.values())
+        {
+            RockCategory category = rockType.displayCategory().category();
             if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
-                map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
+                map.put(TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
                         List.of(
-                                Pair.of(TFCBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState(), 1d),
-                                Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2d)
+                                Pair.of(TFCBlocks.MAGMA_BLOCKS.get(rockType).get().defaultBlockState(), 1d),
+                                Pair.of(TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2d)
                         )
                 ));
             }
-        });
+        }
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            RockCategory category = rock.displayCategory().category();
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            RockCategory category = rockType.displayCategory().category();
             if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
-                map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
+                map.put(rockType.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
                         List.of(
-                                Pair.of(CoreBlocks.MAGMA_BLOCKS.get(rock).get().defaultBlockState(), 1d),
-                                Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2d)
+                                Pair.of(CoreBlocks.MAGMA_BLOCKS.get(rockType).get().defaultBlockState(), 1d),
+                                Pair.of(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.HARDENED).get().defaultBlockState(), 2d)
                         )
                 ));
             }
-        });
+        }
 
         return Optional.of(map);
     }
@@ -1792,21 +1791,23 @@ public class BuiltinConfiguredFeatures  {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
+        for (Rock rockType : Rock.values())
+        {
+            if (categoryList.contains(rockType.displayCategory().category())){
+                map.putLast(rockType.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
-                                Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d)
+                                Pair.of(ore.getOreBlock(rockType, null).defaultBlockState(), 1d)
                         )
                 ));
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
-                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            if (categoryList.contains(rockType.displayCategory().category())){
+                map.putLast(rockType.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
-                                Pair.of(ore.getOreBlock(rock, null).defaultBlockState(), 1d)
+                                Pair.of(ore.getOreBlock(rockType, null).defaultBlockState(), 1d)
                         )
                 ));
             }

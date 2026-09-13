@@ -22,7 +22,6 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class BuiltinFluidTags extends TagsProvider<Fluid> implements Accessors
 {
@@ -37,16 +36,15 @@ public class BuiltinFluidTags extends TagsProvider<Fluid> implements Accessors
     @Override
     protected void addTags(HolderLookup.Provider provider)
     {
-
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
-            this.tag(TFCTags.Fluids.MOLTEN_METALS).add(getKey(metal.getFluid()));
-        });
+            this.tag(TFCTags.Fluids.MOLTEN_METALS).add(getKey(metalType.getFluid()));
+        }
 
-        Stream.of(DyeColor.values()).forEach(color ->
+        for (DyeColor color : DyeColor.values())
         {
             this.tag(CoreTags.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.COLORED_GLASS.get(color).source().getKey());
-        });
+        }
         this.tag(CoreTags.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.CLEAR_GLASS.source().getKey());
     }
 

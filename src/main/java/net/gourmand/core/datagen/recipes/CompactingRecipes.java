@@ -40,19 +40,46 @@ public class CompactingRecipes extends CompactingRecipeGen
             final DeferredHolder<Item, Item> SHEET = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.SHEET);
             final DeferredHolder<Item, Item> DOUBLE_SHEET = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_SHEET);
 
-            create(DOUBLE_INGOT.getId().getPath(), b -> b.require(INGOT.get()).require(INGOT.get()).require(TFCItems.POWDERS.get(Powder.FLUX)).requiresHeat(HeatCondition.HEATED).output(DOUBLE_INGOT.get()));
+            create(
+                    DOUBLE_INGOT.getId().getPath(), b -> b
+                            .require(INGOT.get())
+                            .require(INGOT.get())
+                            .require(TFCItems.POWDERS.get(Powder.FLUX))
+                            .requiresHeat(HeatCondition.HEATED)
+                            .output(DOUBLE_INGOT.get())
+            );
 
-            create(DOUBLE_SHEET.getId().getPath(), b -> b.require(SHEET.get()).require(SHEET.get()).require(TFCItems.POWDERS.get(Powder.FLUX)).requiresHeat(HeatCondition.HEATED).output(DOUBLE_SHEET.get()));
+            create(
+                    DOUBLE_SHEET.getId().getPath(), b -> b
+                            .require(SHEET.get())
+                            .require(SHEET.get())
+                            .require(TFCItems.POWDERS.get(Powder.FLUX))
+                            .requiresHeat(HeatCondition.HEATED)
+                            .output(DOUBLE_SHEET.get())
+            );
 
-            create(SHEET.getId().getPath(), b -> b.require(metal.getFlowingFluid(), 200).requiresHeat(HeatCondition.HEATED).output(SHEET.get()));
+            create(
+                    SHEET.getId().getPath(), b -> b
+                            .require(metal.getFlowingFluid(), 200)
+                            .requiresHeat(HeatCondition.HEATED)
+                            .output(SHEET.get())
+            );
         });
 
         // colored glass
         for (DyeColor color : DyeColor.values())
         {
-            create(AncientGroundCore.location("compacting/molten_glass/" + color), b -> b.require(CoreFluids.COLORED_GLASS.get(color).getSource(), 800).output(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get()));
+            create(
+                    AncientGroundCore.location("compacting/molten_glass/" + color), b -> b
+                            .require(CoreFluids.COLORED_GLASS.get(color).getSource(), 800)
+                            .output(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
+            );
         }
         // clear glass
-        create(AncientGroundCore.location("compacting/molten_glass/clear"), b -> b.require(CoreFluids.CLEAR_GLASS.getSource(), 800).output(CoreBlocks.CLEAR_MOLTEN_GLASS.get()));
+        create(
+                AncientGroundCore.location("compacting/molten_glass/clear"), b -> b
+                        .require(CoreFluids.CLEAR_GLASS.getSource(), 800)
+                        .output(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
+        );
     }
 }

@@ -11,7 +11,6 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class PressingRecipes extends PressingRecipeGen
 {
@@ -24,14 +23,13 @@ public class PressingRecipes extends PressingRecipeGen
 
     public void rollingRecipes()
     {
-
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
 
-            final DeferredHolder<Item, Item> DOUBLE_INGOT = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.DOUBLE_INGOT);
-            final DeferredHolder<Item, Item> SHEET = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.SHEET);
+            final DeferredHolder<Item, Item> DOUBLE_INGOT = CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_INGOT);
+            final DeferredHolder<Item, Item> SHEET = CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.SHEET);
 
             create(DOUBLE_INGOT.getId().getPath(), b -> b.require(DOUBLE_INGOT.get()).output(SHEET.get(), 1));
-        });
+        }
     }
 }

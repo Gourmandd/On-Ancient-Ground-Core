@@ -18,11 +18,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
-import org.apache.commons.lang3.stream.Streams;
 
 import java.util.Locale;
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
 {
@@ -67,311 +65,301 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
         add(CoreItems.WROUGHT_IRON_BUCKET.get().getDescriptionId() + ".filled", "%s Wrought Iron Bucket");
 
         // bulk lang
-        Stream.of(CoreCrops.values()).forEach(crop ->
+        for (CoreCrops cropType : CoreCrops.values())
         {
-            addItem(CoreItems.CROP_SEEDS.get(crop), getName(crop) + " Seeds");
-            addBlock(CoreBlocks.WILD_CROPS.get(crop), "Wild " + getName(crop));
-            addBlock(CoreBlocks.CROPS.get(crop), getName(crop));
-            addBlock(CoreBlocks.DEAD_CROPS.get(crop), "Dead " + getName(crop));
-        });
+            addItem(CoreItems.CROP_SEEDS.get(cropType), getName(cropType) + " Seeds");
+            addBlock(CoreBlocks.WILD_CROPS.get(cropType), "Wild " + getName(cropType));
+            addBlock(CoreBlocks.CROPS.get(cropType), getName(cropType));
+            addBlock(CoreBlocks.DEAD_CROPS.get(cropType), "Dead " + getName(cropType));
+        }
 
-        Stream.of(CoreSpreadingBushes.values()).forEach(bush ->
+        for (CoreSpreadingBushes bushType : CoreSpreadingBushes.values())
         {
-            addBlock(CoreBlocks.SPREADING_BUSHES.get(bush), getName(bush) + " Bush");
-        });
+            addBlock(CoreBlocks.SPREADING_BUSHES.get(bushType), getName(bushType) + " Bush");
+        }
 
-        Stream.of(CoreStationaryBushes.values()).forEach(bush ->
+        for (CoreStationaryBushes bushType : CoreStationaryBushes.values())
         {
-            addBlock(CoreBlocks.STATIONARY_BUSHES.get(bush), getName(bush) + " Bush");
-        });
+            addBlock(CoreBlocks.STATIONARY_BUSHES.get(bushType), getName(bushType) + " Bush");
+        }
 
-        Stream.of(CoreFruitTrees.values()).forEach(tree ->
+        for (CoreFruitTrees treeType : CoreFruitTrees.values())
         {
-            addBlock(CoreBlocks.FRUIT_TREE_LEAVES.get(tree), getName(tree) + " Leaves");
-            addBlock(CoreBlocks.FRUIT_TREE_BRANCHES.get(tree), getName(tree) + " Branch");
-            addBlock(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(tree), getName(tree) + " Growing Branch");
-            addBlock(CoreBlocks.FRUIT_TREE_SAPLINGS.get(tree), getName(tree) + " Sapling");
-            addBlock(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(tree), getName(tree) + " Potted Sapling");
-        });
+            addBlock(CoreBlocks.FRUIT_TREE_LEAVES.get(treeType), getName(treeType) + " Leaves");
+            addBlock(CoreBlocks.FRUIT_TREE_BRANCHES.get(treeType), getName(treeType) + " Branch");
+            addBlock(CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(treeType), getName(treeType) + " Growing Branch");
+            addBlock(CoreBlocks.FRUIT_TREE_SAPLINGS.get(treeType), getName(treeType) + " Sapling");
+            addBlock(CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.get(treeType), getName(treeType) + " Potted Sapling");
+        }
 
         // custom clay types.
-        Stream.of(CoreClay.values()).forEach(clay ->
+        for (CoreClay clayType : CoreClay.values())
         {
-            Stream.of(CoreClay.ItemType.values()).forEach(type ->
+            for (CoreClay.ItemType itemType : CoreClay.ItemType.values())
             {
-                if (type.hasType(clay))
+                if (itemType.hasType(clayType))
                 {
-                    if (type.getType() == CoreClay.ItemPartType.UNFIRED_MOLD)
+                    if (itemType.getType() == CoreClay.ItemPartType.UNFIRED_MOLD)
                     {
-                        addItem(CoreItems.CERAMICS.get(clay).get(type), "Unfired " + getName(clay) + " " + getName(type.name()) + " Mold");
+                        addItem(CoreItems.CERAMICS.get(clayType).get(itemType), "Unfired " + getName(clayType) + " " + getName(itemType.name()) + " Mold");
                     }
                     else
                     {
-                        addItem(CoreItems.CERAMICS.get(clay).get(type), getName(clay) + " " + getName(type.name()));
+                        addItem(CoreItems.CERAMICS.get(clayType).get(itemType), getName(clayType) + " " + getName(itemType.name()));
                     }
                 }
-            });
-            add("item." + AncientGroundCore.MOD_ID + ".ceramic." + clay.getSerializedName() + ".jug.filled", "%s " + getName(clay) + " Jug");
-            add("emi." + TerraFirmaCraft.MOD_ID + ".ceramic." + clay.getSerializedName() + "_knapping", getName(clay) + " Knapping");
-        });
+            }
+            add("item." + AncientGroundCore.MOD_ID + ".ceramic." + clayType.getSerializedName() + ".jug.filled", "%s " + getName(clayType) + " Jug");
+            add("emi." + TerraFirmaCraft.MOD_ID + ".ceramic." + clayType.getSerializedName() + "_knapping", getName(clayType) + " Knapping");
+        }
 
         // custom rocks.
-        Stream.of(CoreRocks.values()).forEach(rock ->
+        for (CoreRocks rockType : CoreRocks.values())
         {
-            Stream.of(Rock.BlockType.values()).forEach(type ->
+            for (Rock.BlockType blockType : Rock.BlockType.values())
             {
-                if (rock.hasVariant(type))
+                if (rockType.hasVariant(blockType))
                 {
-                    if (type.hasVariants())
+                    if (blockType.hasVariants())
                     {
-                        if (isRockTypePrefixed(type))
+                        if (isRockTypePrefixed(blockType))
                         {
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), getName(type) + " " + getName(rock) + " Stairs");
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), getName(type) + " " + getName(rock) + " Slab");
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getName(type) + " " + getName(rock) + " Wall");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).stair(), getName(blockType) + " " + getName(rockType) + " Stairs");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).slab(), getName(blockType) + " " + getName(rockType) + " Slab");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).wall(), getName(blockType) + " " + getName(rockType) + " Wall");
                         }
                         else
                         {
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), getName(rock) + " " + getName(type) + " Stairs");
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), getName(rock) + " " + getName(type) + " Slab");
-                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getName(rock) + " " + getName(type) + " Wall");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).stair(), getName(rockType) + " " + getName(blockType) + " Stairs");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).slab(), getName(rockType) + " " + getName(blockType) + " Slab");
+                            addBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).wall(), getName(rockType) + " " + getName(blockType) + " Wall");
                         }
                     }
 
-                    if (isRockTypePrefixed(type))
+                    if (isRockTypePrefixed(blockType))
                     {
-                        addBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), getName(type) + " " + getName(rock));
+                        addBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(blockType), getName(blockType) + " " + getName(rockType));
                     }
                     else
                     {
-                        addBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " " + getName(type));
+                        addBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(blockType), getName(rockType) + " " + getName(blockType));
                     }
 
                 }
-            });
-            addItem(CoreItems.BRICKS.get(rock), getName(rock) + " Brick");
-            addBlock(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rock), "Mortared " + getName(rock) + " Cobble");
-        });
+            }
+            addItem(CoreItems.BRICKS.get(rockType), getName(rockType) + " Brick");
+            addBlock(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rockType), "Mortared " + getName(rockType) + " Cobble");
+        }
 
         // tfc rocks.
-        Stream.of(Rock.values()).forEach(rock ->
+        for (Rock rockType : Rock.values())
         {
-            addBlock(CoreBlocks.MORTARED_TFC_COBBLE.get(rock), "Mortared " + getName(rock) + " Cobble");
-        });
+            addBlock(CoreBlocks.MORTARED_TFC_COBBLE.get(rockType), "Mortared " + getName(rockType) + " Cobble");
+        }
 
-        Stream.of(SpectrumWood.values()).forEach(wood ->
+        for (SpectrumWood woodType : SpectrumWood.values())
         {
-            Stream.of(Wood.BlockType.values()).forEach(type ->
+            for (Wood.BlockType blockType : Wood.BlockType.values())
             {
-                if (type.needsItem() && wood.hasBlockType(type) && type != Wood.BlockType.SAPLING)
+                if (blockType.needsItem() && woodType.hasBlockType(blockType) && blockType != Wood.BlockType.SAPLING)
                 {
-                    addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type), getName(wood) + " " + getName(type.name()));
+                    addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(blockType), getName(woodType) + " " + getName(blockType.name()));
                 }
-            });
-            if (wood.getSpectrumWoodType() == SpectrumWood.SpectrumWoodType.WEEPING_GALA)
+            }
+            if (woodType.getSpectrumWoodType() == SpectrumWood.SpectrumWoodType.WEEPING_GALA)
             {
-                addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SAPLING), getName(wood) + " Sprig");
+                addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SAPLING), getName(woodType) + " Sprig");
             }
             else
             {
-                addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.SAPLING), getName(wood) + " " + getName(Wood.BlockType.SAPLING.name()));
+                addBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SAPLING), getName(woodType) + " " + getName(Wood.BlockType.SAPLING.name()));
             }
-            addItem(CoreItems.SUPPORTS.get(wood), getName(wood) + " Support");
-            addItem(CoreItems.LUMBER.get(wood), getName(wood) + " Lumber");
-        });
+            addItem(CoreItems.SUPPORTS.get(woodType), getName(woodType) + " Support");
+            addItem(CoreItems.LUMBER.get(woodType), getName(woodType) + " Lumber");
+        }
 
         // custom metals.
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
-            Stream.of(Metal.ItemType.values()).forEach(itemType ->
+            add("metal." + AncientGroundCore.MOD_ID + "." + metalType.getSerializedName(), getName(metalType));
+            for (Metal.ItemType itemType : Metal.ItemType.values())
             {
-                if (itemType.has(metal.getLikeMetal()))
+                if (itemType.has(metalType.getLikeMetal()))
                 {
-                    addItem(CoreItems.METAL_ITEMS.get(metal).get(itemType), getName(metal) + " " + getName(itemType.name()));
+                    addItem(CoreItems.METAL_ITEMS.get(metalType).get(itemType), getName(metalType) + " " + getName(itemType.name()));
                 }
-            });
-
-            if (!metal.hasOtherFluid())
-            {
-                add(CoreBlocks.METAL_FLUIDS.get(metal).get(), getName(metal));
-                add(CoreItems.METAL_FLUID_BUCKETS.get(metal).get(), getName(metal) + " Bucket");
-                add(CoreFluids.METALS.get(metal).type().get().getDescriptionId(), getName(metal));
             }
-
-            Stream.of(Metal.BlockType.values()).forEach(blockType ->
+            if (!metalType.hasOtherFluid())
             {
-                if (blockType.has(metal.getLikeMetal()))
+                add(CoreBlocks.METAL_FLUIDS.get(metalType).get(), getName(metalType));
+                add(CoreItems.METAL_FLUID_BUCKETS.get(metalType).get(), getName(metalType) + " Bucket");
+                add(CoreFluids.METALS.get(metalType).type().get().getDescriptionId(), getName(metalType));
+            }
+            for (Metal.BlockType blockType : Metal.BlockType.values())
+            {
+                if (blockType.has(metalType.getLikeMetal()))
                 {
-                    addBlock(CoreBlocks.METALS.get(metal).get(blockType), getName(metal) + " " + getName(blockType.name()));
+                    addBlock(CoreBlocks.METALS.get(metalType).get(blockType), getName(metalType) + " " + getName(blockType.name()));
                 }
-            });
-
-            add("metal." + AncientGroundCore.MOD_ID + "." + metal.getSerializedName(), getName(metal));
-        });
+            }
+        }
 
         // TODO: find out if TFC still wants these as metal definitions don't exist anymore.
-        Stream.of(DyeColor.values()).forEach(colour ->
+        for (DyeColor color : DyeColor.values())
         {
-            add("metal." + AncientGroundCore.MOD_ID + ".glass." + colour.getSerializedName(), getName(colour) + " Glass");
-            add(CoreBlocks.COLORED_GLASS_FLUIDS.get(colour).get(), getName(colour) + " Glass");
-            add(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(colour).get(), getName(colour) + " Glass Bucket");
-            add(CoreFluids.COLORED_GLASS.get(colour).type().get().getDescriptionId(), getName(colour) + " Glass");
-        });
+            add("metal." + AncientGroundCore.MOD_ID + ".glass." + color.getSerializedName(), getName(color) + " Glass");
+            add(CoreBlocks.COLORED_GLASS_FLUIDS.get(color).get(), getName(color) + " Glass");
+            add(CoreItems.COLORED_GLASS_FLUID_BUCKETS.get(color).get(), getName(color) + " Glass Bucket");
+            add(CoreFluids.COLORED_GLASS.get(color).type().get().getDescriptionId(), getName(color) + " Glass");
+        }
         add("metal." + AncientGroundCore.MOD_ID + ".glass.clear", "Clear Glass");
         add(CoreBlocks.CLEAR_GLASS_FLUID.get(), "Clear Glass");
         add(CoreItems.CLEAR_GLASS_FLUID_BUCKET.get(), "Clear Glass Bucket");
         add(CoreFluids.CLEAR_GLASS.type().get().getDescriptionId(), "Clear Glass");
 
         // custom ores.
-        Stream.of(CoreOres.values()).forEach(ore ->
+        for (CoreOres oreType : CoreOres.values())
         {
-
-            if (ore.hasBlock())
+            if (oreType.hasBlock())
             {
-                Stream.of(CoreRocks.values()).forEach(rock ->
+                for (CoreRocks rockType : CoreRocks.values())
                 {
-                    if (rock.hasOres())
+                    if (rockType.hasOres())
                     {
-                        if (ore.isGraded())
+                        if (oreType.isGraded())
                         {
-                            Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                            for (CoreOres.Grade grade : CoreOres.Grade.values())
                             {
-                                createOreKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
-                            });
+                                createOreKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rockType).get(oreType).get(grade), getName(grade.name()) + " " + getName(rockType), getName(oreType));
+                            }
                         }
                         else
                         {
-                            createOreKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), getName(rock), getName(ore));
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rockType).get(oreType), getName(rockType), getName(oreType));
                         }
                     }
-                });
-                Stream.of(Rock.values()).forEach(rock ->
+                }
+                for (Rock rockType : Rock.values())
                 {
-                    if (ore.isGraded())
+                    if (oreType.isGraded())
                     {
-                        Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                        for (CoreOres.Grade grade : CoreOres.Grade.values())
                         {
-                            createOreKey(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
-                        });
+                            createOreKey(CoreBlocks.GRADED_ORES.get(rockType).get(oreType).get(grade), getName(grade.name()) + " " + getName(rockType), getName(oreType));
+                        }
                     }
                     else
                     {
-                        createOreKey(CoreBlocks.ORES.get(rock).get(ore), getName(rock), getName(ore));
+                        createOreKey(CoreBlocks.ORES.get(rockType).get(oreType), getName(rockType), getName(oreType));
                     }
-                });
-
-                if (ore.isGraded())
+                }
+                if (oreType.isGraded())
                 {
-                    addBlock(CoreBlocks.SMALL_ORES.get(ore), "Small " + getName(ore));
-                    Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                    addBlock(CoreBlocks.SMALL_ORES.get(oreType), "Small " + getName(oreType));
+                    for (CoreOres.Grade grade : CoreOres.Grade.values())
                     {
-                        addItem(CoreItems.GRADED_ORES.get(ore).get(grade), getName(grade.name()) + " " + getName(ore));
-                    });
+                        addItem(CoreItems.GRADED_ORES.get(oreType).get(grade), getName(grade.name()) + " " + getName(oreType));
+                    }
                 }
             }
             else
             {
-                createOreKey(CoreBlocks.BASIC_ORES.get(ore), getName(ore));
-                addItem(CoreItems.ORES.get(ore), getName(ore));
+                createOreKey(CoreBlocks.BASIC_ORES.get(oreType), getName(oreType));
+                addItem(CoreItems.ORES.get(oreType), getName(oreType));
             }
-        });
+        }
 
         // tfc ores.
-        Stream.of(Ore.values()).forEach(ore ->
+        for (Ore oreType : Ore.values())
         {
-
-            if (ore.hasBlock())
+            if (oreType.hasBlock())
             {
-                Stream.of(CoreRocks.values()).forEach(rock ->
+                for (CoreRocks rockType : CoreRocks.values())
                 {
-                    if (rock.hasOres())
+                    if (rockType.hasOres())
                     {
-                        if (ore.isGraded())
+                        if (oreType.isGraded())
                         {
-                            Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                            for (CoreOres.Grade grade : CoreOres.Grade.values())
                             {
-                                createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
-                            });
+                                createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rockType).get(oreType).get(grade), getName(grade.name()) + " " + getName(rockType), getName(oreType.name()));
+                            }
                         }
                         else
                         {
-                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(ore.name()));
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(oreType), getName(rockType), getName(oreType.name()));
                         }
                     }
-                });
+                }
             }
-        });
+        }
 
         // glass.
-        Stream.of(DyeColor.values()).forEach(color ->
+        for (DyeColor color : DyeColor.values())
         {
             addItem(() -> CoreItems.COLORED_LENS.get(color).get(), getName(color) + " Lens");
             addBlock(() -> CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get(), getName(color) + " Molten Glass");
             addBlock(() -> CoreBlocks.COLOURED_LEAD_GLASS.get(color).get(), getName(color) + " Lead Glass");
             addBlock(() -> CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get(), getName(color) + " Lead Glass Pane");
-        });
+        }
 
         addBlock(CoreBlocks.CLEAR_MOLTEN_GLASS, "Clear Molten Glass");
         addBlock(CoreBlocks.CLEAR_LEAD_GLASS, "Clear Lead Glass");
         addBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE, "Clear Lead Glass Pane");
 
-        Stream.of(CoreClay.values()).forEach(clay ->
+        for (CoreClay clayType : CoreClay.values())
         {
-            Stream.of(CoreClay.BlockType.values()).forEach(type ->
+            for (CoreClay.BlockType blockType : CoreClay.BlockType.values())
             {
-
-                if (type.hasClayType(clay))
+                if (blockType.hasClayType(clayType))
                 {
-                    addBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), getName(clay) + " " + getName(type));
+                    addBlock(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType), getName(clayType) + " " + getName(blockType));
                 }
-
-                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET)
+                if (blockType.getType() == CoreClay.BlockPartType.BLOCK_SET)
                 {
-                    String baseName = getName(clay) + " " + getName(type) + " ";
-                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair(), baseName + "Stairs");
-                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab(), baseName + "Slab");
-                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall(), baseName + "Wall");
+                    String baseName = getName(clayType) + " " + getName(blockType) + " ";
+                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).stair(), baseName + "Stairs");
+                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).slab(), baseName + "Slab");
+                    addBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).wall(), baseName + "Wall");
                 }
-            });
-        });
-
-        Stream.of(CoreRocks.values()).forEach(rock ->
-        {
-            if (rock.hasOres())
-            {
-                Streams.of(OreDeposit.values()).forEach(ore ->
-                {
-                    addBlock(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore), getName(rock) + " " + getName(ore.name().toLowerCase(Locale.ROOT)) + " Deposit");
-                });
             }
-        });
+        }
+
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            if (rockType.hasOres())
+            {
+                for (OreDeposit deposit : OreDeposit.values())
+                {
+                    addBlock(CoreBlocks.ORE_DEPOSITS.get(rockType).get(deposit), getName(rockType) + " " + getName(deposit.name().toLowerCase(Locale.ROOT)) + " Deposit");
+                }
+            }
+        }
 
         addBlock(CoreBlocks.PRISMATIC_ICE, "Prismatic Ice");
         addBlock(CoreBlocks.LEAD_BULB_BLOCK, "Lead Bulb");
 
-        Stream.of(CoreGemstones.values()).forEach(gem ->
+        for (CoreGemstones gemType : CoreGemstones.values())
         {
-
-            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType ->
+            for (CoreGemstones.GemstoneBlocks blockType : CoreGemstones.GemstoneBlocks.values())
             {
                 if (blockType.isCluster() && blockType != CoreGemstones.GemstoneBlocks.CLUSTER)
                 {
                     final String prefix = blockType.getSerializedName().split("_")[0];
                     final String suffix = blockType.getSerializedName().split("_")[1];
 
-                    addBlock(() -> CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType).get(), getName(prefix) + " " + getName(gem) + " " + getName(suffix));
+                    addBlock(() -> CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType).get(), getName(prefix) + " " + getName(gemType) + " " + getName(suffix));
                 }
                 else
                 {
-                    addBlock(() -> CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType).get(), getName(gem) + " " + getName(blockType));
+                    addBlock(() -> CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType).get(), getName(gemType) + " " + getName(blockType));
                 }
-            });
-
-            Stream.of(CoreGemstones.GemstoneItems.values()).forEach(itemType ->
+            }
+            for (CoreGemstones.GemstoneItems itemType : CoreGemstones.GemstoneItems.values())
             {
-                addItem(() -> CoreItems.GEMSTONE_ITEMS.get(gem).get(itemType).get(), getName(gem) + " " + getName(itemType));
-            });
-        });
+                addItem(() -> CoreItems.GEMSTONE_ITEMS.get(gemType).get(itemType).get(), getName(gemType) + " " + getName(itemType));
+            }
+        }
 
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
         CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));

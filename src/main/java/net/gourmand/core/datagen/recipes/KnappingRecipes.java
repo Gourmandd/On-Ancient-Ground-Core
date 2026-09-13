@@ -14,7 +14,6 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 public interface KnappingRecipes extends Recipes
 {
@@ -22,13 +21,12 @@ public interface KnappingRecipes extends Recipes
     default void knappingRecipes()
     {
 
-        Stream.of(CoreClay.values()).forEach(clayType ->
+        for (CoreClay clayType : CoreClay.values())
         {
 
             final Map<CoreClay.ItemType, DeferredHolder<Item, Item>> MAP = CoreItems.CERAMICS.get(clayType);
 
             clayKnapping(clayType, CoreClay.ItemType.UNFIRED_VESSEL, " XXX ", "XXXXX", "XXXXX", "XXXXX", " XXX ");
-            //clayKnapping(clayType, TFCItems.UNFIRED_LARGE_VESSEL, "X   X", "X   X", "X   X", "X   X", "XXXXX");
             clayKnapping(clayType, CoreClay.ItemType.UNFIRED_JUG, " X   ", "XXXX ", "XXX X", "XXXX ", "XXX  ");
             clayKnapping(clayType, CoreClay.ItemType.UNFIRED_POT, "X   X", "X   X", "X   X", "XXXXX", " XXX ");
             clayKnapping(clayType, "1", MAP.get(CoreClay.ItemType.UNFIRED_BOWL).get(), 2, false, "X   X", " XXX ");
@@ -55,7 +53,7 @@ public interface KnappingRecipes extends Recipes
             clayKnapping(clayType, CoreClay.ItemType.SWORD_BLADE, "  XXX", "   XX", "X   X", "XX  X", "XXXX ");
             clayKnapping(clayType, CoreClay.ItemType.SCYTHE_BLADE, "XXXXX", "X    ", "    X", "  XXX", "XXXXX");
             clayKnapping(clayType, MAP.get(CoreClay.ItemType.BELL).get(), 1, "XXXXX", "XX XX", "X   X", "X   X", "X   X");
-        });
+        }
     }
 
     private void clayKnapping(CoreClay clayType, CoreClay.ItemType output, String... pattern)
@@ -80,6 +78,13 @@ public interface KnappingRecipes extends Recipes
 
     private void clayKnapping(CoreClay clayType, String suffix, ItemLike output, int count, boolean defaultOn, String... pattern)
     {
-        add(nameOf(output) + (suffix.isEmpty() ? "" : "_" + suffix), new KnappingRecipe(KnappingType.MANAGER.getCheckedReference(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, clayType.getSerializedName())), KnappingPattern.from(defaultOn, pattern), Optional.empty(), new ItemStack(output, count)));
+        add(nameOf(output) + (suffix.isEmpty() ? "" : "_" + suffix),
+                new KnappingRecipe(
+                        KnappingType.MANAGER.getCheckedReference(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, clayType.getSerializedName())),
+                        KnappingPattern.from(defaultOn, pattern),
+                        Optional.empty(),
+                        new ItemStack(output, count)
+                )
+        );
     }
 }

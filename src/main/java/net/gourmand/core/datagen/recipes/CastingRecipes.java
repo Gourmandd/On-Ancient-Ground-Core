@@ -16,25 +16,36 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 
-import java.util.stream.Stream;
-
 public interface CastingRecipes extends Recipes
 {
 
     default void castingRecipes()
     {
-
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        for (CoreMetals.MetalType metal : CoreMetals.MetalType.values())
         {
             casting(metal.name() + "_ingot", TFCItems.MOLDS.get(Metal.ItemType.INGOT), metal, 0.1f);
             casting(metal.name() + "_fire_ingot", TFCItems.FIRE_INGOT_MOLD, metal, 0.01f);
-        });
+        }
 
         for (DyeColor color : DyeColor.values())
         {
-            casting("molten_glass/" + color.getSerializedName(), CoreItems.GLASS_MOLD.get().asItem(), CoreFluids.COLORED_GLASS.get(color).getSource(), CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get().asItem(), 800, 0.0f);
+            casting(
+                    "molten_glass/" + color.getSerializedName(),
+                    CoreItems.GLASS_MOLD.get().asItem(),
+                    CoreFluids.COLORED_GLASS.get(color).getSource(),
+                    CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get().asItem(),
+                    800,
+                    0.0f
+            );
 
-            casting("glass_pane/" + color.getSerializedName(), CoreItems.GLASS_MOLD.get().asItem(), CoreFluids.COLORED_GLASS.get(color).getSource(), CategoryUtil.Glass.COLOR_TO_VANILLA_GLASS_PANE.get(color), 50, 0.0f);
+            casting(
+                    "glass_pane/" + color.getSerializedName(),
+                    CoreItems.GLASS_MOLD.get().asItem(),
+                    CoreFluids.COLORED_GLASS.get(color).getSource(),
+                    CategoryUtil.Glass.COLOR_TO_VANILLA_GLASS_PANE.get(color),
+                    50,
+                    0.0f
+            );
         }
 
         casting("molten_glass/clear", CoreItems.GLASS_MOLD.get().asItem(), CoreFluids.CLEAR_GLASS.getSource(), CoreBlocks.CLEAR_MOLTEN_GLASS.get().asItem(), 800, 0.0f);

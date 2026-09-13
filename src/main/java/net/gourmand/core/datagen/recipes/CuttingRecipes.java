@@ -18,7 +18,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class CuttingRecipes extends CuttingRecipeGen
 {
@@ -32,7 +31,7 @@ public class CuttingRecipes extends CuttingRecipeGen
     public void cuttingRecipes()
     {
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        for (CoreMetals.MetalType metal : CoreMetals.MetalType.values())
         {
 
             final DeferredHolder<Item, Item> INGOT = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.INGOT);
@@ -42,13 +41,16 @@ public class CuttingRecipes extends CuttingRecipeGen
             create(DOUBLE_SHEET::get, b -> b.duration(200).output(DOUBLE_INGOT.get(), 2));
 
             create(DOUBLE_INGOT::get, b -> b.duration(100).output(INGOT.get(), 2));
-        });
+        }
 
-
-        Stream.of(SpectrumWood.values()).forEach(woodType ->
+        for (SpectrumWood woodType : SpectrumWood.values())
         {
-            create(CoreItems.LUMBER.get(woodType).getId().getPath(), b -> b.duration(50).require(woodType.getPlanks()).output(CoreItems.LUMBER.get(woodType).get(), 4));
-        });
+            create(CoreItems.LUMBER.get(woodType).getId().getPath(), b -> b
+                    .duration(50)
+                    .require(woodType.getPlanks())
+                    .output(CoreItems.LUMBER.get(woodType).get(), 4)
+            );
+        }
 
         // Colored glass
         for (DyeColor color : DyeColor.values())
@@ -63,17 +65,41 @@ public class CuttingRecipes extends CuttingRecipeGen
             Block leadGlassBlock = CoreBlocks.COLOURED_LEAD_GLASS.get(color).get();
             Block leadGlassPane = CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get();
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/framed_glass/" + color.getSerializedName()), b -> b.duration(50).require(framedGlassBlock).output(framedGlassPane, 16));
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/framed_glass/" + color.getSerializedName()), b -> b
+                    .duration(50)
+                    .require(framedGlassBlock)
+                    .output(framedGlassPane, 16)
+            );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/glass/" + color.getSerializedName()), b -> b.duration(50).require(glassBlock).output(glassPane, 16));
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/glass/" + color.getSerializedName()), b -> b
+                    .duration(50)
+                    .require(glassBlock)
+                    .output(glassPane, 16)
+            );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/lead_glass/" + color.getSerializedName()), b -> b.duration(50).require(leadGlassBlock).output(leadGlassPane, 16));
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/lead_glass/" + color.getSerializedName()), b -> b
+                    .duration(50)
+                    .require(leadGlassBlock)
+                    .output(leadGlassPane, 16)
+            );
         }
         // clear glass
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/framed_glass/clear"), b -> b.duration(50).require(CategoryUtil.Glass.QUARK_CLEAR_GLASS.value()).output(CategoryUtil.Glass.QUARK_CLEAR_GLASS_PANE.value(), 16));
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/framed_glass/clear"), b -> b
+                .duration(50).
+                        require(CategoryUtil.Glass.QUARK_CLEAR_GLASS.value())
+                .output(CategoryUtil.Glass.QUARK_CLEAR_GLASS_PANE.value(), 16)
+        );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/glass/clear"), b -> b.duration(50).require(Blocks.GLASS).output(Blocks.GLASS_PANE, 16));
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/glass/clear"), b -> b
+                .duration(50)
+                .require(Blocks.GLASS)
+                .output(Blocks.GLASS_PANE, 16)
+        );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/lead_glass/clear"), b -> b.duration(50).require(CoreBlocks.CLEAR_LEAD_GLASS.get()).output(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get(), 16));
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "cutting/lead_glass/clear"), b -> b
+                .duration(50)
+                .require(CoreBlocks.CLEAR_LEAD_GLASS.get())
+                .output(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get(), 16)
+        );
     }
 }

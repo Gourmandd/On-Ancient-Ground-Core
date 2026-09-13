@@ -23,10 +23,9 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Locale;
 import java.util.Map;
-import java.util.stream.Stream;
 
-import static net.gourmand.core.registry.category.CoreOres.*;
 import static net.dries007.tfc.common.blocks.rock.Ore.*;
+import static net.gourmand.core.registry.category.CoreOres.*;
 
 public class CoreMultiblockProvider extends MultiblockProvider
 {
@@ -114,27 +113,29 @@ public class CoreMultiblockProvider extends MultiblockProvider
                 .build(false)
         );
 
-        Stream.of(CoreRocks.values()).forEach(rock -> {
-            this.add(this.modLoc("rock_preview/" + rock.getSerializedName()), new DenseMultiblockBuilder()
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            this.add(this.modLoc("rock_preview/" + rockType.getSerializedName()), new DenseMultiblockBuilder()
                     .layer("BBB")
                     .layer("B0B")
                     .layer("BBB")
                     .block('B', () -> Blocks.AIR)
-                    .block('0', () -> BuiltInRegistries.BLOCK.get(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rock).key()))
+                    .block('0', () -> BuiltInRegistries.BLOCK.get(CategoryUtil.CoreRock.TO_RAW_BLOCK.get(rockType).key()))
                     .build(false)
             );
-        });
+        }
 
-        Stream.of(Rock.values()).forEach(rock -> {
-            this.add(this.modLoc("rock_preview/" + rock.getSerializedName()), new DenseMultiblockBuilder()
+        for (Rock rockType : Rock.values())
+        {
+            this.add(this.modLoc("rock_preview/" + rockType.getSerializedName()), new DenseMultiblockBuilder()
                     .layer("BBB")
                     .layer("B0B")
                     .layer("BBB")
                     .block('B', () -> Blocks.AIR)
-                    .block('0', () -> TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get())
+                    .block('0', () -> TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get())
                     .build(false)
             );
-        });
+        }
 
         this.add(this.modLoc("getting_started/stick_and_stones" ), new DenseMultiblockBuilder()
                 .layer("CARAC", "ACRAA", "RA0AR", "AACRA", "RAACA")

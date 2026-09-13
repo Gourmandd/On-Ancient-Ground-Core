@@ -38,17 +38,41 @@ public class ItemApplicationRecipes extends ItemApplicationRecipeGen
 
             Block leadGlassBlock = CoreBlocks.COLOURED_LEAD_GLASS.get(color).get();
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/framed_glass/" + color.getSerializedName()), b -> b.require(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get()).require(TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.ROD)).output(framedGlassBlock));
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/framed_glass/" + color.getSerializedName()), b -> b
+                    .require(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
+                    .require(TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.ROD))
+                    .output(framedGlassBlock)
+            );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/glass/" + color.getSerializedName()), b -> b.require(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get()).require(TFCItems.POWDERS.get(Powder.FLUX)).output(glassBlock));
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/glass/" + color.getSerializedName()), b -> b
+                    .require(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
+                    .require(TFCItems.POWDERS.get(Powder.FLUX))
+                    .output(glassBlock)
+            );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/lead_glass/" + color.getSerializedName()), b -> b.require(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get()).require(CoreItems.METAL_ITEMS.get(CoreMetals.MetalType.LEAD).get(Metal.ItemType.ROD).get()).output(leadGlassBlock));
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/lead_glass/" + color.getSerializedName()), b -> b
+                    .require(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
+                    .require(CoreItems.METAL_ITEMS.get(CoreMetals.MetalType.LEAD).get(Metal.ItemType.ROD).get())
+                    .output(leadGlassBlock)
+            );
         }
         // clear glass
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/framed_glass/clear"), b -> b.require(CoreBlocks.CLEAR_MOLTEN_GLASS.get()).require(TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.ROD)).output(CategoryUtil.Glass.QUARK_CLEAR_GLASS.value()));
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/framed_glass/clear"), b -> b
+                .require(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
+                .require(TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.ROD))
+                .output(CategoryUtil.Glass.QUARK_CLEAR_GLASS.value())
+        );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/glass/clear"), b -> b.require(CoreBlocks.CLEAR_MOLTEN_GLASS.get()).require(TFCItems.POWDERS.get(Powder.FLUX)).output(Blocks.GLASS));
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/glass/clear"), b -> b
+                .require(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
+                .require(TFCItems.POWDERS.get(Powder.FLUX))
+                .output(Blocks.GLASS)
+        );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/lead_glass/clear"), b -> b.require(CoreBlocks.CLEAR_MOLTEN_GLASS.get()).require(CoreItems.METAL_ITEMS.get(CoreMetals.MetalType.LEAD).get(Metal.ItemType.ROD).get()).output(CoreBlocks.CLEAR_LEAD_GLASS.get()));
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "item_application/lead_glass/clear"), b -> b
+                .require(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
+                .require(CoreItems.METAL_ITEMS.get(CoreMetals.MetalType.LEAD).get(Metal.ItemType.ROD).get())
+                .output(CoreBlocks.CLEAR_LEAD_GLASS.get())
+        );
     }
 }

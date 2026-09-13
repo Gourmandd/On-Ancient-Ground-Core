@@ -18,7 +18,6 @@ import net.neoforged.neoforge.common.crafting.SizedIngredient;
 
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class BuiltInKnappingTypes extends DataManagerProvider<KnappingType>
 {
@@ -31,7 +30,10 @@ public class BuiltInKnappingTypes extends DataManagerProvider<KnappingType>
     @Override
     protected void addData(HolderLookup.Provider provider)
     {
-        Stream.of(CoreClay.values()).forEach(this::addClay);
+        for (CoreClay clayType : CoreClay.values())
+        {
+            addClay(clayType);
+        }
     }
 
     private void addClay(CoreClay clayType)

@@ -26,9 +26,17 @@ public class FillingRecipes extends FillingRecipeGen
 
         for (DyeColor color : DyeColor.values())
         {
-            create(AncientGroundCore.location("filling/molten_glass/" + color.getSerializedName()), b -> b.require(CoreFluids.COLORED_GLASS.get(color).getSource(), 800).require(TFCItems.POWDERS.get(Powder.FLUX)).output(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get()));
+            create(AncientGroundCore.location("filling/molten_glass/" + color.getSerializedName()), b -> b
+                    .require(CoreFluids.COLORED_GLASS.get(color).getSource(), 800)
+                    .require(TFCItems.POWDERS.get(Powder.FLUX))
+                    .output(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
+            );
         }
 
-        create(AncientGroundCore.location("filling/molten_glass/clear"), b -> b.require(CoreFluids.CLEAR_GLASS.getSource(), 800).require(TFCItems.POWDERS.get(Powder.FLUX)).output(CoreBlocks.CLEAR_MOLTEN_GLASS.get()));
+        create(AncientGroundCore.location("filling/molten_glass/clear"), b -> b
+                .require(CoreFluids.CLEAR_GLASS.getSource(), 800)
+                .require(TFCItems.POWDERS.get(Powder.FLUX))
+                .output(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
+        );
     }
 }

@@ -9,7 +9,6 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.material.Fluid;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class BuiltinFluidHeats extends DataManagerProvider<FluidHeat>
 {
@@ -33,7 +32,10 @@ public class BuiltinFluidHeats extends DataManagerProvider<FluidHeat>
         add(CoreMetals.MetalType.HARDENED_STEEL, 0.35f, 1585);
         add(CoreMetals.MetalType.NETHERSTEEL, 0.35f, 1615);
 
-        Stream.of(DyeColor.values()).forEach(color -> add(color, 0.35f, 1070));
+        for (DyeColor color : DyeColor.values())
+        {
+            add(color, 0.35f, 1070);
+        }
         add("glass/clear", CoreFluids.CLEAR_GLASS.getSource(), 0.35f, 1070);
     }
 

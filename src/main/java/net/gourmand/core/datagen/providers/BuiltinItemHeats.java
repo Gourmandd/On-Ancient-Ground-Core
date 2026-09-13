@@ -13,7 +13,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implements Accessors
 {
@@ -29,19 +28,18 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
     @Override
     protected void addData(HolderLookup.Provider provider)
     {
-
-        Stream.of(CoreMetals.MetalType.values()).forEach(type ->
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
-            add(CoreItems.METAL_ITEMS.get(type).get(Metal.ItemType.INGOT).get(), CategoryUtil.HeatCapacities.INGOT);
-            add(CoreItems.METAL_ITEMS.get(type).get(Metal.ItemType.DOUBLE_INGOT).get(), CategoryUtil.HeatCapacities.DOUBLE_INGOT);
-            add(CoreItems.METAL_ITEMS.get(type).get(Metal.ItemType.SHEET).get(), CategoryUtil.HeatCapacities.SHEET);
-            add(CoreItems.METAL_ITEMS.get(type).get(Metal.ItemType.DOUBLE_SHEET).get(), CategoryUtil.HeatCapacities.DOUBLE_SHEET);
-            add(CoreItems.METAL_ITEMS.get(type).get(Metal.ItemType.ROD).get(), CategoryUtil.HeatCapacities.ROD);
+            add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT).get(), CategoryUtil.HeatCapacities.INGOT);
+            add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_INGOT).get(), CategoryUtil.HeatCapacities.DOUBLE_INGOT);
+            add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.SHEET).get(), CategoryUtil.HeatCapacities.SHEET);
+            add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.DOUBLE_SHEET).get(), CategoryUtil.HeatCapacities.DOUBLE_SHEET);
+            add(CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.ROD).get(), CategoryUtil.HeatCapacities.ROD);
 
-            add(CoreBlocks.METALS.get(type).get(Metal.BlockType.BLOCK).get(), CategoryUtil.HeatCapacities.INGOT);
-            add(CoreBlocks.METALS.get(type).get(Metal.BlockType.BLOCK_SLAB).get(), CategoryUtil.HeatCapacities.INGOT);
-            add(CoreBlocks.METALS.get(type).get(Metal.BlockType.BLOCK_STAIRS).get(), CategoryUtil.HeatCapacities.INGOT);
-        });
+            add(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK).get(), CategoryUtil.HeatCapacities.INGOT);
+            add(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_SLAB).get(), CategoryUtil.HeatCapacities.INGOT);
+            add(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_STAIRS).get(), CategoryUtil.HeatCapacities.INGOT);
+        }
 
         /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
@@ -59,31 +57,31 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
         });
          */
 
-        Stream.of(CoreClay.values()).forEach(type ->
+        for (CoreClay clayType : CoreClay.values())
         {
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BRICK).get(), 0.4f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).get(), 0.6f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_JUG).get(), 0.8f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BOWL).get(), 0.4f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_POT).get(), 0.8f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).get(), 0.8f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_PAN).get(), 0.8f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).get(), 0.6f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.INGOT).get(), 0.6f);
-            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).get(), 0.6f);
-        });
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BRICK).get(), 0.4f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_FLOWER_POT).get(), 0.6f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_JUG).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BOWL).get(), 0.4f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_POT).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_PAN).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).get(), 0.6f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.INGOT).get(), 0.6f);
+            add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).get(), 0.6f);
+        }
 
-        Stream.of(CoreOres.values()).forEach(ore ->
+        for (CoreOres oreType : CoreOres.values())
         {
-            if (ore.isGraded())
+            if (oreType.isGraded())
             {
-                Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                for (CoreOres.Grade grade : CoreOres.Grade.values())
                 {
-                    add(CoreItems.GRADED_ORES.get(ore).get(grade).get(), 2.857143f, 138.0f, 184.0f);
-                });
-                add(CoreBlocks.SMALL_ORES.get(ore).get(), 2.857143f, 138.0f, 184.0f);
+                    add(CoreItems.GRADED_ORES.get(oreType).get(grade).get(), 2.857143f, 138.0f, 184.0f);
+                }
+                add(CoreBlocks.SMALL_ORES.get(oreType).get(), 2.857143f, 138.0f, 184.0f);
             }
-        });
+        }
 
         add(CoreItems.ORES.get(CoreOres.METEORIC_IRON).get(), CategoryUtil.HeatCapacities.INGOT);
 
@@ -111,6 +109,4 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
     {
         add(nameOf(item), new HeatDefinition(item, heatCapacity, forgingTemperature, weldingTemperature));
     }
-
-
 }

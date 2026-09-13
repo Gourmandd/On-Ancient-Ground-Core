@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class DeployingRecipes extends DeployingRecipeGen
 {
@@ -26,14 +25,12 @@ public class DeployingRecipes extends DeployingRecipeGen
     public void compactingRecipes()
     {
 
-
-        Stream.of(CoreClay.values()).forEach(clayType ->
+        for (CoreClay clayType : CoreClay.values())
         {
 
-            final DeferredHolder<Item, Item> CLAY_BALL = clayType.getClayBallItem();
             final DeferredHolder<Block, Block> CLAY_BLOCK = clayType.getClayBlock();
 
-            Stream.of(CoreClay.ItemType.values()).forEach(itemType ->
+            for (CoreClay.ItemType itemType : CoreClay.ItemType.values())
             {
 
                 if (itemType.getType() == CoreClay.ItemPartType.UNFIRED_MOLD && itemType.hasType(clayType))
@@ -41,9 +38,14 @@ public class DeployingRecipes extends DeployingRecipeGen
 
                     final DeferredHolder<Item, Item> MOLD = CoreItems.CERAMICS.get(clayType).get(itemType);
 
-                    create(MOLD.getId().getPath(), b -> b.require(CLAY_BLOCK.get()).toolNotConsumed().require(CategoryUtil.Tools.MOLD_TO_TOOL_BLADE_TAG.get(itemType)).output(MOLD.get()));
+                    create(MOLD.getId().getPath(), b -> b
+                            .require(CLAY_BLOCK.get())
+                            .toolNotConsumed()
+                            .require(CategoryUtil.Tools.MOLD_TO_TOOL_BLADE_TAG.get(itemType))
+                            .output(MOLD.get())
+                    );
                 }
-            });
-        });
+            }
+        }
     }
 }

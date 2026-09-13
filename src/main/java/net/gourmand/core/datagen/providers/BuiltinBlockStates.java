@@ -51,70 +51,71 @@ public class BuiltinBlockStates extends BlockStateProvider
 
         // ores.
 
-        Stream.of(CoreOres.values()).forEach(ore ->
+        for (CoreOres oreType : CoreOres.values())
         {
-            if (!ore.hasBlock())
+            if (!oreType.hasBlock())
             {
-                cubeAll(CoreBlocks.BASIC_ORES.get(ore), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/ore/" + ore.getSerializedName()));
+                cubeAll(CoreBlocks.BASIC_ORES.get(oreType), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/ore/" + oreType.getSerializedName()));
             }
-        });
 
-        Stream.of(Rock.values()).forEach(rock ->
-        {
-            Stream.of(CoreOres.values()).forEach(ore ->
+            for (Rock rockType : Rock.values())
             {
-                if (!ore.isGraded() && ore.hasBlock())
+                if (!oreType.isGraded() && oreType.hasBlock())
                 {
-                    simpleOre(CoreBlocks.ORES.get(rock).get(ore), rock, ore);
+                    simpleOre(CoreBlocks.ORES.get(rockType).get(oreType), rockType, oreType);
                 }
 
-                Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                if (oreType.isGraded())
                 {
-                    if (ore.isGraded())
+                    for (CoreOres.Grade grade : CoreOres.Grade.values())
                     {
-                        simpleOre(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
+                        simpleOre(CoreBlocks.GRADED_ORES.get(rockType).get(oreType).get(grade), rockType, oreType, grade);
                     }
-                });
-            });
-        });
-
-        Stream.of(CoreRocks.values()).forEach(rock ->
-        {
-            if (rock.hasOres())
-            {
-                Stream.of(CoreOres.values()).forEach(ore ->
-                {
-                    if (!ore.isGraded() && ore.hasBlock())
-                    {
-                        simpleOre(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), rock, ore);
-                    }
-
-                    Stream.of(CoreOres.Grade.values()).forEach(grade ->
-                    {
-                        if (ore.isGraded())
-                        {
-                            simpleOre(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
-                        }
-                    });
-                });
-
-                Stream.of(Ore.values()).forEach(ore ->
-                {
-                    if (!ore.isGraded() && ore.hasBlock())
-                    {
-                        simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), rock, ore);
-                    }
-
-                    Stream.of(CoreOres.Grade.values()).forEach(grade ->
-                    {
-                        if (ore.isGraded())
-                        {
-                            simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), rock, ore, grade);
-                        }
-                    });
-                });
+                }
             }
-        });
+
+            for (CoreRocks rockType : CoreRocks.values())
+            {
+                if (rockType.hasOres())
+                {
+
+                    if (!oreType.isGraded() && oreType.hasBlock())
+                    {
+                        simpleOre(CoreBlocks.CUSTOM_ROCK_ORES.get(rockType).get(oreType), rockType, oreType);
+                    }
+
+                    Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                    {
+                        if (oreType.isGraded())
+                        {
+                            simpleOre(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rockType).get(oreType).get(grade), rockType, oreType, grade);
+                        }
+                    });
+                }
+            }
+        }
+
+        for (Ore oreType : Ore.values())
+        {
+            for (CoreRocks rockType : CoreRocks.values())
+            {
+                if (rockType.hasOres())
+                {
+                    if (!oreType.isGraded() && oreType.hasBlock())
+                    {
+                        simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(oreType), rockType, oreType);
+                    }
+
+                    Stream.of(CoreOres.Grade.values()).forEach(grade ->
+                    {
+                        if (oreType.isGraded())
+                        {
+                            simpleOre(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rockType).get(oreType).get(grade), rockType, oreType, grade);
+                        }
+                    });
+                }
+            }
+        }
 
         for (CoreRocks rock : CoreRocks.values())
         {
@@ -128,68 +129,65 @@ public class BuiltinBlockStates extends BlockStateProvider
         }
 
         // rock blocks.
-        Stream.of(CoreRocks.values()).forEach(rock ->
+        for (CoreRocks rockType : CoreRocks.values())
         {
-            Stream.of(Rock.BlockType.values()).forEach(type ->
+            for (Rock.BlockType blockType : Rock.BlockType.values())
             {
-
-                if (type.hasVariants() && rock.hasVariant(type))
+                if (blockType.hasVariants() && rockType.hasVariant(blockType))
                 {
-                    if (generateMossyVariant(type, rock))
+                    if (generateMossyVariant(blockType, rockType))
                     {
-                        ResourceLocation texture = TextureUtil.getRockTexture(rock, type);
-                        cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), texture);
-                        stairsBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), texture);
-                        slabBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()));
-                        wallBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()), texture);
+                        ResourceLocation texture = TextureUtil.getRockTexture(rockType, blockType);
+                        cubeAll(CoreBlocks.ROCK_BLOCKS.get(rockType).get(blockType), texture);
+                        stairsBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).stair(), texture);
+                        slabBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).slab(), texture, getBlockModelLocation(CoreBlocks.ROCK_BLOCKS.get(rockType).get(blockType).getId()));
+                        wallBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).wall(), getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rockType).get(blockType).getId()), texture);
                     }
                     else
                     {
-                        ResourceLocation texture = TextureUtil.getRockTexture(rock, type);
-                        cubeMossOverlayAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), texture);
-                        stairsMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), texture);
-                        slabMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()));
-                        wallMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall(), getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rock).get(type).getId()), texture);
+                        ResourceLocation texture = TextureUtil.getRockTexture(rockType, blockType);
+                        cubeMossOverlayAll(CoreBlocks.ROCK_BLOCKS.get(rockType).get(blockType), texture);
+                        stairsMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).stair(), texture);
+                        slabMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).slab(), texture, getBlockModelLocation(CoreBlocks.ROCK_BLOCKS.get(rockType).get(blockType).getId()));
+                        wallMossOverlayBlock(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).wall(), getBlockModelString(CoreBlocks.ROCK_BLOCKS.get(rockType).get(blockType).getId()), texture);
                     }
                 }
-
-
-            });
-
-            cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.GRAVEL), TextureUtil.getRockTexture(rock, Rock.BlockType.GRAVEL));
-            cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED), TextureUtil.getRockTexture(rock, Rock.BlockType.HARDENED));
-            aqueductBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.AQUEDUCT), TextureUtil.getRockTexture(rock, Rock.BlockType.AQUEDUCT));
-            looseRockBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE), TextureUtil.getRockTexture(rock, Rock.BlockType.LOOSE), rock);
-            looseRockBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE), TextureUtil.getRockTexture(rock, Rock.BlockType.MOSSY_LOOSE), rock);
-            rockSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE), TextureUtil.getRockTexture(rock, Rock.BlockType.SPIKE));
-            ropeAnchorSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.ROPE_ANCHOR), TextureUtil.getRockTexture(rock, Rock.BlockType.SPIKE));
-
-            if (rock.hasVariants())
-            {
-                cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CHISELED), TextureUtil.getRockTexture(rock, Rock.BlockType.CHISELED));
-                pressurePlateBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.PRESSURE_PLATE), TextureUtil.getRockTexture(rock, Rock.BlockType.PRESSURE_PLATE));
-                buttonBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON), TextureUtil.getRockTexture(rock, Rock.BlockType.BUTTON));
             }
 
-            cubeAll(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rock), TextureUtil.getRockTexture(rock, Rock.BlockType.COBBLE));
-        });
+            cubeAll(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.GRAVEL), TextureUtil.getRockTexture(rockType, Rock.BlockType.GRAVEL));
+            cubeAll(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.HARDENED), TextureUtil.getRockTexture(rockType, Rock.BlockType.HARDENED));
+            aqueductBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.AQUEDUCT), TextureUtil.getRockTexture(rockType, Rock.BlockType.AQUEDUCT));
+            looseRockBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.LOOSE), TextureUtil.getRockTexture(rockType, Rock.BlockType.LOOSE), rockType);
+            looseRockBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.MOSSY_LOOSE), TextureUtil.getRockTexture(rockType, Rock.BlockType.MOSSY_LOOSE), rockType);
+            rockSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.SPIKE), TextureUtil.getRockTexture(rockType, Rock.BlockType.SPIKE));
+            ropeAnchorSpikeBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.ROPE_ANCHOR), TextureUtil.getRockTexture(rockType, Rock.BlockType.SPIKE));
 
-        Stream.of(Rock.values()).forEach(rock ->
+            if (rockType.hasVariants())
+            {
+                cubeAll(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.CHISELED), TextureUtil.getRockTexture(rockType, Rock.BlockType.CHISELED));
+                pressurePlateBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.PRESSURE_PLATE), TextureUtil.getRockTexture(rockType, Rock.BlockType.PRESSURE_PLATE));
+                buttonBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON), TextureUtil.getRockTexture(rockType, Rock.BlockType.BUTTON));
+            }
+
+            cubeAll(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rockType), TextureUtil.getRockTexture(rockType, Rock.BlockType.COBBLE));
+        }
+
+        for (Rock rockType : Rock.values())
         {
-            cubeAll(CoreBlocks.MORTARED_TFC_COBBLE.get(rock), TextureUtil.getRockTexture(rock, Rock.BlockType.COBBLE));
-        });
+            cubeAll(CoreBlocks.MORTARED_TFC_COBBLE.get(rockType), TextureUtil.getRockTexture(rockType, Rock.BlockType.COBBLE));
+        }
 
         // metal blocks
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
-            ResourceLocation texture = TextureUtil.getMetalBlockTexture(metal);
-            cubeAll(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK), texture);
-            stairsBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS), texture);
-            slabBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB), texture, getBlockModelLocation(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).getId()));
-        });
+            ResourceLocation texture = TextureUtil.getMetalBlockTexture(metalType);
+            cubeAll(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK), texture);
+            stairsBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_STAIRS), texture);
+            slabBlock(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK_SLAB), texture, getBlockModelLocation(CoreBlocks.METALS.get(metalType).get(Metal.BlockType.BLOCK).getId()));
+        }
 
         // spectrum wood types.
-        Stream.of(SpectrumWood.values()).forEach(woodType ->
+        for (SpectrumWood woodType : SpectrumWood.values())
         {
             Map<Wood.BlockType, DeferredHolder<Block, Block>> map = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
             supportBlock(map.get(Wood.BlockType.HORIZONTAL_SUPPORT), map.get(Wood.BlockType.VERTICAL_SUPPORT), woodType);
@@ -203,66 +201,58 @@ public class BuiltinBlockStates extends BlockStateProvider
             cross(map.get(Wood.BlockType.SAPLING), TextureUtil.getSaplingTexture(woodType));
             cubeAll(map.get(Wood.BlockType.CRATE), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/wood/crate/" + woodType.getSerializedName()));
             barrelBlock(map.get(Wood.BlockType.BARREL), woodType);
-        });
+        }
 
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
         CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
         CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> cubeAllWithAlternate(block, blockTexture(block.get()), ResourceLocation.parse(blockTexture(block.get()) + "_alt")));
 
-        Stream.of(DyeColor.values()).forEach(color ->
+        for (DyeColor color : DyeColor.values())
         {
             moltenGlassBlock(CoreBlocks.COLORED_MOLTEN_GLASS.get(color));
-        });
-
-        moltenGlassBlock(CoreBlocks.CLEAR_MOLTEN_GLASS);
-
-        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"));
-        Stream.of(DyeColor.values()).forEach(color ->
-        {
             cubeAll(CoreBlocks.COLOURED_LEAD_GLASS.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/" + color.getSerializedName()));
-        });
-
-        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
-        Stream.of(DyeColor.values()).forEach(color ->
-        {
             paneBlock(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/" + color.getSerializedName()), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
-        });
+            fluidBlock(CoreBlocks.COLORED_GLASS_FLUIDS.get(color));
+        }
+        moltenGlassBlock(CoreBlocks.CLEAR_MOLTEN_GLASS);
+        cubeAll(CoreBlocks.CLEAR_LEAD_GLASS, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"));
+        paneBlock(CoreBlocks.CLEAR_LEAD_GLASS_PANE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/clear"), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/lead_glass/pane_top"));
+        fluidBlock(CoreBlocks.CLEAR_GLASS_FLUID);
 
-        Stream.of(CoreClay.values()).forEach(clay ->
+        for (CoreClay clayType : CoreClay.values())
         {
-            Stream.of(CoreClay.BlockType.values()).forEach(type ->
+            for (CoreClay.BlockType blockType : CoreClay.BlockType.values())
             {
 
-                ResourceLocation texture = TextureUtil.getCeramicBlockTexture(type, clay);
+                ResourceLocation texture = TextureUtil.getCeramicBlockTexture(blockType, clayType);
 
-                if (type.hasClayType(clay) && type.getType() != CoreClay.BlockPartType.VESSEL)
+                if (blockType.hasClayType(clayType) && blockType.getType() != CoreClay.BlockPartType.VESSEL)
                 {
-                    cubeAll(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), texture);
+                    cubeAll(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType), texture);
                 }
 
-                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET)
+                if (blockType.getType() == CoreClay.BlockPartType.BLOCK_SET)
                 {
-                    stairsBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair(), texture);
-                    slabBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab(), texture, getBlockModelLocation(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).getId()));
-                    wallBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall(), getBlockModelString(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).getId()), texture);
+                    stairsBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).stair(), texture);
+                    slabBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).slab(), texture, getBlockModelLocation(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType).getId()));
+                    wallBlock(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).wall(), getBlockModelString(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType).getId()), texture);
                 }
 
-                if (type.getType() == CoreClay.BlockPartType.VESSEL)
+                if (blockType.getType() == CoreClay.BlockPartType.VESSEL)
                 {
-                    largeVesselBlock(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type), texture);
+                    largeVesselBlock(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType), texture);
                 }
-            });
-        });
+            }
+        }
 
         cubeAll(CoreBlocks.PRISMATIC_ICE, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "block/prismatic_ice"));
 
-        Stream.of(CoreGemstones.values()).forEach(gem ->
+        for (CoreGemstones gemType : CoreGemstones.values())
         {
-
-            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType ->
+            for (CoreGemstones.GemstoneBlocks blockType : CoreGemstones.GemstoneBlocks.values())
             {
 
-                DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType);
+                DeferredHolder<Block, Block> BLOCK = CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType);
                 ResourceLocation TEXTURE = blockTexture(BLOCK.get());
 
                 switch (blockType)
@@ -280,8 +270,8 @@ public class BuiltinBlockStates extends BlockStateProvider
                         cluster(BLOCK, TEXTURE);
                     }
                 }
-            });
-        });
+            }
+        }
 
         /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
@@ -331,19 +321,13 @@ public class BuiltinBlockStates extends BlockStateProvider
 
         bulbBlock(CoreBlocks.LEAD_BULB_BLOCK);
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metalType ->
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
             if (!metalType.hasOtherFluid())
             {
                 fluidBlock(CoreBlocks.METAL_FLUIDS.get(metalType));
             }
-        });
-
-        fluidBlock(CoreBlocks.CLEAR_GLASS_FLUID);
-        Stream.of(DyeColor.values()).forEach(metalType ->
-        {
-            fluidBlock(CoreBlocks.COLORED_GLASS_FLUIDS.get(metalType));
-        });
+        }
     }
 
     //region Generation Methods

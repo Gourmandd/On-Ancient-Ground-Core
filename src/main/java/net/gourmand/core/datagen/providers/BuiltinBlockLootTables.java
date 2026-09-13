@@ -1,11 +1,13 @@
 package net.gourmand.core.datagen.providers;
 
+import com.therighthon.afc.common.blocks.AFCWood;
 import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
@@ -34,7 +36,6 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
-import java.util.stream.Stream;
 
 public class BuiltinBlockLootTables extends BlockLootSubProvider
 {
@@ -152,10 +153,10 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
         generateMisc();
         generateGemstones();
 
-        Stream.of(DyeColor.values()).forEach(color ->
+        for (DyeColor color : DyeColor.values())
         {
             this.dropSelf(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
-        });
+        }
 
         this.dropSelf(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
     }
@@ -164,117 +165,105 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
     {
 
 
-        Stream.of(CoreOres.values()).forEach(ore ->
+        for (CoreOres oreType : CoreOres.values())
         {
-            if (!ore.hasBlock())
+            if (!oreType.hasBlock())
             {
-                switch (ore)
+                switch (oreType)
                 {
                     case ANTHRACITE ->
                     {
-                        addOreTable(CoreBlocks.BASIC_ORES.get(ore).get(), SpectrumItems.PURE_COAL.get());
+                        addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), SpectrumItems.PURE_COAL.get());
                     }
                     case QUARTZ ->
                     {
-                        addOreTable(CoreBlocks.BASIC_ORES.get(ore).get(), Items.QUARTZ);
+                        addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), Items.QUARTZ);
                     }
                     default ->
                     {
-                        addOreTable(CoreBlocks.BASIC_ORES.get(ore).get(), CoreItems.ORES.get(ore).get());
+                        addOreTable(CoreBlocks.BASIC_ORES.get(oreType).get(), CoreItems.ORES.get(oreType).get());
                     }
                 }
             }
-        });
 
-        CoreBlocks.SMALL_ORES.values().forEach(holder ->
-        {
-            this.dropSelf(holder.get());
-        });
-
-        CoreBlocks.ORES.values().forEach(map ->
-        {
-            Stream.of(CoreOres.values()).forEach(ore ->
+            if (oreType.isGraded())
             {
-                if (!ore.isGraded() && ore.hasBlock() && !ore.hasSpectrumOreType())
+                this.dropSelf(CoreBlocks.SMALL_ORES.get(oreType).get());
+            }
+        }
+
+        for (Rock rockType : Rock.values())
+        {
+            for (CoreOres oreType : CoreOres.values())
+            {
+                if (!oreType.isGraded() && oreType.hasBlock() && !oreType.hasSpectrumOreType())
                 {
-                    addOreTable(map.get(ore).get(), CoreItems.ORES.get(ore).get());
+                    addOreTable(CoreBlocks.ORES.get(rockType).get(oreType).get(), CoreItems.ORES.get(oreType).get());
                 }
 
-                if (!ore.isGraded() && ore.hasBlock() && ore.hasSpectrumOreType())
+                if (!oreType.isGraded() && oreType.hasBlock() && oreType.hasSpectrumOreType())
                 {
-                    addOreTable(map.get(ore).get(), ore.getPastelOre());
+                    addOreTable(CoreBlocks.ORES.get(rockType).get(oreType).get(), oreType.getPastelOre());
                 }
-            });
-        });
 
-        Stream.of(CoreOres.Grade.values()).forEach(grade ->
-        {
-            CoreBlocks.GRADED_ORES.values().forEach(map ->
-            {
-                Stream.of(CoreOres.values()).forEach(ore ->
+                if (oreType.isGraded())
                 {
-                    if (ore.isGraded())
+                    for (CoreOres.Grade grade : CoreOres.Grade.values())
                     {
-                        addOreTable(map.get(ore).get(grade).get(), CoreItems.GRADED_ORES.get(ore).get(grade).get());
+                        addOreTable(CoreBlocks.GRADED_ORES.get(rockType).get(oreType).get(grade).get(), CoreItems.GRADED_ORES.get(oreType).get(grade).get());
                     }
-                });
-            });
-        });
-
-        CoreBlocks.CUSTOM_ROCK_ORES.values().forEach(map ->
-        {
-            Stream.of(CoreOres.values()).forEach(ore ->
-            {
-                if (!ore.isGraded() && ore.hasBlock() && !ore.hasSpectrumOreType())
-                {
-                    addOreTable(map.get(ore).get(), CoreItems.ORES.get(ore).get());
                 }
+            }
+        }
 
-                if (!ore.isGraded() && ore.hasBlock() && ore.hasSpectrumOreType())
-                {
-                    addOreTable(map.get(ore).get(), ore.getPastelOre());
-                }
-            });
-        });
-
-        Stream.of(CoreOres.Grade.values()).forEach(grade ->
+        for (CoreRocks rockType : CoreRocks.values())
         {
-            CoreBlocks.CUSTOM_ROCK_GRADED_ORES.values().forEach(map ->
+            if (rockType.hasOres())
             {
-                Stream.of(CoreOres.values()).forEach(ore ->
+                for (CoreOres oreType : CoreOres.values())
                 {
-                    if (ore.isGraded())
+                    if (!oreType.isGraded() && oreType.hasBlock() && !oreType.hasSpectrumOreType())
                     {
-                        addOreTable(map.get(ore).get(grade).get(), CoreItems.GRADED_ORES.get(ore).get(grade).get());
+                        addOreTable(CoreBlocks.CUSTOM_ROCK_ORES.get(rockType).get(oreType).get(), CoreItems.ORES.get(oreType).get());
                     }
-                });
-            });
-        });
 
-        CoreBlocks.CUSTOM_ROCK_TFC_ORES.values().forEach(map ->
-        {
-            Stream.of(Ore.values()).forEach(ore ->
-            {
-                if (!ore.isGraded() && ore.hasBlock())
-                {
-                    addOreTable(map.get(ore).get(), TFCItems.ORES.get(ore).get());
-                }
-            });
-        });
-
-        Stream.of(CoreOres.Grade.values()).forEach(grade ->
-        {
-            CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map ->
-            {
-                Stream.of(Ore.values()).forEach(ore ->
-                {
-                    if (ore.isGraded())
+                    if (!oreType.isGraded() && oreType.hasBlock() && oreType.hasSpectrumOreType())
                     {
-                        addOreTable(map.get(ore).get(grade).get(), TFCItems.GRADED_ORES.get(ore).get(CoreOres.getTFCgrade(grade)).get());
+                        addOreTable(CoreBlocks.CUSTOM_ROCK_ORES.get(rockType).get(oreType).get(), oreType.getPastelOre());
                     }
-                });
-            });
-        });
+
+                    if (oreType.isGraded())
+                    {
+                        for (CoreOres.Grade grade : CoreOres.Grade.values())
+                        {
+                            addOreTable(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rockType).get(oreType).get(grade).get(), CoreItems.GRADED_ORES.get(oreType).get(grade).get());
+                        }
+                    }
+                }
+            }
+        }
+
+        for (CoreRocks rockType : CoreRocks.values())
+        {
+            if (rockType.hasOres())
+            {
+                for (Ore oreType : Ore.values())
+                {
+                    if (!oreType.isGraded() && oreType.hasBlock())
+                    {
+                        addOreTable(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(oreType).get(), TFCItems.ORES.get(oreType).get());
+                    }
+
+                    if (oreType.isGraded())
+                    {
+                        for (CoreOres.Grade grade : CoreOres.Grade.values())
+                        {
+                            addOreTable(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rockType).get(oreType).get(grade).get(), TFCItems.GRADED_ORES.get(oreType).get(CoreOres.getTFCgrade(grade)).get());
+                        }
+                    }
+                }
+            }
+        }
 
         for (CoreRocks rock : CoreRocks.values())
         {
@@ -291,28 +280,40 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
     private void generateCrop()
     {
 
-        Stream.of(CoreCrops.values()).forEach(this::addCropTable);
+        for (CoreCrops cropType : CoreCrops.values())
+        {
+            addCropTable(cropType);
+        }
 
-        Stream.of(CoreFruitTrees.values()).forEach(this::addFruitTreeTable);
+        for (CoreFruitTrees treeType : CoreFruitTrees.values())
+        {
+            addFruitTreeTable(treeType);
+        }
 
-        Stream.of(CoreStationaryBushes.values()).forEach(this::addStationaryBushTable);
+        for (CoreStationaryBushes bushType : CoreStationaryBushes.values())
+        {
+            addStationaryBushTable(bushType);
+        }
 
-        Stream.of(CoreSpreadingBushes.values()).forEach(this::addSpreadingBushTable);
+        for (CoreSpreadingBushes bushType : CoreSpreadingBushes.values())
+        {
+            addSpreadingBushTable(bushType);
+        }
     }
 
     private void generateMetal()
     {
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
-            Stream.of(Metal.BlockType.values()).forEach(type ->
+            for (Metal.BlockType blockType : Metal.BlockType.values())
             {
-                if (type.has(metal.getLikeMetal()))
+                if (blockType.has(metalType.getLikeMetal()))
                 {
-                    this.dropSelf(CoreBlocks.METALS.get(metal).get(type).get());
+                    this.dropSelf(CoreBlocks.METALS.get(metalType).get(blockType).get());
                 }
-            });
-        });
+            }
+        }
 
         /*
         Stream.of(CoreMetals.BlockType.values()).forEach(type -> {
@@ -336,83 +337,93 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
     private void generateRock()
     {
 
-        CoreBlocks.MAGMA_BLOCKS.values().forEach(holder ->
+        for (CoreRocks rockType : CoreRocks.values())
         {
-            this.dropSelf(holder.get());
-        });
-
-        Stream.of(CoreRocks.values()).forEach(rock ->
-        {
-            Stream.of(Rock.BlockType.values()).forEach(type ->
+            if (rockType.category() == RockCategory.IGNEOUS_EXTRUSIVE || rockType.category() == RockCategory.IGNEOUS_INTRUSIVE)
             {
-                if (rock.hasVariant(type))
-                {
-                    addRockBlockTable(rock, type);
-                }
-                if ((type.hasVariants() || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_BRICKS) && rock.hasVariant(type))
-                {
-                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().get());
-                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().get());
-                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().get());
-                }
-            });
-        });
+                this.dropSelf(CoreBlocks.MAGMA_BLOCKS.get(rockType).get());
+            }
 
-        CoreBlocks.MORTARED_TFC_COBBLE.values().forEach(holder ->
-        {
-            this.dropSelf(holder.get());
-        });
+            for (Rock.BlockType blockType : Rock.BlockType.values())
+            {
+                if (rockType.hasVariant(blockType))
+                {
+                    addRockBlockTable(rockType, blockType);
+                }
+                if ((blockType.hasVariants() || blockType == Rock.BlockType.MOSSY_COBBLE || blockType == Rock.BlockType.MOSSY_BRICKS) && rockType.hasVariant(blockType))
+                {
+                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).slab().get());
+                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).stair().get());
+                    this.dropSelf(CoreBlocks.ROCK_DECORATIONS.get(rockType).get(blockType).wall().get());
+                }
+            }
 
-        CoreBlocks.MORTARED_CUSTOM_COBBLE.values().forEach(holder ->
+            this.dropSelf(CoreBlocks.MORTARED_CUSTOM_COBBLE.get(rockType).get());
+        }
+
+        for (Rock rockType : Rock.values())
         {
-            this.dropSelf(holder.get());
-        });
+            this.dropSelf(CoreBlocks.MORTARED_TFC_COBBLE.get(rockType).get());
+        }
     }
 
     private void generateWood()
     {
 
-        Stream.of(SpectrumWood.values()).forEach(wood ->
+        for (SpectrumWood woodType : SpectrumWood.values())
         {
-            Stream.of(Wood.BlockType.values()).forEach(type ->
+            for (Wood.BlockType blockType : Wood.BlockType.values())
             {
-                if (wood.hasBlockType(type))
+                if (woodType.hasBlockType(blockType))
                 {
-                    if (type == Wood.BlockType.BARREL)
+                    if (blockType == Wood.BlockType.BARREL)
                     {
-                        this.add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get(), LootTableBuilders.createSealableBlockTable(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get()));
+                        this.add(
+                                CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(blockType).get(),
+                                LootTableBuilders.createSealableBlockTable(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(blockType).get())
+                        );
                     }
                     else
-                        if (type == Wood.BlockType.SLUICE)
+                        if (blockType == Wood.BlockType.SLUICE)
                         {
-                            this.add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get(), LootTableBuilders.createSluiceTable(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get()));
+                            this.add(
+                                    CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(blockType).get(),
+                                    LootTableBuilders.createSluiceTable(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(blockType).get())
+                            );
                         }
                         else
                         {
-                            this.dropSelf(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get());
+                            this.dropSelf(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(blockType).get());
                         }
                 }
-            });
-        });
+            }
 
-        CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> this.dropSelf(block.get()));
-        CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> this.dropSelf(block.get()));
-        CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> this.dropSelf(block.get()));
+            dropSelf(CoreBlocks.SPECTRUM_WOOD_BOARDS.get(woodType).get());
+            dropSelf(CoreBlocks.SPECTRUM_WOOD_SHUTTERS.get(woodType).get());
+        }
 
-        CoreBlocks.SPECTRUM_WOOD_SHUTTERS.forEach((wood, block) -> this.dropSelf(block.get()));
-        CoreBlocks.TFC_WOOD_SHUTTERS.forEach((wood, block) -> this.dropSelf(block.get()));
-        CoreBlocks.AFC_WOOD_SHUTTERS.forEach((wood, block) -> this.dropSelf(block.get()));
+        for (Wood woodType : Wood.values())
+        {
+            dropSelf(CoreBlocks.TFC_WOOD_BOARDS.get(woodType).get());
+            dropSelf(CoreBlocks.TFC_WOOD_SHUTTERS.get(woodType).get());
+        }
+
+        for (AFCWood woodType : AFCWood.values())
+        {
+            dropSelf(CoreBlocks.AFC_WOOD_BOARDS.get(woodType).get());
+            dropSelf(CoreBlocks.AFC_WOOD_SHUTTERS.get(woodType).get());
+        }
     }
 
     private void generateGemstones()
     {
 
-        Stream.of(CoreGemstones.values()).forEach(gem ->
+        for (CoreGemstones gemType : CoreGemstones.values())
         {
-            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType ->
+            for (CoreGemstones.GemstoneBlocks blockType : CoreGemstones.GemstoneBlocks.values())
             {
 
-                DeferredHolder<Block, Block> block = CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType);
+                DeferredHolder<Block, Block> block = CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType);
 
                 switch (blockType)
                 {
@@ -426,85 +437,76 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider
                     }
                     case CLUSTER ->
                     {
-                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gem).get(CoreGemstones.GemstoneItems.SHARD).get(), 4));
+                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.SHARD).get(), 4));
                     }
                     case LARGE_CLUSTER ->
                     {
-                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gem).get(CoreGemstones.GemstoneItems.POWDER).get(), 4));
+                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 4));
                     }
                     case MEDIUM_CLUSTER ->
                     {
-                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gem).get(CoreGemstones.GemstoneItems.POWDER).get(), 2));
+                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 2));
                     }
                     case SMALL_CLUSTER ->
                     {
-                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gem).get(CoreGemstones.GemstoneItems.POWDER).get(), 1));
+                        this.add(block.get(), createClusterTable(block.get(), CoreItems.GEMSTONE_ITEMS.get(gemType).get(CoreGemstones.GemstoneItems.POWDER).get(), 1));
                     }
                 }
-            });
-        });
+            }
+        }
     }
 
     private void generateMisc()
     {
-
-        this.dropSelf(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
-        Stream.of(DyeColor.values()).forEach(color ->
+        for (DyeColor color : DyeColor.values())
         {
             this.dropSelf(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
-        });
-
-
-        this.dropSelf(CoreBlocks.CLEAR_LEAD_GLASS.get());
-        Stream.of(DyeColor.values()).forEach(color ->
-        {
             this.dropSelf(CoreBlocks.COLOURED_LEAD_GLASS.get(color).get());
-        });
-
-        this.dropSelf(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get());
-        Stream.of(DyeColor.values()).forEach(color ->
-        {
             this.dropSelf(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get());
-        });
+        }
 
+        this.dropSelf(CoreBlocks.CLEAR_MOLTEN_GLASS.get());
+        this.dropSelf(CoreBlocks.CLEAR_LEAD_GLASS.get());
+        this.dropSelf(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get());
 
-        Stream.of(CoreClay.values()).forEach(clay ->
+        for (CoreClay clayType : CoreClay.values())
         {
-            Stream.of(CoreClay.BlockType.values()).forEach(type ->
+            for (CoreClay.BlockType blockType : CoreClay.BlockType.values())
             {
-
-                if (type.hasClayType(clay))
+                if (blockType.hasClayType(clayType))
                 {
-
-                    if (type == CoreClay.BlockType.CLAY_BLOCK)
+                    if (blockType == CoreClay.BlockType.CLAY_BLOCK)
                     {
-                        this.add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(),
+                        this.add(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType).get(),
                                 LootTableBuilders.createClayBlockTable(
-                                        CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(),
-                                        CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.CLAY_BALL).get()
+                                        CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType).get(),
+                                        CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.CLAY_BALL).get()
                                 )
                         );
                     }
                     else
-                        if (type == CoreClay.BlockType.LARGE_VESSEL)
+                        if (blockType == CoreClay.BlockType.LARGE_VESSEL)
                         {
-                            this.add(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get(), LootTableBuilders.createSealableBlockTable(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get()));
+                            this.add(
+                                    CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType).get(),
+                                    LootTableBuilders.createSealableBlockTable(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType).get())
+                            );
                         }
                         else
                         {
-                            this.dropSelf(CoreBlocks.CERAMIC_BLOCKS.get(clay).get(type).get());
+                            this.dropSelf(CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(blockType).get());
                         }
 
                 }
 
-                if (type.getType() == CoreClay.BlockPartType.BLOCK_SET)
+                if (blockType.getType() == CoreClay.BlockPartType.BLOCK_SET)
                 {
-                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).stair().get());
-                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).slab().get());
-                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clay).get(type).wall().get());
+                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).stair().get());
+                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).slab().get());
+                    this.dropSelf(CoreBlocks.CERAMIC_DECORATION_BLOCKS.get(clayType).get(blockType).wall().get());
                 }
-            });
-        });
+            }
+        }
 
         this.dropOther(CoreBlocks.PRISMATIC_ICE.get(), Items.AIR);
     }

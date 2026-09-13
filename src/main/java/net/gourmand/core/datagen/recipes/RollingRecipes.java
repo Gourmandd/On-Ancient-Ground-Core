@@ -11,7 +11,6 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class RollingRecipes extends RollingRecipeGen
 {
@@ -25,13 +24,13 @@ public class RollingRecipes extends RollingRecipeGen
     public void rollingRecipes()
     {
 
-        Stream.of(CoreMetals.MetalType.values()).forEach(metal ->
+        for (CoreMetals.MetalType metalType : CoreMetals.MetalType.values())
         {
 
-            final DeferredHolder<Item, Item> INGOT = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.INGOT);
-            final DeferredHolder<Item, Item> ROD = CoreItems.METAL_ITEMS.get(metal).get(Metal.ItemType.ROD);
+            final DeferredHolder<Item, Item> INGOT = CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT);
+            final DeferredHolder<Item, Item> ROD = CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.ROD);
 
             create(ROD.getId().getPath(), b -> b.require(INGOT.get()).output(ROD.get(), 2));
-        });
+        }
     }
 }

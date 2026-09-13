@@ -47,7 +47,6 @@ import net.neoforged.neoforge.client.model.DynamicFluidContainerModel;
 import java.util.Locale;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_FLOW;
 import static net.dries007.tfc.client.ClientEventHandler.MOLTEN_STILL;
@@ -137,18 +136,31 @@ public class ClientEventHandler
         CoreBlocks.FRUIT_TREE_SAPLINGS.values().forEach(leaves -> ItemBlockRenderTypes.setRenderLayer(leaves.get(), cutout));
         CoreBlocks.FRUIT_TREE_POTTED_SAPLINGS.values().forEach(leaves -> ItemBlockRenderTypes.setRenderLayer(leaves.get(), cutout));
 
-        CoreBlocks.ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
-        CoreBlocks.GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
+        CoreBlocks.ORES.values().forEach(map ->
+                map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))
+        );
+        CoreBlocks.GRADED_ORES.values().forEach(map ->
+                map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)))
+        );
 
-        CoreBlocks.CUSTOM_ROCK_ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
-        CoreBlocks.CUSTOM_ROCK_GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
+        CoreBlocks.CUSTOM_ROCK_ORES.values().forEach(map ->
+                map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))
+        );
+        CoreBlocks.CUSTOM_ROCK_GRADED_ORES.values().forEach(map ->
+                map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
 
-        CoreBlocks.CUSTOM_ROCK_TFC_ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
-        CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
+        CoreBlocks.CUSTOM_ROCK_TFC_ORES.values().forEach(map ->
+                map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))
+        );
+
+        CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map ->
+                map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)))
+        );
 
         CoreBlocks.DEEPER_DOWN_WOODS.values().forEach(map ->
         {
-            Stream.of(SCRIBING_TABLE, SEWING_TABLE).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), cutout));
+            ItemBlockRenderTypes.setRenderLayer(map.get(SCRIBING_TABLE).get(), cutout);
+            ItemBlockRenderTypes.setRenderLayer(map.get(SEWING_TABLE).get(), cutout);
         });
 
         for (CoreRocks rock : CoreRocks.values())
@@ -163,37 +175,34 @@ public class ClientEventHandler
                     ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().get(), cutoutMipped);
                 }
             }
-        }
 
-        Stream.of(CoreRocks.values()).forEach(rock ->
-        {
             if (rock.hasOres())
             {
-                Stream.of(OreDeposit.values()).forEach(ore ->
+                for (OreDeposit ore : OreDeposit.values())
                 {
                     ItemBlockRenderTypes.setRenderLayer(CoreBlocks.ORE_DEPOSITS.get(rock).get(ore).get(), cutoutMipped);
-                });
+                }
             }
-        });
+        }
 
-        Stream.of(CoreGemstones.values()).forEach(gem ->
+        for (CoreGemstones gemType : CoreGemstones.values())
         {
-            Stream.of(CoreGemstones.GemstoneBlocks.values()).forEach(blockType ->
+            for (CoreGemstones.GemstoneBlocks blockType : CoreGemstones.GemstoneBlocks.values())
             {
                 if (blockType.isCluster())
                 {
-                    ItemBlockRenderTypes.setRenderLayer(CoreBlocks.GEMSTONE_BLOCKS.get(gem).get(blockType).get(), cutoutMipped);
+                    ItemBlockRenderTypes.setRenderLayer(CoreBlocks.GEMSTONE_BLOCKS.get(gemType).get(blockType).get(), cutoutMipped);
                 }
-            });
-        });
+            }
+        }
 
         ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS.get(), translucent);
         ItemBlockRenderTypes.setRenderLayer(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get(), translucent);
-        Stream.of(DyeColor.values()).forEach(color ->
+        for (DyeColor color : DyeColor.values())
         {
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS.get(color).get(), translucent);
             ItemBlockRenderTypes.setRenderLayer(CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get(), translucent);
-        });
+        }
 
         for (SpectrumWood wood : SpectrumWood.values())
         {
@@ -216,11 +225,11 @@ public class ClientEventHandler
 
         CoreBlocks.WILD_CROPS.forEach((crop, reg) -> event.register(grassColor, reg.get()));
 
-        Stream.of(DyeColor.values()).forEach(color ->
+        for (DyeColor color : DyeColor.values())
         {
             final BlockColor glassColor = (state, level, pos, tintIndex) -> color.getTextureDiffuseColor();
             event.register(glassColor, CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get());
-        });
+        }
 
         final BlockColor clearGlassColor = (state, level, pos, tintIndex) -> 14611449;
         event.register(clearGlassColor, CoreBlocks.CLEAR_MOLTEN_GLASS.get());

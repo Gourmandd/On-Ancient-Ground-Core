@@ -36,9 +36,17 @@ public final class DataEntryPoint
     {
         final PackOutput output = event.getGenerator().getPackOutput();
 
-        RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder().add(Registries.CONFIGURED_FEATURE, BuiltinConfiguredFeatures::bootstrap).add(Registries.PLACED_FEATURE, BuiltinPlacedFeatures::bootstrap).add(RockSettings.KEY, BuiltinRockSettings::bootstrap);
+        RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder()
+                .add(Registries.CONFIGURED_FEATURE, BuiltinConfiguredFeatures::bootstrap)
+                .add(Registries.PLACED_FEATURE, BuiltinPlacedFeatures::bootstrap)
+                .add(RockSettings.KEY, BuiltinRockSettings::bootstrap);
 
-        final var lookup = add(event, new DatapackBuiltinEntriesProvider(event.getGenerator().getPackOutput(), event.getLookupProvider(), registrySetBuilder, Set.of(AncientGroundCore.MOD_ID, "minecraft", TerraFirmaCraft.MOD_ID))).getRegistryProvider();
+        final var lookup = add(event, new DatapackBuiltinEntriesProvider(
+                event.getGenerator().getPackOutput(),
+                event.getLookupProvider(),
+                registrySetBuilder,
+                Set.of(AncientGroundCore.MOD_ID, "minecraft", TerraFirmaCraft.MOD_ID)
+        )).getRegistryProvider();
 
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinDepositData(output, lookup));
@@ -84,6 +92,13 @@ public final class DataEntryPoint
 
     private static void addLoot(CompletableFuture<HolderLookup.Provider> lookup, PackOutput output, GatherDataEvent event, Function<HolderLookup.Provider, LootTableSubProvider> provider, LootContextParamSet set)
     {
-        add(event, new LootTableProvider(output, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(provider, set), new LootTableProvider.SubProviderEntry(BuiltinDepositLootTables::new, LootContextParamSets.EMPTY)), lookup));
+        add(event,
+                new LootTableProvider(
+                        output,
+                        Collections.emptySet(),
+                        List.of(new LootTableProvider.SubProviderEntry(provider, set), new LootTableProvider.SubProviderEntry(BuiltinDepositLootTables::new, LootContextParamSets.EMPTY)),
+                        lookup
+                )
+        );
     }
 }
