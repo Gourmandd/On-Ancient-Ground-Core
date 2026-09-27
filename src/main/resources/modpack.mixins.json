@@ -10,6 +10,7 @@
     "DecayAwayMixin",
     "DripstoneUtilsMixin",
     "FDEMIPluginMixin",
+    "FirestarterIdolBlockMixin",
     "LargeDripstoneFeatureMixin",
     "SwitchInventoryTabPacketMixin"
   ],

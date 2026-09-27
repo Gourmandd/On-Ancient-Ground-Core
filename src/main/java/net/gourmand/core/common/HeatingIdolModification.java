@@ -21,7 +21,7 @@ public class HeatingIdolModification
         FreezingIdolBlock.FREEZING_MAP.put(Blocks.WATER, new Tuple<>(Blocks.ICE.defaultBlockState(), 1.0F));
 
         FirestarterIdolBlock.BURNING_MAP.clear();
-        FirestarterIdolBlock.BURNING_MAP.put(Blocks.CALCITE, new Tuple<>(Blocks.BASALT.defaultBlockState(), 0.5F));
+        FirestarterIdolBlock.BURNING_MAP.put(Blocks.SNOW, new Tuple<>(Blocks.AIR.defaultBlockState(), 1.0F));
         FirestarterIdolBlock.BURNING_MAP.put(Rock.BASALT.getBlock(Rock.BlockType.RAW).get(), new Tuple<>(TFCBlocks.MAGMA_BLOCKS.get(Rock.BASALT).get().defaultBlockState(), 0.25F));
         FirestarterIdolBlock.BURNING_MAP.put(TFCBlocks.MAGMA_BLOCKS.get(Rock.BASALT).get(), new Tuple<>(Blocks.LAVA.defaultBlockState(), 0.5F));
         FirestarterIdolBlock.BURNING_MAP.put(SpectrumBlocks.FROSTBITE_CRYSTAL.get(), new Tuple<>((SpectrumBlocks.BLAZING_CRYSTAL.get()).defaultBlockState(), 0.5F));
