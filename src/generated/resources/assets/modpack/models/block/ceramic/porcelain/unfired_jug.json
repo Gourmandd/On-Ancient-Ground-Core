@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ceramic/unfired_jug",
+  "textures": {
+    "0": "modpack:block/ceramic/jug/porcelain_unfired",
+    "particle": "modpack:block/ceramic/jug/porcelain_unfired"
+  }
+}

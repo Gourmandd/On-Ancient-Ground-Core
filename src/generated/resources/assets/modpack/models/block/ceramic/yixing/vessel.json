@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ceramic/small_vessel",
+  "textures": {
+    "particle": "modpack:block/ceramic/small_vessel/yixing",
+    "side": "modpack:block/ceramic/small_vessel/yixing"
+  }
+}

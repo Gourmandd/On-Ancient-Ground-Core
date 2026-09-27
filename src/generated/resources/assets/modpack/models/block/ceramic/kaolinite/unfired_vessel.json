@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ceramic/small_vessel_unfired",
+  "textures": {
+    "particle": "modpack:block/ceramic/small_vessel/kaolinite",
+    "side": "modpack:block/ceramic/small_vessel/kaolinite"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ceramic/small_vessel_unfired",
+  "textures": {
+    "particle": "modpack:block/ceramic/small_vessel/porcelain",
+    "side": "modpack:block/ceramic/small_vessel/porcelain"
+  }
+}

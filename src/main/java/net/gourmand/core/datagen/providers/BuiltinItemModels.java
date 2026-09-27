@@ -322,6 +322,18 @@ public class BuiltinItemModels extends ItemModelProvider
                         simpleItem(CoreItems.CERAMICS.get(clayType).get(itemType).get(), getItemModelLocation(CoreItems.CERAMICS.get(clayType).get(itemType).getId()));
                     }
                 }
+
+                // the models for the placed items
+                if (itemType.hasPlacedModel())
+                {
+                    switch (itemType)
+                    {
+                        case JUG -> placedJug(CoreItems.CERAMICS.get(clayType).get(itemType), AncientGroundCore.location("block/ceramic/jug/" + clayType.getSerializedName()), true);
+                        case UNFIRED_JUG -> placedJug(CoreItems.CERAMICS.get(clayType).get(itemType), AncientGroundCore.location("block/ceramic/jug/" + clayType.getSerializedName() + "_unfired"), false);
+                        case VESSEL -> placedVessel(CoreItems.CERAMICS.get(clayType).get(itemType), AncientGroundCore.location("block/ceramic/small_vessel/" + clayType.getSerializedName()), true);
+                        case UNFIRED_VESSEL -> placedVessel(CoreItems.CERAMICS.get(clayType).get(itemType), AncientGroundCore.location("block/ceramic/small_vessel/" + clayType.getSerializedName()), false);
+                    }
+                }
             }
 
             for (CoreClay.BlockType blockType : CoreClay.BlockType.values())
@@ -427,7 +439,7 @@ public class BuiltinItemModels extends ItemModelProvider
                 .texture("vertical", texture)
                 .texture("horizontal", texture)
                 .texture("top", textureTop)
-                .texture("partical", texture);
+                .texture("particle", texture);
     }
 
     private void mossyLooseItem(DeferredHolder<Block, ? extends Block> block, CoreRocks rock)
@@ -509,6 +521,43 @@ public class BuiltinItemModels extends ItemModelProvider
             withExistingParent(getItemModelString(holder.get()), ResourceLocation.fromNamespaceAndPath(NeoForgeVersion.MOD_ID, "item/bucket"))
                     .customLoader(DynamicFluidContainerModelBuilder::begin)
                     .fluid(bucket.content);
+        }
+    }
+
+    private void placedVessel(DeferredHolder<Item, Item> holder, ResourceLocation texture, boolean fired)
+    {
+
+        String location = holder.get().toString().replace(":", ":block/");
+
+        if (fired)
+        {
+            this.getBuilder(location).parent(new ModelFile.UncheckedModelFile("tfc:block/ceramic/small_vessel"))
+                    .texture("side", texture)
+                    .texture("particle", texture);
+        }
+        else
+        {
+            this.getBuilder(location).parent(new ModelFile.UncheckedModelFile("tfc:block/ceramic/small_vessel_unfired"))
+                    .texture("side", texture)
+                    .texture("particle", texture);
+        }
+    }
+
+    private void placedJug(DeferredHolder<Item, Item> holder, ResourceLocation texture, boolean fired)
+    {
+        String location = holder.get().toString().replace(":", ":block/");
+
+        if (fired)
+        {
+            this.getBuilder(location).parent(new ModelFile.UncheckedModelFile("tfc:block/ceramic/jug"))
+                    .texture("0", texture)
+                    .texture("particle", texture);
+        }
+        else
+        {
+            this.getBuilder(location).parent(new ModelFile.UncheckedModelFile("tfc:block/ceramic/unfired_jug"))
+                    .texture("0", texture)
+                    .texture("particle", texture);
         }
     }
     //endregion

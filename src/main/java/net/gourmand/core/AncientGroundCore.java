@@ -5,6 +5,7 @@ import com.klikli_dev.modonomicon.data.LoaderRegistry;
 import com.mojang.logging.LogUtils;
 import net.gourmand.core.client.ClientEventHandler;
 import net.gourmand.core.client.ClientForgeEventHandler;
+import net.gourmand.core.common.PlacedItemModels;
 import net.gourmand.core.common.HeatingIdolModification;
 import net.gourmand.core.common.create.CoreBoilerHeaters;
 import net.gourmand.core.datagen.DataEntryPoint;
@@ -95,6 +96,7 @@ public class AncientGroundCore
         LOGGER.info("HELLO FROM COMMON SETUP");
 
         HeatingIdolModification.init();
+        PlacedItemModels.init();
         CoreBoilerHeaters.register();
     }
 
