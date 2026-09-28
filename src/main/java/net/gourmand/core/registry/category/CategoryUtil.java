@@ -245,7 +245,22 @@ public class CategoryUtil
 
     public static Metal.ItemType[] getTFCTools()
     {
-        return new Metal.ItemType[]{Metal.ItemType.PICKAXE, Metal.ItemType.PROPICK, Metal.ItemType.AXE, Metal.ItemType.SHOVEL, Metal.ItemType.HOE, Metal.ItemType.CHISEL, Metal.ItemType.HAMMER, Metal.ItemType.SAW, Metal.ItemType.JAVELIN, Metal.ItemType.SWORD, Metal.ItemType.MACE, Metal.ItemType.KNIFE, Metal.ItemType.SCYTHE};
+        return new Metal.ItemType[]
+                {
+                        Metal.ItemType.PICKAXE,
+                        Metal.ItemType.PROPICK,
+                        Metal.ItemType.AXE,
+                        Metal.ItemType.SHOVEL,
+                        Metal.ItemType.HOE,
+                        Metal.ItemType.CHISEL,
+                        Metal.ItemType.HAMMER,
+                        Metal.ItemType.SAW,
+                        Metal.ItemType.JAVELIN,
+                        Metal.ItemType.SWORD,
+                        Metal.ItemType.MACE,
+                        Metal.ItemType.KNIFE,
+                        Metal.ItemType.SCYTHE
+                };
     }
 
     public static ArrayList<Metal.ItemType> getTFCToolHeads()
