@@ -22,7 +22,13 @@ import java.util.Map;
 public class BookMixingBowlPageRenderer extends BookRecipePageRenderer<MixingBowlRecipe, BookMixingBowlPage>
 {
 
-    public static final Map<Integer, Vector2i> ITEM_POSITIONS = ImmutableMap.<Integer, Vector2i>builder().put(0, new Vector2i(5, 16)).put(1, new Vector2i(29, 16)).put(2, new Vector2i(5, 40)).put(3, new Vector2i(29, 40)).put(4, new Vector2i(17, 64)).build();
+    public static final Map<Integer, Vector2i> ITEM_POSITIONS = ImmutableMap.<Integer, Vector2i>builder()
+            .put(0, new Vector2i(5, 16))
+            .put(1, new Vector2i(29, 16))
+            .put(2, new Vector2i(5, 40))
+            .put(3, new Vector2i(29, 40))
+            .put(4, new Vector2i(17, 64))
+            .build();
 
     public BookMixingBowlPageRenderer(BookMixingBowlPage page)
     {

@@ -19,6 +19,12 @@ public class ModonomiconIntegration
     public static final String ID = "guide";
     public static final ResourceLocation BOOK_ID = AncientGroundCore.location(ID);
 
+    public static final int ITEM_BORDER_SPACING = -4; //an item border needs to be offset on both axis to cover the stack properly.
+    public static final int FLUID_BORDER_SPACING = -4; // Fluids have a separate value as it may change in the future.
+
+    public static final ResourceLocation UP_ARROW_TEXTURE = AncientGroundCore.location("textures/gui/up_arrow.png");
+    public static final ResourceLocation COOKING_POT_ICONS_TEXTURE = AncientGroundCore.location("textures/gui/cooking_pot_icons.png");
+
     // Page Types
     public static final ResourceLocation KNAPPING_PAGE = AncientGroundCore.location("knapping");
     public static final ResourceLocation CASTING_PAGE = AncientGroundCore.location("casting");
@@ -32,6 +38,7 @@ public class ModonomiconIntegration
     public static final ResourceLocation HEATING_PAGE = AncientGroundCore.location("heating");
     public static final ResourceLocation STOMPING_BARREL_PAGE = AncientGroundCore.location("stomping_barrel");
     public static final ResourceLocation MIXING_BOWL_PAGE = AncientGroundCore.location("mixing_bowl");
+    public static final ResourceLocation COOKING_POT_PAGE = AncientGroundCore.location("cooking_pot");
 
     public static void registerPages()
     {
@@ -47,6 +54,7 @@ public class ModonomiconIntegration
         LoaderRegistry.registerPageLoader(HEATING_PAGE, (BookPageJsonLoader<?>) BookHeatingPage::fromJson, BookHeatingPage::fromNetwork);
         LoaderRegistry.registerPageLoader(STOMPING_BARREL_PAGE, (BookPageJsonLoader<?>) BookStompingBarrelPage::fromJson, BookStompingBarrelPage::fromNetwork);
         LoaderRegistry.registerPageLoader(MIXING_BOWL_PAGE, (BookPageJsonLoader<?>) BookMixingBowlPage::fromJson, BookMixingBowlPage::fromNetwork);
+        LoaderRegistry.registerPageLoader(COOKING_POT_PAGE, (BookPageJsonLoader<?>) BookCookingPage::fromJson, BookCookingPage::fromNetwork);
     }
 
     public static void registerPageRenderers()
@@ -63,6 +71,7 @@ public class ModonomiconIntegration
         PageRendererRegistry.registerPageRenderer(HEATING_PAGE, p -> new BookHeatingPageRenderer((BookHeatingPage) p));
         PageRendererRegistry.registerPageRenderer(STOMPING_BARREL_PAGE, p -> new BookStompingBarrelPageRenderer((BookStompingBarrelPage) p));
         PageRendererRegistry.registerPageRenderer(MIXING_BOWL_PAGE, p -> new BookMixingBowlPageRenderer((BookMixingBowlPage) p));
+        PageRendererRegistry.registerPageRenderer(COOKING_POT_PAGE, p -> new BookCookingPageRenderer((BookCookingPage) p));
     }
 
     public static NeoFluidHolder getFluidHolder(Fluid fluid, int amount)

@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-17T10:15:20.751000239	Books: modpack
+// 1.21.1	2026-09-29T21:21:33.5814828	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
@@ -18,7 +18,7 @@ cb0ab74008f6766bf9773aaee1a952cf66115cc6 data/modpack/modonomicon/books/guide/en
 1f9ecc11ed04dbbddd315da1a049c19ac07020c7 data/modpack/modonomicon/books/guide/entries/carpentry/chest.json
 59e76e76b15e2cc5654b58dd3f19b4ec178d5472 data/modpack/modonomicon/books/guide/entries/carpentry/door.json
 c143df7b8cb1ca24eac9453d8c8ccaee922bd47c data/modpack/modonomicon/books/guide/entries/carpentry/fence.json
-e53debb3af306c1ecaa635f13a63f4adfb13c4ab data/modpack/modonomicon/books/guide/entries/carpentry/fence_gate.json
+78a26412ac9a23c64062e4f42496401d5cec01d8 data/modpack/modonomicon/books/guide/entries/carpentry/fence_gate.json
 1f5f7bb04fc99fca1e72623605d9d284459bcfa3 data/modpack/modonomicon/books/guide/entries/carpentry/food_shelf.json
 cf104ac2f9eca02ffae24733ab7eaf1898886d1e data/modpack/modonomicon/books/guide/entries/carpentry/hanger.json
 69dc4799f798fbefc176afc06224bb8cb0ab9667 data/modpack/modonomicon/books/guide/entries/carpentry/hanging_sign.json
