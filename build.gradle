@@ -140,7 +140,7 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/extra/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'spectrum', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette', '--existing-mod', 'quark', '--existing-mod', 'shutter'
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/extra/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'spectrum', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette', '--existing-mod', 'quark', '--existing-mod', 'shutter', '--existing-mod', 'createbigcannons', '--existing-mod', 'createaddition'
         }
 
         // applies to all the run configs above
