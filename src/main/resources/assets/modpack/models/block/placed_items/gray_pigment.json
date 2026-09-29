@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/jar",
+  "textures": {
+    "1": "spectrum:block/gray_glowblock",
+    "2": "modpack:block/placed_items/bottle"
+  }
+}

@@ -5,6 +5,8 @@ import com.klikli_dev.modonomicon.data.LoaderRegistry;
 import com.mojang.logging.LogUtils;
 import net.gourmand.core.client.ClientEventHandler;
 import net.gourmand.core.client.ClientForgeEventHandler;
+import net.gourmand.core.common.PlacedItemModels;
+import net.gourmand.core.common.HeatingIdolModification;
 import net.gourmand.core.common.create.CoreBoilerHeaters;
 import net.gourmand.core.datagen.DataEntryPoint;
 import net.gourmand.core.event.ServerEventHandler;
@@ -92,6 +94,9 @@ public class AncientGroundCore
     private void commonSetup(FMLCommonSetupEvent event)
     {
         LOGGER.info("HELLO FROM COMMON SETUP");
+
+        HeatingIdolModification.init();
+        PlacedItemModels.init();
         CoreBoilerHeaters.register();
     }
 
@@ -99,7 +104,9 @@ public class AncientGroundCore
     {
         LOGGER.info("HELLO FROM CLIENT SETUP");
 
-        Map<String, String> textMacros = ImmutableMap.<String, String>builder().put("macro.modpack.open_modpack_guide_key", CoreKeyBindings.OPEN_MODPACK_GUIDE.getKey().getDisplayName().getString()).put("macro.modpack.open_tfc_guide_key", CoreKeyBindings.OPEN_TFC_GUIDE.getKey().getDisplayName().getString()).build();
+        Map<String, String> textMacros = ImmutableMap.<String, String>builder()
+                .put("macro.modpack.open_modpack_guide_key", CoreKeyBindings.OPEN_MODPACK_GUIDE.getKey().getDisplayName().getString())
+                .put("macro.modpack.open_tfc_guide_key", CoreKeyBindings.OPEN_TFC_GUIDE.getKey().getDisplayName().getString()).build();
 
         LoaderRegistry.registerDynamicTextMacroLoader(ModonomiconIntegration.BOOK_ID, () -> textMacros);
     }

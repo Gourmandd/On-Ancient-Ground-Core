@@ -32,7 +32,20 @@ public class GatedCookingRecipe extends SDCookingPotRecipe implements GatedRecip
     private final List<? extends Predicate<ItemStack>> inputItems;
 
 
-    public GatedCookingRecipe(String group, NonNullList<Ingredient> ingredients, ItemStack result, @Nullable ItemStack container, int cookingTime, float experience, @Nullable FluidIngredient fluid, int fluidAmountMb, float balanceFactor, Optional<ResourceLocation> requiredAdvancement, Optional<ResourceLocation> revealSecretAdvancement)
+    public GatedCookingRecipe
+    (
+        String group,
+        NonNullList<Ingredient> ingredients,
+        ItemStack result,
+        @Nullable ItemStack container,
+        int cookingTime,
+        float experience,
+        @Nullable FluidIngredient fluid,
+        int fluidAmountMb,
+        float balanceFactor,
+        Optional<ResourceLocation> requiredAdvancement,
+        Optional<ResourceLocation> revealSecretAdvancement
+    )
     {
         super(group, ingredients, result, container, cookingTime, experience, fluid, fluidAmountMb, balanceFactor);
         this.inputItems = ingredients;
@@ -92,14 +105,56 @@ public class GatedCookingRecipe extends SDCookingPotRecipe implements GatedRecip
     public static class Serializer implements RecipeSerializer<GatedCookingRecipe>
     {
 
-        public static final MapCodec<GatedCookingRecipe> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(Codec.STRING.optionalFieldOf("group", "").forGetter(GatedCookingRecipe::getGroup),
+        public static final MapCodec<GatedCookingRecipe> CODEC = RecordCodecBuilder.mapCodec(instance ->
+                instance.group(Codec.STRING.optionalFieldOf("group", "").forGetter(GatedCookingRecipe::getGroup),
 
                 Ingredient.LIST_CODEC_NONEMPTY.fieldOf("ingredients").xmap(list ->
                 {
                     NonNullList<Ingredient> nonNullList = NonNullList.create();
                     nonNullList.addAll(list);
                     return nonNullList;
-                }, nonNullList -> nonNullList).forGetter(GatedCookingRecipe::getIngredients), ItemStack.STRICT_CODEC.fieldOf("result").forGetter(GatedCookingRecipe::getResultStack), ItemStack.STRICT_CODEC.optionalFieldOf("container", ItemStack.EMPTY).forGetter(r -> r.getContainerOverride().isEmpty() ? ItemStack.EMPTY : r.getContainerOverride().copy()), Codec.INT.optionalFieldOf("cookingtime", 200).forGetter(GatedCookingRecipe::getCookingTime), Codec.FLOAT.optionalFieldOf("experience", 0.0F).forGetter(GatedCookingRecipe::getExperience), FluidIngredient.CODEC.optionalFieldOf("fluid").forGetter(r -> Optional.ofNullable(r.getFluid())), Codec.INT.optionalFieldOf("fluid_amount", 0).forGetter(GatedCookingRecipe::getFluidAmountMb), Codec.FLOAT.optionalFieldOf("balance_factor", 0.04f).forGetter(GatedCookingRecipe::getBalanceFactor), ResourceLocation.CODEC.optionalFieldOf("required_advancement").forGetter(recipe -> recipe.requiredAdvancement), ResourceLocation.CODEC.optionalFieldOf("reveal_secret_advancement").forGetter(recipe -> recipe.revealSecretAdvancement)).apply(instance, (group, ingredients, resultStack, containerItem, time, exp, optionalFluid, fluidAmount, balanceFactor, requiredAdvancement, revealSecretAdvancement) -> new GatedCookingRecipe(group, ingredients, resultStack, containerItem.isEmpty() ? null : containerItem, time, exp, optionalFluid.orElse(null), fluidAmount, balanceFactor, requiredAdvancement, revealSecretAdvancement)));
+                }, nonNullList -> nonNullList)
+                        .forGetter(GatedCookingRecipe::getIngredients),
+                        ItemStack.STRICT_CODEC.fieldOf("result").forGetter(GatedCookingRecipe::getResultStack),
+                        ItemStack.STRICT_CODEC.optionalFieldOf("container", ItemStack.EMPTY)
+                                .forGetter(r -> r.getContainerOverride().isEmpty() ? ItemStack.EMPTY : r.getContainerOverride().copy()),
+                        Codec.INT.optionalFieldOf("cookingtime", 200)
+                                .forGetter(GatedCookingRecipe::getCookingTime),
+                        Codec.FLOAT.optionalFieldOf("experience", 0.0F).forGetter(GatedCookingRecipe::getExperience),
+                        FluidIngredient.CODEC.optionalFieldOf("fluid").forGetter(r -> Optional.ofNullable(r.getFluid())),
+                        Codec.INT.optionalFieldOf("fluid_amount", 0).forGetter(GatedCookingRecipe::getFluidAmountMb),
+                        Codec.FLOAT.optionalFieldOf("balance_factor", 0.04f)
+                                .forGetter(GatedCookingRecipe::getBalanceFactor),
+                        ResourceLocation.CODEC.optionalFieldOf("required_advancement")
+                                .forGetter(recipe -> recipe.requiredAdvancement),
+                        ResourceLocation.CODEC.optionalFieldOf("reveal_secret_advancement")
+                                .forGetter(recipe -> recipe.revealSecretAdvancement)
+                ).apply(instance, (
+                            group,
+                            ingredients,
+                            resultStack,
+                            containerItem,
+                            time,
+                            exp,
+                            optionalFluid,
+                            fluidAmount,
+                            balanceFactor,
+                            requiredAdvancement,
+                            revealSecretAdvancement
+                    ) -> new GatedCookingRecipe(
+                            group,
+                            ingredients,
+                            resultStack,
+                            containerItem.isEmpty() ? null : containerItem,
+                            time,
+                            exp,
+                            optionalFluid.orElse(null),
+                            fluidAmount,
+                            balanceFactor,
+                            requiredAdvancement,
+                            revealSecretAdvancement
+                        )
+                ));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, GatedCookingRecipe> STREAM_CODEC = StreamCodec.of(Serializer::toNetwork, Serializer::fromNetwork);
 

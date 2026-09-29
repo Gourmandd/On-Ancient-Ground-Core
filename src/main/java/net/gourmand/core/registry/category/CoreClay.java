@@ -193,6 +193,11 @@ public enum CoreClay implements RegistryClay
         {
             return type;
         }
+
+        public boolean hasPlacedModel()
+        {
+            return this == VESSEL || this == UNFIRED_VESSEL || this == JUG || this == UNFIRED_JUG;
+        }
     }
 
     public enum BlockType implements StringRepresentable

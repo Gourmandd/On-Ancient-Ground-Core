@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/jar",
+  "textures": {
+    "1": "modpack:block/placed_items/cheong",
+    "2": "modpack:block/placed_items/cheong_jar"
+  }
+}

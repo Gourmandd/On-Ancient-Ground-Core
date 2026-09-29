@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/jar",
+  "textures": {
+    "1": "spectrum:block/forfeiture_none"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ceramic/jug",
+  "textures": {
+    "0": "modpack:block/ceramic/jug/earthenware",
+    "particle": "modpack:block/ceramic/jug/earthenware"
+  }
+}
