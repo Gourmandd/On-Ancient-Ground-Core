@@ -31,18 +31,6 @@
       "text": "book.modpack.guide.carpentry.fence_gate.page2.text",
       "title1": "",
       "title2": ""
-    },
-    {
-      "type": "modpack:cooking_pot",
-      "anchor": "",
-      "condition": {
-        "type": "modonomicon:none"
-      },
-      "recipe_id_1": "survivorsdelight:cooking/feast/roasted_chicken",
-      "recipe_id_2": "survivorsdelight:cooking/feast/roasted_chicken",
-      "text": "book.modpack.guide.carpentry.fence_gate.page3.text",
-      "title1": "",
-      "title2": ""
     }
   ],
   "show_when_any_parent_unlocked": false,

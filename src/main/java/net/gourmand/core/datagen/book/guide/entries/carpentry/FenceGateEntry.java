@@ -7,11 +7,9 @@ import com.klikli_dev.modonomicon.api.datagen.book.BookIconModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookCraftingRecipePageModel;
 import com.klikli_dev.modonomicon.api.datagen.book.page.BookSpotlightPageModel;
 import com.mojang.datafixers.util.Pair;
-import com.vomiter.survivorsdelight.SurvivorsDelight;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.wood.Wood;
-import net.gourmand.core.modonomicon.datagen.BookCookingPageModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -33,7 +31,7 @@ public class FenceGateEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **Fence Gates** can be used as a cheap barrier. They are 1.5 blocks tall preventing most creatures from jumping over.
+                **Fence Gates** can be used as a cheap barrier. They are 1.5 blocks tall, preventing most creatures from jumping over.
                 \\
                 \\
                 They can be opened and closed using **Right-Click**.
@@ -43,18 +41,6 @@ public class FenceGateEntry extends EntryProvider {
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/wood/fence_gate/ash"))
-        );
-
-        this.pageTitle(entryName());
-        this.pageText("""
-                Ash fence gate being made out Ash planks and lumber.
-               \s""");
-
-        // page 2: ash fence gate recipe.
-        this.page("page3", () -> BookCookingPageModel.create()
-                .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(SurvivorsDelight.MODID, "cooking/feast/roasted_chicken"))
-                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(SurvivorsDelight.MODID, "cooking/feast/roasted_chicken"))
         );
 
         this.pageTitle(entryName());

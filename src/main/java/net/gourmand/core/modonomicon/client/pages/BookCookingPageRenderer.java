@@ -49,7 +49,7 @@ public class BookCookingPageRenderer extends BookRecipePageRenderer<CookingPotRe
     @Override
     protected int getRecipeHeight()
     {
-        return 76;
+        return 78;
     }
 
     @Override
