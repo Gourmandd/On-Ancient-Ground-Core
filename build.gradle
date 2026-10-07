@@ -183,12 +183,12 @@ configurations {
 dependencies {
 
     // TFC Dependencies & addons
-    implementation "curse.maven:terrafirmacraft-302973:8666972"
+    implementation "curse.maven:terrafirmacraft-302973:8995321"
     implementation "curse.maven:patchouli-306770:6842247"
-    implementation "curse.maven:firmalife-453394:8706783"
+    implementation "curse.maven:firmalife-453394:8994973"
     implementation "curse.maven:precision-prospecting-700638:8672142"
     implementation "curse.maven:tfc-hammer-time-unofficial-port-1499600:8669437"
-    implementation "curse.maven:arborfirmacraft-877545:8337732"
+    implementation "curse.maven:arborfirmacraft-877545:8722148"
 
     // Spectrum Dependencies
     implementation "curse.maven:spectrum-556967:8679750"
