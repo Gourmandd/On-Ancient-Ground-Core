@@ -49,6 +49,18 @@ public class PlacedItemModels
         PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.CYAN_PIGMENT.asItem(), translucent("block/placed_items/cyan_pigment"));
         PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.MAGENTA_PIGMENT.asItem(), translucent("block/placed_items/magenta_pigment"));
         PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.PURPLE_PIGMENT.asItem(), translucent("block/placed_items/purple_pigment"));
+
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.AQUA_REGIA.asItem(), translucent("block/placed_items/beverages/aqua_regia"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.CHRYSOCOLLA.asItem(), translucent("block/placed_items/beverages/chrysocolla"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.EVERNECTAR.asItem(), translucent("block/placed_items/beverages/evernectar"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.FREIGEIST.asItem(), translucent("block/placed_items/beverages/freigeist"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.INFUSED_BEVERAGE.asItem(), translucent("block/placed_items/beverages/infused_beverage"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.JADE_WINE.asItem(), translucent("block/placed_items/beverages/jade_wine"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.MORCHELLA.asItem(), translucent("block/placed_items/beverages/morchella"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.NECTERED_VIOGNIER.asItem(), translucent("block/placed_items/beverages/nectered_viognier"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.PURE_ALCOHOL.asItem(), translucent("block/placed_items/beverages/pure_alcohol"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.REPRISE.asItem(), translucent("block/placed_items/beverages/reprise"));
+        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.SUSPICIOUS_BREW.asItem(), translucent("block/placed_items/beverages/suspicious_brew"));
     }
 
     private static PlacedItemBlockEntityRenderer.Provider translucent(String model) {

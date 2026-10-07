@@ -4,6 +4,16 @@ In src/main/resources/ are various edited textures which come from a variety of 
 
 Attributions are also done on a per file or folder bases within the folders that the images are located in.
 
+# Spectrum Beverage Models
+
+The models used for when placing down Spectrum beverages (infused beverage, jade wine, evernectar, etc) were created by Discord user jonnyloaf. 
+
+We were kindly given permission to use the models in the modpack, thank you!
+
+Confirmation/permission: https://discordapp.com/channels/906264467636109333/1488536614170001558/1557307742463594527
+The files: https://discordapp.com/channels/906264467636109333/906264905399828541/1552456488302415992
+
+
 # Vexxed Visuals
 
 There are modified versions of images originally created by "Vexxel" for the resourcepack "Vexxed Visuals" on Curseforge, and Modrinth.
