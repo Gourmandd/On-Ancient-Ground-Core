@@ -196,7 +196,7 @@ dependencies {
     implementation "dev.architectury:architectury-neoforge:13.0.8"
     implementation "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
-    implementation "dev.emi:emi-neoforge:${emi_version}"
+    implementation "curse.maven:emi-580555:8081408"
     implementation "curse.maven:exclusions-lib-1108052:7502579"
 
     // local runtime
@@ -255,8 +255,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_license            : mod_license,
             mod_version            : mod_version,
             mod_authors            : mod_authors,
-            mod_description        : mod_description,
-            emi_version : emi_version
+            mod_description        : mod_description
     ]
     inputs.properties replaceProperties
     expand replaceProperties
