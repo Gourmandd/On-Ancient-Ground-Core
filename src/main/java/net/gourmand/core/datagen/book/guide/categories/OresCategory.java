@@ -221,12 +221,12 @@ public class OresCategory extends CategoryProvider
 
         // gems
         var amethystEntry = createOreEntry(
-                "amethyst",
+                "garnet",
                 CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.AMETHYST),
                 TFCItems.GEMS.get(Ore.AMETHYST).get(),
                 "n",
                 """
-                Amethyst is a decorative **Mineral** which can be used to make *Glass*. \s
+                Garnet is a decorative **Mineral** which can be used to make *Glass*. \s
                 \\
                 It can be found in **Sedimentary** and **Metamorphic** rock beneath rivers above y=40.
                 """
@@ -289,7 +289,7 @@ public class OresCategory extends CategoryProvider
                 TFCItems.GEMS.get(Ore.PYRITE).get(),
                 "s",
                 """
-                Topaz is a decorative **Mineral**. \s
+                Pyrite is a decorative **Mineral**. \s
                 \\
                 It can be found in **Igneous Extrusive** and **Igneous Intrusive** rocks.
                 """
@@ -320,12 +320,12 @@ public class OresCategory extends CategoryProvider
         );
 
         var topazEntry = createOreEntry(
-                "topaz",
+                "maxixe",
                 CoreTags.Items.TFC_ORE_MULTIBLOCK.get(Ore.TOPAZ),
                 TFCItems.GEMS.get(Ore.TOPAZ).get(),
                 "v",
                 """
-                Topaz is a decorative **Mineral**. \s
+                Maxixe is a decorative **Mineral**. \s
                 \\
                 It can be found in **Sedimentary** and **Igneous Extrusive** rock beneath rivers above y=40.
                 """

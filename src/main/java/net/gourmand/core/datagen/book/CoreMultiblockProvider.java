@@ -94,7 +94,16 @@ public class CoreMultiblockProvider extends MultiblockProvider
         });
 
         TFC_ORES.forEach((ore, block) -> {
-            this.add(this.modLoc("ore_preview/" + ore.name().toLowerCase(Locale.ROOT) ), new DenseMultiblockBuilder()
+            String oreName = ore.name().toLowerCase(Locale.ROOT);
+            if (oreName.equals("amethyst"))
+            {
+                oreName = "garnet";
+            }
+            if (oreName.equals("topaz"))
+            {
+                oreName = "maxixe";
+            }
+            this.add(this.modLoc("ore_preview/" + oreName), new DenseMultiblockBuilder()
                     .layer("BBB")
                     .layer("B0B")
                     .layer("BBB")

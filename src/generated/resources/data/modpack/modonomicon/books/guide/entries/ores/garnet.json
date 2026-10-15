@@ -2,12 +2,12 @@
   "background_u_index": 0,
   "background_v_index": 0,
   "category": "ores",
-  "description": "book.modpack.guide.ores.topaz.description",
+  "description": "book.modpack.guide.ores.garnet.description",
   "hide_while_locked": false,
   "icon": {
-    "item": "tfc:gem/topaz"
+    "item": "tfc:gem/amethyst"
   },
-  "name": "book.modpack.guide.ores.topaz.name",
+  "name": "book.modpack.guide.ores.garnet.name",
   "pages": [
     {
       "type": "modonomicon:spotlight",
@@ -16,10 +16,10 @@
         "type": "modonomicon:none"
       },
       "item": {
-        "tag": "c:do_not_use_in_recipes/ore/topaz"
+        "tag": "c:do_not_use_in_recipes/ore/amethyst"
       },
-      "text": "book.modpack.guide.ores.topaz.page1.text",
-      "title": "book.modpack.guide.ores.topaz.page1.title"
+      "text": "book.modpack.guide.ores.garnet.page1.text",
+      "title": "book.modpack.guide.ores.garnet.page1.title"
     },
     {
       "type": "modonomicon:multiblock",
@@ -27,14 +27,14 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "multiblock_id": "ore_preview/topaz",
+      "multiblock_id": "ore_preview/garnet",
       "multiblock_name": "",
       "show_visualize_button": false,
-      "text": "book.modpack.guide.ores.topaz.page2.text"
+      "text": "book.modpack.guide.ores.garnet.page2.text"
     }
   ],
   "show_when_any_parent_unlocked": false,
-  "sort_number": 21,
-  "x": 5,
+  "sort_number": 13,
+  "x": -3,
   "y": 1
 }

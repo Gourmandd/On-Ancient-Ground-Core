@@ -271,16 +271,25 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
                 {
                     if (rockType.hasOres())
                     {
+                        String oreName = getName(oreType.name());
+                        if (oreName.equals("Amethyst"))
+                        {
+                            oreName = "Garnet";
+                        }
+                        if (oreName.equals("Topaz"))
+                        {
+                            oreName = "Maxixe";
+                        }
                         if (oreType.isGraded())
                         {
                             for (CoreOres.Grade grade : CoreOres.Grade.values())
                             {
-                                createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rockType).get(oreType).get(grade), getName(grade.name()) + " " + getName(rockType), getName(oreType.name()));
+                                createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rockType).get(oreType).get(grade), getName(grade.name()) + " " + getName(rockType), oreName);
                             }
                         }
                         else
                         {
-                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(oreType), getName(rockType), getName(oreType.name()));
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(oreType), getName(rockType), oreName);
                         }
                     }
                 }
