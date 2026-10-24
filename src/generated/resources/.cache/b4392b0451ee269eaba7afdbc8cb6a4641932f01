@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-13T13:57:57.951839779	Block States: modpack
+// 1.21.1	2026-10-24T15:04:11.507540907	Block States: modpack
 28ef1e55551722f68f204d793cc49f3d5e37320d assets/modpack/blockstates/anthracite.json
 916700fca3bb7acd96169872356a8367e8537559 assets/modpack/blockstates/bauxite.json
 64ad5ff574f6381ee7771836d592b3d17de0acb6 assets/modpack/blockstates/ceramic/bricks/earthenware.json
@@ -1402,6 +1402,12 @@ f9a43536e69c0048559e46295cc6f5270dfe448f assets/modpack/blockstates/rock/loose/s
 c9bc4175255108cf64064cfd12370ac536eae24d assets/modpack/blockstates/rock/loose/soapstone.json
 8567c6f4ed1d36d9f8912e328d126e6a49826444 assets/modpack/blockstates/rock/loose/suevite.json
 dc8c2f444f5b2e75cef90a1baab76667b49a156a assets/modpack/blockstates/rock/loose/travertine.json
+75c2cbc7891c5fdbd3cd54da7e7a92395787468f assets/modpack/blockstates/rock/magma/blackslag.json
+045cd6a227790aba131503ce5b79197d347897d2 assets/modpack/blockstates/rock/magma/komatiite.json
+aca272ab79a383276c6a1f3ad7c0e6ef29d10a8b assets/modpack/blockstates/rock/magma/nephelinite.json
+c73b7742f107f3a3184cb160ee30c44547ea70d4 assets/modpack/blockstates/rock/magma/peridotite.json
+8e919ff4cf95c93b1be4d698a274d7603e68a452 assets/modpack/blockstates/rock/magma/phonolite.json
+17c26170c46bbdbec3f0eb9386f060ece92542ef assets/modpack/blockstates/rock/magma/picrite_basalt.json
 6ece9df0684ca5906a49865f02b4495a45f22826 assets/modpack/blockstates/rock/mossy_bricks/argillite.json
 4e61953eaab72d950cffe8b356d41cb5d5a07c52 assets/modpack/blockstates/rock/mossy_bricks/argillite_slab.json
 57f0542dc586cb556788bd57430b8aaa4d9edbd3 assets/modpack/blockstates/rock/mossy_bricks/argillite_stairs.json
@@ -3610,6 +3616,12 @@ f918f53090970ecc6ac1678a9b21e0e8787c9183 assets/modpack/models/block/rock/loose/
 2f1467f2604f8d501d50bd62f685ed4845cf59b1 assets/modpack/models/block/rock/loose/travertine_1.json
 2e89770df15e93455aa633b0c144db3fa97f3eb4 assets/modpack/models/block/rock/loose/travertine_2.json
 726c2f72050616b4174ebf5502d38593d4216245 assets/modpack/models/block/rock/loose/travertine_3.json
+9356989a96ce3b257fbb705181ccee0f35413e38 assets/modpack/models/block/rock/magma/blackslag.json
+2907d95f8033e82a3dc0b83573197f599e1fbc7e assets/modpack/models/block/rock/magma/komatiite.json
+103d669d3448141da47df9d4834e05e7bdaf3699 assets/modpack/models/block/rock/magma/nephelinite.json
+4b1afee2690c682b8cdb9c890157bf7a664fbb38 assets/modpack/models/block/rock/magma/peridotite.json
+ba254be54535913dcfde7cf311f9970e538197ef assets/modpack/models/block/rock/magma/phonolite.json
+95dd2cf408a90780837895f6979d37c4681b97b7 assets/modpack/models/block/rock/magma/picrite_basalt.json
 23e95fd72cdf60059c4acb5a514440b711537089 assets/modpack/models/block/rock/mossy_bricks/argillite.json
 dad20879da2f7babf2c08105c841f5d84b518ee9 assets/modpack/models/block/rock/mossy_bricks/argillite_slab.json
 6526ad1a3fce1c6ddc6e14425e1307389f517ebd assets/modpack/models/block/rock/mossy_bricks/argillite_slab_top.json

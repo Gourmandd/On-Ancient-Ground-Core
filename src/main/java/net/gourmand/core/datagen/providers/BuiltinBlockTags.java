@@ -10,6 +10,7 @@ import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
@@ -354,6 +355,11 @@ public class BuiltinBlockTags extends TagsProvider<Block>
 
                 this.tag(BlockTags.STONE_BUTTONS).add(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON).getKey());
                 this.tag(BlockTags.BUTTONS).add(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON).getKey());
+            }
+
+            if (rockType.category() == RockCategory.IGNEOUS_EXTRUSIVE || rockType.category() == RockCategory.IGNEOUS_INTRUSIVE)
+            {
+                this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(CoreBlocks.MAGMA_BLOCKS.get(rockType).getKey());
             }
         }
     }

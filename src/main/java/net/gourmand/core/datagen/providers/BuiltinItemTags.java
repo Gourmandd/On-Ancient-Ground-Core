@@ -6,6 +6,7 @@ import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
@@ -231,6 +232,11 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
 
                 this.tag(ItemTags.STONE_BUTTONS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON)));
                 this.tag(ItemTags.BUTTONS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON)));
+            }
+
+            if (rockType.category() == RockCategory.IGNEOUS_EXTRUSIVE || rockType.category() == RockCategory.IGNEOUS_INTRUSIVE)
+            {
+                this.tag(CoreTags.Items.MAGMA_BLOCKS).add(getKey(CoreBlocks.MAGMA_BLOCKS.get(rockType)));
             }
         }
     }

@@ -6,6 +6,7 @@ import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
@@ -148,6 +149,11 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
                 }
             }
             addItem(CoreItems.BRICKS.get(rockType), getName(rockType) + " Brick");
+
+            if (rockType.category() == RockCategory.IGNEOUS_EXTRUSIVE || rockType.category() == RockCategory.IGNEOUS_INTRUSIVE)
+            {
+                addBlock(CoreBlocks.MAGMA_BLOCKS.get(rockType), getName(rockType) + " Magma");
+            }
         }
 
         for (SpectrumWood woodType : SpectrumWood.values())

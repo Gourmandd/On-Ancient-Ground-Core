@@ -4,6 +4,7 @@ import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
@@ -222,6 +223,11 @@ public class BuiltinItemModels extends ItemModelProvider
             }
 
             simpleItem(CoreItems.BRICKS.get(rockType).get(), getItemModelLocation(CoreItems.BRICKS.get(rockType).getId()));
+
+            if (rockType.category() == RockCategory.IGNEOUS_EXTRUSIVE || rockType.category() == RockCategory.IGNEOUS_INTRUSIVE)
+            {
+                simpleBlock(CoreBlocks.MAGMA_BLOCKS.get(rockType));
+            }
         }
     }
 

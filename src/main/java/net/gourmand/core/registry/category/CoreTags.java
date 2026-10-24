@@ -72,6 +72,7 @@ public class CoreTags
         public static final TagKey<Item> MOLTEN_GLASS = tag(AncientGroundCore.MOD_ID, "molten_glass");
         public static final TagKey<Item> LEAD_GLASS = tag(AncientGroundCore.MOD_ID, "lead_glass");
         public static final TagKey<Item> LEAD_GLASS_PANES = tag(AncientGroundCore.MOD_ID, "lead_glass_panes");
+        public static final TagKey<Item> MAGMA_BLOCKS = tag( "magma_blocks");
 
         private static TagKey<Item> tag(String name)
         {
