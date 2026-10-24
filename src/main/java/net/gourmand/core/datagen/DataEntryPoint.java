@@ -77,6 +77,8 @@ public final class DataEntryPoint
 
         addLoot(lookup, output, event, BuiltinBlockLootTables::new, LootContextParamSets.BLOCK);
 
+        add(event, new FoundryConversionProvider(output, lookup));
+
         // book and lang.
         var enUsCache = new LanguageProviderCache("en_us");
 

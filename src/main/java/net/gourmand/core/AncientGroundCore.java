@@ -13,6 +13,7 @@ import net.gourmand.core.event.ServerEventHandler;
 import net.gourmand.core.modonomicon.ModonomiconIntegration;
 import net.gourmand.core.network.PacketSetup;
 import net.gourmand.core.registry.*;
+import net.gourmand.core.registry.category.CoreDataMaps;
 import net.gourmand.core.registry.items.CoreItemCapabilities;
 import net.gourmand.core.util.CoreKeyBindings;
 import net.minecraft.resources.ResourceLocation;
@@ -48,6 +49,7 @@ public class AncientGroundCore
         modEventBus.addListener(DataEntryPoint::gatherData);
         modEventBus.addListener(PacketSetup::setup);
         modEventBus.addListener(ServerEventHandler::addToBlockEntities);
+        modEventBus.addListener(CoreDataMaps::register);
 
         CoreBlocks.BLOCKS.register(modEventBus);
         CoreItems.ITEMS.register(modEventBus);

@@ -12,6 +12,7 @@
     "DripstoneUtilsMixin",
     "FDEMIPluginMixin",
     "FirestarterIdolBlockMixin",
+    "FoundryHelperMixin",
     "LargeDripstoneFeatureMixin",
     "SwitchInventoryTabPacketMixin"
   ],
