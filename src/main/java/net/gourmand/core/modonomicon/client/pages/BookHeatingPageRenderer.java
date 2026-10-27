@@ -4,8 +4,8 @@ import com.klikli_dev.modonomicon.client.gui.book.entry.BookEntryScreen;
 import com.klikli_dev.modonomicon.client.render.page.BookRecipePageRenderer;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.dries007.tfc.common.recipes.HeatingRecipe;
+import net.dries007.tfc.config.ItemTemperatureDisplayStyle;
 import net.dries007.tfc.config.TFCConfig;
-import net.dries007.tfc.config.TemperatureDisplayStyle;
 import net.gourmand.core.modonomicon.ModonomiconIntegration;
 import net.gourmand.core.modonomicon.pages.BookHeatingPage;
 import net.minecraft.client.Minecraft;
@@ -61,7 +61,7 @@ public class BookHeatingPageRenderer extends BookRecipePageRenderer<HeatingRecip
         guiGraphics.blit(this.page.getBook().getCraftingTexture(), recipeX - 12 + 92, recipeY, 11, 71, 24, 24, 128, 256); // box
 
         var heatingRecipe = recipe.value();
-        final TemperatureDisplayStyle style = TFCConfig.CLIENT.climateTooltipStyle.get();
+        final ItemTemperatureDisplayStyle style = TFCConfig.CLIENT.heatTooltipStyle.get();
 
         this.parentScreen.renderIngredient(guiGraphics, recipeX - 12 + 4, recipeY + 4, mouseX, mouseY, heatingRecipe.getIngredient(), 2);
         guiGraphics.drawString(Minecraft.getInstance().font, Objects.requireNonNull(style.formatColored(heatingRecipe.getTemperature())), recipeX + 30, recipeY + 7, 0x404040, true);
