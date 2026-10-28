@@ -13,6 +13,7 @@ import com.klikli_dev.modonomicon.api.datagen.book.page.BookTextPageModel;
 import com.mojang.datafixers.util.Pair;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.modonomicon.datagen.BookKnappingPageModel;
+import net.gourmand.core.modonomicon.datagen.BookOvenPageModel;
 import net.minecraft.resources.ResourceLocation;
 
 public class OvenEntry extends EntryProvider {
@@ -210,6 +211,18 @@ public class OvenEntry extends EntryProvider {
         this.pageTitle(entryName());
         this.pageText("""
                 An oven insulated with **Oven Insulation** items.
+               \s""");
+
+        // page 15: recipe example.
+        this.page("page15", () -> BookOvenPageModel.create()
+                .withTitle1("Chocolate Chip Cookie")
+                .withText(this.context().pageText())
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(FirmaLife.MOD_ID, "oven/food/chocolate_chip_cookie"))
+        );
+
+        this.pageTitle(entryName());
+        this.pageText("""
+                Choc Chip Cookies... to share. (if you feel like it).
                \s""");
     }
 

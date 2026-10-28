@@ -39,6 +39,7 @@ public class ModonomiconIntegration
     public static final ResourceLocation STOMPING_BARREL_PAGE = AncientGroundCore.location("stomping_barrel");
     public static final ResourceLocation MIXING_BOWL_PAGE = AncientGroundCore.location("mixing_bowl");
     public static final ResourceLocation COOKING_POT_PAGE = AncientGroundCore.location("cooking_pot");
+    public static final ResourceLocation OVEN_PAGE = AncientGroundCore.location("oven");
 
     public static void registerPages()
     {
@@ -55,6 +56,7 @@ public class ModonomiconIntegration
         LoaderRegistry.registerPageLoader(STOMPING_BARREL_PAGE, (BookPageJsonLoader<?>) BookStompingBarrelPage::fromJson, BookStompingBarrelPage::fromNetwork);
         LoaderRegistry.registerPageLoader(MIXING_BOWL_PAGE, (BookPageJsonLoader<?>) BookMixingBowlPage::fromJson, BookMixingBowlPage::fromNetwork);
         LoaderRegistry.registerPageLoader(COOKING_POT_PAGE, (BookPageJsonLoader<?>) BookCookingPage::fromJson, BookCookingPage::fromNetwork);
+        LoaderRegistry.registerPageLoader(OVEN_PAGE, (BookPageJsonLoader<?>) BookOvenPage::fromJson, BookOvenPage::fromNetwork);
     }
 
     public static void registerPageRenderers()
@@ -72,6 +74,7 @@ public class ModonomiconIntegration
         PageRendererRegistry.registerPageRenderer(STOMPING_BARREL_PAGE, p -> new BookStompingBarrelPageRenderer((BookStompingBarrelPage) p));
         PageRendererRegistry.registerPageRenderer(MIXING_BOWL_PAGE, p -> new BookMixingBowlPageRenderer((BookMixingBowlPage) p));
         PageRendererRegistry.registerPageRenderer(COOKING_POT_PAGE, p -> new BookCookingPageRenderer((BookCookingPage) p));
+        PageRendererRegistry.registerPageRenderer(OVEN_PAGE, p -> new BookOvenPageRenderer((BookOvenPage) p));
     }
 
     public static NeoFluidHolder getFluidHolder(Fluid fluid, int amount)

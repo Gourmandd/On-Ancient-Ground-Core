@@ -1,4 +1,4 @@
-// 1.21.1	2026-10-15T19:06:26.727625775	Books: modpack
+// 1.21.1	2026-10-27T22:01:43.658328705	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
@@ -57,7 +57,7 @@ df9cc7a4dc9aa8acf555b087e241cef1b3d9abdc data/modpack/modonomicon/books/guide/en
 95ec9ceeb90176021b9420bdf64d16f92c59c522 data/modpack/modonomicon/books/guide/entries/devices/kilns.json
 ca28962d9895f4de44a296baa69e3c6388563436 data/modpack/modonomicon/books/guide/entries/devices/mixing_bowl.json
 887bb0ded95c22e73970207ac1ca14922f9e3af9 data/modpack/modonomicon/books/guide/entries/devices/note_block.json
-6308f08e6a37f9244cf99b04695f447dfac75a8c data/modpack/modonomicon/books/guide/entries/devices/oven.json
+e6ea559e9bf1a034d602dec24299232d46a61939 data/modpack/modonomicon/books/guide/entries/devices/oven.json
 82d5c7f87f477941110b990819cb704ac62a800e data/modpack/modonomicon/books/guide/entries/devices/oven_appliances.json
 6ae577f1638c582ff93e3eca487e0150a6287f8b data/modpack/modonomicon/books/guide/entries/devices/powderkeg.json
 0f12fb7011afc68341d3dbdb203633083d3df64e data/modpack/modonomicon/books/guide/entries/devices/precision_clock.json
