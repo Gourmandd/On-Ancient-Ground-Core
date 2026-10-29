@@ -70,6 +70,7 @@ public class BuiltinPlacedFeatures
     public static final ResourceKey<PlacedFeature> SHIMMERSTONE = createKey(AncientGroundCore.MOD_ID, "vein/shimmerstone");
     public static final ResourceKey<PlacedFeature> SHIMMERSTONE_VOLCANIC = createKey(AncientGroundCore.MOD_ID, "vein/shimmerstone_volcanic");
     public static final ResourceKey<PlacedFeature> MARLSTONE = createKey(AncientGroundCore.MOD_ID, "vein/marlstone");
+    public static final ResourceKey<PlacedFeature> SOAPSTONE = createKey(AncientGroundCore.MOD_ID, "vein/soapstone");
     public static final ResourceKey<PlacedFeature> STRATINE = createKey(AncientGroundCore.MOD_ID, "vein/stratine");
     public static final ResourceKey<PlacedFeature> SURFACE_GALENA = createKey(AncientGroundCore.MOD_ID, "vein/surface_galena");
     public static final ResourceKey<PlacedFeature> TERRACOTTA = createKey(AncientGroundCore.MOD_ID, "vein/terracotta");
@@ -137,6 +138,7 @@ public class BuiltinPlacedFeatures
         createBlank(SHIMMERSTONE, BuiltinConfiguredFeatures.SHIMMERSTONE);
         createBlank(SHIMMERSTONE_VOLCANIC, BuiltinConfiguredFeatures.SHIMMERSTONE_VOLCANIC);
         createBlank(MARLSTONE, BuiltinConfiguredFeatures.MARLSTONE);
+        createBlank(SOAPSTONE, BuiltinConfiguredFeatures.SOAPSTONE);
         createBlank(STRATINE, BuiltinConfiguredFeatures.STRATINE);
         createBlank(SURFACE_GALENA, BuiltinConfiguredFeatures.SURFACE_GALENA);
         createBlank(TERRACOTTA, BuiltinConfiguredFeatures.TERRACOTTA);
