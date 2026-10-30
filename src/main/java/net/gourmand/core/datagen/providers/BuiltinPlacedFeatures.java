@@ -1,7 +1,13 @@
 package net.gourmand.core.datagen.providers;
 
+import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.athebyne.exclusions_lib.predicates.OverlapsStructureBlockPredicate;
+import net.dries007.tfc.world.blockpredicate.AirOrEmptyFluidPredicate;
+import net.dries007.tfc.world.placement.ClimatePlacement;
+import net.dries007.tfc.world.placement.FlatEnoughPlacement;
 import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.category.CoreCrops;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.Vec3i;
@@ -9,6 +15,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -74,6 +82,28 @@ public class BuiltinPlacedFeatures
     public static final ResourceKey<PlacedFeature> STRATINE = createKey(AncientGroundCore.MOD_ID, "vein/stratine");
     public static final ResourceKey<PlacedFeature> SURFACE_GALENA = createKey(AncientGroundCore.MOD_ID, "vein/surface_galena");
     public static final ResourceKey<PlacedFeature> TERRACOTTA = createKey(AncientGroundCore.MOD_ID, "vein/terracotta");
+
+    public static final ResourceKey<PlacedFeature> AMARANTH = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/amaranth");
+    public static final ResourceKey<PlacedFeature> AMARANTH_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/amaranth_patch");
+    public static final ResourceKey<PlacedFeature> COFFEE = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/coffee");
+    public static final ResourceKey<PlacedFeature> COFFEE_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/coffee_patch");
+    public static final ResourceKey<PlacedFeature> COTTON = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/cotton");
+    public static final ResourceKey<PlacedFeature> COTTON_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/cotton_patch");
+
+    public static final ResourceKey<PlacedFeature> CLOVER = createKey(AncientGroundCore.MOD_ID, "plant/clover");
+    public static final ResourceKey<PlacedFeature> CLOVER_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/clover_patch");
+    public static final ResourceKey<PlacedFeature> FOUR_LEAF_CLOVER = createKey(AncientGroundCore.MOD_ID, "plant/four_leaf_clover");
+    public static final ResourceKey<PlacedFeature> FOUR_LEAF_CLOVER_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/four_leaf_clover_patch");
+
+    public static final ResourceKey<PlacedFeature> FIG_TREE = createKey(AncientGroundCore.MOD_ID, "plant/fruit_trees/fig");
+    public static final ResourceKey<PlacedFeature> WALNUT_TREE = createKey(AncientGroundCore.MOD_ID, "plant/fruit_trees/walnut");
+    public static final ResourceKey<PlacedFeature> WOLFBERRY_TREE = createKey(AncientGroundCore.MOD_ID, "plant/fruit_trees/wolfberry");
+
+    public static final ResourceKey<PlacedFeature> EARTHENWARE_PATCH = createKey(AncientGroundCore.MOD_ID, "soil_disc/earthenware");
+    public static final ResourceKey<PlacedFeature> YELLOWWARE_PATCH = createKey(AncientGroundCore.MOD_ID, "soil_disc/yellowware");
+    public static final ResourceKey<PlacedFeature> YIXING_PATCH = createKey(AncientGroundCore.MOD_ID, "soil_disc/yixing");
+
+
     public static BootstrapContext<PlacedFeature> CTX;
     public static HolderGetter<ConfiguredFeature<?, ?>> REGISTRY;
 
@@ -142,6 +172,45 @@ public class BuiltinPlacedFeatures
         createBlank(STRATINE, BuiltinConfiguredFeatures.STRATINE);
         createBlank(SURFACE_GALENA, BuiltinConfiguredFeatures.SURFACE_GALENA);
         createBlank(TERRACOTTA, BuiltinConfiguredFeatures.TERRACOTTA);
+
+        createWildCropPatch(
+                AMARANTH, BuiltinConfiguredFeatures.AMARANTH,
+                CoreBlocks.WILD_CROPS.get(CoreCrops.AMARANTH).get().defaultBlockState(),
+                AMARANTH_PATCH, BuiltinConfiguredFeatures.AMARANTH_PATCH
+        );
+        createWildCropPatch(
+                COFFEE, BuiltinConfiguredFeatures.COFFEE,
+                CoreBlocks.WILD_CROPS.get(CoreCrops.COFFEE).get().defaultBlockState(),
+                COFFEE_PATCH, BuiltinConfiguredFeatures.COFFEE_PATCH,
+                simpleClimatePlacement(16, 30, 144, 450)
+        );
+        createWildCropPatch(
+                COTTON, BuiltinConfiguredFeatures.COTTON,
+                CoreBlocks.WILD_CROPS.get(CoreCrops.COTTON).get().defaultBlockState(),
+                COTTON_PATCH, BuiltinConfiguredFeatures.COTTON_PATCH,
+                simpleClimatePlacement(14, 26, 100, 270)
+        );
+
+        createFlowerPatch(
+                CLOVER, BuiltinConfiguredFeatures.CLOVER,
+                SpectrumBlocks.CLOVER.get().defaultBlockState(), CLOVER_PATCH,
+                BuiltinConfiguredFeatures.CLOVER_PATCH,
+                simpleClimatePlacement(-3, 11, 150, 400)
+        );
+        createFlowerPatch(
+                FOUR_LEAF_CLOVER, BuiltinConfiguredFeatures.FOUR_LEAF_CLOVER,
+                SpectrumBlocks.FOUR_LEAF_CLOVER.get().defaultBlockState(),
+                FOUR_LEAF_CLOVER_PATCH, BuiltinConfiguredFeatures.FOUR_LEAF_CLOVER_PATCH,
+                simpleClimatePlacement(-3, 11, 150, 400)
+        );
+
+        createFruitTree(FIG_TREE, BuiltinConfiguredFeatures.FIG_TREE, simpleClimatePlacement(3, 35, 350, 490, 3));
+        createFruitTree(WALNUT_TREE, BuiltinConfiguredFeatures.WALNUT_TREE, simpleClimatePlacement(-16, 13, 50, 350, 3));
+        createFruitTree(WOLFBERRY_TREE, BuiltinConfiguredFeatures.WOLFBERRY_TREE, simpleClimatePlacement(10, 40, 350, 500, 3));
+
+        createClayDisc(EARTHENWARE_PATCH, BuiltinConfiguredFeatures.EARTHENWARE_PATCH);
+        createClayDisc(YELLOWWARE_PATCH, BuiltinConfiguredFeatures.YELLOWWARE_PATCH);
+        createClayDisc(YIXING_PATCH, BuiltinConfiguredFeatures.YIXING_PATCH);
     }
 
     private static void createDeeperDownGeode(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured)
@@ -164,14 +233,136 @@ public class BuiltinPlacedFeatures
         );
     }
 
+    @SuppressWarnings("deprecation")
+    private static void createWildCropPatch(ResourceKey<PlacedFeature> keyPlacedSingle, ResourceKey<ConfiguredFeature<?, ?>> keyConfiguredSingle, BlockState block, ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured, ClimatePlacement placement)
+    {
+        create(
+                keyPlacedSingle,
+                keyConfiguredSingle,
+                List.of(
+                        BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(block, Vec3i.ZERO))
+                )
+        );
+
+        create(
+                keyPlaced,
+                keyConfigured,
+                List.of(
+                        CountOnEveryLayerPlacement.of(1), // not sure what other method to use other than the deprecated one
+                        RarityFilter.onAverageOnceEvery(80),
+                        BiomeFilter.biome(),
+                        placement
+                )
+        );
+    }
+
+    @SuppressWarnings("deprecation")
+    private static void createWildCropPatch(ResourceKey<PlacedFeature> keyPlacedSingle, ResourceKey<ConfiguredFeature<?, ?>> keyConfiguredSingle, BlockState block, ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured)
+    {
+        create(
+                keyPlacedSingle,
+                keyConfiguredSingle,
+                List.of(
+                        BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(block, Vec3i.ZERO))
+                )
+        );
+
+        create(
+                keyPlaced,
+                keyConfigured,
+                List.of(
+                        CountOnEveryLayerPlacement.of(1), // not sure what other method to use other than the deprecated one
+                        RarityFilter.onAverageOnceEvery(8),
+                        BiomeFilter.biome()
+                )
+        );
+    }
+
+    private static void createFlowerPatch(ResourceKey<PlacedFeature> keyPlacedSingle, ResourceKey<ConfiguredFeature<?, ?>> keyConfiguredSingle, BlockState block, ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured, ClimatePlacement placement)
+    {
+        create(
+                keyPlacedSingle,
+                keyConfiguredSingle,
+                List.of(
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+                        BlockPredicateFilter.forPredicate(AirOrEmptyFluidPredicate.ONLY_IN_AIR_PREDICATE),
+                        BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(block, Vec3i.ZERO))
+                )
+        );
+
+        create(
+                keyPlaced,
+                keyConfigured,
+                List.of(
+                        RarityFilter.onAverageOnceEvery(25),
+                        InSquarePlacement.spread(),
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+                        placement
+                )
+        );
+    }
+
     private static void createBlank(ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured)
     {
         create(keyPlaced, keyConfigured, List.of());
     }
 
-    private static ResourceKey<PlacedFeature> createKey(String name, String path)
+    private static void createFruitTree( ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured, ClimatePlacement placement)
     {
-        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(name, path));
+        create(
+                keyPlaced,
+                keyConfigured,
+                List.of(
+                        RarityFilter.onAverageOnceEvery(70),
+                        InSquarePlacement.spread(),
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+                        placement
+                )
+        );
+    }
+
+    private static void createClayDisc( ResourceKey<PlacedFeature> keyPlaced, ResourceKey<ConfiguredFeature<?, ?>> keyConfigured)
+    {
+        create(
+                keyPlaced,
+                keyConfigured,
+                List.of(
+                        RarityFilter.onAverageOnceEvery(15),
+                        InSquarePlacement.spread(),
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG),
+                        new FlatEnoughPlacement(0.4f, 2, 4) //default radius and maxDepth
+                )
+        );
+    }
+
+    private static HeightRangePlacement createHeight(int min, int max)
+    {
+        return HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(min), VerticalAnchor.absolute(max)));
+    }
+
+    private static ClimatePlacement simpleClimatePlacement(int minTemp, int maxTemp, int minGroundwater, int maxGroundwater)
+    {
+        return simpleClimatePlacement(minTemp, maxTemp, minGroundwater, maxGroundwater, 1);
+    }
+
+    private static ClimatePlacement simpleClimatePlacement(int minTemp, int maxTemp, int minGroundwater, int maxGroundwater, int maxForest)
+    {
+        return new ClimatePlacement(
+                minTemp,
+                maxTemp,
+                minGroundwater,
+                maxGroundwater,
+                -1,
+                1,
+                false,
+                0,
+                maxForest,
+                List.of(),
+                -64,
+                320,
+                false,
+                false
+        );
     }
 
     private static void create(ResourceKey<PlacedFeature> key, ResourceKey<ConfiguredFeature<?, ?>> keyFeature, List<PlacementModifier> list)
@@ -179,8 +370,8 @@ public class BuiltinPlacedFeatures
         CTX.register(key, new PlacedFeature(REGISTRY.getOrThrow(keyFeature), list));
     }
 
-    private static HeightRangePlacement createHeight(int min, int max)
+    private static ResourceKey<PlacedFeature> createKey(String name, String path)
     {
-        return HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(min), VerticalAnchor.absolute(max)));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(name, path));
     }
 }
