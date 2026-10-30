@@ -1,6 +1,0 @@
-{
-  "type": "tfc:fruit_trees",
-  "config": {
-    "state": "modpack:plant/walnut_growing_branch"
-  }
-}

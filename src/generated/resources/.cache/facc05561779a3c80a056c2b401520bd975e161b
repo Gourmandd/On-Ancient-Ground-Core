@@ -1,1 +1,15 @@
-// 1.21.1	2026-06-11T17:04:18.45183383	Tags for minecraft:worldgen/placed_feature mod id modpack
+// 1.21.1	2026-10-30T14:13:36.033783768	Tags for minecraft:worldgen/placed_feature mod id modpack
+be875ea9a4906b1bbd4346aa4d5eacecd46743f8 data/modpack/tags/worldgen/placed_feature/deeper_down_ores.json
+6430c5f45de8568f7a4c4975007ca6472c28e02d data/tfc/tags/worldgen/placed_feature/feature/crops.json
+77a8fa4fd69463c66e72ec7e5184b950761e6523 data/tfc/tags/worldgen/placed_feature/feature/fruit_trees.json
+8b7bc2da9813ef28ba88ba3816474fa9f104c36d data/tfc/tags/worldgen/placed_feature/feature/land_plants.json
+bbb2829ebb3ae096df707ced9f85effb00fcf14e data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/buttes.json
+bbb2829ebb3ae096df707ced9f85effb00fcf14e data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/canyons.json
+bbb2829ebb3ae096df707ced9f85effb00fcf14e data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/highlands.json
+bbb2829ebb3ae096df707ced9f85effb00fcf14e data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/hills.json
+d3bd799da824a2a2d6c162df3663fa1ef2f164ae data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/lake.json
+29968874cfab459af4cdb1ec926d88fbf974bec3 data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/low_canyons.json
+d3bd799da824a2a2d6c162df3663fa1ef2f164ae data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/lowlands.json
+29968874cfab459af4cdb1ec926d88fbf974bec3 data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/plains.json
+29968874cfab459af4cdb1ec926d88fbf974bec3 data/tfc/tags/worldgen/placed_feature/in_biome/soil_discs/plateau.json
+bc5e160c3af42baf1b9d6ab67c4a63ce9f1aabef data/tfc/tags/worldgen/placed_feature/in_biome/veins.json

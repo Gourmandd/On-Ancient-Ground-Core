@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": "modpack:plant/wild_crop/cotton",
+    "tries": 6,
+    "xz_spread": 5,
+    "y_spread": 1
+  }
+}

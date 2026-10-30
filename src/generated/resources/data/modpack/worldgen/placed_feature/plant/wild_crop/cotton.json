@@ -1,0 +1,17 @@
+{
+  "feature": "modpack:plant/wild_crop/cotton",
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "modpack:wild_crop/cotton",
+          "Properties": {
+            "mature": "false"
+          }
+        }
+      }
+    }
+  ]
+}

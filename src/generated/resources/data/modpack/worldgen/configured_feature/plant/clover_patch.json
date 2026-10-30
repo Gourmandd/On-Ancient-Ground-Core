@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": "modpack:plant/clover",
+    "tries": 10,
+    "xz_spread": 10,
+    "y_spread": 1
+  }
+}
