@@ -18,7 +18,7 @@ import java.util.concurrent.CompletableFuture;
 public class BuiltinPlacedFeatureTags extends TagsProvider<PlacedFeature>
 {
 
-    private static final TagKey<PlacedFeature> DD_ORE_VEINS = TagKey.create(Registries.PLACED_FEATURE, AncientGroundCore.location("deeper_down_ores"));
+    public static final TagKey<PlacedFeature> DD_ORE_VEINS = TagKey.create(Registries.PLACED_FEATURE, AncientGroundCore.location("deeper_down_ores"));
     private static final TagKey<PlacedFeature> TFC_ORE_VEINS = TagKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "in_biome/veins"));
     private static final TagKey<PlacedFeature> SOIL_DISCS_BUTTES = TagKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "in_biome/soil_discs/buttes"));
     private static final TagKey<PlacedFeature> SOIL_DISCS_CANYONS = TagKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "in_biome/soil_discs/canyons"));
@@ -96,13 +96,11 @@ public class BuiltinPlacedFeatureTags extends TagsProvider<PlacedFeature>
         tag(DD_ORE_VEINS)
                 .add(BuiltinPlacedFeatures.BISMUTH_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.CRYOLITE_DEEPER_DOWN)
-                .add(BuiltinPlacedFeatures.DIAMOND_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.GARNIERITE_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.HEMATITE_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.LIMONITE_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.MALACHITE_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.NATIVE_COPPER_DEEPER_DOWN)
-                .add(BuiltinPlacedFeatures.NATIVE_GOLD_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.NATIVE_SILVER_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.PALTAERIA_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.SHIMERSTONE_DEEPER_DOWN)
@@ -111,11 +109,9 @@ public class BuiltinPlacedFeatureTags extends TagsProvider<PlacedFeature>
                 .add(BuiltinPlacedFeatures.CINNABAR_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.SULFUR_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.SALTPETER_DEEPER_DOWN)
-                .add(BuiltinPlacedFeatures.EMERALD_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.OPAL_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.CASSITERITE_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.SYLVITE_DEEPER_DOWN)
-                .add(BuiltinPlacedFeatures.LAPIS_LAZULI_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.LIGNITE_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.BORAX_DEEPER_DOWN)
                 .add(BuiltinPlacedFeatures.GYPSUM_DEEPER_DOWN)

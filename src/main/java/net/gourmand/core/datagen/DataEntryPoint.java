@@ -21,6 +21,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import java.util.Collections;
 import java.util.List;
@@ -39,6 +40,7 @@ public final class DataEntryPoint
         RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder()
                 .add(Registries.CONFIGURED_FEATURE, BuiltinConfiguredFeatures::bootstrap)
                 .add(Registries.PLACED_FEATURE, BuiltinPlacedFeatures::bootstrap)
+                .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, BuiltinBiomeModifiers::bootstrap)
                 .add(RockSettings.KEY, BuiltinRockSettings::bootstrap);
 
         final var lookup = add(event, new DatapackBuiltinEntriesProvider(
@@ -54,6 +56,7 @@ public final class DataEntryPoint
         add(event, new BuiltinFluidTags(event, lookup));
         add(event, new BuiltinItemTags(event, lookup));
         add(event, new BuiltinPlacedFeatureTags(event, lookup));
+        add(event, new BuiltinBiomeTags(event, lookup));
 
         add(event, new BuiltinSupports(output, lookup));
         add(event, new BuiltinBlockStates(output, event.getExistingFileHelper()));

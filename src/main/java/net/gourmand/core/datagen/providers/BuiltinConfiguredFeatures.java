@@ -152,20 +152,16 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> CASSITERITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cassiterite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CINNABAR_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cinnabar");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYOLITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cryolite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/diamond");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> EMERALD_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/emerald");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GARNIERITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/garnierite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GRAPHITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/graphite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GYPSUM_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/gypsum");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HALITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/halite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HEMATITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/hematite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> KAOLINITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/kaolinite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LAPIS_LAZULI_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/lapis_lazuli");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIGNITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/lignite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIMONITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/limonite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MALACHITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/malachite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_COPPER_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_copper");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_GOLD_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_gold");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_SILVER_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_silver");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OPAL_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/opal");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PALTAERIA_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/paltaeria");
@@ -275,16 +271,6 @@ public class BuiltinConfiguredFeatures  {
                 TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
         );
 
-        createOreGeode(DIAMOND_DEEPER_DOWN, Rock.GABBRO, TFCOres.DIAMOND,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
-
-        createOreGeode(EMERALD_DEEPER_DOWN, Rock.DIORITE, TFCOres.EMERALD,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.DIORITE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
-
         createOreGeode(GARNIERITE_DEEPER_DOWN, Rock.GABBRO, TFCOres.GARNIERITE,
                 TFCBlocks.GRADED_ORES.get(Rock.GABBRO).get(Ore.GARNIERITE).get(Ore.Grade.POOR).get(),
                 TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
@@ -318,11 +304,6 @@ public class BuiltinConfiguredFeatures  {
                 0.25
         );
 
-        createOreGeode(LAPIS_LAZULI_DEEPER_DOWN, Rock.LIMESTONE, TFCOres.LAPIS_LAZULI,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.LIMESTONE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get()
-        );
-
         createOreGeode(LIGNITE_DEEPER_DOWN, Rock.DOLOMITE, TFCOres.LIGNITE,
                 TFCBlocks.ROCK_BLOCKS.get(Rock.DOLOMITE).get(Rock.BlockType.HARDENED).get(),
                 CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE).get()
@@ -340,11 +321,6 @@ public class BuiltinConfiguredFeatures  {
 
         createOreGeode(NATIVE_COPPER_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_COPPER,
                 TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_COPPER).get(Ore.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
-
-        createOreGeode(NATIVE_GOLD_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_GOLD,
-                TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_GOLD).get(Ore.Grade.POOR).get(),
                 TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
         );
 

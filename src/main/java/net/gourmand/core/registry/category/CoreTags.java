@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 
@@ -18,14 +19,22 @@ import java.util.Map;
 
 public class CoreTags
 {
-
-
     public static final TagKey<Fluid> GLASS_MOLD_ACCEPTABLE = createFluidTag("molten_glass");
     public static final TagKey<Fluid> WROUGHT_IRON_BUCKET_ACCEPTABLE = createFluidTag("usable_in_wrought_iron_bucket");
 
     private static TagKey<Fluid> createFluidTag(String name)
     {
         return TagKey.create(Registries.FLUID, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name));
+    }
+
+    public static class Biomes
+    {
+        public static final TagKey<Biome> IN_DEEPER_DOWN = create("in_deeper_down");
+
+        private static TagKey<Biome> create(String name)
+        {
+            return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name));
+        }
     }
 
     public static class Blocks
