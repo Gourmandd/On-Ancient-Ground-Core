@@ -1,4 +1,4 @@
-// 1.21.1	2026-11-05T19:27:40.579850577	Recipes
+// 1.21.1	2026-11-05T20:05:34.145027943	Recipes
 74d08b4749e380fba2d005605c7ebb389e1b8576 data/modpack/recipe/alloy/aluminium_bronze.json
 2b8aaefb8411d25fa8d2563ddf617af092decbd1 data/modpack/recipe/alloy/cast_iron_alloy.json
 ce75347b3aeb00333930a53c795d09ba5de88583 data/modpack/recipe/alloy/electrum.json
@@ -1639,6 +1639,22 @@ d597f68a41a67bd2a208768dc5f3ee3eae31e2d4 data/modpack/recipe/knapping/ceramic/yi
 742f655050420338c7b205bed0d62f3bf0fac1f2 data/modpack/recipe/knapping/ceramic/yixing/unfired_spindle_head.json
 d6bd8d93b7cb6b6fb59cd13fbf3e15e944a0c608 data/modpack/recipe/knapping/ceramic/yixing/unfired_sword_blade_mold.json
 fd8937fafc977ac7c2e9f09c60dadb32ed3b9081 data/modpack/recipe/knapping/ceramic/yixing/unfired_vessel.json
+39006ffc5a50cdad71e4f92ef216cdd02d75a2df data/modpack/recipe/quern/black_concrete_powder.json
+81cbf5fd189bf6349cef680f670c3be70de4be6c data/modpack/recipe/quern/blue_concrete_powder.json
+9fda60a9a08ba1f472fb6979ce59e101c434dc26 data/modpack/recipe/quern/brown_concrete_powder.json
+3ad8cb1112064a92d374df09f6eb799b46f6f986 data/modpack/recipe/quern/cyan_concrete_powder.json
+b293374089ce0fc940e9ac910bb79aa00b197739 data/modpack/recipe/quern/gray_concrete_powder.json
+721f972acade3118d35b2e9f850ed8b9ef57f55f data/modpack/recipe/quern/green_concrete_powder.json
+20ea67e71be517769abb04d375181806e3342a3e data/modpack/recipe/quern/light_blue_concrete_powder.json
+de2eb92beeb460cd1509feb85f4f66bd33d6de4a data/modpack/recipe/quern/light_gray_concrete_powder.json
+32b5214c213013bf54066e3aefc18beaa9fc7e18 data/modpack/recipe/quern/lime_concrete_powder.json
+80b76025fa08fdd57d712f5cc7640aa054dbb5bd data/modpack/recipe/quern/magenta_concrete_powder.json
+903d1ca4abf6e0e04fffed2df0d9ebdf527388fb data/modpack/recipe/quern/orange_concrete_powder.json
+8d40859b2b55678004dbed664f2ef8a561962081 data/modpack/recipe/quern/pink_concrete_powder.json
+d7167d11be750e8e96407807c84d0e9ea508906c data/modpack/recipe/quern/purple_concrete_powder.json
+690b53bcb31e6afaae68bb0b83f99dcfc2626373 data/modpack/recipe/quern/red_concrete_powder.json
+3590625e04b042ddb1964c8e76782fc4ed93cb3f data/modpack/recipe/quern/white_concrete_powder.json
+04090530e1169905ecb80afa3b3b50dadfd77450 data/modpack/recipe/quern/yellow_concrete_powder.json
 8b1642f585b36b397ce7cc64bb11ae36b3f96de9 data/modpack/recipe/welding/metal/double_ingot/aluminium.json
 91f7d79b0d4c9b7e661d59b3cae8fb0671b77c39 data/modpack/recipe/welding/metal/double_ingot/aluminium_bronze.json
 20b68861f8a2a54a34c0d8b1812738ff5d8b072c data/modpack/recipe/welding/metal/double_ingot/cast_iron_alloy.json

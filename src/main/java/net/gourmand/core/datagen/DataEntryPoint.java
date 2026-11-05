@@ -74,6 +74,7 @@ public final class DataEntryPoint
         add(event, new PressingRecipes(output, lookup));
         add(event, new DeployingRecipes(output, lookup));
         add(event, new CrushingRecipes(output, lookup));
+        add(event, new MillingRecipes(output, lookup));
         add(event, new ItemApplicationRecipes(output, lookup));
         add(event, new FillingRecipes(output, lookup));
         add(event, new SequencedAssemblyRecipes(output, lookup));

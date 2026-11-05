@@ -1,0 +1,13 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:light_blue_concrete"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:light_blue_concrete_powder"
+    }
+  ]
+}
