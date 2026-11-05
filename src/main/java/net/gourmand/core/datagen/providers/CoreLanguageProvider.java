@@ -12,6 +12,7 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreFluids;
+import net.gourmand.core.registry.CoreGlassworkingOperations;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
 import net.gourmand.core.util.TextUtil;
@@ -55,6 +56,8 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
         add("block.shutter.interaction_shutter_netherite", "Shutter Interaction");
         add("block.shutter.interaction_shutter_copper", "Shutter Interaction");
         add("block.shutter.interaction_shutter_glass", "Shutter Interaction");
+
+        add(CoreGlassworkingOperations.OBSIDIAN.get().getTranslationId(), "Obsidian");
 
         addItem(CoreItems.GLASS_MOLD, "Glass Block Mold");
         addItem(CoreItems.GLASS_PANE_MOLD, "Glass Pane Mold");

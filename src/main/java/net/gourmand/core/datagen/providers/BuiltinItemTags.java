@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 import architectspalette.core.registry.APTags;
+import com.simibubi.create.AllItems;
 import de.dafuqs.spectrum.SpectrumCommon;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
@@ -367,6 +368,8 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         add(CoreBlocks.FRUIT_TREE_SAPLINGS, List.of(ItemTags.SAPLINGS));
 
         add(CoreBlocks.WILD_CROPS, List.of(TFCTags.Items.WILD_CROPS));
+
+        tag(TFCTags.Items.BOWL_POWDERS).add(AllItems.POWDERED_OBSIDIAN.getKey());
     }
 
     private void generateMultiblock()

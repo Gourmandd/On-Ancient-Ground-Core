@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-28T18:43:08.712218651	Recipes
+// 1.21.1	2026-11-05T19:27:40.579850577	Recipes
 74d08b4749e380fba2d005605c7ebb389e1b8576 data/modpack/recipe/alloy/aluminium_bronze.json
 2b8aaefb8411d25fa8d2563ddf617af092decbd1 data/modpack/recipe/alloy/cast_iron_alloy.json
 ce75347b3aeb00333930a53c795d09ba5de88583 data/modpack/recipe/alloy/electrum.json
@@ -1183,6 +1183,7 @@ ac82fb3db8b7c45cdef7419d67ac3e8c7d6ff829 data/modpack/recipe/crafting/yellow_pla
 3697a8958391d8ec10613a19a6aefd14187767bb data/modpack/recipe/crafting/yellow_pressure_plate.json
 552b1cac837eb41752c1267b5d844dc01d331249 data/modpack/recipe/crafting/yellow_slab.json
 42795df9fd07c60438334afe8e69174cddc35519 data/modpack/recipe/crafting/yellow_stairs.json
+e7ee5067bd59ff2c3e7daf29fd2253ce2d4fcc03 data/modpack/recipe/glassworking/tinted_glass.json
 2b335e6a18d5d15f0862f21b6c31dc657b1a7bc1 data/modpack/recipe/heating/black_framed_glass.json
 2580ae0faffcf3fadd5748df6ca3d4f87827d088 data/modpack/recipe/heating/black_framed_glass_pane.json
 78e845b3e845e7465ac94a6adf9afe0ba6286c64 data/modpack/recipe/heating/black_stained_glass.json
@@ -1794,3 +1795,4 @@ b24dabacf1df2fa7c37b02f50368b3ce556a1566 data/spectrum/recipe/crafting_table/wee
 b24dabacf1df2fa7c37b02f50368b3ce556a1566 data/spectrum/recipe/crafting_table/weeping_gala/slab.json
 b24dabacf1df2fa7c37b02f50368b3ce556a1566 data/spectrum/recipe/crafting_table/weeping_gala/stairs.json
 b24dabacf1df2fa7c37b02f50368b3ce556a1566 data/spectrum/recipe/crafting_table/weeping_gala/trapdoor.json
+b24dabacf1df2fa7c37b02f50368b3ce556a1566 data/tfc/recipe/glassworking/tinted_glass.json
