@@ -96,7 +96,7 @@ public class QuernEntry extends EntryProvider {
         // page 7: quern recipes
         this.page("page7", () -> BookQuernPageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "quern/red_dye"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "quern/dye/making_red_dye"))
                 .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "quern/powder/native_gold_poor"))
         );
 

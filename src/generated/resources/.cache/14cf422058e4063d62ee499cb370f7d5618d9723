@@ -1,4 +1,4 @@
-// 1.21.1	2026-10-27T22:01:43.658328705	Books: modpack
+// 1.21.1	2026-11-06T18:35:38.058464646	Books: modpack
 dc0093024ca2aa541bcec97e1b13d97a60024c8d data/modpack/modonomicon/books/guide/book.json
 a5df84a61cf28fe7129a43717daea0c3a9bda415 data/modpack/modonomicon/books/guide/categories/carpentry.json
 0071f5bc3998abbabe27600540de85d1259932cd data/modpack/modonomicon/books/guide/categories/devices.json
@@ -61,7 +61,7 @@ e6ea559e9bf1a034d602dec24299232d46a61939 data/modpack/modonomicon/books/guide/en
 82d5c7f87f477941110b990819cb704ac62a800e data/modpack/modonomicon/books/guide/entries/devices/oven_appliances.json
 6ae577f1638c582ff93e3eca487e0150a6287f8b data/modpack/modonomicon/books/guide/entries/devices/powderkeg.json
 0f12fb7011afc68341d3dbdb203633083d3df64e data/modpack/modonomicon/books/guide/entries/devices/precision_clock.json
-63d72dcf4f0dc9526d7bbeb5c08e802f176425e4 data/modpack/modonomicon/books/guide/entries/devices/quern.json
+192749ae4693b7769b4074c5b2ec12d4edb4ffba data/modpack/modonomicon/books/guide/entries/devices/quern.json
 d15138861360f23a8855004e4698bd54d16e8b75 data/modpack/modonomicon/books/guide/entries/devices/stomping_barrel.json
 23e99cf3fe5344a9b359953fa4bf0743225212e7 data/modpack/modonomicon/books/guide/entries/devices/stove.json
 6b94ed690266561e3f16212263365324c9bd2296 data/modpack/modonomicon/books/guide/entries/devices/thatch_bed.json
@@ -174,7 +174,7 @@ bae605318158de2351d234ebc9598cc7742779e6 data/modpack/modonomicon/books/guide/en
 352ea2969fea3346997bc8b700fe48ba45b3a9ee data/modpack/modonomicon/books/guide/entries/masonry/bricks_and_mortar.json
 e4d2d427bc68a90b7d9f4dd452f9c2d299dc5413 data/modpack/modonomicon/books/guide/entries/masonry/chiseled_bricks.json
 c945a89a9ed1b46922c68aea20f6867c66e85bfb data/modpack/modonomicon/books/guide/entries/masonry/cobble.json
-506a379ab1d78934caef3529c815ad63df8606c7 data/modpack/modonomicon/books/guide/entries/masonry/quarrying.json
+e5eed3d0ff7565f45c5164083380630a635dd2f0 data/modpack/modonomicon/books/guide/entries/masonry/quarrying.json
 921077d0832c7013b8dad348652f30e1016401d4 data/modpack/modonomicon/books/guide/entries/masonry/smooth_stone.json
 1eb7e38cc3aa7253f48b22b4fe000813103c563d data/modpack/modonomicon/books/guide/entries/masonry/stone_bricks.json
 4129e22728d3fbec8366feadde4a645a7b80efb3 data/modpack/modonomicon/books/guide/entries/masonry/stone_button.json
@@ -185,7 +185,7 @@ dd30447e4239f1186263ce5b7a9e114c2ea16a4b data/modpack/modonomicon/books/guide/en
 cc87bbd129afbb4cc7c4343b0f92df459ea0c09c data/modpack/modonomicon/books/guide/entries/metalworking/armor_trim.json
 0e64ca7d7d596196990133af7351490c69ea2216 data/modpack/modonomicon/books/guide/entries/metalworking/bars.json
 9829b3b6e9f25e85049ef263d3c8da290289e092 data/modpack/modonomicon/books/guide/entries/metalworking/bellows.json
-8fb51b57f832d13558d57157f380b65d8822147a data/modpack/modonomicon/books/guide/entries/metalworking/black_steel.json
+f47db3ec35acf8c3a0be9fd759f3dcf0f4866c3d data/modpack/modonomicon/books/guide/entries/metalworking/black_steel.json
 fdff263b78deb7f3680dcd6e01087c78082f5caf data/modpack/modonomicon/books/guide/entries/metalworking/blast_furnace.json
 17382be1ad46f3a9dc904f47bacb27a4bd4fbdcd data/modpack/modonomicon/books/guide/entries/metalworking/block.json
 db30c829acc02e51002ff226e361c8c20d82aa4b data/modpack/modonomicon/books/guide/entries/metalworking/bloomery.json
@@ -213,7 +213,7 @@ becbbd6e490d60ccfd79d277dc74189d2de3d8d7 data/modpack/modonomicon/books/guide/en
 a99c69c0558cd02ceaab3ee0ffbc4cc317d3abf4 data/modpack/modonomicon/books/guide/entries/mining/ore_indicators.json
 e7fd359d3a810d369c4f27f0de1467e56780a327 data/modpack/modonomicon/books/guide/entries/mining/powderkeg.json
 02e73a5669b0ed17c09b432deef205881863490e data/modpack/modonomicon/books/guide/entries/mining/prospecting.json
-08b23d5c7e4f0c2d3fac0bd0abe598423f1c87d7 data/modpack/modonomicon/books/guide/entries/mining/quarrying.json
+777398ff84e9b82f5741ad206d5b985316176920 data/modpack/modonomicon/books/guide/entries/mining/quarrying.json
 8b3c60728170a6c55774d118ab3d12283b13dfb4 data/modpack/modonomicon/books/guide/entries/mining/rope.json
 2056416ee08c252956f65b2f3f5387a05c257bdf data/modpack/modonomicon/books/guide/entries/mining/sluice.json
 8e2670be2b401ca71e0d72b625a75b2ae3a68f1a data/modpack/modonomicon/books/guide/entries/mining/supports.json

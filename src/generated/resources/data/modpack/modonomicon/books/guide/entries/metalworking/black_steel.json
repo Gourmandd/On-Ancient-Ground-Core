@@ -28,7 +28,7 @@
         "type": "modonomicon:none"
       },
       "recipe_id_1": "tfc:casting/high_carbon_black_steel_ingot",
-      "recipe_id_2": "tfc:casting/high_carbon_black_steel_ingot_fire_ingot",
+      "recipe_id_2": "tfc:casting/high_carbon_black_steel_fire_ingot",
       "text": "book.modpack.guide.metalworking.black_steel.page2.text",
       "title1": "",
       "title2": ""

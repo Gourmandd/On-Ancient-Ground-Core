@@ -40,7 +40,7 @@ public class BlackSteelMakingEntry extends EntryProvider {
         this.page("page2", () -> BookCastingPageModel.create()
                 .withText(this.context().pageText())
                 .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "casting/high_carbon_black_steel_ingot"))
-                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "casting/high_carbon_black_steel_ingot_fire_ingot"))
+                .withRecipeId2(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "casting/high_carbon_black_steel_fire_ingot"))
         );
 
         this.pageTitle(entryName());
