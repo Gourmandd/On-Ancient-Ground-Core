@@ -5,6 +5,7 @@
       "item": "minecraft:green_concrete"
     }
   ],
+  "processing_time": 200,
   "results": [
     {
       "id": "minecraft:green_concrete_powder"

@@ -1,0 +1,14 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "tfc:gem/lapis_lazuli"
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "id": "tfc:powder/lapis_lazuli"
+    }
+  ]
+}

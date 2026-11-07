@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "tfc:grass/podzol"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:grass_path/podzol"
+    }
+  ]
+}

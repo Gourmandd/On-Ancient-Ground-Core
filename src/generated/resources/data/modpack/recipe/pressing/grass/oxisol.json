@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "tfc:grass/oxisol"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:grass_path/oxisol"
+    }
+  ]
+}

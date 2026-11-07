@@ -5,6 +5,7 @@
       "item": "minecraft:orange_concrete"
     }
   ],
+  "processing_time": 200,
   "results": [
     {
       "id": "minecraft:orange_concrete_powder"

@@ -5,6 +5,7 @@
       "item": "minecraft:lime_concrete"
     }
   ],
+  "processing_time": 200,
   "results": [
     {
       "id": "minecraft:lime_concrete_powder"

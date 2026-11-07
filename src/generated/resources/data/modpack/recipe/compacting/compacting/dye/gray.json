@@ -1,0 +1,16 @@
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "tfc:gray_dye"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:gray_dye"
+    }
+  ]
+}

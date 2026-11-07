@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "tfc:grass/mollisol"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:grass_path/mollisol"
+    }
+  ]
+}

@@ -1,8 +1,29 @@
-// 1.21.1	2026-04-06T08:58:53.393836783	modpack's processing recipes: rolling
+// 1.21.1	2026-11-07T13:38:57.72611275	modpack's processing recipes: rolling
 75da976cb3609e25160430694979f555b208f9cb data/modpack/recipe/rolling/metal/rod/aluminium.json
 3848a6c8f126fc987047d0b754b5ebdb1bad87b1 data/modpack/recipe/rolling/metal/rod/aluminium_bronze.json
+d4ccd19266e14f14af6345128f49fa8934fea705 data/modpack/recipe/rolling/metal/rod/bismuth.json
+aafe7b85f9cf1ba294806723c25e11397738c394 data/modpack/recipe/rolling/metal/rod/bismuth_bronze.json
+a3097c331160fb40777a2eb1698a5385cd7051f4 data/modpack/recipe/rolling/metal/rod/black_bronze.json
+0b43ea35ccc0200248e443cd4ef00efbb55d6748 data/modpack/recipe/rolling/metal/rod/black_steel.json
+2f460482a3f2112cbecc38efcd938a35090478e4 data/modpack/recipe/rolling/metal/rod/blue_steel.json
+b577202c816ac5e555bf69944e6fc4a9f9b6549a data/modpack/recipe/rolling/metal/rod/brass.json
+3fe14cbeb231f93fe9dfcef63ee27f21f31c8e54 data/modpack/recipe/rolling/metal/rod/bronze.json
+44c95da2b5fb9f9f9cc57acc9d11d7f6f11fd39d data/modpack/recipe/rolling/metal/rod/cast_iron.json
 d72b597cf01e50b2d5ca02c83f39c7db84c4c40f data/modpack/recipe/rolling/metal/rod/cast_iron_alloy.json
+44c10918b6c996c6955c8fbe3773372d8b4d805e data/modpack/recipe/rolling/metal/rod/chromium.json
+b43eb8f3218a43c1db9173b4f2c2e716e8f8a8f9 data/modpack/recipe/rolling/metal/rod/copper.json
 92815ef66b0af3e15dc1ba4c513b9de7cfc099f5 data/modpack/recipe/rolling/metal/rod/electrum.json
+3afa41c94989c4c7b211cbe3d10086ba0da0dc00 data/modpack/recipe/rolling/metal/rod/gold.json
 1f6a595cf25f91eabceaafcff3b133ce25dca6db data/modpack/recipe/rolling/metal/rod/hardened_steel.json
 eacff7d0ed3f3713c1c3fb3eecda5f3e024276ec data/modpack/recipe/rolling/metal/rod/lead.json
 2479e65e91e463c8a08a08170bc9f8ff57d9d4ce data/modpack/recipe/rolling/metal/rod/nethersteel.json
+2e49add38f71885d059c7691a4ae31b7ce33daba data/modpack/recipe/rolling/metal/rod/nickel.json
+7e92480a7293efde6c634d1db3991cdce7fe0708 data/modpack/recipe/rolling/metal/rod/red_steel.json
+8a2ee284bca2d9abb609cb6e1483981808721460 data/modpack/recipe/rolling/metal/rod/rose_gold.json
+cd6e32c82e94f8a1b876c6dc769d97605303ef50 data/modpack/recipe/rolling/metal/rod/silver.json
+4cc229b1bdd97e593c3954544d978638462f0d7f data/modpack/recipe/rolling/metal/rod/stainless_steel.json
+cc546f860e066f70bd5bf3eec18a44eac1917f84 data/modpack/recipe/rolling/metal/rod/steel.json
+ceea547e7e0513df74c29980b9829c901fc7aa68 data/modpack/recipe/rolling/metal/rod/sterling_silver.json
+6ec168535c942c7383f42a0cc6dbdb8dc626a556 data/modpack/recipe/rolling/metal/rod/tin.json
+e9092be5904a29e6c57e533aef379d157eb5cd1e data/modpack/recipe/rolling/metal/rod/wrought_iron.json
+0766e1317e0be677ebba6581c0abdf2a6992e173 data/modpack/recipe/rolling/metal/rod/zinc.json

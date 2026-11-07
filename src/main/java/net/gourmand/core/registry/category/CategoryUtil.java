@@ -559,6 +559,25 @@ public class CategoryUtil
                 .put(DyeColor.RED, Blocks.RED_CONCRETE_POWDER)
                 .put(DyeColor.BLACK, Blocks.BLACK_CONCRETE_POWDER)
                 .build();
+
+        public static final Map<DyeColor, Item> TO_DYE = ImmutableMap.<DyeColor, Item>builder()
+                .put(DyeColor.WHITE, Items.WHITE_DYE)
+                .put(DyeColor.ORANGE, Items.ORANGE_DYE)
+                .put(DyeColor.MAGENTA, Items.MAGENTA_DYE)
+                .put(DyeColor.LIGHT_BLUE, Items.LIGHT_BLUE_DYE)
+                .put(DyeColor.YELLOW, Items.YELLOW_DYE)
+                .put(DyeColor.LIME, Items.LIME_DYE)
+                .put(DyeColor.PINK, Items.PINK_DYE)
+                .put(DyeColor.GRAY, Items.GRAY_DYE)
+                .put(DyeColor.LIGHT_GRAY, Items.LIGHT_GRAY_DYE)
+                .put(DyeColor.CYAN, Items.CYAN_DYE)
+                .put(DyeColor.PURPLE, Items.PURPLE_DYE)
+                .put(DyeColor.BLUE, Items.BLUE_DYE)
+                .put(DyeColor.BROWN, Items.BROWN_DYE)
+                .put(DyeColor.GREEN, Items.GREEN_DYE)
+                .put(DyeColor.RED, Items.RED_DYE)
+                .put(DyeColor.BLACK, Items.BLACK_DYE)
+                .build();
     }
 
     public static class Glass

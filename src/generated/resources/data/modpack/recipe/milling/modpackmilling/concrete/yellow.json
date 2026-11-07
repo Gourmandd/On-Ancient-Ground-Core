@@ -5,6 +5,7 @@
       "item": "minecraft:yellow_concrete"
     }
   ],
+  "processing_time": 200,
   "results": [
     {
       "id": "minecraft:yellow_concrete_powder"

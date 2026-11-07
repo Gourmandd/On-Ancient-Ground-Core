@@ -44,6 +44,21 @@ public class CrushingRecipes extends CrushingRecipeGen
             create(GRAVEL.getId().getPath(), b -> b.require(GRAVEL.get()).output(SAND.get()));
         }
 
+        for (Rock rockType : Rock.values())
+        {
+
+            final TFCBlocks.Id<Block> COBBLE = TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.COBBLE);
+            final TFCBlocks.Id<Block> MOSSY_COBBLE = TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.MOSSY_COBBLE);
+            final TFCBlocks.Id<Block> GRAVEL = TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.GRAVEL);
+            final DeferredHolder<Block, Block> SAND = TFCBlocks.SAND.get(CategoryUtil.TFCRock.TO_SAND_COLOR.get(rockType)).holder();
+
+            create(COBBLE.getId().getPath(), b -> b.require(COBBLE.get()).output(GRAVEL.get()));
+
+            create(MOSSY_COBBLE.getId().getPath(), b -> b.require(MOSSY_COBBLE.get()).output(GRAVEL.get()));
+
+            create(GRAVEL.getId().getPath(), b -> b.require(GRAVEL.get()).output(SAND.get()));
+        }
+
         // Colored glass
         for (DyeColor color : DyeColor.values())
         {

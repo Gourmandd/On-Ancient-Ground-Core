@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "afc:wood/wood/teak"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "afc:wood/stripped_wood/teak"
+    }
+  ]
+}

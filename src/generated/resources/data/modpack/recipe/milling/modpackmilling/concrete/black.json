@@ -5,6 +5,7 @@
       "item": "minecraft:black_concrete"
     }
   ],
+  "processing_time": 200,
   "results": [
     {
       "id": "minecraft:black_concrete_powder"

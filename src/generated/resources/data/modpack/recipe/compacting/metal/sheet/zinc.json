@@ -1,0 +1,16 @@
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 200,
+      "fluid": "tfc:metal/zinc"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:metal/sheet/zinc"
+    }
+  ]
+}

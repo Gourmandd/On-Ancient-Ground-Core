@@ -5,6 +5,7 @@
       "item": "minecraft:pink_concrete"
     }
   ],
+  "processing_time": 200,
   "results": [
     {
       "id": "minecraft:pink_concrete_powder"

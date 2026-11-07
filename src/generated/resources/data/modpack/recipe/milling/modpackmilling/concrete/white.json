@@ -5,6 +5,7 @@
       "item": "minecraft:white_concrete"
     }
   ],
+  "processing_time": 200,
   "results": [
     {
       "id": "minecraft:white_concrete_powder"

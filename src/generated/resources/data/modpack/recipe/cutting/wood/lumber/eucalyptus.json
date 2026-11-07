@@ -1,0 +1,15 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "afc:wood/planks/eucalyptus"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "count": 4,
+      "id": "afc:wood/lumber/eucalyptus"
+    }
+  ]
+}

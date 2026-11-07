@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/entisol"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:grass_path/entisol"
+    }
+  ]
+}

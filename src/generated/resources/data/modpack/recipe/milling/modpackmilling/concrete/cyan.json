@@ -5,6 +5,7 @@
       "item": "minecraft:cyan_concrete"
     }
   ],
+  "processing_time": 200,
   "results": [
     {
       "id": "minecraft:cyan_concrete_powder"

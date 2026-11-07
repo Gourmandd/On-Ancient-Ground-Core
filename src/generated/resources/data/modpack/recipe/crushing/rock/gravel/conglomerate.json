@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/conglomerate"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:sand/brown"
+    }
+  ]
+}

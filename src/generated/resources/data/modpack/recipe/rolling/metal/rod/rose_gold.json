@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "tfc:metal/ingot/rose_gold"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "tfc:metal/rod/rose_gold"
+    }
+  ]
+}
