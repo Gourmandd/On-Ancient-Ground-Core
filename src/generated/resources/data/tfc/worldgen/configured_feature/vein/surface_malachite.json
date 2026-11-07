@@ -4,6 +4,44 @@
     "blocks": [
       {
         "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_malachite/travertine",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/travertine",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_malachite/travertine",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_malachite/breccia",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/breccia",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_malachite/breccia",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "create:ochrum"
         ],
         "with": [
@@ -61,38 +99,19 @@
       },
       {
         "replace": [
-          "minecraft:stone"
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_malachite/argillite",
+            "block": "tfc:ore/rich_malachite/limestone",
             "weight": 5.0
           },
           {
-            "block": "modpack:ore/normal_malachite/argillite",
+            "block": "tfc:ore/normal_malachite/limestone",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_malachite/argillite",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_malachite/travertine",
-            "weight": 5.0
-          },
-          {
-            "block": "modpack:ore/normal_malachite/travertine",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_malachite/travertine",
+            "block": "tfc:ore/poor_malachite/limestone",
             "weight": 70.0
           }
         ]
@@ -118,57 +137,19 @@
       },
       {
         "replace": [
-          "caupona:felsic_tuff"
+          "minecraft:stone"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_malachite/breccia",
+            "block": "modpack:ore/rich_malachite/argillite",
             "weight": 5.0
           },
           {
-            "block": "modpack:ore/normal_malachite/breccia",
+            "block": "modpack:ore/normal_malachite/argillite",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_malachite/breccia",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_malachite/limestone",
-            "weight": 5.0
-          },
-          {
-            "block": "tfc:ore/normal_malachite/limestone",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_malachite/limestone",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_malachite/arkose",
-            "weight": 5.0
-          },
-          {
-            "block": "modpack:ore/normal_malachite/arkose",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_malachite/arkose",
+            "block": "modpack:ore/poor_malachite/argillite",
             "weight": 70.0
           }
         ]
@@ -188,6 +169,25 @@
           },
           {
             "block": "modpack:ore/poor_malachite/red_sandstone",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_malachite/arkose",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_malachite/arkose",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_malachite/arkose",
             "weight": 70.0
           }
         ]

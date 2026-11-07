@@ -5,41 +5,21 @@
       "blocks": [
         {
           "replace": [
-            "modpack:rock/raw/peridotite"
+            "tfc:rock/raw/phyllite"
           ],
           "with": [
             {
-              "block": "modpack:ore/sapphire/peridotite"
+              "block": "tfc:ore/sapphire/phyllite"
             }
           ]
         },
         {
           "replace": [
-            "modpack:rock/raw/serpentine"
+            "spectrum:basal_marble"
           ],
           "with": [
             {
-              "block": "modpack:ore/sapphire/serpentine"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "minecraft:deepslate"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/sapphire/nephelinite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "create:scoria"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/sapphire/komatiite"
+              "block": "modpack:ore/sapphire/picrite_basalt"
             }
           ]
         },
@@ -65,21 +45,11 @@
         },
         {
           "replace": [
-            "modpack:rock/raw/blueschist"
+            "tfc:rock/raw/gabbro"
           ],
           "with": [
             {
-              "block": "modpack:ore/sapphire/blueschist"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "spectrum:basal_marble"
-          ],
-          "with": [
-            {
-              "block": "modpack:ore/sapphire/picrite_basalt"
+              "block": "tfc:ore/sapphire/gabbro"
             }
           ]
         },
@@ -95,11 +65,21 @@
         },
         {
           "replace": [
-            "spectrum:blackslag"
+            "minecraft:deepslate"
           ],
           "with": [
             {
-              "block": "modpack:ore/sapphire/blackslag"
+              "block": "modpack:ore/sapphire/nephelinite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:rock/raw/quartzite"
+          ],
+          "with": [
+            {
+              "block": "tfc:ore/sapphire/quartzite"
             }
           ]
         },
@@ -125,21 +105,41 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/gneiss"
+            "tfc:rock/raw/diorite"
           ],
           "with": [
             {
-              "block": "tfc:ore/sapphire/gneiss"
+              "block": "tfc:ore/sapphire/diorite"
             }
           ]
         },
         {
           "replace": [
-            "tfc:rock/raw/gabbro"
+            "tfc:rock/raw/basalt"
           ],
           "with": [
             {
-              "block": "tfc:ore/sapphire/gabbro"
+              "block": "tfc:ore/sapphire/basalt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "create:scoria"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/sapphire/komatiite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "modpack:rock/raw/peridotite"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/sapphire/peridotite"
             }
           ]
         },
@@ -155,41 +155,21 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/phyllite"
+            "tfc:rock/raw/gneiss"
           ],
           "with": [
             {
-              "block": "tfc:ore/sapphire/phyllite"
+              "block": "tfc:ore/sapphire/gneiss"
             }
           ]
         },
         {
           "replace": [
-            "tfc:rock/raw/granite"
+            "modpack:rock/raw/blueschist"
           ],
           "with": [
             {
-              "block": "tfc:ore/sapphire/granite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/quartzite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/sapphire/quartzite"
-            }
-          ]
-        },
-        {
-          "replace": [
-            "tfc:rock/raw/diorite"
-          ],
-          "with": [
-            {
-              "block": "tfc:ore/sapphire/diorite"
+              "block": "modpack:ore/sapphire/blueschist"
             }
           ]
         },
@@ -205,11 +185,31 @@
         },
         {
           "replace": [
-            "tfc:rock/raw/basalt"
+            "tfc:rock/raw/granite"
           ],
           "with": [
             {
-              "block": "tfc:ore/sapphire/basalt"
+              "block": "tfc:ore/sapphire/granite"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "spectrum:blackslag"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/sapphire/blackslag"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "modpack:rock/raw/serpentine"
+          ],
+          "with": [
+            {
+              "block": "modpack:ore/sapphire/serpentine"
             }
           ]
         }

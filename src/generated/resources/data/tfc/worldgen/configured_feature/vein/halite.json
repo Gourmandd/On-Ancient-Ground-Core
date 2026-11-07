@@ -4,86 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "create:limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chalk"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/tuff"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:smooth_basalt"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/claystone"
         ],
         "with": [
@@ -94,7 +14,27 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/shale"
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:ochrum"
         ],
         "with": [
           {
@@ -105,6 +45,16 @@
       {
         "replace": [
           "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
@@ -134,27 +84,77 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:smooth_basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:halite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "tfc:halite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:ochrum"
         ],
         "with": [
           {

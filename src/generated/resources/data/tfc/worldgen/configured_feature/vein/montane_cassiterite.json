@@ -4,46 +4,23 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/diorite"
+          "tfc:rock/raw/granite"
         ],
         "with": [
           {
-            "block": "tfc:deposit/cassiterite/diorite",
+            "block": "tfc:deposit/cassiterite/granite",
             "weight": 10.0
           },
           {
-            "block": "tfc:ore/rich_cassiterite/diorite",
+            "block": "tfc:ore/rich_cassiterite/granite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_cassiterite/diorite",
+            "block": "tfc:ore/poor_cassiterite/granite",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_cassiterite/diorite",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/peridotite"
-        ],
-        "with": [
-          {
-            "block": "modpack:deposit/cassiterite/peridotite",
-            "weight": 10.0
-          },
-          {
-            "block": "modpack:ore/rich_cassiterite/peridotite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_cassiterite/peridotite",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_cassiterite/peridotite",
+            "block": "tfc:ore/normal_cassiterite/granite",
             "weight": 40.0
           }
         ]
@@ -73,23 +50,46 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/granite"
+          "modpack:rock/raw/peridotite"
         ],
         "with": [
           {
-            "block": "tfc:deposit/cassiterite/granite",
+            "block": "modpack:deposit/cassiterite/peridotite",
             "weight": 10.0
           },
           {
-            "block": "tfc:ore/rich_cassiterite/granite",
+            "block": "modpack:ore/rich_cassiterite/peridotite",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_cassiterite/granite",
+            "block": "modpack:ore/poor_cassiterite/peridotite",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_cassiterite/granite",
+            "block": "modpack:ore/normal_cassiterite/peridotite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:deposit/cassiterite/diorite",
+            "weight": 10.0
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/diorite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_cassiterite/diorite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/diorite",
             "weight": 40.0
           }
         ]

@@ -4,6 +4,26 @@
     "blocks": [
       {
         "replace": [
+          "minecraft:smooth_basalt"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/tuff"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/claystone"
         ],
         "with": [
@@ -19,26 +39,6 @@
         "with": [
           {
             "block": "modpack:ore/saltpeter/red_sandstone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/saltpeter/conglomerate"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:smooth_basalt"
-        ],
-        "with": [
-          {
-            "block": "minecraft:dirt"
           }
         ]
       },
@@ -64,46 +64,6 @@
       },
       {
         "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/saltpeter/breccia"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/saltpeter/chert"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/saltpeter/travertine"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/tuff"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/saltpeter/tuff"
-          }
-        ]
-      },
-      {
-        "replace": [
           "quark:limestone"
         ],
         "with": [
@@ -114,11 +74,21 @@
       },
       {
         "replace": [
-          "create:limestone"
+          "tfc:rock/raw/shale"
         ],
         "with": [
           {
-            "block": "minecraft:dirt"
+            "block": "tfc:ore/saltpeter/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/saltpeter/travertine"
           }
         ]
       },
@@ -144,6 +114,26 @@
       },
       {
         "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "caupona:felsic_tuff"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/saltpeter/breccia"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/limestone"
         ],
         "with": [
@@ -154,11 +144,21 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/shale"
+          "tfc:rock/raw/chert"
         ],
         "with": [
           {
-            "block": "tfc:ore/saltpeter/shale"
+            "block": "tfc:ore/saltpeter/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/conglomerate"
           }
         ]
       }

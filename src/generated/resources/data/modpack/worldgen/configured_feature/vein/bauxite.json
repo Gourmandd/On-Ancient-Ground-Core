@@ -4,37 +4,17 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "modpack:bauxite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "modpack:bauxite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:bauxite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "modpack:bauxite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
         ],
         "with": [
           {
@@ -64,16 +44,6 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "modpack:bauxite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "modpack:rock/raw/serpentine"
         ],
         "with": [
@@ -84,7 +54,37 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "modpack:bauxite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:bauxite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "modpack:bauxite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {

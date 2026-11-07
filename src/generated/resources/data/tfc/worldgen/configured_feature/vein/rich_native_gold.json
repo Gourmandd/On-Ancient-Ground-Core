@@ -4,6 +4,25 @@
     "blocks": [
       {
         "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/granite",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/granite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/granite",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/gabbro"
         ],
         "with": [
@@ -55,25 +74,6 @@
           },
           {
             "block": "modpack:ore/rich_native_gold/peridotite",
-            "weight": 60.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/granite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_native_gold/granite",
-            "weight": 15.0
-          },
-          {
-            "block": "tfc:ore/normal_native_gold/granite",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/rich_native_gold/granite",
             "weight": 60.0
           }
         ]

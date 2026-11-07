@@ -4,51 +4,11 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sylvite/shale"
-          }
-        ]
-      },
-      {
-        "replace": [
           "minecraft:stone"
         ],
         "with": [
           {
             "block": "modpack:ore/sylvite/argillite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/sylvite/red_sandstone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sylvite/chert"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/claystone"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/sylvite/claystone"
           }
         ]
       },
@@ -64,11 +24,11 @@
       },
       {
         "replace": [
-          "minecraft:dripstone_block"
+          "tfc:rock/raw/chert"
         ],
         "with": [
           {
-            "block": "modpack:ore/sylvite/travertine"
+            "block": "tfc:ore/sylvite/chert"
           }
         ]
       },
@@ -79,6 +39,46 @@
         "with": [
           {
             "block": "modpack:ore/sylvite/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/sylvite/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/sylvite/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sylvite/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sylvite/claystone"
           }
         ]
       }

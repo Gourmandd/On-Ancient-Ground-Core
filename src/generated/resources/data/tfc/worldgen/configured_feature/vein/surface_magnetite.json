@@ -4,133 +4,38 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:smooth_basalt"
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
-            "block": "minecraft:dirt",
+            "block": "tfc:ore/rich_magnetite/limestone",
             "weight": 25.0
           },
           {
-            "block": "minecraft:dirt",
+            "block": "tfc:ore/poor_magnetite/limestone",
             "weight": 35.0
           },
           {
-            "block": "minecraft:dirt",
+            "block": "tfc:ore/normal_magnetite/limestone",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "quark:limestone"
+          "tfc:rock/raw/claystone"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_magnetite/arkose",
+            "block": "tfc:ore/rich_magnetite/claystone",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_magnetite/arkose",
+            "block": "tfc:ore/poor_magnetite/claystone",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_magnetite/arkose",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "caupona:felsic_tuff"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_magnetite/breccia",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_magnetite/breccia",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_magnetite/breccia",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_magnetite/travertine",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_magnetite/travertine",
-            "weight": 35.0
-          },
-          {
-            "block": "modpack:ore/normal_magnetite/travertine",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_magnetite/conglomerate",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_magnetite/conglomerate",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_magnetite/conglomerate",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_magnetite/chert",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_magnetite/chert",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_magnetite/chert",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_magnetite/shale",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_magnetite/shale",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_magnetite/shale",
+            "block": "tfc:ore/normal_magnetite/claystone",
             "weight": 40.0
           }
         ]
@@ -156,6 +61,25 @@
       },
       {
         "replace": [
+          "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_magnetite/sandstone",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_magnetite/sandstone",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_magnetite/sandstone",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/tuff"
         ],
         "with": [
@@ -175,7 +99,7 @@
       },
       {
         "replace": [
-          "create:limestone"
+          "minecraft:smooth_basalt"
         ],
         "with": [
           {
@@ -194,19 +118,38 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/limestone"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_magnetite/limestone",
+            "block": "modpack:ore/rich_magnetite/breccia",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_magnetite/limestone",
+            "block": "modpack:ore/poor_magnetite/breccia",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_magnetite/limestone",
+            "block": "modpack:ore/normal_magnetite/breccia",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_magnetite/conglomerate",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_magnetite/conglomerate",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/conglomerate",
             "weight": 40.0
           }
         ]
@@ -232,38 +175,76 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/dolomite"
+          "tfc:rock/raw/shale"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_magnetite/dolomite",
+            "block": "tfc:ore/rich_magnetite/shale",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_magnetite/dolomite",
+            "block": "tfc:ore/poor_magnetite/shale",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_magnetite/dolomite",
+            "block": "tfc:ore/normal_magnetite/shale",
             "weight": 40.0
           }
         ]
       },
       {
         "replace": [
-          "create:ochrum"
+          "tfc:rock/raw/chert"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_magnetite/sandstone",
+            "block": "tfc:ore/rich_magnetite/chert",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_magnetite/sandstone",
+            "block": "tfc:ore/poor_magnetite/chert",
             "weight": 35.0
           },
           {
-            "block": "modpack:ore/normal_magnetite/sandstone",
+            "block": "tfc:ore/normal_magnetite/chert",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_magnetite/travertine",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_magnetite/travertine",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_magnetite/travertine",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_magnetite/arkose",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_magnetite/arkose",
+            "weight": 35.0
+          },
+          {
+            "block": "modpack:ore/normal_magnetite/arkose",
             "weight": 40.0
           }
         ]
@@ -289,19 +270,38 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/claystone"
+          "create:limestone"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_magnetite/claystone",
+            "block": "minecraft:dirt",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_magnetite/claystone",
+            "block": "minecraft:dirt",
             "weight": 35.0
           },
           {
-            "block": "tfc:ore/normal_magnetite/claystone",
+            "block": "minecraft:dirt",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_magnetite/dolomite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_magnetite/dolomite",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/dolomite",
             "weight": 40.0
           }
         ]

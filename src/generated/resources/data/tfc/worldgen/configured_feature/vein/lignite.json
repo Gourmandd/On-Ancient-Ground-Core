@@ -14,67 +14,7 @@
       },
       {
         "replace": [
-          "minecraft:stone"
-        ],
-        "with": [
-          {
-            "block": "tfc:lignite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "tfc:lignite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/claystone"
-        ],
-        "with": [
-          {
-            "block": "tfc:lignite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/dolomite"
-        ],
-        "with": [
-          {
-            "block": "tfc:lignite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/shale"
-        ],
-        "with": [
-          {
-            "block": "tfc:lignite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "tfc:lignite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
@@ -94,7 +34,7 @@
       },
       {
         "replace": [
-          "minecraft:smooth_basalt"
+          "quark:jasper"
         ],
         "with": [
           {
@@ -104,7 +44,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/tuff"
+          "tfc:rock/raw/shale"
         ],
         "with": [
           {
@@ -114,7 +54,7 @@
       },
       {
         "replace": [
-          "create:limestone"
+          "tfc:rock/raw/limestone"
         ],
         "with": [
           {
@@ -134,7 +74,7 @@
       },
       {
         "replace": [
-          "quark:jasper"
+          "tfc:rock/raw/tuff"
         ],
         "with": [
           {
@@ -144,7 +84,57 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/chalk"
+          "minecraft:smooth_basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:lignite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfc:lignite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:stone"
+        ],
+        "with": [
+          {
+            "block": "tfc:lignite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:lignite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "tfc:lignite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
         ],
         "with": [
           {
@@ -155,6 +145,16 @@
       {
         "replace": [
           "create:ochrum"
+        ],
+        "with": [
+          {
+            "block": "tfc:lignite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
         ],
         "with": [
           {

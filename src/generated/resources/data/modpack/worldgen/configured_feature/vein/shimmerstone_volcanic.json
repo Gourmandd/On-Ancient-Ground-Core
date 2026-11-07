@@ -4,6 +4,26 @@
     "blocks": [
       {
         "replace": [
+          "quark:shale"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/phonolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
           "minecraft:deepslate"
         ],
         "with": [
@@ -24,51 +44,11 @@
       },
       {
         "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/blackslag"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/andesite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/andesite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "create:scoria"
         ],
         "with": [
           {
             "block": "modpack:ore/shimmerstone/komatiite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:shale"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/phonolite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/shimmerstone/basalt"
           }
         ]
       },
@@ -84,11 +64,31 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/dacite"
         ],
         "with": [
           {
             "block": "modpack:ore/shimmerstone/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/shimmerstone/andesite"
           }
         ]
       }

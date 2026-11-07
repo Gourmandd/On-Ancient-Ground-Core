@@ -4,6 +4,36 @@
     "blocks": [
       {
         "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:calcite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "minecraft:calcite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:calcite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/marble"
         ],
         "with": [
@@ -14,7 +44,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/schist"
+          "tfc:rock/raw/slate"
         ],
         "with": [
           {
@@ -34,17 +64,7 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
-        ],
-        "with": [
-          {
-            "block": "minecraft:calcite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/phyllite"
+          "tfc:rock/raw/schist"
         ],
         "with": [
           {
@@ -74,27 +94,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:calcite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "minecraft:calcite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/slate"
+          "modpack:rock/raw/blueschist"
         ],
         "with": [
           {

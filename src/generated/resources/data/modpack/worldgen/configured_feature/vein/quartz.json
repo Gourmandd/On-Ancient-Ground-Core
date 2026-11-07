@@ -4,6 +4,26 @@
     "blocks": [
       {
         "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "modpack:quartz"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/dacite"
         ],
         "with": [
@@ -24,27 +44,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "modpack:quartz"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
         ],
         "with": [
           {

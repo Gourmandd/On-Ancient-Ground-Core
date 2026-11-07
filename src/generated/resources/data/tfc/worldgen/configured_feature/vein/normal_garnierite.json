@@ -23,25 +23,6 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/gabbro"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_garnierite/gabbro",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_garnierite/gabbro",
-            "weight": 35.0
-          },
-          {
-            "block": "tfc:ore/normal_garnierite/gabbro",
-            "weight": 40.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/diorite"
         ],
         "with": [
@@ -74,6 +55,25 @@
           },
           {
             "block": "tfc:ore/normal_garnierite/granite",
+            "weight": 40.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_garnierite/gabbro",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_garnierite/gabbro",
+            "weight": 35.0
+          },
+          {
+            "block": "tfc:ore/normal_garnierite/gabbro",
             "weight": 40.0
           }
         ]

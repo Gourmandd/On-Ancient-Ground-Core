@@ -4,44 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "create:scoria"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_sphalerite/komatiite",
-            "weight": 5.0
-          },
-          {
-            "block": "modpack:ore/normal_sphalerite/komatiite",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_sphalerite/komatiite",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_sphalerite/blackslag",
-            "weight": 5.0
-          },
-          {
-            "block": "modpack:ore/normal_sphalerite/blackslag",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_sphalerite/blackslag",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "quark:shale"
         ],
         "with": [
@@ -55,63 +17,6 @@
           },
           {
             "block": "modpack:ore/poor_sphalerite/phonolite",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/rich_sphalerite/picrite_basalt",
-            "weight": 5.0
-          },
-          {
-            "block": "modpack:ore/normal_sphalerite/picrite_basalt",
-            "weight": 25.0
-          },
-          {
-            "block": "modpack:ore/poor_sphalerite/picrite_basalt",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/rhyolite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_sphalerite/rhyolite",
-            "weight": 5.0
-          },
-          {
-            "block": "tfc:ore/normal_sphalerite/rhyolite",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_sphalerite/rhyolite",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/rich_sphalerite/basalt",
-            "weight": 5.0
-          },
-          {
-            "block": "tfc:ore/normal_sphalerite/basalt",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/poor_sphalerite/basalt",
             "weight": 70.0
           }
         ]
@@ -169,6 +74,101 @@
           },
           {
             "block": "tfc:ore/poor_sphalerite/dacite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_sphalerite/picrite_basalt",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_sphalerite/picrite_basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_sphalerite/picrite_basalt",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_sphalerite/blackslag",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_sphalerite/blackslag",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_sphalerite/blackslag",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_sphalerite/basalt",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/basalt",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_sphalerite/basalt",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_sphalerite/rhyolite",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/rhyolite",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_sphalerite/rhyolite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scoria"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/rich_sphalerite/komatiite",
+            "weight": 5.0
+          },
+          {
+            "block": "modpack:ore/normal_sphalerite/komatiite",
+            "weight": 25.0
+          },
+          {
+            "block": "modpack:ore/poor_sphalerite/komatiite",
             "weight": 70.0
           }
         ]

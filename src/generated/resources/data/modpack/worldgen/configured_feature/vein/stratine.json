@@ -4,7 +4,37 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:calcite"
+          "modpack:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/serpentine"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "create:scorchia"
         ],
         "with": [
           {
@@ -14,11 +44,21 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
+          "tfc:rock/raw/marble"
         ],
         "with": [
           {
-            "block": "modpack:ore/stratine/blueschist"
+            "block": "modpack:ore/stratine/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/stratine/schist"
           }
         ]
       },
@@ -34,11 +74,11 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
+          "minecraft:calcite"
         ],
         "with": [
           {
-            "block": "modpack:ore/stratine/serpentine"
+            "block": "minecraft:dirt"
           }
         ]
       },
@@ -59,46 +99,6 @@
         "with": [
           {
             "block": "modpack:ore/stratine/quartzite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/stratine/gneiss"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/schist"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/stratine/schist"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/stratine/marble"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "create:scorchia"
-        ],
-        "with": [
-          {
-            "block": "minecraft:dirt"
           }
         ]
       }

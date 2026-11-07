@@ -4,19 +4,19 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/marble"
+          "create:scorchia"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_tetrahedrite/marble",
+            "block": "minecraft:dirt",
             "weight": 5.0
           },
           {
-            "block": "tfc:ore/normal_tetrahedrite/marble",
+            "block": "minecraft:dirt",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_tetrahedrite/marble",
+            "block": "minecraft:dirt",
             "weight": 70.0
           }
         ]
@@ -42,38 +42,19 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/phyllite"
+          "modpack:rock/raw/serpentine"
         ],
         "with": [
           {
-            "block": "tfc:ore/rich_tetrahedrite/phyllite",
+            "block": "modpack:ore/rich_tetrahedrite/serpentine",
             "weight": 5.0
           },
           {
-            "block": "tfc:ore/normal_tetrahedrite/phyllite",
+            "block": "modpack:ore/normal_tetrahedrite/serpentine",
             "weight": 25.0
           },
           {
-            "block": "tfc:ore/poor_tetrahedrite/phyllite",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:calcite"
-        ],
-        "with": [
-          {
-            "block": "minecraft:dirt",
-            "weight": 5.0
-          },
-          {
-            "block": "minecraft:dirt",
-            "weight": 25.0
-          },
-          {
-            "block": "minecraft:dirt",
+            "block": "modpack:ore/poor_tetrahedrite/serpentine",
             "weight": 70.0
           }
         ]
@@ -99,19 +80,38 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
+          "tfc:rock/raw/phyllite"
         ],
         "with": [
           {
-            "block": "modpack:ore/rich_tetrahedrite/serpentine",
+            "block": "tfc:ore/rich_tetrahedrite/phyllite",
             "weight": 5.0
           },
           {
-            "block": "modpack:ore/normal_tetrahedrite/serpentine",
+            "block": "tfc:ore/normal_tetrahedrite/phyllite",
             "weight": 25.0
           },
           {
-            "block": "modpack:ore/poor_tetrahedrite/serpentine",
+            "block": "tfc:ore/poor_tetrahedrite/phyllite",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/rich_tetrahedrite/marble",
+            "weight": 5.0
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/marble",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/poor_tetrahedrite/marble",
             "weight": 70.0
           }
         ]
@@ -156,25 +156,6 @@
       },
       {
         "replace": [
-          "create:scorchia"
-        ],
-        "with": [
-          {
-            "block": "minecraft:dirt",
-            "weight": 5.0
-          },
-          {
-            "block": "minecraft:dirt",
-            "weight": 25.0
-          },
-          {
-            "block": "minecraft:dirt",
-            "weight": 70.0
-          }
-        ]
-      },
-      {
-        "replace": [
           "modpack:rock/raw/blueschist"
         ],
         "with": [
@@ -188,6 +169,25 @@
           },
           {
             "block": "modpack:ore/poor_tetrahedrite/blueschist",
+            "weight": 70.0
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:calcite"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt",
+            "weight": 5.0
+          },
+          {
+            "block": "minecraft:dirt",
+            "weight": 25.0
+          },
+          {
+            "block": "minecraft:dirt",
             "weight": 70.0
           }
         ]

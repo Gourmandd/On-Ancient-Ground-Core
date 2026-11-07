@@ -4,16 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/diorite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/cryolite/diorite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "modpack:rock/raw/peridotite"
         ],
         "with": [
@@ -29,6 +19,16 @@
         "with": [
           {
             "block": "tfc:ore/cryolite/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cryolite/diorite"
           }
         ]
       }

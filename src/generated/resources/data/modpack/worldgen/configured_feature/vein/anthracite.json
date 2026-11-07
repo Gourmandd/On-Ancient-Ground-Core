@@ -14,27 +14,7 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/slate"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/phyllite"
-        ],
-        "with": [
-          {
-            "block": "modpack:anthracite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
+          "tfc:rock/raw/quartzite"
         ],
         "with": [
           {
@@ -54,7 +34,7 @@
       },
       {
         "replace": [
-          "modpack:rock/raw/blueschist"
+          "tfc:rock/raw/phyllite"
         ],
         "with": [
           {
@@ -74,7 +54,27 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/quartzite"
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "modpack:anthracite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "modpack:rock/raw/blueschist"
         ],
         "with": [
           {

@@ -4,31 +4,21 @@
     "blocks": [
       {
         "replace": [
-          "modpack:rock/raw/serpentine"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/cinnabar/serpentine"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/quartzite"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/cinnabar/quartzite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/schist"
         ],
         "with": [
           {
             "block": "tfc:ore/cinnabar/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/phyllite"
           }
         ]
       },
@@ -54,11 +44,21 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/phyllite"
+          "modpack:rock/raw/serpentine"
         ],
         "with": [
           {
-            "block": "tfc:ore/cinnabar/phyllite"
+            "block": "modpack:ore/cinnabar/serpentine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/quartzite"
           }
         ]
       }

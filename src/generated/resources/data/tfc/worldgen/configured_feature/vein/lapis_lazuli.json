@@ -4,6 +4,16 @@
     "blocks": [
       {
         "replace": [
+          "quark:limestone"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/lapis_lazuli/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/marble"
         ],
         "with": [
@@ -24,31 +34,21 @@
       },
       {
         "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/lapis_lazuli/red_sandstone"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/lapis_lazuli/arkose"
-          }
-        ]
-      },
-      {
-        "replace": [
           "create:ochrum"
         ],
         "with": [
           {
             "block": "modpack:ore/lapis_lazuli/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/lapis_lazuli/red_sandstone"
           }
         ]
       }

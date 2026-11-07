@@ -4,6 +4,25 @@
     "blocks": [
       {
         "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_silver/gneiss",
+            "weight": 15.0
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/gneiss",
+            "weight": 25.0
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/gneiss",
+            "weight": 60.0
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/schist"
         ],
         "with": [
@@ -36,25 +55,6 @@
           },
           {
             "block": "tfc:ore/rich_native_silver/diorite",
-            "weight": 60.0
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/gneiss"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/poor_native_silver/gneiss",
-            "weight": 15.0
-          },
-          {
-            "block": "tfc:ore/normal_native_silver/gneiss",
-            "weight": 25.0
-          },
-          {
-            "block": "tfc:ore/rich_native_silver/gneiss",
             "weight": 60.0
           }
         ]

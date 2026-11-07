@@ -4,16 +4,6 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/dacite"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/azurite/dacite"
-          }
-        ]
-      },
-      {
-        "replace": [
           "tfc:rock/raw/basalt"
         ],
         "with": [
@@ -24,31 +14,11 @@
       },
       {
         "replace": [
-          "spectrum:basal_marble"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/azurite/picrite_basalt"
-          }
-        ]
-      },
-      {
-        "replace": [
           "quark:shale"
         ],
         "with": [
           {
             "block": "modpack:ore/azurite/phonolite"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "spectrum:blackslag"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/azurite/blackslag"
           }
         ]
       },
@@ -74,6 +44,16 @@
       },
       {
         "replace": [
+          "spectrum:blackslag"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/blackslag"
+          }
+        ]
+      },
+      {
+        "replace": [
           "minecraft:deepslate"
         ],
         "with": [
@@ -84,11 +64,31 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/rhyolite"
         ],
         "with": [
           {
             "block": "modpack:ore/azurite/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "spectrum:basal_marble"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/azurite/picrite_basalt"
           }
         ]
       }

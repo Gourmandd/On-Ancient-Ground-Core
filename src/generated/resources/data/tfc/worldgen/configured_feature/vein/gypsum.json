@@ -4,31 +4,21 @@
     "blocks": [
       {
         "replace": [
-          "tfc:rock/raw/claystone"
+          "quark:limestone"
         ],
         "with": [
           {
-            "block": "tfc:ore/gypsum/claystone"
+            "block": "modpack:ore/gypsum/arkose"
           }
         ]
       },
       {
         "replace": [
-          "minecraft:smooth_basalt"
+          "caupona:felsic_tuff"
         ],
         "with": [
           {
-            "block": "minecraft:dirt"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/conglomerate"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/gypsum/conglomerate"
+            "block": "modpack:ore/gypsum/breccia"
           }
         ]
       },
@@ -44,11 +34,11 @@
       },
       {
         "replace": [
-          "tfc:rock/raw/dolomite"
+          "create:ochrum"
         ],
         "with": [
           {
-            "block": "tfc:ore/gypsum/dolomite"
+            "block": "modpack:ore/gypsum/sandstone"
           }
         ]
       },
@@ -64,21 +54,11 @@
       },
       {
         "replace": [
-          "create:limestone"
+          "tfc:rock/raw/claystone"
         ],
         "with": [
           {
-            "block": "minecraft:dirt"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "minecraft:dripstone_block"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/gypsum/travertine"
+            "block": "tfc:ore/gypsum/claystone"
           }
         ]
       },
@@ -89,36 +69,6 @@
         "with": [
           {
             "block": "tfc:ore/gypsum/chalk"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/chert"
-        ],
-        "with": [
-          {
-            "block": "tfc:ore/gypsum/chert"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:limestone"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/gypsum/arkose"
-          }
-        ]
-      },
-      {
-        "replace": [
-          "quark:jasper"
-        ],
-        "with": [
-          {
-            "block": "modpack:ore/gypsum/red_sandstone"
           }
         ]
       },
@@ -144,21 +94,71 @@
       },
       {
         "replace": [
-          "create:ochrum"
+          "create:limestone"
         ],
         "with": [
           {
-            "block": "modpack:ore/gypsum/sandstone"
+            "block": "minecraft:dirt"
           }
         ]
       },
       {
         "replace": [
-          "caupona:felsic_tuff"
+          "tfc:rock/raw/dolomite"
         ],
         "with": [
           {
-            "block": "modpack:ore/gypsum/breccia"
+            "block": "tfc:ore/gypsum/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:dripstone_block"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/gypsum/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "quark:jasper"
+        ],
+        "with": [
+          {
+            "block": "modpack:ore/gypsum/red_sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "minecraft:smooth_basalt"
+        ],
+        "with": [
+          {
+            "block": "minecraft:dirt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/conglomerate"
           }
         ]
       }
