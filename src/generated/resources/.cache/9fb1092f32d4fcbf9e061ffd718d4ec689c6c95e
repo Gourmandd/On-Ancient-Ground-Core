@@ -1,4 +1,4 @@
-// 1.21.1	2026-11-05T20:05:34.145027943	Recipes
+// 1.21.1	2026-11-07T12:04:48.25905001	Recipes
 74d08b4749e380fba2d005605c7ebb389e1b8576 data/modpack/recipe/alloy/aluminium_bronze.json
 2b8aaefb8411d25fa8d2563ddf617af092decbd1 data/modpack/recipe/alloy/cast_iron_alloy.json
 ce75347b3aeb00333930a53c795d09ba5de88583 data/modpack/recipe/alloy/electrum.json
@@ -1651,6 +1651,8 @@ de2eb92beeb460cd1509feb85f4f66bd33d6de4a data/modpack/recipe/quern/light_gray_co
 80b76025fa08fdd57d712f5cc7640aa054dbb5bd data/modpack/recipe/quern/magenta_concrete_powder.json
 903d1ca4abf6e0e04fffed2df0d9ebdf527388fb data/modpack/recipe/quern/orange_concrete_powder.json
 8d40859b2b55678004dbed664f2ef8a561962081 data/modpack/recipe/quern/pink_concrete_powder.json
+9d86b407794db3dc63466c9e1b55a8e2a7f33e97 data/modpack/recipe/quern/powdered_obsidian.json
+1186d9f257248421c8cd4d5cad86f9ec948eabf4 data/modpack/recipe/quern/powdered_obsidian_4.json
 d7167d11be750e8e96407807c84d0e9ea508906c data/modpack/recipe/quern/purple_concrete_powder.json
 690b53bcb31e6afaae68bb0b83f99dcfc2626373 data/modpack/recipe/quern/red_concrete_powder.json
 3590625e04b042ddb1964c8e76782fc4ed93cb3f data/modpack/recipe/quern/white_concrete_powder.json
