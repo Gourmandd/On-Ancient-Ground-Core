@@ -2,9 +2,11 @@ package net.gourmand.core.datagen.recipes;
 
 import com.simibubi.create.api.data.recipe.SequencedAssemblyRecipeGen;
 import com.simibubi.create.content.kinetics.deployer.DeployerApplicationRecipe;
+import com.simibubi.create.content.kinetics.press.PressingRecipe;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.items.Powder;
 import net.dries007.tfc.common.items.TFCItems;
+import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
@@ -12,6 +14,7 @@ import net.gourmand.core.registry.category.CategoryUtil;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -71,6 +74,24 @@ public class SequencedAssemblyRecipes extends SequencedAssemblyRecipeGen
                         .require(TFCItems.GEM_SAW).toolNotConsumed()
                 )
                 .addOutput(TFCItems.LENS, 1)
+        );
+
+        createRefinementRecipe("bloom", TFCItems.RAW_IRON_BLOOM.get(), TFCItems.REFINED_IRON_BLOOM.asItem());
+        createRefinementRecipe("wrought_iron", TFCItems.REFINED_IRON_BLOOM.asItem(), TFCItems.METAL_ITEMS.get(Metal.WROUGHT_IRON).get(Metal.ItemType.INGOT).asItem());
+        createRefinementRecipe("steel", TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_STEEL).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.INGOT).asItem());
+        createRefinementRecipe("black_steel", TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_BLACK_STEEL).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.BLACK_STEEL).get(Metal.ItemType.INGOT).asItem());
+        createRefinementRecipe("red_steel", TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_RED_STEEL).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.RED_STEEL).get(Metal.ItemType.INGOT).asItem());
+        createRefinementRecipe("blue_steel", TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_BLUE_STEEL).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.BLUE_STEEL).get(Metal.ItemType.INGOT).asItem());
+    }
+
+    private void createRefinementRecipe(String name, Item input, Item output)
+    {
+        create("sequenced_assembly/refine/" + name, b -> b
+                .require(input)
+                .transitionTo(input)
+                .loops(5)
+                .addStep(PressingRecipe::new, r -> r)
+                .addOutput(output, 1)
         );
     }
 }

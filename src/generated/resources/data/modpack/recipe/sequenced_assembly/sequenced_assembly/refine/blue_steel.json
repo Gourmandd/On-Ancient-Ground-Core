@@ -1,0 +1,30 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "tfc:metal/ingot/high_carbon_blue_steel"
+  },
+  "loops": 5,
+  "results": [
+    {
+      "id": "tfc:metal/ingot/blue_steel"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "tfc:metal/ingot/high_carbon_blue_steel"
+        }
+      ],
+      "results": [
+        {
+          "id": "tfc:metal/ingot/high_carbon_blue_steel"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "tfc:metal/ingot/high_carbon_blue_steel"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "tfc:raw_iron_bloom"
+  },
+  "loops": 5,
+  "results": [
+    {
+      "id": "tfc:refined_iron_bloom"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "tfc:raw_iron_bloom"
+        }
+      ],
+      "results": [
+        {
+          "id": "tfc:raw_iron_bloom"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "tfc:raw_iron_bloom"
+  }
+}

@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-28T18:26:26.621422311	modpack's sequenced assembly recipes
+// 1.21.1	2026-11-07T14:22:37.472825228	modpack's sequenced assembly recipes
 d23f6d60957a9bd3f8b79cc2673e7ad68f32ca99 data/modpack/recipe/sequenced_assembly/sequenced_assembly/lens/black.json
 1d845631188b974b2b149227ef9a308cec44dce5 data/modpack/recipe/sequenced_assembly/sequenced_assembly/lens/blue.json
 e7e257c4ab30c8080b5bb369a94e62fda1b0a2e4 data/modpack/recipe/sequenced_assembly/sequenced_assembly/lens/brown.json
@@ -16,3 +16,9 @@ fe74f7c892d4ac3fd54c1a529d4538b77439caf4 data/modpack/recipe/sequenced_assembly/
 cd5eb00e5d43628eca26d070f5350ad6e9ccf59d data/modpack/recipe/sequenced_assembly/sequenced_assembly/lens/red.json
 65a0b5c06e78a1558387a4d6e5b6539184366495 data/modpack/recipe/sequenced_assembly/sequenced_assembly/lens/white.json
 960924c99d22a0fffb5c0ab67d5c64b545f737d3 data/modpack/recipe/sequenced_assembly/sequenced_assembly/lens/yellow.json
+a9a2d1f2fc2061262066fa2a2f09bb4f31bd1d53 data/modpack/recipe/sequenced_assembly/sequenced_assembly/refine/black_steel.json
+021c7ca3efb281d525cb17b662480e568be5a196 data/modpack/recipe/sequenced_assembly/sequenced_assembly/refine/bloom.json
+ca78b4387053d92cdd17df856c926d2acb4c9c01 data/modpack/recipe/sequenced_assembly/sequenced_assembly/refine/blue_steel.json
+16b0abee546fde3be49671570c2f4cdd28034bbc data/modpack/recipe/sequenced_assembly/sequenced_assembly/refine/red_steel.json
+6d7828c72b3f8642c1c9f50abd46768ee9fd722b data/modpack/recipe/sequenced_assembly/sequenced_assembly/refine/steel.json
+e8a1b90479f0de3f496643487aba40be3d2da3f1 data/modpack/recipe/sequenced_assembly/sequenced_assembly/refine/wrought_iron.json
