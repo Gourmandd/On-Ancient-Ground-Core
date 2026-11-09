@@ -285,32 +285,11 @@ public class ClientEventHandler
     {
         if (type == Rock.BlockType.MOSSY_BRICKS)
         {
-            switch (rock)
-            {
-                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE, RED_SANDSTONE, SANDSTONE,
-                     ARKOSE, SUEVITE, PHONOLITE, SOAPSTONE ->
-                {
-                    return true;
-                }
-                default ->
-                {
-                    return false;
-                }
-            }
+            return (rock != CoreRocks.ARGILLITE) || !(rock.hasVariants());
         }
         if (type == Rock.BlockType.MOSSY_COBBLE)
         {
-            switch (rock)
-            {
-                case BLACKSLAG, NEPHELINITE ->
-                {
-                    return true;
-                }
-                default ->
-                {
-                    return false;
-                }
-            }
+            return (rock == CoreRocks.BLACKSLAG) || (rock == CoreRocks.NEPHELINITE);
         }
         return false;
     }
