@@ -7,6 +7,7 @@ import com.klikli_dev.modonomicon.data.BookPageJsonLoader;
 import com.klikli_dev.modonomicon.data.LoaderRegistry;
 import com.klikli_dev.modonomicon.fluid.NeoFluidHolder;
 import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.datagen.book.guide.categories.GettingStartedCategory;
 import net.gourmand.core.modonomicon.client.pages.*;
 import net.gourmand.core.modonomicon.pages.*;
 import net.minecraft.resources.ResourceLocation;
@@ -18,6 +19,7 @@ public class ModonomiconIntegration
 
     public static final String ID = "guide";
     public static final ResourceLocation BOOK_ID = AncientGroundCore.location(ID);
+    private static final BookAddress START_PAGE = BookAddress.of(BOOK_ID, AncientGroundCore.location(GettingStartedCategory.ID), AncientGroundCore.location(GettingStartedCategory.ID + "/field_guide"), 0);
 
     public static final int ITEM_BORDER_SPACING = -4; //an item border needs to be offset on both axis to cover the stack properly.
     public static final int FLUID_BORDER_SPACING = -4; // Fluids have a separate value as it may change in the future.
@@ -89,6 +91,8 @@ public class ModonomiconIntegration
 
     public static void openBook()
     {
-        BookGuiManager.get().openBook(BookAddress.defaultFor(BOOK_ID));
+        //TODO: when our guidebook is finished, change this back
+        //BookGuiManager.get().openBook(BookAddress.defaultFor(BOOK_ID));
+        BookGuiManager.get().openBook(START_PAGE);
     }
 }

@@ -4099,7 +4099,7 @@
   "book.modpack.guide.getting_started.clay.page8.title": "Clay",
   "book.modpack.guide.getting_started.field_guide.description": "Where is my field guide?",
   "book.modpack.guide.getting_started.field_guide.name": "About The Guide Books",
-  "book.modpack.guide.getting_started.field_guide.page1.text": " **TerraFirmaCraft** (**TFC**) has its own guide book, which this unfinished one aims to replace, but this one still has useful information.\n \\\n \\\n The TFC field guide can be opened by pressing **'[{}](macro.modpack.open_tfc_guide_key)'**\n \\\n \\\n This book can be open by pressing **'[{}](macro.modpack.open_modpack_guide_key)'**\n ",
+  "book.modpack.guide.getting_started.field_guide.page1.text": " **TerraFirmaCraft** (**TFC**) has its own guide book, which is planned to be replaced by this custom one.\n \\\n \\\n The TFC field guide can be opened by pressing **'[{}](macro.modpack.open_tfc_guide_key)'**\n \\\n \\\n This book can be open by pressing **'[{}](macro.modpack.open_modpack_guide_key)'**\n ",
   "book.modpack.guide.getting_started.field_guide.page1.title": "About The Guide Books",
   "book.modpack.guide.getting_started.field_guide.page2.text": " Please report any inaccuracies, suggestions, typos, or anything else on the discord server, Github Issues, or even the scattered threads in the TerraFirmaCraft, Spectrum or MDK servers.\n \\\n \\\n Have Fun :).\n ",
   "book.modpack.guide.getting_started.field_guide.page2.title": "About The Guide Books",
