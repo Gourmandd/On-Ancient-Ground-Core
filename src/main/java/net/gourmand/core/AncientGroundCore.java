@@ -91,7 +91,6 @@ public class AncientGroundCore
         LOGGER.info("HELLO FROM COMMON SETUP");
 
         HeatingIdolModification.init();
-        PlacedItemModels.init();
         CoreBoilerHeaters.register();
     }
 
@@ -106,5 +105,6 @@ public class AncientGroundCore
         LoaderRegistry.registerDynamicTextMacroLoader(ModonomiconIntegration.BOOK_ID, () -> textMacros);
 
         CoreBowlPowders.addPowders();
+        PlacedItemModels.init();
     }
 }
