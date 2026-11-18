@@ -1,0 +1,30 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "tfc:refined_iron_bloom"
+  },
+  "loops": 5,
+  "results": [
+    {
+      "id": "tfc:metal/ingot/wrought_iron"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "tfc:refined_iron_bloom"
+        }
+      ],
+      "results": [
+        {
+          "id": "tfc:refined_iron_bloom"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "tfc:refined_iron_bloom"
+  }
+}

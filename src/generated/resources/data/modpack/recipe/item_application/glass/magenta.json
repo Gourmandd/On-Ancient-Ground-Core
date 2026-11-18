@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "modpack:molten_glass/magenta"
+    },
+    {
+      "item": "tfc:powder/flux"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:magenta_stained_glass"
+    }
+  ]
+}

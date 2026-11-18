@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "modpack:molten_glass/purple"
+    },
+    {
+      "item": "tfc:powder/flux"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:purple_stained_glass"
+    }
+  ]
+}

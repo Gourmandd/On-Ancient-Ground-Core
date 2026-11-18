@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "tfc:powder/flux"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 800,
+      "fluid": "modpack:glass/cyan"
+    }
+  ],
+  "results": [
+    {
+      "id": "modpack:molten_glass/cyan"
+    }
+  ]
+}

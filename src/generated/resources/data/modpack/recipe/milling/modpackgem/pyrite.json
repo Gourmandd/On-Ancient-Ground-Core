@@ -1,0 +1,14 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "tfc:gem/pyrite"
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "id": "tfc:powder/pyrite"
+    }
+  ]
+}

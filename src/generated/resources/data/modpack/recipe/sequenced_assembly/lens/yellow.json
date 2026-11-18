@@ -1,0 +1,101 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "modpack:molten_glass/yellow"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "id": "modpack:lens/yellow"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:yellow_stained_glass_pane"
+        },
+        {
+          "item": "tfc:powder/soda_ash"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:yellow_stained_glass_pane"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:yellow_stained_glass_pane"
+        },
+        {
+          "item": "tfc:bellows"
+        }
+      ],
+      "keep_held_item": true,
+      "results": [
+        {
+          "id": "minecraft:yellow_stained_glass_pane"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:yellow_stained_glass_pane"
+        },
+        {
+          "item": "tfc:paddle"
+        }
+      ],
+      "keep_held_item": true,
+      "results": [
+        {
+          "id": "minecraft:yellow_stained_glass_pane"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:yellow_stained_glass_pane"
+        },
+        {
+          "item": "tfc:wool_cloth"
+        }
+      ],
+      "keep_held_item": true,
+      "results": [
+        {
+          "id": "minecraft:yellow_stained_glass_pane"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:yellow_stained_glass_pane"
+        },
+        {
+          "item": "tfc:gem_saw"
+        }
+      ],
+      "keep_held_item": true,
+      "results": [
+        {
+          "id": "minecraft:yellow_stained_glass_pane"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "minecraft:yellow_stained_glass_pane"
+  }
+}

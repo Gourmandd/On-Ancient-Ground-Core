@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "modpack:lead_glass/black"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "tfc:volcanic_glass_batch"
+    }
+  ]
+}
