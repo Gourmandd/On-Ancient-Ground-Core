@@ -72,74 +72,74 @@ public class CrushingRecipes extends CrushingRecipeGen
             Block leadGlassBlock = CoreBlocks.COLOURED_LEAD_GLASS.get(color).get();
             Block leadGlassPane = CoreBlocks.COLOURED_LEAD_GLASS_PANE.get(color).get();
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/framed_glass/" + color.getSerializedName()), b -> b
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "framed_glass/" + color.getSerializedName()), b -> b
                     .duration(100)
                     .require(framedGlassBlock)
                     .output(CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(color))
             );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/framed_glass_pane/" + color.getSerializedName()), b -> b
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "framed_glass_pane/" + color.getSerializedName()), b -> b
                     .duration(100)
                     .require(framedGlassPane)
                     .output(0.06f, CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(color))
             );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/glass/" + color.getSerializedName()), b -> b
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "glass/" + color.getSerializedName()), b -> b
                     .duration(100)
                     .require(glassBlock)
                     .output(CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(color))
             );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/glass_pane/" + color.getSerializedName()), b -> b
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "glass_pane/" + color.getSerializedName()), b -> b
                     .duration(100)
                     .require(glassPane)
                     .output(0.06f, CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(color))
             );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/lead_glass/" + color.getSerializedName()), b -> b
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "lead_glass/" + color.getSerializedName()), b -> b
                     .duration(100)
                     .require(leadGlassBlock)
                     .output(CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(color))
             );
 
-            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/lead_glass_pane/" + color.getSerializedName()), b -> b
+            create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "lead_glass_pane/" + color.getSerializedName()), b -> b
                     .duration(100)
                     .require(leadGlassPane)
                     .output(0.06f, CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(color))
             );
         }
         // clear glass
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/framed_glass/clear"), b -> b
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "framed_glass/clear"), b -> b
                 .duration(100)
                 .require(CategoryUtil.Glass.QUARK_CLEAR_GLASS.value())
                 .output(CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(DyeColor.WHITE))
         );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/framed_glass_pane/clear"), b -> b
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "framed_glass_pane/clear"), b -> b
                 .duration(100)
                 .require(CategoryUtil.Glass.QUARK_CLEAR_GLASS_PANE.value())
                 .output(0.06f, CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(DyeColor.WHITE))
         );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/glass/clear"), b -> b
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "glass/clear"), b -> b
                 .duration(100)
                 .require(Blocks.GLASS)
                 .output(CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(DyeColor.WHITE))
         );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/glass_pane/clear"), b -> b
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "glass_pane/clear"), b -> b
                 .duration(100)
                 .require(Blocks.GLASS_PANE)
                 .output(0.06f, CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(DyeColor.WHITE))
         );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/lead_glass/clear"), b -> b
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "lead_glass/clear"), b -> b
                 .duration(100)
                 .require(CoreBlocks.CLEAR_LEAD_GLASS.get())
                 .output(CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(DyeColor.WHITE))
         );
 
-        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "crushing/lead_glass_pane/clear"), b -> b
+        create(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, "lead_glass_pane/clear"), b -> b
                 .duration(100)
                 .require(CoreBlocks.CLEAR_LEAD_GLASS_PANE.get())
                 .output(0.06f, CategoryUtil.Glass.COLOR_TO_GLASS_BATCH.get(DyeColor.WHITE))

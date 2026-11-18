@@ -153,14 +153,14 @@ public class CompactingRecipes extends CompactingRecipeGen
         for (DyeColor color : DyeColor.values())
         {
             create(
-                    AncientGroundCore.location("compacting/molten_glass/" + color.getSerializedName()), b -> b
+                    AncientGroundCore.location("molten_glass/" + color.getSerializedName()), b -> b
                             .require(CoreFluids.COLORED_GLASS.get(color).getSource(), 800)
                             .output(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
             );
         }
         // clear glass
         create(
-                AncientGroundCore.location("compacting/molten_glass/clear"), b -> b
+                AncientGroundCore.location("molten_glass/clear"), b -> b
                         .require(CoreFluids.CLEAR_GLASS.getSource(), 800)
                         .output(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
         );
@@ -169,7 +169,7 @@ public class CompactingRecipes extends CompactingRecipeGen
         for (DyeColor color : DyeColor.values())
         {
             create(
-                    AncientGroundCore.location("compacting/dye/" + color.getSerializedName()), b -> b
+                    AncientGroundCore.location("dye/" + color.getSerializedName()), b -> b
                             .require(TFCFluids.COLORED_FLUIDS.get(color).getSource(), 1000)
                             .output(CategoryUtil.Color.TO_DYE.get(color))
                             .requiresHeat(HeatCondition.HEATED)
@@ -179,7 +179,7 @@ public class CompactingRecipes extends CompactingRecipeGen
         for (SandBlockType color : SandBlockType.values())
         {
             create(
-                    AncientGroundCore.location("compacting/sand/" + color.name().toLowerCase(Locale.ROOT)), b -> b
+                    AncientGroundCore.location("sand/" + color.name().toLowerCase(Locale.ROOT)), b -> b
                             .require(TFCBlocks.SAND.get(color).get())
                             .require(TFCBlocks.SAND.get(color).get())
                             .output(TFCBlocks.SANDSTONE.get(color).get(SandstoneBlockType.RAW))

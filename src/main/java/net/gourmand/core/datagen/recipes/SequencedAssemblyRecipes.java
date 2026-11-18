@@ -33,7 +33,7 @@ public class SequencedAssemblyRecipes extends SequencedAssemblyRecipeGen
 
         for (DyeColor color : DyeColor.values())
         {
-            create("sequenced_assembly/lens/" + color.getSerializedName(), b -> b
+            create("lens/" + color.getSerializedName(), b -> b
                     .require(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
                     .transitionTo(CategoryUtil.Glass.COLOR_TO_VANILLA_GLASS_PANE.get(color))
                     .loops(3)
@@ -55,7 +55,7 @@ public class SequencedAssemblyRecipes extends SequencedAssemblyRecipeGen
                     .addOutput(CoreItems.COLORED_LENS.get(color).get(), 1)
             );
         }
-        create("sequenced_assembly/lens/clear", b -> b
+        create("lens/clear", b -> b
                 .require(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
                 .transitionTo(CategoryUtil.Glass.COLOR_TO_VANILLA_GLASS_PANE.get(DyeColor.WHITE))
                 .loops(3)
@@ -91,7 +91,7 @@ public class SequencedAssemblyRecipes extends SequencedAssemblyRecipeGen
 
     private void createRefinementRecipe(String name, Item input, Item output)
     {
-        create("sequenced_assembly/refine/" + name, b -> b
+        create("refine/" + name, b -> b
                 .require(input)
                 .transitionTo(input)
                 .loops(5)

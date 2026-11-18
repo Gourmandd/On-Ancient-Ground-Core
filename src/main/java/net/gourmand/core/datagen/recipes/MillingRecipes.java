@@ -31,7 +31,7 @@ public class MillingRecipes extends MillingRecipeGen
 
         for (DyeColor color : DyeColor.values())
         {
-            create(AncientGroundCore.MOD_ID + "milling/concrete/" + color.getSerializedName(), b -> b
+            create(AncientGroundCore.MOD_ID + "concrete/" + color.getSerializedName(), b -> b
                     .require(CategoryUtil.Color.TO_CONCRETE.get(color).asItem())
                     .duration(NORMAL_TIME)
                     .output(CategoryUtil.Color.TO_CONCRETE_POWDER.get(color).asItem())
@@ -42,13 +42,13 @@ public class MillingRecipes extends MillingRecipeGen
         {
             if (oreType.isGem())
             {
-                create(AncientGroundCore.MOD_ID + "milling/gem/" + oreType.name().toLowerCase(Locale.ROOT), b -> b
+                create(AncientGroundCore.MOD_ID + "gem/" + oreType.name().toLowerCase(Locale.ROOT), b -> b
                         .require(TFCItems.GEMS.get(oreType))
                         .duration(LONG_TIME)
                         .output(TFCItems.ORE_POWDERS.get(oreType))
                 );
 
-                create(AncientGroundCore.MOD_ID + "milling/ore/" + oreType.name().toLowerCase(Locale.ROOT), b -> b
+                create(AncientGroundCore.MOD_ID + "ore/" + oreType.name().toLowerCase(Locale.ROOT), b -> b
                         .require(TFCItems.ORES.get(oreType))
                         .duration(LONG_TIME)
                         .output(TFCItems.ORE_POWDERS.get(oreType))
@@ -58,7 +58,7 @@ public class MillingRecipes extends MillingRecipeGen
 
         for (SandBlockType color : SandBlockType.values())
         {
-            create(AncientGroundCore.MOD_ID + "milling/raw_sandstone/" + color.name().toLowerCase(Locale.ROOT), b -> b
+            create(AncientGroundCore.MOD_ID + "raw_sandstone/" + color.name().toLowerCase(Locale.ROOT), b -> b
                     .require(TFCBlocks.SANDSTONE.get(color).get(SandstoneBlockType.RAW))
                     .duration(NORMAL_TIME)
                     .output(TFCBlocks.SAND.get(color))

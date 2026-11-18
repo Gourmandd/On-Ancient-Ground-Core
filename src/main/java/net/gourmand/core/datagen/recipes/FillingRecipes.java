@@ -30,14 +30,14 @@ public class FillingRecipes extends FillingRecipeGen
 
         for (DyeColor color : DyeColor.values())
         {
-            create(AncientGroundCore.location("filling/molten_glass/" + color.getSerializedName()), b -> b
+            create(AncientGroundCore.location("molten_glass/" + color.getSerializedName()), b -> b
                     .require(CoreFluids.COLORED_GLASS.get(color).getSource(), 800)
                     .require(TFCItems.POWDERS.get(Powder.FLUX))
                     .output(CoreBlocks.COLORED_MOLTEN_GLASS.get(color).get())
             );
         }
 
-        create(AncientGroundCore.location("filling/molten_glass/clear"), b -> b
+        create(AncientGroundCore.location("molten_glass/clear"), b -> b
                 .require(CoreFluids.CLEAR_GLASS.getSource(), 800)
                 .require(TFCItems.POWDERS.get(Powder.FLUX))
                 .output(CoreBlocks.CLEAR_MOLTEN_GLASS.get())
@@ -45,7 +45,7 @@ public class FillingRecipes extends FillingRecipeGen
 
         for (SoilBlockType.Variant soilType : SoilBlockType.Variant.values())
         {
-            create(AncientGroundCore.location("filling/grass/" + soilType.name().toLowerCase(Locale.ROOT)), b -> b
+            create(AncientGroundCore.location("grass/" + soilType.name().toLowerCase(Locale.ROOT)), b -> b
                     .require(Fluids.WATER, 500)
                     .require(TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(soilType))
                     .output(TFCBlocks.SOIL.get(SoilBlockType.GRASS).get(soilType))
