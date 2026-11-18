@@ -11,6 +11,7 @@ import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CategoryUtil;
+import net.gourmand.core.registry.category.CoreOres;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
@@ -78,7 +79,11 @@ public class SequencedAssemblyRecipes extends SequencedAssemblyRecipeGen
 
         createRefinementRecipe("bloom", TFCItems.RAW_IRON_BLOOM.get(), TFCItems.REFINED_IRON_BLOOM.asItem());
         createRefinementRecipe("wrought_iron", TFCItems.REFINED_IRON_BLOOM.asItem(), TFCItems.METAL_ITEMS.get(Metal.WROUGHT_IRON).get(Metal.ItemType.INGOT).asItem());
+        createRefinementRecipe("meteoric_iron", CoreItems.ORES.get(CoreOres.METEORIC_IRON).get().asItem(), TFCItems.METAL_ITEMS.get(Metal.WROUGHT_IRON).get(Metal.ItemType.INGOT).asItem());
+
+        createRefinementRecipe("pig_iron", TFCItems.METAL_ITEMS.get(Metal.PIG_IRON).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_STEEL).get(Metal.ItemType.INGOT).asItem());
         createRefinementRecipe("steel", TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_STEEL).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.STEEL).get(Metal.ItemType.INGOT).asItem());
+
         createRefinementRecipe("black_steel", TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_BLACK_STEEL).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.BLACK_STEEL).get(Metal.ItemType.INGOT).asItem());
         createRefinementRecipe("red_steel", TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_RED_STEEL).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.RED_STEEL).get(Metal.ItemType.INGOT).asItem());
         createRefinementRecipe("blue_steel", TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_BLUE_STEEL).get(Metal.ItemType.INGOT).asItem(), TFCItems.METAL_ITEMS.get(Metal.BLUE_STEEL).get(Metal.ItemType.INGOT).asItem());

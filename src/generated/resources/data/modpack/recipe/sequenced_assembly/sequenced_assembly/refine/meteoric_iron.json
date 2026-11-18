@@ -1,0 +1,30 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "modpack:ore/meteoric_iron"
+  },
+  "loops": 5,
+  "results": [
+    {
+      "id": "tfc:metal/ingot/wrought_iron"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "modpack:ore/meteoric_iron"
+        }
+      ],
+      "results": [
+        {
+          "id": "modpack:ore/meteoric_iron"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "modpack:ore/meteoric_iron"
+  }
+}
