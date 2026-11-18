@@ -1,4 +1,4 @@
-package net.gourmand.core.mixin;
+package net.gourmand.core.mixin.spectrum;
 
 import de.dafuqs.spectrum.blocks.block_flooder.BlockFlooderBlock;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;

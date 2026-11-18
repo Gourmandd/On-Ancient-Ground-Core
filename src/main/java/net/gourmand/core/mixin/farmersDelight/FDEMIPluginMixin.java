@@ -1,4 +1,4 @@
-package net.gourmand.core.mixin;
+package net.gourmand.core.mixin.farmersDelight;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;

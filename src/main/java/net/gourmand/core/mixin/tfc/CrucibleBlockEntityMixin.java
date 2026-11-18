@@ -1,7 +1,7 @@
-package net.gourmand.core.mixin;
+package net.gourmand.core.mixin.tfc;
 
 import com.simibubi.create.content.fluids.tank.FluidTankBlock;
-import net.dries007.tfc.common.blockentities.CharcoalForgeBlockEntity;
+import net.dries007.tfc.common.blockentities.CrucibleBlockEntity;
 import net.gourmand.core.util.extra.ExtraBlockEntityTicks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(value = CharcoalForgeBlockEntity.class, remap = false)
-public class CharcoalForgeBlockEntityMixin implements ExtraBlockEntityTicks
+@Mixin(value = CrucibleBlockEntity.class, remap = false)
+public class CrucibleBlockEntityMixin implements ExtraBlockEntityTicks
 {
     @Shadow private float temperature;
 
@@ -36,7 +36,7 @@ public class CharcoalForgeBlockEntityMixin implements ExtraBlockEntityTicks
     }
 
     @Inject(method = "serverTick", at = @At(value = "HEAD"))
-    private static void modpack$tick(Level level, BlockPos pos, BlockState state, CharcoalForgeBlockEntity box, CallbackInfo ci)
+    private static void modpack$tick(Level level, BlockPos pos, BlockState state, CrucibleBlockEntity box, CallbackInfo ci)
     {
         if (box instanceof ExtraBlockEntityTicks blockEntity)
         {

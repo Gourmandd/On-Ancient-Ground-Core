@@ -1,4 +1,4 @@
-package net.gourmand.core.mixin;
+package net.gourmand.core.mixin.spectrum;
 
 import de.dafuqs.spectrum.blocks.decay.DecayAwayBlock;
 import net.dries007.tfc.common.blocks.TFCBlocks;

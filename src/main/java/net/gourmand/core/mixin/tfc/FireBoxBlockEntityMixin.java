@@ -1,4 +1,4 @@
-package net.gourmand.core.mixin;
+package net.gourmand.core.mixin.tfc;
 
 import com.simibubi.create.content.fluids.tank.FluidTankBlock;
 import net.dries007.tfc.common.blockentities.FireboxBlockEntity;
