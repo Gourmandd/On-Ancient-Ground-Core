@@ -6,7 +6,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import de.dafuqs.revelationary.api.advancements.AdvancementHelper;
 import dev.emi.emi.api.widget.TextWidget;
 import dev.emi.emi.api.widget.WidgetHolder;
-import net.gourmand.core.common.emi.CookingPotEMIRecipeExtraData;
+import net.gourmand.core.util.extra.CookingPotEMIRecipeExtra;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.Nullable;
@@ -22,7 +22,7 @@ import static de.dafuqs.spectrum.compat.emi.SpectrumEmiRecipe.HIDDEN_LINE_1;
 import static de.dafuqs.spectrum.compat.emi.SpectrumEmiRecipe.HIDDEN_LINE_2;
 
 @Mixin(value = CookingPotEmiRecipe.class, remap = false)
-public abstract class CookingPotEMIRecipeMixin implements CookingPotEMIRecipeExtraData
+public abstract class CookingPotEMIRecipeMixin implements CookingPotEMIRecipeExtra
 {
 
     @Unique

@@ -4,7 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.EmiRecipe;
-import net.gourmand.core.common.emi.CookingPotEMIRecipeExtraData;
+import net.gourmand.core.util.extra.CookingPotEMIRecipeExtra;
 import net.gourmand.core.registry.recipe.GatedCookingRecipe;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -19,7 +19,7 @@ public class FDEMIPluginMixin
     private void modpack$addEMIRecipe(EmiRegistry instance, EmiRecipe emiRecipe, Operation<Void> original)
     {
         original.call(instance, emiRecipe);
-        if (emiRecipe instanceof CookingPotEMIRecipeExtraData recipeExtraData)
+        if (emiRecipe instanceof CookingPotEMIRecipeExtra recipeExtraData)
         {
             Optional.ofNullable(emiRecipe.getId()).ifPresent(id ->
             {

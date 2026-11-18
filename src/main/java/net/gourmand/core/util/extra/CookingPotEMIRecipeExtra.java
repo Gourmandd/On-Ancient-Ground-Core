@@ -1,9 +1,9 @@
-package net.gourmand.core.common.emi;
+package net.gourmand.core.util.extra;
 
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.Nullable;
 
-public interface CookingPotEMIRecipeExtraData
+public interface CookingPotEMIRecipeExtra
 {
 
     @Nullable ResourceLocation modpack$getUnlockAdvancement();
