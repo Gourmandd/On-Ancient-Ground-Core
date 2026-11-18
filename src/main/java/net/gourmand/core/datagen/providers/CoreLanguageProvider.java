@@ -6,11 +6,13 @@ import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreFluids;
+import net.gourmand.core.registry.CoreGlassworkingOperations;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
 import net.gourmand.core.util.TextUtil;
@@ -54,6 +56,8 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
         add("block.shutter.interaction_shutter_netherite", "Shutter Interaction");
         add("block.shutter.interaction_shutter_copper", "Shutter Interaction");
         add("block.shutter.interaction_shutter_glass", "Shutter Interaction");
+
+        add(CoreGlassworkingOperations.OBSIDIAN.get().getTranslationId(), "Obsidian");
 
         addItem(CoreItems.GLASS_MOLD, "Glass Block Mold");
         addItem(CoreItems.GLASS_PANE_MOLD, "Glass Pane Mold");
@@ -148,6 +152,11 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
                 }
             }
             addItem(CoreItems.BRICKS.get(rockType), getName(rockType) + " Brick");
+
+            if (rockType.category() == RockCategory.IGNEOUS_EXTRUSIVE || rockType.category() == RockCategory.IGNEOUS_INTRUSIVE)
+            {
+                addBlock(CoreBlocks.MAGMA_BLOCKS.get(rockType), getName(rockType) + " Magma");
+            }
         }
 
         for (SpectrumWood woodType : SpectrumWood.values())
@@ -271,16 +280,25 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
                 {
                     if (rockType.hasOres())
                     {
+                        String oreName = getName(oreType.name());
+                        if (oreName.equals("Amethyst"))
+                        {
+                            oreName = "Garnet";
+                        }
+                        if (oreName.equals("Topaz"))
+                        {
+                            oreName = "Maxixe";
+                        }
                         if (oreType.isGraded())
                         {
                             for (CoreOres.Grade grade : CoreOres.Grade.values())
                             {
-                                createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rockType).get(oreType).get(grade), getName(grade.name()) + " " + getName(rockType), getName(oreType.name()));
+                                createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rockType).get(oreType).get(grade), getName(grade.name()) + " " + getName(rockType), oreName);
                             }
                         }
                         else
                         {
-                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(oreType), getName(rockType), getName(oreType.name()));
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(oreType), getName(rockType), oreName);
                         }
                     }
                 }

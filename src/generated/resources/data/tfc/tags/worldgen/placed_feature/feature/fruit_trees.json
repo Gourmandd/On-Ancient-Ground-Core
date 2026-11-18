@@ -1,0 +1,10 @@
+{
+  "remove": [
+    "firmalife:plant/fig"
+  ],
+  "values": [
+    "modpack:plant/fruit_trees/fig",
+    "modpack:plant/fruit_trees/walnut",
+    "modpack:plant/fruit_trees/wolfberry"
+  ]
+}

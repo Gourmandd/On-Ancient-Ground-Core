@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "tfc:metal/ingot/wrought_iron"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "tfc:metal/rod/wrought_iron"
+    }
+  ]
+}

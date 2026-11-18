@@ -27,7 +27,7 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:crafting/rock/hardened_stone/granite",
+      "recipe_id_1": "tfc:crafting/rock/hardened/granite",
       "text": "book.modpack.guide.mining.quarrying.page2.text",
       "title1": "",
       "title2": ""

@@ -162,6 +162,17 @@
       "multiblock_name": "",
       "show_visualize_button": false,
       "text": "book.modpack.guide.devices.oven.page14.text"
+    },
+    {
+      "type": "modpack:oven",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "firmalife:oven/food/chocolate_chip_cookie",
+      "text": "book.modpack.guide.devices.oven.page15.text",
+      "title1": "Chocolate Chip Cookie",
+      "title2": ""
     }
   ],
   "show_when_any_parent_unlocked": false,

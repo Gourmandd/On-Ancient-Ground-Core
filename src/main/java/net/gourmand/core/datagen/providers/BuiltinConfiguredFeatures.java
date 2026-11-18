@@ -5,25 +5,24 @@ import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.crop.WildDoubleCropBlock;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.util.collections.IWeighted;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.world.feature.*;
 import net.dries007.tfc.world.feature.cave.CaveVegetationConfig;
-import net.dries007.tfc.world.feature.vein.ClusterVeinConfig;
-import net.dries007.tfc.world.feature.vein.DiscVeinConfig;
-import net.dries007.tfc.world.feature.vein.PipeVeinConfig;
-import net.dries007.tfc.world.feature.vein.VeinConfig;
+import net.dries007.tfc.world.feature.vein.*;
+import net.dries007.tfc.world.stateprovider.RandomPropertyProvider;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreWorldGen;
-import net.gourmand.core.registry.category.CoreOres;
-import net.gourmand.core.registry.category.CoreRocks;
-import net.gourmand.core.registry.category.TFCOres;
+import net.gourmand.core.registry.category.*;
 import net.gourmand.core.util.DataWeighted;
 import net.gourmand.core.util.RegistryOre;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -37,11 +36,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.*;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.common.Tags;
@@ -49,8 +48,6 @@ import net.neoforged.neoforge.common.Tags;
 import java.util.*;
 
 public class BuiltinConfiguredFeatures  {
-    // Some features are commented out, and their generated jsons are moved to the non-datagenned data directories.
-    // Each time they generate, the order of the maps is different, this is so that git doesn't bother with them each time data gen is run.
 
     public static BootstrapContext<ConfiguredFeature<?, ?>> CTX;
 
@@ -155,20 +152,16 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> CASSITERITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cassiterite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CINNABAR_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cinnabar");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYOLITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/cryolite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/diamond");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> EMERALD_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/emerald");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GARNIERITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/garnierite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GRAPHITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/graphite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GYPSUM_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/gypsum");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HALITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/halite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HEMATITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/hematite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> KAOLINITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/kaolinite");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LAPIS_LAZULI_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/lapis_lazuli");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIGNITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/lignite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIMONITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/limonite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MALACHITE_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/malachite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_COPPER_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_copper");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_GOLD_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_gold");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NATIVE_SILVER_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/native_silver");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OPAL_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/opal");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PALTAERIA_DEEPER_DOWN = createKey(AncientGroundCore.MOD_ID, "vein/deeper_down/paltaeria");
@@ -195,20 +188,50 @@ public class BuiltinConfiguredFeatures  {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE = createKey(AncientGroundCore.MOD_ID, "vein/shimmerstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SHIMMERSTONE_VOLCANIC = createKey(AncientGroundCore.MOD_ID, "vein/shimmerstone_volcanic");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MARLSTONE = createKey(AncientGroundCore.MOD_ID, "vein/marlstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SOAPSTONE = createKey(AncientGroundCore.MOD_ID, "vein/soapstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRATINE = createKey(AncientGroundCore.MOD_ID, "vein/stratine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_GALENA = createKey(AncientGroundCore.MOD_ID, "vein/surface_galena");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TERRACOTTA = createKey(AncientGroundCore.MOD_ID, "vein/terracotta");
     //endregion
 
-    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx){
+    //region Wild Crops
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMARANTH = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/amaranth");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMARANTH_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/amaranth_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COFFEE = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/coffee");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COFFEE_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/coffee_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COTTON = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/cotton");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COTTON_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/wild_crop/cotton_patch");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CLOVER = createKey(AncientGroundCore.MOD_ID, "plant/clover");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CLOVER_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/clover_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOUR_LEAF_CLOVER = createKey(AncientGroundCore.MOD_ID, "plant/four_leaf_clover");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOUR_LEAF_CLOVER_PATCH = createKey(AncientGroundCore.MOD_ID, "plant/four_leaf_clover_patch");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FIG_TREE = createKey(AncientGroundCore.MOD_ID, "plant/fruit_trees/fig");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WALNUT_TREE = createKey(AncientGroundCore.MOD_ID, "plant/fruit_trees/walnut");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WOLFBERRY_TREE = createKey(AncientGroundCore.MOD_ID, "plant/fruit_trees/wolfberry");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EARTHENWARE_PATCH = createKey(AncientGroundCore.MOD_ID, "soil_disc/earthenware");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> YELLOWWARE_PATCH = createKey(AncientGroundCore.MOD_ID, "soil_disc/yellowware");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> YIXING_PATCH = createKey(AncientGroundCore.MOD_ID, "soil_disc/yixing");
+
+    //endregion
+
+    public static HolderGetter<PlacedFeature> REGISTRY;
+
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx)
+    {
 
         CTX = ctx;
+        REGISTRY = ctx.lookup(Registries.PLACED_FEATURE);
 
         bootstrapModpackFeatures();
         bootstrapTFCFeatures();
     }
 
-    private static void bootstrapModpackFeatures(){
+    private static void bootstrapModpackFeatures()
+    {
         CTX.register(
                 MONSTER_ROOM,
                 new ConfiguredFeature<>(CoreWorldGen.MONSTER_ROOM.get(),
@@ -248,16 +271,6 @@ public class BuiltinConfiguredFeatures  {
                 TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
         );
 
-        createOreGeode(DIAMOND_DEEPER_DOWN, Rock.GABBRO, TFCOres.DIAMOND,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.GABBRO).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
-
-        createOreGeode(EMERALD_DEEPER_DOWN, Rock.DIORITE, TFCOres.EMERALD,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.DIORITE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.SCHIST).get(Rock.BlockType.HARDENED).get()
-        );
-
         createOreGeode(GARNIERITE_DEEPER_DOWN, Rock.GABBRO, TFCOres.GARNIERITE,
                 TFCBlocks.GRADED_ORES.get(Rock.GABBRO).get(Ore.GARNIERITE).get(Ore.Grade.POOR).get(),
                 TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
@@ -291,11 +304,6 @@ public class BuiltinConfiguredFeatures  {
                 0.25
         );
 
-        createOreGeode(LAPIS_LAZULI_DEEPER_DOWN, Rock.LIMESTONE, TFCOres.LAPIS_LAZULI,
-                TFCBlocks.ROCK_BLOCKS.get(Rock.LIMESTONE).get(Rock.BlockType.HARDENED).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.MARBLE).get(Rock.BlockType.HARDENED).get()
-        );
-
         createOreGeode(LIGNITE_DEEPER_DOWN, Rock.DOLOMITE, TFCOres.LIGNITE,
                 TFCBlocks.ROCK_BLOCKS.get(Rock.DOLOMITE).get(Rock.BlockType.HARDENED).get(),
                 CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE).get()
@@ -313,11 +321,6 @@ public class BuiltinConfiguredFeatures  {
 
         createOreGeode(NATIVE_COPPER_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_COPPER,
                 TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_COPPER).get(Ore.Grade.POOR).get(),
-                TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
-        );
-
-        createOreGeode(NATIVE_GOLD_DEEPER_DOWN, Rock.ANDESITE, TFCOres.NATIVE_GOLD,
-                TFCBlocks.GRADED_ORES.get(Rock.ANDESITE).get(Ore.NATIVE_GOLD).get(Ore.Grade.POOR).get(),
                 TFCBlocks.ROCK_BLOCKS.get(Rock.BASALT).get(Rock.BlockType.HARDENED).get()
         );
 
@@ -377,8 +380,6 @@ public class BuiltinConfiguredFeatures  {
         );
         //endregion
 
-        // See notice at the top of the class.
-        /*
         //region Ore Veins
         createDiscVein(ANTHRACITE, 30, 3, new VeinConfig(
                 createOreVeinMap(List.of(RockCategory.METAMORPHIC), List.of(), CoreOres.ANTHRACITE),
@@ -583,11 +584,40 @@ public class BuiltinConfiguredFeatures  {
                 hash("terracotta_ore"),
                 false
         ));
+
+        createDiscVein(SOAPSTONE, 30, 3, new VeinConfig(
+                createSoapstoneOreVeinMap(),
+                Optional.empty(),
+                80,
+                0.9f,
+                -64,
+                80,
+                false,
+                false,
+                hash("soapstone_ore"),
+                false
+        ));
         //endregion
-         */
+
+        createWildTallCropPatch(AMARANTH, (WildDoubleCropBlock) CoreBlocks.WILD_CROPS.get(CoreCrops.AMARANTH).get(), AMARANTH_PATCH, BuiltinPlacedFeatures.AMARANTH);
+        createWildCropPatch(COFFEE, CoreBlocks.WILD_CROPS.get(CoreCrops.COFFEE).get().defaultBlockState(), COFFEE_PATCH, BuiltinPlacedFeatures.COFFEE);
+        createWildCropPatch(COTTON, CoreBlocks.WILD_CROPS.get(CoreCrops.COTTON).get().defaultBlockState(), COTTON_PATCH, BuiltinPlacedFeatures.COTTON);
+
+        createFlowerPatch(CLOVER, SpectrumBlocks.CLOVER.get().defaultBlockState(), CLOVER_PATCH, BuiltinPlacedFeatures.CLOVER);
+        createFlowerPatch(FOUR_LEAF_CLOVER, SpectrumBlocks.FOUR_LEAF_CLOVER.get().defaultBlockState(), FOUR_LEAF_CLOVER_PATCH, BuiltinPlacedFeatures.FOUR_LEAF_CLOVER);
+
+        createFruitTreeFeature(FIG_TREE, CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(CoreFruitTrees.FIG).get().defaultBlockState());
+        createFruitTreeFeature(WALNUT_TREE, CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(CoreFruitTrees.WALNUT).get().defaultBlockState());
+        createFruitTreeFeature(WOLFBERRY_TREE, CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.get(CoreFruitTrees.WOLFBERRY).get().defaultBlockState());
+
+        createSoilDisc(EARTHENWARE_PATCH, createClayDiscMap(CoreClay.EARTHENWARE), 3, 5, 4, 1);
+        createSoilDisc(YELLOWWARE_PATCH, createClayDiscMap(CoreClay.YELLOWWARE), 3, 5, 4, 1);
+        createSoilDisc(YIXING_PATCH, createClayDiscMap(CoreClay.YIXING), 3, 5, 4, 1);
+
     }
 
-    private static void bootstrapTFCFeatures(){
+    private static void bootstrapTFCFeatures()
+    {
 
         //region Non-Vein
         createSoilDisc(CASSITERITE_DEEP_DEPOSIT, createDepositMap(OreDeposit.CASSITERITE), 3, 10, 3, 0.9f);
@@ -602,7 +632,7 @@ public class BuiltinConfiguredFeatures  {
         createSoilDisc(NATIVE_SILVER_DEEP_DEPOSIT, createDepositMap(OreDeposit.NATIVE_SILVER), 3, 10, 3, 0.9f);
         createSoilDisc(NATIVE_SILVER_DEPOSIT, createDepositMap(OreDeposit.NATIVE_SILVER), 1, 3, 2, 0.9f);
 
-        //createCaveVegetation(); // See notice at the top of the class.
+        createCaveVegetation();
 
         createBoulder(COBBLE_BOULDER, List.of(Rock.BlockType.RAW, Rock.BlockType.COBBLE), false);
         createBoulder(COBBLE_BOULDER_SMALL, List.of(Rock.BlockType.RAW, Rock.BlockType.COBBLE), true);
@@ -613,17 +643,16 @@ public class BuiltinConfiguredFeatures  {
         createBoulder(RAW_BOULDER, List.of(Rock.BlockType.RAW), false);
         createBoulder(RAW_BOULDER_SMALL, List.of(Rock.BlockType.RAW), true);
 
-        // See notice at the top of the class.
-        //createFissure(DIAMOND_VOLCANO_FISSURE, Ore.DIAMOND, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), Blocks.LAVA.defaultBlockState(), 3, 6, 3, 6, 3);
-        //createFissure(TOPAZ_VOLCANO_FISSURE, Ore.TOPAZ, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), Blocks.LAVA.defaultBlockState(), 3, 6, 3, 6, 3);
-        //createFissure(EMERALD_VOLCANO_SPRING_WATER_FISSURE, Ore.EMERALD, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 3, 6, 3, 6, 3);
-        //createFissure(SAPPHIRE_VOLCANO_SPRING_WATER_FISSURE, Ore.SAPPHIRE, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 3, 6, 3, 6, 3);
+        createFissure(DIAMOND_VOLCANO_FISSURE, Ore.DIAMOND, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), Blocks.LAVA.defaultBlockState(), 3, 6, 3, 6, 3);
+        createFissure(TOPAZ_VOLCANO_FISSURE, Ore.TOPAZ, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), Blocks.LAVA.defaultBlockState(), 3, 6, 3, 6, 3);
+        createFissure(EMERALD_VOLCANO_SPRING_WATER_FISSURE, Ore.EMERALD, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 3, 6, 3, 6, 3);
+        createFissure(SAPPHIRE_VOLCANO_SPRING_WATER_FISSURE, Ore.SAPPHIRE, Rock.BASALT.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 3, 6, 3, 6, 3);
 
-        //createHotSpring(EMERALD_EMPTY_HOT_SPRING, Ore.EMERALD, Optional.empty(), Blocks.AIR.defaultBlockState(), 14, 5, 2, 3);
-        //createHotSpring(EMERALD_HOT_SPRING, Ore.EMERALD, Optional.empty(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 14, 5, 5, 3);
-        //createHotSpring(LAVA_HOT_SPRING, null, Optional.empty(), Blocks.LAVA.defaultBlockState(), 10, 0, 0, 0, true, createLavaHotSpringMap());
-        //createHotSpring(SAPPHIRE_EMPTY_HOT_SPRING, Ore.SAPPHIRE, Optional.empty(), Blocks.AIR.defaultBlockState(), 14, 5, 5, 3);
-        //createHotSpring(SAPPHIRE_HOT_SPRING, Ore.SAPPHIRE, Optional.empty(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 14, 5, 2, 3);
+        createHotSpring(EMERALD_EMPTY_HOT_SPRING, Ore.EMERALD, Optional.empty(), Blocks.AIR.defaultBlockState(), 14, 5, 2, 3);
+        createHotSpring(EMERALD_HOT_SPRING, Ore.EMERALD, Optional.empty(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 14, 5, 5, 3);
+        createHotSpring(LAVA_HOT_SPRING, null, Optional.empty(), Blocks.LAVA.defaultBlockState(), 10, 0, 0, 0, true, createLavaHotSpringMap());
+        createHotSpring(SAPPHIRE_EMPTY_HOT_SPRING, Ore.SAPPHIRE, Optional.empty(), Blocks.AIR.defaultBlockState(), 14, 5, 5, 3);
+        createHotSpring(SAPPHIRE_HOT_SPRING, Ore.SAPPHIRE, Optional.empty(), TFCBlocks.SPRING_WATER.get().defaultBlockState(), 14, 5, 2, 3);
 
         createSpring(EXTRA_WATER_SURFACE_SPRING, Fluids.WATER.defaultFluidState());
         createSpring(LAVA_SPRING, Fluids.LAVA.defaultFluidState());
@@ -636,8 +665,7 @@ public class BuiltinConfiguredFeatures  {
 
         List<RegistryRock> malachiteFoundIn = List.of(Rock.MARBLE, Rock.LIMESTONE, Rock.DOLOMITE, Rock.CHALK, CoreRocks.SANDSTONE, CoreRocks.RED_SANDSTONE, CoreRocks.ARKOSE, CoreRocks.BRECCIA, CoreRocks.ARGILLITE, CoreRocks.TRAVERTINE);
 
-        // See notice at the top of the class.
-        /*
+
         //region Ore Vein Features
         createDiscVein(AMETHYST, 8, 4, new VeinConfig(
                 createOreVeinMap(List.of(RockCategory.SEDIMENTARY, RockCategory.METAMORPHIC), List.of(), TFCOres.AMETHYST),
@@ -1300,11 +1328,12 @@ public class BuiltinConfiguredFeatures  {
                 false
         ));
         //endregion
-         */
+
     }
 
     //region Functions to create features
-    private static void createSoilDisc(ResourceKey<ConfiguredFeature<?, ?>> key, Map<Block, BlockState> map, int minRadius, int maxRadius, int height, float integrity){
+    private static void createSoilDisc(ResourceKey<ConfiguredFeature<?, ?>> key, Map<Block, BlockState> map, int minRadius, int maxRadius, int height, float integrity)
+    {
         CTX.register(
                 key,
                 new ConfiguredFeature<>(TFCFeatures.SOIL_DISC.get(),
@@ -1313,11 +1342,13 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createCaveVegetation(){
+    private static void createCaveVegetation()
+    {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
+        for (Rock rock : Rock.values())
+        {
             map.putLast(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<>(
                     List.of(
                             Pair.of(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d),
@@ -1326,7 +1357,8 @@ public class BuiltinConfiguredFeatures  {
             ));
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
+        for (CoreRocks rock : CoreRocks.values())
+        {
             map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                     List.of(
                             Pair.of(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get().defaultBlockState(), 2d),
@@ -1343,11 +1375,13 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createBoulder(ResourceKey<ConfiguredFeature<?, ?>> key, List<Rock.BlockType> list, boolean isBaby){
+    private static void createBoulder(ResourceKey<ConfiguredFeature<?, ?>> key, List<Rock.BlockType> list, boolean isBaby)
+    {
 
         Map<Block, List<BlockState>> map = new LinkedHashMap<>();
 
-        list.forEach(blockType -> {
+        list.forEach(blockType ->
+        {
 
             for (Rock rockType : Rock.values())
             {
@@ -1358,7 +1392,8 @@ public class BuiltinConfiguredFeatures  {
                 );
             }
 
-            for (CoreRocks rockType : CoreRocks.values()){
+            for (CoreRocks rockType : CoreRocks.values())
+            {
                 map.put(rockType.getBlock(Rock.BlockType.RAW).get(),
                         List.of(
                                 rockType.getBlock(blockType).get().defaultBlockState()
@@ -1367,14 +1402,17 @@ public class BuiltinConfiguredFeatures  {
             }
         });
 
-        if (isBaby) {
+        if (isBaby)
+        {
             CTX.register(
                     key,
                     new ConfiguredFeature<>(TFCFeatures.BABY_BOULDER.get(),
                             new BoulderConfig(map)
                     )
             );
-        } else {
+        }
+        else
+        {
             CTX.register(
                     key,
                     new ConfiguredFeature<>(TFCFeatures.BOULDER.get(),
@@ -1384,13 +1422,16 @@ public class BuiltinConfiguredFeatures  {
         }
     }
 
-    private static void createFissure(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, BlockState wallState, BlockState fluidState, int count, int radius, int radiusDeco, int countDeco, int rarityDeco){
+    private static void createFissure(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, BlockState wallState, BlockState fluidState, int count, int radius, int radiusDeco, int countDeco, int rarityDeco)
+    {
 
         Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
+        for (Rock rock : Rock.values())
+        {
             RockCategory category = rock.displayCategory().category();
-            if (category != RockCategory.SEDIMENTARY){
+            if (category != RockCategory.SEDIMENTARY)
+            {
                 map.put(TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
                         List.of(
                                 Pair.of(TFCBlocks.ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
@@ -1399,10 +1440,13 @@ public class BuiltinConfiguredFeatures  {
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (rock.hasOres()){
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (rock.hasOres())
+            {
                 RockCategory category = rock.displayCategory().category();
-                if (category != RockCategory.SEDIMENTARY){
+                if (category != RockCategory.SEDIMENTARY)
+                {
                     map.put(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
                             List.of(
                                     Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore).get().defaultBlockState(), 1d)
@@ -1422,19 +1466,23 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco){
+    private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco)
+    {
         createHotSpring(key, ore, wallState, fluidState, radius, radiusDeco, countDeco, rarityDeco, false, Optional.empty());
     }
 
-    private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco, boolean allowUnderwater, Optional<Map<Block, IWeighted<BlockState>>> replacement){
+    private static void createHotSpring(ResourceKey<ConfiguredFeature<?, ?>> key, Ore ore, Optional<BlockState> wallState, BlockState fluidState, int radius, int radiusDeco, int countDeco, int rarityDeco, boolean allowUnderwater, Optional<Map<Block, IWeighted<BlockState>>> replacement)
+    {
 
         Map<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        if (ore != null){
+        if (ore != null)
+        {
             for (Rock rockType : Rock.values())
             {
                 RockCategory category = rockType.displayCategory().category();
-                if (category != RockCategory.SEDIMENTARY){
+                if (category != RockCategory.SEDIMENTARY)
+                {
                     map.put(TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
                             List.of(
                                     Pair.of(TFCBlocks.ORES.get(rockType).get(ore).get().defaultBlockState(), 1d)
@@ -1444,9 +1492,11 @@ public class BuiltinConfiguredFeatures  {
             }
             for (CoreRocks rockType : CoreRocks.values())
             {
-                if (rockType.hasOres()){
+                if (rockType.hasOres())
+                {
                     RockCategory category = rockType.displayCategory().category();
-                    if (category != RockCategory.SEDIMENTARY){
+                    if (category != RockCategory.SEDIMENTARY)
+                    {
                         map.put(rockType.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<BlockState>(
                                 List.of(
                                         Pair.of(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(ore).get().defaultBlockState(), 1d)
@@ -1457,14 +1507,17 @@ public class BuiltinConfiguredFeatures  {
             }
         }
 
-        if (ore != null){
+        if (ore != null)
+        {
             FissureConfig.Decoration deco = new FissureConfig.Decoration(map, rarityDeco, radiusDeco, countDeco);
             CTX.register(key,
                     new ConfiguredFeature<>(TFCFeatures.HOT_SPRING.get(),
                             new HotSpringConfig(wallState, fluidState, radius, Optional.of(deco), allowUnderwater, replacement)
                     )
             );
-        } else {
+        }
+        else
+        {
             CTX.register(key,
                     new ConfiguredFeature<>(TFCFeatures.HOT_SPRING.get(),
                             new HotSpringConfig(wallState, fluidState, radius, Optional.empty(), allowUnderwater, replacement)
@@ -1473,7 +1526,8 @@ public class BuiltinConfiguredFeatures  {
         }
     }
 
-    private static void createSpring(ResourceKey<ConfiguredFeature<?, ?>> key, FluidState fluidState){
+    private static void createSpring(ResourceKey<ConfiguredFeature<?, ?>> key, FluidState fluidState)
+    {
 
         List<Block> list = new ArrayList<Block>();
 
@@ -1494,14 +1548,16 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createRivulet(ResourceKey<ConfiguredFeature<?, ?>> key){
+    private static void createRivulet(ResourceKey<ConfiguredFeature<?, ?>> key)
+    {
 
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
         for (Rock rockType : Rock.values())
         {
             RockCategory category = rockType.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
                 map.put(
                         TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(),
                         TFCBlocks.MAGMA_BLOCKS.get(rockType).get().defaultBlockState()
@@ -1517,7 +1573,8 @@ public class BuiltinConfiguredFeatures  {
         for (CoreRocks rockType : CoreRocks.values())
         {
             RockCategory category = rockType.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
                 map.put(
                         rockType.getBlock(Rock.BlockType.RAW).get(),
                         CoreBlocks.MAGMA_BLOCKS.get(rockType).get().defaultBlockState()
@@ -1547,14 +1604,16 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createSulfurRivulet(ResourceKey<ConfiguredFeature<?, ?>> key){
+    private static void createSulfurRivulet(ResourceKey<ConfiguredFeature<?, ?>> key)
+    {
 
         Map<Block, BlockState> map = new LinkedHashMap<>();
 
         for (Rock rockType : Rock.values())
         {
             RockCategory category = rockType.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
                 map.put(
                         TFCBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.RAW).get(),
                         TFCBlocks.ORES.get(rockType).get(Ore.SULFUR).get().defaultBlockState()
@@ -1570,7 +1629,8 @@ public class BuiltinConfiguredFeatures  {
         for (CoreRocks rockType : CoreRocks.values())
         {
             RockCategory category = rockType.displayCategory().category();
-            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE){
+            if (category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.IGNEOUS_EXTRUSIVE)
+            {
                 map.put(
                         rockType.getBlock(Rock.BlockType.RAW).get(),
                         CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rockType).get(Ore.SULFUR).get().defaultBlockState()
@@ -1600,7 +1660,8 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createDiscVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, int height, VeinConfig config){
+    private static void createDiscVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, int height, VeinConfig config)
+    {
         CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.DISC_VEIN.get(),
                         new DiscVeinConfig(config, size, height)
@@ -1608,7 +1669,8 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createPipeVein(ResourceKey<ConfiguredFeature<?, ?>> key, int height, int radius, int minSkew, int maxSkew, int minSlant, int maxSlant, float sign, VeinConfig config){
+    private static void createPipeVein(ResourceKey<ConfiguredFeature<?, ?>> key, int height, int radius, int minSkew, int maxSkew, int minSlant, int maxSlant, float sign, VeinConfig config)
+    {
         CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.PIPE_VEIN.get(),
                         new PipeVeinConfig(config, height, radius, minSkew, maxSkew, minSlant, maxSlant, sign)
@@ -1616,7 +1678,8 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createClusterVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, VeinConfig config){
+    private static void createClusterVein(ResourceKey<ConfiguredFeature<?, ?>> key, int size, VeinConfig config)
+    {
         CTX.register(key,
                 new ConfiguredFeature<>(TFCFeatures.CLUSTER_VEIN.get(),
                         new ClusterVeinConfig(config, size)
@@ -1624,7 +1687,8 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createGeode(ResourceKey<ConfiguredFeature<?, ?>> key, Block inner, Block middle, Block outer, Block alt, double altChance){
+    private static void createGeode(ResourceKey<ConfiguredFeature<?, ?>> key, Block inner, Block middle, Block outer, Block alt, double altChance)
+    {
 
         new WeightedStateProvider(
                 SimpleWeightedRandomList.<BlockState>builder()
@@ -1674,11 +1738,13 @@ public class BuiltinConfiguredFeatures  {
         );
     }
 
-    private static void createOreGeode(ResourceKey<ConfiguredFeature<?, ?>> key, RegistryRock rock, RegistryOre ore, Block middle, Block outer){
+    private static void createOreGeode(ResourceKey<ConfiguredFeature<?, ?>> key, RegistryRock rock, RegistryOre ore, Block middle, Block outer)
+    {
 
         WeightedStateProvider altInner;
 
-        if (ore.isGraded()){
+        if (ore.isGraded())
+        {
             altInner = new WeightedStateProvider(
                     SimpleWeightedRandomList.<BlockState>builder()
                             .add(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), 1)
@@ -1687,7 +1753,9 @@ public class BuiltinConfiguredFeatures  {
                             .add(rock.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 2)
                             .build()
             );
-        } else {
+        }
+        else
+        {
             altInner = new WeightedStateProvider(
                     SimpleWeightedRandomList.<BlockState>builder()
                             .add(ore.getOreBlock(rock, null).defaultBlockState(), 2)
@@ -1734,6 +1802,44 @@ public class BuiltinConfiguredFeatures  {
                 )
         );
     }
+
+    private static void createRandomPatch(ResourceKey<ConfiguredFeature<?, ?>> key, ResourceKey<PlacedFeature> singleCropKey, int tries, int xzSpread, int ySpread)
+    {
+        CTX.register(key,
+                new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(tries, xzSpread, ySpread, REGISTRY.getOrThrow(singleCropKey)))
+        );
+    }
+
+    private static void createWildTallCropPatch(ResourceKey<ConfiguredFeature<?, ?>> keySingle, WildDoubleCropBlock block, ResourceKey<ConfiguredFeature<?, ?>> key, ResourceKey<PlacedFeature> singleCropKey)
+    {
+        CTX.register(keySingle, new ConfiguredFeature<>(TFCFeatures.TALL_WILD_CROP.get(), new BlockConfig<>(block)));
+
+        createRandomPatch(key, singleCropKey, 6, 5, 1);
+    }
+
+    private static void createWildCropPatch(ResourceKey<ConfiguredFeature<?, ?>> keySingle, BlockState state, ResourceKey<ConfiguredFeature<?, ?>> key, ResourceKey<PlacedFeature> singleCropKey)
+    {
+        CTX.register(keySingle, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(state))));
+
+        createRandomPatch(key, singleCropKey, 6, 5, 1);
+    }
+
+    private static void createFlowerPatch(ResourceKey<ConfiguredFeature<?, ?>> keySingle, BlockState blockState, ResourceKey<ConfiguredFeature<?, ?>> key, ResourceKey<PlacedFeature> singleCropKey)
+    {
+        CTX.register(keySingle,
+                new ConfiguredFeature<>(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(RandomPropertyProvider.simple(blockState)))
+        );
+
+        createRandomPatch(key, singleCropKey, 10, 10, 1);
+    }
+
+    private static void createFruitTreeFeature(ResourceKey<ConfiguredFeature<?, ?>> key, BlockState state)
+    {
+        CTX.register(key,
+                new ConfiguredFeature<>(TFCFeatures.FRUIT_TREES.get(), new BlockStateConfiguration(state))
+        );
+    }
+
     //endregion
 
     //region Functions to create block maps for features.
@@ -1851,8 +1957,10 @@ public class BuiltinConfiguredFeatures  {
 
         LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
 
-        for (Rock rock : Rock.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
+        for (Rock rock : Rock.values())
+        {
+            if (categoryList.contains(rock.displayCategory().category()))
+            {
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
                                 Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
@@ -1864,8 +1972,10 @@ public class BuiltinConfiguredFeatures  {
             }
         }
 
-        for (CoreRocks rock : CoreRocks.values()){
-            if (categoryList.contains(rock.displayCategory().category())){
+        for (CoreRocks rock : CoreRocks.values())
+        {
+            if (categoryList.contains(rock.displayCategory().category()))
+            {
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
                                 Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
@@ -1877,8 +1987,10 @@ public class BuiltinConfiguredFeatures  {
             }
         }
 
-        for (RegistryRock rock : rockList){
-            if (rock instanceof Rock){
+        for (RegistryRock rock : rockList)
+        {
+            if (rock instanceof Rock)
+            {
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
                                 Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
@@ -1888,7 +2000,8 @@ public class BuiltinConfiguredFeatures  {
                         )
                 ));
             }
-            if (rock instanceof CoreRocks){
+            if (rock instanceof CoreRocks)
+            {
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
                                 Pair.of(ore.getOreBlock(rock, CoreOres.Grade.POOR).defaultBlockState(), poorChance),
@@ -1970,6 +2083,33 @@ public class BuiltinConfiguredFeatures  {
                 map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
                         List.of(
                                 Pair.of(CoreRocks.MARLSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
+                        )
+                ));
+            }
+        }
+
+        return map;
+    }
+
+    private static LinkedHashMap<Block, IWeighted<BlockState>> createSoapstoneOreVeinMap(){
+
+        LinkedHashMap<Block, IWeighted<BlockState>> map = new LinkedHashMap<>();
+
+        for (Rock rock : Rock.values()){
+            if (rock.displayCategory().category() == RockCategory.METAMORPHIC){
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
+                        List.of(
+                                Pair.of(CoreRocks.SOAPSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
+                        )
+                ));
+            }
+        }
+
+        for (CoreRocks rock : CoreRocks.values()){
+            if (rock.displayCategory().category() == RockCategory.METAMORPHIC){
+                map.putLast(rock.getBlock(Rock.BlockType.RAW).get(), new DataWeighted<>(
+                        List.of(
+                                Pair.of(CoreRocks.SOAPSTONE.getBlock(Rock.BlockType.RAW).get().defaultBlockState(), 1d)
                         )
                 ));
             }
@@ -2078,6 +2218,17 @@ public class BuiltinConfiguredFeatures  {
                         )
                 ));
             }
+        }
+
+        return map;
+    }
+
+    private static Map<Block, BlockState> createClayDiscMap(CoreClay clayType){
+        Map<Block, BlockState> map = new LinkedHashMap<>();
+
+        for (SoilBlockType.Variant soilType : SoilBlockType.Variant.values())
+        {
+            map.put(TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(soilType).get(), CoreBlocks.CERAMIC_BLOCKS.get(clayType).get(CoreClay.BlockType.CLAY_BLOCK).get().defaultBlockState());
         }
 
         return map;

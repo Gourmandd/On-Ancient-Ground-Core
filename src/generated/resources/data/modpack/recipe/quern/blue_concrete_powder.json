@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "minecraft:blue_concrete"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:blue_concrete_powder"
+  }
+}

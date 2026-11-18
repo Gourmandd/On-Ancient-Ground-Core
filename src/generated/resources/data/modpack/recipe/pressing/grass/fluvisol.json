@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "tfc:grass/fluvisol"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:grass_path/fluvisol"
+    }
+  ]
+}

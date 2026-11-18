@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "afc:wood/log/fig"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "afc:wood/stripped_log/fig"
+    }
+  ]
+}

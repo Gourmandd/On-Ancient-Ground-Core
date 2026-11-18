@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "firmalife:metal/ingot/chromium"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "firmalife:metal/rod/chromium"
+    }
+  ]
+}

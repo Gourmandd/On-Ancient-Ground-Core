@@ -241,6 +241,11 @@ public class BuiltinBlockStates extends BlockStateProvider
                 pressurePlateBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.PRESSURE_PLATE), TextureUtil.getRockTexture(rockType, Rock.BlockType.PRESSURE_PLATE));
                 buttonBlock(CoreBlocks.ROCK_BLOCKS.get(rockType).get(Rock.BlockType.BUTTON), TextureUtil.getRockTexture(rockType, Rock.BlockType.BUTTON));
             }
+
+            if (rockType.category() == RockCategory.IGNEOUS_EXTRUSIVE || rockType.category() == RockCategory.IGNEOUS_INTRUSIVE)
+            {
+                cubeAll(CoreBlocks.MAGMA_BLOCKS.get(rockType), AncientGroundCore.location("block/rock/magma/" + rockType.getSerializedName()));
+            }
         }
     }
 

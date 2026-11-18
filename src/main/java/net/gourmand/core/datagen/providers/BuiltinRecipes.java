@@ -20,7 +20,11 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, AnvilRecipes, HeatingRecipes, CastingRecipes, CraftingRecipes, AlloyRecipes, KnappingRecipes, CollapseRecipes
+public class BuiltinRecipes extends RecipeProvider implements
+        WeldingRecipes, AnvilRecipes, HeatingRecipes,
+        CastingRecipes, CraftingRecipes, AlloyRecipes,
+        KnappingRecipes, CollapseRecipes, GlassworkingRecipes,
+        QuernRecipes
 {
 
     final Set<ResourceLocation> removedRecipes = new HashSet<>();
@@ -57,6 +61,8 @@ public class BuiltinRecipes extends RecipeProvider implements WeldingRecipes, An
         alloyingRecipes();
         knappingRecipes();
         collapseRecipes();
+        glassworkingRecipes();
+        quernRecipes();
     }
 
     @Override

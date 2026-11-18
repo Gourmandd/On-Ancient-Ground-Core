@@ -32,13 +32,13 @@ public class FieldGuideEntry extends EntryProvider {
 
         this.pageTitle(entryName());
         this.pageText("""
-                **TerraFirmaCraft** (**TFC**) has its own guide book, which this unfinished one aims to replace, but this one still has useful information.
+                **TerraFirmaCraft** (**TFC**) has its own guide book, which is planned to be replaced by this custom one.
                 \\
                 \\
-                The TFC field guide can be opened by pressing **'[{}](macro.modpack.open_tfc_guide_key)'**
+                The TFC field guide can be opened by pressing **`**
                 \\
                 \\
-                This book can be open by pressing **'[{}](macro.modpack.open_modpack_guide_key)'**
+                This book can be open by pressing **P**
                \s""");
 
         // page 2: some alpha version notices.

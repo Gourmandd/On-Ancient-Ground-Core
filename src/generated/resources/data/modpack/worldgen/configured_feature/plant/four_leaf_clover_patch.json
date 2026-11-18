@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": "modpack:plant/four_leaf_clover",
+    "tries": 10,
+    "xz_spread": 10,
+    "y_spread": 1
+  }
+}

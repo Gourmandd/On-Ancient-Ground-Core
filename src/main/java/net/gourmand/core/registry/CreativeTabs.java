@@ -3,6 +3,7 @@ package net.gourmand.core.registry;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
@@ -180,7 +181,24 @@ public class CreativeTabs
     {
         for (CoreRocks rock : CoreRocks.VALUES)
         {
-            for (Rock.BlockType type : new Rock.BlockType[]{Rock.BlockType.HARDENED, Rock.BlockType.RAW, Rock.BlockType.PRESSURE_PLATE, Rock.BlockType.BUTTON, Rock.BlockType.SPIKE, Rock.BlockType.COBBLE, Rock.BlockType.MOSSY_COBBLE, Rock.BlockType.BRICKS, Rock.BlockType.CRACKED_BRICKS, Rock.BlockType.MOSSY_BRICKS, Rock.BlockType.SMOOTH, Rock.BlockType.CHISELED, Rock.BlockType.AQUEDUCT, Rock.BlockType.GRAVEL, Rock.BlockType.LOOSE, Rock.BlockType.MOSSY_LOOSE,})
+            for (Rock.BlockType type : new Rock.BlockType[]{
+                    Rock.BlockType.HARDENED,
+                    Rock.BlockType.RAW,
+                    Rock.BlockType.PRESSURE_PLATE,
+                    Rock.BlockType.BUTTON,
+                    Rock.BlockType.SPIKE,
+                    Rock.BlockType.COBBLE,
+                    Rock.BlockType.MOSSY_COBBLE,
+                    Rock.BlockType.BRICKS,
+                    Rock.BlockType.CRACKED_BRICKS,
+                    Rock.BlockType.MOSSY_BRICKS,
+                    Rock.BlockType.SMOOTH,
+                    Rock.BlockType.CHISELED,
+                    Rock.BlockType.AQUEDUCT,
+                    Rock.BlockType.GRAVEL,
+                    Rock.BlockType.LOOSE,
+                    Rock.BlockType.MOSSY_LOOSE,
+            })
             {
                 if (rock.hasVariant(type))
                 {
@@ -191,6 +209,11 @@ public class CreativeTabs
                 {
                     accept(out, CoreBlocks.ROCK_DECORATIONS.get(rock).get(type));
                 }
+            }
+
+            if (rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE)
+            {
+                out.accept(CoreBlocks.MAGMA_BLOCKS.get(rock).get());
             }
 
             accept(out, CoreItems.BRICKS, rock);

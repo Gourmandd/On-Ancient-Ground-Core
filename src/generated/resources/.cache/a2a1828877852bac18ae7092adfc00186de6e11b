@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-13T13:57:57.949648986	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-11-05T19:27:40.569872897	Tags for minecraft:item mod id modpack
 e79d1dc58f086360026a90f8a98e3bdcd171aebd data/architects_palette/tags/item/boards.json
 9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
@@ -69,6 +69,7 @@ aa52434093064b6b0d04e6e3829f5079e3766b71 data/c/tags/item/ingots/electrum.json
 07435c5f2e06079d489ef62195e4f362ff2fff2b data/c/tags/item/ingots/hardened_steel.json
 7298f242b83bc97a16e46481dab701848374cd6e data/c/tags/item/ingots/lead.json
 e43dd5d410c754631909b23e097406e75a7bf7d2 data/c/tags/item/ingots/nethersteel.json
+36a4a653a280abf66e992d4a314a0b0f38606dac data/c/tags/item/magma_blocks.json
 6bae25d2aaa860af78ecc329f41ad7adc1dca303 data/c/tags/item/ores.json
 70154efbdbdd233bd0f7c14a298d868d23c6a1e1 data/c/tags/item/rods.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/c/tags/item/rods/wooden.json
@@ -127,6 +128,7 @@ c7fdbdafdb5cb139aa15f6d41ab6d943067c8403 data/spectrum/tags/item/azurite_ores.js
 3fecf3f816e05e08ac0e9c9bfadabcd64fe10f61 data/spectrum/tags/item/shimmerstone_ores.json
 2860e2b2596b19e1464dfcf80309f988a742c446 data/tfc/tags/item/aqueducts.json
 18b8d6b626aba278d978db614ff8382409de1209 data/tfc/tags/item/barrels.json
+5c28c2550ac8f806ae3f2c3ed7cf731036a491d0 data/tfc/tags/item/bowl_powders.json
 a89b6ca3c6e9ead47b27388f16f972911474533b data/tfc/tags/item/can_be_lit_on_torch.json
 74acf2b5358515978fa3e2f17f2637288648a99d data/tfc/tags/item/fired_vessels.json
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/tfc/tags/item/fluid_item_ingredient_empty_containers.json

@@ -1,0 +1,16 @@
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 200,
+      "fluid": "firmalife:metal/stainless_steel"
+    }
+  ],
+  "results": [
+    {
+      "id": "firmalife:metal/sheet/stainless_steel"
+    }
+  ]
+}

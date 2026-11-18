@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "tfc:metal/ingot/black_bronze"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "tfc:metal/rod/black_bronze"
+    }
+  ]
+}

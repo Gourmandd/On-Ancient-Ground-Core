@@ -41,7 +41,7 @@ public class QuarryingEntry extends EntryProvider {
         // page 2: hardened stone crafting recipe.
         this.page("page2", () -> BookCraftingRecipePageModel.create()
                 .withText(this.context().pageText())
-                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/rock/hardened_stone/granite"))
+                .withRecipeId1(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, "crafting/rock/hardened/granite"))
         );
 
         this.pageTitle(entryName());

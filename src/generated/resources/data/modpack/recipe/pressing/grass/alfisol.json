@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "tfc:grass/alfisol"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:grass_path/alfisol"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-27T19:46:19.896297118	Item Models: modpack
+// 1.21.1	2026-10-24T15:04:11.48458958	Item Models: modpack
 bd00db70bf08a3a52c0dd0fba39fc5ac210f13b5 assets/modpack/models/block/ceramic/earthenware/jug.json
 5f78b6d6705d56f37fc6437334eea83c67333b6e assets/modpack/models/block/ceramic/earthenware/unfired_jug.json
 95ad64be1ff9a8301e279d5ae5e885ecddf13ab5 assets/modpack/models/block/ceramic/earthenware/unfired_vessel.json
@@ -1751,6 +1751,12 @@ d738aa4ee2f0bef5a6c4bfddbb0c42c41401cc92 assets/modpack/models/item/rock/loose/s
 24113d4db0c3cf379907e97c8188ba3fe933dc7a assets/modpack/models/item/rock/loose/soapstone.json
 c50a88d7ae17ab5dcab36deb94304dfb0eeecc95 assets/modpack/models/item/rock/loose/suevite.json
 45304926a8f3b89069f486fabb09f0c26abbd663 assets/modpack/models/item/rock/loose/travertine.json
+25aeb533fc776e840c851f2bf25a731dcc291e0f assets/modpack/models/item/rock/magma/blackslag.json
+95d0d4cb863beb8b39a10dc902a2262e76e8e35e assets/modpack/models/item/rock/magma/komatiite.json
+df01f2bf4a082a4fe7747082df4c9ae06a5e8a5e assets/modpack/models/item/rock/magma/nephelinite.json
+d701f3a95ab68cd93bb1449437b66f9300003e7d assets/modpack/models/item/rock/magma/peridotite.json
+27f64f4d1d21bf68d672e845d29779afe7c93806 assets/modpack/models/item/rock/magma/phonolite.json
+9519545c9bc7759b4d499c21d848e9b1b752fb28 assets/modpack/models/item/rock/magma/picrite_basalt.json
 8ffde3ac4d7a6b7f839cbc9d826be7234f220382 assets/modpack/models/item/rock/mossy_bricks/argillite.json
 b8836fca2e5ac786dcd35d2381953deba3a0ae93 assets/modpack/models/item/rock/mossy_bricks/argillite_slab.json
 494e788ac8b6219a41b74456d92c546970decd8b assets/modpack/models/item/rock/mossy_bricks/argillite_stairs.json

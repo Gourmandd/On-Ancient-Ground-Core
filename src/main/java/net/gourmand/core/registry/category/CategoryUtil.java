@@ -519,6 +519,67 @@ public class CategoryUtil
                 .build();
     }
 
+    // TODO: merge with Glass class under it.
+    public static class Color
+    {
+        public static final Map<DyeColor, Block> TO_CONCRETE = ImmutableMap.<DyeColor, Block>builder()
+                .put(DyeColor.WHITE, Blocks.WHITE_CONCRETE)
+                .put(DyeColor.ORANGE, Blocks.ORANGE_CONCRETE)
+                .put(DyeColor.MAGENTA, Blocks.MAGENTA_CONCRETE)
+                .put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_CONCRETE)
+                .put(DyeColor.YELLOW, Blocks.YELLOW_CONCRETE)
+                .put(DyeColor.LIME, Blocks.LIME_CONCRETE)
+                .put(DyeColor.PINK, Blocks.PINK_CONCRETE)
+                .put(DyeColor.GRAY, Blocks.GRAY_CONCRETE)
+                .put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_CONCRETE)
+                .put(DyeColor.CYAN, Blocks.CYAN_CONCRETE)
+                .put(DyeColor.PURPLE, Blocks.PURPLE_CONCRETE)
+                .put(DyeColor.BLUE, Blocks.BLUE_CONCRETE)
+                .put(DyeColor.BROWN, Blocks.BROWN_CONCRETE)
+                .put(DyeColor.GREEN, Blocks.GREEN_CONCRETE)
+                .put(DyeColor.RED, Blocks.RED_CONCRETE)
+                .put(DyeColor.BLACK, Blocks.BLACK_CONCRETE)
+                .build();
+
+        public static final Map<DyeColor, Block> TO_CONCRETE_POWDER = ImmutableMap.<DyeColor, Block>builder()
+                .put(DyeColor.WHITE, Blocks.WHITE_CONCRETE_POWDER)
+                .put(DyeColor.ORANGE, Blocks.ORANGE_CONCRETE_POWDER)
+                .put(DyeColor.MAGENTA, Blocks.MAGENTA_CONCRETE_POWDER)
+                .put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_CONCRETE_POWDER)
+                .put(DyeColor.YELLOW, Blocks.YELLOW_CONCRETE_POWDER)
+                .put(DyeColor.LIME, Blocks.LIME_CONCRETE_POWDER)
+                .put(DyeColor.PINK, Blocks.PINK_CONCRETE_POWDER)
+                .put(DyeColor.GRAY, Blocks.GRAY_CONCRETE_POWDER)
+                .put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_CONCRETE_POWDER)
+                .put(DyeColor.CYAN, Blocks.CYAN_CONCRETE_POWDER)
+                .put(DyeColor.PURPLE, Blocks.PURPLE_CONCRETE_POWDER)
+                .put(DyeColor.BLUE, Blocks.BLUE_CONCRETE_POWDER)
+                .put(DyeColor.BROWN, Blocks.BROWN_CONCRETE_POWDER)
+                .put(DyeColor.GREEN, Blocks.GREEN_CONCRETE_POWDER)
+                .put(DyeColor.RED, Blocks.RED_CONCRETE_POWDER)
+                .put(DyeColor.BLACK, Blocks.BLACK_CONCRETE_POWDER)
+                .build();
+
+        public static final Map<DyeColor, Item> TO_DYE = ImmutableMap.<DyeColor, Item>builder()
+                .put(DyeColor.WHITE, Items.WHITE_DYE)
+                .put(DyeColor.ORANGE, Items.ORANGE_DYE)
+                .put(DyeColor.MAGENTA, Items.MAGENTA_DYE)
+                .put(DyeColor.LIGHT_BLUE, Items.LIGHT_BLUE_DYE)
+                .put(DyeColor.YELLOW, Items.YELLOW_DYE)
+                .put(DyeColor.LIME, Items.LIME_DYE)
+                .put(DyeColor.PINK, Items.PINK_DYE)
+                .put(DyeColor.GRAY, Items.GRAY_DYE)
+                .put(DyeColor.LIGHT_GRAY, Items.LIGHT_GRAY_DYE)
+                .put(DyeColor.CYAN, Items.CYAN_DYE)
+                .put(DyeColor.PURPLE, Items.PURPLE_DYE)
+                .put(DyeColor.BLUE, Items.BLUE_DYE)
+                .put(DyeColor.BROWN, Items.BROWN_DYE)
+                .put(DyeColor.GREEN, Items.GREEN_DYE)
+                .put(DyeColor.RED, Items.RED_DYE)
+                .put(DyeColor.BLACK, Items.BLACK_DYE)
+                .build();
+    }
+
     public static class Glass
     {
 

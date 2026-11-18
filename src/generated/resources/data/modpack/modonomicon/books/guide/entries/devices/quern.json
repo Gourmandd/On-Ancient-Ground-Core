@@ -94,7 +94,7 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "recipe_id_1": "tfc:quern/red_dye",
+      "recipe_id_1": "modpack:quern/dye/making_red_dye",
       "recipe_id_2": "tfc:quern/powder/native_gold_poor",
       "text": "book.modpack.guide.devices.quern.page7.text",
       "title1": "",

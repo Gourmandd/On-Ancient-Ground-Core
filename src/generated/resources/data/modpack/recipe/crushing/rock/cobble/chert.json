@@ -1,0 +1,13 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "tfc:rock/cobble/chert"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:rock/gravel/chert"
+    }
+  ]
+}

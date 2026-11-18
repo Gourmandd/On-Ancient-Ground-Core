@@ -1,0 +1,17 @@
+{
+  "feature": "modpack:plant/wild_crop/coffee",
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "modpack:wild_crop/coffee",
+          "Properties": {
+            "mature": "false"
+          }
+        }
+      }
+    }
+  ]
+}

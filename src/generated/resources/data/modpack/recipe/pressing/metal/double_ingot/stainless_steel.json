@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "firmalife:metal/double_ingot/stainless_steel"
+    }
+  ],
+  "results": [
+    {
+      "id": "firmalife:metal/sheet/stainless_steel"
+    }
+  ]
+}

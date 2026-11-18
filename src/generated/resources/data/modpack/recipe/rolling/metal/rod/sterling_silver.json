@@ -1,0 +1,14 @@
+{
+  "type": "createaddition:rolling",
+  "ingredients": [
+    {
+      "item": "tfc:metal/ingot/sterling_silver"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "tfc:metal/rod/sterling_silver"
+    }
+  ]
+}

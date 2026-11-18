@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "tfc:metal/double_ingot/steel"
+    }
+  ],
+  "results": [
+    {
+      "id": "tfc:metal/sheet/steel"
+    }
+  ]
+}

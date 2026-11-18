@@ -1,0 +1,268 @@
+{
+  "values": {
+    "tfc:drying_bricks/alfisol": {
+      "item_stack": {
+        "count": 1,
+        "id": "tfc:mud_brick/alfisol"
+      }
+    },
+    "tfc:drying_bricks/andisol": {
+      "item_stack": {
+        "count": 1,
+        "id": "tfc:mud_brick/andisol"
+      }
+    },
+    "tfc:drying_bricks/aridisol": {
+      "item_stack": {
+        "count": 1,
+        "id": "tfc:mud_brick/aridisol"
+      }
+    },
+    "tfc:drying_bricks/entisol": {
+      "item_stack": {
+        "count": 1,
+        "id": "tfc:mud_brick/entisol"
+      }
+    },
+    "tfc:drying_bricks/fluvisol": {
+      "item_stack": {
+        "count": 1,
+        "id": "tfc:mud_brick/fluvisol"
+      }
+    },
+    "tfc:drying_bricks/mollisol": {
+      "item_stack": {
+        "count": 1,
+        "id": "tfc:mud_brick/mollisol"
+      }
+    },
+    "tfc:drying_bricks/oxisol": {
+      "item_stack": {
+        "count": 1,
+        "id": "tfc:mud_brick/oxisol"
+      }
+    },
+    "tfc:drying_bricks/podzol": {
+      "item_stack": {
+        "count": 1,
+        "id": "tfc:mud_brick/podzol"
+      }
+    },
+    "tfc:ore/normal_bismuthinite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/bismuthinite"
+      }
+    },
+    "tfc:ore/normal_cassiterite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/cassiterite"
+      }
+    },
+    "tfc:ore/normal_garnierite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/garnierite"
+      }
+    },
+    "tfc:ore/normal_hematite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/hematite"
+      }
+    },
+    "tfc:ore/normal_limonite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/limonite"
+      }
+    },
+    "tfc:ore/normal_magnetite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/magnetite"
+      }
+    },
+    "tfc:ore/normal_malachite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/malachite"
+      }
+    },
+    "tfc:ore/normal_native_copper": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/native_copper"
+      }
+    },
+    "tfc:ore/normal_native_gold": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/native_gold"
+      }
+    },
+    "tfc:ore/normal_native_silver": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/native_silver"
+      }
+    },
+    "tfc:ore/normal_sphalerite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/sphalerite"
+      }
+    },
+    "tfc:ore/normal_tetrahedrite": {
+      "item_stack": {
+        "count": 5,
+        "id": "tfc:powder/tetrahedrite"
+      }
+    },
+    "tfc:ore/poor_bismuthinite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/bismuthinite"
+      }
+    },
+    "tfc:ore/poor_cassiterite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/cassiterite"
+      }
+    },
+    "tfc:ore/poor_garnierite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/garnierite"
+      }
+    },
+    "tfc:ore/poor_hematite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/hematite"
+      }
+    },
+    "tfc:ore/poor_limonite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/limonite"
+      }
+    },
+    "tfc:ore/poor_magnetite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/magnetite"
+      }
+    },
+    "tfc:ore/poor_malachite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/malachite"
+      }
+    },
+    "tfc:ore/poor_native_copper": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/native_copper"
+      }
+    },
+    "tfc:ore/poor_native_gold": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/native_gold"
+      }
+    },
+    "tfc:ore/poor_native_silver": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/native_silver"
+      }
+    },
+    "tfc:ore/poor_sphalerite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/sphalerite"
+      }
+    },
+    "tfc:ore/poor_tetrahedrite": {
+      "item_stack": {
+        "count": 3,
+        "id": "tfc:powder/tetrahedrite"
+      }
+    },
+    "tfc:ore/rich_bismuthinite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/bismuthinite"
+      }
+    },
+    "tfc:ore/rich_cassiterite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/cassiterite"
+      }
+    },
+    "tfc:ore/rich_garnierite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/garnierite"
+      }
+    },
+    "tfc:ore/rich_hematite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/hematite"
+      }
+    },
+    "tfc:ore/rich_limonite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/limonite"
+      }
+    },
+    "tfc:ore/rich_magnetite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/magnetite"
+      }
+    },
+    "tfc:ore/rich_malachite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/malachite"
+      }
+    },
+    "tfc:ore/rich_native_copper": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/native_copper"
+      }
+    },
+    "tfc:ore/rich_native_gold": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/native_gold"
+      }
+    },
+    "tfc:ore/rich_native_silver": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/native_silver"
+      }
+    },
+    "tfc:ore/rich_sphalerite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/sphalerite"
+      }
+    },
+    "tfc:ore/rich_tetrahedrite": {
+      "item_stack": {
+        "count": 7,
+        "id": "tfc:powder/tetrahedrite"
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.world.item.Item;
 
 public class PlacedItemModels
 {
@@ -18,49 +19,41 @@ public class PlacedItemModels
             {
                 if (itemType.hasType(clayType) && itemType.hasPlacedModel())
                 {
-                    PlacedItemBlockEntityRenderer.MODELS.put(CoreItems.CERAMICS.get(clayType).get(itemType).get(), cutout("block/ceramic/" + clayType.getSerializedName() + "/" + itemType.getSerializedName()));
+                    add(CoreItems.CERAMICS.get(clayType).get(itemType).get(), cutout("block/ceramic/" + clayType.getSerializedName() + "/" + itemType.getSerializedName()));
                 }
             }
         }
 
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.CHEONG.asItem(), translucent("block/placed_items/cheong"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.MERMAIDS_JAM.asItem(), translucent("block/placed_items/mermaids_jam"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.MOONSTRUCK_NECTAR.asItem(), translucent("block/placed_items/moonstruck_nectar"));
+        add(SpectrumItems.CHEONG.asItem(), translucent("block/placed_items/cheong"));
+        add(SpectrumItems.MERMAIDS_JAM.asItem(), translucent("block/placed_items/mermaids_jam"));
+        add(SpectrumItems.MOONSTRUCK_NECTAR.asItem(), translucent("block/placed_items/moonstruck_nectar"));
 
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.BOTTLE_OF_FADING.asItem(), translucent("block/placed_items/bottle_of_fading"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.BOTTLE_OF_FAILING.asItem(), translucent("block/placed_items/bottle_of_failing"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.BOTTLE_OF_RUIN.asItem(), translucent("block/placed_items/bottle_of_ruin"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.BOTTLE_OF_FORFEITURE.asItem(), translucent("block/placed_items/bottle_of_forfeiture"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.BOTTLE_OF_DECAY_AWAY.asItem(), translucent("block/placed_items/bottle_of_decay_away"));
+        add(SpectrumItems.BOTTLE_OF_FADING.asItem(), translucent("block/placed_items/bottle_of_fading"));
+        add(SpectrumItems.BOTTLE_OF_FAILING.asItem(), translucent("block/placed_items/bottle_of_failing"));
+        add(SpectrumItems.BOTTLE_OF_RUIN.asItem(), translucent("block/placed_items/bottle_of_ruin"));
+        add(SpectrumItems.BOTTLE_OF_FORFEITURE.asItem(), translucent("block/placed_items/bottle_of_forfeiture"));
+        add(SpectrumItems.BOTTLE_OF_DECAY_AWAY.asItem(), translucent("block/placed_items/bottle_of_decay_away"));
 
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.BLUE_PIGMENT.asItem(), translucent("block/placed_items/blue_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.LIGHT_BLUE_PIGMENT.asItem(), translucent("block/placed_items/light_blue_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.GREEN_PIGMENT.asItem(), translucent("block/placed_items/green_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.LIME_PIGMENT.asItem(), translucent("block/placed_items/lime_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.GRAY_PIGMENT.asItem(), translucent("block/placed_items/gray_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.LIGHT_GRAY_PIGMENT.asItem(), translucent("block/placed_items/light_gray_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.BLACK_PIGMENT.asItem(), translucent("block/placed_items/black_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.WHITE_PIGMENT.asItem(), translucent("block/placed_items/white_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.ORANGE_PIGMENT.asItem(), translucent("block/placed_items/orange_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.YELLOW_PIGMENT.asItem(), translucent("block/placed_items/yellow_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.RED_PIGMENT.asItem(), translucent("block/placed_items/red_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.PINK_PIGMENT.asItem(), translucent("block/placed_items/pink_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.BROWN_PIGMENT.asItem(), translucent("block/placed_items/brown_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.CYAN_PIGMENT.asItem(), translucent("block/placed_items/cyan_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.MAGENTA_PIGMENT.asItem(), translucent("block/placed_items/magenta_pigment"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.PURPLE_PIGMENT.asItem(), translucent("block/placed_items/purple_pigment"));
+        add(SpectrumItems.BLUE_PIGMENT.asItem(), translucent("block/placed_items/blue_pigment"));
+        add(SpectrumItems.LIGHT_BLUE_PIGMENT.asItem(), translucent("block/placed_items/light_blue_pigment"));
+        add(SpectrumItems.GREEN_PIGMENT.asItem(), translucent("block/placed_items/green_pigment"));
+        add(SpectrumItems.LIME_PIGMENT.asItem(), translucent("block/placed_items/lime_pigment"));
+        add(SpectrumItems.GRAY_PIGMENT.asItem(), translucent("block/placed_items/gray_pigment"));
+        add(SpectrumItems.LIGHT_GRAY_PIGMENT.asItem(), translucent("block/placed_items/light_gray_pigment"));
+        add(SpectrumItems.BLACK_PIGMENT.asItem(), translucent("block/placed_items/black_pigment"));
+        add(SpectrumItems.WHITE_PIGMENT.asItem(), translucent("block/placed_items/white_pigment"));
+        add(SpectrumItems.ORANGE_PIGMENT.asItem(), translucent("block/placed_items/orange_pigment"));
+        add(SpectrumItems.YELLOW_PIGMENT.asItem(), translucent("block/placed_items/yellow_pigment"));
+        add(SpectrumItems.RED_PIGMENT.asItem(), translucent("block/placed_items/red_pigment"));
+        add(SpectrumItems.PINK_PIGMENT.asItem(), translucent("block/placed_items/pink_pigment"));
+        add(SpectrumItems.BROWN_PIGMENT.asItem(), translucent("block/placed_items/brown_pigment"));
+        add(SpectrumItems.CYAN_PIGMENT.asItem(), translucent("block/placed_items/cyan_pigment"));
+        add(SpectrumItems.MAGENTA_PIGMENT.asItem(), translucent("block/placed_items/magenta_pigment"));
+        add(SpectrumItems.PURPLE_PIGMENT.asItem(), translucent("block/placed_items/purple_pigment"));
+    }
 
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.AQUA_REGIA.asItem(), translucent("block/placed_items/beverages/aqua_regia"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.CHRYSOCOLLA.asItem(), translucent("block/placed_items/beverages/chrysocolla"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.EVERNECTAR.asItem(), translucent("block/placed_items/beverages/evernectar"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.FREIGEIST.asItem(), translucent("block/placed_items/beverages/freigeist"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.INFUSED_BEVERAGE.asItem(), translucent("block/placed_items/beverages/infused_beverage"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.JADE_WINE.asItem(), translucent("block/placed_items/beverages/jade_wine"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.MORCHELLA.asItem(), translucent("block/placed_items/beverages/morchella"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.NECTERED_VIOGNIER.asItem(), translucent("block/placed_items/beverages/nectered_viognier"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.PURE_ALCOHOL.asItem(), translucent("block/placed_items/beverages/pure_alcohol"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.REPRISE.asItem(), translucent("block/placed_items/beverages/reprise"));
-        PlacedItemBlockEntityRenderer.MODELS.put(SpectrumItems.SUSPICIOUS_BREW.asItem(), translucent("block/placed_items/beverages/suspicious_brew"));
+    private static void add(Item item, PlacedItemBlockEntityRenderer.Provider model) {
+        PlacedItemBlockEntityRenderer.MODELS.put(item, model);
     }
 
     private static PlacedItemBlockEntityRenderer.Provider translucent(String model) {

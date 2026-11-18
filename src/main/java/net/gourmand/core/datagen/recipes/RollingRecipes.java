@@ -1,6 +1,9 @@
 package net.gourmand.core.datagen.recipes;
 
+import com.eerussianguy.firmalife.common.items.FLItems;
+import com.eerussianguy.firmalife.common.util.FLMetal;
 import com.mrh0.createaddition.datagen.RecipeGen.RollingRecipeGen;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreItems;
@@ -29,6 +32,25 @@ public class RollingRecipes extends RollingRecipeGen
 
             final DeferredHolder<Item, Item> INGOT = CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT);
             final DeferredHolder<Item, Item> ROD = CoreItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.ROD);
+
+            create(ROD.getId().getPath(), b -> b.require(INGOT.get()).output(ROD.get(), 2));
+        }
+
+        for (Metal metalType : Metal.values())
+        {
+            if (metalType.defaultParts())
+            {
+                final TFCItems.ItemId INGOT = TFCItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.INGOT);
+                final TFCItems.ItemId ROD = TFCItems.METAL_ITEMS.get(metalType).get(Metal.ItemType.ROD);
+
+                create(ROD.getId().getPath(), b -> b.require(INGOT.get()).output(ROD.get(), 2));
+            }
+        }
+
+        for (FLMetal metalType : FLMetal.values())
+        {
+            final TFCItems.ItemId INGOT = FLItems.METAL_ITEMS.get(metalType).get(FLMetal.ItemType.INGOT);
+            final TFCItems.ItemId ROD = FLItems.METAL_ITEMS.get(metalType).get(FLMetal.ItemType.ROD);
 
             create(ROD.getId().getPath(), b -> b.require(INGOT.get()).output(ROD.get(), 2));
         }

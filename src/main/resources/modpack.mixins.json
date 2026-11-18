@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "BasinBlockEntityMixin",
+    "BlockFlooderBlockMixin",
     "CACakeBlockMixin",
     "CloakedOreBlockMixin",
     "CookingPotEMIRecipeMixin",
@@ -11,6 +12,7 @@
     "DripstoneUtilsMixin",
     "FDEMIPluginMixin",
     "FirestarterIdolBlockMixin",
+    "FoundryHelperMixin",
     "LargeDripstoneFeatureMixin",
     "SwitchInventoryTabPacketMixin"
   ],
