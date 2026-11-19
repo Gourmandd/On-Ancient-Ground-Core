@@ -1,0 +1,8 @@
+{
+  "parent": "neoforge:item/default",
+  "loader": "tfc:fluid_container",
+  "textures": {
+    "base": "modpack:item/ceramic/fire_clay/mace_head_mold",
+    "fluid": "tfc:item/ceramic/fired_mold/mace_head_overlay"
+  }
+}

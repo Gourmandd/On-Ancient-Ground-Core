@@ -13,6 +13,7 @@ import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.component.TFCComponents;
 import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlockEntities;
 import net.gourmand.core.registry.CoreBlocks;
@@ -248,6 +249,14 @@ public class ClientEventHandler
         }
 
         event.register(ContainedFluidModel.COLOR, CoreItems.GLASS_MOLD.get(), CoreItems.GLASS_PANE_MOLD.get(), CoreItems.WROUGHT_IRON_BUCKET.get());
+
+        for (Metal.ItemType itemType : Metal.ItemType.values())
+        {
+            if (itemType.hasMold() && itemType != Metal.ItemType.INGOT)
+            {
+                event.register(ContainedFluidModel.COLOR, CoreItems.FIRE_MOLDS.get(itemType).get());
+            }
+        }
 
         // buckets
         CoreFluids.METALS.forEach((metal, holder) ->

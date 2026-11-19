@@ -1,0 +1,8 @@
+{
+  "parent": "neoforge:item/default",
+  "loader": "tfc:fluid_container",
+  "textures": {
+    "base": "modpack:item/ceramic/fire_clay/chisel_head_mold",
+    "fluid": "tfc:item/ceramic/fired_mold/chisel_head_overlay"
+  }
+}

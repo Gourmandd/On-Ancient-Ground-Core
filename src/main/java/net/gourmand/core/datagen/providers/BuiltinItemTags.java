@@ -342,6 +342,15 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
         {
             this.tag(CoreTags.Items.UNFIRED_VESSELS).add(TFCItems.UNFIRED_GLAZED_VESSELS.get(color).key());
         }
+
+        for (Metal.ItemType itemType: Metal.ItemType.values())
+        {
+            if (itemType.hasMold() && itemType != Metal.ItemType.INGOT)
+            {
+                this.tag(TFCTags.Items.UNFIRED_MOLDS).add(CoreItems.UNFIRED_FIRE_MOLDS.get(itemType).getKey());
+                this.tag(TFCTags.Items.FIRED_MOLDS).add(CoreItems.FIRE_MOLDS.get(itemType).getKey());
+            }
+        }
     }
 
     private void generateMisc()

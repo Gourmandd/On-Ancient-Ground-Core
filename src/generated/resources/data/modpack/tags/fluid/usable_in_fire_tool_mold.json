@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#tfc:usable_in_tool_head_mold",
+    "tfc:metal/steel",
+    "tfc:metal/black_steel",
+    "tfc:metal/blue_steel",
+    "tfc:metal/red_steel"
+  ]
+}

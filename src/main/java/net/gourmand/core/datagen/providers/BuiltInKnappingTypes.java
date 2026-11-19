@@ -2,6 +2,9 @@ package net.gourmand.core.datagen.providers;
 
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.client.TFCSounds;
+import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.items.TFCItems;
+import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.data.KnappingType;
 import net.dries007.tfc.util.registry.HolderHolder;
 import net.gourmand.core.registry.category.CoreClay;
@@ -21,6 +24,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class BuiltInKnappingTypes extends DataManagerProvider<KnappingType>
 {
+    public static final ResourceLocation FIRE_CLAY = Helpers.identifier("fire_clay");
 
     public BuiltInKnappingTypes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup)
     {
@@ -34,6 +38,18 @@ public class BuiltInKnappingTypes extends DataManagerProvider<KnappingType>
         {
             addClay(clayType);
         }
+
+        add(
+                FIRE_CLAY,
+                TFCTags.Items.FIRE_CLAY_KNAPPING,
+                5,
+                5,
+                TFCSounds.KNAP_CLAY,
+                true,
+                true,
+                false,
+                TFCItems.FIRE_CLAY
+        );
     }
 
     private void addClay(CoreClay clayType)

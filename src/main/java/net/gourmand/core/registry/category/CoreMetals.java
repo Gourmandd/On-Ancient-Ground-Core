@@ -7,6 +7,7 @@ import net.dries007.tfc.common.blocks.IWeatheringBlock;
 import net.dries007.tfc.common.blocks.WeatheringBlock;
 import net.dries007.tfc.common.blocks.WeatheringSlabBlock;
 import net.dries007.tfc.common.blocks.WeatheringStairBlock;
+import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryMetal;
 import net.gourmand.core.registry.CoreBlocks;
@@ -394,5 +395,27 @@ public class CoreMetals
         {
             return serializedName;
         }
+    }
+
+    public static Supplier<Integer> mapItemTypeToConfigValue(Metal.ItemType type) {
+        Supplier<Integer> supplier;
+        switch (type) {
+            case INGOT -> supplier = TFCConfig.SERVER.moldIngotCapacity;
+            case PICKAXE_HEAD -> supplier = TFCConfig.SERVER.moldPickaxeHeadCapacity;
+            case PROPICK_HEAD -> supplier = TFCConfig.SERVER.moldPropickHeadCapacity;
+            case AXE_HEAD -> supplier = TFCConfig.SERVER.moldAxeHeadCapacity;
+            case SHOVEL_HEAD -> supplier = TFCConfig.SERVER.moldShovelHeadCapacity;
+            case HOE_HEAD -> supplier = TFCConfig.SERVER.moldHoeHeadCapacity;
+            case CHISEL_HEAD -> supplier = TFCConfig.SERVER.moldChiselHeadCapacity;
+            case HAMMER_HEAD -> supplier = TFCConfig.SERVER.moldHammerHeadCapacity;
+            case SAW_BLADE -> supplier = TFCConfig.SERVER.moldSawBladeCapacity;
+            case JAVELIN_HEAD -> supplier = TFCConfig.SERVER.moldJavelinHeadCapacity;
+            case SWORD_BLADE -> supplier = TFCConfig.SERVER.moldSwordBladeCapacity;
+            case MACE_HEAD -> supplier = TFCConfig.SERVER.moldMaceHeadCapacity;
+            case KNIFE_BLADE -> supplier = TFCConfig.SERVER.moldKnifeBladeCapacity;
+            case SCYTHE_BLADE -> supplier = TFCConfig.SERVER.moldScytheBladeCapacity;
+            default -> throw new AssertionError("No config value for type: " + type.name());
+        }
+        return supplier;
     }
 }

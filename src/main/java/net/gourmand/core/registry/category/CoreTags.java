@@ -19,12 +19,16 @@ import java.util.Map;
 
 public class CoreTags
 {
-    public static final TagKey<Fluid> GLASS_MOLD_ACCEPTABLE = createFluidTag("molten_glass");
-    public static final TagKey<Fluid> WROUGHT_IRON_BUCKET_ACCEPTABLE = createFluidTag("usable_in_wrought_iron_bucket");
-
-    private static TagKey<Fluid> createFluidTag(String name)
+    public static class Fluids
     {
-        return TagKey.create(Registries.FLUID, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name));
+        public static final TagKey<Fluid> GLASS_MOLD_ACCEPTABLE = createFluidTag("molten_glass");
+        public static final TagKey<Fluid> WROUGHT_IRON_BUCKET_ACCEPTABLE = createFluidTag("usable_in_wrought_iron_bucket");
+        public static final TagKey<Fluid> FIRE_TOOL_MOLD_ACCEPTABLE = createFluidTag("usable_in_fire_tool_mold");
+
+        private static TagKey<Fluid> createFluidTag(String name)
+        {
+            return TagKey.create(Registries.FLUID, ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MOD_ID, name));
+        }
     }
 
     public static class Biomes
@@ -57,16 +61,49 @@ public class CoreTags
 
     public static class Items
     {
-        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_INGOTS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> tag("ingots/" + metal.getSerializedName()));
-        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_INGOTS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> tag("double_ingots/" + metal.getSerializedName()));
-        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_SHEETS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> tag("sheets/" + metal.getSerializedName()));
-        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_SHEETS = Helpers.mapOf(CoreMetals.MetalType.class, metal -> tag("double_sheets/" + metal.getSerializedName()));
-        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_5 = Helpers.mapOf(CoreClay.class, clay -> tag(AncientGroundCore.MOD_ID, "clay/" + clay.getSerializedName() + "/recycling_5"));
-        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_1 = Helpers.mapOf(CoreClay.class, clay -> tag(AncientGroundCore.MOD_ID, "clay/" + clay.getSerializedName() + "/recycling_1"));
-        public static final Map<Metal.ItemType, TagKey<Item>> TOOL_HEADS = Helpers.mapOf(Metal.ItemType.class, tool -> (tool.hasMold() && tool != Metal.ItemType.INGOT), tool -> tag(AncientGroundCore.MOD_ID, "tool_heads/" + tool.name().toLowerCase(Locale.ROOT)));
-        public static final Map<SpectrumWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(SpectrumWood.class, wood -> (!wood.isNoxfungi() && wood != SpectrumWood.WEEPING_GALA), color -> tag(SpectrumCommon.MOD_ID, color.getSerializedName() + "_logs"));
-        public static final Map<Ore, TagKey<Item>> TFC_ORE_MULTIBLOCK = Helpers.mapOf(Ore.class, ore -> tag("do_not_use_in_recipes/ore/" + ore.name().toLowerCase(Locale.ROOT)));
-        public static final Map<CoreOres, TagKey<Item>> CORE_ORE_MULTIBLOCK = Helpers.mapOf(CoreOres.class, ore -> tag("do_not_use_in_recipes/ore/" + ore.getSerializedName()));
+        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_INGOTS = Helpers.mapOf(
+                CoreMetals.MetalType.class,
+                metal -> tag("ingots/" + metal.getSerializedName())
+        );
+        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_INGOTS = Helpers.mapOf(
+                CoreMetals.MetalType.class,
+                metal -> tag("double_ingots/" + metal.getSerializedName())
+        );
+        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_SHEETS = Helpers.mapOf(
+                CoreMetals.MetalType.class,
+                metal -> tag("sheets/" + metal.getSerializedName())
+        );
+        public static final Map<CoreMetals.MetalType, TagKey<Item>> METAL_DOUBLE_SHEETS = Helpers.mapOf(
+                CoreMetals.MetalType.class,
+                metal -> tag("double_sheets/" + metal.getSerializedName())
+        );
+        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_5 = Helpers.mapOf(
+                CoreClay.class,
+                clay -> tag(AncientGroundCore.MOD_ID, "clay/" + clay.getSerializedName() + "/recycling_5")
+        );
+        public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_1 = Helpers.mapOf(
+                CoreClay.class,
+                clay -> tag(AncientGroundCore.MOD_ID, "clay/" + clay.getSerializedName() + "/recycling_1")
+        );
+        public static final Map<Metal.ItemType, TagKey<Item>> TOOL_HEADS = Helpers.mapOf(
+                Metal.ItemType.class,
+                tool -> (tool.hasMold() && tool != Metal.ItemType.INGOT),
+                tool -> tag(AncientGroundCore.MOD_ID, "tool_heads/" + tool.name().toLowerCase(Locale.ROOT))
+        );
+        public static final Map<SpectrumWood, TagKey<Item>> SPECTRUM_COLORED_LOGS = Helpers.mapOf(
+                SpectrumWood.class,
+                wood -> (!wood.isNoxfungi() && wood != SpectrumWood.WEEPING_GALA),
+                color -> tag(SpectrumCommon.MOD_ID, color.getSerializedName() + "_logs")
+        );
+        public static final Map<Ore, TagKey<Item>> TFC_ORE_MULTIBLOCK = Helpers.mapOf(
+                Ore.class,
+                ore -> tag("do_not_use_in_recipes/ore/" + ore.name().toLowerCase(Locale.ROOT))
+        );
+        public static final Map<CoreOres, TagKey<Item>> CORE_ORE_MULTIBLOCK = Helpers.mapOf(
+                CoreOres.class,
+                ore -> tag("do_not_use_in_recipes/ore/" + ore.getSerializedName())
+        );
+
         public static final TagKey<Item> KAOLIN_CLAYS = tag(AncientGroundCore.MOD_ID, "kaolin_clay_blocks");
         public static final TagKey<Item> WEEPING_GALA_LOGS = tag(SpectrumCommon.MOD_ID, "weeping_gala_logs");
         public static final TagKey<Item> SLATE_NOXCAP_STEMS = tag(SpectrumCommon.MOD_ID, "slate_noxcap_stems");

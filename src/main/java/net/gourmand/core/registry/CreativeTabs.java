@@ -259,6 +259,22 @@ public class CreativeTabs
                 }
             }
         }
+
+        for (Metal.ItemType type : Metal.ItemType.values())
+        {
+            if (type.hasMold() && type != Metal.ItemType.INGOT)
+            {
+                out.accept(CoreItems.FIRE_MOLDS.get(type).get());
+            }
+        }
+
+        for (Metal.ItemType type : Metal.ItemType.values())
+        {
+            if (type.hasMold() && type != Metal.ItemType.INGOT)
+            {
+                out.accept(CoreItems.UNFIRED_FIRE_MOLDS.get(type).get());
+            }
+        }
     }
 
     private static void fillWood(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)

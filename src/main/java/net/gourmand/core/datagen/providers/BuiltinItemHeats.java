@@ -93,7 +93,18 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
             add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).get(), 0.6f);
             add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.INGOT).get(), 0.6f);
             add(CoreItems.CERAMICS.get(clayType).get(CoreClay.ItemType.UNFIRED_LARGE_VESSEL).get(), 0.6f);
+
+
         }
+
+        for (Metal.ItemType itemType : Metal.ItemType.values())
+        {
+            if (itemType.hasMold() && itemType != Metal.ItemType.INGOT)
+            {
+                add(CoreItems.UNFIRED_FIRE_MOLDS.get(itemType).get(), 0.6f);
+            }
+        }
+
     }
 
     private void generateMisc()

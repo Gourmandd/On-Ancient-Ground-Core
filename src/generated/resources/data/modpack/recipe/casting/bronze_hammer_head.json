@@ -1,0 +1,15 @@
+{
+  "type": "tfc:casting",
+  "break_chance": 0.0,
+  "fluid": {
+    "amount": 100,
+    "fluid": "tfc:metal/bronze"
+  },
+  "mold": {
+    "item": "modpack:ceramic/fire_clay/hammer_head_mold"
+  },
+  "result": {
+    "count": 1,
+    "id": "tfc:metal/hammer_head/bronze"
+  }
+}

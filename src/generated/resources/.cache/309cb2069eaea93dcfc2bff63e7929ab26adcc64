@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-27T21:15:05.120013357	Data Manager (item_heat)
+// 1.21.1	2026-11-19T17:47:30.334486553	Data Manager (item_heat)
 5e15164e9ed2130fc090282cf5f72e89ca5cfcbc data/modpack/tfc/item_heat/ceramic/earthenware/unfired_blowpipe.json
 694ec251572deee1bf12e4df7d8b00a14353d9f2 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_bowl.json
 40fdf255e0432562252a9b9a9e3209764558ad40 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_brick.json
@@ -9,6 +9,19 @@ c6bf46a67bcc3e0811981ad0efd80b13fd6304d5 data/modpack/tfc/item_heat/ceramic/eart
 7040ba0ed3e640d5659def10ccfb65e06af1dc46 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_pan.json
 c899024044876783c357fba703e08bf4aa2d619a data/modpack/tfc/item_heat/ceramic/earthenware/unfired_pot.json
 88cf637efbcedab4f60827d8f63a9f05774f3785 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_spindle_head.json
+3d1aec80bd741b94c1c3b66dac491345ae1d21da data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_axe_head_mold.json
+dad1c9ecabd7c765aaecdc6cd5e86c15bf737b7e data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_chisel_head_mold.json
+e490aed8072bf48f788a78ea78f572cd104500f9 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_hammer_head_mold.json
+8e9477cd767d1ba1c4c77c7a20d4e6416ec26055 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_hoe_head_mold.json
+2e149172e19de1672af6dec02621f8c63d38c904 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_javelin_head_mold.json
+3d7142f518cea19bb821ed714f40f17ce88996d6 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_knife_blade_mold.json
+fe3c8c331d0093ec2e3f2397233b3efdd187b9e8 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_mace_head_mold.json
+aa5b5fa6917f010a129ee01d44310e1ad2af75e7 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_pickaxe_head_mold.json
+3212e6842cb84811582f9e3e37b27135728dd6c6 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_propick_head_mold.json
+3f2917747d1ed1952121c205397ba4fd4d2e5fd6 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_saw_blade_mold.json
+2562419dc3bad83c5968e8f31824a55ab2fa0afa data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_scythe_blade_mold.json
+e536fd58a3be5063eebd21bf74954d13a2ec5ba1 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_shovel_head_mold.json
+c195b1bb8308f977ca8f186bcbfbbcb91baee405 data/modpack/tfc/item_heat/ceramic/fire_clay/unfired_sword_blade_mold.json
 472610e78b4458b394e1a434e0084f4b64a12d05 data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_blowpipe.json
 f324301335103ccaa31e96b777fb26d92af1724f data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_bowl.json
 555658b7bedf51a64743af747d1c4ba5cb8a7750 data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_brick.json

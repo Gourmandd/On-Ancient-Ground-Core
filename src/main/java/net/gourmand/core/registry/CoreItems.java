@@ -9,7 +9,6 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.*;
-import net.gourmand.core.registry.category.SpectrumWood;
 import net.gourmand.core.registry.items.CoreSeedItem;
 import net.gourmand.core.registry.items.InfluenceDebugItem;
 import net.gourmand.core.registry.items.MetalBucketItem;
@@ -85,15 +84,23 @@ public class CoreItems
     public static final DeferredHolder<Item, ToolItem> SNOW_SHOVEL = ITEMS.register("tool/snow_shovel", () -> new ToolItem(TFCTiers.STEEL, CoreTags.Blocks.SNOW_SHOVEL_MINEABLE, new Item.Properties().durability(3200).stacksTo(0).setNoRepair()));
     public static final DeferredHolder<Item, Item> SNOW_SHOVEL_HEAD = ITEMS.register("tool/snow_shovel_head", CoreItems::basicItem);
 
-    public static final DeferredHolder<Item, MoldItem> GLASS_MOLD = ITEMS.register("glass_mold", () -> new MoldItem(() -> 800, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(16)));
-    public static final DeferredHolder<Item, MoldItem> GLASS_PANE_MOLD = ITEMS.register("glass_pane_mold", () -> new MoldItem(() -> 50, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(16)));
+    public static final DeferredHolder<Item, MoldItem> GLASS_MOLD = ITEMS.register("glass_mold", () -> new MoldItem(() -> 800, CoreTags.Fluids.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(16)));
+    public static final DeferredHolder<Item, MoldItem> GLASS_PANE_MOLD = ITEMS.register("glass_pane_mold", () -> new MoldItem(() -> 50, CoreTags.Fluids.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(16)));
 
-    public static final DeferredHolder<Item, Item> WROUGHT_IRON_BUCKET = register("metal/bucket/wrought_iron", () -> new MetalBucketItem(new Item.Properties(), CoreTags.WROUGHT_IRON_BUCKET_ACCEPTABLE, true, TFCConfig.SERVER.metalBucketCanPlaceSources));
+    public static final DeferredHolder<Item, Item> WROUGHT_IRON_BUCKET = register("metal/bucket/wrought_iron", () -> new MetalBucketItem(new Item.Properties(), CoreTags.Fluids.WROUGHT_IRON_BUCKET_ACCEPTABLE, true, TFCConfig.SERVER.metalBucketCanPlaceSources));
 
     public static final Map<CoreGemstones, Map<CoreGemstones.GemstoneItems, DeferredHolder<Item, Item>>> GEMSTONE_ITEMS = Helpers.mapOf(CoreGemstones.class, gem ->
             Helpers.mapOf(CoreGemstones.GemstoneItems.class, itemType ->
                     register("gemstone/" + itemType.getSerializedName() + "/" + gem.getSerializedName(), () -> itemType.create(gem))
             )
+    );
+
+    public static final Map<Metal.ItemType,  DeferredHolder<Item, Item>> FIRE_MOLDS = Helpers.mapOf(Metal.ItemType.class, type -> (type.hasMold() && type != Metal.ItemType.INGOT),type ->
+            register("ceramic/fire_clay/" + type.name() + "_mold",() -> new MoldItem(CoreMetals.mapItemTypeToConfigValue(type), CoreTags.Fluids.FIRE_TOOL_MOLD_ACCEPTABLE, new Item.Properties()))
+    );
+
+    public static final Map<Metal.ItemType,  DeferredHolder<Item, Item>> UNFIRED_FIRE_MOLDS = Helpers.mapOf(Metal.ItemType.class, type -> (type.hasMold() && type != Metal.ItemType.INGOT),type ->
+            register("ceramic/fire_clay/unfired_" + type.name() + "_mold",() -> new MoldItem(CoreMetals.mapItemTypeToConfigValue(type), CoreTags.Fluids.FIRE_TOOL_MOLD_ACCEPTABLE, new Item.Properties()))
     );
 
     public static final DeferredHolder<Item, Item> DEBUG_ITEM = register("influence_debug", () -> new InfluenceDebugItem(new Item.Properties()));

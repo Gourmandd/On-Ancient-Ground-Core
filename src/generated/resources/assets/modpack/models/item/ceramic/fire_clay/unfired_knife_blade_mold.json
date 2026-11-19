@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "modpack:item/ceramic/fire_clay/unfired_knife_blade_mold"
+  }
+}

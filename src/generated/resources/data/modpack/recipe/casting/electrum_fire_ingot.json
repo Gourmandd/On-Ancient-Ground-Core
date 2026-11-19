@@ -1,6 +1,6 @@
 {
   "type": "tfc:casting",
-  "break_chance": 0.01,
+  "break_chance": 0.0,
   "fluid": {
     "amount": 100,
     "fluid": "modpack:metal/electrum"

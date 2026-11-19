@@ -2,6 +2,8 @@ package net.gourmand.core.datagen.providers;
 
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.fluids.TFCFluids;
+import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.datagen.Accessors;
 import net.gourmand.core.registry.CoreFluids;
@@ -43,9 +45,16 @@ public class BuiltinFluidTags extends TagsProvider<Fluid> implements Accessors
 
         for (DyeColor color : DyeColor.values())
         {
-            this.tag(CoreTags.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.COLORED_GLASS.get(color).source().getKey());
+            this.tag(CoreTags.Fluids.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.COLORED_GLASS.get(color).source().getKey());
         }
-        this.tag(CoreTags.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.CLEAR_GLASS.source().getKey());
+        this.tag(CoreTags.Fluids.GLASS_MOLD_ACCEPTABLE).add(CoreFluids.CLEAR_GLASS.source().getKey());
+
+        this.tag(CoreTags.Fluids.FIRE_TOOL_MOLD_ACCEPTABLE)
+                .addTag(TFCTags.Fluids.USABLE_IN_TOOL_HEAD_MOLD)
+                .add(TFCFluids.METALS.get(Metal.STEEL).source().getKey())
+                .add(TFCFluids.METALS.get(Metal.BLACK_STEEL).source().getKey())
+                .add(TFCFluids.METALS.get(Metal.BLUE_STEEL).source().getKey())
+                .add(TFCFluids.METALS.get(Metal.RED_STEEL).source().getKey());
     }
 
     protected void add(Map<?, DeferredHolder<Fluid, Fluid>> map, List<TagKey<Fluid>> tags)

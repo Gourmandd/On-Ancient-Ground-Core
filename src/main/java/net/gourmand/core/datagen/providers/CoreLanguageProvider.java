@@ -372,6 +372,15 @@ public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider
             }
         }
 
+        for (Metal.ItemType type : Metal.ItemType.values())
+        {
+            if (type.hasMold() && type != Metal.ItemType.INGOT)
+            {
+                addItem(() -> CoreItems.UNFIRED_FIRE_MOLDS.get(type).get(), "Unfired Fire Clay " + getName(type.name()) + " Mold");
+                addItem(() -> CoreItems.FIRE_MOLDS.get(type).get(), "Fire Clay " + getName(type.name()) + " Mold");
+            }
+        }
+
         CoreBlocks.SPECTRUM_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
         CoreBlocks.TFC_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));
         CoreBlocks.AFC_WOOD_BOARDS.forEach((wood, block) -> addBlock(block, getName(wood) + " Boards"));

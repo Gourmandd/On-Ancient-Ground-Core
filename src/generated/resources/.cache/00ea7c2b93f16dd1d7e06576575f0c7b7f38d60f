@@ -1,4 +1,4 @@
-// 1.21.1	2026-10-24T15:04:11.48458958	Item Models: modpack
+// 1.21.1	2026-11-19T16:05:45.748640768	Item Models: modpack
 bd00db70bf08a3a52c0dd0fba39fc5ac210f13b5 assets/modpack/models/block/ceramic/earthenware/jug.json
 5f78b6d6705d56f37fc6437334eea83c67333b6e assets/modpack/models/block/ceramic/earthenware/unfired_jug.json
 95ad64be1ff9a8301e279d5ae5e885ecddf13ab5 assets/modpack/models/block/ceramic/earthenware/unfired_vessel.json
@@ -110,6 +110,32 @@ aa30d4e7f985443e8d8844b9f6dc0bba66b018f0 assets/modpack/models/item/ceramic/eart
 126acdf10534df95310065c3f5310c9dfc662901 assets/modpack/models/item/ceramic/earthenware/unfired_sword_blade_mold.json
 c8d4035e5c21f0f89229d5e30646525496299ef2 assets/modpack/models/item/ceramic/earthenware/unfired_vessel.json
 70bc7e8bf1889f0ce375c50540339977c7619651 assets/modpack/models/item/ceramic/earthenware/vessel.json
+1b66fbce71bde4e72a450c8e1d6bc424fa63b8b1 assets/modpack/models/item/ceramic/fire_clay/axe_head_mold.json
+40a82d1e311e44d06b9550c23d7be5cab24c9ab8 assets/modpack/models/item/ceramic/fire_clay/chisel_head_mold.json
+30e787f16b00c8dcd69e926484ef0737dd9a972a assets/modpack/models/item/ceramic/fire_clay/hammer_head_mold.json
+ec2b8f57d115aa92c902bf08a622902f676ca2fa assets/modpack/models/item/ceramic/fire_clay/hoe_head_mold.json
+9de6b29119276d8945a0bdf048a55c8bd8a20859 assets/modpack/models/item/ceramic/fire_clay/javelin_head_mold.json
+cfd19b262016d9dc36f0cbf30ed4390c69d1a663 assets/modpack/models/item/ceramic/fire_clay/knife_blade_mold.json
+a03edcf66366365cd622415ec771a767e4108f4e assets/modpack/models/item/ceramic/fire_clay/mace_head_mold.json
+8297abcdf5cbbb96bbbcf5a89994014f213a4c07 assets/modpack/models/item/ceramic/fire_clay/pickaxe_head_mold.json
+6cf793708fb43e9fd70ad1d34129989fe71fc5f4 assets/modpack/models/item/ceramic/fire_clay/propick_head_mold.json
+3cf69d300fb38544865c4f4404f727562ed13266 assets/modpack/models/item/ceramic/fire_clay/saw_blade_mold.json
+9fee603996ab3842e466e0d1e0ca17e1ab372f31 assets/modpack/models/item/ceramic/fire_clay/scythe_blade_mold.json
+9badb92957f210748b855456b18c0bbf33893e93 assets/modpack/models/item/ceramic/fire_clay/shovel_head_mold.json
+f02a15f0034b81e5c690e99a796c230e43d37736 assets/modpack/models/item/ceramic/fire_clay/sword_blade_mold.json
+ee3973bf57db0fb17b594d4e211b637cb10a18a1 assets/modpack/models/item/ceramic/fire_clay/unfired_axe_head_mold.json
+9e1ed89b9813ecc0794615781033258122b94339 assets/modpack/models/item/ceramic/fire_clay/unfired_chisel_head_mold.json
+1b7342c3596294939fa6a3815601dff329bddf13 assets/modpack/models/item/ceramic/fire_clay/unfired_hammer_head_mold.json
+1d202e90c61f67262d863c127553b987b7fbdbba assets/modpack/models/item/ceramic/fire_clay/unfired_hoe_head_mold.json
+3d3257b7465cff433ffb2d9940cefdf089cc52c6 assets/modpack/models/item/ceramic/fire_clay/unfired_javelin_head_mold.json
+56152fe888a6992bbba9f4faf0cf841c97f8b6ac assets/modpack/models/item/ceramic/fire_clay/unfired_knife_blade_mold.json
+443aa4a2c68978924215f368594456d20e968137 assets/modpack/models/item/ceramic/fire_clay/unfired_mace_head_mold.json
+621620409dba1d37116b7f957afee7c799f08379 assets/modpack/models/item/ceramic/fire_clay/unfired_pickaxe_head_mold.json
+6a741ff7fe3ff1001bae4455aba134399a6d8f4e assets/modpack/models/item/ceramic/fire_clay/unfired_propick_head_mold.json
+ece361279963e55d24c8c10bdf44546d0de69801 assets/modpack/models/item/ceramic/fire_clay/unfired_saw_blade_mold.json
+6149e7b8cd5c74450bca7674e8bd2a7692872949 assets/modpack/models/item/ceramic/fire_clay/unfired_scythe_blade_mold.json
+93b189cdbaf97c986342013dcfca6b533b8f07f5 assets/modpack/models/item/ceramic/fire_clay/unfired_shovel_head_mold.json
+349bd009eb28c3dcf9895f8dc5f80612df714f08 assets/modpack/models/item/ceramic/fire_clay/unfired_sword_blade_mold.json
 83e50a4240c1625fcd905ec3c67b240c7a3ce4ad assets/modpack/models/item/ceramic/kaolinite/brick.json
 a98c4468daf781641ce1147e0b7373b8da49ef6e assets/modpack/models/item/ceramic/kaolinite/unfired_axe_head_mold.json
 958443c6911b83bd883c620e3959693ea7495529 assets/modpack/models/item/ceramic/kaolinite/unfired_bell_mold.json

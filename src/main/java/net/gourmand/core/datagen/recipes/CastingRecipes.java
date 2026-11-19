@@ -1,5 +1,6 @@
 package net.gourmand.core.datagen.recipes;
 
+import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.common.recipes.CastingRecipe;
 import net.dries007.tfc.common.recipes.outputs.ItemStackProvider;
@@ -24,7 +25,7 @@ public interface CastingRecipes extends Recipes
         for (CoreMetals.MetalType metal : CoreMetals.MetalType.values())
         {
             casting(metal.name() + "_ingot", TFCItems.MOLDS.get(Metal.ItemType.INGOT), metal, 0.1f);
-            casting(metal.name() + "_fire_ingot", TFCItems.FIRE_INGOT_MOLD, metal, 0.01f);
+            casting(metal.name() + "_fire_ingot", TFCItems.FIRE_INGOT_MOLD, metal, 0f);
         }
 
         for (DyeColor color : DyeColor.values())
@@ -51,6 +52,26 @@ public interface CastingRecipes extends Recipes
         casting("molten_glass/clear", CoreItems.GLASS_MOLD.get().asItem(), CoreFluids.CLEAR_GLASS.getSource(), CoreBlocks.CLEAR_MOLTEN_GLASS.get().asItem(), 800, 0.0f);
 
         casting("glass_pane/clear", CoreItems.GLASS_MOLD.get().asItem(), CoreFluids.CLEAR_GLASS.getSource(), Blocks.GLASS_PANE, 50, 0.0f);
+
+        for (Metal metalType : Metal.values())
+        {
+            remove(TerraFirmaCraft.MOD_ID + ":casting/" + metalType.getSerializedName()  + "_fire_ingot");
+            casting(metalType.name() + "_fire_ingot", TFCItems.FIRE_INGOT_MOLD, metalType, 0f);
+
+            for (Metal.ItemType type : Metal.ItemType.values())
+                if (metalType.allParts() && metalType.tier() <= 6 && type != Metal.ItemType.INGOT && type.hasMold() && metalType != Metal.WROUGHT_IRON)
+                    casting(metalType.name() + "_" + type.name(), CoreItems.FIRE_MOLDS.get(type).get(), metalType, TFCItems.METAL_ITEMS.get(metalType).get(type), units(type), 0f);
+        }
+    }
+
+    private void casting(String name, ItemLike item, Metal metal, float chance)
+    {
+        casting(name, item, metal, TFCItems.METAL_ITEMS.get(metal).get(Metal.ItemType.INGOT).get(), units(Metal.ItemType.INGOT), chance);
+    }
+
+    private void casting(String name, ItemLike item, Metal metal, ItemLike result, int units, float chance)
+    {
+        casting(name, item, fluidOf(metal), result, units, chance);
     }
 
     private void casting(String name, ItemLike item, CoreMetals.MetalType metal, float chance)

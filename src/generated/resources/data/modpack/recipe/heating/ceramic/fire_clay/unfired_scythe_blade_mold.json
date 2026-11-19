@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "modpack:ceramic/fire_clay/unfired_scythe_blade_mold"
+  },
+  "result_item": {
+    "count": 1,
+    "id": "modpack:ceramic/fire_clay/scythe_blade_mold"
+  },
+  "temperature": 1399.0
+}

@@ -1,12 +1,13 @@
 package net.gourmand.core.datagen.recipes;
 
-import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.recipes.KnappingRecipe;
+import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.data.KnappingPattern;
 import net.dries007.tfc.util.data.KnappingType;
+import net.gourmand.core.datagen.providers.BuiltInKnappingTypes;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CoreClay;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
@@ -54,6 +55,20 @@ public interface KnappingRecipes extends Recipes
             clayKnapping(clayType, CoreClay.ItemType.SCYTHE_BLADE, "XXXXX", "X    ", "    X", "  XXX", "XXXXX");
             clayKnapping(clayType, MAP.get(CoreClay.ItemType.BELL).get(), 1, "XXXXX", "XX XX", "X   X", "X   X", "X   X");
         }
+
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.AXE_HEAD).get(), "X XXX", "    X", "     ", "    X", "X XXX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.CHISEL_HEAD).get(), "XX XX", "XX XX", "XX XX", "XX XX", "XX XX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.HAMMER_HEAD).get(), "XXXXX", "     ", "     ", "XX XX", "XXXXX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.HOE_HEAD).get(), "XXXXX", "     ", "  XXX", "XXXXX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.JAVELIN_HEAD).get(), "   XX", "    X", "     ", "X   X", "XX XX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.KNIFE_BLADE).get(), "XX X", "X  X", "X  X", "X  X", "X  X");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.MACE_HEAD).get(), "XX XX", "X   X", "X   X", "X   X", "XX XX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.PICKAXE_HEAD).get(), "XXXXX", "X   X", " XXX ", "XXXXX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.PROPICK_HEAD).get(), "XXXXX", "    X", " XXX ", " XXXX", "XXXXX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.SAW_BLADE).get(), "  XXX", "   XX", "X   X", "X    ", "XXX  ");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.SHOVEL_HEAD).get(), "X   X", "X   X", "X   X", "X   X", "XX XX");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.SWORD_BLADE).get(), "  XXX", "   XX", "X   X", "XX  X", "XXXX ");
+        fireClayKnapping(CoreItems.UNFIRED_FIRE_MOLDS.get(Metal.ItemType.SCYTHE_BLADE).get(), "XXXXX", "X    ", "    X", "  XXX", "XXXXX");
     }
 
     private void clayKnapping(CoreClay clayType, CoreClay.ItemType output, String... pattern)
@@ -80,11 +95,20 @@ public interface KnappingRecipes extends Recipes
     {
         add(nameOf(output) + (suffix.isEmpty() ? "" : "_" + suffix),
                 new KnappingRecipe(
-                        KnappingType.MANAGER.getCheckedReference(ResourceLocation.fromNamespaceAndPath(TerraFirmaCraft.MOD_ID, clayType.getSerializedName())),
+                        KnappingType.MANAGER.getCheckedReference(Helpers.identifier(clayType.getSerializedName())),
                         KnappingPattern.from(defaultOn, pattern),
                         Optional.empty(),
                         new ItemStack(output, count)
                 )
         );
+    }
+    private void fireClayKnapping(ItemLike output, String... pattern)
+    {
+        add(nameOf(output), new KnappingRecipe(
+                KnappingType.MANAGER.getCheckedReference(BuiltInKnappingTypes.FIRE_CLAY),
+                KnappingPattern.from(true, pattern),
+                Optional.empty(),
+                new ItemStack(output, 1)
+        ));
     }
 }

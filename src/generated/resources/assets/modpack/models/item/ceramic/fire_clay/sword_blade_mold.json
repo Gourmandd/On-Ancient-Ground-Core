@@ -1,0 +1,8 @@
+{
+  "parent": "neoforge:item/default",
+  "loader": "tfc:fluid_container",
+  "textures": {
+    "base": "modpack:item/ceramic/fire_clay/sword_blade_mold",
+    "fluid": "tfc:item/ceramic/fired_mold/sword_blade_overlay"
+  }
+}

@@ -107,13 +107,20 @@ public interface HeatingRecipes extends Recipes
 
             for (CoreClay.ItemType itemType : CoreClay.ItemType.values())
             {
-
                 if (itemType.getType() == CoreClay.ItemPartType.UNFIRED_MOLD && itemType.hasType(clayType))
                 {
 
                     final DeferredHolder<Item, Item> MOLD = MAP.get(itemType);
                     add(MOLD.get(), CategoryUtil.Tools.UNFIRED_MOLD_TYPE_TO_FIRED.get(itemType), 1399);
                 }
+            }
+        }
+
+        for (Metal.ItemType itemType : Metal.ItemType.values())
+        {
+            if (itemType.hasMold() && itemType != Metal.ItemType.INGOT)
+            {
+                add(CoreItems.UNFIRED_FIRE_MOLDS.get(itemType).get(), CoreItems.FIRE_MOLDS.get(itemType).get(), 1399);
             }
         }
 

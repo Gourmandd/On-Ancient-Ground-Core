@@ -6,11 +6,14 @@ import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.common.items.MoldItem;
+import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
+import net.gourmand.core.util.DummyFluidContainerModel;
 import net.gourmand.core.util.TextureUtil;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -372,6 +375,15 @@ public class BuiltinItemModels extends ItemModelProvider
                 }
             }
         }
+
+        for (Metal.ItemType type : Metal.ItemType.values())
+        {
+            if (type.hasMold() && type != Metal.ItemType.INGOT)
+            {
+                simpleItem(CoreItems.UNFIRED_FIRE_MOLDS.get(type).get(), itemTexture(CoreItems.UNFIRED_FIRE_MOLDS.get(type)));
+                moldItemModel(CoreItems.FIRE_MOLDS.get(type), type);
+            }
+        }
     }
 
     private void generateMisc()
@@ -527,6 +539,17 @@ public class BuiltinItemModels extends ItemModelProvider
             withExistingParent(getItemModelString(holder.get()), ResourceLocation.fromNamespaceAndPath(NeoForgeVersion.MOD_ID, "item/bucket"))
                     .customLoader(DynamicFluidContainerModelBuilder::begin)
                     .fluid(bucket.content);
+        }
+    }
+
+    private void moldItemModel(DeferredHolder<Item, Item> holder, Metal.ItemType itemType)
+    {
+        if (holder.value() instanceof MoldItem)
+        {
+            withExistingParent(getItemModelString(holder.get()), ResourceLocation.fromNamespaceAndPath(NeoForgeVersion.MOD_ID, "item/default"))
+                    .texture("base", itemTexture(holder))
+                    .texture("fluid", Helpers.identifier("item/ceramic/fired_mold/" + itemType.name().toLowerCase(Locale.ROOT) + "_overlay")) //"tfc:item/ceramic/fired_mold/axe_head_overlay"
+                    .customLoader(DummyFluidContainerModel::create);
         }
     }
 

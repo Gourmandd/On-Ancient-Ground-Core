@@ -1,0 +1,15 @@
+{
+  "type": "tfc:knapping",
+  "default_on": true,
+  "knapping_type": "tfc:fire_clay",
+  "pattern": [
+    "#####",
+    "     ",
+    "  ###",
+    "#####"
+  ],
+  "result": {
+    "count": 1,
+    "id": "modpack:ceramic/fire_clay/unfired_hoe_head_mold"
+  }
+}
