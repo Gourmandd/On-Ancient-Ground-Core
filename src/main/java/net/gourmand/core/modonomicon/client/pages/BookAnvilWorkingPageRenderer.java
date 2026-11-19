@@ -21,7 +21,15 @@ import java.util.Map;
 public class BookAnvilWorkingPageRenderer extends BookRecipePageRenderer<AnvilRecipe, BookAnvilWorkingPage>
 {
 
-    final static Map<Integer, Item> TIER_TO_BLOCK = ImmutableMap.<Integer, Item>builder().put(0, TFCBlocks.ROCK_ANVILS.get(Rock.ANDESITE).asItem()).put(1, TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.ANVIL).asItem()).put(2, TFCBlocks.METALS.get(Metal.BRONZE).get(Metal.BlockType.ANVIL).asItem()).put(3, TFCBlocks.METALS.get(Metal.WROUGHT_IRON).get(Metal.BlockType.ANVIL).asItem()).put(4, TFCBlocks.METALS.get(Metal.STEEL).get(Metal.BlockType.ANVIL).asItem()).put(5, TFCBlocks.METALS.get(Metal.BLACK_STEEL).get(Metal.BlockType.ANVIL).asItem()).put(6, TFCBlocks.METALS.get(Metal.BLUE_STEEL).get(Metal.BlockType.ANVIL).asItem()).build();
+    final static Map<Integer, Item> TIER_TO_BLOCK = ImmutableMap.<Integer, Item>builder()
+            .put(0, TFCBlocks.ROCK_ANVILS.get(Rock.ANDESITE).asItem())
+            .put(1, TFCBlocks.METALS.get(Metal.COPPER).get(Metal.BlockType.ANVIL).asItem())
+            .put(2, TFCBlocks.METALS.get(Metal.BRONZE).get(Metal.BlockType.ANVIL).asItem())
+            .put(3, TFCBlocks.METALS.get(Metal.WROUGHT_IRON).get(Metal.BlockType.ANVIL).asItem())
+            .put(4, TFCBlocks.METALS.get(Metal.STEEL).get(Metal.BlockType.ANVIL).asItem())
+            .put(5, TFCBlocks.METALS.get(Metal.BLACK_STEEL).get(Metal.BlockType.ANVIL).asItem())
+            .put(6, TFCBlocks.METALS.get(Metal.BLUE_STEEL).get(Metal.BlockType.ANVIL).asItem())
+            .build();
 
     public BookAnvilWorkingPageRenderer(BookAnvilWorkingPage page)
     {
