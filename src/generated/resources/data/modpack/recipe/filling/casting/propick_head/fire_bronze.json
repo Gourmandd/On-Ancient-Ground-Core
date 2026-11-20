@@ -1,0 +1,28 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/fire_clay/propick_head_mold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "tfc:metal/bronze"
+    }
+  ],
+  "results": [
+    {
+      "components": {
+        "tfc:fluid": {
+          "amount": 100,
+          "id": "tfc:metal/bronze"
+        },
+        "tfc:heat": {
+          "capacity": 1.2,
+          "temperature": 950.0
+        }
+      },
+      "id": "modpack:ceramic/fire_clay/propick_head_mold"
+    }
+  ]
+}

@@ -24,7 +24,6 @@ import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 
 public interface Accessors
 {
-
     default Ingredient ingredientOf(Metal metal, Metal.ItemType type)
     {
         return Ingredient.of(TFCItems.METAL_ITEMS.get(metal).get(type).get());

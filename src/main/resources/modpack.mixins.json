@@ -5,6 +5,7 @@
   "mixins": [
     "create.BasinBlockEntityMixin",
     "create.CACakeBlockMixin",
+    "create.FillingBySpoutMixin",
     "farmersDelight.CookingPotEMIRecipeMixin",
     "farmersDelight.FDEMIPluginMixin",
     "minecraft.DripstoneUtilsMixin",

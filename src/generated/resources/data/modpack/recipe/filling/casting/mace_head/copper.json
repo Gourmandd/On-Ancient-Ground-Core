@@ -1,0 +1,28 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "tfc:ceramic/mace_head_mold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 200,
+      "fluid": "tfc:metal/copper"
+    }
+  ],
+  "results": [
+    {
+      "components": {
+        "tfc:fluid": {
+          "amount": 200,
+          "id": "tfc:metal/copper"
+        },
+        "tfc:heat": {
+          "capacity": 1.2,
+          "temperature": 1080.0
+        }
+      },
+      "id": "tfc:ceramic/mace_head_mold"
+    }
+  ]
+}

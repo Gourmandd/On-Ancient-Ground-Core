@@ -1,0 +1,28 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/fire_clay/javelin_head_mold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "tfc:metal/bismuth_bronze"
+    }
+  ],
+  "results": [
+    {
+      "components": {
+        "tfc:fluid": {
+          "amount": 100,
+          "id": "tfc:metal/bismuth_bronze"
+        },
+        "tfc:heat": {
+          "capacity": 1.2,
+          "temperature": 985.0
+        }
+      },
+      "id": "modpack:ceramic/fire_clay/javelin_head_mold"
+    }
+  ]
+}

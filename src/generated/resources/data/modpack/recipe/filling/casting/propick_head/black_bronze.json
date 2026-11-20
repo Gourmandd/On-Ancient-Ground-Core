@@ -1,0 +1,28 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "tfc:ceramic/propick_head_mold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "tfc:metal/black_bronze"
+    }
+  ],
+  "results": [
+    {
+      "components": {
+        "tfc:fluid": {
+          "amount": 100,
+          "id": "tfc:metal/black_bronze"
+        },
+        "tfc:heat": {
+          "capacity": 1.2,
+          "temperature": 1070.0
+        }
+      },
+      "id": "tfc:ceramic/propick_head_mold"
+    }
+  ]
+}

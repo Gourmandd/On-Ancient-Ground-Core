@@ -1,0 +1,28 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "modpack:ceramic/fire_clay/mace_head_mold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 200,
+      "fluid": "tfc:metal/steel"
+    }
+  ],
+  "results": [
+    {
+      "components": {
+        "tfc:fluid": {
+          "amount": 200,
+          "id": "tfc:metal/steel"
+        },
+        "tfc:heat": {
+          "capacity": 1.2,
+          "temperature": 1540.0
+        }
+      },
+      "id": "modpack:ceramic/fire_clay/mace_head_mold"
+    }
+  ]
+}

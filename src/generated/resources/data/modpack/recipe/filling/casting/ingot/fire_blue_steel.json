@@ -1,0 +1,28 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "tfc:ceramic/fire_ingot_mold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "tfc:metal/blue_steel"
+    }
+  ],
+  "results": [
+    {
+      "components": {
+        "tfc:fluid": {
+          "amount": 100,
+          "id": "tfc:metal/blue_steel"
+        },
+        "tfc:heat": {
+          "capacity": 1.2,
+          "temperature": 1540.0
+        }
+      },
+      "id": "tfc:ceramic/fire_ingot_mold"
+    }
+  ]
+}

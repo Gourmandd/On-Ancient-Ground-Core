@@ -1,0 +1,28 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "tfc:ceramic/sword_blade_mold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 200,
+      "fluid": "tfc:metal/black_bronze"
+    }
+  ],
+  "results": [
+    {
+      "components": {
+        "tfc:fluid": {
+          "amount": 200,
+          "id": "tfc:metal/black_bronze"
+        },
+        "tfc:heat": {
+          "capacity": 1.2,
+          "temperature": 1070.0
+        }
+      },
+      "id": "tfc:ceramic/sword_blade_mold"
+    }
+  ]
+}

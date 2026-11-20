@@ -1,0 +1,28 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "tfc:ceramic/chisel_head_mold"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "tfc:metal/copper"
+    }
+  ],
+  "results": [
+    {
+      "components": {
+        "tfc:fluid": {
+          "amount": 100,
+          "id": "tfc:metal/copper"
+        },
+        "tfc:heat": {
+          "capacity": 1.2,
+          "temperature": 1080.0
+        }
+      },
+      "id": "tfc:ceramic/chisel_head_mold"
+    }
+  ]
+}
